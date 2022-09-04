@@ -17,8 +17,8 @@ let g:lightline = {
       \ }
 
 let NERDTreeQuitOnOpen=1
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "•",
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+    \ "Modified"  : "M",
     \ "Staged"    : "➜",
     \ "Untracked" : "U",
     \ "Renamed"   : "➜",
