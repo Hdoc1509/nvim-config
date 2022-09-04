@@ -23,7 +23,6 @@ Plug 'EdenEast/nightfox.nvim'
 Plug 'christoomey/vim-tmux-navigator'
 
 " Terminal
-Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'}
 
 "" LSP
 Plug 'neovim/nvim-lspconfig'
