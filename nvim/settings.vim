@@ -19,4 +19,5 @@ set guicursor=a:blinkwait500-blinkoff500-blinkon500-Cursos
 set nobackup
 set noswapfile
 set nowritebackup
+set guifont=FiraCode\ NF:h12
 
