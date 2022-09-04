@@ -1,3 +1,6 @@
+set runtimepath^=~/.vim runtimepath+=/.vim/after
+let &packpath=&runtimepath
+
 so ~/.config/nvim/settings.vim
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/plugins-config.vim
@@ -28,4 +31,3 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
     \ "Clean"     : "✔︎",
     \ "Unknown"   : "?"
     \ }
-
