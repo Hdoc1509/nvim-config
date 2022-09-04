@@ -6,7 +6,6 @@ Plug 'sheerun/vim-polyglot'
 " Status Bar
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
-Plug 'itchyny/vim-gitbranch'
 
 " Tree
 Plug 'scrooloose/nerdtree'
