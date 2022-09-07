@@ -14,6 +14,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Typing
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
+Plug 'mattn/emmet-vim'
 
 " Themes
 Plug 'EdenEast/nightfox.nvim'
