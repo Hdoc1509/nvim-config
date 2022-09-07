@@ -14,6 +14,8 @@ nmap <Leader>; $a;<Esc>
 nmap <Leader>E :e .config/init.vim<CR>
 
 " Git
+nmap <Leader>gaa :Git add .<CR>
+nmap <Leader>gd :Git diff<CR>
 nmap <Leader>gp :Git push<CR>
 nmap <Leader>gl :Git pull<CR>
 nmap <Leader>gs :Git status<CR>
