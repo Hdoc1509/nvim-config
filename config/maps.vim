@@ -11,7 +11,7 @@ nmap <Leader>Fs :call GuiWindowFullScreen(0)<CR>
 nmap <Leader>j 10<C-e>
 nmap <Leader>k 10<C-y>
 nmap <Leader>; $a;<Esc>
-nmap <Leader>E :e .config/init.vim<CR>
+nmap <Leader>E :e .config/nvim/init.vim<CR>
 
 " Git
 nmap <Leader>gaa :Git add .<CR>
