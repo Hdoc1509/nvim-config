@@ -19,7 +19,7 @@ nmap <Leader>k 10<C-y>
 nmap <Leader>; $a;<Esc>
 
 " Edit config file
-nmap <Leader>E :e .config/nvim/init.vim<CR>
+nmap <Leader>E :e $MYVIMRC<CR>
 nmap <Leader>src :source<CR>
 
 " Git
