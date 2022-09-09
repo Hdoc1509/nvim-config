@@ -4,5 +4,5 @@ if exists('g:neovide')
 
   nmap <Leader>fs :let g:neovide_fullscreen=v:true<CR>
   nmap <Leader>Fs :let g:neovide_fullscreen=v:false<CR>
-endif  
+endif
 

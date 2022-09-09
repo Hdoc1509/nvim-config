@@ -44,7 +44,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 
 " GUI
-Plug 'equalsraf/neovim-gui-shim' 
+Plug 'equalsraf/neovim-gui-shim'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
