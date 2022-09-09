@@ -25,15 +25,15 @@ cmp.setup({
   }, {
     { name = 'buffer' },
   }),
-	formatting = {
-		format = lspkind.cmp_format({
-			mode = 'symbol_text',
-			maxwidth = 50,
-			before = function (entry, vim_item)
-				return vim_item
-			end
-		})
-	}
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol_text',
+      maxwidth = 50,
+      before = function (entry, vim_item)
+        return vim_item
+      end
+    })
+  }
 })
 EOF
 

@@ -1,4 +1,2 @@
-lua << EOF
-require('gitsigns').setup()
-EOF
+lua require('gitsigns').setup()
 
