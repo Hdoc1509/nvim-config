@@ -1,33 +1,33 @@
 let mapleader=" "
 
 " NERDTree
-nmap <Leader>nt :NERDTreeFind<CR>
+nnoremap <Leader>nt :NERDTreeFind<CR>
 
 " File handling
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
 
 " Scrolling
-nmap <Leader>j 10<C-e>
-nmap <Leader>k 10<C-y>
+nnoremap <Leader>j 10<C-e>
+nnoremap <Leader>k 10<C-y>
 
 " Split resize
-nmap <Leader>> 10<C-w>>
-nmap <Leader>< 10<C-w><
+nnoremap <Leader>> 10<C-w>>
+nnoremap <Leader>< 10<C-w><
 
 " Add semi colon
-nmap <Leader>; $a;<Esc>
+nnoremap <Leader>; $a;<Esc>
 
 " Edit config file
-nmap <Leader>e :e $MYVIMRC<CR>
-nmap <Leader>ev :vsp $MYVIMRC<CR>
-nmap <Leader>sf :source %<CR>
-nmap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <Leader>e :e $MYVIMRC<CR>
+nnoremap <Leader>ev :vsp $MYVIMRC<CR>
+nnoremap <Leader>sf :source %<CR>
+nnoremap <Leader>sv :source $MYVIMRC<CR>
 
 " Git
-nmap <Leader>gaa :Git add .<CR>
-nmap <Leader>gd :Git diff<CR>
-nmap <Leader>gp :Git push<CR>
-nmap <Leader>gl :Git pull<CR>
-nmap <Leader>gs :Git status<CR>
+nnoremap <Leader>gaa :Git add .<CR>
+nnoremap <Leader>gd :Git diff<CR>
+nnoremap <Leader>gp :Git push<CR>
+nnoremap <Leader>gl :Git pull<CR>
+nnoremap <Leader>gs :Git status<CR>
 
