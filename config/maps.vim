@@ -31,3 +31,11 @@ nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gs :Git status<CR>
 
+" Word UpperCase
+nnoremap <C-u> bveUe
+inoremap <C-u> <Esc>bveUei
+
+" Delete line characters
+nnoremap <C-d> 0d$
+inoremap <C-d> <Esc>ddi
+
