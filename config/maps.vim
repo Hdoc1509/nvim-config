@@ -24,6 +24,10 @@ nnoremap <Leader>ev :vsp $MYVIMRC<CR>
 nnoremap <Leader>sf :source %<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
+" Tmux Navigator
+nnoremap <silent> <Leader>h :TmuxNavigateLeft<CR>
+nnoremap <silent> <Leader>l :TmuxNavigateRight<CR>
+
 " Git
 nnoremap <Leader>gaa :Git add .<CR>
 nnoremap <Leader>gd :Git diff<CR>
