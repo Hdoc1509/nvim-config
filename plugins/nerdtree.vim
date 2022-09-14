@@ -14,3 +14,9 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ "Clean"     : "✔︎",
   \ "Unknown"   : "?"
   \ }
+
+"get rid of [  ] around icons in NerdTree
+if exists("g:loaded_webdevicons")
+	call webdevicons#refresh()
+endif
+
