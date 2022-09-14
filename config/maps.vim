@@ -18,6 +18,9 @@ nnoremap <Leader>< 10<C-w><
 " Add semi colon
 nnoremap <Leader>; $a;<Esc>
 
+" Replace tabs to spaces
+nnoremap <Leader>rts :retab<CR>
+
 " Edit config file
 nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>ev :vsp $MYVIMRC<CR>
