@@ -18,6 +18,9 @@ nnoremap <Leader>< 10<C-w><
 " Add semi colon
 nnoremap <Leader>; $a;<Esc>
 
+" Add comma
+nnoremap <Leader>, $a,<Esc>
+
 " Replace tabs to spaces
 nnoremap <Leader>rts :retab<CR>
 
@@ -45,4 +48,7 @@ inoremap <C-u> <Esc>bveUei
 " Delete line characters
 nnoremap <C-d> 0d$
 inoremap <C-d> <Esc>ddi
+
+" Copy to clipboard all text
+nnoremap <C-a> gg0vG$y<Esc>
 
