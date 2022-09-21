@@ -5,4 +5,5 @@ so ~/.config/nvim/plugins/nightfox.vim
 so ~/.config/nvim/plugins/nerdtree.vim
 so ~/.config/nvim/plugins/closetag.vim
 so ~/.config/nvim/plugins/emmet.vim
+so ~/.config/nvim/plugins/lightline.vim
 
