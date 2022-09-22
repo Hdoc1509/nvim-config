@@ -1,9 +1,7 @@
-so ~/.config/nvim/plugins/nvim-lspconfig.vim
-so ~/.config/nvim/plugins/nvim-cmp.vim
-so ~/.config/nvim/plugins/gitsigns.vim
-so ~/.config/nvim/plugins/nightfox.vim
-so ~/.config/nvim/plugins/nerdtree.vim
-so ~/.config/nvim/plugins/closetag.vim
-so ~/.config/nvim/plugins/emmet.vim
-so ~/.config/nvim/plugins/lightline.vim
+let plugins_path = expand('~/.config/nvim/plugins')
+let plugins = [ 'nvim-lspconfig', 'nvim-cmp', 'gitsigns', 'nightfox', 'nerdtree', 'closetag', 'emmet', 'lightline' ]
+
+for plugin in plugins
+  execute 'source ' . plugins_path . '/' . plugin . '.vim'
+endfor
 
