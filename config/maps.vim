@@ -35,7 +35,7 @@ nnoremap <silent> <Leader>h :TmuxNavigateLeft<CR>
 nnoremap <silent> <Leader>l :TmuxNavigateRight<CR>
 
 " Git
-nnoremap <Leader>gaa :Git add .<CR>
+nnoremap <Leader>gaa :Git add --all<CR>
 nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gl :Git pull<CR>
@@ -46,7 +46,7 @@ nnoremap <C-u> bveUe
 inoremap <C-u> <Esc>bveUei
 
 " Delete line characters
-nnoremap <C-d> 0d$
+nnoremap <C-d> dd
 inoremap <C-d> <Esc>ddi
 
 " Copy to clipboard all text
