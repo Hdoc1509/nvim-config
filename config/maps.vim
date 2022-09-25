@@ -27,7 +27,6 @@ nnoremap <Leader>rts :retab<CR>
 " Edit config file
 nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>ev :vsp $MYVIMRC<CR>
-nnoremap <Leader>sf :source %<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
 " Tmux Navigator
