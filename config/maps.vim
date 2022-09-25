@@ -49,5 +49,5 @@ nnoremap <C-d> dd
 inoremap <C-d> <Esc>ddi
 
 " Copy to clipboard all text
-nnoremap <C-a> gg0vG$y<Esc>
+nnoremap <C-a> gg0vG$y<Esc>G$
 
