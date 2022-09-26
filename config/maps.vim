@@ -41,8 +41,8 @@ nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gs :Git status<CR>
 
 " Word UpperCase
-nnoremap <C-u> bveUe
-inoremap <C-u> <Esc>bveUei
+nnoremap <C-u> viwUe
+inoremap <C-u> <Esc>viwUea
 
 " Delete line characters
 nnoremap <C-d> dd
