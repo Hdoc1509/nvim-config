@@ -1,6 +1,6 @@
 lua << EOF
 local nvim_lsp = require('lspconfig')
-local servers = { 'cssls', 'eslint', 'html', 'sumneko_lua', 'tsserver', 'vimls', 'yamlls', 'marksman', 'bashls' }
+local servers = { 'cssls', 'eslint', 'html', 'tsserver', 'vimls', 'yamlls', 'marksman', 'bashls' }
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -36,6 +36,7 @@ end
 
 -- SETUP LUA
 nvim_lsp.sumneko_lua.setup{
+  on_attach = on_attach,
   Lua = {
     diagnostics = {
       globals = {'vim'}
