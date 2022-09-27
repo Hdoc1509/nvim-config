@@ -16,7 +16,7 @@ set sw=2
 set expandtab
 set relativenumber
 set laststatus=2
-set guicursor=a:blinkwait500-blinkoff500-blinkon500-Cursos
+set guicursor=a:blinkwait500-blinkoff500-blinkon500-Cursor
 set nobackup
 set noswapfile
 set nowritebackup
