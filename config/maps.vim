@@ -29,9 +29,15 @@ nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>ev :vsp $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 
-" Tmux Navigator
-nnoremap <silent> <Leader>h :TmuxNavigateLeft<CR>
-nnoremap <silent> <Leader>l :TmuxNavigateRight<CR>
+" Splits navigation
+nnoremap <silent> <C-h> <C-w>h<CR>
+nnoremap <silent> <C-j> <C-w>j<CR>
+nnoremap <silent> <C-k> <C-w>k<CR>
+nnoremap <silent> <C-l> <C-w>l<CR>
+nnoremap <silent> <Leader>h <C-w>h<CR>
+nnoremap <silent> <Leader>j <C-w>j<CR>
+nnoremap <silent> <Leader>k <C-w>k<CR>
+nnoremap <silent> <Leader>l <C-w>l<CR>
 
 " Git
 nnoremap <Leader>gaa :Git add --all<CR>
