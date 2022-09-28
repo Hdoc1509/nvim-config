@@ -161,3 +161,19 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only available in `nvim-qt` and `neovide` |
 | `<C-e>,`      | Insert          | Expand emmet snippet                                          |
 
+## Windows accessibility
+
+For better accessibility in Windows, make a symlink from `$HOME/.config/nvim` to `$LOCALAPPDATA/nvim`.
+
+- Via `cmd`:
+
+```sh
+mklink %userprofile%\.config\nvim %localappdata%\nvim
+```
+
+- Via `git-bash`:
+
+```sh
+ln -s $LOCALAPPDATA/nvim ~/.config/nvim
+```
+
