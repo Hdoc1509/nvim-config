@@ -19,9 +19,6 @@ Plug 'mattn/emmet-vim'
 " Themes
 Plug 'EdenEast/nightfox.nvim'
 
-" Tmux
-Plug 'christoomey/vim-tmux-navigator'
-
 " LSP
 Plug 'neovim/nvim-lspconfig'
 
