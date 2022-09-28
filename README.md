@@ -55,7 +55,7 @@ Clone repository in your neovim config path.
     - Via [`tiged`](https://github.com/tiged/tiged) (degit):
 
     ```sh
-    degit Hdoc1509/nvim-config-vim
+    degit Hdoc1509/nvim-config-vim ~/.config/nvim
     ```
 
 - Windows with `cmd`:
