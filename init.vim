@@ -1,7 +1,8 @@
 set runtimepath^=~/.vim runtimepath+=/.vim/after
 let &packpath=&runtimepath
+let g:configPath = stdpath('config')
 
-so ~/.config/nvim/utils/source.vim
+exec 'so ' . g:configPath  . '/utils/source.vim'
 
 call SourceConfig('settings')
 call SourceConfig('plugins-call')
