@@ -17,7 +17,6 @@
   - [`vim-closetag`](https://github.com/alvan/vim-closetag)
   - [`emmet-vim`](https://github.com/mattn/emmet-vim)
   - [`nightfox.nvim`](https://github.com/EdenEast/nightfox.nvim)
-  - [`vim-tmux-navigator`](https://github.com/christoomey/vim-tmux-navigator)
   - [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
   - [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/)
   - [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip)
@@ -28,6 +27,16 @@
   - [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
   - [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim)
   - [`vim-devicons`](https://github.com/ryanoasis/vim-devicons)
+- LSP Servers:
+  - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
+  - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
+  - [`eslint`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint)
+  - [`html`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html)
+  - [`marksman`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman)
+  - [`sumneko_lua`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua)
+  - [`tsserver`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver)
+  - [`vimls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls)
+  - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
 
 ## Installation
 
@@ -79,7 +88,7 @@ Clone repository in your neovim config path.
 
 ### Install plugins
 
-First, you need to install `vim-plug`:
+First, you need to install [`vim-plug`](https://github.com/junegunn/vim-plug):
 
 - UNIX systems:
 
@@ -134,6 +143,10 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 | `<Leader>e`   | Normal          | Open $MYVIMRC file in current buffer                          |
 | `<Leader>ev`  | Normal          | Open $MYVIMRC file in a vertical split                        |
 | `<Leader>sv`  | Normal          | Source $MYVIMRC file                                          |
+| `<C-h>`       | Normal          | Move to left split                                            |
+| `<C-j>`       | Normal          | Move to bottom split                                          |
+| `<C-k>`       | Normal          | Move to top split                                             |
+| `<C-l>`       | Normal          | Move to right split                                           |
 | `<Leader>h`   | Normal          | Move to left split                                            |
 | `<Leader>l`   | Normal          | Move to right split                                           |
 | `<Leader>gaa` | Normal          | Execute `git add -all`                                        |
