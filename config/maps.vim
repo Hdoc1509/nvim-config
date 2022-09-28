@@ -35,8 +35,6 @@ nnoremap <silent> <C-j> <C-w>j
 nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <Leader>h <C-w>h
-nnoremap <silent> <Leader>j <C-w>j
-nnoremap <silent> <Leader>k <C-w>k
 nnoremap <silent> <Leader>l <C-w>l
 
 " Git
