@@ -177,3 +177,8 @@ mklink %userprofile%\.config\nvim %localappdata%\nvim
 ln -s $LOCALAPPDATA/nvim ~/.config/nvim
 ```
 
+## My other software configurations
+
+- [git-bash-config](https://github.com/Hdoc1509/git-bash-config)
+- [wezterm-config](https://github.com/Hdoc1509/wezterm-config)
+
