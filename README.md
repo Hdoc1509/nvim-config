@@ -1,8 +1,8 @@
-# Neovim configuration for Windows
+# Neovim configuration
 
 ## Features
 
-- Written in vimscript
+- Written in Vimscript
 - Blinking cursor
 - Custom shortcuts (maps)
 - Settings for [`neovim-qt`](https://github.com/equalsraf/neovim-qt) and [`neovide`](https://github.com/neovide/neovide)
@@ -30,59 +30,65 @@
   - [`vim-devicons`](https://github.com/ryanoasis/vim-devicons)
 
 ## Installation
-Clone repository into your user-specific configurations folder: `$HOME/.config`.
-
-Then symlink `init.vim` in `$LOCALAPPDATA/nvim` to `$HOME/.config/nvim/init.vim`.
-
-If you will use `nvim-qt` symlink `ginit.vim` in `$LOCALAPPDATA/nvim` to `$HOME/.config/nvim/config/nvim-qt.vim`.
 
 ### Cloning
 
-- Via `git clone`:
+Clone repository in your neovim config path.
 
-```sh
-# With cmd
-git clone --depth 1 https://github.com/Hdoc1509/nvim-config-win.git %userprofile%\.config\nvim
-```
+- UNIX systems:
 
-```sh
-# With git-bash
-git clone --depth 1 https://github.com/Hdoc1509/nvim-config-win.git ~/.config/nvim
-```
+    - Via `git clone`:
 
-- Via [`tiged`](https://github.com/tiged/tiged) (degit):
+    ```sh
+    git clone --depth 1 https://github.com/Hdoc1509/nvim-config-vim.git ~/.config/nvim
+    ```
 
-```sh
-# With cmd
-degit Hdoc1509/nvim-config-win %userprofile%\.config\nvim
-```
+    - Via [`tiged`](https://github.com/tiged/tiged) (degit):
 
-```sh
-# With git-bash
-degit Hdoc1509/nvim-config-win ~/.config/nvim
-```
+    ```sh
+    degit Hdoc1509/nvim-config-vim
+    ```
 
-### Symlink
+- Windows with `cmd`:
 
-Be sure to open a terminal as administrator or that your session has the necessary permissions.
+    - Via `git clone`:
 
-- Via `git-bash`:
+    ```sh
+    git clone --depth 1 https://github.com/Hdoc1509/nvim-config-vim.git %localappdata%\nvim
+    ```
 
-```sh
-ln -s ~/.config/nvim/init.vim $LOCALAPPDATA/nvim/init.vim
-ln -s ~/.config/nvim/config/nvim-qt.vim $LOCALAPPDATA/nvim/ginit.vim
-```
+    - Via [`tiged`](https://github.com/tiged/tiged) (degit):
 
-- Via `cmd`:
+    ```sh
+    degit Hdoc1509/nvim-config-vim %localappdata%\nvim
+    ```
 
-```sh
-mklink %localappdata%\nvim\init.vim %userprofile%\.config\nvim\init.vim
-mklink %localappdata%\nvim\ginit.vim %userprofile%\.config\nvim\config\nvim-qt.vim
-```
+- Windows with `git-bash`:
+
+    - Via `git clone`:
+
+    ```sh
+    git clone --depth 1 https://github.com/Hdoc1509/nvim-config-vim.git $LOCALAPPDATA/nvim
+    ```
+
+    - Via [`tiged`](https://github.com/tiged/tiged) (degit):
+
+    ```sh
+    degit Hdoc1509/nvim-config-win $LOCALAPPDATA/nvim
+    ```
 
 ### Install plugins
 
-First, you need to install `vim-plug` via `powershell`:
+First, you need to install `vim-plug`:
+
+- UNIX systems:
+
+```sh
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+- Windows via `powershell`:
 
 ```sh
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
@@ -109,7 +115,7 @@ yarn global add yaml-language-server
 
 - For install `marksman`, download `marksman.exe` from [releases page](https://github.com/artempyanykh/marksman/releases). Then move it to `$HOME/.local/bin/`. Make sure sure this folder is in your $PATH.
 
-## Custom shortcuts
+## Shortcuts
 
 Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 
