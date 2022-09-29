@@ -15,6 +15,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim'
+Plug 'rafamadriz/friendly-snippets'
 
 " Themes
 Plug 'EdenEast/nightfox.nvim'
