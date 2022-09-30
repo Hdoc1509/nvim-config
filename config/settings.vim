@@ -21,4 +21,5 @@ set nobackup
 set noswapfile
 set nowritebackup
 set guifont=FiraCode\ NF:h12.5
+set colorcolumn=80,100,120
 
