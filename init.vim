@@ -9,6 +9,5 @@ call SourceConfig('plugins-call')
 call SourceConfig('plugins-config')
 call SourceConfig('maps')
 call SourceConfig('neovide')
-
-colorscheme carbonfox
+call SourceConfig('colors')
 
