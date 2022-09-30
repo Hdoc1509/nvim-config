@@ -26,6 +26,7 @@
   - [`nerdcommenter`](https://github.com/scrooloose/nerdcommenter)
   - [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
   - [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim)
+  - [`virt-column.nvim`](https://github.com/lukas-reineke/virt-column.nvim)
   - [`vim-devicons`](https://github.com/ryanoasis/vim-devicons)
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
