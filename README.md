@@ -109,7 +109,7 @@ Then, open neovim and run command `:PlugInstall` to install all the plugins.
 
 ### Install lsp-servers
 
-- Run the following command for install most of required lsp-servers:
+- Run the following `npm` command for install most of required lsp-servers:
 
 ```sh
 npm i -g vscode-langservers-extracted typescript typescript-language-server vim-language-server bash-language-server
