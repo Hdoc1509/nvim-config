@@ -121,9 +121,9 @@ npm i -g vscode-langservers-extracted typescript typescript-language-server vim-
 yarn global add yaml-language-server
 ```
 
-- For install `lua-language-server` download the precompiled binary from [here](https://github.com/sumneko/lua-language-server/releases). Then extract its content and add its `bin` folder to your $PATH.
+- For install `lua-language-server`, download the precompiled binary from [releases page](https://github.com/sumneko/lua-language-server/releases). Then extract its content and add its `bin` folder to your $PATH.
 
-- For install `marksman`, download `marksman.exe` from [releases page](https://github.com/artempyanykh/marksman/releases). Then move it to `$HOME/.local/bin/`. Make sure sure this folder is in your $PATH.
+- For install `marksman`, follow the official [installation guide](https://github.com/artempyanykh/marksman#how-to-install).
 
 ## Shortcuts
 
