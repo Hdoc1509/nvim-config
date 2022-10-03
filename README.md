@@ -1,5 +1,9 @@
 # Neovim configuration
 
+## Introduction
+
+This repository hosts my minimalist Nvim configuration for Linux and Windows.
+
 ## Features
 
 - Written in Vimscript
