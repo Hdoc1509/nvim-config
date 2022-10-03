@@ -16,10 +16,10 @@ nnoremap <Leader>> 10<C-w>>
 nnoremap <Leader>< 10<C-w><
 
 " Add semi colon
-nnoremap <Leader>; $a;<Esc>
+nnoremap <Leader>; A;<Esc>
 
 " Add comma
-nnoremap <Leader>, $a,<Esc>
+nnoremap <Leader>, A,<Esc>
 
 " Replace tabs to spaces
 nnoremap <Leader>rts :retab<CR>
