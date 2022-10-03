@@ -39,6 +39,13 @@
   - [`vimls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls)
   - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
 
+## Requirements
+
+- Nvim 0.7.2
+- Node.js
+- Yarn
+- Git
+
 ## Installation
 
 ### Cloning
