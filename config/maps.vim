@@ -6,6 +6,7 @@ nnoremap <Leader>nt :NERDTreeFind<CR>
 " File handling
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :q!<CR>
 
 " Scrolling
 nnoremap <Leader>j 10<C-e>
