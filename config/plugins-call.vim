@@ -16,6 +16,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
+Plug 'matze/vim-move'
 
 " Themes
 Plug 'EdenEast/nightfox.nvim'
