@@ -144,7 +144,7 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 
 | Shortcut      | Mode            | Description                                                   |
 |---------------|-----------------|---------------------------------------------------------------|
-| `<Leader>nt`  | Normal          | Open nerdtree in current directory                            |
+| `<Leader>nt`  | Normal          | Open `nerdtree` in current directory                          |
 | `<Leader>w`   | Normal          | Save current buffer content                                   |
 | `<Leader>q`   | Normal          | Quit current buffer                                           |
 | `<Leader>Q`   | Normal          | Forced quit of current buffer                                 |
@@ -158,9 +158,9 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 | `<Leader>;`   | Normal          | Add a semi colon at the end of line                           |
 | `<Leader>,`   | Normal          | Add a coma at the end of line                                 |
 | `<Leader>rts` | Normal          | Replace all tabs to spaces                                    |
-| `<Leader>e`   | Normal          | Open $MYVIMRC file in current buffer                          |
-| `<Leader>ev`  | Normal          | Open $MYVIMRC file in a vertical split                        |
-| `<Leader>sv`  | Normal          | Source $MYVIMRC file                                          |
+| `<Leader>e`   | Normal          | Open `$MYVIMRC` file in current buffer                        |
+| `<Leader>ev`  | Normal          | Open `$MYVIMRC` file in a vertical split                      |
+| `<Leader>sv`  | Normal          | Source `$MYVIMRC` file                                        |
 | `<C-h>`       | Normal          | Move to left split                                            |
 | `<C-j>`       | Normal          | Move to bottom split                                          |
 | `<C-k>`       | Normal          | Move to top split                                             |
@@ -177,7 +177,7 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 | `<C-a>`       | Normal / Insert | Copy all text to clipboard                                    |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only available in `nvim-qt` and `neovide`  |
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only available in `nvim-qt` and `neovide` |
-| `<C-e>,`      | Insert          | Expand emmet snippet                                          |
+| `<C-e>,`      | Insert          | Expand `emmet` snippet                                        |
 
 ## Windows accessibility
 
