@@ -20,6 +20,8 @@ This repository hosts my minimalist Nvim configuration for Linux and Windows.
   - [`auto-pairs`](https://github.com/jiangmiao/auto-pairs)
   - [`vim-closetag`](https://github.com/alvan/vim-closetag)
   - [`emmet-vim`](https://github.com/mattn/emmet-vim)
+  - [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets)
+  - [`vim-move`](https://github.com/matze/vim-move)
   - [`nightfox.nvim`](https://github.com/EdenEast/nightfox.nvim)
   - [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
   - [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/)
