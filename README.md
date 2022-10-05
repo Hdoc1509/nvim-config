@@ -145,6 +145,10 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 | `<Leader>nt`  | Normal          | Open nerdtree in current directory                            |
 | `<Leader>w`   | Normal          | Save current buffer content                                   |
 | `<Leader>q`   | Normal          | Quit current buffer                                           |
+| `<Leader>Q`   | Normal          | Forced quit of current buffer                                 |
+| `<Leader>fu`  | Normal          | Set `fileformat` to `unix` in current buffer                  |
+| `<Leader>fd`  | Normal          | Set `fileformat` to `dos` in current buffer                   |
+| `<Leader>fm`  | Normal          | Set `fileformat` to `mac` in current buffer                   |
 | `<Leader>j`   | Normal          | Scroll down 10 lines                                          |
 | `<Leader>k`   | Normal          | Scroll up 10 lines                                            |
 | `<Leader>>`   | Normal          | Resize current split 10 pixels to left                        |
