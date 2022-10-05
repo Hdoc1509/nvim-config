@@ -7,6 +7,9 @@ nnoremap <Leader>nt :NERDTreeFind<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
+nnoremap <Leader>fu :set ff=unix<CR>
+nnoremap <Leader>fd :set ff=dos<CR>
+nnoremap <Leader>fm :set ff=mac<CR>
 
 " Scrolling
 nnoremap <Leader>j 10<C-e>
