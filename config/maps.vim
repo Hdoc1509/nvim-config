@@ -3,10 +3,14 @@ let mapleader=" "
 " NERDTree
 nnoremap <Leader>nt :NERDTreeFind<CR>
 
-" File handling
+" Save buffer
 nnoremap <Leader>w :w<CR>
+
+" Quit buffer
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
+
+" Set fileformat
 nnoremap <Leader>fu :set ff=unix<CR>
 nnoremap <Leader>fd :set ff=dos<CR>
 nnoremap <Leader>fm :set ff=mac<CR>
