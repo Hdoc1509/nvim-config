@@ -144,7 +144,7 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 
 | Shortcut      | Mode            | Description                                                   |
 |---------------|-----------------|---------------------------------------------------------------|
-| `<Leader>nt`  | Normal          | Open `nerdtree` in current directory                          |
+| `<Leader>nt`  | Normal          | Open `nerdtree` in current working directory                  |
 | `<Leader>w`   | Normal          | Save current buffer content                                   |
 | `<Leader>q`   | Normal          | Quit current buffer                                           |
 | `<Leader>Q`   | Normal          | Forced quit of current buffer                                 |
@@ -167,7 +167,7 @@ Used mapleader is `space key`. You can change mapleader in `config/maps.vim`.
 | `<C-l>`       | Normal          | Move to right split                                           |
 | `<Leader>h`   | Normal          | Move to left split                                            |
 | `<Leader>l`   | Normal          | Move to right split                                           |
-| `<Leader>gaa` | Normal          | Execute `git add -all`                                        |
+| `<Leader>gaa` | Normal          | Execute `git add --all`                                       |
 | `<Leader>gd`  | Normal          | Execute `git diff`                                            |
 | `<Leader>gp`  | Normal          | Execute `git push`                                            |
 | `<Leader>gl`  | Normal          | Execute `git pull`                                            |
