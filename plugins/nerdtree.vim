@@ -1,4 +1,4 @@
-let NERDTreeIgnore = ["\.git$", "node_modules", "\dist$"]
+let NERDTreeIgnore = ["\.git$", "node_modules", "\dist$", "\package-lock.json$"]
 let NERDTreeShowHidden = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeSortHiddenFirst = 1
