@@ -1,10 +1,10 @@
-function! SourceConfig(relativePath)
-  let fullPath = g:configPath . '/config/' . a:relativePath . '.vim'
+function! SourceConfig(file)
+  let fullPath = g:configPath . '/config/' . a:file . '.vim'
   exec 'source ' . fullPath
 endfunction
 
-function! SourcePlugin(relativePath)
-  let fullPath = g:configPath . '/plugins/' . a:relativePath . '.vim'
+function! SourcePlugin(file)
+  let fullPath = g:configPath . '/plugins/' . a:file . '.vim'
   exec 'source ' . fullPath
 endfunction
 
