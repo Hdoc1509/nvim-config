@@ -45,6 +45,7 @@ Plug 'tpope/vim-fugitive'
 " GUI
 Plug 'equalsraf/neovim-gui-shim'
 Plug 'lukas-reineke/virt-column.nvim'
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
