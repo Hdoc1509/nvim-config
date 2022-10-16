@@ -46,6 +46,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'equalsraf/neovim-gui-shim'
 Plug 'lukas-reineke/virt-column.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'

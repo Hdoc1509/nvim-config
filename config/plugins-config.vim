@@ -8,7 +8,8 @@ let plugins = [
   \ 'emmet',
   \ 'lightline',
   \ 'virt-column',
-  \ 'nvim-colorizer'
+  \ 'nvim-colorizer',
+  \ 'indent-blankline',
   \ ]
 
 for plugin in plugins
