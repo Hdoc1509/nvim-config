@@ -24,4 +24,5 @@ set guifont=FiraCode\ NF:h12.5
 set colorcolumn=80,100,120
 set fileformat=unix
 set fileformats=unix,dos
+set termguicolors
 
