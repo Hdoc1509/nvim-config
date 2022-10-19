@@ -65,3 +65,6 @@ inoremap <C-d> <Esc>ddi
 nnoremap <C-a> gg0vG$yG$
 inoremap <C-a> <Esc>gg0vG$yGi
 
+" FZF
+nnoremap <Leader>fs :FZF<CR>
+
