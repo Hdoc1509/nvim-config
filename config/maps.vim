@@ -36,6 +36,7 @@ nnoremap <Leader>rts :retab<CR>
 nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>ev :vsp $MYVIMRC<CR>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <Leader>sf :source %<CR>
 
 " Splits navigation
 nnoremap <silent> <C-h> <C-w>h
