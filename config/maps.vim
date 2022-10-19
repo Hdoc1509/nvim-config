@@ -66,5 +66,5 @@ nnoremap <C-a> gg0vG$yG$
 inoremap <C-a> <Esc>gg0vG$yGi
 
 " FZF
-nnoremap <Leader>fs :FZF<CR>
+nnoremap <Leader>fzf :FZF --reverse<CR>
 
