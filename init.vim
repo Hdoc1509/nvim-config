@@ -1,5 +1,3 @@
-set runtimepath^=~/.vim runtimepath+=/.vim/after
-let &packpath=&runtimepath
 let g:configPath = stdpath('config')
 
 exec 'so ' . g:configPath  . '/utils/source.vim'
