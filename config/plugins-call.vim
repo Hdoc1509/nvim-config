@@ -38,6 +38,7 @@ Plug 'onsails/lspkind.nvim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'junegunn/fzf'
 
 " GIT
 Plug 'tpope/vim-fugitive'
