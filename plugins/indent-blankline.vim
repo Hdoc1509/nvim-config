@@ -1,6 +1,8 @@
 lua << EOF
 vim.opt.list = true
 
-require("indent_blankline").setup {}
+require("indent_blankline").setup {
+  show_current_context = true,
+}
 EOF
 
