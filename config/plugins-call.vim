@@ -39,6 +39,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " GIT
 Plug 'tpope/vim-fugitive'
