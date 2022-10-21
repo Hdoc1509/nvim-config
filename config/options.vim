@@ -26,3 +26,7 @@ set fileformat=unix
 set fileformats=unix,dos
 set termguicolors
 
+if has('win32')
+  set shell=cmd
+endif
+
