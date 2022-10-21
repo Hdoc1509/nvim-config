@@ -10,6 +10,10 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
+" Quit Neovim
+nnoremap <Leader>qa :qa<CR>
+nnoremap <Leader>Qa :qa!<CR>
+
 " Set fileformat
 nnoremap <Leader>fu :set ff=unix<CR>
 nnoremap <Leader>fd :set ff=dos<CR>
