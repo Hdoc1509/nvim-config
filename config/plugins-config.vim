@@ -10,6 +10,8 @@ let plugins = [
   \ 'virt-column',
   \ 'nvim-colorizer',
   \ 'indent-blankline',
+  \ 'formatter',
+  \ 'fzf',
   \ ]
 
 for plugin in plugins
