@@ -17,6 +17,7 @@ Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'matze/vim-move'
+Plug 'mhartington/formatter.nvim'
 
 " Themes
 Plug 'EdenEast/nightfox.nvim'
