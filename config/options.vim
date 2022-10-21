@@ -12,7 +12,7 @@ set encoding=utf-8
 set showmatch
 set splitright
 set nosplitbelow
-set sw=2
+set shiftwidth=2
 set expandtab
 set relativenumber
 set laststatus=2
