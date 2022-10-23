@@ -12,6 +12,8 @@ let plugins = [
   \ 'indent-blankline',
   \ 'formatter',
   \ 'fzf',
+  \ 'nvim-surround',
+  \ 'treesitter',
   \ ]
 
 for plugin in plugins

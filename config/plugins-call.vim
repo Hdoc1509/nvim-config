@@ -18,6 +18,7 @@ Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'matze/vim-move'
 Plug 'mhartington/formatter.nvim'
+Plug 'kylechui/nvim-surround'
 
 " Themes
 Plug 'EdenEast/nightfox.nvim'
