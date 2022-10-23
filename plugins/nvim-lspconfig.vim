@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup{
@@ -41,6 +41,7 @@ end
 -- SETUP LUA
 nvim_lsp.sumneko_lua.setup{
   on_attach = on_attach,
+  capabilities = capabilities,
   Lua = {
     diagnostics = {
       globals = {'vim'}
