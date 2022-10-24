@@ -42,9 +42,11 @@ end
 nvim_lsp.sumneko_lua.setup{
   on_attach = on_attach,
   capabilities = capabilities,
-  Lua = {
-    diagnostics = {
-      globals = {'vim'}
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {'vim'}
+      }
     }
   }
 }
