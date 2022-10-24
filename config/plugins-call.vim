@@ -13,7 +13,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Typing
 Plug 'jiangmiao/auto-pairs'
-Plug 'alvan/vim-closetag'
+Plug 'windwp/nvim-ts-autotag'
 Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'matze/vim-move'

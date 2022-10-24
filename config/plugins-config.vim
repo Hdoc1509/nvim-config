@@ -4,7 +4,6 @@ let plugins = [
   \ 'gitsigns',
   \ 'nightfox',
   \ 'nerdtree',
-  \ 'closetag',
   \ 'emmet',
   \ 'lightline',
   \ 'virt-column',
