@@ -1,11 +1,9 @@
 let g:lightline = {
   \ 'colorscheme': 'powerlineish',
   \ 'active': {
-  \   'right': [ [ 'mode', 'paste' ],
+  \   'left': [ [ 'mode', 'paste' ],
   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
   \ },
-  \ 'component_function': {
-  \   'gitbranch': 'FugitiveHead'
-  \ },
+  \ 'component_function': { 'gitbranch': 'FugitiveHead' },
   \ }
 
