@@ -13,6 +13,7 @@ let plugins = [
   \ 'fzf',
   \ 'nvim-surround',
   \ 'treesitter',
+  \ 'notify',
   \ ]
 
 for plugin in plugins

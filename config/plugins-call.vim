@@ -51,6 +51,7 @@ Plug 'equalsraf/neovim-gui-shim'
 Plug 'lukas-reineke/virt-column.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'rcarriga/nvim-notify'
 
 " Icons
 Plug 'ryanoasis/vim-devicons'
