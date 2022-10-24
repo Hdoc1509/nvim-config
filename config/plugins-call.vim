@@ -42,6 +42,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 " GIT
 Plug 'tpope/vim-fugitive'
