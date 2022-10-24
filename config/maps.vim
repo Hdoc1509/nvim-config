@@ -74,3 +74,11 @@ inoremap <C-a> <Esc>gg0vG$yGi
 " FZF
 nnoremap <Leader>fzf :FZF --reverse<CR>
 
+" Markdown preview
+nnoremap <Leader>mp <Plug>MarkdownPreview
+nnoremap <Leader>mps <Plug>MarkdownPreviewStop
+
+" Formatter
+nnoremap <Leader>f :Format<CR>
+nnoremap <Leader>fw :FormatWrite<CR>
+
