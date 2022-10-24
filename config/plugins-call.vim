@@ -37,7 +37,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'onsails/lspkind.nvim'
 
 " IDE
-Plug 'editorconfig/editorconfig-vim'
+Plug 'gpanders/editorconfig.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf'
