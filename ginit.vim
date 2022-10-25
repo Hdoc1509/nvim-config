@@ -2,9 +2,10 @@
 "      Nvim-qt Settings      "
 """"""""""""""""""""""""""""""
 if exists('g:GuiLoaded')
+  GuiFont! FiraCode\ NF:12.5
   " Full Screen
-  nmap <Leader>fs :call GuiWindowFullScreen(1)<CR>
-  nmap <Leader>Fs :call GuiWindowFullScreen(0)<CR>
+  nnoremap <Leader>fs :call GuiWindowFullScreen(1)<CR>
+  nnoremap <Leader>Fs :call GuiWindowFullScreen(0)<CR>
 endif
 
 """"""""""""""""""""""""""""""
@@ -13,7 +14,14 @@ endif
 if exists('g:neovide')
   let g:neovide_cursor_animation_length = 0
 
-  nmap <Leader>fs :let g:neovide_fullscreen=v:true<CR>
-  nmap <Leader>Fs :let g:neovide_fullscreen=v:false<CR>
+  function Toggle_fullscreen()
+      if g:neovide_fullscreen == v:true
+          let g:neovide_fullscreen=v:false
+      else
+          let g:neovide_fullscreen=v:true
+      endif
+  endfunction
+
+  nnoremap <F11> :call Toggle_fullscreen()<CR>
 endif
 
