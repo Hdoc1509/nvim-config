@@ -1,4 +1,3 @@
-lua << EOF
 local nvim_lsp = require('lspconfig')
 local servers = { 'cssls', 'eslint', 'html', 'tsserver', 'vimls', 'yamlls', 'marksman', 'bashls' }
 
@@ -49,5 +48,4 @@ nvim_lsp.sumneko_lua.setup{
     }
   }
 }
-EOF
 

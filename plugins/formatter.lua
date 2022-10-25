@@ -1,10 +1,9 @@
-lua << EOF
 local formatter = require('formatter')
 local prettier_formatter = function(filetype)
   return require('formatter.filetypes.'.. filetype).prettier
 end
 
-require('formatter').setup {
+formatter.setup {
   filetype = {
     lua = {
       require('formatter.filetypes.lua').stylua,
@@ -19,4 +18,4 @@ require('formatter').setup {
     typescriptreact = { prettier_formatter('typescriptreact') },
   }
 }
-EOF
+

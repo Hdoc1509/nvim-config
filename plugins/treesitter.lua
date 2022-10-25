@@ -1,4 +1,3 @@
-lua << EOF
 require('nvim-treesitter.configs').setup {
   ensure_installed = { 'c', 'cpp', 'bash', 'css', 'gitignore', 'html', 'javascript', 'json', 'lua', 'scss', 'typescript', 'yaml' },
   highlight = {
@@ -9,4 +8,4 @@ require('nvim-treesitter.configs').setup {
   -- Config for nvim-ts-autotag
   autotag = { enable = true },
 }
-EOF
+

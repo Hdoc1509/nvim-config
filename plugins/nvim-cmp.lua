@@ -1,4 +1,3 @@
-lua << EOF
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
@@ -7,10 +6,6 @@ cmp.setup({
     expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
     end,
-  },
-  window = {
-    -- completion = cmp.config.window.bordered(),
-    -- documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -29,11 +24,10 @@ cmp.setup({
     format = lspkind.cmp_format({
       mode = 'symbol_text',
       maxwidth = 50,
-      before = function (entry, vim_item)
+      before = function (_, vim_item)
         return vim_item
       end
     })
   }
 })
-EOF
 

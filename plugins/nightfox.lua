@@ -1,4 +1,3 @@
-lua << EOF
 require('nightfox').setup({
   options = {
     styles = {
@@ -14,4 +13,4 @@ require('nightfox').setup({
     }
   }
 })
-EOF
+
