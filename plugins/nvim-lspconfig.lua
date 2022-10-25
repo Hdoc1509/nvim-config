@@ -1,11 +1,11 @@
 local nvim_lsp = require('lspconfig')
 local servers = { 'cssls', 'eslint', 'html', 'tsserver', 'vimls', 'yamlls', 'marksman', 'bashls' }
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
   -- Mappings
-  local opts = { noremap=true, silent=true }
+  local opts = { noremap = true, silent = true }
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
@@ -30,22 +30,22 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
-  nvim_lsp[lsp].setup{
+  nvim_lsp[lsp].setup({
     on_attach = on_attach,
-    capabilities = capabilities
-  }
+    capabilities = capabilities,
+  })
 end
 
 -- SETUP LUA
-nvim_lsp.sumneko_lua.setup{
+nvim_lsp.sumneko_lua.setup({
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
-        globals = {'vim'}
-      }
-    }
-  }
-}
+        globals = { 'vim' },
+      },
+    },
+  },
+})
 
