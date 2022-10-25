@@ -4,7 +4,7 @@ function! SourceConfig(file)
 endfunction
 
 function! SourcePlugin(file)
-  let fullPath = g:configPath . '/plugins/' . a:file . '.vim'
+  let fullPath = g:configPath . '/plugins/' . a:file
   exec 'source ' . fullPath
 endfunction
 
