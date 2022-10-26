@@ -1,4 +1,4 @@
-let plugins = [
+let plugins_config = [
   \ 'emmet.vim',
   \ 'nvim-lspconfig.lua',
   \ 'nvim-cmp.lua',
@@ -16,7 +16,7 @@ let plugins = [
   \ 'notify.lua',
   \ ]
 
-for plugin in plugins
-  call SourcePlugin(plugin)
+for plugin in plugins_config
+  exec 'so ' . g:configPath . '/plugins/' . plugin
 endfor
 
