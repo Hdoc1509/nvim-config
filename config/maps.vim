@@ -1,13 +1,13 @@
 let mapleader=" "
 
 " NERDTree
-nnoremap <Leader>nt :NERDTreeFind<CR>
+nnoremap <silent> <Leader>nt :NERDTreeFind<CR>
 
 " Save buffer
 nnoremap <Leader>w :w<CR>
 
 " Quit buffer
-nnoremap <Leader>q :q<CR>
+nnoremap <silent> <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
 " Quit Neovim
@@ -41,8 +41,6 @@ nnoremap <Leader>rts :retab<CR>
 " Edit config file
 nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>ev :vsp $MYVIMRC<CR>
-nnoremap <Leader>sv :source $MYVIMRC<CR>
-nnoremap <Leader>sf :source %<CR>
 
 " Splits navigation
 nnoremap <silent> <C-h> <C-w>h
@@ -67,18 +65,7 @@ inoremap <C-u> <Esc>viwUea
 nnoremap <C-d> dd
 inoremap <C-d> <Esc>ddi
 
-" Copy to clipboard all text
-nnoremap <C-a> gg0vG$yG$
-inoremap <C-a> <Esc>gg0vG$yGi
-
 " FZF
-nnoremap <Leader>fzf :FZF --reverse<CR>
+nnoremap <silent> <Leader>fzf :FZF --reverse<CR>
 
-" Markdown preview
-nnoremap <Leader>mp <Plug>MarkdownPreview
-nnoremap <Leader>mps <Plug>MarkdownPreviewStop
-
-" Formatter
-nnoremap <Leader>f :Format<CR>
-nnoremap <Leader>fw :FormatWrite<CR>
-
+so ~/.config/nvim/config/maps_lua.lua
