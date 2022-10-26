@@ -2,6 +2,7 @@ let mapleader=" "
 
 " NERDTree
 nnoremap <silent> <Leader>nt :NERDTreeFind<CR>
+nnoremap <silent> <Leader>ntrr :NERDTreeRefreshRoot<CR>
 
 " Save buffer
 nnoremap <Leader>w :w<CR>
