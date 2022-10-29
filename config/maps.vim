@@ -43,6 +43,9 @@ nnoremap <Leader>rts :retab<CR>
 nnoremap <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>ev :vsp $MYVIMRC<CR>
 
+" Run :checkhealth
+nnoremap <Leader>chh :checkhealth<CR>
+
 " Splits navigation
 nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-j> <C-w>j
@@ -62,7 +65,11 @@ nnoremap <Leader>gs :Git status<CR>
 nnoremap <C-u> viwUe
 inoremap <C-u> <Esc>viwUea
 
-" Remove current line
+" Word TitleCase
+nnoremap <C-t> b~le
+inoremap <C-t> <Esc>b~lea
+
+" Remove Current line
 nnoremap <C-d> dd
 inoremap <C-d> <Esc>ddi
 
