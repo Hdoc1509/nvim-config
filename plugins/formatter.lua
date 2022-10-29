@@ -1,21 +1,19 @@
 local formatter = require('formatter')
-local prettier_formatter = function(filetype)
-  return require('formatter.filetypes.'.. filetype).prettier
-end
+local prettier = require('formatter.defaults').prettier
+local filetypes = require('formatter.filetypes')
 
 formatter.setup {
   filetype = {
-    lua = {
-      require('formatter.filetypes.lua').stylua,
-    },
-    css = { prettier_formatter('css') },
-    html = { prettier_formatter('html') },
-    javascript = { prettier_formatter('javascript') },
-    javascriptreact = { prettier_formatter('javascriptreact') },
-    json = { prettier_formatter('json') },
-    markdown = { prettier_formatter('markdown') },
-    typescript = { prettier_formatter('typescript') },
-    typescriptreact = { prettier_formatter('typescriptreact') },
+    lua = { filetypes.lua.stylua },
+    css = { prettier('css') },
+    html = { prettier('html') },
+    javascript = { prettier },
+    javascriptreact = { prettier },
+    json = { prettier('json') },
+    markdown = { prettier('markdown') },
+    typescript = { prettier('typescript') },
+    typescriptreact = { prettier('typescript') },
+    yaml = { prettier('yaml') },
   }
 }
 
