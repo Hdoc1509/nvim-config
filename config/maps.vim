@@ -76,4 +76,4 @@ inoremap <C-d> <Esc>ddi
 " FZF
 nnoremap <silent> <Leader>fzf :FZF --reverse<CR>
 
-so ~/.config/nvim/config/maps_lua.lua
+lua require('maps')
