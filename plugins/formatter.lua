@@ -1,10 +1,9 @@
 local formatter = require('formatter')
 local prettier = require('formatter.defaults.prettier')
-local filetypes = require('formatter.filetypes')
 
 formatter.setup {
   filetype = {
-    lua = { filetypes.lua.stylua },
+    lua = { require('formatter.filetypes.lua').stylua },
     css = { prettier('css') },
     html = { prettier('html') },
     javascript = { prettier },
