@@ -11,7 +11,7 @@ let plugins_config = [
   \ 'indent-blankline.lua',
   \ 'formatter.lua',
   \ 'fzf.vim',
-  \ 'nvim-surround.lua',
+  \ 'surround.lua',
   \ 'treesitter.lua',
   \ 'notify.lua',
   \ ]
