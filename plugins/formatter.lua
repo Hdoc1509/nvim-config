@@ -1,5 +1,5 @@
 local formatter = require('formatter')
-local prettier = require('formatter.defaults').prettier
+local prettier = require('formatter.defaults.prettier')
 local filetypes = require('formatter.filetypes')
 
 formatter.setup {
