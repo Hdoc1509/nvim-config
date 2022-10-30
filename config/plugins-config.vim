@@ -7,7 +7,7 @@ let plugins_config = [
   \ 'nerdtree.vim',
   \ 'lightline.vim',
   \ 'virt-column.vim',
-  \ 'nvim-colorizer.lua',
+  \ 'colorizer.lua',
   \ 'indent-blankline.lua',
   \ 'formatter.lua',
   \ 'fzf.vim',
