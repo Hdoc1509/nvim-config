@@ -61,11 +61,11 @@ nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gs :Git status<CR>
 
-" Word UpperCase
-nnoremap <C-u> viwUe
-inoremap <C-u> <Esc>viwUea
+" Toogle Word UpperCase
+nnoremap <C-u> viw~e
+inoremap <C-u> <Esc>viw~ea
 
-" Word TitleCase
+" Toogle Word TitleCase
 nnoremap <C-t> b~le
 inoremap <C-t> <Esc>b~lea
 
