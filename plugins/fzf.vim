@@ -1,1 +1,1 @@
-let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git -o -name package-lock.json -o -name dist \) -prune -o -print'
+let $FZF_DEFAULT_COMMAND='fd --exclude={package-lock.json} --type f --hidden --follow --exclude .git'
