@@ -25,6 +25,7 @@ set colorcolumn=80,100,120
 set fileformat=unix
 set fileformats=unix,dos
 set termguicolors
+set updatetime=500
 let g:loaded_ruby_provider = 0
 let g:loaded_perl_provider = 0
 
