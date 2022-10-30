@@ -1,7 +1,7 @@
 let plugins_config = [
   \ 'emmet.vim',
   \ 'nvim-lspconfig.lua',
-  \ 'nvim-cmp.lua',
+  \ 'cmp.lua',
   \ 'gitsigns.lua',
   \ 'nightfox.lua',
   \ 'nerdtree.vim',
