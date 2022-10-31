@@ -148,7 +148,7 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
 Then, open a terminal and run the following command for install all the plugins:
 
 ```sh
-nvim -es -u ~/.config/nvim/config/plugins-call.vim +PlugInstall +qa
+nvim -es -u ~/.config/nvim/config/plugins.vim +PlugInstall +qa
 ```
 
 ### Install lsp-servers
