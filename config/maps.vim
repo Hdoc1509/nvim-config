@@ -76,4 +76,8 @@ inoremap <C-d> <Esc>ddi
 " FZF
 nnoremap <silent> <Leader>fzf :FZF --reverse<CR>
 
+" Plug
+nnoremap <Leader>pi :PlugInstall<CR>
+nnoremap <Leader>pc :PlugClean<CR>
+
 lua require('maps')
