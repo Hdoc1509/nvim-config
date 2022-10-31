@@ -1,4 +1,4 @@
-let mapleader=" "
+let g:mapleader="\<Space>"
 
 " NERDTree
 nnoremap <silent> <Leader>nt :NERDTreeFind<CR>
