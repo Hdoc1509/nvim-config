@@ -90,13 +90,13 @@ Clone repository in your neovim config path.
   - Via `git clone`:
 
   ```sh
-  git clone --depth 1 https://github.com/Hdoc1509/nvim-config-vim.git ~/.config/nvim
+  git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git ~/.config/nvim
   ```
 
   - Via [`tiged`](https://github.com/tiged/tiged) (degit):
 
   ```sh
-  degit Hdoc1509/nvim-config-vim ~/.config/nvim
+  degit Hdoc1509/nvim-config ~/.config/nvim
   ```
 
 - Windows with `cmd`:
@@ -104,13 +104,13 @@ Clone repository in your neovim config path.
   - Via `git clone`:
 
   ```sh
-  git clone --depth 1 https://github.com/Hdoc1509/nvim-config-vim.git %localappdata%\nvim
+  git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git %localappdata%\nvim
   ```
 
   - Via [`tiged`](https://github.com/tiged/tiged) (degit):
 
   ```sh
-  degit Hdoc1509/nvim-config-vim %localappdata%\nvim
+  degit Hdoc1509/nvim-config %localappdata%\nvim
   ```
 
 - Windows with `git-bash`:
@@ -118,7 +118,7 @@ Clone repository in your neovim config path.
   - Via `git clone`:
 
   ```sh
-  git clone --depth 1 https://github.com/Hdoc1509/nvim-config-vim.git $LOCALAPPDATA/nvim
+  git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git $LOCALAPPDATA/nvim
   ```
 
   - Via [`tiged`](https://github.com/tiged/tiged) (degit):
@@ -250,7 +250,7 @@ configuration, follow next indications:
 - General options must be placed in `config/options.vim`.
 - Plugins call must be setted in `config/plugins.vim`.
 - Plugins configurations must be added inside `plugins` folder and then sourced
-- in `config/plugins-config.vim` with pattern `filename.extension`.
+  in `config/plugins-config.vim` with pattern `filename.extension`.
 - Mapleader and simple mappings must be setted in `config/maps.vim`.
 - Complex mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `config/colors.vim`.
