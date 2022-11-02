@@ -1,5 +1,8 @@
 call plug#begin()
 
+" Plenary
+Plug 'nvim-lua/plenary.nvim'
+
 " Syntax
 Plug 'sheerun/vim-polyglot'
 
@@ -19,6 +22,8 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'matze/vim-move'
 Plug 'mhartington/formatter.nvim'
 Plug 'kylechui/nvim-surround'
+Plug 'scrooloose/nerdcommenter'
+Plug 'folke/todo-comments.nvim'
 
 " Themes
 Plug 'EdenEast/nightfox.nvim'
@@ -39,7 +44,6 @@ Plug 'onsails/lspkind.nvim'
 " IDE
 Plug 'gpanders/editorconfig.nvim'
 Plug 'lewis6991/gitsigns.nvim'
-Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }

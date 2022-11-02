@@ -14,6 +14,7 @@ let plugins_config = [
   \ 'surround.lua',
   \ 'treesitter.lua',
   \ 'notify.lua',
+  \ 'todo-comments.lua',
   \ ]
 
 for plugin in plugins_config
