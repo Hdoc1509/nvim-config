@@ -4,7 +4,7 @@ let plugins_config = [
   \ 'cmp.lua',
   \ 'gitsigns.lua',
   \ 'nightfox.lua',
-  \ 'nerdtree.vim',
+  \ 'nvim-tree.lua',
   \ 'lightline.vim',
   \ 'virt-column.vim',
   \ 'colorizer.lua',

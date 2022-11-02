@@ -1,8 +1,7 @@
 let g:mapleader="\<Space>"
 
-" NERDTree
-nnoremap <silent> <Leader>nt :NERDTreeFind<CR>
-nnoremap <silent> <Leader>ntrr :NERDTreeRefreshRoot<CR>
+" NvimTree
+nnoremap <silent> <F1> :NvimTreeFindFileToggle<CR>
 
 " Save buffer
 nnoremap <Leader>w :w<CR>

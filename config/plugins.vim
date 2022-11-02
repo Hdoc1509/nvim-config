@@ -8,8 +8,8 @@ Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
 " Tree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
 
 " Typing
 Plug 'jiangmiao/auto-pairs'
@@ -53,9 +53,6 @@ Plug 'lukas-reineke/virt-column.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'rcarriga/nvim-notify'
-
-" Icons
-Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
