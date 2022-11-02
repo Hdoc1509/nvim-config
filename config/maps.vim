@@ -39,7 +39,7 @@ nnoremap <Leader>, A,<Esc>
 nnoremap <Leader>rts :retab<CR>
 
 " Edit config file
-nnoremap <Leader>e :e $MYVIMRC<CR>
+nnoremap <silent> <Leader>e :e $MYVIMRC<CR>
 nnoremap <Leader>ev :vsp $MYVIMRC<CR>
 
 " Run :checkhealth
