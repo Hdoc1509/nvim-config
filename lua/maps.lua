@@ -2,22 +2,25 @@ local cmd = vim.cmd
 local keymap = vim.keymap.set
 
 local opts = { silent = true, noremap = true }
+
 local map_notify = function(message)
   vim.notify(message, 'info', {
     title = 'Mapping',
   })
 end
 
+local nmap = function(lhs, rhs) keymap('n', lhs, rhs, opts) end
+
 -- Edit config file
-keymap('n', '<Leader>sv', function()
+nmap('<Leader>sv', function()
   map_notify('Sourcing $MYVIMRC file...')
   cmd('source $MYVIMRC')
-end, opts)
+end)
 
-keymap('n', '<Leader>sf', function()
+nmap('<Leader>sf', function()
   map_notify('Sourcing current file...')
   cmd('source %')
-end, opts)
+end)
 
 -- Copy to clipboard all text
 keymap({ 'n', 'i' }, '<C-a>', function()
@@ -26,23 +29,23 @@ keymap({ 'n', 'i' }, '<C-a>', function()
 end, opts)
 
 -- MarkdownPreview
-keymap('n', '<Leader>mp', function()
+nmap('<Leader>mp', function()
   map_notify('Opening Markdown preview...')
   cmd('MarkdownPreview')
-end, opts)
+end)
 
-keymap('n', '<Leader>mps', function()
+nmap('<Leader>mps', function()
   cmd('MarkdownPreviewStop')
   map_notify('Closed Markdown preview')
-end, opts)
+end)
 
 -- Formatter
-keymap('n', '<Leader>f', function()
+nmap('<Leader>f', function()
   map_notify('Formatting...')
   cmd('Format')
-end, opts)
+end)
 
-keymap('n', '<Leader>fw', function()
+nmap('<Leader>fw', function()
   map_notify('Formatting and writing...')
   cmd('FormatWrite')
-end, opts)
+end)
