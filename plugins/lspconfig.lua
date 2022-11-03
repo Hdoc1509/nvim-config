@@ -1,9 +1,11 @@
-local merge = require('utils').merge
 local nvim_lsp = require('lspconfig')
 local fn = vim.fn
 local api = vim.api
 local diagnostic = vim.diagnostic
-local servers = { 'cssls', 'eslint', 'html', 'jsonls', 'tsserver', 'sumneko_lua', 'vimls', 'yamlls', 'marksman', 'bashls' }
+local servers =
+  { 'cssls', 'eslint', 'html', 'jsonls', 'tsserver', 'sumneko_lua', 'vimls', 'yamlls', 'marksman', 'bashls' }
+
+local merge = function(...) return vim.tbl_deep_extend('force', ...) end
 
 local on_attach = function(_, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
