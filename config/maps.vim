@@ -29,11 +29,14 @@ nnoremap <Leader>K 20<C-y>
 nnoremap <Leader>> 10<C-w>>
 nnoremap <Leader>< 10<C-w><
 
-" Add semi colon
+" Add semi colon at the end of line
 nnoremap <Leader>; A;<Esc>
 
-" Add comma
+" Add comma at the end of line
 nnoremap <Leader>, A,<Esc>
+
+" Add a dot at the end of line
+nnoremap <Leader>. A.<Esc>
 
 " Replace tabs to spaces
 nnoremap <Leader>rts :retab<CR>
@@ -59,6 +62,7 @@ nnoremap <Leader>gd :Git diff<CR>
 nnoremap <Leader>gp :Git push<CR>
 nnoremap <Leader>gl :Git pull<CR>
 nnoremap <Leader>gs :Git status<CR>
+nnoremap <Leader>gc :Git commit<CR>
 
 " Toogle Word UpperCase
 nnoremap <C-u> viw~e
@@ -75,7 +79,10 @@ inoremap <C-d> <Esc>ddi
 " FZF
 nnoremap <silent> <Leader>fzf :FZF --reverse<CR>
 
-" Plug
+" TODO-COMMENTS
+nnoremap <silent> <Leader>tl :TodoQuickFix<CR>
+
+" VIM-PLUG
 nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>pc :PlugClean<CR>
 nnoremap <Leader>ps :PlugStatus<CR>
