@@ -11,28 +11,29 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Custom [mappings](#mappings).
 - Settings for [`neovim-qt`](https://github.com/equalsraf/neovim-qt) and [`neovide`](https://github.com/neovide/neovide).
 - Plugin management via [`vim-plug`](https://github.com/junegunn/vim-plug).
-- Better colorscheme with [`nightfox.nvim`](https://github.com/EdenEast/nightfox.nvim)
 - Code highlighting via [`vim-polyglot`](https://github.com/sheerun/vim-polyglot) and [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter).
 - Better statusline via [`lighline-ale`](https://github.com/maximbaz/lightline-ale) and [`lightline.vim`](https://github.com/itchyny/lightline.vim).
 - File tree explorer via [`nerdtree`](https://github.com/scrooloose/nerdtree-project-plugin) and [`fzf`](https://github.com/junegunn/fzf).
-- Git integration with [`nerdtree-git-plugin`](https://github.com/Xuyuanp/nerdtree-git-plugin), [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim) and [`vim-fugitive`](https://github.com/tpope/vim-fugitive).
 - Autopairing via [`auto-pairs`](https://github.com/jiangmiao/auto-pairs) and [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag).
 - Emmet support with [`emmet-vim`](https://github.com/mattn/emmet-vim).
-- Completion engine via [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/).
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip) and [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets)
 - Move lines and selections easier with [`vim-move`](https://github.com/matze/vim-move).
 - Formatters support via [`formatter.nvim`](https://github.com/mhartington/formatter.nvim).
 - Easier pair surrounding with [`nvim-surround`](https://github.com/kylechui/nvim-surround)
+- Easier comments with [`nerdcommenter`](https://github.com/scrooloose/nerdcommenter).
+- Better TODO comments with [`todo-comments.nvim`](https://github.com/folke/todo-comments.nvim/).
+- Better colorscheme with [`nightfox.nvim`](https://github.com/EdenEast/nightfox.nvim)
+- Completion engine via [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/).
 - LSP support with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig) and [`lspkind.nvim`](https://github.com/onsails/lspkind.nvim).
 - Editorconfig support via [`editorconfig.nvim`](https://github.com/gpanders/editorconfig.nvim).
-- Easier comments with [`nerdcommenter`](https://github.com/scrooloose/nerdcommenter).
+- Git integration with [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim) and [`vim-fugitive`](https://github.com/tpope/vim-fugitive).
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim).
-- Functions and commands for Neovim GUI's via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim).
+- GUI functions and commands for `nvim-qt` via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim).
 - Better colorcolumn with [`virt-column.nvim`](https://github.com/lukas-reineke/virt-column.nvim).
 - Color highlighter with [`nvim-colorizer`](https://github.com/norcalli/nvim-colorizer.lua).
 - Indentation guides via [`indent-blankline.nvim`](https://github.com/lukas-reineke/indent-blankline.nvim).
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify).
-- Nerd fonts support with [`vim-devicons`](https://github.com/ryanoasis/vim-devicons).
+- Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons).
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
@@ -67,6 +68,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Git
 - [FZF](https://github.com/junegunn/fzf#installation)
 - [fd](https://github.com/sharkdp/fd#installation)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
 - Formatters:
   - [Prettier](https://prettier.io/docs/en/install.html)
   - [Stylua](https://github.com/JohnnyMorganz/StyLua#installation)
@@ -189,56 +191,61 @@ Rest of parser will be installed once you open Neovim.
 
 Used mapleader is `space key`.
 
-| Shortcut       | Mode                 | Description                                      |
-| -------------- | -------------------- | ------------------------------------------------ |
-| `<Leader>nt`   | Normal               | Open `nerdtree` in current working directory     |
-| `<Leader>ntrr` | Normal               | Refresh `nerdtree` root                          |
-| `<Leader>w`    | Normal               | Save current buffer content                      |
-| `<Leader>q`    | Normal               | Quit current buffer                              |
-| `<Leader>Q`    | Normal               | Forced quit of current buffer                    |
-| `<Leader>qa`   | Normal               | Quit from Neovim                                 |
-| `<Leader>Qa`   | Normal               | Forced quit from Neovim                          |
-| `<Leader>fu`   | Normal               | Set `fileformat` to `unix` in current buffer     |
-| `<Leader>fd`   | Normal               | Set `fileformat` to `dos` in current buffer      |
-| `<Leader>fm`   | Normal               | Set `fileformat` to `mac` in current buffer      |
-| `<Leader>j`    | Normal               | Scroll down 10 lines                             |
-| `<Leader>J`    | Normal               | Scroll down 20 lines                             |
-| `<Leader>k`    | Normal               | Scroll up 10 lines                               |
-| `<Leader>K`    | Normal               | Scroll up 20 lines                               |
-| `<Leader>>`    | Normal               | Resize current split 10 pixels to left           |
-| `<Leader><`    | Normal               | Resize current split 10 pixels to right          |
-| `<Leader>;`    | Normal               | Add a semi colon at the end of line              |
-| `<Leader>,`    | Normal               | Add a coma at the end of line                    |
-| `<Leader>rts`  | Normal               | Replace all tabs to spaces                       |
-| `<Leader>e`    | Normal               | Open `$MYVIMRC` file in current tab              |
-| `<Leader>ev`   | Normal               | Open `$MYVIMRC` file in a vertical split         |
-| `<Leader>sv`   | Normal (\*)          | Source `$MYVIMRC` file                           |
-| `<Leader>sf`   | Normal (\*)          | Source current file                              |
-| `<Leader>chh`  | Normal               | Runs `:checkhealth`                              |
-| `<C-h>`        | Normal               | Move to left split                               |
-| `<C-j>`        | Normal               | Move to bottom split                             |
-| `<C-k>`        | Normal               | Move to top split                                |
-| `<C-l>`        | Normal               | Move to right split                              |
-| `<Leader>h`    | Normal               | Move to left split                               |
-| `<Leader>l`    | Normal               | Move to right split                              |
-| `<Leader>gaa`  | Normal               | Execute `git add --all`                          |
-| `<Leader>gd`   | Normal               | Execute `git diff`                               |
-| `<Leader>gp`   | Normal               | Execute `git push`                               |
-| `<Leader>gl`   | Normal               | Execute `git pull`                               |
-| `<Leader>gs`   | Normal               | Execute `git status`                             |
-| `<C-u>`        | Normal / Insert      | Toggle Uppercase in current word                 |
-| `<C-t>`        | Normal / Insert      | Toggle Title Case in current word                |
-| `<C-d>`        | Normal / Insert      | Remove current line                              |
-| `<C-a>`        | Normal / Insert (\*) | Copy all text to clipboard                       |
-| `<Leader>fzf`  | Normal               | Open `FZF` searcher in current working directory |
-| `<Leader>mp`   | Normal (\*)          | Start Markdwon preview of current `.md` file     |
-| `<Leader>mps`  | Normal (\*)          | Stop Markdown preview of current `.md` file      |
-| `<Leader>f`    | Normal (\*)          | Run a formatter for current buffer               |
-| `<Leader>fw`   | Normal (\*)          | Run a formatter for current buffer and save it   |
-| `<Leader>fs`   | Normal               | Enable Fullscreen. Only for `nvim-qt`            |
-| `<Leader>Fs`   | Normal               | Disable Fullscreen. Only for `nvim-qt`           |
-| `<F11>`        | Normal               | Toggle Fullscreen. Only for `neovide`            |
-| `<C-e>,`       | Insert               | Expand `emmet` snippet                           |
+| Shortcut      | Mode                 | Description                                          |
+| ------------- | -------------------- | ---------------------------------------------------- |
+| `<F1>`        | Normal               | Toggle nvim-tree with focus in current file          |
+| `<Leader>w`   | Normal               | Save current buffer content                          |
+| `<Leader>q`   | Normal               | Quit current buffer                                  |
+| `<Leader>Q`   | Normal               | Forced quit of current buffer                        |
+| `<Leader>qa`  | Normal               | Quit from Neovim                                     |
+| `<Leader>Qa`  | Normal               | Forced quit from Neovim                              |
+| `<Leader>fu`  | Normal               | Set `fileformat` to `unix` in current buffer         |
+| `<Leader>fd`  | Normal               | Set `fileformat` to `dos` in current buffer          |
+| `<Leader>fm`  | Normal               | Set `fileformat` to `mac` in current buffer          |
+| `<Leader>j`   | Normal               | Scroll down 10 lines                                 |
+| `<Leader>J`   | Normal               | Scroll down 20 lines                                 |
+| `<Leader>k`   | Normal               | Scroll up 10 lines                                   |
+| `<Leader>K`   | Normal               | Scroll up 20 lines                                   |
+| `<Leader>>`   | Normal               | Resize current split 10 pixels to left               |
+| `<Leader><`   | Normal               | Resize current split 10 pixels to right              |
+| `<Leader>;`   | Normal               | Add a semi colon at the end of line                  |
+| `<Leader>,`   | Normal               | Add a coma at the end of line                        |
+| `<Leader>.`   | Normal               | Add a dot at the end of line                         |
+| `<Leader>rts` | Normal               | Replace all tabs to spaces                           |
+| `<Leader>e`   | Normal               | Open `$MYVIMRC` file in current tab                  |
+| `<Leader>ev`  | Normal               | Open `$MYVIMRC` file in a vertical split             |
+| `<Leader>sv`  | Normal (\*)          | Source `$MYVIMRC` file                               |
+| `<Leader>sf`  | Normal (\*)          | Source current file                                  |
+| `<Leader>chh` | Normal               | Runs `:checkhealth`                                  |
+| `<C-h>`       | Normal               | Move to left split                                   |
+| `<C-j>`       | Normal               | Move to bottom split                                 |
+| `<C-k>`       | Normal               | Move to top split                                    |
+| `<C-l>`       | Normal               | Move to right split                                  |
+| `<Leader>h`   | Normal               | Move to left split                                   |
+| `<Leader>l`   | Normal               | Move to right split                                  |
+| `<Leader>gaa` | Normal               | Execute `git add --all`                              |
+| `<Leader>gd`  | Normal               | Execute `git diff`                                   |
+| `<Leader>gp`  | Normal               | Execute `git push`                                   |
+| `<Leader>gl`  | Normal               | Execute `git pull`                                   |
+| `<Leader>gs`  | Normal               | Execute `git status`                                 |
+| `<Leader>gc`  | Normal               | Execute `git commit`                                 |
+| `<C-u>`       | Normal / Insert      | Toggle Uppercase in current word                     |
+| `<C-t>`       | Normal / Insert      | Toggle Title Case in current word                    |
+| `<C-d>`       | Normal / Insert      | Remove current line                                  |
+| `<C-a>`       | Normal / Insert (\*) | Copy all text to clipboard                           |
+| `<Leader>fzf` | Normal               | Open `FZF` searcher in current working directory     |
+| `<Leader>tl`  | Normal               | Show all todos of current project in quickfix window |
+| `<Leader>pi`  | Normal               | Executes `PlugInstall`                               |
+| `<Leader>pc`  | Normal               | Executes `PlugClean`                                 |
+| `<Leader>ps`  | Normal               | Executes `PlugStatus`                                |
+| `<Leader>mp`  | Normal (\*)          | Start Markdwon preview of current `.md` file         |
+| `<Leader>mps` | Normal (\*)          | Stop Markdown preview of current `.md` file          |
+| `<Leader>f`   | Normal (\*)          | Run a formatter for current buffer                   |
+| `<Leader>fw`  | Normal (\*)          | Run a formatter for current buffer and save it       |
+| `<Leader>fs`  | Normal               | Enable Fullscreen. Only for `nvim-qt`                |
+| `<Leader>Fs`  | Normal               | Disable Fullscreen. Only for `nvim-qt`               |
+| `<F11>`       | Normal               | Toggle Fullscreen. Only for `neovide`                |
+| `<C-e>,`      | Insert               | Expand `emmet` snippet                               |
 
 **(\*): Mappings those show a notify window.**
 
@@ -250,7 +257,7 @@ configuration, follow next indications:
 - General options must be placed in `config/options.vim`.
 - Plugins call must be setted in `config/plugins.vim`.
 - Plugins configurations must be added inside `plugins` folder and then sourced
-  in `config/plugins-config.vim` with pattern `filename.extension`.
+  in `config/plugins-config.vim` with pattern `plugin-name.[vim|lua]`.
 - Mapleader and simple mappings must be setted in `config/maps.vim`.
 - Complex mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `config/colors.vim`.
