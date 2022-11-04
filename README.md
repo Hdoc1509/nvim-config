@@ -193,7 +193,7 @@ Used mapleader is `space key`.
 
 | Shortcut      | Mode                 | Description                                          |
 | ------------- | -------------------- | ---------------------------------------------------- |
-| `<F1>`        | Normal               | Toggle nvim-tree with focus in current file          |
+| `<F1>`        | Normal               | Toggle `nvim-tree` with focus in current file        |
 | `<Leader>w`   | Normal               | Save current buffer content                          |
 | `<Leader>q`   | Normal               | Quit current buffer                                  |
 | `<Leader>Q`   | Normal               | Forced quit of current buffer                        |
