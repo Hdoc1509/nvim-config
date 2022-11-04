@@ -263,7 +263,7 @@ configuration, follow next indications:
 - Options related to colorschemes and custom GUI highlighting goes in `config/colors.vim`.
 - Options for Neovim GUI's are in `ginit.vim`.
 - Util functions in Vimscript must be declared in `utils.vim`.
-- Util functions in Lua must be place in `lua/utils.lua`.
+- Util functions in Lua must be placed in `lua/utils.lua`.
 
 If you want to integrate more LSP servers, see the list of all [available LSP
 servers](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
