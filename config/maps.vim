@@ -5,6 +5,7 @@ nnoremap <silent> <F1> :NvimTreeFindFileToggle<CR>
 
 " Save buffer
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>wa :wa<CR>
 
 " Quit buffer
 nnoremap <silent> <Leader>q :q<CR>
@@ -86,5 +87,8 @@ nnoremap <silent> <Leader>tl :TodoQuickFix<CR>
 nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>pc :PlugClean<CR>
 nnoremap <Leader>ps :PlugStatus<CR>
+
+" Open URL under cursor
+nnoremap <silent> <Leader>ou :silent execute '!chrome ' . shellescape(expand('<cfile>'), 1)<CR>
 
 lua require('maps')
