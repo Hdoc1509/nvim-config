@@ -52,9 +52,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'tpope/vim-fugitive'
 
 " GUI
-if exists('g:GuiLoaded')
-  Plug 'equalsraf/neovim-gui-shim'
-endif
+Plug 'equalsraf/neovim-gui-shim'
 Plug 'lukas-reineke/virt-column.nvim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'lukas-reineke/indent-blankline.nvim'
