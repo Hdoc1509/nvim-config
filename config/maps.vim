@@ -69,8 +69,8 @@ nnoremap <C-u> viw~e
 inoremap <C-u> <Esc>viw~ea
 
 " Toogle Word TitleCase
-nnoremap <C-t> b~le
-inoremap <C-t> <Esc>b~lea
+nnoremap <C-t> viwb~e
+inoremap <C-t> <Esc>viwb~ea
 
 " Remove Current line
 nnoremap <C-d> dd
