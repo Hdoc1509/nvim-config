@@ -2,7 +2,7 @@
 "      Nvim-qt Settings      "
 """"""""""""""""""""""""""""""
 if exists('g:GuiLoaded')
-  GuiFont! FiraCode\ NF:12.5
+  GuiFont! FiraCode\ NF:h13:sb
   " Full Screen
   nnoremap <Leader>fs :call GuiWindowFullScreen(1)<CR>
   nnoremap <Leader>Fs :call GuiWindowFullScreen(0)<CR>
