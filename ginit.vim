@@ -12,6 +12,8 @@ endif
 "      Neovide Settings      "
 """"""""""""""""""""""""""""""
 if exists('g:neovide')
+  set guifont=FiraCode\ NF:h12.5
+
   let g:neovide_cursor_animation_length = 0
 
   function Toggle_fullscreen()
