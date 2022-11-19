@@ -23,8 +23,10 @@ nnoremap <Leader>fm :set ff=mac<CR>
 " Scrolling
 nnoremap <Leader>j 10<C-e>
 nnoremap <Leader>J 20<C-e>
+inoremap <C-Down> <Esc>10<C-e>a
 nnoremap <Leader>k 10<C-y>
 nnoremap <Leader>K 20<C-y>
+inoremap <C-Up> <Esc>10<C-y>a
 
 " Split resize
 nnoremap <Leader>> 10<C-w>>
