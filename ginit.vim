@@ -2,7 +2,7 @@
 "      Nvim-qt Settings      "
 """"""""""""""""""""""""""""""
 if exists('g:GuiLoaded')
-  GuiFont! FiraCode\ NF:h13:sb
+  GuiFont! FiraCode\ NF:h12:sb
   " Full Screen
   nnoremap <Leader>fs :call GuiWindowFullScreen(1)<CR>
   nnoremap <Leader>Fs :call GuiWindowFullScreen(0)<CR>
@@ -12,7 +12,7 @@ endif
 "      Neovide Settings      "
 """"""""""""""""""""""""""""""
 if exists('g:neovide')
-  set guifont=FiraCode\ NF:h12.5
+  set guifont=FiraCode\ NF:h12
 
   let g:neovide_cursor_animation_length = 0
 
