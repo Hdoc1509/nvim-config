@@ -91,6 +91,6 @@ nnoremap <Leader>pc :PlugClean<CR>
 nnoremap <Leader>ps :PlugStatus<CR>
 
 " Open URL under cursor
-nnoremap <silent> <Leader>ou :silent execute '!chrome ' . shellescape(expand('<cfile>'), 1)<CR>
+nnoremap <silent> <Leader>ou :silent execute '!' . g:browser . ' ' . shellescape(expand('<cfile>'), 1)<CR>
 
 lua require('maps')
