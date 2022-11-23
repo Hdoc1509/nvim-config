@@ -10,3 +10,4 @@ let exclude = {
 let total_exclude = join(exclude.file, ',') . ',' . join(exclude.dir, ',')
 
 let $FZF_DEFAULT_COMMAND='fd --exclude={'. total_exclude . '} --type f --hidden --follow --exclude .git'
+let $FZF_DEFAULT_OPTS='--layout=reverse'
