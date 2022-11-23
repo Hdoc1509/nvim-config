@@ -80,7 +80,7 @@ nnoremap <C-d> dd
 inoremap <C-d> <Esc>ddi
 
 " FZF
-nnoremap <silent> <Leader>fzf :FZF --reverse<CR>
+nnoremap <silent> <Leader>fzf :FZF<CR>
 
 " TODO-COMMENTS
 nnoremap <silent> <Leader>tl :TodoQuickFix<CR>
