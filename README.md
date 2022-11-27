@@ -127,19 +127,11 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ```
 
-**If you are a Windows user,** make a symlink from `$HOME/.config/nvim` to
-`$LOCALAPPDATA/nvim`.
-
-- Via `cmd`:
+**IF YOU ARE A WINDOWS USER,** make a symlink from `$HOME/.config/nvim` to
+`$LOCALAPPDATA/nvim` using `cmd`:
 
 ```sh
 mklink %userprofile%\.config\nvim %localappdata%\nvim
-```
-
-- Via `git-bash`:
-
-```sh
-ln -s $LOCALAPPDATA/nvim ~/.config/nvim
 ```
 
 Finally, open a terminal and run the following command for install all the plugins:
