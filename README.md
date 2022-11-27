@@ -97,19 +97,17 @@ Clone repository in your neovim config path.
 git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git ~/.config/nvim
 ```
 
-- Windows:
+- Windows via `cmd`:
 
-  - Via `cmd`:
+```sh
+git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git %localappdata%\nvim
+```
 
-  ```sh
-  git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git %localappdata%\nvim
-  ```
+- Windows via `git-bash`:
 
-  - Via `git-bash`:
-
-  ```sh
-  git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git $LOCALAPPDATA/nvim
-  ```
+```sh
+git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git $LOCALAPPDATA/nvim
+```
 
 ### Install plugins
 
