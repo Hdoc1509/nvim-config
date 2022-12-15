@@ -15,7 +15,8 @@ let plugins_config = [
   \ 'treesitter.lua',
   \ 'notify.lua',
   \ 'todo-comments.lua',
-  \ 'vim-vsnip.vim'
+  \ 'vim-vsnip.vim',
+  \ 'markdown-preview.vim',
   \ ]
 
 for plugin in plugins_config
