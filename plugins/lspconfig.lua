@@ -78,9 +78,19 @@ local lua_settings = {
   },
 }
 
+-- BASH SETTINGS
+local bash_settings = {
+  filetypes = {
+    'sh',
+    'zsh',
+  },
+}
+
 for _, lsp in ipairs(servers) do
   if lsp == 'sumneko_lua' then
     nvim_lsp[lsp].setup(merge(lsp_general_settings, lua_settings))
+  elseif lsp == 'bashls' then
+    nvim_lsp[lsp].setup(merge(lsp_general_settings, bash_settings))
   else
     nvim_lsp[lsp].setup(lsp_general_settings)
   end
