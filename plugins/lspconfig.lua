@@ -3,7 +3,7 @@ local fn = vim.fn
 local api = vim.api
 local diagnostic = vim.diagnostic
 local servers =
-  { 'bashls', 'cssls', 'eslint', 'html', 'jsonls', 'marksman', 'sumneko_lua', 'tsserver', 'vimls', 'yamlls' }
+  { 'bashls', 'cssls', 'eslint', 'html', 'jsonls', 'marksman', 'sumneko_lua', 'taplo', 'tsserver', 'vimls', 'yamlls' }
 
 local merge = function(...) return vim.tbl_deep_extend('force', ...) end
 
