@@ -1,7 +1,5 @@
 # Neovim configuration
 
-## Introduction
-
 This repository hosts my Neovim configuration that I'm using for Linux and Windows.
 
 ## Features
@@ -12,7 +10,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Settings for [`neovim-qt`](https://github.com/equalsraf/neovim-qt) and [`neovide`](https://github.com/neovide/neovide).
 - Plugin management via [`vim-plug`](https://github.com/junegunn/vim-plug).
 - Code highlighting via [`vim-polyglot`](https://github.com/sheerun/vim-polyglot) and [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter).
-- Better statusline via [`lighline-ale`](https://github.com/maximbaz/lightline-ale) and [`lightline.vim`](https://github.com/itchyny/lightline.vim).
+- Better statusline via [`lightline-ale`](https://github.com/maximbaz/lightline-ale) and [`lightline.vim`](https://github.com/itchyny/lightline.vim).
 - File tree explorer via [`nerdtree`](https://github.com/scrooloose/nerdtree-project-plugin)
 - File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf).
 - Autopairing via [`auto-pairs`](https://github.com/jiangmiao/auto-pairs) and [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag).
@@ -43,6 +41,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`jsonls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls)
   - [`marksman`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman)
   - [`sumneko_lua`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua)
+  - [`taplo`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#taplo)
   - [`tsserver`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver)
   - [`vimls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls)
   - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
@@ -58,6 +57,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - jsonc
   - lua
   - scss
+  - toml
   - typescript
   - yaml
 
@@ -76,7 +76,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [Stylua](https://github.com/JohnnyMorganz/StyLua#installation)
   - [shfmt](https://github.com/mvdan/sh#shfmt)
 - [ShellCheck](https://github.com/koalaman/shellcheck#installing)
-- [Zig](https://github.com/ziglang/zig#installation) (optional)
+- [Zig](https://github.com/ziglang/zig#installation) (optional) - See [Troubleshooting](#troubleshooting) section.
 
 ## Installation
 
@@ -89,24 +89,17 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 
 ### Cloning
 
-Clone repository in your neovim config path.
-
-- UNIX systems:
+Clone repository in neovim config path.
 
 ```sh
 git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git ~/.config/nvim
 ```
 
-- Windows via `cmd`:
+**IF YOU ARE A WINDOWS USER,** set the environment variable `XDG_CONFIG_HOME`
+with `cmd`:
 
-```sh
-git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git %localappdata%\nvim
-```
-
-- Windows via `git-bash`:
-
-```sh
-git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git $LOCALAPPDATA/nvim
+```cmd
+setx XDG_CONFIG_HOME %USERPROFILE%\.config
 ```
 
 ### Install plugins
@@ -122,16 +115,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 - Windows via `powershell`:
 
-```sh
+```powershell
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
-```
-
-**IF YOU ARE A WINDOWS USER,** make a symlink from `$HOME/.config/nvim` to
-`$LOCALAPPDATA/nvim` using `cmd`:
-
-```sh
-mklink %userprofile%\.config\nvim %localappdata%\nvim
 ```
 
 Finally, open a terminal and run the following command for install all the plugins:
@@ -148,11 +134,11 @@ nvim -es -u ~/.config/nvim/config/plugins.vim +PlugInstall +qa
 npm i -g vscode-langservers-extracted typescript typescript-language-server vim-language-server bash-language-server yaml-language-server
 ```
 
-- For install `lua-language-server`, download the precompiled binary from
-  [releases page](https://github.com/sumneko/lua-language-server/releases).
-  Then extract its content and add its `bin` folder to your $PATH.
+- For install `lua-language-server`, follow its official [installation guide](https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line).
 
-- For install `marksman`, follow the official [installation guide](https://github.com/artempyanykh/marksman#how-to-install).
+- For install `marksman`, follow its official [installation guide](https://github.com/artempyanykh/marksman#how-to-install).
+
+- For instal `taplo` lsp, download the `taplo-full` binary for your OS from [releases page](https://github.com/tamasfe/taplo/releases) and put it in your `~/.local/bin` folder. Be sure to have this folder in your `$PATH`.
 
 ### Install Treesitter dependencies
 
@@ -240,11 +226,28 @@ Used mapleader is `space key`.
 
 **(\*): Mappings those show a notify window.**
 
+## Global variables
+
+This configuration use some custom global variables:
+
+- **g:configPath**: Deafult path for Neovim configuration.
+- **g:browser**: Binary name of your favorite browser. Default to `firefox`.
+
+You can add or change these globalvariables in `init.vim`.
+
+
+## Global functions
+
+This configuration just provides one global function:
+
+- **SourceConfig**: Source a `.vim` file from `config` folder.
+
 ## Customization
 
 If you want to integrate your older configuration or want to extend this
 configuration, follow next indications:
 
+- Custom global variables must be in `init.vim`.
 - General options must be placed in `config/options.vim`.
 - Plugins call must be setted in `config/plugins.vim`.
 - Plugins configurations must be added inside `plugins` folder and then sourced
@@ -260,6 +263,11 @@ If you want to integrate more LSP servers, see the list of all [available LSP
 servers](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
 Once you have all software requirements for desired LSP server, just add its
 server name inside list of servers in `plugins/nvim-lspconfig.lua`.
+
+## Troubleshooting
+
+- If you are a Windows user and have problems to install `treesitter` parser,
+    install `zig` and retry to install.
 
 ## My other software configurations
 
