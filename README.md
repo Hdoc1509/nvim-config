@@ -233,14 +233,27 @@ This configuration use some custom global variables:
 - **g:configPath**: Deafult path for Neovim configuration.
 - **g:browser**: Binary name of your favorite browser. Default to `firefox`.
 
-You can add or change these globalvariables in `init.vim`.
+You can add or change these global variables in `init.vim`.
 
 
 ## Global functions
 
-This configuration just provides one global function:
+This configuration just provides one global function from `utils.vim` file:
 
 - **SourceConfig**: Source a `.vim` file from `config` folder.
+
+You can see how I use it in `init.vim`
+
+## Git integration
+
+This configuration provides a minimal configuration file for integration with
+git.
+
+To use it, run the followin command:
+
+```sh
+git config --global core.editor "nvim -u ~/.config/nvim/init-git.vim"
+```
 
 ## Customization
 
@@ -251,7 +264,7 @@ configuration, follow next indications:
 - General options must be placed in `config/options.vim`.
 - Plugins call must be setted in `config/plugins.vim`.
 - Plugins configurations must be added inside `plugins` folder and then sourced
-  in `config/plugins-config.vim` with pattern `plugin-name.[vim|lua]`.
+  in `config/plugins-config.vim` with pattern `plugin-name.(vim|lua)`.
 - Mapleader and simple mappings must be setted in `config/maps.vim`.
 - Complex mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `config/colors.vim`.
