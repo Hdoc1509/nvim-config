@@ -7,6 +7,9 @@ nnoremap <silent> <F1> :NvimTreeFindFileToggle<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>wa :wa<CR>
 
+" Save and quit
+nnoremap <Leader>wq :wq<CR>
+
 " Quit buffer
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
