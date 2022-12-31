@@ -89,9 +89,11 @@ nnoremap <silent> <Leader>fzf :FZF<CR>
 nnoremap <silent> <Leader>tl :TodoQuickFix<CR>
 
 " VIM-PLUG
-nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>pc :PlugClean<CR>
+nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>ps :PlugStatus<CR>
+nnoremap <Leader>pud :PLugUpdate<CR>
+nnoremap <Leader>pug :PlugUpgrade<CR>
 
 " Open URL under cursor
 nnoremap <silent> <Leader>ou :silent execute '!' . g:browser . ' ' . shellescape(expand('<cfile>'), 1)<CR>
