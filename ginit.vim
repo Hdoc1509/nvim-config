@@ -1,3 +1,7 @@
+" Shift+Insert for paste from clipboard in GUI's
+inoremap <silent> <S-Insert> <C-r>+
+cnoremap <S-Insert> <C-r>+
+
 """"""""""""""""""""""""""""""
 "      Nvim-qt Settings      "
 """"""""""""""""""""""""""""""
