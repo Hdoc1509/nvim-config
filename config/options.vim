@@ -8,15 +8,7 @@ set guicursor=a:blinkwait500-blinkoff500-blinkon500-Cursor
 set mouse=a
 set clipboard=unnamed
 
-syntax enable
-
-set showcmd
-set laststatus=2
-
-set ruler
 set colorcolumn=80,100,120
-
-set signcolumn=auto
 
 set encoding=utf-8
 
