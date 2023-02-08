@@ -164,11 +164,12 @@ Rest of parser will be installed once you open Neovim.
 
 Used mapleader is `space key`.
 
-| Shortcut      | Mode                 | Description                                          |
+| Mapping       | Mode                 | Description                                          |
 | ------------- | -------------------- | ---------------------------------------------------- |
 | `<F1>`        | Normal               | Toggle `nvim-tree` with focus in current file        |
 | `<Leader>w`   | Normal               | Save current buffer content                          |
 | `<Leader>wa`  | Normal               | Save all changed buffers                             |
+| `<Leader>wq`  | Normal               | Save and quit from current buffer                    |
 | `<Leader>q`   | Normal               | Quit current buffer                                  |
 | `<Leader>Q`   | Normal               | Forced quit of current buffer                        |
 | `<Leader>qa`  | Normal               | Quit from Neovim                                     |
@@ -192,7 +193,7 @@ Used mapleader is `space key`.
 | `<Leader>ev`  | Normal               | Open `$MYVIMRC` file in a vertical split             |
 | `<Leader>sv`  | Normal (\*)          | Source `$MYVIMRC` file                               |
 | `<Leader>sf`  | Normal (\*)          | Source current file                                  |
-| `<Leader>chh` | Normal               | Runs `:checkhealth`                                  |
+| `<Leader>chh` | Normal               | Run `:checkhealth`                                  |
 | `<C-h>`       | Normal               | Move to left split                                   |
 | `<C-j>`       | Normal               | Move to bottom split                                 |
 | `<C-k>`       | Normal               | Move to top split                                    |
@@ -209,11 +210,13 @@ Used mapleader is `space key`.
 | `<C-t>`       | Normal / Insert      | Toggle Title Case in current word                    |
 | `<C-d>`       | Normal / Insert      | Remove current line                                  |
 | `<C-a>`       | Normal / Insert (\*) | Copy all text to clipboard                           |
-| `<Leader>fzf` | Normal               | Open `FZF` searcher in current working directory     |
+| `<Leader>fzf` | Normal               | Run `FZF` in current working directory               |
 | `<Leader>tl`  | Normal               | Show all TODOS of current project in quickfix window |
-| `<Leader>pi`  | Normal               | Executes `PlugInstall`                               |
-| `<Leader>pc`  | Normal               | Executes `PlugClean`                                 |
-| `<Leader>ps`  | Normal               | Executes `PlugStatus`                                |
+| `<Leader>pc`  | Normal               | Execute `PlugClean`                                  |
+| `<Leader>pi`  | Normal               | Execute `PlugInstall`                                |
+| `<Leader>ps`  | Normal               | Execute `PlugStatus`                                 |
+| `<Leader>pud` | Normal               | Execute `PlugUpdate`                                 |
+| `<Leader>pug` | Normal               | Execute `PlugUpgrade`                                |
 | `<Leader>ou`  | Normal               | Open URL under cursor with browser in `g:browser`    |
 | `<Leader>mp`  | Normal (\*)          | Start Markdwon preview of current `.md` file         |
 | `<Leader>mps` | Normal (\*)          | Stop Markdown preview of current `.md` file          |
@@ -226,6 +229,14 @@ Used mapleader is `space key`.
 
 **(\*): Mappings those show a notify window.**
 
+### Markdown mappings
+
+The following mappings just run on `*.md` files:
+
+| Mapping       | Mode        | Description                                                         |
+| ------------- | ----------- | ------------------------------------------------------------------- |
+| `<Leader>sat` | Visual Line | Create a table from shell aliases definitions and run `FormatWrite` |
+
 ## Global variables
 
 This configuration use some custom global variables:
@@ -235,14 +246,13 @@ This configuration use some custom global variables:
 
 You can add or change these global variables in `init.vim`.
 
-
 ## Global functions
 
-This configuration just provides one global function from `utils.vim` file:
+This configuration provides some global functions from `utils.vim` file:
 
 - **SourceConfig**: Source a `.vim` file from `config` folder.
-
-You can see how I use it in `init.vim`
+- **ShellAliasesToTable**: Create a table from selected lines with shell aliases
+  definitions.
 
 ## Git integration
 
@@ -280,7 +290,7 @@ server name inside list of servers in `plugins/nvim-lspconfig.lua`.
 ## Troubleshooting
 
 - If you are a Windows user and have problems to install `treesitter` parser,
-    install `zig` and retry to install.
+  install `zig` and retry to install.
 
 ## My other software configurations
 
