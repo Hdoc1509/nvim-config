@@ -92,7 +92,7 @@ nnoremap <silent> <Leader>tl :TodoQuickFix<CR>
 nnoremap <Leader>pc :PlugClean<CR>
 nnoremap <Leader>pi :PlugInstall<CR>
 nnoremap <Leader>ps :PlugStatus<CR>
-nnoremap <Leader>pud :PLugUpdate<CR>
+nnoremap <Leader>pud :PlugUpdate<CR>
 nnoremap <Leader>pug :PlugUpgrade<CR>
 
 " Open URL under cursor
