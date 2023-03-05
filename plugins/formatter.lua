@@ -8,6 +8,7 @@ formatter.setup {
     javascript = { prettier },
     javascriptreact = { prettier },
     json = { prettier('json') },
+    jsonc = { prettier },
     lua = { require('formatter.filetypes.lua').stylua },
     markdown = { prettier('markdown') },
     sh = { require('formatter.filetypes.sh').shfmt },
