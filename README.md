@@ -53,7 +53,6 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - gitignore
   - html
   - javascript
-  - json
   - jsonc
   - lua
   - scss
