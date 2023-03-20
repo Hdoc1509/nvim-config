@@ -3,6 +3,10 @@ require('nvim-tree').setup({
     custom = {
       '^.git$',
       '^package-lock.json$',
+      '^node_modules$',
+    },
+    exclude = {
+      '*.local',
     },
   },
   actions = {
@@ -26,5 +30,8 @@ require('nvim-tree').setup({
   view = {
     number = true,
     relativenumber = true,
+  },
+  git = {
+    ignore = false,
   },
 })
