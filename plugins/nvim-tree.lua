@@ -4,6 +4,7 @@ require('nvim-tree').setup({
       '^.git$',
       '^package-lock.json$',
       '^node_modules$',
+      '^dist$',
     },
     exclude = {
       '*.local',
