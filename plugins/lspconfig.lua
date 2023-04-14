@@ -92,11 +92,23 @@ local bash_settings = {
   },
 }
 
+-- JSON SETTINGS
+local json_settings = {
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+      validate = { enable = true },
+    },
+  },
+}
+
 for _, lsp in ipairs(servers) do
   if lsp == 'lua_ls' then
     nvim_lsp[lsp].setup(merge(lsp_general_settings, lua_settings))
   elseif lsp == 'bashls' then
     nvim_lsp[lsp].setup(merge(lsp_general_settings, bash_settings))
+  elseif lsp == 'jsonls' then
+    nvim_lsp[lsp].setup(merge(lsp_general_settings, json_settings))
   else
     nvim_lsp[lsp].setup(lsp_general_settings)
   end
