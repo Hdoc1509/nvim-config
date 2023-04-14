@@ -14,7 +14,6 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - File tree explorer via [`nerdtree`](https://github.com/scrooloose/nerdtree-project-plugin)
 - File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf).
 - Autopairing via [`auto-pairs`](https://github.com/jiangmiao/auto-pairs) and [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag).
-- Emmet support with [`emmet-vim`](https://github.com/mattn/emmet-vim).
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip) and [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets)
 - Move lines and selections easier with [`vim-move`](https://github.com/matze/vim-move).
 - Formatters support via [`formatter.nvim`](https://github.com/mhartington/formatter.nvim).
@@ -37,6 +36,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
   - [`eslint`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint)
+  - [`emmet_ls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_ls)
   - [`html`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html)
   - [`jsonls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls)
   - [`marksman`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman)
@@ -130,7 +130,7 @@ nvim -es -u ~/.config/nvim/config/plugins.vim +PlugInstall +qa
 - Run the following `npm` command for install most of required lsp-servers:
 
 ```sh
-npm i -g vscode-langservers-extracted typescript typescript-language-server vim-language-server bash-language-server yaml-language-server
+npm i -g vscode-langservers-extracted typescript typescript-language-server vim-language-server bash-language-server yaml-language-server emmet-ls
 ```
 
 - For install `lua-language-server`, follow its official [installation guide](https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line).
@@ -192,7 +192,7 @@ Used mapleader is `space key`.
 | `<Leader>ev`  | Normal               | Open `$MYVIMRC` file in a vertical split             |
 | `<Leader>sv`  | Normal (\*)          | Source `$MYVIMRC` file                               |
 | `<Leader>sf`  | Normal (\*)          | Source current file                                  |
-| `<Leader>chh` | Normal               | Run `:checkhealth`                                  |
+| `<Leader>chh` | Normal               | Run `:checkhealth`                                   |
 | `<C-h>`       | Normal               | Move to left split                                   |
 | `<C-j>`       | Normal               | Move to bottom split                                 |
 | `<C-k>`       | Normal               | Move to top split                                    |
@@ -224,7 +224,6 @@ Used mapleader is `space key`.
 | `<Leader>fs`  | Normal               | Enable Fullscreen. Only for `nvim-qt`                |
 | `<Leader>Fs`  | Normal               | Disable Fullscreen. Only for `nvim-qt`               |
 | `<F11>`       | Normal               | Toggle Fullscreen. Only for `neovide`                |
-| `<C-e>,`      | Insert               | Expand `emmet` snippet                               |
 
 **(\*): Mappings those show a notify window.**
 

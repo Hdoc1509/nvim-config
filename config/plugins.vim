@@ -17,7 +17,6 @@ Plug 'nvim-tree/nvim-tree.lua'
 " Typing
 Plug 'jiangmiao/auto-pairs'
 Plug 'windwp/nvim-ts-autotag'
-Plug 'mattn/emmet-vim'
 Plug 'rafamadriz/friendly-snippets'
 Plug 'matze/vim-move'
 Plug 'mhartington/formatter.nvim'

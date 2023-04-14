@@ -2,8 +2,20 @@ local nvim_lsp = require('lspconfig')
 local fn = vim.fn
 local api = vim.api
 local diagnostic = vim.diagnostic
-local servers =
-  { 'bashls', 'cssls', 'eslint', 'html', 'jsonls', 'lua_ls', 'marksman', 'taplo', 'tsserver', 'vimls', 'yamlls' }
+local servers = {
+  'bashls',
+  'cssls',
+  'eslint',
+  'emmet_ls',
+  'html',
+  'jsonls',
+  'lua_ls',
+  'marksman',
+  'taplo',
+  'tsserver',
+  'vimls',
+  'yamlls',
+}
 
 local merge = function(...) return vim.tbl_deep_extend('force', ...) end
 

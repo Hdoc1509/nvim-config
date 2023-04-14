@@ -1,5 +1,4 @@
 let plugins_config = [
-  \ 'emmet.vim',
   \ 'lspconfig.lua',
   \ 'cmp.lua',
   \ 'gitsigns.lua',
