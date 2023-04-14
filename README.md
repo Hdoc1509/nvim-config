@@ -41,7 +41,6 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`jsonls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls)
   - [`marksman`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman)
   - [`sumneko_lua`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua)
-  - [`taplo`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#taplo)
   - [`tsserver`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver)
   - [`vimls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls)
   - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
@@ -56,7 +55,6 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - jsonc
   - lua
   - scss
-  - toml
   - typescript
   - yaml
 
@@ -136,8 +134,6 @@ npm i -g vscode-langservers-extracted typescript typescript-language-server vim-
 - For install `lua-language-server`, follow its official [installation guide](https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line).
 
 - For install `marksman`, follow its official [installation guide](https://github.com/artempyanykh/marksman#how-to-install).
-
-- For instal `taplo` lsp, download the `taplo-full` binary for your OS from [releases page](https://github.com/tamasfe/taplo/releases) and put it in your `~/.local/bin` folder. Be sure to have this folder in your `$PATH`.
 
 ### Install Treesitter dependencies
 

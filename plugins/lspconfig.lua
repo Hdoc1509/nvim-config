@@ -11,7 +11,6 @@ local servers = {
   'jsonls',
   'lua_ls',
   'marksman',
-  'taplo',
   'tsserver',
   'vimls',
   'yamlls',
