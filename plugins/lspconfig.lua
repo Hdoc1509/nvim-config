@@ -93,10 +93,17 @@ local bash_settings = {
 }
 
 -- JSON SETTINGS
+local select_schemas = {
+  '.eslintrc',
+  'package.json',
+}
+
 local json_settings = {
   settings = {
     json = {
-      schemas = require('schemastore').json.schemas(),
+      schemas = require('schemastore').json.schemas({
+        select = select_schemas,
+      }),
       validate = { enable = true },
     },
   },
