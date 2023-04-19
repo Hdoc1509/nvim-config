@@ -28,7 +28,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim).
 - Functions and commands for Neovim GUI's via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim).
 - Better colorcolumn with [`virt-column.nvim`](https://github.com/lukas-reineke/virt-column.nvim).
-- Color highlighter with [`nvim-colorizer`](https://github.com/norcalli/nvim-colorizer.lua).
+- Color highlighter with [`nvim-highlight-colors`](https://github.com/brenoprata10/nvim-highlight-colors).
 - Indentation guides via [`indent-blankline.nvim`](https://github.com/lukas-reineke/indent-blankline.nvim).
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify).
 - Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons).
