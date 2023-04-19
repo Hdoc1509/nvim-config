@@ -32,6 +32,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Indentation guides via [`indent-blankline.nvim`](https://github.com/lukas-reineke/indent-blankline.nvim).
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify).
 - Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons).
+- Unicode completion with [`unicode.vim`](https://github.com/chrisbra/unicode.vim).
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)

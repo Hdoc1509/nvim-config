@@ -40,6 +40,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'onsails/lspkind.nvim'
 Plug 'b0o/schemastore.nvim'
+Plug 'chrisbra/unicode.vim'
 
 " IDE
 Plug 'gpanders/editorconfig.nvim'
