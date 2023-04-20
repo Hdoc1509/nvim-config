@@ -29,6 +29,8 @@ Plug 'EdenEast/nightfox.nvim'
 
 " LSP
 Plug 'neovim/nvim-lspconfig'
+Plug 'onsails/lspkind.nvim'
+Plug 'hrsh7th/cmp-nvim-lsp-signature-help'
 
 " Completion
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -38,7 +40,6 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-Plug 'onsails/lspkind.nvim'
 Plug 'b0o/schemastore.nvim'
 Plug 'chrisbra/unicode.vim'
 
