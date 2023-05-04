@@ -12,6 +12,7 @@ formatter.setup {
     lua = { require('formatter.filetypes.lua').stylua },
     markdown = { prettier('markdown') },
     sh = { require('formatter.filetypes.sh').shfmt },
+    scss = { prettier('scss') },
     typescript = { prettier('typescript') },
     typescriptreact = { prettier('typescript') },
     yaml = { prettier('yaml') },
