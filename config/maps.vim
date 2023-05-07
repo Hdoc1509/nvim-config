@@ -98,4 +98,7 @@ nnoremap <Leader>pug :PlugUpgrade<CR>
 " Open URL under cursor
 nnoremap <silent> <Leader>ou :silent execute '!' . g:browser . ' ' . shellescape(expand('<cfile>'), 1)<CR>
 
+" Clear Searh Highlighting
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
+
 lua require('maps')

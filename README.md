@@ -214,6 +214,7 @@ Used mapleader is `space key`.
 | `<Leader>pud` | Normal               | Execute `PlugUpdate`                                 |
 | `<Leader>pug` | Normal               | Execute `PlugUpgrade`                                |
 | `<Leader>ou`  | Normal               | Open URL under cursor with browser in `g:browser`    |
+| `<Leader>/`   | Normal               | Clear search highlighting                            |
 | `<Leader>mp`  | Normal (\*)          | Start Markdwon preview of current `.md` file         |
 | `<Leader>mps` | Normal (\*)          | Stop Markdown preview of current `.md` file          |
 | `<Leader>f`   | Normal (\*)          | Format current buffer                                |
