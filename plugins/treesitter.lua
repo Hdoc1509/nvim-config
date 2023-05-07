@@ -9,6 +9,7 @@ require('nvim-treesitter.configs').setup({
     'gitignore',
     'html',
     'javascript',
+    'jsdoc',
     'jsonc',
     'lua',
     'scss',
