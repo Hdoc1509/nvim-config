@@ -14,6 +14,9 @@ nnoremap <Leader>wq :wq<CR>
 nnoremap <silent> <Leader>q :q<CR>
 nnoremap <Leader>Q :q!<CR>
 
+" Quit tab
+nnoremap <silent> <Leader>tq :tabclose<CR>
+
 " Quit Neovim
 nnoremap <Leader>qa :qa<CR>
 nnoremap <Leader>Qa :qa!<CR>
