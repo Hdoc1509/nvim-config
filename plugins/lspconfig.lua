@@ -109,6 +109,19 @@ local json_settings = {
   },
 }
 
+-- YAML SETTINGS
+local yaml_settings = {
+  settings = {
+    yaml = {
+      schemas = require('schemastore').yaml.schemas({
+        select = {
+          'GitHub Workflow',
+        },
+      }),
+    },
+  },
+}
+
 for _, lsp in ipairs(servers) do
   if lsp == 'lua_ls' then
     nvim_lsp[lsp].setup(merge(lsp_general_settings, lua_settings))
@@ -116,6 +129,8 @@ for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup(merge(lsp_general_settings, bash_settings))
   elseif lsp == 'jsonls' then
     nvim_lsp[lsp].setup(merge(lsp_general_settings, json_settings))
+  elseif lsp == 'yamlls' then
+    nvim_lsp[lsp].setup(merge(lsp_general_settings, yaml_settings))
   else
     nvim_lsp[lsp].setup(lsp_general_settings)
   end
