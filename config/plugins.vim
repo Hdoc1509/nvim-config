@@ -5,12 +5,13 @@ Plug 'nvim-lua/plenary.nvim'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Status Bar
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
-" Tree
+" Nvim-tree
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 
@@ -47,8 +48,8 @@ Plug 'chrisbra/unicode.vim'
 Plug 'gpanders/editorconfig.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'junegunn/fzf'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
+Plug 'rest-nvim/rest.nvim'
 
 " GIT
 Plug 'tpope/vim-fugitive'

@@ -104,4 +104,8 @@ nnoremap <silent> <Leader>ou :silent execute '!' . g:browser . ' ' . shellescape
 " Clear Searh Highlighting
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
+" Rest Nvim
+nnoremap <Leader>rr <Plug>RestNvim<CR>
+nnoremap <Leader>rl <Plug>RestNvimLast<CR>
+
 lua require('maps')

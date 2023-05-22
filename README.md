@@ -33,6 +33,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify).
 - Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons).
 - Unicode completion with [`unicode.vim`](https://github.com/chrisbra/unicode.vim).
+- Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim).
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
@@ -168,6 +169,7 @@ Used mapleader is `space key`.
 | `<Leader>wq`  | Normal               | Save and quit from current buffer                    |
 | `<Leader>q`   | Normal               | Quit current buffer                                  |
 | `<Leader>Q`   | Normal               | Forced quit of current buffer                        |
+| `<Leader>tq`  | Normal               | Close current tab                                    |
 | `<Leader>qa`  | Normal               | Quit from Neovim                                     |
 | `<Leader>Qa`  | Normal               | Forced quit from Neovim                              |
 | `<Leader>fu`  | Normal               | Set `fileformat` to `unix` in current buffer         |
@@ -215,7 +217,8 @@ Used mapleader is `space key`.
 | `<Leader>pug` | Normal               | Execute `PlugUpgrade`                                |
 | `<Leader>ou`  | Normal               | Open URL under cursor with browser in `g:browser`    |
 | `<Leader>/`   | Normal               | Clear search highlighting                            |
-| `<Leader>tq`  | Normal               | Close current tab                                    |
+| `<Leader>rr`  | Normal               | Run HTTP request under the cursor                    |
+| `<Leader>rl`  | Normal               | Re-run the last HTTP request                         |
 | `<Leader>mp`  | Normal (\*)          | Start Markdwon preview of current `.md` file         |
 | `<Leader>mps` | Normal (\*)          | Stop Markdown preview of current `.md` file          |
 | `<Leader>f`   | Normal (\*)          | Format current buffer                                |
