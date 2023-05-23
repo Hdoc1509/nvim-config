@@ -63,10 +63,9 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 ## Requirements
 
 - Nvim [latest stable release](https://github.com/neovim/neovim/releases/tag/stable)
-- Python3
-- Node.js
-- Yarn
-- Git
+- [Node.js](https://nodejs.org/en/download)
+- [Yarn](https://yarnpkg.com/getting-started/install)
+- [Git](https://git-scm.com/downloads)
 - [FZF](https://github.com/junegunn/fzf#installation)
 - [fd](https://github.com/sharkdp/fd#installation)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -75,6 +74,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [Stylua](https://github.com/JohnnyMorganz/StyLua#installation)
   - [shfmt](https://github.com/mvdan/sh#shfmt)
 - [ShellCheck](https://github.com/koalaman/shellcheck#installing)
+- [jq](https://stedolan.github.io/jq/download/)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See [Troubleshooting](#troubleshooting) section.
 
 ## Installation
