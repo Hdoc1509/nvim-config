@@ -292,6 +292,11 @@ server name inside list of servers in `plugins/nvim-lspconfig.lua`.
 
 - If you are a Windows user and have problems to install `treesitter` parser,
   install `zig` and retry to install.
+- If you are a Windows user and have problems to use `rest.nvim` because of
+  `curl --compressed` option, prepend the path of the `curl` binary that comes
+  bundled with `git-for-windows` to your system `PATH`:
+  - `64-bit` version: `C:\Program Files\Git\mingw64\bin`.
+  - `32-bit` version: `C:\Program Files (x86)\Git\mingw64\bin`.
 
 ## My other software configurations
 
