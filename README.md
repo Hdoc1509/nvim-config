@@ -11,7 +11,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Plugin management via [`vim-plug`](https://github.com/junegunn/vim-plug).
 - Code highlighting via [`vim-polyglot`](https://github.com/sheerun/vim-polyglot) and [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter).
 - Better statusline via [`lightline-ale`](https://github.com/maximbaz/lightline-ale) and [`lightline.vim`](https://github.com/itchyny/lightline.vim).
-- File tree explorer via [`nerdtree`](https://github.com/scrooloose/nerdtree-project-plugin)
+- File tree explorer via [`nvim-tree.lua`](https://github.com/nvim-tree/nvim-tree.lua).
 - File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf).
 - Autopairing via [`auto-pairs`](https://github.com/jiangmiao/auto-pairs) and [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag).
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip) and [`friendly-snippets`](https://github.com/rafamadriz/friendly-snippets)
