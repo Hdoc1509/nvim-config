@@ -56,10 +56,14 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - html
   - http
   - javascript
+  - jsdoc
   - jsonc
   - lua
+  - markdown
+  - markdown_inline
   - scss
   - typescript
+  - vim
   - yaml
 
 ## Requirements
