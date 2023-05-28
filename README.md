@@ -34,7 +34,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons).
 - Unicode completion with [`unicode.vim`](https://github.com/chrisbra/unicode.vim).
 - Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim).
-- Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo).
+- Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo) and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim).
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
@@ -64,7 +64,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 
 ## Requirements
 
-- Nvim [latest stable release](https://github.com/neovim/neovim/releases/tag/stable)
+- [Neovim >= 0.9.0](https://github.com/neovim/neovim/releases)
 - [Node.js](https://nodejs.org/en/download)
 - [Yarn](https://yarnpkg.com/getting-started/install)
 - [Git](https://git-scm.com/downloads)

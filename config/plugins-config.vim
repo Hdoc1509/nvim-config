@@ -19,6 +19,7 @@ let plugins_config = [
   \ 'nerdcommenter.vim',
   \ 'rest-nvim.lua',
   \ 'nvim-ufo.lua',
+  \ 'statuscol.lua',
   \ ]
 
 for plugin in plugins_config

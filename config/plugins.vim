@@ -52,6 +52,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'rest-nvim/rest.nvim'
 Plug 'kevinhwang91/promise-async'
 Plug 'kevinhwang91/nvim-ufo'
+Plug 'luukvbaal/statuscol.nvim'
 
 " GIT
 Plug 'tpope/vim-fugitive'
