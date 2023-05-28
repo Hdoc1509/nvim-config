@@ -13,6 +13,8 @@ require('nvim-treesitter.configs').setup({
     'jsdoc',
     'jsonc',
     'lua',
+    'markdown',
+    'markdown_inline',
     'scss',
     'typescript',
     'vim',
