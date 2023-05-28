@@ -50,6 +50,8 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'junegunn/fzf'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'rest-nvim/rest.nvim'
+Plug 'kevinhwang91/promise-async'
+Plug 'kevinhwang91/nvim-ufo'
 
 " GIT
 Plug 'tpope/vim-fugitive'

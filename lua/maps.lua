@@ -49,3 +49,8 @@ nmap('<Leader>fw', function()
   map_notify('Formatting and writing...')
   cmd('FormatWrite')
 end)
+
+-- Nvim-ufo
+nmap('zR', require('ufo').openAllFolds)
+
+nmap('zM', require('ufo').closeAllFolds)

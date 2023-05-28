@@ -34,8 +34,11 @@ set updatetime=500
 
 set title
 
-set foldmethod=syntax
-set nofoldenable
+set foldcolumn=1
+set foldlevel=99
+set foldlevelstart=99
+set foldenable
+set fillchars=foldopen:,foldclose:
 
 let g:loaded_ruby_provider = 0
 let g:loaded_perl_provider = 0

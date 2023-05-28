@@ -18,6 +18,7 @@ let plugins_config = [
   \ 'markdown-preview.vim',
   \ 'nerdcommenter.vim',
   \ 'rest-nvim.lua',
+  \ 'nvim-ufo.lua',
   \ ]
 
 for plugin in plugins_config
