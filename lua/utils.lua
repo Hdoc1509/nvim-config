@@ -1,22 +1,5 @@
 local M = {}
 
-function M.merge(...)
-  local result = {}
-
-  for _, t in ipairs{...} do
-    for k, v in pairs(t) do
-      result[k] = v
-    end
-
-    local mt = getmetatable(t)
-
-    if mt then
-      setmetatable(result, mt)
-    end
-  end
-
-  return result
-end
+M.merge = function(...) return vim.tbl_deep_extend('force', ...) end
 
 return M
-
