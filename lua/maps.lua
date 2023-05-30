@@ -1,15 +1,9 @@
+local utils = require('utils')
+
+local keymap = utils.keymap
+local map_notify = utils.map_notify
+local nmap = utils.nmap
 local cmd = vim.cmd
-local keymap = vim.keymap.set
-
-local opts = { silent = true, noremap = true }
-
-local map_notify = function(message)
-  vim.notify(message, 'info', {
-    title = 'Mapping',
-  })
-end
-
-local nmap = function(lhs, rhs) keymap('n', lhs, rhs, opts) end
 
 -- Edit config file
 nmap('<Leader>sv', function()
@@ -26,7 +20,7 @@ end)
 keymap({ 'n', 'i' }, '<C-a>', function()
   cmd('%yank')
   map_notify('Yanked all text')
-end, opts)
+end)
 
 -- MarkdownPreview
 nmap('<Leader>mp', function()
