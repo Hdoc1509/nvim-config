@@ -31,9 +31,8 @@ local on_attach = function(_, bufnr)
   buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
   buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-  -- buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-  buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
-  buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
+  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
+  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 
   -- Show inline diagnostic automatically in Hover Window
   api.nvim_create_autocmd('CursorHold', {
