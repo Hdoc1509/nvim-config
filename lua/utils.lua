@@ -21,7 +21,7 @@ end
 M.create_buf_nmapper = function (bufnr)
   ---Add a buffer nmap
   ---@param lhs string left-hand side of mapping
-  ---@param rhs string righ-hand side of mapping
+  ---@param rhs string right-hand side of mapping
   return function(lhs,rhs)
     vim.api.nvim_buf_set_keymap(bufnr, 'n', lhs, rhs, map_opts)
   end
