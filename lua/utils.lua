@@ -16,6 +16,17 @@ M.create_buf_keymapper = function(bufnr)
   end
 end
 
+---Returns a nmap creator for the specified buffer
+---@param bufnr number
+M.create_buf_nmapper = function (bufnr)
+  ---Add a buffer nmap
+  ---@param lhs string left-hand side of mapping
+  ---@param rhs string righ-hand side of mapping
+  return function(lhs,rhs)
+    vim.api.nvim_buf_set_keymap(bufnr, 'n', lhs, rhs, map_opts)
+  end
+end
+
 M.map_notify = function(message)
   vim.notify(message, 'info', {
     title = 'Mapping',
