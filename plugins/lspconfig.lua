@@ -18,6 +18,15 @@ local servers = {
   'yamlls',
 }
 
+local handlers = {
+  ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = 'rounded',
+  }),
+  ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+    border = 'rounded',
+  }),
+}
+
 local on_attach = function(_, bufnr)
   local buf_nmap = utils.create_buf_nmapper(bufnr)
 
@@ -74,6 +83,7 @@ capabilities.textDocument.foldingRange = {
 local lsp_general_settings = {
   on_attach = on_attach,
   capabilities = capabilities,
+  handlers = handlers,
 }
 
 -- LUA SETTINGS
