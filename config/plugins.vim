@@ -8,7 +8,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Status Bar
-Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
 
 " Nvim-tree
