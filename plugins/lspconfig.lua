@@ -19,21 +19,21 @@ local servers = {
 }
 
 local on_attach = function(_, bufnr)
-  local buf_set_keymap = utils.create_buf_keymapper(bufnr)
+  local buf_nmap = utils.create_buf_nmapper(bufnr)
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-  buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-  buf_set_keymap('n', '<Leader>ds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
-  buf_set_keymap('n', 'J', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-  buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-  buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
-  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-  buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
-  buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+  buf_nmap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
+  buf_nmap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+  buf_nmap('<Leader>ds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
+  buf_nmap('J', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+  buf_nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+  buf_nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+  buf_nmap('<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
+  buf_nmap('<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+  buf_nmap('<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+  buf_nmap('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+  buf_nmap('[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
+  buf_nmap(']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
 
   -- Show inline diagnostic automatically in Hover Window
   api.nvim_create_autocmd('CursorHold', {
