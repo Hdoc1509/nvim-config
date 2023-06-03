@@ -265,10 +265,10 @@ This configuration provides some global functions from `utils.vim` file:
 This configuration provides a minimal configuration file for integration with
 git.
 
-To use it, run the followin command:
+To use it, run the following command:
 
 ```sh
-git config --global core.editor "nvim -u ~/.config/nvim/init-git.vim"
+git config --global core.editor "nvim -u ~/.config/nvim/minimal.vim"
 ```
 
 ## Customization
