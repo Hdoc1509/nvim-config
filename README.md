@@ -256,7 +256,7 @@ You can add or change these global variables in `init.vim`.
 
 This configuration provides some global functions from `utils.vim` file:
 
-- **SourceConfig**: Source a `.vim` file from `config` folder.
+- **SourceConfig**: Source a `.vim` file from `core` folder.
 - **ShellAliasesToTable**: Create a table from selected lines with shell aliases
   definitions.
 
@@ -277,13 +277,13 @@ If you want to integrate your older configuration or want to extend this
 configuration, follow next indications:
 
 - Custom global variables must be in `init.vim`.
-- General options must be placed in `config/options.vim`.
-- Plugins call must be setted in `config/plugins.vim`.
+- General options must be placed in `core/options.vim`.
+- Plugins call must be setted in `core/plugins.vim`.
 - Plugins configurations must be added inside `plugins` folder and then sourced
-  in `config/plugins-config.vim` with pattern `plugin-name.(vim|lua)`.
-- Mapleader and simple mappings must be setted in `config/maps.vim`.
+  in `core/plugins-config.vim` with pattern `plugin-name.(vim|lua)`.
+- Mapleader and simple mappings must be setted in `core/maps.vim`.
 - Complex mappings must be setted in `lua/maps.lua`.
-- Options related to colorschemes and custom GUI highlighting goes in `config/colors.vim`.
+- Options related to colorschemes and custom GUI highlighting goes in `core/colors.vim`.
 - Options for Neovim GUI's are in `ginit.vim`.
 - Util functions in Vimscript must be declared in `utils.vim`.
 - Util functions in Lua must be placed in `lua/utils.lua`.
