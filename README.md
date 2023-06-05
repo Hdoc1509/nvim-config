@@ -247,7 +247,6 @@ The following mappings just run on `*.md` files:
 
 This configuration use some custom global variables:
 
-- **g:configPath**: Deafult path for Neovim configuration.
 - **g:browser**: Binary name of your favorite browser. Default to `firefox`.
 
 You can add or change these global variables in `init.vim`.

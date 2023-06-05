@@ -23,6 +23,6 @@ let plugins_config = [
   \ ]
 
 for plugin in plugins_config
-  exec 'so ' . g:configPath . '/plugins/' . plugin
+  exec 'so ' . stdpath('config') . '/plugins/' . plugin
 endfor
 
