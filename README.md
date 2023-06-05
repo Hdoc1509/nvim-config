@@ -251,14 +251,6 @@ This configuration use some custom global variables:
 
 You can add or change these global variables in `init.vim`.
 
-## Global functions
-
-This configuration provides some global functions from `utils.vim` file:
-
-- **SourceConfig**: Source a `.vim` file from `core` folder.
-- **ShellAliasesToTable**: Create a table from selected lines with shell aliases
-  definitions.
-
 ## Git integration
 
 This configuration provides a minimal configuration file for integration with
@@ -284,7 +276,6 @@ configuration, follow next indications:
 - Complex mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `core/colors.vim`.
 - Options for Neovim GUI's are in `ginit.vim`.
-- Util functions in Vimscript must be declared in `utils.vim`.
 - Util functions in Lua must be placed in `lua/utils.lua`.
 
 If you want to integrate more LSP servers, see the list of all [available LSP
