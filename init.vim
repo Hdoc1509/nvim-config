@@ -2,10 +2,14 @@ let g:loaded_netrw = 1
 let g:loaded_netrwPlugin = 1
 let g:browser = 'firefox'
 
-exec 'so ' . stdpath('config')  . '/utils.vim'
+let core_files = [
+  \ 'options.vim',
+  \ 'plugins.vim',
+  \ 'maps.vim' ,
+  \ 'colors.vim' ,
+  \]
 
-call SourceConfig('options')
-call SourceConfig('plugins')
-call SourceConfig('maps')
-call SourceConfig('colors')
+for file in core_files
+  execute 'source ' . stdpath('config') . '/core/' . file
+endfor
 

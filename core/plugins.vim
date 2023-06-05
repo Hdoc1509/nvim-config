@@ -65,4 +65,4 @@ Plug 'rcarriga/nvim-notify'
 
 call plug#end()
 
-call SourceConfig('plugins-config')
+exec 'source ' . stdpath('config') . '/core/plugins-config.vim'
