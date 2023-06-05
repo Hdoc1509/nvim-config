@@ -44,7 +44,6 @@ Plug 'b0o/schemastore.nvim'
 Plug 'chrisbra/unicode.vim'
 
 " IDE
-Plug 'gpanders/editorconfig.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'junegunn/fzf'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
