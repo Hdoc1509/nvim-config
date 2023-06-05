@@ -4,7 +4,6 @@ call plug#begin()
 Plug 'nvim-lua/plenary.nvim'
 
 " Syntax
-Plug 'sheerun/vim-polyglot'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Status Bar

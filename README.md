@@ -9,7 +9,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Custom [mappings](#mappings).
 - Settings for [`neovim-qt`](https://github.com/equalsraf/neovim-qt) and [`neovide`](https://github.com/neovide/neovide).
 - Plugin management via [`vim-plug`](https://github.com/junegunn/vim-plug).
-- Code highlighting via [`vim-polyglot`](https://github.com/sheerun/vim-polyglot) and [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter).
+- Code highlighting via [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter).
 - Better statusline via [`lightline.vim`](https://github.com/itchyny/lightline.vim).
 - File tree explorer via [`nvim-tree.lua`](https://github.com/nvim-tree/nvim-tree.lua).
 - File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf).
