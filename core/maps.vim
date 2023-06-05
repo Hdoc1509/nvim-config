@@ -85,6 +85,10 @@ inoremap <C-t> <Esc>viwb~ea
 nnoremap <C-d> dd
 inoremap <C-d> <Esc>ddi
 
+" Indent and keeps the selection
+xnoremap < <gv
+xnoremap > >gv
+
 " FZF
 nnoremap <silent> <Leader>fzf :FZF<CR>
 
