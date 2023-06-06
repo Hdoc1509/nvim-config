@@ -1,3 +1,4 @@
+source ~/.config/nvim/core/globals.lua
 source ~/.config/nvim/core/options.vim
 
 call plug#begin()

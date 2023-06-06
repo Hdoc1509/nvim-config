@@ -248,7 +248,7 @@ This configuration use some custom global variables:
 
 - **g:browser**: Binary name of your favorite browser. Default to `firefox`.
 
-You can add or change these global variables in `init.vim`.
+You can add or change these global variables in `core/globals.lua`.
 
 ## Git integration
 
@@ -266,12 +266,12 @@ git config --global core.editor "nvim -u ~/.config/nvim/minimal.vim"
 If you want to integrate your older configuration or want to extend this
 configuration, follow next indications:
 
-- Custom global variables must be in `init.vim`.
+- Custom global variables and Mapleader must be in `core/globals.lua`.
 - General options must be placed in `core/options.vim`.
 - Plugins call must be setted in `core/plugins.vim`.
 - Plugins configurations must be added inside `plugins` folder and then sourced
   in `core/plugins-config.vim` with pattern `plugin-name.(vim|lua)`.
-- Mapleader and simple mappings must be setted in `core/maps.vim`.
+- Simple mappings must be setted in `core/maps.vim`.
 - Complex mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `core/colors.vim`.
 - Options for Neovim GUI's are in `ginit.vim`.

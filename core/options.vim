@@ -41,8 +41,5 @@ set foldlevelstart=99
 set foldenable
 set fillchars=foldopen:,foldclose:
 
-let g:loaded_ruby_provider = 0
-let g:loaded_perl_provider = 0
-
 if has('win32') | set shell=cmd | endif
 

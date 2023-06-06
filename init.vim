@@ -1,8 +1,5 @@
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
-let g:browser = 'firefox'
-
 let core_files = [
+  \ 'globals.lua',
   \ 'options.vim',
   \ 'plugins.vim',
   \ 'maps.vim' ,

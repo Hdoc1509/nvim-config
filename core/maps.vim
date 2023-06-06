@@ -1,5 +1,3 @@
-let g:mapleader="\<Space>"
-
 " NvimTree
 nnoremap <silent> <F1> :NvimTreeFindFileToggle<CR>
 
