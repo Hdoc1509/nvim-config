@@ -4,7 +4,7 @@ let plugins_config = [
   \ 'gitsigns.lua',
   \ 'nightfox.lua',
   \ 'nvim-tree.lua',
-  \ 'lightline.vim',
+  \ 'lightline.lua',
   \ 'virt-column.lua',
   \ 'highlight-colors.lua',
   \ 'indent-blankline.lua',
