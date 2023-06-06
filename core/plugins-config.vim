@@ -5,7 +5,7 @@ let plugins_config = [
   \ 'nightfox.lua',
   \ 'nvim-tree.lua',
   \ 'lightline.vim',
-  \ 'virt-column.vim',
+  \ 'virt-column.lua',
   \ 'highlight-colors.lua',
   \ 'indent-blankline.lua',
   \ 'formatter.lua',

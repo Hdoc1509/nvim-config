@@ -9,3 +9,5 @@ highlight NvimTreeNormal guibg=#030303
 highlight IndentBlanklineChar guifg=#777777 gui=nocombine
 highlight IndentBlanklineContextChar guifg=#777777 gui=nocombine
 
+highlight VirtColumn guifg=#34C6FF
+
