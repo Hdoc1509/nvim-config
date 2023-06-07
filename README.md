@@ -124,10 +124,10 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ```
 
-Finally, open a terminal and run the following command for install all the plugins:
+Finally, run the following command for install all the plugins:
 
 ```sh
-nvim -es -u ~/.config/nvim/config/plugins.vim +PlugInstall +qa
+nvim -es -u ~/.config/nvim/core/plugins.vim +PlugInstall +qa
 ```
 
 ### Install lsp-servers
