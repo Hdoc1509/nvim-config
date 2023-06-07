@@ -1,26 +1,4 @@
-let plugins_config = [
-  \ 'lspconfig.lua',
-  \ 'cmp.lua',
-  \ 'gitsigns.lua',
-  \ 'nightfox.lua',
-  \ 'nvim-tree.lua',
-  \ 'lightline.lua',
-  \ 'virt-column.lua',
-  \ 'highlight-colors.lua',
-  \ 'indent-blankline.lua',
-  \ 'formatter.lua',
-  \ 'surround.lua',
-  \ 'treesitter.lua',
-  \ 'notify.lua',
-  \ 'todo-comments.lua',
-  \ 'rest-nvim.lua',
-  \ 'nvim-ufo.lua',
-  \ 'statuscol.lua',
-  \ ]
-
-for plugin in plugins_config
-  exec 'so ' . stdpath('config') . '/plugins/' . plugin
-endfor
+lua require('plugins')
 
 """""""""""""""""""" FZF """"""""""""""""""""
 let exclude = {
