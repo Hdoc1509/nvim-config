@@ -13,6 +13,7 @@ local plugins_config = {
   'treesitter',
   'notify',
   'todo-comments',
+  'vim-vsnip',
   'rest-nvim',
   'nvim-ufo',
   'statuscol',
