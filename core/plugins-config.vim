@@ -14,6 +14,3 @@ let total_exclude = join(exclude.file, ',') . ',' . join(exclude.dir, ',')
 
 let $FZF_DEFAULT_COMMAND="fd --exclude={'". total_exclude . "'} --type f --hidden --follow --no-ignore"
 let $FZF_DEFAULT_OPTS='--layout=reverse'
-
-"""""""""""""""""""" Markdonw-preview """"""""""""""""""""
-let g:mkdp_theme = 'dark'

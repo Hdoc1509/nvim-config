@@ -14,6 +14,7 @@ local plugins_config = {
   'notify',
   'todo-comments',
   'vim-vsnip',
+  'markdown-preview',
   'nerdcommenter',
   'rest-nvim',
   'nvim-ufo',
