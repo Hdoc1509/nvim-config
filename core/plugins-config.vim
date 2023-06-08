@@ -17,6 +17,3 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 
 """""""""""""""""""" Markdonw-preview """"""""""""""""""""
 let g:mkdp_theme = 'dark'
-
-"""""""""""""""""""" Nerdcommenter """"""""""""""""""""
-let g:NERDSpaceDelims = 1
