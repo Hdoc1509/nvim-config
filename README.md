@@ -275,12 +275,12 @@ configuration, follow next indications:
 - Complex mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `core/colors.vim`.
 - Options for Neovim GUI's are in `ginit.vim`.
-- Util functions in Lua must be placed in `lua/utils.lua`.
+- Util functions must be placed in `lua/utils.lua`.
 
 If you want to integrate more LSP servers, see the list of all [available LSP
 servers](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
 Once you have all software requirements for desired LSP server, just add its
-server name inside list of servers in `plugins/nvim-lspconfig.lua`.
+server name inside list of servers in `lua/plugins/lspconfig.lua`.
 
 ## Troubleshooting
 
