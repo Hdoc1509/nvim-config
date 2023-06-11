@@ -1,6 +1,4 @@
-lua require('plugins')
-
-"""""""""""""""""""" FZF """"""""""""""""""""
+vim.cmd([[
 let exclude = {
   \ 'dir' : ['dist', 'node_modules', '.git'],
   \ 'file': ['*.exe', '*.dll', '*.so', '*.o', '*.pyc', '*.jpg', '*.png',
@@ -10,7 +8,8 @@ let exclude = {
   \ '*.mp3', '*.aac', 'package-lock.json']
   \ }
 
-let total_exclude = join(exclude.file, ',') . ',' . join(exclude.dir, ',')
+let g:fzf_exclude = join(exclude.file, ',') . ',' . join(exclude.dir, ',')
+]])
 
-let $FZF_DEFAULT_COMMAND="fd --exclude={'". total_exclude . "'} --type f --hidden --follow --no-ignore"
-let $FZF_DEFAULT_OPTS='--layout=reverse'
+vim.env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --no-ignore --exclude={'" .. vim.g.fzf_exclude .. "'}"
+vim.env.FZF_DEFAULT_OPTS='--layout=reverse'

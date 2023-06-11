@@ -9,6 +9,7 @@ local plugins_config = {
   'highlight-colors',
   'indent-blankline',
   'formatter',
+  'fzf',
   'surround',
   'treesitter',
   'notify',

@@ -269,8 +269,7 @@ configuration, follow next indications:
 - Custom global variables and Mapleader must be in `core/globals.lua`.
 - General options must be placed in `core/options.vim`.
 - Plugins call must be setted in `core/plugins.vim`.
-- Plugins configurations in `VimScript` must be added inside `core/plugins-config.vim`
-- Plugins configurations in `Lua` must be added inside `lua/plugins` folder and
+- Plugins configurations must be added inside `lua/plugins` folder and
   then sourced in `lua/plugins/init.lua`
 - Simple mappings must be setted in `core/maps.vim`.
 - Complex mappings must be setted in `lua/maps.lua`.
