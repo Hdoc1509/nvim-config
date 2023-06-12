@@ -27,7 +27,7 @@ local handlers = {
   }),
 }
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
   local buf_nmap = utils.create_buf_nmapper(bufnr)
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -71,6 +71,27 @@ local on_attach = function(_, bufnr)
       vim.b.diagnostics_pos = cursor_pos
     end,
   })
+
+  if client.server_capabilities.documentHighlightProvider then
+    vim.cmd([[
+      hi! link LspReferenceRead Visual
+      hi! link LspReferenceText Visual
+      hi! link LspReferenceWrite Visual
+    ]])
+
+    local gid = api.nvim_create_augroup('lsp_document_highlight', { clear = true })
+    api.nvim_create_autocmd('CursorHold', {
+      group = gid,
+      buffer = bufnr,
+      callback = vim.lsp.buf.document_highlight,
+    })
+
+    api.nvim_create_autocmd('CursorMoved', {
+      group = gid,
+      buffer = bufnr,
+      callback = vim.lsp.buf.clear_references,
+    })
+  end
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
