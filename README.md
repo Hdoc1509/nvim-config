@@ -280,7 +280,7 @@ configuration, follow next indications:
 If you want to integrate more LSP servers, see the list of all [available LSP
 servers](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
 Once you have all software requirements for desired LSP server, just add its
-server name inside list of servers in `lua/plugins/lspconfig.lua`.
+server name inside list of servers in `lua/plugins/lsp/init.lua`.
 
 ## Troubleshooting
 

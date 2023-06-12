@@ -1,5 +1,5 @@
 local plugins_config = {
-  'lspconfig',
+  'lsp',
   'cmp',
   'gitsigns',
   'nightfox',
