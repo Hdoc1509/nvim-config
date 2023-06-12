@@ -101,7 +101,7 @@ nnoremap <Leader>pud :PlugUpdate<CR>
 nnoremap <Leader>pug :PlugUpgrade<CR>
 
 " Open URL under cursor
-nnoremap <silent> <Leader>ou :silent execute '!' . g:browser . ' ' . shellescape(expand('<cfile>'), 1)<CR>
+nnoremap <silent> gx :silent execute '!' . g:browser . ' ' . shellescape(expand('<cfile>'), 1)<CR>
 
 " Clear Searh Highlighting
 nnoremap <silent> <Leader>/ :nohlsearch<CR>

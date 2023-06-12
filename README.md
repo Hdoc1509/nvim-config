@@ -220,7 +220,7 @@ Used mapleader is `space key`.
 | `<Leader>ps`  | Normal          | Execute `PlugStatus`                                 |
 | `<Leader>pud` | Normal          | Execute `PlugUpdate`                                 |
 | `<Leader>pug` | Normal          | Execute `PlugUpgrade`                                |
-| `<Leader>ou`  | Normal          | Open URL under cursor with browser in `g:browser`    |
+| `gx`          | Normal          | Open URL under cursor with browser in `g:browser`    |
 | `<Leader>/`   | Normal          | Clear search highlighting                            |
 | `<Leader>rr`  | Normal          | Run HTTP request under the cursor                    |
 | `<Leader>rl`  | Normal          | Re-run the last HTTP request                         |
