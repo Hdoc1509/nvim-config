@@ -1,6 +1,5 @@
 local utils = require('utils')
 
-local keymap = utils.keymap
 local map_notify = utils.map_notify
 local nmap = utils.nmap
 local cmd = vim.cmd
@@ -17,9 +16,8 @@ nmap('<Leader>sf', function()
 end)
 
 -- Copy to clipboard all text
-keymap({ 'n', 'i' }, '<C-a>', function()
+nmap('<Leader>ya', function()
   cmd('%yank')
-  map_notify('Yanked all text')
 end)
 
 -- MarkdownPreview

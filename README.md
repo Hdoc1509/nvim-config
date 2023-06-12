@@ -166,71 +166,71 @@ Rest of parser will be installed once you open Neovim.
 
 Used mapleader is `space key`.
 
-| Mapping       | Mode                 | Description                                          |
-| ------------- | -------------------- | ---------------------------------------------------- |
-| `<F1>`        | Normal               | Toggle `nvim-tree` with focus in current file        |
-| `<Leader>w`   | Normal               | Save current buffer content                          |
-| `<Leader>wa`  | Normal               | Save all changed buffers                             |
-| `<Leader>wq`  | Normal               | Save and quit from current buffer                    |
-| `<Leader>q`   | Normal               | Quit current buffer                                  |
-| `<Leader>Q`   | Normal               | Forced quit of current buffer                        |
-| `<Leader>tq`  | Normal               | Close current tab                                    |
-| `<Leader>qa`  | Normal               | Quit from Neovim                                     |
-| `<Leader>Qa`  | Normal               | Forced quit from Neovim                              |
-| `<Leader>fu`  | Normal               | Set `fileformat` to `unix` in current buffer         |
-| `<Leader>fd`  | Normal               | Set `fileformat` to `dos` in current buffer          |
-| `<Leader>fm`  | Normal               | Set `fileformat` to `mac` in current buffer          |
-| `<Leader>j`   | Normal               | Scroll down 10 lines                                 |
-| `<M-Down>`    | Insert               | Scroll down 10 lines                                 |
-| `<Leader>J`   | Normal               | Scroll down 20 lines                                 |
-| `<Leader>k`   | Normal               | Scroll up 10 lines                                   |
-| `<M-Up>`      | Insert               | Scroll up 10 lines                                   |
-| `<Leader>K`   | Normal               | Scroll up 20 lines                                   |
-| `<Leader>>`   | Normal               | Resize current split 10 pixels to left               |
-| `<Leader><`   | Normal               | Resize current split 10 pixels to right              |
-| `<Leader>;`   | Normal               | Add a semi colon at the end of line                  |
-| `<Leader>,`   | Normal               | Add a coma at the end of line                        |
-| `<Leader>.`   | Normal               | Add a dot at the end of line                         |
-| `<Leader>rts` | Normal               | Replace all tabs to spaces                           |
-| `<Leader>e`   | Normal               | Open `$MYVIMRC` file in current tab                  |
-| `<Leader>ev`  | Normal               | Open `$MYVIMRC` file in a vertical split             |
-| `<Leader>sv`  | Normal (\*)          | Source `$MYVIMRC` file                               |
-| `<Leader>sf`  | Normal (\*)          | Source current file                                  |
-| `<Leader>chh` | Normal               | Run `:checkhealth`                                   |
-| `<C-h>`       | Normal               | Move to left split                                   |
-| `<C-j>`       | Normal               | Move to bottom split                                 |
-| `<C-k>`       | Normal               | Move to top split                                    |
-| `<C-l>`       | Normal               | Move to right split                                  |
-| `<Leader>h`   | Normal               | Move to left split                                   |
-| `<Leader>l`   | Normal               | Move to right split                                  |
-| `<Leader>gaa` | Normal               | Execute `git add --all`                              |
-| `<Leader>gd`  | Normal               | Execute `git diff`                                   |
-| `<Leader>gp`  | Normal               | Execute `git push`                                   |
-| `<Leader>gl`  | Normal               | Execute `git pull`                                   |
-| `<Leader>gs`  | Normal               | Execute `git status`                                 |
-| `<Leader>gc`  | Normal               | Execute `git commit`                                 |
-| `<C-u>`       | Normal / Insert      | Toggle Uppercase in current word                     |
-| `<C-t>`       | Normal / Insert      | Toggle Title Case in current word                    |
-| `<C-d>`       | Normal / Insert      | Remove current line                                  |
-| `<C-a>`       | Normal / Insert (\*) | Copy all text to clipboard                           |
-| `<Leader>fzf` | Normal               | Run `FZF` in current working directory               |
-| `<Leader>tl`  | Normal               | Show all TODOS of current project in quickfix window |
-| `<Leader>pc`  | Normal               | Execute `PlugClean`                                  |
-| `<Leader>pi`  | Normal               | Execute `PlugInstall`                                |
-| `<Leader>ps`  | Normal               | Execute `PlugStatus`                                 |
-| `<Leader>pud` | Normal               | Execute `PlugUpdate`                                 |
-| `<Leader>pug` | Normal               | Execute `PlugUpgrade`                                |
-| `<Leader>ou`  | Normal               | Open URL under cursor with browser in `g:browser`    |
-| `<Leader>/`   | Normal               | Clear search highlighting                            |
-| `<Leader>rr`  | Normal               | Run HTTP request under the cursor                    |
-| `<Leader>rl`  | Normal               | Re-run the last HTTP request                         |
-| `<Leader>mp`  | Normal (\*)          | Start Markdwon preview of current `.md` file         |
-| `<Leader>mps` | Normal (\*)          | Stop Markdown preview of current `.md` file          |
-| `<Leader>f`   | Normal (\*)          | Format current buffer                                |
-| `<Leader>fw`  | Normal (\*)          | Format and save current buffer                       |
-| `<Leader>fs`  | Normal               | Enable Fullscreen. Only for `nvim-qt`                |
-| `<Leader>Fs`  | Normal               | Disable Fullscreen. Only for `nvim-qt`               |
-| `<F11>`       | Normal               | Toggle Fullscreen. Only for `neovide`                |
+| Mapping       | Mode            | Description                                          |
+| ------------- | --------------- | ---------------------------------------------------- |
+| `<F1>`        | Normal          | Toggle `nvim-tree` with focus in current file        |
+| `<Leader>w`   | Normal          | Save current buffer content                          |
+| `<Leader>wa`  | Normal          | Save all changed buffers                             |
+| `<Leader>wq`  | Normal          | Save and quit from current buffer                    |
+| `<Leader>q`   | Normal          | Quit current buffer                                  |
+| `<Leader>Q`   | Normal          | Forced quit of current buffer                        |
+| `<Leader>tq`  | Normal          | Close current tab                                    |
+| `<Leader>qa`  | Normal          | Quit from Neovim                                     |
+| `<Leader>Qa`  | Normal          | Forced quit from Neovim                              |
+| `<Leader>fu`  | Normal          | Set `fileformat` to `unix` in current buffer         |
+| `<Leader>fd`  | Normal          | Set `fileformat` to `dos` in current buffer          |
+| `<Leader>fm`  | Normal          | Set `fileformat` to `mac` in current buffer          |
+| `<Leader>j`   | Normal          | Scroll down 10 lines                                 |
+| `<M-Down>`    | Insert          | Scroll down 10 lines                                 |
+| `<Leader>J`   | Normal          | Scroll down 20 lines                                 |
+| `<Leader>k`   | Normal          | Scroll up 10 lines                                   |
+| `<M-Up>`      | Insert          | Scroll up 10 lines                                   |
+| `<Leader>K`   | Normal          | Scroll up 20 lines                                   |
+| `<Leader>>`   | Normal          | Resize current split 10 pixels to left               |
+| `<Leader><`   | Normal          | Resize current split 10 pixels to right              |
+| `<Leader>;`   | Normal          | Add a semi colon at the end of line                  |
+| `<Leader>,`   | Normal          | Add a coma at the end of line                        |
+| `<Leader>.`   | Normal          | Add a dot at the end of line                         |
+| `<Leader>rts` | Normal          | Replace all tabs to spaces                           |
+| `<Leader>e`   | Normal          | Open `$MYVIMRC` file in current tab                  |
+| `<Leader>ev`  | Normal          | Open `$MYVIMRC` file in a vertical split             |
+| `<Leader>sv`  | Normal (\*)     | Source `$MYVIMRC` file                               |
+| `<Leader>sf`  | Normal (\*)     | Source current file                                  |
+| `<Leader>chh` | Normal          | Run `:checkhealth`                                   |
+| `<C-h>`       | Normal          | Move to left split                                   |
+| `<C-j>`       | Normal          | Move to bottom split                                 |
+| `<C-k>`       | Normal          | Move to top split                                    |
+| `<C-l>`       | Normal          | Move to right split                                  |
+| `<Leader>h`   | Normal          | Move to left split                                   |
+| `<Leader>l`   | Normal          | Move to right split                                  |
+| `<Leader>gaa` | Normal          | Execute `git add --all`                              |
+| `<Leader>gd`  | Normal          | Execute `git diff`                                   |
+| `<Leader>gp`  | Normal          | Execute `git push`                                   |
+| `<Leader>gl`  | Normal          | Execute `git pull`                                   |
+| `<Leader>gs`  | Normal          | Execute `git status`                                 |
+| `<Leader>gc`  | Normal          | Execute `git commit`                                 |
+| `<C-u>`       | Normal / Insert | Toggle Uppercase in current word                     |
+| `<C-t>`       | Normal / Insert | Toggle Title Case in current word                    |
+| `<C-d>`       | Normal / Insert | Remove current line                                  |
+| `<Leader>ya`  | Normal          | Copy all text of current buffer to clipboard         |
+| `<Leader>fzf` | Normal          | Run `FZF` in current working directory               |
+| `<Leader>tl`  | Normal          | Show all TODOS of current project in quickfix window |
+| `<Leader>pc`  | Normal          | Execute `PlugClean`                                  |
+| `<Leader>pi`  | Normal          | Execute `PlugInstall`                                |
+| `<Leader>ps`  | Normal          | Execute `PlugStatus`                                 |
+| `<Leader>pud` | Normal          | Execute `PlugUpdate`                                 |
+| `<Leader>pug` | Normal          | Execute `PlugUpgrade`                                |
+| `<Leader>ou`  | Normal          | Open URL under cursor with browser in `g:browser`    |
+| `<Leader>/`   | Normal          | Clear search highlighting                            |
+| `<Leader>rr`  | Normal          | Run HTTP request under the cursor                    |
+| `<Leader>rl`  | Normal          | Re-run the last HTTP request                         |
+| `<Leader>mp`  | Normal (\*)     | Start Markdwon preview of current `.md` file         |
+| `<Leader>mps` | Normal (\*)     | Stop Markdown preview of current `.md` file          |
+| `<Leader>f`   | Normal (\*)     | Format current buffer                                |
+| `<Leader>fw`  | Normal (\*)     | Format and save current buffer                       |
+| `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`                |
+| `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`               |
+| `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`                |
 
 **(\*): Mappings those show a notify window.**
 
