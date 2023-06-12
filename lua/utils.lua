@@ -37,4 +37,8 @@ M.merge = function(...) return vim.tbl_deep_extend('force', ...) end
 
 M.nmap = function(lhs, rhs) vim.keymap.set('n', lhs, rhs, map_opts) end
 
+M.nmap_expr = function (lhs,rhs)
+  vim.keymap.set('n', lhs, rhs, { expr = true })
+end
+
 return M
