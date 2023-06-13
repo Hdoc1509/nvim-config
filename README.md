@@ -228,6 +228,8 @@ Used mapleader is `space key`.
 | `<Leader>mps` | Normal (\*)     | Stop Markdown preview of current `.md` file          |
 | `<Leader>f`   | Normal (\*)     | Format current buffer                                |
 | `<Leader>fw`  | Normal (\*)     | Format and save current buffer                       |
+| `<Leader>o`   | Normal          | Add blanklines above current line                    |
+| `<Leader>O`   | Normal          | Add blanklines below current line                    |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`                |
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`               |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`                |
