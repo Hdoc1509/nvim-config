@@ -2,6 +2,10 @@ local M = {}
 
 local map_opts = { silent = true, noremap = true }
 
+M.autocmd = function (...)
+  vim.api.nvim_create_autocmd(...)
+end
+
 M.keymap = function(mode, lhs, rhs) vim.keymap.set(mode, lhs, rhs, map_opts) end
 
 ---Returns a keymap creator for the specified buffer
