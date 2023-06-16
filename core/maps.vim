@@ -1,8 +1,8 @@
 " NvimTree
 nnoremap <silent> <F1> :NvimTreeFindFileToggle<CR>
 
-" Save buffer
-nnoremap <Leader>w :w<CR>
+" Save file if modified
+nnoremap <Leader>w :update<CR>
 nnoremap <Leader>wa :wa<CR>
 
 " Save and quit

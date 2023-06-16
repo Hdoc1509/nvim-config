@@ -169,7 +169,7 @@ Used mapleader is `space key`.
 | Mapping       | Mode            | Description                                          |
 | ------------- | --------------- | ---------------------------------------------------- |
 | `<F1>`        | Normal          | Toggle `nvim-tree` with focus in current file        |
-| `<Leader>w`   | Normal          | Save current buffer content                          |
+| `<Leader>w`   | Normal          | Save current buffer if has been modified             |
 | `<Leader>wa`  | Normal          | Save all changed buffers                             |
 | `<Leader>wq`  | Normal          | Save and quit from current buffer                    |
 | `<Leader>q`   | Normal          | Quit current buffer                                  |
