@@ -110,4 +110,7 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 nnoremap <Leader>rr <Plug>RestNvim<CR>
 nnoremap <Leader>rl <Plug>RestNvimLast<CR>
 
+" Vertical help window
+cnoremap vh vertical help
+
 lua require('maps')

@@ -224,6 +224,7 @@ Used mapleader is `space key`.
 | `<Leader>/`   | Normal          | Clear search highlighting                            |
 | `<Leader>rr`  | Normal          | Run HTTP request under the cursor                    |
 | `<Leader>rl`  | Normal          | Re-run the last HTTP request                         |
+| `vh`          | Command         | Open help in vertical split                          |
 | `<Leader>mp`  | Normal (\*)     | Start Markdwon preview of current `.md` file         |
 | `<Leader>mps` | Normal (\*)     | Stop Markdown preview of current `.md` file          |
 | `<Leader>f`   | Normal (\*)     | Format current buffer                                |
