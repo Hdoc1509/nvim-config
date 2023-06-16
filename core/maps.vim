@@ -3,21 +3,15 @@ nnoremap <silent> <F1> :NvimTreeFindFileToggle<CR>
 
 " Save file if modified
 nnoremap <Leader>w :update<CR>
-nnoremap <Leader>wa :wa<CR>
-
-" Save and quit
-nnoremap <Leader>wq :wq<CR>
 
 " Save file if modified and quit
 nnoremap <silent> <Leader>q :xit<CR>
-nnoremap <Leader>Q :q!<CR>
 
 " Quit tab
 nnoremap <silent> <Leader>tq :tabclose<CR>
 
 " Quit Neovim
 nnoremap <Leader>qa :qa<CR>
-nnoremap <Leader>Qa :qa!<CR>
 
 " Set fileformat
 nnoremap <Leader>fu :set ff=unix<CR>
