@@ -172,7 +172,7 @@ Used mapleader is `space key`.
 | `<Leader>w`   | Normal          | Save current buffer if has been modified             |
 | `<Leader>q`   | Normal          | Save current buffer if modified and quit             |
 | `<Leader>tq`  | Normal          | Close current tab                                    |
-| `<Leader>qa`  | Normal          | Quit from Neovim                                     |
+| `<Leader>Q`   | Normal          | Quit from Neovim                                     |
 | `<Leader>fu`  | Normal          | Set `fileformat` to `unix` in current buffer         |
 | `<Leader>fd`  | Normal          | Set `fileformat` to `dos` in current buffer          |
 | `<Leader>fm`  | Normal          | Set `fileformat` to `mac` in current buffer          |

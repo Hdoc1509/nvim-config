@@ -11,7 +11,7 @@ nnoremap <silent> <Leader>q :xit<CR>
 nnoremap <silent> <Leader>tq :tabclose<CR>
 
 " Quit Neovim
-nnoremap <Leader>qa :qa<CR>
+nnoremap <Leader>Q :quitall!<CR>
 
 " Set fileformat
 nnoremap <Leader>fu :set ff=unix<CR>
