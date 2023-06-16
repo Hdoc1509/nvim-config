@@ -8,8 +8,8 @@ nnoremap <Leader>wa :wa<CR>
 " Save and quit
 nnoremap <Leader>wq :wq<CR>
 
-" Quit buffer
-nnoremap <silent> <Leader>q :q<CR>
+" Save file if modified and quit
+nnoremap <silent> <Leader>q :xit<CR>
 nnoremap <Leader>Q :q!<CR>
 
 " Quit tab

@@ -172,7 +172,7 @@ Used mapleader is `space key`.
 | `<Leader>w`   | Normal          | Save current buffer if has been modified             |
 | `<Leader>wa`  | Normal          | Save all changed buffers                             |
 | `<Leader>wq`  | Normal          | Save and quit from current buffer                    |
-| `<Leader>q`   | Normal          | Quit current buffer                                  |
+| `<Leader>q`   | Normal          | Save current buffer if modified and quit             |
 | `<Leader>Q`   | Normal          | Forced quit of current buffer                        |
 | `<Leader>tq`  | Normal          | Close current tab                                    |
 | `<Leader>qa`  | Normal          | Quit from Neovim                                     |
