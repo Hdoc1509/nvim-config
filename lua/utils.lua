@@ -2,8 +2,11 @@ local M = {}
 
 local map_opts = { silent = true, noremap = true }
 
-M.autocmd = function (...)
-  vim.api.nvim_create_autocmd(...)
+---Create an autocommand
+---@param event string | string[]
+---@param opts table
+M.autocmd = function (event, opts)
+  vim.api.nvim_create_autocmd(event, opts)
 end
 
 M.keymap = function(mode, lhs, rhs) vim.keymap.set(mode, lhs, rhs, map_opts) end
