@@ -205,6 +205,8 @@ Used mapleader is `space key`.
 | `<Leader>ya`  | Normal          | Copy all text of current buffer to clipboard         |
 | `<Leader>fzf` | Normal          | Run `FZF` in current working directory               |
 | `<Leader>tl`  | Normal          | Show all TODOS of current project in quickfix window |
+| `<Leader>]t`  | Normal          | Jump to next TODO comment                            |
+| `<Leader>[t`  | Normal          | Jump to previous TODO comment                        |
 | `<Leader>pc`  | Normal          | Execute `PlugClean`                                  |
 | `<Leader>pi`  | Normal          | Execute `PlugInstall`                                |
 | `<Leader>ps`  | Normal          | Execute `PlugStatus`                                 |

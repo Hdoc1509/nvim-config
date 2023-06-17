@@ -76,6 +76,8 @@ nnoremap <silent> <Leader>fzf :FZF<CR>
 
 " TODO-COMMENTS
 nnoremap <silent> <Leader>tl :TodoQuickFix<CR>
+nnoremap <silent> ]t :lua require('todo-comments').jump_next()<CR>
+nnoremap <silent> [t :lua require('todo-comments').jump_prev()<CR>
 
 " VIM-PLUG
 nnoremap <Leader>pc :PlugClean<CR>
