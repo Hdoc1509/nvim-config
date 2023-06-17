@@ -13,18 +13,11 @@ nnoremap <silent> <Leader>tq :tabclose<CR>
 " Quit Neovim
 nnoremap <Leader>Q :quitall!<CR>
 
-" Set fileformat
-nnoremap <Leader>fu :set ff=unix<CR>
-nnoremap <Leader>fd :set ff=dos<CR>
-nnoremap <Leader>fm :set ff=mac<CR>
-
 " Scrolling
 nnoremap <Leader>j 10<C-e>
 nnoremap <Leader>J 20<C-e>
-inoremap <M-Down> <Esc>10<C-e>a
 nnoremap <Leader>k 10<C-y>
 nnoremap <Leader>K 20<C-y>
-inoremap <M-Up> <Esc>10<C-y>a
 
 " Split resize
 nnoremap <Leader>> 10<C-w>>
@@ -38,9 +31,6 @@ nnoremap <Leader>, A,<Esc>
 
 " Add a dot at the end of line
 nnoremap <Leader>. A.<Esc>
-
-" Replace tabs to spaces
-nnoremap <Leader>rts :retab<CR>
 
 " Edit config file
 nnoremap <silent> <Leader>e :e $MYVIMRC<CR>

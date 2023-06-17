@@ -173,21 +173,15 @@ Used mapleader is `space key`.
 | `<Leader>q`   | Normal          | Save current buffer if modified and quit             |
 | `<Leader>tq`  | Normal          | Close current tab                                    |
 | `<Leader>Q`   | Normal          | Quit from Neovim                                     |
-| `<Leader>fu`  | Normal          | Set `fileformat` to `unix` in current buffer         |
-| `<Leader>fd`  | Normal          | Set `fileformat` to `dos` in current buffer          |
-| `<Leader>fm`  | Normal          | Set `fileformat` to `mac` in current buffer          |
 | `<Leader>j`   | Normal          | Scroll down 10 lines                                 |
-| `<M-Down>`    | Insert          | Scroll down 10 lines                                 |
 | `<Leader>J`   | Normal          | Scroll down 20 lines                                 |
 | `<Leader>k`   | Normal          | Scroll up 10 lines                                   |
-| `<M-Up>`      | Insert          | Scroll up 10 lines                                   |
 | `<Leader>K`   | Normal          | Scroll up 20 lines                                   |
 | `<Leader>>`   | Normal          | Resize current split 10 pixels to left               |
 | `<Leader><`   | Normal          | Resize current split 10 pixels to right              |
 | `<Leader>;`   | Normal          | Add a semi colon at the end of line                  |
 | `<Leader>,`   | Normal          | Add a coma at the end of line                        |
 | `<Leader>.`   | Normal          | Add a dot at the end of line                         |
-| `<Leader>rts` | Normal          | Replace all tabs to spaces                           |
 | `<Leader>e`   | Normal          | Open `$MYVIMRC` file in current tab                  |
 | `<Leader>ev`  | Normal          | Open `$MYVIMRC` file in a vertical split             |
 | `<Leader>sv`  | Normal (\*)     | Source `$MYVIMRC` file                               |
