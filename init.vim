@@ -1,6 +1,7 @@
 let core_files = [
   \ 'globals.lua',
   \ 'options.vim',
+  \ 'autocmds.lua',
   \ 'plugins.vim',
   \ 'maps.vim' ,
   \ 'colors.vim' ,
