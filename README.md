@@ -204,7 +204,6 @@ Used mapleader is `space key`.
 | `<C-d>`       | Normal / Insert | Remove current line                                  |
 | `<Leader>ya`  | Normal          | Copy all text of current buffer to clipboard         |
 | `<Leader>fzf` | Normal          | Run `FZF` in current working directory               |
-| `<Leader>tl`  | Normal          | Show all TODOS of current project in quickfix window |
 | `]t`          | Normal          | Jump to next TODO comment                            |
 | `[t`          | Normal          | Jump to previous TODO comment                        |
 | `<Leader>pc`  | Normal          | Execute `PlugClean`                                  |
