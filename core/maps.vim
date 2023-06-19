@@ -73,10 +73,6 @@ nnoremap <silent> gx :silent execute '!' . g:browser . ' ' . shellescape(expand(
 " Clear Searh Highlighting
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
-" Rest Nvim
-nnoremap <Leader>rr <Plug>RestNvim<CR>
-nnoremap <Leader>rl <Plug>RestNvimLast<CR>
-
 " Vertical help window
 cnoremap vh vertical help
 
