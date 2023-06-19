@@ -60,11 +60,6 @@ inoremap <C-d> <Esc>ddi
 xnoremap < <gv
 xnoremap > >gv
 
-" TODO-COMMENTS
-nnoremap <silent> <Leader>tl :TodoQuickFix<CR>
-nnoremap <silent> ]t :lua require('todo-comments').jump_next()<CR>
-nnoremap <silent> [t :lua require('todo-comments').jump_prev()<CR>
-
 " VIM-PLUG
 nnoremap <Leader>pc :PlugClean<CR>
 nnoremap <Leader>pi :PlugInstall<CR>
