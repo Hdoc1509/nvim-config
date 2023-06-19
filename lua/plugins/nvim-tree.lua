@@ -1,3 +1,5 @@
+local nmap = require("utils").nmap
+
 require('nvim-tree').setup({
   filters = {
     custom = {
@@ -33,3 +35,5 @@ require('nvim-tree').setup({
     ignore = false,
   },
 })
+
+nmap('<F1>', '<cmd>NvimTreeFindFileToggle<CR>')

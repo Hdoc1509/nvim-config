@@ -1,6 +1,3 @@
-" NvimTree
-nnoremap <silent> <F1> :NvimTreeFindFileToggle<CR>
-
 " Save file if modified
 nnoremap <Leader>w :update<CR>
 
