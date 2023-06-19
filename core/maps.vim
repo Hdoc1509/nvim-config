@@ -1,5 +1,5 @@
 " Save file if modified
-nnoremap <Leader>w :update<CR>
+nnoremap <silent> <Leader>w :update<CR>
 
 " Save file if modified and quit
 nnoremap <silent> <Leader>q :xit<CR>
