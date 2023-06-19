@@ -14,6 +14,7 @@ set encoding=utf-8
 
 set showmatch
 set noshowmode
+set showtabline=2
 
 set splitright
 set nosplitbelow
