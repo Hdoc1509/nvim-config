@@ -44,14 +44,6 @@ nnoremap <silent> <C-l> <C-w>l
 nnoremap <silent> <Leader>h <C-w>h
 nnoremap <silent> <Leader>l <C-w>l
 
-" Git
-nnoremap <Leader>gaa :Git add --all<CR>
-nnoremap <Leader>gd :Git diff<CR>
-nnoremap <Leader>gp :Git push<CR>
-nnoremap <Leader>gl :Git pull<CR>
-nnoremap <Leader>gs :Git status<CR>
-nnoremap <Leader>gc :Git commit<CR>
-
 " Toogle Word UpperCase
 nnoremap <C-u> viw~e
 inoremap <C-u> <Esc>viw~ea

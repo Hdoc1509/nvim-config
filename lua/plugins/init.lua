@@ -20,6 +20,7 @@ local plugins_config = {
   'rest-nvim',
   'nvim-ufo',
   'statuscol',
+  'fugitive',
 }
 
 for _, plugin in ipairs(plugins_config) do
