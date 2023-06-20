@@ -4,8 +4,13 @@ nnoremap <silent> <Leader>w :update<CR>
 " Save file if modified and quit
 nnoremap <silent> <Leader>q :xit<CR>
 
-" Quit tab
+" Manipulate tabs
 nnoremap <silent> <Leader>tq :tabclose<CR>
+nnoremap <silent> <Leader>to :tabonly<CR>
+nnoremap <silent> <Leader>th :tabmove -<CR>
+nnoremap <silent> <Leader>tj :tabprevious<CR>
+nnoremap <silent> <Leader>tk :tabnext<CR>
+nnoremap <silent> <Leader>tl :tabmove +<CR>
 
 " Quit Neovim
 nnoremap <Leader>Q :quitall!<CR>

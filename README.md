@@ -172,6 +172,11 @@ Used mapleader is `space key`.
 | `<Leader>w`   | Normal          | Save current buffer if has been modified             |
 | `<Leader>q`   | Normal          | Save current buffer if modified and quit             |
 | `<Leader>tq`  | Normal          | Close current tab                                    |
+| `<Leader>to`  | Normal          | Close all other tabs                                 |
+| `<Leader>th`  | Normal          | Move tab to left                                     |
+| `<Leader>tl`  | Normal          | Move tab to right                                    |
+| `<Leader>tj`  | Normal          | Go to previous tab                                   |
+| `<Leader>tk`  | Normal          | Go to next tab                                       |
 | `<Leader>Q`   | Normal          | Quit from Neovim                                     |
 | `<Leader>j`   | Normal          | Scroll down 10 lines                                 |
 | `<Leader>J`   | Normal          | Scroll down 20 lines                                 |
