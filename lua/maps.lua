@@ -21,17 +21,6 @@ nmap('<Leader>ya', function()
   cmd('%yank')
 end)
 
--- MarkdownPreview
-nmap('<Leader>mp', function()
-  map_notify('Opening Markdown preview...')
-  cmd('MarkdownPreview')
-end)
-
-nmap('<Leader>mps', function()
-  cmd('MarkdownPreviewStop')
-  map_notify('Closed Markdown preview')
-end)
-
 -- Formatter
 nmap('<Leader>f', function()
   map_notify('Formatting...')
