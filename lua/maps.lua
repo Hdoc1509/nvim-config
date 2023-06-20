@@ -21,17 +21,6 @@ nmap('<Leader>ya', function()
   cmd('%yank')
 end)
 
--- Formatter
-nmap('<Leader>f', function()
-  map_notify('Formatting...')
-  cmd('Format')
-end)
-
-nmap('<Leader>fw', function()
-  map_notify('Formatting and writing...')
-  cmd('FormatWrite')
-end)
-
 -- Nvim-ufo
 nmap('zR', require('ufo').openAllFolds)
 

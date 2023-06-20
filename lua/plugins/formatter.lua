@@ -1,7 +1,9 @@
-local formatter = require('formatter')
 local prettier = require('formatter.defaults.prettier')
+local utils = require('utils')
+local nmap = utils.nmap
+local map_notify = utils.map_notify
 
-formatter.setup {
+require('formatter').setup({
   filetype = {
     css = { prettier('css') },
     html = { prettier('html') },
@@ -16,6 +18,15 @@ formatter.setup {
     typescript = { prettier('typescript') },
     typescriptreact = { prettier('typescript') },
     yaml = { prettier('yaml') },
-  }
-}
+  },
+})
 
+nmap('<Leader>f', function()
+  map_notify('Formatting...')
+  vim.cmd('Format')
+end)
+
+nmap('<Leader>fw', function()
+  map_notify('Formatting and writing...')
+  vim.cmd('FormatWrite')
+end)
