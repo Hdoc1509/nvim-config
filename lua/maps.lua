@@ -21,11 +21,6 @@ nmap('<Leader>ya', function()
   cmd('%yank')
 end)
 
--- Nvim-ufo
-nmap('zR', require('ufo').openAllFolds)
-
-nmap('zM', require('ufo').closeAllFolds)
-
 -- Add blankline below current line
 nmap_expr('<Leader>o', "printf('m`%so<ESC>``', v:count1)")
 
