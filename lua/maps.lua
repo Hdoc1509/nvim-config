@@ -17,9 +17,7 @@ nmap('<Leader>sf', function()
 end)
 
 -- Copy to clipboard all text
-nmap('<Leader>ya', function()
-  cmd('%yank')
-end)
+nmap('<Leader>ya', '<cmd>%yank<CR>')
 
 -- Add blankline below current line
 nmap_expr('<Leader>o', "printf('m`%so<ESC>``', v:count1)")
