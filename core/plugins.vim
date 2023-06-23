@@ -1,3 +1,9 @@
+nnoremap <Leader>pc :PlugClean<CR>
+nnoremap <Leader>pi :PlugInstall<CR>
+nnoremap <Leader>ps :PlugStatus<CR>
+nnoremap <Leader>pud :PlugUpdate<CR>
+nnoremap <Leader>pug :PlugUpgrade<CR>
+
 call plug#begin()
 
 " Plenary

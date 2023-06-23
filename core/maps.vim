@@ -52,13 +52,6 @@ inoremap <C-d> <Esc>ddi
 xnoremap < <gv
 xnoremap > >gv
 
-" VIM-PLUG
-nnoremap <Leader>pc :PlugClean<CR>
-nnoremap <Leader>pi :PlugInstall<CR>
-nnoremap <Leader>ps :PlugStatus<CR>
-nnoremap <Leader>pud :PlugUpdate<CR>
-nnoremap <Leader>pug :PlugUpgrade<CR>
-
 " Open URL under cursor
 nnoremap <silent> gx :silent execute '!' . g:browser . ' ' . shellescape(expand('<cfile>'), 1)<CR>
 
