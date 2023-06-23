@@ -1,12 +1,11 @@
 local utils = require('utils')
 
 local nmap_expr = utils.nmap_expr
-local map_notify = utils.map_notify
 local nmap = utils.nmap
 
 nmap('<Leader>sv', function()
-  map_notify('Sourcing $MYVIMRC file...')
   vim.cmd('source $MYVIMRC')
+  vim.notify('Neovim config succesfully reloaded!', 'info')
 end)
 
 -- Copy to clipboard all text
