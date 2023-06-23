@@ -34,10 +34,6 @@ nnoremap <Leader>, A,<Esc>
 " Add a dot at the end of line
 nnoremap <Leader>. A.<Esc>
 
-" Edit config file
-nnoremap <silent> <Leader>e :e $MYVIMRC<CR>
-nnoremap <Leader>ev :vsp $MYVIMRC<CR>
-
 " Run :checkhealth
 nnoremap <Leader>chh :checkhealth<CR>
 

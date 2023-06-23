@@ -3,17 +3,10 @@ local utils = require('utils')
 local nmap_expr = utils.nmap_expr
 local map_notify = utils.map_notify
 local nmap = utils.nmap
-local cmd = vim.cmd
 
--- Edit config file
 nmap('<Leader>sv', function()
   map_notify('Sourcing $MYVIMRC file...')
-  cmd('source $MYVIMRC')
-end)
-
-nmap('<Leader>sf', function()
-  map_notify('Sourcing current file...')
-  cmd('source %')
+  vim.cmd('source $MYVIMRC')
 end)
 
 -- Copy to clipboard all text

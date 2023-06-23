@@ -187,10 +187,7 @@ Used mapleader is `space key`.
 | `<Leader>;`   | Normal          | Add a semi colon at the end of line                  |
 | `<Leader>,`   | Normal          | Add a coma at the end of line                        |
 | `<Leader>.`   | Normal          | Add a dot at the end of line                         |
-| `<Leader>e`   | Normal          | Open `$MYVIMRC` file in current tab                  |
-| `<Leader>ev`  | Normal          | Open `$MYVIMRC` file in a vertical split             |
 | `<Leader>sv`  | Normal (\*)     | Source `$MYVIMRC` file                               |
-| `<Leader>sf`  | Normal (\*)     | Source current file                                  |
 | `<Leader>chh` | Normal          | Run `:checkhealth`                                   |
 | `<C-h>`       | Normal          | Move to left split                                   |
 | `<C-j>`       | Normal          | Move to bottom split                                 |
