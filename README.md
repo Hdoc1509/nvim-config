@@ -201,8 +201,8 @@ Used mapleader is `space key`.
 | `<Leader>gl`  | Normal          | Execute `git pull`                                   |
 | `<Leader>gs`  | Normal          | Execute `git status`                                 |
 | `<Leader>gc`  | Normal          | Execute `git commit`                                 |
-| `<C-u>`       | Normal / Insert | Toggle Uppercase in current word                     |
-| `<C-t>`       | Normal / Insert | Toggle Title Case in current word                    |
+| `<C-u>`       | Normal / Insert | Toggle Uppercase of word under cursor                |
+| `<C-t>`       | Normal / Insert | Toggle Title Case of word under cursor               |
 | `<C-d>`       | Normal / Insert | Remove current line                                  |
 | `<Leader>ya`  | Normal          | Copy all text of current buffer to clipboard         |
 | `<Leader>e`   | Normal          | Search files with `fzf`                              |
