@@ -26,7 +26,7 @@ nmap('<Leader>f', function()
   vim.cmd('Format')
 end)
 
-nmap('<Leader>fw', function()
+nmap('<Leader>F', function()
   map_notify('Formatting and writing...')
   vim.cmd('FormatWrite')
 end)
