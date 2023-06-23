@@ -169,8 +169,8 @@ Used mapleader is `space key`.
 | Mapping       | Mode            | Description                                          |
 | ------------- | --------------- | ---------------------------------------------------- |
 | `<F1>`        | Normal          | Toggle `nvim-tree` with focus in current file        |
-| `<Leader>w`   | Normal          | Save current buffer if has been modified             |
-| `<Leader>q`   | Normal          | Save current buffer if modified and quit             |
+| `<Leader>w`   | Normal          | Save current file if has been modified               |
+| `<Leader>q`   | Normal          | Save current file if modified and quit               |
 | `<Leader>tq`  | Normal          | Close current tab                                    |
 | `<Leader>to`  | Normal          | Close all other tabs                                 |
 | `<Leader>th`  | Normal          | Move tab to left                                     |
@@ -189,12 +189,12 @@ Used mapleader is `space key`.
 | `<Leader>.`   | Normal          | Add a dot at the end of line                         |
 | `<Leader>sv`  | Normal (\*)     | Source `$MYVIMRC` file                               |
 | `<Leader>chh` | Normal          | Run `:checkhealth`                                   |
-| `<C-h>`       | Normal          | Move to left split                                   |
-| `<C-j>`       | Normal          | Move to bottom split                                 |
-| `<C-k>`       | Normal          | Move to top split                                    |
-| `<C-l>`       | Normal          | Move to right split                                  |
-| `<Leader>h`   | Normal          | Move to left split                                   |
-| `<Leader>l`   | Normal          | Move to right split                                  |
+| `<C-h>`       | Normal          | Jump to left split                                   |
+| `<C-j>`       | Normal          | Jump to bottom split                                 |
+| `<C-k>`       | Normal          | Jump to top split                                    |
+| `<C-l>`       | Normal          | Jump to right split                                  |
+| `<Leader>h`   | Normal          | Jump to left split                                   |
+| `<Leader>l`   | Normal          | Jump to right split                                  |
 | `<Leader>gaa` | Normal          | Execute `git add --all`                              |
 | `<Leader>gd`  | Normal          | Execute `git diff`                                   |
 | `<Leader>gp`  | Normal          | Execute `git push`                                   |
@@ -204,7 +204,7 @@ Used mapleader is `space key`.
 | `<C-u>`       | Normal / Insert | Toggle Uppercase of word under cursor                |
 | `<C-t>`       | Normal / Insert | Toggle Title Case of word under cursor               |
 | `<C-d>`       | Normal / Insert | Remove current line                                  |
-| `<Leader>ya`  | Normal          | Copy all text of current buffer to clipboard         |
+| `<Leader>ya`  | Normal          | Copy all text of current file to clipboard           |
 | `<Leader>e`   | Normal          | Search files with `fzf`                              |
 | `]t`          | Normal          | Jump to next TODO comment                            |
 | `[t`          | Normal          | Jump to previous TODO comment                        |
@@ -217,11 +217,11 @@ Used mapleader is `space key`.
 | `<Leader>/`   | Normal          | Clear search highlighting                            |
 | `<Leader>rr`  | Normal          | Run HTTP request under the cursor                    |
 | `<Leader>rl`  | Normal          | Re-run the last HTTP request                         |
-| `vh`          | Command         | Open help in vertical split                          |
+| `vh`          | Command         | Open help window in vertical split                   |
 | `<Leader>mp`  | Normal (\*)     | Start Markdwon preview of current `.md` file         |
 | `<Leader>mps` | Normal (\*)     | Stop Markdown preview of current `.md` file          |
-| `<Leader>f`   | Normal          | Format current buffer                                |
-| `<Leader>F`   | Normal          | Format and save current buffer                       |
+| `<Leader>f`   | Normal          | Format current file                                  |
+| `<Leader>F`   | Normal          | Format and save current file                         |
 | `<Leader>o`   | Normal          | Add blanklines above current line                    |
 | `<Leader>O`   | Normal          | Add blanklines below current line                    |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`                |
