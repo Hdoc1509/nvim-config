@@ -25,15 +25,6 @@ nnoremap <Leader>K 20<C-y>
 nnoremap <Leader>> 10<C-w>>
 nnoremap <Leader>< 10<C-w><
 
-" Add semi colon at the end of line
-nnoremap <Leader>; A;<Esc>
-
-" Add comma at the end of line
-nnoremap <Leader>, A,<Esc>
-
-" Add a dot at the end of line
-nnoremap <Leader>. A.<Esc>
-
 " Run :checkhealth
 nnoremap <Leader>chh :checkhealth<CR>
 
