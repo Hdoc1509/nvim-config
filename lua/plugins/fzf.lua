@@ -16,4 +16,4 @@ let g:fzf_exclude = join(exclude.file, ',') . ',' . join(exclude.dir, ',')
 vim.env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --no-ignore --exclude={'" .. vim.g.fzf_exclude .. "'}"
 vim.env.FZF_DEFAULT_OPTS='--layout=reverse'
 
-nmap('<Leader>fzf', '<cmd>FZF<CR>')
+nmap('<Leader>e', '<cmd>FZF<CR>')

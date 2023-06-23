@@ -205,7 +205,7 @@ Used mapleader is `space key`.
 | `<C-t>`       | Normal / Insert | Toggle Title Case in current word                    |
 | `<C-d>`       | Normal / Insert | Remove current line                                  |
 | `<Leader>ya`  | Normal          | Copy all text of current buffer to clipboard         |
-| `<Leader>fzf` | Normal          | Run `FZF` in current working directory               |
+| `<Leader>e`   | Normal          | Search files with `fzf`                              |
 | `]t`          | Normal          | Jump to next TODO comment                            |
 | `[t`          | Normal          | Jump to previous TODO comment                        |
 | `<Leader>pc`  | Normal          | Execute `PlugClean`                                  |
