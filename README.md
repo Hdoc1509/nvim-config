@@ -220,8 +220,8 @@ Used mapleader is `space key`.
 | `vh`          | Command         | Open help in vertical split                          |
 | `<Leader>mp`  | Normal (\*)     | Start Markdwon preview of current `.md` file         |
 | `<Leader>mps` | Normal (\*)     | Stop Markdown preview of current `.md` file          |
-| `<Leader>f`   | Normal (\*)     | Format current buffer                                |
-| `<Leader>F`   | Normal (\*)     | Format and save current buffer                       |
+| `<Leader>f`   | Normal          | Format current buffer                                |
+| `<Leader>F`   | Normal          | Format and save current buffer                       |
 | `<Leader>o`   | Normal          | Add blanklines above current line                    |
 | `<Leader>O`   | Normal          | Add blanklines below current line                    |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`                |

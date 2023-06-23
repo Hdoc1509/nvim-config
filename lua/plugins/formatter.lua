@@ -1,7 +1,6 @@
 local prettier = require('formatter.defaults.prettier')
 local utils = require('utils')
 local nmap = utils.nmap
-local map_notify = utils.map_notify
 
 require('formatter').setup({
   filetype = {
@@ -21,12 +20,6 @@ require('formatter').setup({
   },
 })
 
-nmap('<Leader>f', function()
-  map_notify('Formatting...')
-  vim.cmd('Format')
-end)
+nmap('<Leader>f', '<cmd>Format<CR>')
 
-nmap('<Leader>F', function()
-  map_notify('Formatting and writing...')
-  vim.cmd('FormatWrite')
-end)
+nmap('<Leader>F', '<cmd>FormatWrite<CR>')
