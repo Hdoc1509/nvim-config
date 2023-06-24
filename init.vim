@@ -1,10 +1,11 @@
 let core_files = [
   \ 'globals.lua',
-  \ 'options.vim',
   \ 'autocmds.lua',
   \ 'plugins.vim',
   \ 'colors.vim' ,
   \]
+
+lua require('options')
 
 for file in core_files
   execute 'source ' . stdpath('config') . '/core/' . file

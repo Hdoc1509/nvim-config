@@ -260,7 +260,7 @@ If you want to integrate your older configuration or want to extend this
 configuration, follow next indications:
 
 - Custom global variables and Mapleader must be in `core/globals.lua`.
-- General options must be placed in `core/options.vim`.
+- General options must be placed in `lua/options.lua`.
 - Custom autocommands must be setted in `core/autocmds.lua`.
 - Plugins call must be setted in `core/plugins.vim`.
 - Plugins configurations must be added inside `lua/plugins` folder and
