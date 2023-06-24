@@ -251,7 +251,7 @@ git.
 To use it, run the following command:
 
 ```sh
-git config --global core.editor "nvim -u ~/.config/nvim/minimal.vim"
+git config --global core.editor "nvim -u ~/.config/nvim/minimal.lua"
 ```
 
 ## Customization
