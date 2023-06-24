@@ -266,7 +266,7 @@ configuration, follow next indications:
 - Plugins configurations must be added inside `lua/plugins` folder and
   then sourced in `lua/plugins/init.lua`
 - Mappings must be setted in `lua/maps.lua`.
-- Options related to colorschemes and custom GUI highlighting goes in `core/colors.vim`.
+- Options related to colorschemes and custom GUI highlighting goes in `lua/plugins/nightfox.lua`.
 - Options for Neovim GUI's are in `ginit.vim`.
 - Util functions must be placed in `lua/utils.lua`.
 

@@ -2,7 +2,6 @@ let core_files = [
   \ 'globals.lua',
   \ 'autocmds.lua',
   \ 'plugins.vim',
-  \ 'colors.vim' ,
   \]
 
 lua require('options')
