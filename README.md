@@ -241,7 +241,7 @@ This configuration use some custom global variables:
 
 - **g:browser**: Binary name of your favorite browser. Default to `firefox`.
 
-You can add or change these global variables in `core/globals.lua`.
+You can add or change these global variables in `lua/globals.lua`.
 
 ## Git integration
 
@@ -259,9 +259,9 @@ git config --global core.editor "nvim -u ~/.config/nvim/minimal.vim"
 If you want to integrate your older configuration or want to extend this
 configuration, follow next indications:
 
-- Custom global variables and Mapleader must be in `core/globals.lua`.
+- Custom global variables and Mapleader must be in `lua/globals.lua`.
 - General options must be placed in `lua/options.lua`.
-- Custom autocommands must be setted in `core/autocmds.lua`.
+- Custom autocommands must be setted in `lua/autocmds.lua`.
 - Plugins call must be setted in `core/plugins.vim`.
 - Plugins configurations must be added inside `lua/plugins` folder and
   then sourced in `lua/plugins/init.lua`

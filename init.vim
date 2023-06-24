@@ -1,13 +1,5 @@
-let core_files = [
-  \ 'globals.lua',
-  \ 'autocmds.lua',
-  \ 'plugins.vim',
-  \]
-
+lua require('globals')
 lua require('options')
-
-for file in core_files
-  execute 'source ' . stdpath('config') . '/core/' . file
-endfor
-
+lua require('autocmds')
+execute 'source ' . stdpath('config') . '/core/plugins.vim'
 lua require('maps')
