@@ -139,15 +139,14 @@ nvim --headless -c "autocmd User MasonToolsUpdateCompleted quitall" -c "MasonToo
 
 Be sure that you have all [software requirements for nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#requirements).
 
-Then, open a terminal and run the following commands:
-
-- Installing treesitter parsers for `c` and `cpp`:
+Then, open a terminal and run the following command to install all treesitter
+parsers:
 
 ```sh
-nvim --headless -c ":TSInstallSync c cpp" +qa
+nvim --headless -c ":TSUpdate" +qa
 ```
 
-Rest of parser will be installed once you open Neovim.
+Or if you want, open Neovim and wait that all parsers get installed.
 
 ## Mappings
 
