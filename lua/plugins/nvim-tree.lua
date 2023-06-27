@@ -1,11 +1,6 @@
 local nmap = require("utils").nmap
 local api = require("nvim-tree.api")
 
--- Automatically open file upon creation
-api.events.subscribe(api.events.Event.FileCreated, function (file)
-  vim.cmd('edit ' .. file.fname)
-end)
-
 require('nvim-tree').setup({
   filters = {
     custom = {
