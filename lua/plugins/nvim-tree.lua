@@ -56,3 +56,4 @@ require('nvim-tree').setup({
 })
 
 nmap('<F1>', '<cmd>NvimTreeFindFileToggle<CR>')
+nmap('<F2>', '<cmd>NvimTreeToggle<CR>')
