@@ -75,7 +75,6 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - [FZF](https://github.com/junegunn/fzf#installation)
 - [fd](https://github.com/sharkdp/fd#installation)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [ShellCheck](https://github.com/koalaman/shellcheck#installing)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See [Troubleshooting](#troubleshooting) section.
 
 ## Installation
