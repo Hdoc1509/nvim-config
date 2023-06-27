@@ -20,6 +20,7 @@ require('nvim-treesitter.configs').setup({
     'vim',
     'yaml',
   },
+  sync_install = true,
   highlight = { enable = true },
   indent = { enable = true },
   -- Config for nvim-ts-autotag
