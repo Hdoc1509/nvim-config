@@ -127,8 +127,7 @@ nvim -es -u ~/.config/nvim/core/plugins.vim +PlugInstall +qa
 
 ### Install dependencies with mason.nvim
 
-- Run the following command to install lsp-servers, formatters and the
-  `tree-sitter-cli` (needed for [`treesitter`](#install-treesitter-dependencies)):
+Run the following command to install lsp-servers, formatters and the `tree-sitter-cli`:
 
 ```sh
 nvim --headless -c "autocmd User MasonToolsUpdateCompleted quitall" -c "MasonToolsInstall"
