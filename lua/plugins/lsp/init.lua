@@ -1,3 +1,5 @@
+require('plugins.lsp.mason')
+
 local nvim_lsp = require('lspconfig')
 local servers = require('plugins.lsp.servers')
 

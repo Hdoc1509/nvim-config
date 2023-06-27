@@ -34,6 +34,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Unicode completion with [`unicode.vim`](https://github.com/chrisbra/unicode.vim).
 - Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim).
 - Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo) and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim).
+- Easily install packages with [`mason.nvim`](https://github.com/williamboman/mason.nvim) and [`mason-tool-installer`](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
@@ -74,12 +75,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - [FZF](https://github.com/junegunn/fzf#installation)
 - [fd](https://github.com/sharkdp/fd#installation)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
-- Formatters:
-  - [Prettier](https://prettier.io/docs/en/install.html)
-  - [Stylua](https://github.com/JohnnyMorganz/StyLua#installation)
-  - [shfmt](https://github.com/mvdan/sh#shfmt)
 - [ShellCheck](https://github.com/koalaman/shellcheck#installing)
-- [jq](https://stedolan.github.io/jq/download/)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See [Troubleshooting](#troubleshooting) section.
 
 ## Installation
@@ -130,29 +126,20 @@ Finally, run the following command for install all the plugins:
 nvim -es -u ~/.config/nvim/core/plugins.vim +PlugInstall +qa
 ```
 
-### Install lsp-servers
+### Install dependencies with mason.nvim
 
-- Run the following `npm` command for install most of required lsp-servers:
+- Run the following command to install lsp-servers, formatters and the
+  `tree-sitter-cli` (needed for [`treesitter`](#install-treesitter-dependencies)):
 
 ```sh
-npm i -g vscode-langservers-extracted typescript typescript-language-server vim-language-server bash-language-server yaml-language-server emmet-ls
+nvim --headless -c "autocmd User MasonToolsUpdateCompleted quitall" -c "MasonToolsInstall"
 ```
-
-- For install `lua-language-server`, follow its official [installation guide](https://github.com/sumneko/lua-language-server/wiki/Getting-Started#command-line).
-
-- For install `marksman`, follow its official [installation guide](https://github.com/artempyanykh/marksman#how-to-install).
 
 ### Install Treesitter dependencies
 
 Be sure that you have all [software requirements for nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#requirements).
 
 Then, open a terminal and run the following commands:
-
-- Installing tree-sitter-cli:
-
-```sh
-npm i -g tree-sitter-cli
-```
 
 - Installing treesitter parsers for `c` and `cpp`:
 

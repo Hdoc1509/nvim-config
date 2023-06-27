@@ -32,6 +32,10 @@ Plug 'folke/todo-comments.nvim'
 " Themes
 Plug 'EdenEast/nightfox.nvim'
 
+" Packages
+Plug 'williamboman/mason.nvim'
+Plug 'WhoIsSethDaniel/mason-tool-installer.nvim'
+
 " LSP
 Plug 'neovim/nvim-lspconfig'
 Plug 'onsails/lspkind.nvim'
