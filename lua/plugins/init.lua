@@ -1,28 +1,9 @@
-local plugins_config = {
-  'lsp',
-  'cmp',
-  'gitsigns',
-  'nightfox',
-  'nvim-tree',
-  'lightline',
-  'virt-column',
-  'highlight-colors',
-  'indent-blankline',
-  'formatter',
-  'fzf',
-  'surround',
-  'treesitter',
-  'notify',
-  'todo-comments',
-  'vim-vsnip',
-  'markdown-preview',
-  'nerdcommenter',
-  'rest-nvim',
-  'nvim-ufo',
-  'statuscol',
-  'fugitive',
-}
+-- Load plugins using io.popen() and builit-in commands
+local pfile = io.popen('ls ~/.config/nvim/lua/plugins | grep -v "init" | sed -e "s/.lua//"')
 
-for _, plugin in ipairs(plugins_config) do
-  require('plugins.' .. plugin)
+if pfile ~= nil then
+  for filename in pfile:lines() do
+    -- print(filename)
+    require('plugins.' .. filename)
+  end
 end
