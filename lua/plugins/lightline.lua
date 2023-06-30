@@ -7,4 +7,5 @@ vim.g.lightline = {
     },
   },
   component_function = { gitbranch = 'FugitiveHead' },
+  enable = { tabline = 0 },
 }
