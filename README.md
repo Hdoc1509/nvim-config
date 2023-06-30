@@ -249,8 +249,9 @@ configuration, follow next indications:
 - General options must be placed in `lua/options.lua`.
 - Custom autocommands must be setted in `lua/autocmds.lua`.
 - Plugins call must be setted in `core/plugins.vim`.
-- Plugins configurations must be added inside `lua/plugins` folder and
-  then sourced in `lua/plugins/init.lua`
+- Plugins configurations must be added inside `lua/plugins` folder (can be a
+  `*.lua` file or a folder with an `init.lua` file). Config files of plugins will
+  be loaded/sourced automatically by `lua/plugins/init.lua`.
 - Mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `lua/plugins/nightfox.lua`.
 - Options for Neovim GUI's are in `ginit.vim`.
