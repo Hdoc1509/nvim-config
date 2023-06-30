@@ -35,6 +35,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim).
 - Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo) and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim).
 - Easily install packages with [`mason.nvim`](https://github.com/williamboman/mason.nvim) and [`mason-tool-installer`](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
+- Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
