@@ -13,6 +13,7 @@ autocmd('FileType', {
   pattern = {
     'qf',
     'help',
+    'checkhealth',
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
@@ -31,4 +32,3 @@ autocmd('FileType', {
     end, { buffer = bufnr })
   end,
 })
-
