@@ -38,7 +38,14 @@ M.map_notify = function(message)
   })
 end
 
-M.merge = function(...) return vim.tbl_deep_extend('force', ...) end
+---Merge two or more tables recursively
+---@param tableA table
+---@param tableB table
+---@param ... table
+---@return table
+M.merge = function(tableA, tableB, ...)
+  return vim.tbl_deep_extend('force', tableA, tableB, ...)
+end
 
 ---Create a nmap
 ---@param lhs string left-hand side of nmap
