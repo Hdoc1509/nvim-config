@@ -19,20 +19,6 @@ M.keymap = function(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, M.merge(map_opts, opts))
 end
 
----Returns a keymap creator for the specified buffer
----@param bufnr number
-M.create_buf_keymapper = function(bufnr)
-  ---Add a buffer keymap
-  ---@param mode string | string[]
-  ---@param lhs string left-hand side of mapping
-  ---@param rhs string right-hand side of mapping
-  ---@param opts? table aditional options
-  return function(mode, lhs, rhs, opts)
-    opts = opts or {}
-    vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, M.merge(map_opts, opts))
-  end
-end
-
 ---Returns a nmap creator for the specified buffer
 ---@param bufnr number
 M.create_buf_nmapper = function (bufnr)
