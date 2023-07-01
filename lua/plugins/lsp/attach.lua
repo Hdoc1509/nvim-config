@@ -1,24 +1,28 @@
-local create_buf_nmapper = require("utils").create_buf_nmapper
+local utils = require('utils')
+local nmap = utils.nmap
+local merge = utils.merge
 
 local api = vim.api
 local diagnostic = vim.diagnostic
 
 return function(client, bufnr)
-  local buf_nmap = create_buf_nmapper(bufnr)
+  local buf_nmap = function(lhs, rhs, opts)
+    nmap(lhs, rhs, merge({ buffer = bufnr }, opts or {}))
+  end
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_nmap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-  buf_nmap('gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-  buf_nmap('<Leader>ds', '<cmd>lua vim.lsp.buf.document_symbol()<CR>')
-  buf_nmap('J', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
-  buf_nmap('K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-  buf_nmap('gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-  buf_nmap('<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>')
-  buf_nmap('<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-  buf_nmap('<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-  buf_nmap('gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-  buf_nmap('[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>')
-  buf_nmap(']d', '<cmd>lua vim.diagnostic.goto_next()<CR>')
+  buf_nmap('gD', vim.lsp.buf.declaration)
+  buf_nmap('gd', vim.lsp.buf.definition)
+  buf_nmap('<Leader>ds', vim.lsp.buf.document_symbol)
+  buf_nmap('J', vim.lsp.buf.signature_help)
+  buf_nmap('K', vim.lsp.buf.hover)
+  buf_nmap('gi', vim.lsp.buf.implementation)
+  buf_nmap('<space>D', vim.lsp.buf.type_definition)
+  buf_nmap('<space>rn', vim.lsp.buf.rename)
+  buf_nmap('<space>ca', vim.lsp.buf.code_action)
+  buf_nmap('gr', vim.lsp.buf.references)
+  buf_nmap('[d', vim.diagnostic.goto_prev)
+  buf_nmap(']d', vim.diagnostic.goto_next)
 
   -- Show inline diagnostic automatically in Hover Window
   api.nvim_create_autocmd('CursorHold', {
