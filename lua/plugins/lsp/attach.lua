@@ -11,12 +11,10 @@ return function(client, bufnr)
   end
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_nmap('gD', vim.lsp.buf.declaration)
   buf_nmap('gd', vim.lsp.buf.definition)
   buf_nmap('<Leader>ds', vim.lsp.buf.document_symbol)
   buf_nmap('J', vim.lsp.buf.signature_help)
   buf_nmap('K', vim.lsp.buf.hover)
-  buf_nmap('gi', vim.lsp.buf.implementation)
   buf_nmap('<space>D', vim.lsp.buf.type_definition)
   buf_nmap('<space>rn', vim.lsp.buf.rename)
   buf_nmap('<space>ca', vim.lsp.buf.code_action)
