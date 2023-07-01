@@ -59,6 +59,8 @@ nmap('<Leader>/', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlighing' })
 
 -- Help in vertical split
 keymap('c', 'vh', 'vertical help', { desc = 'Open help in vertical split' })
+-- Help in new tab
+keymap('c', 'th', 'tab help', { desc = 'Open help in new tab' })
 
 nmap('<Leader>sv', function()
   vim.cmd('source $MYVIMRC')
