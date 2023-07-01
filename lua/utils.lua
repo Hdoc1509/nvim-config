@@ -43,13 +43,4 @@ M.nmap = function(lhs, rhs, opts)
   vim.keymap.set('n', lhs, rhs, M.merge(map_opts, opts))
 end
 
----Create a nmap expression
----@param lhs string left-hand side of nmap
----@param rhs string | function righ-hand side of nmap
----@param opts? table aditional options
-M.nmap_expr = function (lhs,rhs, opts)
-  opts = opts or {}
-  vim.keymap.set('n', lhs, rhs, M.merge({ expr = true }, map_opts, opts))
-end
-
 return M
