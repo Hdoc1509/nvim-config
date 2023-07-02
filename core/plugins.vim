@@ -51,6 +51,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'b0o/schemastore.nvim'
 Plug 'chrisbra/unicode.vim'
+Plug 'abecodes/tabout.nvim' | " should be load after nvim-cmp
 
 " IDE
 Plug 'lewis6991/gitsigns.nvim'
