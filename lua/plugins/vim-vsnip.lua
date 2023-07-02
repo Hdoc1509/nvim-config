@@ -1,10 +1,14 @@
--- Jump fordward
-vim.cmd([[inoremap <expr> <Tab>   vsnip#jumpable(1)  ? '<Plug>(vsnip-jump-next)' : '<Tab>']])
-vim.cmd([[snoremap <expr> <Tab>   vsnip#jumpable(1)  ? '<Plug>(vsnip-jump-next)' : '<Tab>']])
+local keymap = require('utils').keymap
+
+-- Jump forward
+keymap({ 'i', 's' }, '<Tab>', function()
+  return vim.fn['vsnip#jumpable'](1) == 1 and '<Plug>(vsnip-jump-next)' or '<Tab>'
+end, { expr = true })
 
 -- Jump backward
-vim.cmd([[inoremap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>']])
-vim.cmd([[snoremap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>']])
+keymap({ 'i', 's' }, '<S-Tab>', function()
+  return vim.fn['vsnip#jumpable'](-1) == 1 and '<Plug>(vsnip-jump-prev)' or '<S-Tab>'
+end, { expr = true })
 
 vim.g.vsnip_filetypes = {
   typescript = { 'javascript' },
