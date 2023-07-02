@@ -254,8 +254,8 @@ configuration, follow next indications:
   `*.lua` file or a folder with an `init.lua` file). Config files of plugins will
   be loaded/sourced automatically by `lua/plugins/init.lua`.
 
-  **If you are using Windows, be sure to execute `nvim` with `bash` that comes
-  bundled with `git-for-windows`**
+  **If you are using Windows, be sure to run `nvim` with a terminal that use `bash`
+  that comes bundled with `git-for-windows`**
 - Mappings must be setted in `lua/maps.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `lua/plugins/nightfox.lua`.
 - Options for Neovim GUI's are in `ginit.vim`.
