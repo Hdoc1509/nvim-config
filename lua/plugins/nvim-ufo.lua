@@ -6,5 +6,5 @@ nvim_ufo.setup({
 })
 
 nmap('zR', nvim_ufo.openAllFolds)
-
+nmap('H', nvim_ufo.peekFoldedLinesUnderCursor)
 nmap('zM', nvim_ufo.closeAllFolds)
