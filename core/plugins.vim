@@ -62,6 +62,7 @@ Plug 'kevinhwang91/promise-async'
 Plug 'kevinhwang91/nvim-ufo'
 Plug 'luukvbaal/statuscol.nvim'
 Plug 'nanozuki/tabby.nvim'
+Plug 'j-hui/fidget.nvim', { 'tag': 'legacy' }
 
 " GIT
 Plug 'tpope/vim-fugitive'

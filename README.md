@@ -22,7 +22,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Better TODO comments with [`todo-comments.nvim`](https://github.com/folke/todo-comments.nvim/).
 - Better colorscheme with [`nightfox.nvim`](https://github.com/EdenEast/nightfox.nvim)
 - Completion engine via [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/).
-- LSP support with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig), [`lspkind.nvim`](https://github.com/onsails/lspkind.nvim) and [`cmp-nvim-lsp-signature-help`](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help).
+- LSP support with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig), [`lspkind.nvim`](https://github.com/onsails/lspkind.nvim), [`cmp-nvim-lsp-signature-help`](https://github.com/hrsh7th/cmp-nvim-lsp-signature-help) and [`fidget.nvim`](https://github.com/j-hui/fidget.nvim).
 - Git integration with [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim) and [`vim-fugitive`](https://github.com/tpope/vim-fugitive).
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim).
 - Functions and commands for Neovim GUI's via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim).
