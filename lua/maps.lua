@@ -78,3 +78,4 @@ nmap('<Leader>O', "printf('m`%sO<ESC>``', v:count1)", { expr = true })
 
 nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
 nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
+nmap('<Leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
