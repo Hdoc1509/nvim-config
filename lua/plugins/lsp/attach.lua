@@ -19,8 +19,6 @@ return function(client, bufnr)
   buf_nmap('<space>rn', vim.lsp.buf.rename)
   buf_nmap('<space>ca', vim.lsp.buf.code_action)
   buf_nmap('gr', vim.lsp.buf.references)
-  buf_nmap('[d', vim.diagnostic.goto_prev)
-  buf_nmap(']d', vim.diagnostic.goto_next)
 
   -- Show inline diagnostic automatically in Hover Window
   api.nvim_create_autocmd('CursorHold', {

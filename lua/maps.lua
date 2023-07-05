@@ -75,3 +75,6 @@ nmap('<Leader>o', "printf('m`%so<ESC>``', v:count1)", { expr = true })
 
 -- Add blankline above current line
 nmap('<Leader>O', "printf('m`%sO<ESC>``', v:count1)", { expr = true })
+
+nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
+nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
