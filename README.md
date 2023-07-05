@@ -259,6 +259,7 @@ configuration, follow next indications:
   **If you are using Windows, be sure to run `nvim` with a terminal that use `bash`
   that comes bundled with `git-for-windows`**
 - Mappings must be setted in `lua/maps.lua`.
+- Settings about diagnostic are in `lua/diagnostic.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `lua/plugins/nightfox.lua`.
 - Options for Neovim GUI's are in `ginit.vim`.
 - Util functions must be placed in `lua/utils.lua`.
