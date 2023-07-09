@@ -31,8 +31,6 @@ nmap('<C-h>', '<C-w>h', { desc = 'Jump to left split' })
 nmap('<C-j>', '<C-w>j', { desc = 'Jump to bottom split' })
 nmap('<C-k>', '<C-w>k', { desc = 'Jump to top split' })
 nmap('<C-l>', '<C-w>l', { desc = 'Jump to right split' })
-nmap('<Leader>h', '<C-w>h', { desc = 'Jump to left split' })
-nmap('<Leader>l', '<C-w>l', { desc = 'Jump to right split' })
 
 nmap('<Leader>chh', '<cmd>checkhealth<CR>', { desc = 'Run :checkhealth' })
 

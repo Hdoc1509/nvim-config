@@ -177,8 +177,6 @@ Used mapleader is `space key`.
 | `<C-j>`       | Normal          | Jump to bottom split                                 |
 | `<C-k>`       | Normal          | Jump to top split                                    |
 | `<C-l>`       | Normal          | Jump to right split                                  |
-| `<Leader>h`   | Normal          | Jump to left split                                   |
-| `<Leader>l`   | Normal          | Jump to right split                                  |
 | `<Leader>gaa` | Normal          | Execute `git add --all`                              |
 | `<Leader>gd`  | Normal          | Execute `git diff`                                   |
 | `<Leader>gp`  | Normal          | Execute `git push`                                   |
