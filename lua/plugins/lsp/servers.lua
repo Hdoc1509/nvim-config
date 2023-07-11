@@ -33,7 +33,11 @@ return {
     },
   }),
   ['cssls'] = default_settings,
-  ['emmet_ls'] = default_settings,
+  ['emmet_ls'] = merge(default_settings, {
+    root_dir = function()
+      return vim.loop.cwd()
+    end,
+  }),
   ['eslint'] = default_settings,
   ['html'] = default_settings,
   ['jsonls'] = merge(default_settings, {
