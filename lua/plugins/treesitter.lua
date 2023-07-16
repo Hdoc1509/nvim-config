@@ -17,6 +17,7 @@ require('nvim-treesitter.configs').setup({
     'markdown_inline',
     'scss',
     'typescript',
+    'tsx',
     'vim',
     'yaml',
   },
