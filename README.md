@@ -205,8 +205,8 @@ Used mapleader is `space key`.
 | `<Leader>rl`  | Normal          | Re-run the last HTTP request                         |
 | `vh`          | Command         | Open help window in vertical split                   |
 | `th`          | Command         | Open help window in new tab                          |
-| `<Leader>mp`  | Normal (\*)     | Start Markdwon preview of current `.md` file         |
-| `<Leader>mps` | Normal (\*)     | Stop Markdown preview of current `.md` file          |
+| `<Leader>mo`  | Normal (\*)     | Start Markdwon preview                               |
+| `<Leader>mc`  | Normal (\*)     | Stop Markdown preview                                |
 | `<Leader>f`   | Normal          | Format current file                                  |
 | `<Leader>F`   | Normal          | Format and save current file                         |
 | `H`           | Normal          | Preview folded lines                                 |
