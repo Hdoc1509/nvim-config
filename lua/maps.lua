@@ -36,6 +36,10 @@ nmap('<C-j>', '<C-w>j', { desc = 'Jump to bottom split' })
 nmap('<C-k>', '<C-w>k', { desc = 'Jump to top split' })
 nmap('<C-l>', '<C-w>l', { desc = 'Jump to right split' })
 
+-- Move windows trough tabs
+nmap('<Leader>H', utils.move_window_to_prev_tab, { desc = 'Move current window to previous tab' })
+nmap('<Leader>L', utils.move_window_to_next_tab, { desc = 'Move current window to next tab' })
+
 nmap('<Leader>chh', '<cmd>checkhealth<CR>', { desc = 'Run :checkhealth' })
 
 -- Word case
