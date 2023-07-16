@@ -16,6 +16,10 @@ nmap('<Leader>tl', '<cmd>tabmove +1<CR>', { desc = 'Move tab to right' })
 nmap('<Leader>tj', '<cmd>tabprevious<CR>', { desc = 'Jump to previous tab' })
 nmap('<Leader>tk', '<cmd>tabnext<CR>', { desc = 'Jump to next tab' })
 
+-- Jump to tags
+nmap('<Leader>[', '<C-w>]', { desc = 'Jump to tag under cursor in a split' })
+nmap('<Leader>]', '<C-w>]<C-w>T', { desc = 'Jump to tag under cursor in a new tab' })
+
 -- Scrolling
 nmap('<Leader>j', '10<C-e>', { desc = 'Scroll down 10 lines' })
 nmap('<Leader>J', '20<C-e>', { desc = 'Scroll down 20 lines' })

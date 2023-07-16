@@ -164,6 +164,8 @@ Used mapleader is `space key`.
 | `<Leader>tl`  | Normal          | Move tab to right                                    |
 | `<Leader>tj`  | Normal          | Go to previous tab                                   |
 | `<Leader>tk`  | Normal          | Go to next tab                                       |
+| `<Leader>[`   | Normal          | Jump to tag under cursor in a split                  |
+| `<Leader>]`   | Normal          | Jump to tag under cursor in a new tab                |
 | `<Leader>Q`   | Normal          | Quit from Neovim                                     |
 | `<Leader>j`   | Normal          | Scroll down 10 lines                                 |
 | `<Leader>J`   | Normal          | Scroll down 20 lines                                 |
