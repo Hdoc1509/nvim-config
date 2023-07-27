@@ -7,7 +7,7 @@ let exclude = {
   \ '*.gif', '*.svg', '*.ico', '*.db', '*.tgz', '*.tar.gz', '*.gz',
   \ '*.zip', '*.bin', '*.pptx', '*.xlsx', '*.docx', '*.pdf', '*.tmp',
   \ '*.wmv', '*.mkv', '*.mp4', '*.rmvb', '*.ttf', '*.ttc', '*.otf',
-  \ '*.mp3', '*.aac', 'package-lock.json']
+  \ '*.mp3', '*.aac', 'package-lock.json', 'pnpm-lock.yaml']
   \ }
 
 let g:fzf_exclude = join(exclude.file, ',') . ',' . join(exclude.dir, ',')
