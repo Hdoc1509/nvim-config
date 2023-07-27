@@ -18,7 +18,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Move lines and selections easier with [`vim-move`](https://github.com/matze/vim-move).
 - Formatters support via [`formatter.nvim`](https://github.com/mhartington/formatter.nvim).
 - Easier pair surrounding with [`nvim-surround`](https://github.com/kylechui/nvim-surround)
-- Easier comments with [`nerdcommenter`](https://github.com/scrooloose/nerdcommenter).
+- Easier comments with [`Comment.nvim`](https://github.com/numToStr/Comment.nvim).
 - Better TODO comments with [`todo-comments.nvim`](https://github.com/folke/todo-comments.nvim/).
 - Better colorscheme with [`nightfox.nvim`](https://github.com/EdenEast/nightfox.nvim)
 - Completion engine via [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/).

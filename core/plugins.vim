@@ -26,7 +26,8 @@ Plug 'rafamadriz/friendly-snippets'
 Plug 'matze/vim-move'
 Plug 'mhartington/formatter.nvim'
 Plug 'kylechui/nvim-surround'
-Plug 'scrooloose/nerdcommenter'
+Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 Plug 'folke/todo-comments.nvim'
 
 " Themes

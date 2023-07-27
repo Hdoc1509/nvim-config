@@ -24,6 +24,9 @@ require('nvim-treesitter.configs').setup({
   sync_install = true,
   highlight = { enable = true },
   indent = { enable = true },
-  -- Config for nvim-ts-autotag
-  autotag = { enable = true },
+  autotag = { enable = true }, -- nvim-ts-autotag
+  context_commentstring = { -- nvim-ts-context-commentstring
+    enable = true,
+    enable_autocmd = false,
+  },
 })
