@@ -13,8 +13,12 @@ nmap('<Leader>tq', '<cmd>tabclose<CR>', { desc = 'Close tab' })
 nmap('<Leader>to', '<cmd>tabonly<CR>', { desc = 'Close all other tabs' })
 nmap('<Leader>th', '<cmd>tabmove -1<CR>', { desc = 'Move tab to left' })
 nmap('<Leader>tl', '<cmd>tabmove +1<CR>', { desc = 'Move tab to right' })
+
+-- Navigate trough tabs
 nmap('<Leader>tj', '<cmd>tabprevious<CR>', { desc = 'Jump to previous tab' })
+nmap('<Leader>tJ', '<cmd>tabfirst<CR>', { desc = 'Jump to first tab' })
 nmap('<Leader>tk', '<cmd>tabnext<CR>', { desc = 'Jump to next tab' })
+nmap('<Leader>tK', '<cmd>tablast<CR>', { desc = 'Jump to last tab' })
 
 -- Jump to tags
 nmap('<Leader>[', '<C-w>]', { desc = 'Jump to tag under cursor in a split' })
