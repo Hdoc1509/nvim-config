@@ -1,9 +1,12 @@
 -- Load plugins using io.popen() and builit-in commands
-local pfile = io.popen('ls ~/.config/nvim/lua/plugins | grep -v "init" | sed -e "s/.lua//"')
+local config_path = vim.fn.stdpath('config')
 
-if pfile ~= nil then
-  for filename in pfile:lines() do
-    -- print(filename)
+for _, listed_element in ipairs(vim.fn.readdir(config_path .. '/lua/plugins')) do
+  local filename = string.gsub(listed_element, '%.lua$', '')
+
+  -- prevent load lua/plugins/init.lua again
+  if filename ~= 'init' then
+    -- print(listed_file)
     require('plugins.' .. filename)
   end
 end
