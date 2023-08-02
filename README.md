@@ -214,6 +214,9 @@ Used mapleader is `space key`.
 | `H`           | Normal          | Preview folded lines                                 |
 | `<Leader>o`   | Normal          | Add blanklines below current line                    |
 | `<Leader>O`   | Normal          | Add blanklines above current line                    |
+| `]c`          | Normal          | Jump to next hunk                                    |
+| `[c`          | Normal          | Jump to previous hunk                                |
+| `<Leader>hp`  | Normal          | Preview hunk                                         |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`                |
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`               |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`                |
