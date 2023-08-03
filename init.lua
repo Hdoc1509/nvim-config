@@ -1,6 +1,7 @@
 require('globals')
 require('options')
 require('autocmds')
-vim.cmd([[execute 'source ' . stdpath('config') . '/core/plugins.vim']])
+require("lazy_bootstrap")
+require('lazy').setup('plugins')
 require('maps')
 require("diagnostic")

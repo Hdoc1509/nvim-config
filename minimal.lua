@@ -1,13 +1,8 @@
 require('globals')
 require('options')
-
-vim.cmd([[
-call plug#begin()
-Plug 'itchyny/lightline.vim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'EdenEast/nightfox.nvim'
-call plug#end()
-]])
-
-require('plugins.lightline')
-require('plugins.nightfox')
+require("lazy_bootstrap")
+require('lazy').setup({
+  { import = 'plugins.lightline' },
+  { import = 'plugins.nightfox' },
+  { 'jiangmiao/auto-pairs' },
+})

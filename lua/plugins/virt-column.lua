@@ -1,1 +1,4 @@
-require('virt-column').setup()
+return {
+  'lukas-reineke/virt-column.nvim',
+  config = true,
+}

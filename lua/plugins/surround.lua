@@ -1,1 +1,6 @@
-require('nvim-surround').setup()
+return {
+  'kylechui/nvim-surround',
+  config = true,
+  event = 'VeryLazy',
+  version = '*',
+}

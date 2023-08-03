@@ -8,7 +8,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Blinking cursor.
 - Custom [mappings](#mappings).
 - Settings for [`neovim-qt`](https://github.com/equalsraf/neovim-qt) and [`neovide`](https://github.com/neovide/neovide).
-- Plugin management via [`vim-plug`](https://github.com/junegunn/vim-plug).
+- Plugin management via [`lazy.nvim`](https://github.com/folke/lazy.nvim).
 - Code highlighting via [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter).
 - Better statusline via [`lightline.vim`](https://github.com/itchyny/lightline.vim).
 - File tree explorer via [`nvim-tree.lua`](https://github.com/nvim-tree/nvim-tree.lua).
@@ -105,27 +105,16 @@ setx XDG_CONFIG_HOME %USERPROFILE%\.config
 
 ### Install plugins
 
-First, you need to install [`vim-plug`](https://github.com/junegunn/vim-plug#neovim):
+Be sure that you have all [software requirements for nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#requirements).
 
-- UNIX systems:
+Then, run the following command for install all the plugins:
 
-```sh
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```bash
+# install plugins from lazy-lock.json
+nvim --headless "+Lazy! restore" +qa
 ```
 
-- Windows via `powershell`:
-
-```powershell
-iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
-```
-
-Finally, run the following command for install all the plugins:
-
-```sh
-nvim -es -u ~/.config/nvim/core/plugins.vim +PlugInstall +qa
-```
+Or if you want, open Neovim and wait that all plugins get installed.
 
 ### Install dependencies with mason.nvim
 
@@ -135,18 +124,7 @@ Run the following command to install lsp-servers, formatters and the `tree-sitte
 nvim --headless -c "autocmd User MasonToolsUpdateCompleted quitall" -c "MasonToolsInstall"
 ```
 
-### Install Treesitter dependencies
-
-Be sure that you have all [software requirements for nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#requirements).
-
-Then, open a terminal and run the following command to install all treesitter
-parsers:
-
-```sh
-nvim --headless -c ":TSUpdate" +qa
-```
-
-Or if you want, open Neovim and wait that all parsers get installed.
+Or open Neovim and wait that all tools get installed.
 
 ## Mappings
 
@@ -258,13 +236,9 @@ configuration, follow next indications:
 - Custom global variables and Mapleader must be in `lua/globals.lua`.
 - General options must be placed in `lua/options.lua`.
 - Custom autocommands must be setted in `lua/autocmds.lua`.
-- Plugins call must be setted in `core/plugins.vim`.
 - Plugins configurations must be added inside `lua/plugins` folder (can be a
   `*.lua` file or a folder with an `init.lua` file). Config files of plugins will
-  be loaded/sourced automatically by `lua/plugins/init.lua`.
-
-  **If you are using Windows, be sure to run `nvim` with a terminal that use `bash`
-  that comes bundled with `git-for-windows`**
+  be loaded automatically by `lazy.nvim`.
 - Mappings must be setted in `lua/maps.lua`.
 - Settings about diagnostic are in `lua/diagnostic.lua`.
 - Options related to colorschemes and custom GUI highlighting goes in `lua/plugins/nightfox.lua`.

@@ -1,8 +1,13 @@
-require('fidget').setup({
-  text = {
-    spinner = 'dots',
+return {
+  'j-hui/fidget.nvim',
+  tag = 'legacy',
+  event = 'LspAttach',
+  opts = {
+    text = {
+      spinner = 'dots',
+    },
+    window = {
+      blend = 0,
+    },
   },
-  window = {
-    blend = 0,
-  },
-})
+}
