@@ -1,7 +1,7 @@
 return {
   diagnostics = {
-    Error = '✗',
-    Warn = '!',
+    Error = '',
+    Warn = '',
     Hint = '',
     Info = '',
   },
