@@ -242,6 +242,7 @@ configuration, follow next indications:
   be loaded automatically by `lazy.nvim`.
 - Mappings must be setted in `lua/maps.lua`.
 - Settings about diagnostic are in `lua/diagnostic.lua`.
+- Custom icons must be declared in `lua/icons.lua`
 - Options related to colorschemes and custom GUI highlighting goes in `lua/plugins/nightfox.lua`.
 - Options for Neovim GUI's are in `ginit.vim`.
 - Util functions must be placed in `lua/utils.lua`.

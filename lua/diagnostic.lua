@@ -1,5 +1,5 @@
 -- Change diagnostic signs
-local signs = { Error = '✗', Warn = '!', Hint = '', Info = '' }
+local signs = require("icons").diagnostics
 
 for type, icon in pairs(signs) do
   local hl = 'DiagnosticSign' .. type

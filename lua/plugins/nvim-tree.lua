@@ -37,13 +37,8 @@ local config = function()
       add_trailing = true,
       icons = {
         glyphs = {
-          git = {
-            unstaged = 'M',
-            staged = '➜',
-            untracked = '?',
-          },
+          git = require('icons').git,
         },
-        --git_placement = 'signcolumn',
       },
     },
     view = {
@@ -65,5 +60,5 @@ return {
   dependencies = {
     'nvim-tree/nvim-web-devicons',
   },
-  config = config
+  config = config,
 }
