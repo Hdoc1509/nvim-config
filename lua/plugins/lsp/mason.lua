@@ -24,8 +24,5 @@ require('mason-tool-installer').setup({
 
     -- LINTERS
     'shellcheck',
-
-    -- COMPILERS
-    'tree-sitter-cli',
   },
 })

@@ -118,7 +118,7 @@ Or if you want, open Neovim and wait that all plugins get installed.
 
 ### Install dependencies with mason.nvim
 
-Run the following command to install lsp-servers, formatters and the `tree-sitter-cli`:
+Run the following command to install lsp-servers, formatters and linters:
 
 ```sh
 nvim --headless -c "autocmd User MasonToolsUpdateCompleted quitall" -c "MasonToolsInstall"
