@@ -65,6 +65,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - markdown_inline
   - scss
   - typescript
+  - tsx
   - vim
   - yaml
 
