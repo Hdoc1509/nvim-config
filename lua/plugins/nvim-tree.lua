@@ -1,4 +1,5 @@
 local config = function()
+  local icons = require('icons')
   local nmap = require('utils').nmap
   local api = require('nvim-tree.api')
 
@@ -33,11 +34,20 @@ local config = function()
         quit_on_open = true,
       },
     },
+    diagnostics = {
+      enable = true,
+      icons = {
+        hint = icons.diagnostics.Hint,
+        info = icons.diagnostics.Info,
+        warning = icons.diagnostics.Warn,
+        error = icons.diagnostics.Error,
+      },
+    },
     renderer = {
       add_trailing = true,
       icons = {
         glyphs = {
-          git = require('icons').git,
+          git = icons.git,
         },
       },
     },
