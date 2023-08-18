@@ -23,6 +23,7 @@ local config = function()
         IndentBlanklineChar = { fg = '#777777', gui = 'nocombine' },
         IndentBlanklineContextChar = { fg = '#777777', gui = 'nocombine' },
         VirtColumn = { fg = '#34C6FF' },
+        MatchParen = { bg = '#3a3a3a' }
       },
     },
   })
