@@ -21,6 +21,7 @@ return {
   'itchyny/lightline.vim',
   dependencies = {
     'tpope/vim-fugitive',
+    'Exafunction/codeium.vim',
   },
   config = function()
     -- stylua: ignore start
