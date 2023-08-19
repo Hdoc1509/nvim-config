@@ -199,7 +199,7 @@ Used mapleader is `space key`.
 | `<C-a>`       | Insert          | Insert codeium suggestion                            |
 | `<C-n>`       | Insert          | Next codeium suggestion                              |
 | `<C-p>`       | Insert          | Previous codeium suggestion                          |
-| `<C-q>`       | Insert          | Clear/Canel codeium suggestion                       |
+| `<C-q>`       | Insert          | Clear/Cancel codeium suggestion                      |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`                |
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`               |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`                |
