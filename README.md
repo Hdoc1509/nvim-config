@@ -191,8 +191,8 @@ Used mapleader is `space key`.
 | `<Leader>f`   | Normal          | Format current file                                  |
 | `<Leader>F`   | Normal          | Format and save current file                         |
 | `H`           | Normal          | Preview folded lines                                 |
-| `<Leader>o`   | Normal          | Add blanklines below current line                    |
-| `<Leader>O`   | Normal          | Add blanklines above current line                    |
+| `<Leader>o`   | Normal [N]      | Add blanklines below current line                    |
+| `<Leader>O`   | Normal [N]      | Add blanklines above current line                    |
 | `]c`          | Normal          | Jump to next git hunk                                |
 | `[c`          | Normal          | Jump to previous git hunk                            |
 | `<Leader>hp`  | Normal          | Preview git hunk                                     |
@@ -204,7 +204,9 @@ Used mapleader is `space key`.
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`               |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`                |
 
-**(\*): Mappings those show a notify window.**
+**(\*): Mappings that show a notify window.**
+
+**[N]: Mappings that can receive a count.**
 
 ### Markdown mappings
 
