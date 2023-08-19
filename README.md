@@ -193,9 +193,9 @@ Used mapleader is `space key`.
 | `H`           | Normal          | Preview folded lines                                 |
 | `<Leader>o`   | Normal          | Add blanklines below current line                    |
 | `<Leader>O`   | Normal          | Add blanklines above current line                    |
-| `]c`          | Normal          | Jump to next hunk                                    |
-| `[c`          | Normal          | Jump to previous hunk                                |
-| `<Leader>hp`  | Normal          | Preview hunk                                         |
+| `]c`          | Normal          | Jump to next git hunk                                |
+| `[c`          | Normal          | Jump to previous git hunk                            |
+| `<Leader>hp`  | Normal          | Preview git hunk                                     |
 | `<C-a>`       | Insert          | Insert codeium suggestion                            |
 | `<C-n>`       | Insert          | Next codeium suggestion                              |
 | `<C-p>`       | Insert          | Previous codeium suggestion                          |
