@@ -175,11 +175,6 @@ Used mapleader is `space key`.
 | `<Leader>e`   | Normal          | Search files with `fzf`                              |
 | `]t`          | Normal          | Jump to next TODO comment                            |
 | `[t`          | Normal          | Jump to previous TODO comment                        |
-| `<Leader>pc`  | Normal          | Execute `PlugClean`                                  |
-| `<Leader>pi`  | Normal          | Execute `PlugInstall`                                |
-| `<Leader>ps`  | Normal          | Execute `PlugStatus`                                 |
-| `<Leader>pud` | Normal          | Execute `PlugUpdate`                                 |
-| `<Leader>pug` | Normal          | Execute `PlugUpgrade`                                |
 | `gx`          | Normal          | Open URL under cursor with browser in `g:browser`    |
 | `<Leader>/`   | Normal          | Clear search highlighting                            |
 | `<Leader>rr`  | Normal          | Run HTTP request under the cursor                    |
