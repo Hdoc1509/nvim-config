@@ -1,0 +1,13 @@
+# logic taken from:
+# https://github.com/Exafunction/codeium.vim/blob/main/autoload/codeium/command.vim#L47
+POST https://api.codeium.com/register_user/
+Content-Type: application/json
+
+{
+  "firebase_id_token": "YOUR_API_KEY"
+}
+
+# YOUR_API_KEY will come from opened browser by `:Codeium Auth`
+# Run the request above, from response retrieve 'api_key' save it to
+# `~/.config/.codeium/config.json`
+# { "apiKey": "API_KEY_FROM_RESPONSE" }

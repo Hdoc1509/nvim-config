@@ -37,6 +37,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Easily install packages with [`mason.nvim`](https://github.com/williamboman/mason.nvim) and [`mason-tool-installer`](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 - Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
+- A.I. powered code-completion with [`codeium.vim`](https://github.com/Exafunction/codeium.vim)
 - LSP Servers:
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
@@ -196,6 +197,10 @@ Used mapleader is `space key`.
 | `]c`          | Normal          | Jump to next hunk                                    |
 | `[c`          | Normal          | Jump to previous hunk                                |
 | `<Leader>hp`  | Normal          | Preview hunk                                         |
+| `<C-a>`       | Insert          | Insert codeium suggestion                            |
+| `<C-n>`       | Insert          | Next codeium suggestion                              |
+| `<C-p>`       | Insert          | Previous codeium suggestion                          |
+| `<C-q>`       | Insert          | Clear/Canel codeium suggestion                       |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`                |
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`               |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`                |
@@ -282,6 +287,8 @@ server name inside table list of servers in `lua/plugins/lsp/servers.lua`.
       "MACHINE"
     )
     ```
+- If you have problems for enter your api-key to `:Codeium Auth` command, follow
+  instructions in [`codeium-auth.http`](codeium-auth.http).
 
 ## My other software configurations
 
