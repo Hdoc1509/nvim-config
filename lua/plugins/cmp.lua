@@ -63,6 +63,18 @@ local config = function()
         end,
       }),
     },
+    enabled = function()
+      -- disable completion in comments
+      -- See https://github.com/hrsh7th/nvim-cmp/pull/676#issuecomment-1002532096
+      if
+        require('cmp.config.context').in_treesitter_capture('comment') == true
+        or require('cmp.config.context').in_syntax_group('Comment')
+      then
+        return false
+      else
+        return true
+      end
+    end,
   })
 end
 
