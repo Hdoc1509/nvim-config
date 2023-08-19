@@ -6,11 +6,9 @@ vim.g.lightline = {
       { 'gitbranch', 'readonly', 'filename', 'codeium' },
     },
   },
-  component = {
-    filename = '%t %M',
-  },
   component_function = {
     codeium = 'LightlineCodeium',
+    filename = 'LightlineFilename',
     gitbranch = 'FugitiveHead',
     readonly = 'LightlineReadonly',
   },
@@ -28,6 +26,12 @@ return {
     vim.api.nvim_exec2([[
       function! LightlineCodeium()
         return ' ' .. codeium#GetStatusString()
+      endfunction
+
+      function! LightlineFilename()
+        let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
+        let modified = &modified ? ' +' : ''
+        return filename . modified
       endfunction
 
       function! LightlineReadonly()
