@@ -19,4 +19,5 @@ return {
     imap_expr('<C-q>', function() return vim.fn['codeium#Clear']() end)
     -- stylua: ignore end
   end,
+  event = 'BufEnter',
 }
