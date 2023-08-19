@@ -72,11 +72,6 @@ keymap('c', 'vh', 'vertical help', { desc = 'Open help in vertical split' })
 -- Help in new tab
 keymap('c', 'th', 'tab help', { desc = 'Open help in new tab' })
 
-nmap('<Leader>sv', function()
-  vim.cmd('source $MYVIMRC')
-  vim.notify('Neovim config succesfully reloaded!', 'info')
-end)
-
 -- Copy to clipboard all text
 nmap('<Leader>ya', '<cmd>%yank<CR>')
 

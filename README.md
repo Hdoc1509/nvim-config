@@ -155,7 +155,6 @@ Used mapleader is `space key`.
 | `<Leader>K`   | Normal          | Scroll up 20 lines                                   |
 | `<Leader>>`   | Normal          | Resize current split 10 pixels to left               |
 | `<Leader><`   | Normal          | Resize current split 10 pixels to right              |
-| `<Leader>sv`  | Normal (\*)     | Source `$MYVIMRC` file                               |
 | `<Leader>chh` | Normal          | Run `:checkhealth`                                   |
 | `<C-h>`       | Normal          | Jump to left split                                   |
 | `<C-j>`       | Normal          | Jump to bottom split                                 |
