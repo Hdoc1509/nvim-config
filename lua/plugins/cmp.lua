@@ -44,6 +44,8 @@ local config = function()
       ['<C-s>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
+      ['<C-n>'] = cmp.config.disable,
+      ['<C-p>'] = cmp.config.disable,
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
