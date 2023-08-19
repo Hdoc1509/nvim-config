@@ -6,6 +6,7 @@ vim.g.vsnip_filetypes = {
 
 local config = function()
   local cmp = require('cmp')
+  local cmp_context = require('cmp.config.context')
   local lspkind = require('lspkind')
   local cmp_window_bordered = cmp.config.window.bordered()
 
@@ -67,10 +68,7 @@ local config = function()
     enabled = function()
       -- disable completion in comments
       -- See https://github.com/hrsh7th/nvim-cmp/pull/676#issuecomment-1002532096
-      if
-        require('cmp.config.context').in_treesitter_capture('comment') == true
-        or require('cmp.config.context').in_syntax_group('Comment')
-      then
+      if cmp_context.in_treesitter_capture('comment') == true or cmp_context.in_syntax_group('Comment') then
         return false
       else
         return true
