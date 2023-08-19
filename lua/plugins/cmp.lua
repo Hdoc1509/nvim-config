@@ -1,6 +1,7 @@
 vim.g.vsnip_filetypes = {
   typescript = { 'javascript' },
   typescriptreact = { 'javascript' },
+  text = { 'license' },
 }
 
 local config = function()
