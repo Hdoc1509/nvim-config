@@ -3,10 +3,17 @@ vim.g.lightline = {
   active = {
     left = {
       { 'mode', 'paste' },
-      { 'gitbranch', 'readonly', 'filename', 'modified' },
+      { 'gitbranch', 'readonly', 'filename', 'codeium' },
     },
   },
-  component_function = { gitbranch = 'FugitiveHead' },
+  component = {
+    filename = '%t %M',
+  },
+  component_function = {
+    codeium = 'LightlineCodeium',
+    gitbranch = 'FugitiveHead',
+    readonly = 'LightlineReadonly',
+  },
   enable = { tabline = 0 },
 }
 
@@ -15,4 +22,17 @@ return {
   dependencies = {
     'tpope/vim-fugitive',
   },
+  config = function()
+    -- stylua: ignore start
+    vim.api.nvim_exec2([[
+      function! LightlineCodeium()
+        return ' ' .. codeium#GetStatusString()
+      endfunction
+
+      function! LightlineReadonly()
+        return &readonly && &filetype !=# 'help' ? '' : ''
+      endfunction
+    ]], {})
+    -- stylua: ignore end
+  end,
 }
