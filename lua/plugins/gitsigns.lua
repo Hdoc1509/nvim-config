@@ -12,7 +12,10 @@ local config = function()
 
       buf_nmap(']c', gitsigns.next_hunk, { desc = 'Jump to next hunk' })
       buf_nmap('[c', gitsigns.prev_hunk, { desc = 'Jump to previous hunk' })
-      buf_nmap('<Leader>hp', gitsigns.preview_hunk)
+      buf_nmap('<Leader>hp', gitsigns.preview_hunk, { desc = 'Preview hunk' })
+      buf_nmap('<Leader>hs', gitsigns.stage_hunk, { desc = 'Stage hunk' })
+      buf_nmap('<Leader>hS', gitsigns.stage_buffer, { desc = 'Stage buffer' })
+      buf_nmap('<Leader>hu', gitsigns.undo_stage_hunk, { desc = 'Undo stage hunk' })
     end,
   })
 end
