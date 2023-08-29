@@ -21,8 +21,5 @@ require('mason-tool-installer').setup({
     'shfmt',
     'stylua',
     'prettier',
-
-    -- LINTERS
-    'shellcheck',
   },
 })
