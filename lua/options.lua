@@ -44,4 +44,7 @@ set.foldlevelstart = 99
 set.foldenable = true
 set.fillchars = 'foldopen:,foldclose:'
 
+set.spelllang = 'en_us'
+set.spellsuggest = 'best,9'
+
 vim.cmd([[if has('win32') | set shell=cmd | endif]])

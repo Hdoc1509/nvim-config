@@ -3,8 +3,11 @@ vim.g.lightline = {
   active = {
     left = {
       { 'mode', 'paste' },
-      { 'gitbranch', 'readonly', 'filename', 'codeium' },
+      { 'gitbranch', 'readonly', 'filename', 'codeium', 'spell' },
     },
+  },
+  component = {
+    spell = '%{&spell ? "SPELL " .. &spelllang : ""}',
   },
   component_function = {
     codeium = 'LightlineCodeium',

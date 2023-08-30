@@ -81,6 +81,9 @@ nmap('<Leader>o', "printf('m`%so<ESC>``', v:count1)", { expr = true })
 -- Add blankline above current line
 nmap('<Leader>O', "printf('m`%sO<ESC>``', v:count1)", { expr = true })
 
+-- Toggle spell check
+keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<CR>', { desc = 'Toggle spell check', silent = false })
+
 nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
 nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
 nmap('<Leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
