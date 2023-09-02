@@ -1,8 +1,8 @@
 local config = function()
+  local nmap = require('utils').nmap
+
   -- Use these options if fzf options are not set by user shell
   if not vim.fn.empty(vim.env.FZF_DEFAULT_COMMAND) then
-    local nmap = require('utils').nmap
-
     vim.cmd([[
     let exclude = {
       \ 'dir' : ['dist', 'node_modules', '.git'],
@@ -18,9 +18,9 @@ local config = function()
 
     vim.env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --no-ignore --exclude={'" .. vim.g.fzf_exclude .. "'}"
     vim.env.FZF_DEFAULT_OPTS = '--layout=reverse'
-
-    nmap('<Leader>e', '<cmd>FZF<CR>')
   end
+
+  nmap('<Leader>e', '<cmd>FZF<CR>')
 end
 
 return {
