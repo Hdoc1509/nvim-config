@@ -34,7 +34,6 @@ return {
   }),
   ['cssls'] = default_settings,
   ['emmet_ls'] = merge(default_settings, {
-    filetypes = { 'markdown' },
     root_dir = function()
       return vim.loop.cwd()
     end,
