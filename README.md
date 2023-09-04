@@ -99,6 +99,12 @@ Clone repository in neovim config path.
 git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git ~/.config/nvim
 ```
 
+Or start a new repo with [`tiged`](https://github.com/tiged/tiged):
+
+```sh
+tiged Hdoc1509/nvim-config ~/.config/nvim
+```
+
 **IF YOU ARE A WINDOWS USER,** set the environment variable `XDG_CONFIG_HOME`
 with `cmd`:
 
