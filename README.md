@@ -298,7 +298,6 @@ server name inside table list of servers in `lua/plugins/lsp/servers.lua`.
 - If you have problems for enter your api-key to `:Codeium Auth` command, follow
   instructions in [`codeium-auth.http`](codeium-auth.http).
 
-## My other software configurations
+## My dotfiles
 
-- [git-bash-config](https://github.com/Hdoc1509/git-bash-config)
-- [wezterm-config](https://github.com/Hdoc1509/wezterm-config)
+[My dotfiles](https://github.com/Hdoc1509/dotfiles)
