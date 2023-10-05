@@ -48,6 +48,7 @@ return function(client, bufnr)
     end,
   })
 
+  -- From: https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#highlight-symbol-under-cursor
   if client.server_capabilities.documentHighlightProvider then
     vim.cmd([[
       hi! link LspReferenceRead Visual
@@ -55,15 +56,18 @@ return function(client, bufnr)
       hi! link LspReferenceWrite Visual
     ]])
 
-    local gid = api.nvim_create_augroup('lsp_document_highlight', { clear = true })
-    api.nvim_create_autocmd('CursorHold', {
-      group = gid,
+    vim.api.nvim_create_augroup('lsp_document_highlight', { clear = false })
+    vim.api.nvim_clear_autocmds({
+      buffer = bufnr,
+      group = 'lsp_document_highlight',
+    })
+    vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+      group = 'lsp_document_highlight',
       buffer = bufnr,
       callback = vim.lsp.buf.document_highlight,
     })
-
-    api.nvim_create_autocmd('CursorMoved', {
-      group = gid,
+    vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+      group = 'lsp_document_highlight',
       buffer = bufnr,
       callback = vim.lsp.buf.clear_references,
     })
