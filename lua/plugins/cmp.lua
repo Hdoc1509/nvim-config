@@ -53,16 +53,13 @@ local config = function()
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
       { name = 'nvim_lsp_signature_help' },
-    }, {
+      { name = 'path' },
       { name = 'buffer' },
     }),
     formatting = {
       format = lspkind.cmp_format({
         mode = 'symbol_text',
         maxwidth = 50,
-        before = function(_, vim_item)
-          return vim_item
-        end,
       }),
     },
     enabled = function()
@@ -74,6 +71,21 @@ local config = function()
         return true
       end
     end,
+  })
+
+  cmp.setup.cmdline({ '/', '?' }, {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = 'buffer' },
+    },
+  })
+
+  cmp.setup.cmdline(':', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'path' },
+      { name = 'cmdline' },
+    })
   })
 end
 
