@@ -148,7 +148,9 @@ Used mapleader is `space key`.
 | `<Leader>tq`  | Normal          | Close current tab                                 |
 | `<Leader>to`  | Normal          | Close all other tabs                              |
 | `<Leader>th`  | Normal          | Move tab to left                                  |
+| `<Leader>tH`  | Normal          | Move tab to first position                        |
 | `<Leader>tl`  | Normal          | Move tab to right                                 |
+| `<Leader>tL`  | Normal          | Move tab to last position                         |
 | `<Leader>tj`  | Normal          | Go to previous tab                                |
 | `<Leader>tJ`  | Normal          | Go to first tab                                   |
 | `<Leader>tk`  | Normal          | Go to next tab                                    |

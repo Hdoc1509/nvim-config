@@ -12,7 +12,9 @@ nmap('<Leader>Q', '<cmd>quitall!<CR>', { desc = 'Close Neovim' })
 nmap('<Leader>tq', '<cmd>tabclose<CR>', { desc = 'Close tab' })
 nmap('<Leader>to', '<cmd>tabonly<CR>', { desc = 'Close all other tabs' })
 nmap('<Leader>th', '<cmd>tabmove -1<CR>', { desc = 'Move tab to left' })
+nmap('<Leader>tH', '<cmd>tabmove 0<CR>', { desc = 'Move tab to first position' })
 nmap('<Leader>tl', '<cmd>tabmove +1<CR>', { desc = 'Move tab to right' })
+nmap('<Leader>tL', '<cmd>tabmove $<CR>', { desc = 'Move tab to last position' })
 
 -- Navigate trough tabs
 nmap('<Leader>tj', '<cmd>tabprevious<CR>', { desc = 'Jump to previous tab' })
