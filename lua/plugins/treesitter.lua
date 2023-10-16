@@ -42,4 +42,5 @@ return {
     'windwp/nvim-ts-autotag',
   },
   config = config,
+  event = { 'BufReadPre', 'BufNewFile' },
 }
