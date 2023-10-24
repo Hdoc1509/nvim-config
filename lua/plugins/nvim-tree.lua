@@ -68,7 +68,18 @@ end
 return {
   'nvim-tree/nvim-tree.lua',
   dependencies = {
-    'nvim-tree/nvim-web-devicons',
+    {
+      'nvim-tree/nvim-web-devicons',
+      opts = {
+        override_by_extension = {
+          ['http'] = {
+            icon = '󰖟',
+            color = '#228be6',
+            name = 'Http',
+          },
+        },
+      },
+    },
   },
   config = config,
 }
