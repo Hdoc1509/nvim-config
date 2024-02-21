@@ -1,7 +1,7 @@
 local config = function()
   local theme = {
-    fill = { fg = '#000000', bg = 'NONE' },
-    current_tab = { fg = '#000000', bg = '#777777' },
+    fill = 'TabLineFill',
+    current_tab = 'TabLineSel',
     tab = 'TabLine',
     win = 'TabLine',
   }
