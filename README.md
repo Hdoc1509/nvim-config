@@ -39,21 +39,23 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
 - A.I. powered code-completion with [`codeium.vim`](https://github.com/Exafunction/codeium.vim)
 - LSP Servers:
+  - [`astro`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
-  - [`eslint`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint)
   - [`emmet_ls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#emmet_ls)
+  - [`eslint`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#eslint)
   - [`html`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#html)
   - [`jsonls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#jsonls)
-  - [`marksman`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman)
   - [`lua_ls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls)
+  - [`marksman`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman)
   - [`tsserver`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver)
   - [`vimls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls)
   - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
 - Treesitter parsers:
+  - astro
+  - bash
   - c (required)
   - cpp (required)
-  - bash
   - css
   - gitignore
   - html
@@ -65,8 +67,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - markdown
   - markdown_inline
   - scss
-  - typescript
   - tsx
+  - typescript
   - vim
   - yaml
 

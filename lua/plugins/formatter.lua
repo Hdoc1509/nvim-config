@@ -5,6 +5,7 @@ local config = function()
 
   require('formatter').setup({
     filetype = {
+      astro = { prettier },
       css = { prettier('css') },
       html = { prettier('html') },
       javascript = { prettier },

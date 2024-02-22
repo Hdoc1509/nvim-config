@@ -26,6 +26,7 @@ local default_settings = {
 }
 
 return {
+  ['astro'] = default_settings,
   ['bashls'] = merge(default_settings, {
     filetypes = {
       'sh',
