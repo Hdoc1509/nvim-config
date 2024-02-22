@@ -270,37 +270,45 @@ server name inside table list of servers in `lua/plugins/lsp/servers.lua`.
 
 ## Troubleshooting
 
-- If you are a Windows user and have problems to install `treesitter` parser,
-  install `zig` and retry to install.
-- If you are a Windows user and have problems to use `rest.nvim` because of
-  `curl --compressed` option, you need to prepend the path of the `curl` binary
-  that comes bundled with `git-for-windows` to your system `PATH`.
+### Fail to install treesitter parser
 
-  Run the following commands with `powershell` as admin:
+If you are a Windows user and have problems to install `treesitter` parser,
+install `zig` and retry to install.
 
-  - `Git 64-bit` version:
+### Fail to use `rest.nvim`
 
-    ```powershell
-    $GIT_PATH = "C:\Program Files\Git\mingw64\bin"
-    ```
+If you are a Windows user and have problems to use `rest.nvim` because of
+`curl --compressed` option, you need to prepend the path of the `curl` binary
+that comes bundled with `git-for-windows` to your system `PATH`.
 
-  - `Git 32-bit` version:
+Run the following commands with `powershell` as admin:
 
-    ```powershell
-    $GIT_PATH = "C:\Program Files (x86)\Git\mingw64\bin"
-    ```
+- `Git 64-bit` version:
 
-  - Finally, run:
-    ```powershell
-    [Environment]::SetEnvironmentVariable(
-      "Path",
-      "$GIT_PATH;" + [Environment]::GetEnvironmentVariable("PATH", "MACHINE"),
-      "MACHINE"
-    )
-    ```
+  ```powershell
+  $GIT_PATH = "C:\Program Files\Git\mingw64\bin"
+  ```
 
-- If you have problems for enter your api-key to `:Codeium Auth` command, follow
-  instructions in [`codeium-auth.http`](codeium-auth.http).
+- `Git 32-bit` version:
+
+  ```powershell
+  $GIT_PATH = "C:\Program Files (x86)\Git\mingw64\bin"
+  ```
+
+- Finally, run:
+
+  ```powershell
+  [Environment]::SetEnvironmentVariable(
+    "Path",
+    "$GIT_PATH;" + [Environment]::GetEnvironmentVariable("PATH", "MACHINE"),
+    "MACHINE"
+  )
+  ```
+
+### Fail to use `:Codeium Auth`
+
+If you have problems for enter your api-key to `:Codeium Auth` command, follow
+instructions in [`codeium-auth.http`](codeium-auth.http).
 
 ## My dotfiles
 
