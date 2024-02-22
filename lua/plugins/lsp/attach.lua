@@ -4,6 +4,7 @@ local merge = utils.merge
 
 local api = vim.api
 local diagnostic = vim.diagnostic
+local lsp_buf = vim.lsp.buf
 
 return function(client, bufnr)
   local buf_nmap = function(lhs, rhs, opts)
@@ -12,15 +13,15 @@ return function(client, bufnr)
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_nmap('gd', function()
-    vim.lsp.buf.definition({ reuse_win = true })
+    lsp_buf.definition({ reuse_win = true })
   end)
-  buf_nmap('<Leader>ds', vim.lsp.buf.document_symbol)
-  buf_nmap('J', vim.lsp.buf.signature_help)
-  buf_nmap('K', vim.lsp.buf.hover)
-  buf_nmap('<space>D', vim.lsp.buf.type_definition)
-  buf_nmap('<space>rn', vim.lsp.buf.rename)
-  buf_nmap('<space>ca', vim.lsp.buf.code_action)
-  buf_nmap('gr', vim.lsp.buf.references)
+  buf_nmap('<Leader>ds', lsp_buf.document_symbol)
+  buf_nmap('J', lsp_buf.signature_help)
+  buf_nmap('K', lsp_buf.hover)
+  buf_nmap('<space>D', lsp_buf.type_definition)
+  buf_nmap('<space>rn', lsp_buf.rename)
+  buf_nmap('<space>ca', lsp_buf.code_action)
+  buf_nmap('gr', lsp_buf.references)
 
   -- Show inline diagnostic automatically in Hover Window
   api.nvim_create_autocmd('CursorHold', {
@@ -66,12 +67,12 @@ return function(client, bufnr)
     vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
       group = 'lsp_document_highlight',
       buffer = bufnr,
-      callback = vim.lsp.buf.document_highlight,
+      callback = lsp_buf.document_highlight,
     })
     vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
       group = 'lsp_document_highlight',
       buffer = bufnr,
-      callback = vim.lsp.buf.clear_references,
+      callback = lsp_buf.clear_references,
     })
   end
 end
