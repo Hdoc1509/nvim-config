@@ -1,24 +1,7 @@
 local config = function()
-  local icons = require('icons')
   local nmap = require('utils').nmap
-  local api = require('nvim-tree.api')
-
-  local open_tab_silent = function(node)
-    api.node.open.tab(node)
-    vim.cmd('tabprev | NvimTreeOpen')
-  end
-
-  ---@type function
-  local open_drop = api.node.open.drop
-
-  local on_attach = function(bufnr)
-    api.config.mappings.default_on_attach(bufnr)
-
-    nmap('h', api.node.navigate.parent_close, { desc = 'Close directory', buffer = bufnr })
-    nmap('l', open_drop, { desc = 'Open', buffer = bufnr })
-    nmap('T', open_tab_silent, { desc = 'Open in tab silent', buffer = bufnr })
-    nmap('<CR>', open_drop, { desc = 'Open', buffer = bufnr })
-  end
+  local icons = require('icons')
+  local attach = require('plugins.nvim-tree.attach')
 
   require('nvim-tree').setup({
     filters = {
@@ -58,7 +41,7 @@ local config = function()
     git = {
       ignore = false,
     },
-    on_attach = on_attach,
+    on_attach = attach,
   })
 
   nmap('<F1>', '<cmd>NvimTreeFindFileToggle<CR>')
