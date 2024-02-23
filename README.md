@@ -310,6 +310,13 @@ Run the following commands with `powershell` as admin:
 If you have problems for enter your api-key to `:Codeium Auth` command, follow
 instructions in [`codeium-auth.http`](codeium-auth.http).
 
+### Fail to use with `astro` files
+
+If you have problems to use `astro` files, follow instructions in:
+
+- [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
+- [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
+
 ## My dotfiles
 
 [My dotfiles](https://github.com/Hdoc1509/dotfiles)
