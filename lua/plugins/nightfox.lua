@@ -20,6 +20,7 @@ local config = function()
       all = {
         Cursor = { bg = '#34C6FF' },
         NvimTreeNormal = { bg = '#030303' },
+        NvimTreeExecFile = { fg = '#ffffff', gui = 'nocombine' },
         IndentBlanklineChar = { fg = '#777777', gui = 'nocombine' },
         IndentBlanklineContextChar = { fg = '#777777', gui = 'nocombine' },
         VirtColumn = { fg = '#34C6FF' },
