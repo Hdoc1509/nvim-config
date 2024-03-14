@@ -33,6 +33,7 @@ local config = function()
           git = icons.git,
         },
       },
+      group_empty = true,
     },
     view = {
       number = true,
