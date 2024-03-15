@@ -210,6 +210,8 @@ Used mapleader is `space key`.
 | `<C-p>`       | Insert          | Previous codeium suggestion                       |
 | `<C-q>`       | Insert          | Clear/Cancel codeium suggestion                   |
 | `<F3>`        | Insert / Normal | Toggle spell checking                             |
+| `<Leader>r`   | Visual          | Replace selected text in current line             |
+| `<Leader>R`   | Visual          | Replace selected text in current file             |
 | `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`             |
 | `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`            |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`             |

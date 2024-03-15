@@ -89,3 +89,7 @@ keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<CR>', { desc = 'Toggle spell check
 nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
 nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
 nmap('<Leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
+
+-- Rplace all matches of selected text
+keymap('x', '<Leader>r', 'y:s/<C-R>0/replace/g<Left><Left><C-W>', { desc = 'Replace selected text in current line' })
+keymap('x', '<Leader>R', 'y:%s/<C-R>0/replace/g<Left><Left><C-W>', { desc = 'Replace selected text in current file' })
