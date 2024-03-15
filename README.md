@@ -235,7 +235,7 @@ This configuration use some custom global variables:
 
 - **g:browser**: Binary name of your favorite browser. Default to `firefox`.
 
-You can add or change these global variables in `lua/globals.lua`.
+You can add or change these global variables in [`lua/globals.lua`](./lua/globals.lua).
 
 ## Git integration
 
@@ -253,23 +253,24 @@ git config --global core.editor "nvim -u ~/.config/nvim/minimal.lua"
 If you want to integrate your older configuration or want to extend this
 configuration, follow next indications:
 
-- Custom global variables and Mapleader must be in `lua/globals.lua`.
-- General options must be placed in `lua/options.lua`.
-- Custom autocommands must be setted in `lua/autocmds.lua`.
-- Plugins configurations must be added inside `lua/plugins` folder (can be a
-  `*.lua` file or a folder with an `init.lua` file). Config files of plugins will
-  be loaded automatically by `lazy.nvim`.
-- Mappings must be setted in `lua/maps.lua`.
-- Settings about diagnostic are in `lua/diagnostic.lua`.
-- Custom icons must be declared in `lua/icons.lua`
-- Options related to colorschemes and custom GUI highlighting goes in `lua/plugins/nightfox.lua`.
-- Options for Neovim GUI's are in `ginit.vim`.
-- Util functions must be placed in `lua/utils.lua`.
+- Custom global variables and Mapleader must be in [`lua/globals.lua`](./lua/globals.lua).
+- General options must be placed in [`lua/options.lua`](./lua/options.lua).
+- Custom autocommands must be setted in [`lua/autocmds.lua`](./lua/autocmds.lua).
+- Plugins configurations must be added inside [`lua/plugins`](./lua/plugins)
+  folder (can be a `*.lua` file or a folder with an `init.lua` file). Config
+  files of plugins will be loaded automatically by `lazy.nvim`.
+- Mappings must be setted in [`lua/maps.lua`](./lua/maps.lua).
+- Settings about diagnostic are in [`lua/diagnostic.lua`](./lua/diagnostic.lua).
+- Custom icons must be declared in [`lua/icons.lua`](./lua/icons.lua).
+- Options related to colorschemes and custom GUI highlighting goes in
+  [`lua/plugins/nightfox.lua`](./lua/plugins/nightfox.lua).
+- Options for Neovim GUI's are in [`ginit.vim`](./ginit.vim).
+- Util functions must be placed in [`lua/utils.lua`](./lua/utils.lua).
 
 If you want to integrate more LSP servers, see the list of all [available LSP
 servers](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md).
 Once you have all software requirements for desired LSP server, just add its
-server name inside table list of servers in `lua/plugins/lsp/servers.lua`.
+server name inside table list of servers in [`lua/plugins/lsp/servers.lua`](./lua/plugins/lsp/servers).
 
 ## Troubleshooting
 
