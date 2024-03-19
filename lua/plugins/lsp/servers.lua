@@ -1,5 +1,6 @@
 local merge = require('utils').merge
 local lsp_attach = require('plugins.lsp.attach')
+local schema_store = require('schemastore')
 
 local lsp = vim.lsp
 
@@ -44,7 +45,7 @@ return {
   ['jsonls'] = merge(default_settings, {
     settings = {
       json = {
-        schemas = require('schemastore').json.schemas({
+        schemas = schema_store.json.schemas({
           select = { '.eslintrc', 'package.json', 'tsconfig.json' },
           replace = {
             ['tsconfig.json'] = {
@@ -72,7 +73,7 @@ return {
   ['yamlls'] = merge(default_settings, {
     settings = {
       yaml = {
-        schemas = require('schemastore').yaml.schemas({
+        schemas = schema_store.yaml.schemas({
           select = { 'GitHub Workflow' },
         }),
       },
