@@ -6,7 +6,11 @@ local api = vim.api
 local diagnostic = vim.diagnostic
 local lsp_buf = vim.lsp.buf
 
-return function(client, bufnr)
+-- LspAttach from :https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#suggested-configuration
+local attach = function(ev)
+  local bufnr = ev.buf
+  local client = vim.lsp.get_client_by_id(ev.data.client_id)
+
   local buf_nmap = function(lhs, rhs, opts)
     nmap(lhs, rhs, merge({ buffer = bufnr }, opts or {}))
   end
@@ -76,3 +80,12 @@ return function(client, bufnr)
     })
   end
 end
+
+return {
+  setup = function()
+    vim.api.nvim_create_autocmd('LspAttach', {
+      group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+      callback = attach,
+    })
+  end,
+}

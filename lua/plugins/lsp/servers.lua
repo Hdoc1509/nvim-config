@@ -1,5 +1,4 @@
 local merge = require('utils').merge
-local lsp_attach = require('plugins.lsp.attach')
 local schema_store = require('schemastore')
 
 local lsp = vim.lsp
@@ -21,7 +20,6 @@ capabilities.textDocument.foldingRange = {
 
 -- LSP GENERAL SETTINGS
 local default_settings = {
-  on_attach = lsp_attach,
   capabilities = capabilities,
   handlers = handlers,
 }
