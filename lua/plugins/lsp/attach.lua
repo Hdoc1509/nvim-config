@@ -1,4 +1,5 @@
 local utils = require('utils')
+local autocmd = utils.autocmd
 local nmap = utils.nmap
 local merge = utils.merge
 
@@ -28,7 +29,7 @@ local attach = function(ev)
   buf_nmap('gr', lsp_buf.references)
 
   -- Show inline diagnostic automatically in Hover Window
-  api.nvim_create_autocmd('CursorHold', {
+  autocmd('CursorHold', {
     buffer = bufnr,
     callback = function()
       local float_opts = {
@@ -68,12 +69,12 @@ local attach = function(ev)
       buffer = bufnr,
       group = 'lsp_document_highlight',
     })
-    vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+    autocmd({ 'CursorHold', 'CursorHoldI' }, {
       group = 'lsp_document_highlight',
       buffer = bufnr,
       callback = lsp_buf.document_highlight,
     })
-    vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+    autocmd({ 'CursorMoved', 'CursorMovedI' }, {
       group = 'lsp_document_highlight',
       buffer = bufnr,
       callback = lsp_buf.clear_references,
@@ -83,7 +84,7 @@ end
 
 return {
   setup = function()
-    vim.api.nvim_create_autocmd('LspAttach', {
+    autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
       callback = attach,
     })
