@@ -28,10 +28,6 @@ local config = function()
     highlight = { enable = true },
     indent = { enable = true },
     autotag = { enable = true }, -- nvim-ts-autotag
-    context_commentstring = { -- nvim-ts-context-commentstring
-      enable = true,
-      enable_autocmd = false,
-    },
   })
 end
 
@@ -39,7 +35,14 @@ return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   dependencies = {
-    'JoosepAlviste/nvim-ts-context-commentstring',
+    {
+      'JoosepAlviste/nvim-ts-context-commentstring',
+      config = function()
+        require('ts_context_commentstring').setup({
+          enable_autocmd = false,
+        })
+      end,
+    },
     'windwp/nvim-ts-autotag',
   },
   config = config,
