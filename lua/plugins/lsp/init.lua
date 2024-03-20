@@ -1,9 +1,8 @@
 local config = function()
   local nvim_lsp = require('lspconfig')
   local servers = require('plugins.lsp.servers')
-  local lsp_attach = require('plugins.lsp.attach')
 
-  lsp_attach.setup()
+  require('plugins.lsp.attach').setup()
 
   for server, setting in pairs(servers) do
     nvim_lsp[server].setup(setting)
