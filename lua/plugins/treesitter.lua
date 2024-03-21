@@ -22,6 +22,7 @@ local config = function()
       'typescript',
       'tsx',
       'vim',
+      'vimdoc',
       'yaml',
     },
     sync_install = true,
