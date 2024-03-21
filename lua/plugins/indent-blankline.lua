@@ -1,7 +1,11 @@
 vim.opt.list = true
-vim.opt.listchars = 'tab:│ ,trail:·'
+vim.opt.listchars = 'trail:·'
 
 return {
-  "lukas-reineke/indent-blankline.nvim",
-  config = true,
+  'lukas-reineke/indent-blankline.nvim',
+  main = 'ibl',
+  opts = {
+    indent = { char = '│' },
+    scope = { enabled = false },
+  },
 }

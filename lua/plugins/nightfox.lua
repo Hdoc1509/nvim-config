@@ -21,8 +21,6 @@ local config = function()
         Cursor = { bg = '#34C6FF' },
         NvimTreeNormal = { bg = '#030303' },
         NvimTreeExecFile = { fg = '#ffffff', gui = 'nocombine' },
-        IndentBlanklineChar = { fg = '#777777', gui = 'nocombine' },
-        IndentBlanklineContextChar = { fg = '#777777', gui = 'nocombine' },
         VirtColumn = { fg = '#34C6FF' },
         MatchParen = { bg = '#3a3a3a' },
         Whitespace = { gui = 'bold', fg = '#777777' },
