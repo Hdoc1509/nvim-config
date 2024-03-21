@@ -27,10 +27,7 @@ local default_settings = {
 return {
   ['astro'] = default_settings,
   ['bashls'] = merge(default_settings, {
-    filetypes = {
-      'sh',
-      'zsh',
-    },
+    filetypes = { 'sh', 'zsh' },
   }),
   ['cssls'] = default_settings,
   ['emmet_ls'] = merge(default_settings, {
