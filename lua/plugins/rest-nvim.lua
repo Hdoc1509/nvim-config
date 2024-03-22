@@ -16,4 +16,5 @@ return {
     'nvim-lua/plenary.nvim',
   },
   config = config,
+  ft = 'http',
 }
