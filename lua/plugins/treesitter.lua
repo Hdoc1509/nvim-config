@@ -32,6 +32,8 @@ local config = function()
   })
 
   vim.treesitter.language.register('embedded_template', 'ejs')
+  -- taken and adapted from https://phelipetls.github.io/posts/mdx-syntax-highlight-treesitter-nvim/#supporting-mdx-files
+  vim.treesitter.language.register('markdown', 'markdown.mdx')
 end
 
 return {
