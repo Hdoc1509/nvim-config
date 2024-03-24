@@ -9,6 +9,7 @@ local config = function()
       'cpp',
       'bash',
       'css',
+      'embedded_template',
       'gitignore',
       'html',
       'http',
@@ -30,6 +31,8 @@ local config = function()
     indent = { enable = true },
     autotag = { enable = true }, -- nvim-ts-autotag
   })
+
+  vim.treesitter.language.register('embedded_template', 'ejs')
 end
 
 return {
