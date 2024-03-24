@@ -26,7 +26,6 @@ local config = function()
       'vimdoc',
       'yaml',
     },
-    sync_install = true,
     highlight = { enable = true },
     indent = { enable = true },
     autotag = { enable = true }, -- nvim-ts-autotag
