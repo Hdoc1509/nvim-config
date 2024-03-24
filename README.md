@@ -55,8 +55,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Treesitter parsers:
   - astro
   - bash
-  - c (required)
-  - cpp (required)
+    <!-- - c (required) -->
+    <!-- - cpp (required) -->
   - css
   - gitignore
   - html
@@ -74,6 +74,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - yaml
 
 ## Requirements
+
+<!-- TODO: Update required neovim version based on plugins requirements -->
 
 - [Neovim >= 0.9.0](https://github.com/neovim/neovim/releases)
 - [Node.js](https://nodejs.org/en/download)
@@ -119,24 +121,7 @@ setx XDG_CONFIG_HOME %USERPROFILE%\.config
 
 Be sure that you have all [software requirements for nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#requirements).
 
-Then, run the following command for install all the plugins:
-
-```bash
-# install plugins from lazy-lock.json
-nvim --headless "+Lazy! restore" +qa
-```
-
-Or if you want, open Neovim and wait that all plugins get installed.
-
-### Install dependencies with mason.nvim
-
-Run the following command to install lsp-servers and formatters:
-
-```sh
-nvim --headless -c "autocmd User MasonToolsUpdateCompleted quitall" -c "MasonToolsInstall"
-```
-
-Or open Neovim and wait that all tools get installed.
+Then, open Neovim and wait for all plugins to be installed.
 
 ## Mappings
 
