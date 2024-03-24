@@ -5,8 +5,8 @@ local config = function()
   require('nvim-treesitter.configs').setup({
     ensure_installed = {
       'astro',
-      'c',
-      'cpp',
+      -- 'c',
+      -- 'cpp',
       'bash',
       'css',
       'embedded_template',
