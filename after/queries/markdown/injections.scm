@@ -7,3 +7,12 @@
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*export")
   (#set! injection.language "typescript"))
+
+; syntax highlighting for tsx comments
+((inline) @injection.content
+  (#lua-match? @injection.content "^%s*{/*")
+  (#set! injection.language "tsx"))
+
+; syntax highlighting for tsx components
+((html_block) @injection.content
+  (#set! injection.language "tsx"))

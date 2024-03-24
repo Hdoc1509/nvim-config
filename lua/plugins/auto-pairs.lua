@@ -29,6 +29,15 @@ local function config()
       })
     end,
   })
+
+  -- add auto-pairs for mdx
+  autocmd('FileType', {
+    pattern = 'markdown.mdx',
+    callback = function ()
+      -- pairs for comments
+      vim.cmd("let b:AutoPairs = AutoPairsDefine({'{/*':'*/}'})")
+    end
+  })
 end
 
 return {
