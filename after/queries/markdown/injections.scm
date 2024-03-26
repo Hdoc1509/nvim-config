@@ -13,6 +13,8 @@
   (#lua-match? @injection.content "^%s*{/*")
   (#set! injection.language "tsx"))
 
+
+; TODO: Enable again if it's really necessary
 ; syntax highlighting for tsx components
-((html_block) @injection.content
-  (#set! injection.language "tsx"))
+; ((html_block) @injection.content
+;   (#set! injection.language "tsx"))
