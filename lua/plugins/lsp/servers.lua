@@ -55,7 +55,7 @@ return {
     },
   }),
   ['marksman'] = default_settings,
-  ['mdx_analyzer'] = default_settings,
+  -- ['mdx_analyzer'] = default_settings,
   ['tsserver'] = default_settings,
   ['vimls'] = default_settings,
   ['yamlls'] = merge(default_settings, {
