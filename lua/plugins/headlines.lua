@@ -4,8 +4,8 @@ local config = function()
       headline_highlights = { 'Headline1', 'Headline2' },
     },
   })
-  vim.cmd([[highlight Headline1 guibg=#151b11]])
-  vim.cmd([[highlight Headline2 guibg=#161a1e]])
+  vim.cmd([[highlight link Headline1 DiffAdd]])
+  vim.cmd([[highlight link Headline2 DiffChange]])
   vim.cmd([[highlight CodeBlock guibg=#0c0c0c]])
   vim.cmd([[highlight Dash guifg=#005c95]])
 end
