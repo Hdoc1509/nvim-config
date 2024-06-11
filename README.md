@@ -75,7 +75,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 
 ## Requirements
 
-- [Neovim >= 0.10.0](https://github.com/neovim/neovim/releases)
+- [Neovim 0.9.5](https://github.com/neovim/neovim/releases/tag/v0.9.5)
 - [Node.js](https://nodejs.org/en/download)
 - [Yarn](https://yarnpkg.com/getting-started/install)
 - [Git](https://git-scm.com/downloads)
