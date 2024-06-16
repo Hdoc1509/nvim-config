@@ -10,7 +10,7 @@ vim.g.lightline = {
     spell = '%{&spell ? "SPELL " .. &spelllang : ""}',
   },
   component_function = {
-    codeium = 'LightlineCodeium',
+    -- codeium = 'LightlineCodeium',
     filename = 'LightlineFilename',
     gitbranch = 'FugitiveHead',
     readonly = 'LightlineReadonly',
@@ -22,14 +22,14 @@ return {
   'itchyny/lightline.vim',
   dependencies = {
     'tpope/vim-fugitive',
-    'Exafunction/codeium.vim',
+    -- 'Exafunction/codeium.vim',
   },
   config = function()
     -- stylua: ignore start
     vim.api.nvim_exec2([[
-      function! LightlineCodeium()
-        return ' ' .. codeium#GetStatusString()
-      endfunction
+      " function! LightlineCodeium()
+      "   return ' ' .. codeium#GetStatusString()
+      " endfunction
 
       function! LightlineFilename()
         let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'

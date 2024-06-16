@@ -7,6 +7,7 @@ return {
 
     vim.g.codeium_disabled_bindings = 1
     vim.g.codeium_no_map_tab = 1
+    vim.g.codeium_enabled = false
 
     local imap_expr = function(lhs, rhs, opts)
       keymap('i', lhs, rhs, merge({ expr = true }, opts or {}))
@@ -20,5 +21,5 @@ return {
     -- stylua: ignore end
   end,
   event = 'BufEnter',
-  diabled = true,
+  disabled = true,
 }
