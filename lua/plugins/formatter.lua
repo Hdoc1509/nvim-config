@@ -14,6 +14,7 @@ local config = function()
       jsonc = { prettier },
       lua = { require('formatter.filetypes.lua').stylua },
       markdown = { prettier('markdown') },
+      ['markdown.mdx'] = { prettier('mdx') },
       sh = { require('formatter.filetypes.sh').shfmt },
       scss = { prettier('scss') },
       typescript = { prettier('typescript') },
