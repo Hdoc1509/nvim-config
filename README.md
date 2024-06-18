@@ -185,10 +185,14 @@ Used mapleader is `space key`.
 | `<Leader>O`   | Normal [N]      | Add blanklines above current line                 |
 | `]c`          | Normal          | Jump to next hunk                                 |
 | `[c`          | Normal          | Jump to previous hunk                             |
-| `<Leader>hp`  | Normal          | Preview hunk                                      |
 | `<Leader>hs`  | Normal          | Stage hunk                                        |
+| `<Leader>hs`  | Visual          | Stage selected hunk(s)                            |
+| `<Leader>hr`  | Normal          | Reset hunk                                        |
+| `<Leader>hr`  | Visual          | Reset selected hunk(s)                            |
 | `<Leader>hS`  | Normal          | Stage buffer                                      |
 | `<Leader>hu`  | Normal          | Unstage hunk                                      |
+| `<Leader>hR`  | Normal          | Reset buffer                                      |
+| `<Leader>hp`  | Normal          | Preview hunk                                      |
 | `<C-a>`       | Insert          | Insert codeium suggestion                         |
 | `<C-n>`       | Insert          | Next codeium suggestion                           |
 | `<C-p>`       | Insert          | Previous codeium suggestion                       |
