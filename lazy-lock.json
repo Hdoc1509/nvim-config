@@ -20,6 +20,7 @@
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "1212fb6082b7177dde17ea65e429e027835aeb40" },
   "mason.nvim": { "branch": "main", "commit": "3b5068f0fc565f337d67a2d315d935f574848ee7" },
+  "mini.files": { "branch": "main", "commit": "05c861ff4066a9d20233ec776e9ec894ab9f19fe" },
   "neovim-gui-shim": { "branch": "master", "commit": "2e561a0931e08e4620c3a968e27d3745e9eaf2fd" },
   "nightfox.nvim": { "branch": "main", "commit": "e352a32e0f54feb2550ebdab815ae8f7f26ed63b" },
   "nvim-cmp": { "branch": "main", "commit": "04e0ca376d6abdbfc8b52180f8ea236cbfddf782" },
