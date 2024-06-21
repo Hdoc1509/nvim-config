@@ -3,7 +3,7 @@ local config = function()
 
   require('mini.files').setup()
 
-  nmap('_', MiniFiles.open, { desc = 'Open mini.files' })
+  nmap('_', MiniFiles.open, { desc = 'Open mini.files explorer' })
 end
 
 return {
