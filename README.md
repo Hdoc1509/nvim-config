@@ -178,6 +178,7 @@ Used mapleader is `space key`.
 | `th`          | Command         | Open help window in new tab                       |
 | `<Leader>mo`  | Normal (\*)     | Start Markdwon preview                            |
 | `<Leader>mc`  | Normal (\*)     | Stop Markdown preview                             |
+| `<Leader>mt`  | Normal          | Toggle Markdown renderer                          |
 | `<Leader>f`   | Normal          | Format current file                               |
 | `<Leader>F`   | Normal          | Format and save current file                      |
 | `H`           | Normal          | Preview folded lines                              |
@@ -196,7 +197,6 @@ Used mapleader is `space key`.
 | `<C-a>`       | Insert          | Insert `supermaven` suggestion                    |
 | `<C-j>`       | Insert          | Accept `supermaven` word suggestion               |
 | `<C-q>`       | Insert          | Clear/Cancel `supermaven` suggestion              |
-| `<Leader>mt`  | Normal          | Toggle Markdown renderer                          |
 | `<F3>`        | Insert / Normal | Toggle spell checking                             |
 | `<Leader>r`   | Visual          | Replace selected text in current line             |
 | `<Leader>R`   | Visual          | Replace selected text in current file             |
