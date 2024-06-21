@@ -3,6 +3,9 @@ local config = function()
 
   require('mini.files').setup()
 
+  nmap('-', function()
+    MiniFiles.open(vim.api.nvim_buf_get_name(0))
+  end, { desc = 'Open mini.files explorer in current file' })
   nmap('_', MiniFiles.open, { desc = 'Open mini.files explorer' })
 end
 

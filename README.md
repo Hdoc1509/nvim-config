@@ -197,6 +197,8 @@ Used mapleader is `space key`.
 | `<C-a>`       | Insert          | Insert `supermaven` suggestion                    |
 | `<C-j>`       | Insert          | Accept `supermaven` word suggestion               |
 | `<C-q>`       | Insert          | Clear/Cancel `supermaven` suggestion              |
+| `-`           | Normal          | Open mini.files explorer in current file          |
+| `_`           | Normal          | Open mini.files explorer                          |
 | `<F3>`        | Insert / Normal | Toggle spell checking                             |
 | `<Leader>r`   | Visual          | Replace selected text in current line             |
 | `<Leader>R`   | Visual          | Replace selected text in current file             |
