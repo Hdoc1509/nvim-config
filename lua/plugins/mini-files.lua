@@ -3,7 +3,7 @@ local config = function()
 
   require('mini.files').setup()
 
-  nmap('-', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open mini.files' })
+  nmap('_', '<cmd>lua MiniFiles.open()<CR>', { desc = 'Open mini.files' })
 end
 
 return {
