@@ -21,5 +21,5 @@ return {
     -- stylua: ignore end
   end,
   event = 'BufEnter',
-  disabled = true,
+  enabled = false,
 }
