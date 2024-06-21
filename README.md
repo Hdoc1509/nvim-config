@@ -193,10 +193,9 @@ Used mapleader is `space key`.
 | `<Leader>hu`  | Normal          | Unstage hunk                                      |
 | `<Leader>hR`  | Normal          | Reset buffer                                      |
 | `<Leader>hp`  | Normal          | Preview hunk                                      |
-| `<C-a>`       | Insert          | Insert codeium suggestion                         |
-| `<C-n>`       | Insert          | Next codeium suggestion                           |
-| `<C-p>`       | Insert          | Previous codeium suggestion                       |
-| `<C-q>`       | Insert          | Clear/Cancel codeium suggestion                   |
+| `<C-a>`       | Insert          | Insert `supermaven` suggestion                    |
+| `<C-j>`       | Insert          | Accept `supermaven` word suggestion               |
+| `<C-q>`       | Insert          | Clear/Cancel `supermaven` suggestion              |
 | `<F3>`        | Insert / Normal | Toggle spell checking                             |
 | `<Leader>r`   | Visual          | Replace selected text in current line             |
 | `<Leader>R`   | Visual          | Replace selected text in current file             |
