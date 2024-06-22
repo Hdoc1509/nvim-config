@@ -59,13 +59,6 @@ keymap({ 'i', 'n' }, '<C-d>', '<cmd>normal dd<CR>', { desc = 'Delete current lin
 keymap('x', '<', '<gv')
 keymap('x', '>', '>gv')
 
--- Open URL under cursor
-nmap(
-  'gx',
-  [[:silent execute '!' . g:browser . ' ' . shellescape(expand('<cfile>'), 1)<CR>]],
-  { desc = 'Open URl under cursor' }
-)
-
 -- Search highlighing
 nmap('<Leader>/', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlighing' })
 

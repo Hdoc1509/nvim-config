@@ -42,6 +42,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   _(currently disabled)_ and [`supermave-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
 - Beautiful markdown highlighting with [`headlines.nvim`](https://github.com/lukas-reineke/headlines.nvim)
   _(currently disabled)_ and [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
+- Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
 - LSP Servers:
   - [`astro`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
@@ -175,7 +176,6 @@ Used mapleader is `space key`.
 | `<Leader>e`   | Normal          | Search files with `fzf`                           |
 | `]t`          | Normal          | Jump to next TODO comment                         |
 | `[t`          | Normal          | Jump to previous TODO comment                     |
-| `gx`          | Normal          | Open URL under cursor with browser in `g:browser` |
 | `<Leader>/`   | Normal          | Clear search highlighting                         |
 | `<Leader>rr`  | Normal          | Run HTTP request under the cursor                 |
 | `<Leader>rl`  | Normal          | Re-run the last HTTP request                      |
@@ -222,14 +222,6 @@ The following mappings just run on `*.md` files:
 | Mapping       | Mode        | Description                                                         |
 | ------------- | ----------- | ------------------------------------------------------------------- |
 | `<Leader>sat` | Visual Line | Create a table from shell aliases definitions and run `FormatWrite` |
-
-## Global variables
-
-This configuration use some custom global variables:
-
-- **g:browser**: Binary name of your favorite browser. Default to `firefox`
-
-You can add or change these global variables in [`lua/globals.lua`](./lua/globals.lua).
 
 ## Git integration
 

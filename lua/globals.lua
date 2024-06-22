@@ -1,8 +1,5 @@
 local g = vim.g
 
--- Custom variables
-g.browser = 'firefox'
-
 -- Disable netrw
 g.loaded_netrw       = 1
 g.loaded_netrwPlugin = 1
