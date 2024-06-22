@@ -13,7 +13,7 @@ require('mason-tool-installer').setup({
     'json-lsp',
     'lua-language-server',
     'marksman',
-    'mdx-analyzer',
+    -- 'mdx-analyzer',
     'typescript-language-server',
     'vim-language-server',
     'yaml-language-server',
