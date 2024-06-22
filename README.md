@@ -11,7 +11,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Plugin management via [`lazy.nvim`](https://github.com/folke/lazy.nvim)
 - Code highlighting via [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter)
 - Better statusline via [`lightline.vim`](https://github.com/itchyny/lightline.vim)
-- File tree explorer via [`nvim-tree.lua`](https://github.com/nvim-tree/nvim-tree.lua)
+- File explorer via [`nvim-tree.lua`](https://github.com/nvim-tree/nvim-tree.lua)
+  and [`mini.files`](https://github.com/echasnovski/mini.files)
 - File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf)
 - Autopairing via [`auto-pairs`](https://github.com/jiangmiao/auto-pairs) and [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag)
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip)
@@ -38,7 +39,9 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
 - A.I. powered code-completion with [`codeium.vim`](https://github.com/Exafunction/codeium.vim)
+  _(currently disabled)_ and [`supermave-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
 - Beautiful markdown highlighting with [`headlines.nvim`](https://github.com/lukas-reineke/headlines.nvim)
+  _(currently disabled)_ and [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
 - LSP Servers:
   - [`astro`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
@@ -58,6 +61,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
     <!-- - c (required) -->
     <!-- - cpp (required) -->
   - css
+  - embedded_template (ejs)
   - gitignore
   - html
   - http
@@ -65,12 +69,13 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - jsdoc
   - jsonc
   - lua
-  - markdown
+  - markdown (and markdown.mdx)
   - markdown_inline
   - scss
-  - tsx
   - typescript
+  - tsx
   - vim
+  - vimdoc
   - yaml
 
 ## Requirements
