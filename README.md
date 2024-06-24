@@ -135,81 +135,81 @@ Used mapleader is `space key`.
 | ------------- | --------------- | ------------------------------------------------- |
 | `<F1>`        | Normal          | Toggle `nvim-tree` with focus in current file     |
 | `<F2>`        | Normal          | Toggle `nvim-tree`                                |
-| `<Leader>w`   | Normal          | Save file                                         |
-| `<Leader>W`   | Normal          | Save all files                                    |
-| `<Leader>q`   | Normal          | Save and close file                               |
-| `<Leader>Q`   | Normal          | Save all files and close Neovim                   |
-| `<Leader>tq`  | Normal          | Close current tab                                 |
-| `<Leader>to`  | Normal          | Close all other tabs                              |
-| `<Leader>th`  | Normal          | Move tab to left                                  |
-| `<Leader>tH`  | Normal          | Move tab to first position                        |
-| `<Leader>tl`  | Normal          | Move tab to right                                 |
-| `<Leader>tL`  | Normal          | Move tab to last position                         |
-| `<Leader>tj`  | Normal          | Go to previous tab                                |
-| `<Leader>tJ`  | Normal          | Go to first tab                                   |
-| `<Leader>tk`  | Normal          | Go to next tab                                    |
-| `<Leader>tK`  | Normal          | Go to last tab                                    |
-| `<Leader>[`   | Normal          | Jump to tag under cursor in a split               |
-| `<Leader>]`   | Normal          | Jump to tag under cursor in a new tab             |
-| `<Leader>j`   | Normal          | Scroll down 10 lines                              |
-| `<Leader>J`   | Normal          | Scroll down 20 lines                              |
-| `<Leader>k`   | Normal          | Scroll up 10 lines                                |
-| `<Leader>K`   | Normal          | Scroll up 20 lines                                |
-| `<Leader>>`   | Normal          | Resize current split 10 pixels to left            |
-| `<Leader><`   | Normal          | Resize current split 10 pixels to right           |
-| `<Leader>chh` | Normal          | Run `:checkhealth`                                |
-| `<C-h>`       | Normal          | Jump to left split                                |
-| `<C-j>`       | Normal          | Jump to bottom split                              |
-| `<C-k>`       | Normal          | Jump to top split                                 |
-| `<C-l>`       | Normal          | Jump to right split                               |
-| `<Leader>H`   | Normal          | Move window to previous tab                       |
-| `<Leader>L`   | Normal          | Move window to next tab                           |
-| `<Leader>gaa` | Normal          | Execute `git add --all`                           |
-| `<Leader>gd`  | Normal          | Execute `git diff`                                |
-| `<Leader>gp`  | Normal          | Execute `git push`                                |
-| `<Leader>gl`  | Normal          | Execute `git pull`                                |
-| `<Leader>gs`  | Normal          | Execute `git status`                              |
-| `<Leader>gc`  | Normal          | Execute `git commit`                              |
-| `<C-u>`       | Normal / Insert | Toggle Uppercase of word under cursor             |
-| `<C-t>`       | Normal / Insert | Toggle Title Case of word under cursor            |
-| `<C-d>`       | Normal / Insert | Remove current line                               |
-| `<Leader>ya`  | Normal          | Copy all text of current file to clipboard        |
-| `<Leader>e`   | Normal          | Search files with `fzf`                           |
+| `<leader>w`   | Normal          | Save file                                         |
+| `<leader>W`   | Normal          | Save all files                                    |
+| `<leader>q`   | Normal          | Save and close file                               |
+| `<leader>Q`   | Normal          | Save all files and close Neovim                   |
+| `<leader>tq`  | Normal          | Close current tab                                 |
+| `<leader>to`  | Normal          | Close all other tabs                              |
+| `<leader>th`  | Normal          | Move tab to left                                  |
+| `<leader>tH`  | Normal          | Move tab to first position                        |
+| `<leader>tl`  | Normal          | Move tab to right                                 |
+| `<leader>tL`  | Normal          | Move tab to last position                         |
+| `<leader>tj`  | Normal          | Go to previous tab                                |
+| `<leader>tJ`  | Normal          | Go to first tab                                   |
+| `<leader>tk`  | Normal          | Go to next tab                                    |
+| `<leader>tK`  | Normal          | Go to last tab                                    |
+| `<leader>[`   | Normal          | Jump to tag under cursor in a split               |
+| `<leader>]`   | Normal          | Jump to tag under cursor in a new tab             |
+| `<leader>j`   | Normal          | Scroll down 10 lines                              |
+| `<leader>J`   | Normal          | Scroll down 20 lines                              |
+| `<leader>k`   | Normal          | Scroll up 10 lines                                |
+| `<leader>K`   | Normal          | Scroll up 20 lines                                |
+| `<leader>>`   | Normal          | Resize current split 10 pixels to left            |
+| `<leader><`   | Normal          | Resize current split 10 pixels to right           |
+| `<leader>chh` | Normal          | Run `:checkhealth`                                |
+| `<c-h>`       | Normal          | Jump to left split                                |
+| `<c-j>`       | Normal          | Jump to bottom split                              |
+| `<c-k>`       | Normal          | Jump to top split                                 |
+| `<c-l>`       | Normal          | Jump to right split                               |
+| `<leader>H`   | Normal          | Move window to previous tab                       |
+| `<leader>L`   | Normal          | Move window to next tab                           |
+| `<leader>gaa` | Normal          | Execute `git add --all`                           |
+| `<leader>gd`  | Normal          | Execute `git diff`                                |
+| `<leader>gp`  | Normal          | Execute `git push`                                |
+| `<leader>gl`  | Normal          | Execute `git pull`                                |
+| `<leader>gs`  | Normal          | Execute `git status`                              |
+| `<leader>gc`  | Normal          | Execute `git commit`                              |
+| `<c-u>`       | Normal / Insert | Toggle Uppercase of word under cursor             |
+| `<c-t>`       | Normal / Insert | Toggle Title Case of word under cursor            |
+| `<c-d>`       | Normal / Insert | Remove current line                               |
+| `<leader>ya`  | Normal          | Copy all text of current file to clipboard        |
+| `<leader>e`   | Normal          | Search files with `fzf`                           |
 | `]t`          | Normal          | Jump to next TODO comment                         |
 | `[t`          | Normal          | Jump to previous TODO comment                     |
-| `<Leader>/`   | Normal          | Clear search highlighting                         |
-| `<Leader>rr`  | Normal          | Run HTTP request under the cursor                 |
-| `<Leader>rl`  | Normal          | Re-run the last HTTP request                      |
+| `<leader>/`   | Normal          | Clear search highlighting                         |
+| `<leader>rr`  | Normal          | Run HTTP request under the cursor                 |
+| `<leader>rl`  | Normal          | Re-run the last HTTP request                      |
 | `vh`          | Command         | Open help window in vertical split                |
 | `th`          | Command         | Open help window in new tab                       |
-| `<Leader>mo`  | Normal (\*)     | Start Markdwon preview                            |
-| `<Leader>mc`  | Normal (\*)     | Stop Markdown preview                             |
-| `<Leader>mt`  | Normal          | Toggle Markdown renderer                          |
-| `<Leader>f`   | Normal          | Format current file                               |
-| `<Leader>F`   | Normal          | Format and save current file                      |
+| `<leader>mo`  | Normal (\*)     | Start Markdwon preview                            |
+| `<leader>mc`  | Normal (\*)     | Stop Markdown preview                             |
+| `<leader>mt`  | Normal          | Toggle Markdown renderer                          |
+| `<leader>f`   | Normal          | Format current file                               |
+| `<leader>F`   | Normal          | Format and save current file                      |
 | `H`           | Normal          | Preview folded lines                              |
-| `<Leader>o`   | Normal [N]      | Add blanklines below current line                 |
-| `<Leader>O`   | Normal [N]      | Add blanklines above current line                 |
+| `<leader>o`   | Normal [N]      | Add blanklines below current line                 |
+| `<leader>O`   | Normal [N]      | Add blanklines above current line                 |
 | `]c`          | Normal          | Jump to next hunk                                 |
 | `[c`          | Normal          | Jump to previous hunk                             |
-| `<Leader>hs`  | Normal          | Stage hunk                                        |
-| `<Leader>hs`  | Visual          | Stage selected hunk(s)                            |
-| `<Leader>hr`  | Normal          | Reset hunk                                        |
-| `<Leader>hr`  | Visual          | Reset selected hunk(s)                            |
-| `<Leader>hS`  | Normal          | Stage buffer                                      |
-| `<Leader>hu`  | Normal          | Unstage hunk                                      |
-| `<Leader>hR`  | Normal          | Reset buffer                                      |
-| `<Leader>hp`  | Normal          | Preview hunk                                      |
-| `<C-a>`       | Insert          | Insert `supermaven` suggestion                    |
-| `<C-j>`       | Insert          | Accept `supermaven` word suggestion               |
-| `<C-q>`       | Insert          | Clear/Cancel `supermaven` suggestion              |
+| `<leader>hs`  | Normal          | Stage hunk                                        |
+| `<leader>hs`  | Visual          | Stage selected hunk(s)                            |
+| `<leader>hr`  | Normal          | Reset hunk                                        |
+| `<leader>hr`  | Visual          | Reset selected hunk(s)                            |
+| `<leader>hS`  | Normal          | Stage buffer                                      |
+| `<leader>hu`  | Normal          | Unstage hunk                                      |
+| `<leader>hR`  | Normal          | Reset buffer                                      |
+| `<leader>hp`  | Normal          | Preview hunk                                      |
+| `<c-a>`       | Insert          | Insert `supermaven` suggestion                    |
+| `<c-j>`       | Insert          | Accept `supermaven` word suggestion               |
+| `<c-q>`       | Insert          | Clear/Cancel `supermaven` suggestion              |
 | `-`           | Normal          | Open mini.files explorer in current file          |
 | `_`           | Normal          | Open mini.files explorer                          |
 | `<F3>`        | Insert / Normal | Toggle spell checking                             |
-| `<Leader>r`   | Visual          | Replace selected text in current line             |
-| `<Leader>R`   | Visual          | Replace selected text in current file             |
-| `<Leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`             |
-| `<Leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`            |
+| `<leader>r`   | Visual          | Replace selected text in current line             |
+| `<leader>R`   | Visual          | Replace selected text in current file             |
+| `<leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`             |
+| `<leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`            |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`             |
 
 **(\*): Mappings that show a notify window.**
@@ -222,7 +222,7 @@ The following mappings just run on `*.md` files:
 
 | Mapping       | Mode        | Description                                                         |
 | ------------- | ----------- | ------------------------------------------------------------------- |
-| `<Leader>sat` | Visual Line | Create a table from shell aliases definitions and run `FormatWrite` |
+| `<leader>sat` | Visual Line | Create a table from shell aliases definitions and run `FormatWrite` |
 
 ## Git integration
 

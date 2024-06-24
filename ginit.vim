@@ -8,8 +8,8 @@ cnoremap <S-Insert> <C-r>+
 if exists('g:GuiLoaded')
   GuiFont! FiraCode\ NF:h12:sb
   " Full Screen
-  nnoremap <Leader>fs :call GuiWindowFullScreen(1)<CR>
-  nnoremap <Leader>Fs :call GuiWindowFullScreen(0)<CR>
+  nnoremap <leader>fs :call GuiWindowFullScreen(1)<CR>
+  nnoremap <leader>Fs :call GuiWindowFullScreen(0)<CR>
 endif
 
 """"""""""""""""""""""""""""""

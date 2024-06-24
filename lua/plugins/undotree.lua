@@ -1,7 +1,7 @@
 local config = function()
   local nmap = require('utils').nmap
 
-  nmap('<Leader>u', '<cmd>UndotreeToggle<CR>', { desc = 'Toggle undo tree' })
+  nmap('<leader>u', '<cmd>UndotreeToggle<cr>', { desc = 'Toggle undo tree' })
 end
 
 return {

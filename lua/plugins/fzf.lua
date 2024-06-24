@@ -20,7 +20,7 @@ local config = function()
     vim.env.FZF_DEFAULT_OPTS = '--layout=reverse'
   end
 
-  nmap('<Leader>e', '<cmd>FZF<CR>')
+  nmap('<leader>e', '<cmd>FZF<cr>')
 end
 
 return {

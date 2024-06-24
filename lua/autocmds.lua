@@ -28,7 +28,7 @@ autocmd('FileType', {
   callback = function()
     local bufnr = vim.fn.bufnr('%')
     nmap('e', function()
-      vim.api.nvim_command([[execute "normal! \<CR>"]])
+      vim.api.nvim_command([[execute "normal! \<cr>"]])
       vim.api.nvim_command(bufnr .. 'bd')
     end, { buffer = bufnr })
   end,

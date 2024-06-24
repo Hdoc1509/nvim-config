@@ -4,64 +4,64 @@ local nmap = utils.nmap
 local keymap = utils.keymap
 
 -- Save and quit files
-nmap('<Leader>w', '<cmd>update<CR>', { desc = 'Save file' })
-nmap('<Leader>W', '<cmd>wall<CR>', { desc = 'Save all files' })
-nmap('<Leader>q', '<cmd>xit<CR>', { desc = 'Save and close file' })
-nmap('<Leader>Q', '<cmd>xall<CR>', { desc = 'Save all files and close Neovim' })
+nmap('<leader>w', '<cmd>update<cr>', { desc = 'Save file' })
+nmap('<leader>W', '<cmd>wall<cr>', { desc = 'Save all files' })
+nmap('<leader>q', '<cmd>xit<cr>', { desc = 'Save and close file' })
+nmap('<leader>Q', '<cmd>xall<cr>', { desc = 'Save all files and close Neovim' })
 
 -- Manipulate tabs
-nmap('<Leader>tq', '<cmd>tabclose<CR>', { desc = 'Close tab' })
-nmap('<Leader>to', '<cmd>tabonly<CR>', { desc = 'Close all other tabs' })
-nmap('<Leader>th', '<cmd>tabmove -1<CR>', { desc = 'Move tab to left' })
-nmap('<Leader>tH', '<cmd>tabmove 0<CR>', { desc = 'Move tab to first position' })
-nmap('<Leader>tl', '<cmd>tabmove +1<CR>', { desc = 'Move tab to right' })
-nmap('<Leader>tL', '<cmd>tabmove $<CR>', { desc = 'Move tab to last position' })
+nmap('<leader>tq', '<cmd>tabclose<cr>', { desc = 'Close tab' })
+nmap('<leader>to', '<cmd>tabonly<cr>', { desc = 'Close all other tabs' })
+nmap('<leader>th', '<cmd>tabmove -1<cr>', { desc = 'Move tab to left' })
+nmap('<leader>tH', '<cmd>tabmove 0<cr>', { desc = 'Move tab to first position' })
+nmap('<leader>tl', '<cmd>tabmove +1<cr>', { desc = 'Move tab to right' })
+nmap('<leader>tL', '<cmd>tabmove $<cr>', { desc = 'Move tab to last position' })
 
 -- Navigate trough tabs
-nmap('<Leader>tj', '<cmd>tabprevious<CR>', { desc = 'Jump to previous tab' })
-nmap('<Leader>tJ', '<cmd>tabfirst<CR>', { desc = 'Jump to first tab' })
-nmap('<Leader>tk', '<cmd>tabnext<CR>', { desc = 'Jump to next tab' })
-nmap('<Leader>tK', '<cmd>tablast<CR>', { desc = 'Jump to last tab' })
+nmap('<leader>tj', '<cmd>tabprevious<cr>', { desc = 'Jump to previous tab' })
+nmap('<leader>tJ', '<cmd>tabfirst<cr>', { desc = 'Jump to first tab' })
+nmap('<leader>tk', '<cmd>tabnext<cr>', { desc = 'Jump to next tab' })
+nmap('<leader>tK', '<cmd>tablast<cr>', { desc = 'Jump to last tab' })
 
 -- Jump to tags
-nmap('<Leader>[', '<C-w>]', { desc = 'Jump to tag under cursor in a split' })
-nmap('<Leader>]', '<C-w>]<C-w>T', { desc = 'Jump to tag under cursor in a new tab' })
+nmap('<leader>[', '<c-w>]', { desc = 'jump to tag under cursor in a split' })
+nmap('<leader>]', '<c-w>]<c-w>T', { desc = 'Jump to tag under cursor in a new tab' })
 
 -- Scrolling
-nmap('<Leader>j', '10<C-e>', { desc = 'Scroll down 10 lines' })
-nmap('<Leader>J', '20<C-e>', { desc = 'Scroll down 20 lines' })
-nmap('<Leader>k', '10<C-y>', { desc = 'Scroll up 10 lines' })
-nmap('<Leader>K', '20<C-y>', { desc = 'Scrool up 20 lines' })
+nmap('<leader>j', '10<c-e>', { desc = 'Scroll down 10 lines' })
+nmap('<leader>J', '20<c-e>', { desc = 'Scroll down 20 lines' })
+nmap('<leader>k', '10<c-y>', { desc = 'Scroll up 10 lines' })
+nmap('<leader>K', '20<c-y>', { desc = 'Scrool up 20 lines' })
 
 -- Split resize
-nmap('<Leader>>', '10<C-w>>', { desc = 'Resize split 10 pixels to left' })
-nmap('<Leader><', ' 10<C-w><', { desc = 'Resize split 10 pixels to right' })
+nmap('<leader>>', '10<c-w>>', { desc = 'Resize split 10 pixels to left' })
+nmap('<leader><', ' 10<c-w><', { desc = 'Resize split 10 pixels to right' })
 
 -- Split navigation
-nmap('<C-h>', '<C-w>h', { desc = 'Jump to left split' })
-nmap('<C-j>', '<C-w>j', { desc = 'Jump to bottom split' })
-nmap('<C-k>', '<C-w>k', { desc = 'Jump to top split' })
-nmap('<C-l>', '<C-w>l', { desc = 'Jump to right split' })
+nmap('<c-h>', '<c-w>h', { desc = 'Jump to left split' })
+nmap('<c-j>', '<c-w>j', { desc = 'Jump to bottom split' })
+nmap('<c-k>', '<c-w>k', { desc = 'Jump to top split' })
+nmap('<c-l>', '<c-w>l', { desc = 'Jump to right split' })
 
 -- Move windows trough tabs
-nmap('<Leader>H', utils.move_window_to_prev_tab, { desc = 'Move current window to previous tab' })
-nmap('<Leader>L', utils.move_window_to_next_tab, { desc = 'Move current window to next tab' })
+nmap('<leader>H', utils.move_window_to_prev_tab, { desc = 'Move current window to previous tab' })
+nmap('<leader>L', utils.move_window_to_next_tab, { desc = 'Move current window to next tab' })
 
-nmap('<Leader>chh', '<cmd>checkhealth<CR>', { desc = 'Run :checkhealth' })
+nmap('<leader>chh', '<cmd>checkhealth<cr>', { desc = 'Run :checkhealth' })
 
 -- Word case
-keymap({ 'i', 'n' }, '<C-u>', '<cmd>normal g~iwe<CR>', { desc = 'Toggle word case' })
-keymap({ 'i', 'n' }, '<C-t>', '<cmd>normal viwb~e<CR>', { desc = 'Toggle word title case' })
+keymap({ 'i', 'n' }, '<c-u>', '<cmd>normal g~iwe<cr>', { desc = 'Toggle word case' })
+keymap({ 'i', 'n' }, '<c-t>', '<cmd>normal viwb~e<cr>', { desc = 'Toggle word title case' })
 
 -- Delete line
-keymap({ 'i', 'n' }, '<C-d>', '<cmd>normal dd<CR>', { desc = 'Delete current line' })
+keymap({ 'i', 'n' }, '<c-d>', '<cmd>normal dd<cr>', { desc = 'Delete current line' })
 
 -- Indent and keep selection
 keymap('x', '<', '<gv')
 keymap('x', '>', '>gv')
 
 -- Search highlighing
-nmap('<Leader>/', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlighing' })
+nmap('<leader>/', '<cmd>nohlsearch<cr>', { desc = 'Clear search highlighing' })
 
 -- Help in vertical split
 keymap('c', 'vh', 'vertical help', { desc = 'Open help in vertical split' })
@@ -69,21 +69,21 @@ keymap('c', 'vh', 'vertical help', { desc = 'Open help in vertical split' })
 keymap('c', 'th', 'tab help', { desc = 'Open help in new tab' })
 
 -- Copy to clipboard all text
-nmap('<Leader>ya', '<cmd>%yank<CR>')
+nmap('<leader>ya', '<cmd>%yank<cr>')
 
 -- Add blankline below current line
-nmap('<Leader>o', "printf('m`%so<ESC>``', v:count1)", { expr = true })
+nmap('<leader>o', "printf('m`%so<esc>``', v:count1)", { expr = true })
 
 -- Add blankline above current line
-nmap('<Leader>O', "printf('m`%sO<ESC>``', v:count1)", { expr = true })
+nmap('<leader>O', "printf('m`%so<esc>``', v:count1)", { expr = true })
 
 -- Toggle spell check
-keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<CR>', { desc = 'Toggle spell check', silent = false })
+keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<cr>', { desc = 'Toggle spell check', silent = false })
 
 nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
 nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
-nmap('<Leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
+nmap('<leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
 
 -- Rplace all matches of selected text
-keymap('x', '<Leader>r', 'y:s/<C-R>0/replace/g<Left><Left><C-W>', { desc = 'Replace selected text in current line' })
-keymap('x', '<Leader>R', 'y:%s/<C-R>0/replace/g<Left><Left><C-W>', { desc = 'Replace selected text in current file' })
+keymap('x', '<leader>r', 'y:s/<c-r>0/replace/g<left><left><c-w>', { desc = 'Replace selected text in current line' })
+keymap('x', '<leader>R', 'y:%s/<c-r>0/replace/g<left><left><c-w>', { desc = 'Replace selected text in current file' })

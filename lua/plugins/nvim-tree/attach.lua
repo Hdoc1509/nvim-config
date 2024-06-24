@@ -26,6 +26,6 @@ return function(bufnr)
   nmap('h', api.node.navigate.parent_close, { desc = 'Close directory', buffer = bufnr })
   nmap('l', open_drop, { desc = 'Open', buffer = bufnr })
   nmap('T', open_tab_silent, { desc = 'Open in tab silent', buffer = bufnr })
-  nmap('<CR>', open_drop, { desc = 'Open', buffer = bufnr })
+  nmap('<cr>', open_drop, { desc = 'Open', buffer = bufnr })
   nmap('c', copy_file_to, { desc = 'Copy file to', buffer = bufnr })
 end

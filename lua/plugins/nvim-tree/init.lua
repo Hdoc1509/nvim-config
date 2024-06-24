@@ -45,8 +45,8 @@ local config = function()
     on_attach = attach,
   })
 
-  nmap('<F1>', '<cmd>NvimTreeFindFileToggle<CR>')
-  nmap('<F2>', '<cmd>NvimTreeToggle<CR>')
+  nmap('<F1>', '<cmd>NvimTreeFindFileToggle<cr>')
+  nmap('<F2>', '<cmd>NvimTreeToggle<cr>')
 end
 
 return {

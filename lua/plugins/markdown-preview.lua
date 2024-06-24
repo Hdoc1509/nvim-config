@@ -5,12 +5,12 @@ local config = function()
   local nmap = utils.nmap
   local map_notify = utils.map_notify
 
-  nmap('<Leader>mo', function()
+  nmap('<leader>mo', function()
     map_notify('Opening Markdown preview...')
     vim.cmd('MarkdownPreview')
   end)
 
-  nmap('<Leader>mc', function()
+  nmap('<leader>mc', function()
     vim.cmd('MarkdownPreviewStop')
     map_notify('Closed Markdown preview')
   end)

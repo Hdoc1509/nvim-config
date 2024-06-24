@@ -5,7 +5,7 @@ local config = function()
     headings = { '◉ ', '○ ', '✸ ', '✿ ' },
   })
 
-  nmap('<Leader>mt', '<cmd>RenderMarkdownToggle<cr>', { desc = 'Toggle Markdown renderer' })
+  nmap('<leader>mt', '<cmd>RenderMarkdownToggle<cr>', { desc = 'Toggle Markdown renderer' })
 end
 
 return {

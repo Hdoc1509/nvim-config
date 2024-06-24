@@ -23,8 +23,8 @@ local config = function()
     },
   })
 
-  nmap('<Leader>f', '<cmd>Format<CR>')
-  nmap('<Leader>F', '<cmd>FormatWrite<CR>')
+  nmap('<leader>f', '<cmd>Format<cr>')
+  nmap('<leader>F', '<cmd>FormatWrite<cr>')
 end
 
 return {
