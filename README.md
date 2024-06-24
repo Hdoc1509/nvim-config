@@ -135,9 +135,9 @@ Used mapleader is `space key`.
 | ------------- | --------------- | ------------------------------------------------- |
 | `<F1>`        | Normal          | Toggle `nvim-tree` with focus in current file     |
 | `<F2>`        | Normal          | Toggle `nvim-tree`                                |
-| `<Leader>w`   | Normal          | Save current file if has been modified            |
+| `<Leader>w`   | Normal          | Save file                                         |
 | `<Leader>W`   | Normal          | Save all files                                    |
-| `<Leader>q`   | Normal          | Save current file if modified and quit            |
+| `<Leader>q`   | Normal          | Save and close file                               |
 | `<Leader>tq`  | Normal          | Close current tab                                 |
 | `<Leader>to`  | Normal          | Close all other tabs                              |
 | `<Leader>th`  | Normal          | Move tab to left                                  |
