@@ -138,6 +138,7 @@ Used mapleader is `space key`.
 | `<Leader>w`   | Normal          | Save file                                         |
 | `<Leader>W`   | Normal          | Save all files                                    |
 | `<Leader>q`   | Normal          | Save and close file                               |
+| `<Leader>Q`   | Normal          | Save all files and close Neovim                   |
 | `<Leader>tq`  | Normal          | Close current tab                                 |
 | `<Leader>to`  | Normal          | Close all other tabs                              |
 | `<Leader>th`  | Normal          | Move tab to left                                  |
@@ -150,7 +151,6 @@ Used mapleader is `space key`.
 | `<Leader>tK`  | Normal          | Go to last tab                                    |
 | `<Leader>[`   | Normal          | Jump to tag under cursor in a split               |
 | `<Leader>]`   | Normal          | Jump to tag under cursor in a new tab             |
-| `<Leader>Q`   | Normal          | Quit from Neovim                                  |
 | `<Leader>j`   | Normal          | Scroll down 10 lines                              |
 | `<Leader>J`   | Normal          | Scroll down 20 lines                              |
 | `<Leader>k`   | Normal          | Scroll up 10 lines                                |

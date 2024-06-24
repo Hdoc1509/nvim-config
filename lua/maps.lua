@@ -7,7 +7,7 @@ local keymap = utils.keymap
 nmap('<Leader>w', '<cmd>update<CR>', { desc = 'Save file' })
 nmap('<Leader>W', '<cmd>wall<CR>', { desc = 'Save all files' })
 nmap('<Leader>q', '<cmd>xit<CR>', { desc = 'Save and close file' })
-nmap('<Leader>Q', '<cmd>quitall!<CR>', { desc = 'Close Neovim' })
+nmap('<Leader>Q', '<cmd>xall<CR>', { desc = 'Save all files and close Neovim' })
 
 -- Manipulate tabs
 nmap('<Leader>tq', '<cmd>tabclose<CR>', { desc = 'Close tab' })
