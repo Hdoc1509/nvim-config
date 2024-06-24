@@ -5,6 +5,7 @@ local keymap = utils.keymap
 
 -- Save and quit files
 nmap('<Leader>w', '<cmd>update<CR>', { desc = 'Save file' })
+nmap('<Leader>W', '<cmd>wall<CR>', { desc = 'Save all files' })
 nmap('<Leader>q', '<cmd>xit<CR>', { desc = 'Close file' })
 nmap('<Leader>Q', '<cmd>quitall!<CR>', { desc = 'Close Neovim' })
 
