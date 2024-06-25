@@ -84,6 +84,16 @@ nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
 nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
 nmap('<leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
 
--- Rplace all matches of selected text
-keymap('x', '<leader>r', 'y:s/<c-r>0/replace/g<left><left><c-w>', { desc = 'Replace selected text in current line' })
-keymap('x', '<leader>R', 'y:%s/<c-r>0/replace/g<left><left><c-w>', { desc = 'Replace selected text in current file' })
+-- Replace all matches of selected text
+keymap(
+  'x',
+  '<leader>r',
+  'y:%s/<c-r>0/replace/gc<left><left><left><c-w>',
+  { desc = 'Replace selected text in current file' }
+)
+keymap(
+  'x',
+  '<leader>R',
+  'y:vimgrep /<c-r>0/ ** | copen |cdo %s/<c-r>0/replace/gc<left><left><left><c-w>',
+  { desc = 'Replace selected text in all files' }
+)
