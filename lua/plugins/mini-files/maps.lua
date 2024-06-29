@@ -35,7 +35,7 @@ M.map_new_window = function(buf_id, lhs, window_type, auto_enter)
     if window_type == 'tabnew' and not auto_enter then
       MiniFiles.close()
       vim.cmd('tabprev')
-      MiniFiles.open()
+      MiniFiles.open(MiniFiles.get_latest_path())
     end
   end
 
