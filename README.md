@@ -151,10 +151,10 @@ Used mapleader is `space key`.
 | `<leader>tK`  | Normal          | Go to last tab                                    |
 | `<leader>[`   | Normal          | Jump to tag under cursor in a split               |
 | `<leader>]`   | Normal          | Jump to tag under cursor in a new tab             |
-| `<leader>j`   | Normal          | Scroll down 10 lines                              |
-| `<leader>J`   | Normal          | Scroll down 20 lines                              |
-| `<leader>k`   | Normal          | Scroll up 10 lines                                |
-| `<leader>K`   | Normal          | Scroll up 20 lines                                |
+| `<leader>j`   | Normal / Visual | Scroll down 10 lines                              |
+| `<leader>J`   | Normal / Visual | Scroll down 20 lines                              |
+| `<leader>k`   | Normal / Visual | Scroll up 10 lines                                |
+| `<leader>K`   | Normal / Visual | Scroll up 20 lines                                |
 | `<leader>>`   | Normal          | Resize current split 10 pixels to left            |
 | `<leader><`   | Normal          | Resize current split 10 pixels to right           |
 | `<leader>chh` | Normal          | Run `:checkhealth`                                |

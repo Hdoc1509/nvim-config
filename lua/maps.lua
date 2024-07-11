@@ -28,10 +28,10 @@ nmap('<leader>[', '<c-w>]', { desc = 'jump to tag under cursor in a split' })
 nmap('<leader>]', '<c-w>]<c-w>T', { desc = 'Jump to tag under cursor in a new tab' })
 
 -- Scrolling
-nmap('<leader>j', '10<c-e>', { desc = 'Scroll down 10 lines' })
-nmap('<leader>J', '20<c-e>', { desc = 'Scroll down 20 lines' })
-nmap('<leader>k', '10<c-y>', { desc = 'Scroll up 10 lines' })
-nmap('<leader>K', '20<c-y>', { desc = 'Scrool up 20 lines' })
+keymap({ 'n', 'x' }, '<leader>j', '10<c-e>', { desc = 'Scroll down 10 lines' })
+keymap({ 'n', 'x' }, '<leader>J', '20<c-e>', { desc = 'Scroll down 20 lines' })
+keymap({ 'n', 'x' }, '<leader>k', '10<c-y>', { desc = 'Scroll up 10 lines' })
+keymap({ 'n', 'x' }, '<leader>K', '20<c-y>', { desc = 'Scrool up 20 lines' })
 
 -- Split resize
 nmap('<leader>>', '10<c-w>>', { desc = 'Resize split 10 pixels to left' })
