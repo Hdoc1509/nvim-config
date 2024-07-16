@@ -2,7 +2,7 @@ local M = {}
 
 local show_dotfiles = true
 local show_excluded = false
-local excluded = { 'node_modules', '.git' }
+local excluded = { 'node_modules', '.git', 'dist' }
 
 local find_string_in = function(list, str)
   for _, element in ipairs(list) do
