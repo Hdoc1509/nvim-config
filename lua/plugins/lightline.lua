@@ -5,6 +5,11 @@ vim.g.lightline = {
       { 'mode', 'paste' },
       { 'gitbranch', 'readonly', 'filename', 'codeium', 'spell' },
     },
+    right = {
+      { 'lineinfo' },
+      { 'percent' },
+      { 'fileformat', 'fileencoding' },
+    },
   },
   component = {
     spell = '%{&spell ? "SPELL " .. &spelllang : ""}',
