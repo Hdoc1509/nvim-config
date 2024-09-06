@@ -76,7 +76,7 @@ nmap('<leader>ya', '<cmd>%yank<cr>')
 nmap('<leader>o', "printf('m`%so<esc>``', v:count1)", { expr = true })
 
 -- Add blankline above current line
-nmap('<leader>O', "printf('m`%so<esc>``', v:count1)", { expr = true })
+nmap('<leader>O', "printf('m`%sO<esc>``', v:count1)", { expr = true })
 
 -- Toggle spell check
 keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<cr>', { desc = 'Toggle spell check', silent = false })
