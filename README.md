@@ -24,6 +24,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Better colorscheme with [`nightfox.nvim`](https://github.com/EdenEast/nightfox.nvim)
 - Completion engine via [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/)
 - LSP support with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
+- Linter plugin with [`nvim-lint`](https://github.com/mfussenegger/nvim-lint)
 - Git integration with [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim) and [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim)
 - Functions and commands for Neovim GUI's via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim)
@@ -56,6 +57,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`tsserver`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver)
   - [`vimls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls)
   - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
+- Linters:
+  - [`actionlint`](https://github.com/rhysd/actionlint)
 - Treesitter parsers:
   - astro
   - bash

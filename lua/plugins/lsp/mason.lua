@@ -23,5 +23,8 @@ require('mason-tool-installer').setup({
     'shfmt',
     'stylua',
     'prettier',
+
+    -- LINTERS
+    'actionlint',
   },
 })
