@@ -8,6 +8,11 @@
   (#lua-match? @injection.content "^%s*export")
   (#set! injection.language "typescript"))
 
+; add injection to line that starts with <
+((inline) @injection.content
+  (#lua-match? @injection.content "^%s*<")
+  (#set! injection.language "tsx"))
+
 ; syntax highlighting for tsx comments
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*{/*")
