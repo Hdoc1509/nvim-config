@@ -98,3 +98,6 @@ keymap(
   'y:vimgrep /<c-r>0/ ** | copen |cdo %s/<c-r>0/replace/gc<left><left><left><c-w>',
   { desc = 'Replace selected text in all files' }
 )
+
+-- reload file
+nmap('<F5>', '<cmd>edit<cr>', { desc = 'Reload (re-edit) file' })

@@ -210,6 +210,7 @@ Used mapleader is `space key`.
 | `-`           | Normal          | Open mini.files explorer in current file      |
 | `_`           | Normal          | Open mini.files explorer                      |
 | `<F3>`        | Insert / Normal | Toggle spell checking                         |
+| `<F5>`        | Normal          | Reload (re-edit) file                         |
 | `<leader>r`   | Visual          | Replace selected text in current file         |
 | `<leader>R`   | Visual          | Replace selected text in all files            |
 | `<leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`         |
