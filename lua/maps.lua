@@ -98,6 +98,3 @@ keymap(
   'y:vimgrep /<c-r>0/ ** | copen |cdo %s/<c-r>0/replace/gc<left><left><left><c-w>',
   { desc = 'Replace selected text in all files' }
 )
-
--- Lazy
-nmap('<leader>lr', '<cmd>Lazy reload <tab>', { desc = 'Reload a plugin' })
