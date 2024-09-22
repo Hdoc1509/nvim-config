@@ -15,6 +15,7 @@ local config = function()
       'http',
       'javascript',
       'jsdoc',
+      'json',
       'jsonc',
       'lua',
       'markdown',
