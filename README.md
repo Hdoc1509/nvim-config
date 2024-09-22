@@ -304,10 +304,10 @@ Run the following commands with `powershell` as admin:
   )
   ```
 
-### Fail to use `:Codeium Auth`
-
-If you have problems for enter your api-key to `:Codeium Auth` command, follow
-instructions in [`codeium-auth.http`](codeium-auth.http).
+<!-- ### Fail to use `:Codeium Auth` -->
+<!---->
+<!-- If you have problems for enter your api-key to `:Codeium Auth` command, follow -->
+<!-- instructions in [`codeium-auth.http`](codeium-auth.http). -->
 
 ### Fail to use with `astro` files
 
