@@ -88,6 +88,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 
 ## Requirements
 
+- [Patched nerd-font](https://github.com/ryanoasis/nerd-fonts)
 - [Neovim 0.9.5](https://github.com/neovim/neovim/releases/tag/v0.9.5)
 - [Node.js](https://nodejs.org/en/download)
 - [Yarn](https://yarnpkg.com/getting-started/install)
