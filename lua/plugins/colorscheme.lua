@@ -18,10 +18,10 @@ local config = function()
     },
     groups = {
       all = {
-        Cursor = { bg = '#34C6FF' },
+        Cursor = { bg = '#01b8ff' },
         NvimTreeNormal = { bg = '#030303' },
         NvimTreeExecFile = { fg = '#ffffff', gui = 'nocombine' },
-        VirtColumn = { fg = '#34C6FF' },
+        VirtColumn = { fg = '#01b8ff' },
         MatchParen = { bg = '#3a3a3a' },
         Whitespace = { gui = 'bold', fg = '#777777' },
       },
