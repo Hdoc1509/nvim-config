@@ -42,7 +42,7 @@ set.foldcolumn = '1'
 set.foldlevel = 99
 set.foldlevelstart = 99
 set.foldenable = true
-set.fillchars = 'foldopen:,foldclose:'
+set.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
 
 set.spelllang = 'en_us'
 set.spellsuggest = 'best,9'
