@@ -46,6 +46,8 @@ set.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldclose:'
 
 set.signcolumn = 'yes:1'
 
+set.wrap = false
+
 set.spelllang = 'en_us'
 set.spellsuggest = 'best,9'
 
