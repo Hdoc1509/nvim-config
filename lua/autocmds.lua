@@ -15,6 +15,7 @@ autocmd('FileType', {
     'help',
     'checkhealth',
     'git',
+    'query',
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
