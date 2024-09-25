@@ -1,7 +1,7 @@
 return {
   ['ts'] = 'typescript',
   ['js'] = 'javascript',
-  ['jsx'] = 'javascriptreact',
+  ['jsx'] = 'javascript',
   ['md'] = 'markdown',
   ['svg'] = 'html',
 }
