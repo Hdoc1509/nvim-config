@@ -47,6 +47,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Beautiful markdown highlighting with [`headlines.nvim`](https://github.com/lukas-reineke/headlines.nvim)
   _(currently disabled)_ and [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
 - Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
+- Distaction-free coding with [`zen-mode.nvim`](https://github.com/folke/zen-mode.nvim)
 - LSP Servers:
   - [`astro`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
@@ -218,6 +219,7 @@ Used mapleader is `space key`.
 | `<F5>`        | Normal          | Reload (re-edit) file                         |
 | `<leader>r`   | Visual          | Replace selected text in current file         |
 | `<leader>R`   | Visual          | Replace selected text in all files            |
+| `<leader>z`   | Normal          | Toggle Zen Mode                               |
 | `<leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`         |
 | `<leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`        |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`         |
