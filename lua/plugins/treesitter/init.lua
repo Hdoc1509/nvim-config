@@ -14,8 +14,8 @@ local config = function()
   })
 
   -- REGISTER LANGUAGES
-  for lang, parser in pairs(langs_to_register) do
-    vim.treesitter.language.register(lang, parser)
+  for parser_name, filetype in pairs(langs_to_register) do
+    vim.treesitter.language.register(parser_name, filetype)
   end
 
   -- DIRECTIVES
