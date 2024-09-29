@@ -78,7 +78,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - json
   - jsonc
   - lua
-  - markdown (and markdown.mdx)
+  - markdown (also used for `mdx` files)
   - markdown_inline
   - scss
   - typescript
