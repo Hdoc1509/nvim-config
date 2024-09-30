@@ -19,8 +19,8 @@ local config = function()
   end
 
   -- DIRECTIVES
-  for directive, callback in pairs(directives) do
-    vim.treesitter.query.add_directive(directive, callback, {})
+  for _, directive in ipairs(directives) do
+    vim.treesitter.query.add_directive(directive.name, directive.callback, directive.opts)
   end
 end
 
