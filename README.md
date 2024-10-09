@@ -102,6 +102,9 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [shellcheck](https://github.com/koalaman/shellcheck#installing)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See [Troubleshooting](#troubleshooting) section
+- `C` compiler (needed by `nvim-treesitter`):
+  - [Windows tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
+  - [Linux tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Linux-Support)
 
 ## Installation
 
@@ -135,9 +138,20 @@ setx XDG_CONFIG_HOME %USERPROFILE%\.config
 
 ### Install plugins
 
-Be sure that you have all [software requirements for nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#requirements).
+1. To suppress git messages about detached HEAD, run:
 
-Then, open Neovim and wait for all plugins to be installed.
+   ```bash
+   git config --global advice.detachedHead false
+   ```
+
+2. To install plugins, run:
+
+   ```bash
+   nvim --headless +'Lazy! restore' +quit
+   ```
+
+3. Due to `headless` mode, some `tree-sitter` parsers can not be successfully
+   installed. All you need to do is open `Neovim`.
 
 ## Mappings
 
