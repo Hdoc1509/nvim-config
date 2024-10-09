@@ -110,10 +110,11 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 
 ### Before cloning
 
-- First, you should backup your current configuration
-- Then, remove your `~/.config/nvim` folder
-- Once you installed this configuration you will be able to integrate your older
-  configuration. You can see it in [Customization](#customization) section
+1. Backup your current configuration
+2. Remove your `~/.config/nvim` folder
+
+Once you installed this configuration you will be able to integrate your older
+configuration. You can see it in [Customization](#customization) section
 
 ### Cloning
 
