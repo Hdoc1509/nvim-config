@@ -16,6 +16,7 @@ return {
   'markdown',
   'markdown_inline',
   'scss',
+  'toml',
   'typescript',
   'tsx',
   'vim',
