@@ -48,6 +48,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   _(currently disabled)_ and [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
 - Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
 - Distaction-free coding with [`zen-mode.nvim`](https://github.com/folke/zen-mode.nvim)
+- Support for [`Hygen`](https://github.com/jondot/hygen) templates with
+  [`hygen.nvim`](https://github.com/Hdoc1509/hygen.nvim)
 - LSP Servers:
   - [`astro`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)

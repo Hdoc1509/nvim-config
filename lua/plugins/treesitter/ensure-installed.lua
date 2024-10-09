@@ -8,6 +8,7 @@ return {
   'gitignore',
   'html',
   'http',
+  'hygen_template',
   'javascript',
   'jsdoc',
   'json',
