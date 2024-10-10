@@ -14,6 +14,7 @@ return {
   'json',
   'jsonc',
   'lua',
+  'luap',
   'markdown',
   'markdown_inline',
   'scss',
