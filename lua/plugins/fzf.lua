@@ -24,6 +24,10 @@ local config = function()
 end
 
 return {
-  'junegunn/fzf',
-  config = config,
+  {
+    'junegunn/fzf',
+    config = config,
+    build = './install --bin', -- ensure latest version for neovim
+  },
+  'junegunn/fzf.vim',
 }
