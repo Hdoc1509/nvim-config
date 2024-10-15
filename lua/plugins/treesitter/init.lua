@@ -25,7 +25,7 @@ return {
   build = ':TSUpdate',
   dependencies = {
     -- { dir = '~/dev/hygen.nvim' },
-    { 'Hdoc1509/hygen.nvim', tag = 'v0.1.0' },
+    { 'Hdoc1509/hygen.nvim', tag = 'v0.2.0' },
     {
       'JoosepAlviste/nvim-ts-context-commentstring',
       config = function()

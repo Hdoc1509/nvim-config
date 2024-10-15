@@ -2,7 +2,7 @@ return {
   'nvim-tree/nvim-web-devicons',
   dependencies = {
     -- { dir = '~/dev/hygen.nvim' },
-    { 'Hdoc1509/hygen.nvim', tag = 'v0.1.0' },
+    { 'Hdoc1509/hygen.nvim', tag = 'v0.2.0' },
   },
   config = function()
     require('nvim-web-devicons').setup({
