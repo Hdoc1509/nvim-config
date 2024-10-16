@@ -20,8 +20,6 @@ local config = function()
         return
       end
 
-      print('linting ' .. filename)
-
       lint.try_lint()
     end,
   })
