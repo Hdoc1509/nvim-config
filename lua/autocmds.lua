@@ -33,3 +33,11 @@ autocmd('FileType', {
     end, { buffer = bufnr })
   end,
 })
+
+-- set foldmethod=marker for .conf files
+autocmd('FileType', {
+  pattern = 'conf',
+  callback = function()
+    vim.wo.foldmethod = 'marker'
+  end,
+})
