@@ -50,6 +50,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Distaction-free coding with [`zen-mode.nvim`](https://github.com/folke/zen-mode.nvim)
 - Support for [`Hygen`](https://github.com/jondot/hygen) templates with
   [`hygen.nvim`](https://github.com/Hdoc1509/hygen.nvim)
+- Css unit conversion via [`convert.nvim`](https://github.com/cjodo/convert.nvim)
 - LSP Servers:
   - [`astro`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
