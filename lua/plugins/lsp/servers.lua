@@ -41,7 +41,7 @@ return {
     settings = {
       json = {
         schemas = schema_store.json.schemas({
-          select = { '.eslintrc', 'package.json', 'tsconfig.json' },
+          select = { '.eslintrc', 'package.json', 'tsconfig.json', 'jsconfig.json' },
         }),
         validate = { enable = true },
       },
