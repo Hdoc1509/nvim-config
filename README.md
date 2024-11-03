@@ -43,8 +43,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
 - A.I. powered code-completion with [`supermave-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
-- Beautiful markdown highlighting with [`headlines.nvim`](https://github.com/lukas-reineke/headlines.nvim)
-  _(currently disabled)_ and [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
+- Beautiful markdown highlighting with [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
 - Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
 - Distaction-free coding with [`zen-mode.nvim`](https://github.com/folke/zen-mode.nvim)
 - Support for [`Hygen`](https://github.com/jondot/hygen) templates with

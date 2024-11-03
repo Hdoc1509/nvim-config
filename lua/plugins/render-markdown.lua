@@ -13,5 +13,4 @@ return {
   name = 'render-markdown',
   dependencies = { 'nvim-treesitter/nvim-treesitter' },
   config = config,
-  -- enabled = false,
 }
