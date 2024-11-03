@@ -42,8 +42,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Easily install packages with [`mason.nvim`](https://github.com/williamboman/mason.nvim) and [`mason-tool-installer`](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 - Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
-- A.I. powered code-completion with [`codeium.vim`](https://github.com/Exafunction/codeium.vim)
-  _(currently disabled)_ and [`supermave-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
+- A.I. powered code-completion with [`supermave-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
 - Beautiful markdown highlighting with [`headlines.nvim`](https://github.com/lukas-reineke/headlines.nvim)
   _(currently disabled)_ and [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
 - Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
@@ -328,11 +327,6 @@ Run the following commands with `powershell` as admin:
     "MACHINE"
   )
   ```
-
-<!-- ### Fail to use `:Codeium Auth` -->
-<!---->
-<!-- If you have problems for enter your api-key to `:Codeium Auth` command, follow -->
-<!-- instructions in [`codeium-auth.http`](codeium-auth.http). -->
 
 ### Fail to use with `astro` files
 
