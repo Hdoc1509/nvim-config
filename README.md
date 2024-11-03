@@ -7,7 +7,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 
 ## Features
 
-- Written in Vimscript and Lua
+- Written in Lua _(and a little bit of Vimscript)_
 - Blinking cursor
 - Custom [mappings](#mappings)
 - Settings for [`neovim-qt`](https://github.com/equalsraf/neovim-qt) and [`neovide`](https://github.com/neovide/neovide)
@@ -16,7 +16,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Better statusline via [`lightline.vim`](https://github.com/itchyny/lightline.vim)
 - File explorer via [`nvim-tree.lua`](https://github.com/nvim-tree/nvim-tree.lua)
   and [`mini.files`](https://github.com/echasnovski/mini.files)
-- File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf)
+- File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf) and [`fzf.vim`](https://github.com/junegunn/fzf.vim)
 - Autopairing via [`auto-pairs`](https://github.com/jiangmiao/auto-pairs) and [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag)
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip)
 - Move lines and selections easier with [`vim-move`](https://github.com/matze/vim-move)
