@@ -22,3 +22,6 @@
 - https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 - https://github.com/vzze/calculator.nvim
   or https://vimtricks.com/p/vim-calculator/
+- https://github.com/bennypowers/svgo.nvim
+  using config of svgmog: https://github.com/jakearchibald/svgomg/blob/main/src/config.json
+  need to install https://github.com/svg/svgo
