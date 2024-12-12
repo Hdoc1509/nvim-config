@@ -16,7 +16,7 @@ set.encoding = 'utf-8'
 
 set.showmatch = true
 set.showmode = false
-set.showtabline = 2
+-- set.showtabline = 2
 
 set.splitright = true
 set.splitbelow = false
