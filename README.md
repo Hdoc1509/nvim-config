@@ -239,6 +239,8 @@ Used mapleader is `space key`.
 | `<leader>r`   | Visual          | Replace selected text in current file         |
 | `<leader>R`   | Visual          | Replace selected text in all files            |
 | `<leader>z`   | Normal          | Toggle Zen Mode                               |
+| `H`           | Normal / Visual | Jump to first non-blank character             |
+| `L`           | Normal / Visual | Jump to last non-blank character              |
 | `<leader>fs`  | Normal          | Enable Fullscreen. Only for `nvim-qt`         |
 | `<leader>Fs`  | Normal          | Disable Fullscreen. Only for `nvim-qt`        |
 | `<F11>`       | Normal          | Toggle Fullscreen. Only for `neovide`         |

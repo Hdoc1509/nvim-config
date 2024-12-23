@@ -101,3 +101,7 @@ keymap(
 
 -- reload file
 nmap('<F5>', '<cmd>edit<cr>', { desc = 'Reload (re-edit) file' })
+
+-- jump to non-blank character
+keymap({ 'n', 'x' }, 'H', '^', { desc = 'Jump to first non-blank character' })
+keymap({ 'n', 'x' }, 'L', 'g_', { desc = 'Jump to last non-blank character' })
