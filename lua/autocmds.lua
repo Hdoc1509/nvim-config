@@ -41,3 +41,18 @@ autocmd('FileType', {
     vim.wo.foldmethod = 'marker'
   end,
 })
+
+autocmd('TermOpen', {
+  callback = function()
+    vim.opt_local.number = false
+    vim.opt_local.relativenumber = false
+    vim.opt_local.signcolumn = 'no'
+    vim.opt_local.foldcolumn = '0'
+  end,
+})
+
+autocmd('TermClose', {
+  callback = function()
+    vim.cmd("execute 'bdelete! ' . expand('<abuf>')")
+  end,
+})
