@@ -207,8 +207,6 @@ Used mapleader is `space key`.
 | `<leader>/`   | Normal          | Clear search highlighting                     |
 | `<leader>rr`  | Normal          | Run HTTP request under the cursor             |
 | `<leader>rl`  | Normal          | Re-run the last HTTP request                  |
-| `vh`          | Command         | Open help window in vertical split            |
-| `th`          | Command         | Open help window in new tab                   |
 | `<leader>mo`  | Normal (\*)     | Start Markdwon preview                        |
 | `<leader>mc`  | Normal (\*)     | Stop Markdown preview                         |
 | `<leader>mt`  | Normal          | Toggle Markdown renderer                      |
@@ -244,6 +242,13 @@ Used mapleader is `space key`.
 **(\*): Mappings that show a notify window.**
 
 **[N]: Mappings that can receive a count.**
+
+## Abbreviations
+
+| Abbreviation | Mode    | Expansion     |
+| ------------ | ------- | ------------- |
+| vh           | Command | vertical help |
+| th           | Command | tab help      |
 
 ### Markdown mappings
 

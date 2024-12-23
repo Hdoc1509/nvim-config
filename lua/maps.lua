@@ -65,9 +65,9 @@ keymap('x', '>', '>gv')
 nmap('<leader>/', '<cmd>nohlsearch<cr>', { desc = 'Clear search highlighing' })
 
 -- Help in vertical split
-keymap('c', 'vh', 'vertical help', { desc = 'Open help in vertical split' })
+vim.cmd('cabbrev vh vertical help')
 -- Help in new tab
-keymap('c', 'th', 'tab help', { desc = 'Open help in new tab' })
+vim.cmd('cabbrev th tab help')
 
 -- Copy to clipboard all text
 nmap('<leader>ya', '<cmd>%yank<cr>')
