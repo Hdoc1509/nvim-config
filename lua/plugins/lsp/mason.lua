@@ -10,6 +10,7 @@ require('mason-tool-installer').setup({
     'emmet-ls',
     'eslint-lsp',
     'html-lsp',
+    'jdtls',
     'json-lsp',
     'lua-language-server',
     'marksman',
@@ -19,6 +20,7 @@ require('mason-tool-installer').setup({
     'yaml-language-server',
 
     -- FORMATTERS
+    'google-java-format',
     'jq',
     'shfmt',
     'stylua',

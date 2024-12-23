@@ -1,22 +1,7 @@
-local merge = require('utils').merge
 local schema_store = require('schemastore')
-
-local lsp = vim.lsp
-
-local handlers = {
-  ['textDocument/hover'] = lsp.with(lsp.handlers.hover, {
-    border = 'rounded',
-  }),
-  ['textDocument/signatureHelp'] = lsp.with(lsp.handlers.signature_help, {
-    border = 'rounded',
-  }),
-}
-
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-capabilities.textDocument.foldingRange = {
-  dynamicRegistration = false,
-  lineFoldingOnly = true,
-}
+local merge = require('utils').merge
+local handlers = require('plugins.lsp.handlers')
+local capabilities = require('plugins.lsp.capabilities')
 
 -- LSP GENERAL SETTINGS
 local default_settings = {

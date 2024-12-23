@@ -8,6 +8,7 @@ local config = function()
       astro = { prettier },
       css = { prettier('css') },
       html = { prettier('html') },
+      java = { require('formatter.filetypes.java').google_java_format },
       javascript = { prettier },
       javascriptreact = { prettier },
       json = { prettier('json') },
