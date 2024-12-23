@@ -228,6 +228,7 @@ Used mapleader is `space key`.
 | `<leader>hu`  | Normal          | Unstage hunk                                  |
 | `<leader>hR`  | Normal          | Reset buffer                                  |
 | `<leader>hp`  | Normal          | Preview hunk                                  |
+| `<leader>hP`  | Normal          | Preview hunk inline                           |
 | `<c-a>`       | Insert          | Insert `supermaven` suggestion                |
 | `<c-j>`       | Insert          | Accept `supermaven` word suggestion           |
 | `<c-q>`       | Insert          | Clear/Cancel `supermaven` suggestion          |

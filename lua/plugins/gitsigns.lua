@@ -43,6 +43,7 @@ local config = function()
       buf_nmap('<leader>hu', gitsigns.undo_stage_hunk, { desc = 'Undo stage hunk' })
       buf_nmap('<leader>hR', gitsigns.reset_buffer, { desc = 'Reset buffer' })
       buf_nmap('<leader>hp', gitsigns.preview_hunk, { desc = 'Preview hunk' })
+      buf_nmap('<leader>hP', gitsigns.preview_hunk_inline, { desc = 'Preview hunk inline' })
     end,
   })
 end
