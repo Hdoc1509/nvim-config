@@ -10,6 +10,7 @@ local default_settings = {
 }
 
 return {
+  ['ast_grep'] = default_settings,
   ['astro'] = default_settings,
   ['bashls'] = merge(default_settings, {
     filetypes = { 'sh', 'zsh' },

@@ -4,6 +4,7 @@ require('mason-tool-installer').setup({
     -- See https://mason-registry.dev/registry/list for available tools
 
     -- SERVERS
+    'ast-grep',
     'astro-language-server',
     'bash-language-server',
     'css-lsp',
