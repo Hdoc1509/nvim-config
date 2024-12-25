@@ -9,6 +9,8 @@ require('mason-tool-installer').setup({
     'css-lsp',
     'emmet-ls',
     'eslint-lsp',
+    'gradle-language-server',
+    -- 'groovy-language-server',
     'html-lsp',
     'jdtls',
     'json-lsp',

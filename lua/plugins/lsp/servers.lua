@@ -21,6 +21,8 @@ return {
     end,
   }),
   ['eslint'] = default_settings,
+  ['gradle_ls'] = default_settings,
+  -- ['groovyls'] = default_settings,
   ['html'] = default_settings,
   ['jsonls'] = merge(default_settings, {
     settings = {
