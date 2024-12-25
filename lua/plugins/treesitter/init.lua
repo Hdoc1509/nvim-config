@@ -1,6 +1,7 @@
 local config = function()
   local langs_to_register = require('plugins.treesitter.register')
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
+  local textobjects = require('plugins.treesitter.textobjects')
 
   require('nvim-treesitter.install').prefer_git = false
   require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
@@ -12,6 +13,7 @@ local config = function()
     highlight = { enable = true },
     indent = { enable = true },
     autotag = { enable = true }, -- nvim-ts-autotag
+    textobjects = textobjects,
   })
 
   -- REGISTER LANGUAGES
@@ -35,6 +37,7 @@ return {
       end,
     },
     'windwp/nvim-ts-autotag',
+    'nvim-treesitter/nvim-treesitter-textobjects',
   },
   config = config,
   event = { 'BufReadPre', 'BufNewFile' },

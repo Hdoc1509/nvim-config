@@ -40,7 +40,6 @@
 
 - https://github.com/DariusCorvus/tree-sitter-language-injection.nvim
 - https://github.com/bennypowers/template-literal-comments.nvim
-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 - https://github.com/vzze/calculator.nvim
   or https://vimtricks.com/p/vim-calculator/
 - https://github.com/bennypowers/svgo.nvim
