@@ -1,5 +1,10 @@
 ## LSP
 
+### Install
+
+- Explain that `ts_query_ls` should be downloaded manually from releases page of
+  its repo: https://github.com/ribru17/ts_query_ls/releases
+
 ### New features/configs
 
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#cssls
@@ -13,6 +18,9 @@
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#taplo
 
 ## Treesitter
+
+- Update list of parsers
+- Add links to parser repositories
 
 ### Grammars
 
