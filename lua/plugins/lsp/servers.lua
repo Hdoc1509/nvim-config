@@ -38,9 +38,37 @@ return {
   ['lua_ls'] = merge(default_settings, {
     settings = {
       Lua = {
-        diagnostics = { globals = { 'vim' } },
+        -- only needed if lua-language-server < 3.6.5
+        -- telemetry = { enable = false },
       },
     },
+    on_init = function(client)
+      if client.workspace_folders then
+        local path = client.workspace_folders[1].name
+
+        if vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc') then
+          return
+        end
+      end
+
+      local runtime_files = vim.api.nvim_get_runtime_file('', true)
+
+      for k, v in ipairs(runtime_files) do
+        if v == vim.fn.expand('~/.config/nvim/after') or v == vim.fn.expand('~/.config/nvim') then
+          table.remove(runtime_files, k)
+        end
+      end
+
+      client.config.settings.Lua = merge(client.config.settings.Lua, {
+        runtime = {
+          version = 'LuaJIT',
+        },
+        workspace = {
+          checkThirdParty = false,
+          library = runtime_files,
+        },
+      })
+    end,
   }),
   ['marksman'] = default_settings,
   -- ['mdx_analyzer'] = default_settings,

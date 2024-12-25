@@ -26,6 +26,7 @@ M.map_new_window = function(buf_id, lhs, window_type, auto_enter)
     end)
 
     MiniFiles.set_target_window(new_target_window)
+    ---@diagnostic disable-next-line: missing-parameter
     MiniFiles.go_in()
 
     if auto_enter or false then

@@ -8,6 +8,7 @@ local config = function()
 
   require('hygen.tree-sitter').setup()
 
+  ---@diagnostic disable-next-line: missing-fields
   require('nvim-treesitter.configs').setup({
     ensure_installed = parsers_to_install,
     highlight = { enable = true },
@@ -31,6 +32,7 @@ return {
     {
       'JoosepAlviste/nvim-ts-context-commentstring',
       config = function()
+        ---@diagnostic disable-next-line: missing-fields
         require('ts_context_commentstring').setup({
           enable_autocmd = false,
         })
