@@ -75,6 +75,22 @@ return {
           root_dir = jdtls_setup.find_root(root_markers),
           handlers = handlers,
           capabilities = capabilities,
+          settings = {
+            java = {
+              configuration = {
+                runtimes = {
+                  {
+                    name = 'JavaSE-17',
+                    path = vim.fn.expand('~/.sdkman/candidates/java/17.*-tem'),
+                  },
+                  {
+                    name = 'JavaSE-21',
+                    path = vim.fn.expand('~/.sdkman/candidates/java/21.*-tem'),
+                  },
+                },
+              },
+            },
+          },
         })
       end,
     })
