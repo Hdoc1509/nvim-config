@@ -8,9 +8,26 @@
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls
 
-## Queries
+### Try
 
-### Yaml
+- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ast_grep
+- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#spyglassmc_language_server
+- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#taplo
+- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_query_ls
+
+
+## Treesitter
+
+### Grammars
+
+#### Mcfunction
+
+- https://github.com/IoeCmcomc/tree-sitter-mcfunction
+  or https://github.com/theusaf/tree-sitter-mcfunction-lang
+
+### Queries
+
+#### Yaml
 
 - Highlight Github Workflow built-in functions
   see: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions#functions
