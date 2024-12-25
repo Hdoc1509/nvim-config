@@ -11,8 +11,6 @@
 
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#spyglassmc_language_server
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#taplo
-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_query_ls
-
 
 ## Treesitter
 

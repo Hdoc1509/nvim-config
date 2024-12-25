@@ -45,6 +45,13 @@ return {
   ['marksman'] = default_settings,
   -- ['mdx_analyzer'] = default_settings,
   ['ts_ls'] = default_settings,
+  ['ts_query_ls'] = merge(default_settings, {
+    settings = {
+      parser_install_directories = {
+        vim.fn.stdpath('data') .. '/lazy/nvim-treesitter/parser/',
+      },
+    },
+  }),
   ['vimls'] = default_settings,
   ['yamlls'] = merge(default_settings, {
     settings = {

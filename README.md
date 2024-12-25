@@ -50,6 +50,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   [`hygen.nvim`](https://github.com/Hdoc1509/hygen.nvim)
 - Css unit conversion via [`convert.nvim`](https://github.com/cjodo/convert.nvim)
 - LSP Servers:
+  - [`ast_grep`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ast_grep)
   - [`astro`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#astro)
   - [`bashls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#bashls)
   - [`cssls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#cssls)
@@ -60,6 +61,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`lua_ls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#lua_ls)
   - [`marksman`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#marksman)
   - [`ts_ls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver)
+  - [`ts_query_ls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_query_ls)
   - [`vimls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#vimls)
   - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
 - Linters:
