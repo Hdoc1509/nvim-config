@@ -6,7 +6,6 @@
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#html
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#jsonls
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ts_ls
 
 ### Try
 
