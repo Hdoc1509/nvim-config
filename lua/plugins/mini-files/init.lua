@@ -14,6 +14,9 @@ local config = function()
   nmap('<leader>-', function()
     MiniFiles.open(MiniFiles.get_latest_path())
   end, { desc = 'Open mini.files explorer in last used path' })
+  nmap('<leader>_', function()
+    MiniFiles.open(nil, false)
+  end, { desc = 'Open mini.files explorer in root path of workspace' })
 
   utils.autocmd('User', {
     pattern = 'MiniFilesBufferCreate',

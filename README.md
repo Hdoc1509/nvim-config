@@ -236,6 +236,7 @@ Used mapleader is `space key`.
 | `<c-q>`       | Insert          | Clear/Cancel `supermaven` suggestion          |
 | `-`           | Normal          | Open mini.files explorer in current file      |
 | `<leader>-`   | Normal          | Open mini.files explorer in last used path    |
+| `<leader>_`   | Normal          | Open mini.files explorer in root path of workspace |
 | `<F3>`        | Insert / Normal | Toggle spell checking                         |
 | `<F5>`        | Normal          | Reload (re-edit) file                         |
 | `<leader>r`   | Visual          | Replace selected text in current file         |
