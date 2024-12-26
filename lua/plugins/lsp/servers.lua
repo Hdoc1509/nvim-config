@@ -29,7 +29,15 @@ return {
     settings = {
       json = {
         schemas = schema_store.json.schemas({
-          select = { '.eslintrc', 'package.json', 'tsconfig.json', 'jsconfig.json' },
+          select = { '.eslintrc', 'package.json', 'tsconfig.json', 'jsconfig.json', 'luarc' },
+          extra = {
+            {
+              description = 'JSON schema for .luarc.json',
+              fileMatch = { '.luarc.json', '.luarc.jsonc' },
+              name = 'luarc',
+              url = 'https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json',
+            },
+          },
         }),
         validate = { enable = true },
       },
