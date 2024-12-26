@@ -11,7 +11,9 @@ local config = function()
   nmap('-', function()
     MiniFiles.open(vim.api.nvim_buf_get_name(0))
   end, { desc = 'Open mini.files explorer in current file' })
-  nmap('_', MiniFiles.open, { desc = 'Open mini.files explorer' })
+  nmap('<leader>-', function()
+    MiniFiles.open(MiniFiles.get_latest_path())
+  end, { desc = 'Open mini.files explorer in last used path' })
 
   utils.autocmd('User', {
     pattern = 'MiniFilesBufferCreate',
