@@ -10,13 +10,13 @@ local config = function()
 
   nmap('-', function()
     MiniFiles.open(vim.api.nvim_buf_get_name(0))
-  end, { desc = 'Open mini.files explorer in current file' })
+  end, { desc = 'Open mini.files in current file' })
   nmap('<leader>-', function()
     MiniFiles.open(MiniFiles.get_latest_path())
-  end, { desc = 'Open mini.files explorer in last used path' })
+  end, { desc = 'Open mini.files in last used path' })
   nmap('<leader>_', function()
     MiniFiles.open(nil, false)
-  end, { desc = 'Open mini.files explorer in root path of workspace' })
+  end, { desc = 'Open mini.files in root path of workspace' })
 
   utils.autocmd('User', {
     pattern = 'MiniFilesBufferCreate',
