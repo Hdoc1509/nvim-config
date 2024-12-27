@@ -29,7 +29,7 @@ return {
     settings = {
       json = {
         schemas = schema_store.json.schemas({
-          select = { '.eslintrc', 'package.json', 'tsconfig.json', 'jsconfig.json', 'luarc' },
+          select = { '.eslintrc', 'package.json', 'tsconfig.json', 'jsconfig.json', 'luarc', 'fabric.mod.json' },
           extra = {
             {
               description = 'JSON schema for .luarc.json',
