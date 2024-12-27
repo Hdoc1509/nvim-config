@@ -42,5 +42,6 @@ end
 
 return {
   'jiangmiao/auto-pairs',
+  enabled = false,
   config = config,
 }

@@ -6,6 +6,7 @@ vim.g.vsnip_filetypes = {
 
 local config = function()
   local cmp = require('cmp')
+  local cmp_autopairs = require('nvim-autopairs.completion.cmp')
   local cmp_context = require('cmp.config.context')
   local lspkind = require('lspkind')
   local cmp_window_bordered = cmp.config.window.bordered()
@@ -13,6 +14,8 @@ local config = function()
   local feedkey = function(key, mode)
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(key, true, true, true), mode, true)
   end
+
+  cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
 
   cmp.setup({
     snippet = {
@@ -85,7 +88,7 @@ local config = function()
     sources = cmp.config.sources({
       { name = 'path' },
       { name = 'cmdline' },
-    })
+    }),
   })
 end
 
@@ -101,6 +104,11 @@ return {
     'hrsh7th/cmp-vsnip',
     'rafamadriz/friendly-snippets',
     'hrsh7th/vim-vsnip',
+    {
+      'windwp/nvim-autopairs',
+      event = 'InsertEnter',
+      config = true,
+    },
   },
   event = 'VeryLazy',
   config = config,
