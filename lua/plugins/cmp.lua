@@ -105,9 +105,26 @@ return {
     'rafamadriz/friendly-snippets',
     'hrsh7th/vim-vsnip',
     {
+      -- TODO: move to its own file
       'windwp/nvim-autopairs',
       event = 'InsertEnter',
-      config = true,
+      config = function()
+        local Rule = require('nvim-autopairs.rule')
+        local npairs = require('nvim-autopairs')
+
+        npairs.setup({})
+
+        npairs.add_rules({
+          Rule('<% ', ' %>', { 'ejs', 'hygen' }):set_end_pair_length(3),
+          Rule('<%=', '  %>', { 'ejs', 'hygen' }):set_end_pair_length(3),
+          Rule('<%-', '  %>', { 'ejs', 'hygen' }):set_end_pair_length(3),
+          Rule('<%#', '  %>', { 'ejs', 'hygen' }):set_end_pair_length(3),
+        })
+
+        npairs.add_rules({
+          Rule('{/*', ' */', { 'markdown.mdx' }),
+        })
+      end,
     },
   },
   event = 'VeryLazy',
