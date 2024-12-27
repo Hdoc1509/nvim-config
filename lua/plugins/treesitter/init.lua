@@ -13,7 +13,6 @@ local config = function()
     ensure_installed = parsers_to_install,
     highlight = { enable = true },
     indent = { enable = true },
-    autotag = { enable = true }, -- nvim-ts-autotag
     textobjects = textobjects,
   })
 
@@ -38,7 +37,11 @@ return {
         })
       end,
     },
-    'windwp/nvim-ts-autotag',
+    {
+      'windwp/nvim-ts-autotag',
+      config = true,
+      event = { 'BufReadPre', 'BufNewFile' },
+    },
     'nvim-treesitter/nvim-treesitter-textobjects',
   },
   config = config,
