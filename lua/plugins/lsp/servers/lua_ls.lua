@@ -10,7 +10,7 @@ local function on_init(client)
   if client.workspace_folders then
     local path = client.workspace_folders[1].name
 
-    if vim.loop.fs_stat(path .. '/.luarc.json') or vim.loop.fs_stat(path .. '/.luarc.jsonc') then
+    if path ~= runtime_exclude.user then
       return
     end
   end
