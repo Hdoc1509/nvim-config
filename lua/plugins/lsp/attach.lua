@@ -80,6 +80,9 @@ local attach = function(ev)
       callback = lsp_buf.clear_references,
     })
   end
+
+  -- NOTE: you can create user commands for specific LSP server
+  -- see :help lspconfig-configurations
 end
 
 return {
