@@ -29,6 +29,14 @@ return {
     local equinox_launcher_jar = vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
     local cache_dir = vim.fn.expand('~/.cache/jdtls/workspace')
     local root_markers = { '.git', 'mvnw', 'gradlew' }
+    -- NOTE: is this needed if we retrieve the java version from gradle.properties?
+    -- I'm only using java for gradle projects .-.
+    local java_runtimes = vim.fn.map({ '17', '21' }, function(_, version)
+      return {
+        name = 'JavaSE-' .. version,
+        path = vim.fn.expand('~/.sdkman/candidates/java/' .. version .. '.*-tem'),
+      }
+    end)
     local config_path = jdtls_path .. '/config_' .. system
 
     ---@param workspace_path string
@@ -114,16 +122,7 @@ return {
           settings = {
             java = {
               configuration = {
-                runtimes = {
-                  {
-                    name = 'JavaSE-17',
-                    path = vim.fn.expand('~/.sdkman/candidates/java/17.*-tem'),
-                  },
-                  {
-                    name = 'JavaSE-21',
-                    path = vim.fn.expand('~/.sdkman/candidates/java/21.*-tem'),
-                  },
-                },
+                runtimes = java_runtimes,
               },
             },
           },
