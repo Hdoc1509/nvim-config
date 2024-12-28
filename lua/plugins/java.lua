@@ -23,17 +23,53 @@ return {
       system = 'win'
     end
 
+    local java_bin_cache = nil
+    local default_java_version = '21'
     local jdtls_path = mason.get_package('jdtls'):get_install_path()
-    local java_bin = vim.fn.expand('~/.sdkman/candidates/java/17.*-tem/bin/java')
     local equinox_launcher_jar = vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
     local cache_dir = vim.fn.expand('~/.cache/jdtls/workspace')
     local root_markers = { '.git', 'mvnw', 'gradlew' }
     local config_path = jdtls_path .. '/config_' .. system
 
+    ---@param workspace_path string
+    ---@return string[] | nil
+    local function get_gradle_properties(workspace_path)
+      return vim.fn.filereadable(workspace_path .. '/gradle.properties') == 1
+          and vim.fn.readfile(workspace_path .. '/gradle.properties', '', 20)
+        or nil
+    end
+
+    local function filter_java_version_line(_, line)
+      local _, _, _version = string.find(line, 'java_version=(%d+)')
+      return _version ~= nil
+    end
+
+    local function get_java_version_from_line(_, line)
+      return string.match(line, '%d+') --[[@as string]]
+    end
+
     require('utils').autocmd('FileType', {
       pattern = 'java',
       callback = function()
-        local workspace_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+        local workspace_path = vim.fn.getcwd()
+        local workspace_name = vim.fn.fnamemodify(workspace_path, ':p:h:t')
+
+        if java_bin_cache == nil then
+          local java_version = ''
+          local gradle_properties = get_gradle_properties(workspace_path)
+
+          if gradle_properties ~= nil then
+            java_version = vim.fn.map(
+              vim.fn.filter(vim.fn.copy(gradle_properties), filter_java_version_line),
+              get_java_version_from_line
+            )[1] --[[@as string]]
+          else
+            java_version = default_java_version
+          end
+
+          java_bin_cache = vim.fn.expand('~/.sdkman/candidates/java/' .. java_version .. '.*-tem/bin/java')
+        end
+
         -- FIX: when using git branch approach to set workspace name, LSP
         -- crashes on startup.
         -- NOTE: this can be useful if branches have different configs
@@ -49,7 +85,7 @@ return {
 
         jdtls.start_or_attach({
           cmd = {
-            java_bin,
+            java_bin_cache,
 
             '-Declipse.application=org.eclipse.jdt.ls.core.id1',
             '-Dosgi.bundles.defaultStartLevel=4',
