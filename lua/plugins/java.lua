@@ -15,8 +15,8 @@ return {
     local default_handlers = require('plugins.lsp.handlers')
     local system = 'linux'
 
-    -- remove status from statusline
     local handlers = merge(default_handlers, {
+      -- remove status from statusline
       ['language/status'] = function() end,
     })
 
@@ -62,12 +62,12 @@ return {
     require('utils').autocmd('FileType', {
       pattern = 'java',
       callback = function()
-        local workspace_path = vim.fn.getcwd()
-        local workspace_name = vim.fn.fnamemodify(workspace_path, ':p:h:t')
+        local root_dir = jdtls_setup.find_root(root_markers)
+        local workspace_name = vim.fn.fnamemodify(root_dir, ':p:h:t')
 
         if java_bin_cache == nil then
           local java_version = ''
-          local gradle_properties = get_gradle_properties(workspace_path)
+          local gradle_properties = get_gradle_properties(root_dir)
 
           if gradle_properties ~= nil then
             java_version = vim.fn.map(
@@ -119,7 +119,7 @@ return {
             '-data',
             workspace_data_dir,
           },
-          root_dir = jdtls_setup.find_root(root_markers),
+          root_dir = root_dir,
           handlers = handlers,
           capabilities = capabilities,
           settings = {
