@@ -10,12 +10,15 @@ return {
     local mason = require('mason-registry')
     local jdtls = require('jdtls')
     local jdtls_setup = require('jdtls.setup')
+    local merge = require('utils').merge
     local capabilities = require('plugins.lsp.capabilities')
-    local handlers = require('plugins.lsp.handlers')
+    local default_handlers = require('plugins.lsp.handlers')
     local system = 'linux'
 
     -- remove status from statusline
-    handlers['language/status'] = function() end
+    local handlers = merge(default_handlers, {
+      ['language/status'] = function() end,
+    })
 
     if vim.fn.has('mac') == 1 then
       system = 'mac'
