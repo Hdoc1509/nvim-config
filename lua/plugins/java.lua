@@ -70,7 +70,7 @@ return {
             java_version = vim.fn.map(
               vim.fn.filter(vim.fn.copy(gradle_properties), filter_java_version_line),
               get_java_version_from_line
-            )[1] --[[@as string]]
+            )[1] or default_java_version
           else
             java_version = default_java_version
           end
