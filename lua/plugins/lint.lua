@@ -2,11 +2,13 @@ local config = function()
   local lint = require('lint')
   local autocmd = require('utils').autocmd
 
+  local linting_events = { 'InsertLeave', 'TextChanged' }
+
   lint.linters_by_ft = {
     yaml = { 'actionlint' },
   }
 
-  autocmd('BufWritePost', {
+  autocmd(linting_events, {
     -- TODO: add treesitter query to highlight this pattern as vim pattern
     pattern = '*.github/workflows/*.yml,*.github/workflows/*.yaml',
     callback = function()
