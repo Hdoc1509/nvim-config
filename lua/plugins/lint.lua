@@ -2,25 +2,15 @@ local config = function()
   local lint = require('lint')
   local autocmd = require('utils').autocmd
 
-  local ignore_files = {
-    'pnpm-lock.yaml',
-    'pnpm-workspace.yaml',
-  }
-
   lint.linters_by_ft = {
     yaml = { 'actionlint' },
   }
 
   autocmd('BufWritePost', {
+    -- TODO: add treesitter query to highlight this pattern as vim pattern
+    pattern = '*.github/workflows/*.yml,*.github/workflows/*.yaml',
     callback = function()
-      local bufnr = vim.fn.bufnr('%')
-      local filename = vim.fs.basename(vim.api.nvim_buf_get_name(bufnr))
-
-      if vim.tbl_contains(ignore_files, filename) then
-        return
-      end
-
-      lint.try_lint()
+      lint.try_lint('actionlint')
     end,
   })
 end
