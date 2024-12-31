@@ -22,7 +22,9 @@ return {
       system = 'win'
     end
 
-    local java_bin_cache = nil
+    local java_bin = nil
+    local root_dir = nil
+    local workspace_data_dir = nil
     local default_java_version = '21'
     local jdtls_path = mason.get_package('jdtls'):get_install_path()
     local equinox_launcher_jar = vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
@@ -33,31 +35,35 @@ return {
     require('utils').autocmd('FileType', {
       pattern = 'java',
       callback = function()
-        local root_dir = jdtls_setup.find_root(root_markers)
-        local workspace_name = vim.fn.fnamemodify(root_dir, ':p:h:t')
-
-        if java_bin_cache == nil then
-          local java_version = jdk_version.get_from_gradle_properties(root_dir) or default_java_version
-
-          java_bin_cache = vim.fn.expand('~/.sdkman/candidates/java/' .. java_version .. '.*-tem/bin/java')
+        if root_dir == nil then
+          root_dir = jdtls_setup.find_root(root_markers)
         end
 
-        -- FIX: when using git branch approach to set workspace name, LSP
-        -- crashes on startup.
-        -- NOTE: this can be useful if branches have different configs
-        --
-        -- local branchesResult = vim.fn.FugitiveExecute('branch')
-        --
-        -- if branchesResult.exit_status == 0 then
-        --   local current_branch = vim.fn.FugitiveHead()
-        --   workspace_name = workspace_name .. '_branch-' .. current_branch
-        -- end
+        if java_bin == nil then
+          local java_version = jdk_version.get_from_gradle_properties(root_dir) or default_java_version
 
-        local workspace_data_dir = cache_dir .. '/' .. workspace_name
+          java_bin = vim.fn.expand('~/.sdkman/candidates/java/' .. java_version .. '.*-tem/bin/java')
+        end
+
+        if workspace_data_dir == nil then
+          local workspace_name = vim.fn.fnamemodify(root_dir, ':p:h:t')
+          -- FIX: when using git branch approach to set workspace name, LSP
+          -- crashes on startup.
+          -- NOTE: this can be useful if branches have different configs
+          --
+          -- local branchesResult = vim.fn.FugitiveExecute('branch')
+          --
+          -- if branchesResult.exit_status == 0 then
+          --   local current_branch = vim.fn.FugitiveHead()
+          --   workspace_name = workspace_name .. '_branch-' .. current_branch
+          -- end
+
+          workspace_data_dir = cache_dir .. '/' .. workspace_name
+        end
 
         jdtls.start_or_attach({
           cmd = {
-            java_bin_cache,
+            java_bin,
 
             '-Declipse.application=org.eclipse.jdt.ls.core.id1',
             '-Dosgi.bundles.defaultStartLevel=4',
