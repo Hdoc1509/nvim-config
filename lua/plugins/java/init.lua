@@ -10,42 +10,11 @@ return {
     local mason = require('mason-registry')
     local jdtls = require('jdtls')
     local jdtls_setup = require('jdtls.setup')
-    local merge = require('utils').merge
     local capabilities = require('plugins.lsp.capabilities')
-    local default_handlers = require('plugins.lsp.handlers')
+    local handlers = require('plugins.java.handlers')
+    local runtimes = require('plugins.java.runtimes')
+    local jdk_version = require('plugins.java.jdk-version')
     local system = 'linux'
-
-    local handlers = merge(default_handlers, {
-      -- remove status from statusline
-      ['language/status'] = function() end,
-      -- disable some diagnostics
-      ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
-        -- print(vim.inspect(result))
-        local fabric_submodule = string.match(result.uri, 'hotbar%-keys/fabric')
-
-        if fabric_submodule ~= nil then
-          local idx = 1
-
-          while idx <= #result.diagnostics do
-            local message = result.diagnostics[idx].message
-
-            if
-              string.match(message, 'Constants cannot be resolved') ~= nil
-              or string.match(message, 'CommonClass cannot be resolved') ~= nil
-              or string.match(message, 'FabricPlatformHelper') ~= nil
-              or string.match(message, 'IPlatformHelper') ~= nil
-              or string.match(message, 'platform%.services cannot be resolved') ~= nil
-            then
-              table.remove(result.diagnostics, idx)
-            else
-              idx = idx + 1
-            end
-          end
-        end
-
-        vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
-      end,
-    })
 
     if vim.fn.has('mac') == 1 then
       system = 'mac'
@@ -59,32 +28,7 @@ return {
     local equinox_launcher_jar = vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
     local cache_dir = vim.fn.expand('~/.cache/jdtls/workspace')
     local root_markers = { '.git', 'mvnw', 'gradlew' }
-    -- NOTE: is this needed if we retrieve the java version from gradle.properties?
-    -- I'm only using java for gradle projects .-.
-    local java_runtimes = vim.fn.map({ '17', '21' }, function(_, version)
-      return {
-        name = 'JavaSE-' .. version,
-        path = vim.fn.expand('~/.sdkman/candidates/java/' .. version .. '.*-tem'),
-      }
-    end)
     local config_path = jdtls_path .. '/config_' .. system
-
-    ---@param workspace_path string
-    ---@return string[] | nil
-    local function get_gradle_properties(workspace_path)
-      return vim.fn.filereadable(workspace_path .. '/gradle.properties') == 1
-          and vim.fn.readfile(workspace_path .. '/gradle.properties', '', 20)
-        or nil
-    end
-
-    local function filter_java_version_line(_, line)
-      local _, _, _version = string.find(line, 'java_version=(%d+)')
-      return _version ~= nil
-    end
-
-    local function get_java_version_from_line(_, line)
-      return string.match(line, '%d+') --[[@as string]]
-    end
 
     require('utils').autocmd('FileType', {
       pattern = 'java',
@@ -93,17 +37,7 @@ return {
         local workspace_name = vim.fn.fnamemodify(root_dir, ':p:h:t')
 
         if java_bin_cache == nil then
-          local java_version = ''
-          local gradle_properties = get_gradle_properties(root_dir)
-
-          if gradle_properties ~= nil then
-            java_version = vim.fn.map(
-              vim.fn.filter(vim.fn.copy(gradle_properties), filter_java_version_line),
-              get_java_version_from_line
-            )[1] or default_java_version
-          else
-            java_version = default_java_version
-          end
+          local java_version = jdk_version.get_from_gradle_properties(root_dir) or default_java_version
 
           java_bin_cache = vim.fn.expand('~/.sdkman/candidates/java/' .. java_version .. '.*-tem/bin/java')
         end
@@ -152,7 +86,7 @@ return {
           settings = {
             java = {
               configuration = {
-                runtimes = java_runtimes,
+                runtimes = runtimes,
               },
             },
           },
