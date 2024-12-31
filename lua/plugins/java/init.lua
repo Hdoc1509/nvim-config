@@ -40,9 +40,15 @@ return {
         end
 
         if java_bin == nil then
-          local java_version = jdk_version.get_from_gradle_properties(root_dir) or default_java_version
+          local java_sdkman = jdk_version.get_from_sdkmanrc(root_dir)
 
-          java_bin = vim.fn.expand('~/.sdkman/candidates/java/' .. java_version .. '.*-tem/bin/java')
+          if java_sdkman == nil then
+            local java_version = jdk_version.get_from_gradle_properties(root_dir) or default_java_version
+
+            java_bin = vim.fn.expand('~/.sdkman/candidates/java/' .. java_version .. '.*-tem/bin/java')
+          else
+            java_bin = vim.fn.expand('~/.sdkman/candidates/java/' .. java_sdkman .. '/bin/java')
+          end
         end
 
         if workspace_data_dir == nil then
