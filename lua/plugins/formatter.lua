@@ -1,12 +1,20 @@
 local config = function()
   local prettier = require('formatter.defaults.prettier')
-  local utils = require('utils')
-  local nmap = utils.nmap
+  local nmap = require('utils').nmap
 
+  ---@diagnostic disable-next-line: undefined-field
   require('formatter').setup({
     filetype = {
       astro = { prettier },
       css = { prettier('css') },
+      groovy = {
+        function()
+          return {
+            exe = 'npm-groovy-lint',
+            args = { '--format' },
+          }
+        end,
+      },
       html = { prettier('html') },
       java = { require('formatter.filetypes.java').google_java_format },
       javascript = { prettier },
