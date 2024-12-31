@@ -66,6 +66,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`yamlls`](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#yamlls)
 - Linters:
   - [`actionlint`](https://github.com/rhysd/actionlint)
+  - [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint)
 - Treesitter parsers:
   - astro
   - bash
