@@ -14,14 +14,14 @@ local config = function()
 
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
 
-  autocmd(normal_events, {
+  autocmd(aggressive_events, {
     pattern = '*.github/workflows/*.yml,*.github/workflows/*.yaml',
     callback = function()
       lint.try_lint('actionlint')
     end,
   })
 
-  autocmd(aggressive_events, {
+  autocmd(normal_events, {
     callback = function()
       lint.try_lint()
     end,
