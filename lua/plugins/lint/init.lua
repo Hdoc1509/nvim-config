@@ -3,7 +3,7 @@ local config = function()
   local utils = require('utils')
   local autocmd = utils.autocmd
 
-  local linting_events = { 'BufRead', 'InsertLeave', 'TextChanged' }
+  local linting_events = { 'BufRead', 'BufWritePost' }
 
   lint.linters_by_ft = {
     groovy = { 'groovy_lint' },
@@ -11,7 +11,7 @@ local config = function()
 
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
 
-  autocmd(linting_events, {
+  autocmd(vim.fn.extendnew(linting_events, { 'InsertLeave', 'TextChanged' }), {
     pattern = '*.github/workflows/*.yml,*.github/workflows/*.yaml',
     callback = function()
       lint.try_lint('actionlint')
