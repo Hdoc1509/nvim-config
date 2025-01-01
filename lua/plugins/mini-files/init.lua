@@ -3,7 +3,7 @@ local config = function()
   local nmap = utils.nmap
   local filters = require('plugins.mini-files.filters')
   local maps = require('plugins.mini-files.maps')
-  local map_new_window = maps.map_new_window
+  local nmap_new_window = maps.nmap_new_window
   local WINDOW_TYPE = maps.WINDOW_TYPE
 
   require('mini.files').setup({
@@ -27,12 +27,12 @@ local config = function()
 
       nmap('gd', filters.toggle_dotfiles, { buffer = buf_id })
       nmap('ge', filters.toggle_exclude, { buffer = buf_id })
-      map_new_window('gs', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
-      map_new_window('gS', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
-      map_new_window('gv', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
-      map_new_window('gV', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
-      map_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
-      map_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
+      nmap_new_window('gs', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
+      nmap_new_window('gS', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
+      nmap_new_window('gv', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
+      nmap_new_window('gV', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
+      nmap_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
+      nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
     end,
   })
 end

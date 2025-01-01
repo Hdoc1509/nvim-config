@@ -27,7 +27,7 @@ end
 ---@param lhs string
 ---@param window_type WindowType
 ---@param opts { buf_id: number,  auto_enter?: boolean }
-M.map_new_window = function(lhs, window_type, opts)
+M.nmap_new_window = function(lhs, window_type, opts)
   local auto_enter = opts.auto_enter or false
   local buf_id = opts.buf_id
 
