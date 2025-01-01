@@ -7,6 +7,7 @@ local config = function()
 
   lint.linters_by_ft = {
     groovy = { 'groovy_lint' },
+    markdown = { 'markdownlint' },
   }
 
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')

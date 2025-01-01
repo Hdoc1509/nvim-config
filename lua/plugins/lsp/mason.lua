@@ -32,5 +32,6 @@ require('mason-tool-installer').setup({
     -- LINTERS
     { 'actionlint', version = 'v1.7.1' },
     { 'npm-groovy-lint', version = '15.0.2' },
+    { 'markdownlint', version = '0.43.0' },
   },
 })
