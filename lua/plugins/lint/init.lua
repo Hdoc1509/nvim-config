@@ -2,7 +2,6 @@ local config = function()
   local lint = require('lint')
   local utils = require('utils')
   local autocmd = utils.autocmd
-  local merge = utils.merge
 
   local linting_events = { 'BufRead', 'InsertLeave', 'TextChanged' }
 
@@ -10,9 +9,7 @@ local config = function()
     groovy = { 'groovy_lint' },
   }
 
-  lint.linters = merge(lint.linters, {
-    groovy_lint = require('plugins.lint.npm-groovy-lint'),
-  })
+  lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
 
   autocmd(linting_events, {
     pattern = '*.github/workflows/*.yml,*.github/workflows/*.yaml',
