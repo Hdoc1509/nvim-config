@@ -16,6 +16,10 @@ local get_map_desc = function(window_type, auto_enter)
   return desc
 end
 
+---@param buf_id number
+---@param lhs string
+---@param window_type WindowType
+---@param auto_enter? boolean
 M.map_new_window = function(buf_id, lhs, window_type, auto_enter)
   local rhs = function()
     -- Make new window and set it as target
