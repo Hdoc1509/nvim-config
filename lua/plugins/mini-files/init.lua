@@ -27,12 +27,12 @@ local config = function()
 
       nmap('gd', filters.toggle_dotfiles, { buffer = buf_id })
       nmap('ge', filters.toggle_exclude, { buffer = buf_id })
-      map_new_window(buf_id, 'gs', WINDOW_TYPE.belowright_horizontal_split)
-      map_new_window(buf_id, 'gS', WINDOW_TYPE.belowright_horizontal_split, true)
-      map_new_window(buf_id, 'gv', WINDOW_TYPE.belowright_vertical_split)
-      map_new_window(buf_id, 'gV', WINDOW_TYPE.belowright_vertical_split, true)
-      map_new_window(buf_id, 'gt', WINDOW_TYPE.tabnew)
-      map_new_window(buf_id, 'gT', WINDOW_TYPE.tabnew, true)
+      map_new_window('gs', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
+      map_new_window('gS', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
+      map_new_window('gv', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
+      map_new_window('gV', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
+      map_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
+      map_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
     end,
   })
 end
