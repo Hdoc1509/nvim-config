@@ -1,9 +1,17 @@
 local M = {}
 
+---@enum WindowType
+M.WINDOW_TYPE = {
+  belowright_horizontal_split = 'belowright horizontal split',
+  belowright_vertical_split = 'belowright vertical split',
+  tabnew = 'tabnew',
+}
+
+---@type table<WindowType, string>
 local descriptions = {
-  ['belowright horizontal split'] = 'Split horizontally',
-  ['belowright vertical split'] = 'Split vertically',
-  ['tabnew'] = 'Open in new tab',
+  [M.WINDOW_TYPE.belowright_horizontal_split] = 'Split horizontally',
+  [M.WINDOW_TYPE.belowright_vertical_split] = 'Split vertically',
+  [M.WINDOW_TYPE.tabnew] = 'Open in new tab',
 }
 
 local get_map_desc = function(window_type, auto_enter)
