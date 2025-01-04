@@ -76,15 +76,20 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - css
   - embedded_template (ejs)
   - gitignore
+  - groovy
   - html
   - http
+  - hygen_template
+  - java
   - javascript
   - jsdoc
   - json
   - jsonc
   - lua
+  - luap
   - markdown (also used for `mdx` files)
   - markdown_inline
+  - properties
   - scss
   - toml
   - typescript
