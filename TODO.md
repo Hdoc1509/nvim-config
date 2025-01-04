@@ -2,13 +2,6 @@
 
 ## LSP
 
-### New features/configs
-
-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#cssls
-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#html
-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#jsonls
-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#lua_ls
-
 ### Try
 
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#spyglassmc_language_server
