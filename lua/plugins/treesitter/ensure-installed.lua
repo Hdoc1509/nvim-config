@@ -5,6 +5,7 @@ return {
   'bash',
   'css',
   'embedded_template',
+  'gitattributes',
   'gitignore',
   'groovy',
   'html',

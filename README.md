@@ -75,6 +75,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
     <!-- - cpp (required) -->
   - css
   - embedded_template (ejs)
+  - gitattributes
   - gitignore
   - groovy
   - html
