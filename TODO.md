@@ -49,6 +49,8 @@
 - Ingore `MD013` for `CHANGELOG.md` files
 - Ignore `MD024` for `TODO.md` files
 - Ignore `MD034` for `TODO.md` files
+- Ignore `MD041` for `*.tmpl.md` files
+- Ignore `MD012` for `*.tmpl.md` files
 
 ## Try
 
