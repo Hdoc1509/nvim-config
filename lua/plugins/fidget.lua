@@ -1,7 +1,7 @@
 return {
   'j-hui/fidget.nvim',
   tag = 'legacy',
-  event = 'LspAttach',
+  event = 'VeryLazy',
   opts = {
     text = {
       spinner = 'dots',
