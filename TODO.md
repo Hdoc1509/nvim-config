@@ -1,3 +1,5 @@
+# TODO
+
 ## LSP
 
 ### Install
@@ -35,6 +37,18 @@
 
 - Highlight Github Workflow built-in functions
   see: https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions#functions
+
+## Linters
+
+### Shellcheck within `bashls`
+
+- Ignore SC2034 for `.env*` files
+
+### Markdownlint
+
+- Ingore `MD013` for `CHANGELOG.md` files
+- Ignore `MD024` for `TODO.md` files
+- Ignore `MD034` for `TODO.md` files
 
 ## Try
 
