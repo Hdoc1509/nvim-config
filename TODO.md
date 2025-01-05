@@ -41,10 +41,8 @@
 ### Markdownlint
 
 - Ingore `MD013` for `CHANGELOG.md` and `*.tmpl.md` files
-- Ignore `MD024` for `TODO.md` files
-- Ignore `MD034` for `TODO.md` files
-- Ignore `MD041` for `*.tmpl.md` files
-- Ignore `MD012` for `*.tmpl.md` files
+- Ignore `MD024` and `MD034` for `TODO.md` files
+- Ignore `MD041` and `MD012` for `*.tmpl.md` files
 
 ## Try
 
