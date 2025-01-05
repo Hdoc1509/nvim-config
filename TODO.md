@@ -2,6 +2,13 @@
 
 ## LSP
 
+### ts_ls
+
+- Ignore `80001` error. "File ... may be converted to an ES module"
+- Ignore `7016` error about `missing declaration file` of
+  `tree-sitter-embedded-template` in `grammar.js` of my project
+  `tree-sitter-hygen-template`
+
 ### Try
 
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#spyglassmc_language_server
