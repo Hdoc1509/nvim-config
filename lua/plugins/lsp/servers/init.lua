@@ -17,6 +17,11 @@ return {
   ['eslint'] = default_settings,
   ['gradle_ls'] = default_settings,
   -- ['groovyls'] = default_settings,
+  -- ['github_actions_ls'] = merge(default_settings, {
+  --   init_params = {
+  --     sessionToken = vim.env.GITHUB_ACTIONS_LS_TOKEN,
+  --   },
+  -- }),
   ['html'] = default_settings,
   ['jsonls'] = require('plugins.lsp.servers.jsonls'),
   ['lua_ls'] = require('plugins.lsp.servers.lua_ls'),
