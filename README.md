@@ -248,6 +248,7 @@ Used mapleader is `space key`.
 | `<leader>_`   | Normal          | Open mini.files in root path of workspace     |
 | `<F3>`        | Insert / Normal | Toggle spell checking                         |
 | `<F5>`        | Normal          | Reload (re-edit) file                         |
+| `<leader>x`   | Normal          | Source current file                           |
 | `<leader>r`   | Visual          | Replace selected text in current file         |
 | `<leader>R`   | Visual          | Replace selected text in all files            |
 | `<leader>z`   | Normal          | Toggle Zen Mode                               |

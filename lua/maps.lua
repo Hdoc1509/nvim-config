@@ -101,3 +101,6 @@ keymap(
 
 -- reload file
 nmap('<F5>', '<cmd>edit<cr>', { desc = 'Reload (re-edit) file' })
+
+-- source file
+nmap('<leader><leader>x', '<cmd>source %<cr>', { desc = 'Source current file' })
