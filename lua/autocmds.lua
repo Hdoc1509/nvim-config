@@ -56,3 +56,11 @@ autocmd('TermClose', {
     vim.cmd("execute 'bdelete! ' . expand('<abuf>')")
   end,
 })
+
+-- highlight copied (yanked) text
+autocmd('TextYankPost', {
+  group = vim.api.nvim_create_augroup('highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank({ higroup = 'HighlightYank' })
+  end,
+})

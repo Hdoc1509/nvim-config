@@ -24,6 +24,7 @@ local config = function()
         VirtColumn = { fg = '#01b8ff' },
         MatchParen = { bg = '#3a3a3a' },
         Whitespace = { gui = 'bold', fg = '#777777' },
+        HighlightYank = { bg = '#3a3a3a' },
       },
     },
   })
