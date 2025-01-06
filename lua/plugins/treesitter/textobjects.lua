@@ -23,6 +23,9 @@ return {
 
       ['ar'] = '@return.outer',
       ['ir'] = '@return.inner',
+
+      ['a='] = '@assignment.outer',
+      ['i='] = '@assignment.inner',
     },
   },
   swap = {
