@@ -104,3 +104,8 @@ nmap('<F5>', '<cmd>edit<cr>', { desc = 'Reload (re-edit) file' })
 
 -- source file
 nmap('<leader><leader>x', '<cmd>source %<cr>', { desc = 'Source current file' })
+
+-- NOTE: available since Neovim 0.10.0
+-- execute line(s)
+-- nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
+-- keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
