@@ -17,14 +17,14 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
   local line_number = diagnostic.lnum
   local buf_line = vim.api.nvim_buf_get_lines(bufnr, line_number, line_number + 1, false)[1]
 
+  local is_changelog_file = string.match(buf_name, 'CHANGELOG%.md$') ~= nil
+
   return (string.match(buf_name, 'TODO%.md$') ~= nil and string.match(message, 'MD0[23]4') ~= nil)
-    or (
-      (
-        string.match(buf_line, '^|') ~= nil
-        or string.match(buf_name, 'CHANGELOG%.md$') ~= nil
-        or string.match(buf_name, '%.tmpl%.md$') ~= nil
-      ) and string.match(message, 'MD013') ~= nil
-    )
+    or ((string.match(buf_line, '^|') ~= nil or is_changelog_file or string.match(buf_name, '%.tmpl%.md$') ~= nil) and string.match(
+      message,
+      'MD013'
+    ) ~= nil)
+    or (is_changelog_file and string.match(message, 'MD024') ~= nil)
 end
 
 return merge(default_markdownlint, {
