@@ -22,14 +22,22 @@ return merge(default_markdownlint, {
     local all_diagnostics = default_parser(output, bufnr, linter_cwd)
     local buf_name = vim.api.nvim_buf_get_name(bufnr)
 
+    -- NOTE: can I use vim.fn.filter() instead of this loop?
     local idx = 1
 
     while idx <= #all_diagnostics do
       ---@type string
       ---@diagnostic disable-next-line: undefined-field
       local message = all_diagnostics[idx].message
+      ---@type integer
+      ---@diagnostic disable-next-line: undefined-field
+      local line_number = all_diagnostics[idx].lnum
+      local buf_line = vim.api.nvim_buf_get_lines(bufnr, line_number, line_number + 1, false)[1]
 
-      if string.match(buf_name, 'TODO.md$') ~= nil and is_message_to_ignore(message) then
+      if
+        (string.match(buf_name, 'TODO.md$') ~= nil and is_message_to_ignore(message))
+        or (string.match(buf_line, '^%|') ~= nil and string.match(message, 'MD013') ~= nil)
+      then
         table.remove(all_diagnostics, idx)
       else
         idx = idx + 1
