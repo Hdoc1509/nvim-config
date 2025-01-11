@@ -231,15 +231,15 @@ Used mapleader is `space key`.
 | `<leader>O`   | Normal [N]      | Add blanklines above current line             |
 | `]c`          | Normal          | Jump to next hunk                             |
 | `[c`          | Normal          | Jump to previous hunk                         |
-| `<leader>hs`  | Normal          | Stage hunk                                    |
+| `<leader>hs`  | Normal          | Stage hunk under cursor                       |
 | `<leader>hs`  | Visual          | Stage selected hunk(s)                        |
-| `<leader>hr`  | Normal          | Reset hunk                                    |
+| `<leader>hr`  | Normal          | Reset hunk under cursor                       |
 | `<leader>hr`  | Visual          | Reset selected hunk(s)                        |
 | `<leader>hS`  | Normal          | Stage buffer                                  |
-| `<leader>hu`  | Normal          | Unstage hunk                                  |
+| `<leader>hu`  | Normal          | Unstage hunk under cursor                     |
 | `<leader>hR`  | Normal          | Reset buffer                                  |
-| `<leader>hp`  | Normal          | Preview hunk                                  |
-| `<leader>hP`  | Normal          | Preview hunk inline                           |
+| `<leader>hp`  | Normal          | Preview hunk under cursor                     |
+| `<leader>hP`  | Normal          | Preview hunk under cursor but inline          |
 | `<c-a>`       | Insert          | Insert `supermaven` suggestion                |
 | `<c-j>`       | Insert          | Accept `supermaven` word suggestion           |
 | `<c-q>`       | Insert          | Clear/Cancel `supermaven` suggestion          |
