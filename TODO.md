@@ -43,7 +43,6 @@
 
 ### Markdownlint
 
-- Ingore `MD013` for `CHANGELOG.md` and `*.tmpl.md` files
 - Ignore `MD041` and `MD012` for `*.tmpl.md` files
 
 ## Try
