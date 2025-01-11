@@ -202,9 +202,9 @@ Used mapleader is `space key`.
 | `<c-l>`       | Normal          | Jump to right split                           |
 | `<leader>H`   | Normal          | Move window to previous tab                   |
 | `<leader>L`   | Normal          | Move window to next tab                       |
-| `<leader>G`   | Normal          | Open git summary window                       |
-| `<leader>vG`  | Normal          | Open git summary window in vertical split     |
-| `<leader>tG`  | Normal          | Open git summary window in new tab            |
+| `<leader>gG`  | Normal          | Open git summary window                       |
+| `<leader>gV`  | Normal          | Open git summary window in vertical split     |
+| `<leader>gT`  | Normal          | Open git summary window in new tab            |
 | `<leader>gaa` | Normal          | Execute `git add --all`                       |
 | `<leader>gd`  | Normal          | Execute `git diff`                            |
 | `<leader>gp`  | Normal          | Execute `git push`                            |
