@@ -9,10 +9,11 @@ local config = function()
 
   lint.linters_by_ft = {
     groovy = { 'groovy_lint' },
-    markdown = { 'markdownlint' },
+    markdown = { 'markdownlint_custom' },
   }
 
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
+  lint.linters.markdownlint_custom = require('plugins.lint.markdownlint')
 
   autocmd(aggressive_events, {
     pattern = '*.github/workflows/*.yml,*.github/workflows/*.yaml',

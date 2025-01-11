@@ -45,7 +45,6 @@
 
 - Ingore `MD013` for `CHANGELOG.md` and `*.tmpl.md` files
 - Ignore `MD013` if the line starts with `|` character (it's a table)
-- Ignore `MD024` and `MD034` for `TODO.md` files
 - Ignore `MD041` and `MD012` for `*.tmpl.md` files
 
 ## Try
