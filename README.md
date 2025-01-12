@@ -27,7 +27,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Completion engine via [`nvim-cmp`](https://github.com/hrsh7th/nvim-cmp/)
 - LSP support with [`nvim-lspconfig`](https://github.com/neovim/nvim-lspconfig)
 - Linter plugin with [`nvim-lint`](https://github.com/mfussenegger/nvim-lint)
-- Git integration with [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim) and [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
+- Git integration with [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim)
+  and [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim)
 - Functions and commands for Neovim GUI's via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim)
 - Better colorcolumn with [`virt-column.nvim`](https://github.com/lukas-reineke/virt-column.nvim)
@@ -37,8 +38,10 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons)
 - Unicode completion with [`unicode.vim`](https://github.com/chrisbra/unicode.vim)
 - Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim)
-- Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo) and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim)
-- Easily install packages with [`mason.nvim`](https://github.com/williamboman/mason.nvim) and [`mason-tool-installer`](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
+- Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo)
+  and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim)
+- Easily install packages with [`mason.nvim`](https://github.com/williamboman/mason.nvim)
+  and [`mason-tool-installer`](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 - Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
 - A.I. powered code-completion with [`supermaven-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
@@ -111,7 +114,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - [fd](https://github.com/sharkdp/fd#installation)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [shellcheck](https://github.com/koalaman/shellcheck#installing)
-- [Zig](https://github.com/ziglang/zig#installation) (optional) - See [Troubleshooting](#troubleshooting) section
+- [Zig](https://github.com/ziglang/zig#installation) (optional) - See
+  [Troubleshooting](#troubleshooting) section
 - `C` compiler (needed by `nvim-treesitter`):
   - [Windows tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
   - [Linux tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Linux-Support)
