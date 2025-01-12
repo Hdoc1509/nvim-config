@@ -41,10 +41,6 @@
 
 - Ignore SC2034 for `.env*` files
 
-### Markdownlint
-
-- Ignore `MD041` and `MD012` for `*.tmpl.md` files
-
 ## Try
 
 - https://github.com/DariusCorvus/tree-sitter-language-injection.nvim
