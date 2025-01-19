@@ -35,11 +35,6 @@
   https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions
   maybe develop tree-sitter-github-workflow-expression parser?
 
-#### JavaScript / TypeScript (ecma)
-
-- Inject `css` parser on `string_fragment` node if it is the parameter of
-`matches()` method of `Element`
-
 ## Linters
 
 ### Shellcheck within `bashls`
