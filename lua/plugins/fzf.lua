@@ -21,6 +21,7 @@ local config = function()
   end
 
   nmap('<leader>e', '<cmd>FZF<cr>')
+  nmap('<leader>E', '<cmd>Buffers<cr>')
 end
 
 return {

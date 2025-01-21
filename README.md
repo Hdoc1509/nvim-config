@@ -220,6 +220,7 @@ Used mapleader is `space key`.
 | `<c-d>`       | Normal / Insert | Remove current line                           |
 | `<leader>ya`  | Normal          | Copy all text of current file to clipboard    |
 | `<leader>e`   | Normal          | Search files with `fzf`                       |
+| `<leader>E`   | Normal          | Search buffers with `fzf`                     |
 | `]t`          | Normal          | Jump to next TODO comment                     |
 | `[t`          | Normal          | Jump to previous TODO comment                 |
 | `<leader>/`   | Normal          | Clear search highlighting                     |
