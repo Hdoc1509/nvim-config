@@ -29,5 +29,5 @@ return {
     config = config,
     build = './install --bin', -- ensure latest version for neovim
   },
-  'junegunn/fzf.vim',
+  { 'junegunn/fzf.vim', dependencies = 'junegunn/fzf' },
 }
