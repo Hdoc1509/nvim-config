@@ -15,6 +15,9 @@ set.colorcolumn = '80,100,120'
 set.encoding = 'utf-8'
 
 set.showmatch = true
+set.ignorecase = true
+set.smartcase = true
+
 set.showmode = false
 -- set.showtabline = 2
 
