@@ -4,7 +4,6 @@ return {
   dependencies = {
     'williamboman/mason.nvim',
     'tpope/vim-fugitive',
-    'hrsh7th/cmp-nvim-lsp',
   },
   config = function()
     local mason = require('mason-registry')
