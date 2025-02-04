@@ -56,3 +56,4 @@
 - https://github.com/bennypowers/svgo.nvim
   using config of svgmog: https://github.com/jakearchibald/svgomg/blob/main/src/config.json
   need to install https://github.com/svg/svgo
+- https://github.com/echasnovski/mini.icons as replacement for `nvim-web-devicons`
