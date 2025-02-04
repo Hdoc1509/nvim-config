@@ -1,5 +1,11 @@
 # TODO
 
+## Autocommands
+
+### TO FIX
+
+- Autoclose terminal buffer closes immediately after opening
+
 ## LSP
 
 ### ts_ls
