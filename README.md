@@ -306,6 +306,7 @@ configuration, follow next indications:
 - Custom icons must be declared in [`lua/icons.lua`](./lua/icons.lua)
 - Options related to colorscheme and custom GUI highlighting goes in
   [`lua/plugins/colorscheme.lua`](./lua/plugins/colorscheme.lua)
+- Custom colors are declared in [`lua/colors.lua`](./lua/colors.lua)
 - Options for Neovim GUI's are in [`ginit.vim`](./ginit.vim)
 - Util functions must be placed in [`lua/utils.lua`](./lua/utils.lua)
 

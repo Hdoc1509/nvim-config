@@ -1,4 +1,6 @@
 local config = function()
+  local COLORS = require('colors')
+
   require('nightfox').setup({
     options = {
       styles = {
@@ -8,23 +10,23 @@ local config = function()
     },
     palettes = {
       all = {
-        bg0 = '#101010',
-        bg1 = '#030303',
-        bg3 = '#202020',
-        white = '#ffffff',
-        green = '#00a600',
-        fg1 = '#ffffff',
+        bg0 = COLORS['gray-950'],
+        bg1 = COLORS['black'],
+        bg3 = COLORS['gray-890'],
+        white = COLORS['white'],
+        green = COLORS['green-A800'],
+        fg1 = COLORS['white'],
       },
     },
     groups = {
       all = {
-        Cursor = { bg = '#01b8ff' },
-        NvimTreeNormal = { bg = '#030303' },
-        NvimTreeExecFile = { fg = '#ffffff', gui = 'nocombine' },
-        VirtColumn = { fg = '#01b8ff' },
-        MatchParen = { bg = '#3a3a3a' },
-        Whitespace = { gui = 'bold', fg = '#777777' },
-        HighlightYank = { bg = '#3a3a3a' },
+        Cursor = { bg = COLORS['light-blue-A390'] },
+        NvimTreeNormal = { bg = COLORS['black'] },
+        NvimTreeExecFile = { fg = COLORS['white'], gui = 'nocombine' },
+        VirtColumn = { fg = COLORS['light-blue-A390'] },
+        MatchParen = { bg = COLORS['gray-850'] },
+        Whitespace = { gui = 'bold', fg = COLORS['gray-690'] },
+        HighlightYank = { bg = COLORS['gray-850'] },
       },
     },
   })
