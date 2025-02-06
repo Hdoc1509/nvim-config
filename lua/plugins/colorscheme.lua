@@ -27,6 +27,8 @@ local config = function()
         MatchParen = { bg = COLORS['gray-850'] },
         Whitespace = { gui = 'bold', fg = COLORS['gray-690'] },
         HighlightYank = { bg = COLORS['gray-850'] },
+        -- NOTE: Only create a highlight group for folders
+        -- icons are handled by nvim-web-devicons
         FolderCyan = { fg = COLORS.cyan },
         FolderDeepOrange = { fg = COLORS['deep-orange-400'] },
         FolderUtils = { fg = COLORS['light-green-600'] },
@@ -35,7 +37,6 @@ local config = function()
         FolderDesktop = { fg = COLORS['light-blue-600'] },
         FolderDownloads = { fg = COLORS['green-500'] },
         FolderVim = { fg = COLORS['green-600'] },
-        FileTodo = { fg = COLORS['light-green-600'] },
       },
     },
   })

@@ -88,6 +88,6 @@ return {
   },
   -- NOTE: only add icon and/or colors to files that do not have one yet
   file = {
-    ['TODO.md'] = { icon = '󰝖', hl = 'FileTodo' },
+    ['TODO.md'] = '󰝖',
   },
 }

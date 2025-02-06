@@ -1,4 +1,3 @@
-local devicons = require('nvim-web-devicons')
 local icons = require('icons')
 
 local M = {}
@@ -15,12 +14,7 @@ M.custom_prefix = function(fs_entry)
     return icon .. ' ', hl
   end
 
-  local devicon_icon, devicon_hl = devicons.get_icon(name, nil, { default = false })
-
-  icon = (icons.file[name] or {}).icon or devicon_icon or ''
-  hl = (icons.file[name] or {}).hl or devicon_hl or 'MiniFilesFile'
-
-  return icon .. ' ', hl
+  return MiniFiles.default_prefix(fs_entry)
 end
 
 return M
