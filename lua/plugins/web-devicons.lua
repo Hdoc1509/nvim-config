@@ -5,17 +5,14 @@ return {
     { 'Hdoc1509/hygen.nvim', tag = 'v0.2.0' },
   },
   config = function()
+    local COLORS = require('colors')
+
     require('nvim-web-devicons').setup({
       override_by_extension = {
         ['astro'] = {
-          icon = '',
-          color = '#f1502f',
+          icon = '',
+          color = COLORS['deep-purple-A200'],
           name = 'Astro',
-        },
-        ['http'] = {
-          icon = '󰖟',
-          color = '#228be6',
-          name = 'Http',
         },
       },
     })
