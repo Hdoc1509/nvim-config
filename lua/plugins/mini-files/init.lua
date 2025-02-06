@@ -3,11 +3,15 @@ local config = function()
   local nmap = utils.nmap
   local filters = require('plugins.mini-files.filters')
   local maps = require('plugins.mini-files.maps')
+  local prefix = require('plugins.mini-files.prefix')
   local nmap_new_window = maps.nmap_new_window
   local WINDOW_TYPE = maps.WINDOW_TYPE
 
   require('mini.files').setup({
-    content = { filter = filters.hide_excluded },
+    content = {
+      filter = filters.hide_excluded,
+      prefix = prefix.custom_prefix,
+    },
   })
 
   nmap('-', function()
