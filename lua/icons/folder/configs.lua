@@ -7,28 +7,28 @@
 return {
   -- TODO: extend based on:
   -- https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/src/core/icons/folderIcons.ts
-  utils = {
-    icon = '󰉗',
-    hl = 'FolderUtils',
-    folder_names = { 'utils', 'utitlity', 'utilities' },
-  },
-  temp = {
-    icon = '󰪺',
-    hl = 'FolderTemp',
-    folder_names = { 'temp', 'tmp', 'cached', 'cache', '.cache' },
-  },
+  ['.github'] = { icon = '', hl = 'FolderGithub' },
+  config = { icon = '󱁿', hl = { clone = 'src' } },
   development = {
     icon = '󱧼',
     hl = 'FolderDevelopment',
     folder_names = { 'dev', 'development' },
   },
+  home = { hl = { clone = 'development' } },
+  other = { hl = 'FolderVideo' },
   src = {
     icon = '󰴉',
     hl = 'FolderSrc',
-    folder_names = { 'src', 'srcs', 'source', 'sources', 'code' },
+    folder_names = { 'code', 'source', 'sources', 'src', 'srcs' },
   },
-  ['.github'] = { icon = '', hl = 'FolderGithub' },
-  config = { icon = '󱁿', hl = { clone = 'src' } },
-  other = { hl = 'FolderVideo' },
-  home = { hl = { clone = 'development' } },
+  temp = {
+    icon = '󰪺',
+    hl = 'FolderTemp',
+    folder_names = { '.cache', 'cache', 'cached', 'temp', 'tmp' },
+  },
+  utils = {
+    icon = '󰉗',
+    hl = 'FolderUtils',
+    folder_names = { 'utilities', 'utils', 'utitlity' },
+  },
 }
