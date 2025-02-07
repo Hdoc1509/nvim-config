@@ -5,7 +5,8 @@ local folder_icons = {}
 ---@param config_name string
 ---@param config FolderIconConfig
 local function set_config(config_name, config)
-  -- TODO: add support to clone `icon`
+  -- TODO: remove support to clone `hl`
+  -- its easier to just write the hl group name
   if config.hl.clone ~= nil then
     folder_icons[config_name] = {
       icon = config.icon,
