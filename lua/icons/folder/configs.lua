@@ -228,7 +228,7 @@ return {
   },
   Favorites = { icon = '󱃪', hl = 'FolderFavorites' },
   font = { hl = 'FolderFont', folder_names = { 'font', 'fonts' } },
-  ftdetect = { icon = '󱁽', hl = 'FolderCompiler' },
+  ftdetect = { icon = '󱁽', hl = 'DevIconVim' },
   functions = {
     icon = '󱁽',
     hl = 'FolderFunctions',
@@ -398,7 +398,7 @@ return {
     folder_names = { '.npm', 'node', 'node_modules', 'nodejs', 'npm' },
   },
   neovim = { hl = 'DevIconVim', folder_names = { 'neovim', 'nvim' } },
-  opt = { icon = '󰉗', hl = 'FolderOpt' },
+  opt = { icon = '󰉗', hl = 'FolderConfig' },
   other = {
     hl = 'FolderOther',
     folder_names = {
@@ -449,7 +449,7 @@ return {
   -- TODO: rename highlight group to `DevIconPnpm` once I setted it for
   -- `nvim-web-devicons`
   pnpm = { hl = 'FolderPnpm' },
-  proc = { icon = '󰢬', hl = 'FolderProc' },
+  proc = { icon = '󰢬', hl = 'FolderConfig' },
   ProgramData = { icon = '󰉌', hl = 'FolderOther' },
   public = {
     icon = '󱧰',
