@@ -20,8 +20,6 @@ return {
   ['light-blue-700'] = '#0288D1',
   ['light-blue-800'] = '#0277BD',
   ['light-blue-A390'] = '#01B8FF',
-  ['light-blue-A400'] = '#00B0FF',
-  ['light-blue-A700'] = '#0091EA',
   ['cyan-500'] = '#00BCD4',
   ['cyan-600'] = '#00ACC1',
   ['cyan-700'] = '#0097A7',
