@@ -15,19 +15,25 @@ return {
   -- TODO:try to get similar icons and colors from:
   -- https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/images/fileIcons.png
   -- https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/images/folderIcons.png
-
-  ['.astro'] = { hl = 'DevIconAstro' },
   ['.changeset'] = { hl = 'FolderChangeset' },
-  ['.github'] = { icon = '', hl = 'FolderGithub' },
   ['.idea'] = { hl = 'FolderIntellij' },
   ['.local'] = { icon = '󰉌', hl = 'FolderCyan' },
   ['.vim'] = { hl = 'DevIconVim' },
   ['.vscode'] = { hl = 'FolderVscode' },
+  api = {
+    icon = '󰴉',
+    hl = 'FolderApi',
+    folder_names = { 'api', 'apis', 'restapi' },
+  },
   AppData = { icon = '󰉌', hl = 'FolderDeepOrange' },
   app = {
     icon = '󱧺',
     hl = 'FolderApp',
     folder_names = { 'Applications', 'app', 'application', 'applications', 'apps' },
+  },
+  astro = {
+    hl = 'DevIconAstro',
+    folder_names = { '.astro', 'astro' },
   },
   audio = {
     icon = '󱍙',
@@ -46,9 +52,17 @@ return {
       'voices',
     },
   },
-  bin = { icon = '󱧺', hl = 'FolderDist' },
+  bin = {
+    icon = '󱧺',
+    hl = 'FolderDist',
+    folder_names = { '.bin', 'bin' },
+  },
   boot = { icon = '󰴋', hl = 'FolderBoot' },
   c = { hl = 'DevIconC' },
+  cinnamon = {
+    hl = 'DevIconCinnamon',
+    folder_names = { 'cinnamon', 'cinnamon-session' },
+  },
   class = {
     hl = 'FolderClass',
     folder_names = {
@@ -85,6 +99,11 @@ return {
       'setting',
       'settings',
     },
+  },
+  content = {
+    icon = '󰲂',
+    hl = 'FolderContent',
+    folder_names = { 'content', 'contents' },
   },
   controller = {
     icon = '󱁿',
@@ -166,8 +185,28 @@ return {
     },
   },
   emmbedded_template = { icon = '󱋣', hl = 'DevIconEjs' },
+  error = {
+    hl = 'FolderError',
+    folder_names = { 'crash', 'crashes', 'err', 'error', 'errors', 'errs' },
+  },
   etc = { icon = '󱁿', hl = 'FolderOther' },
+  examples = {
+    hl = 'FolderExamples',
+    folder_names = {
+      'demo',
+      'demos',
+      'example',
+      'examples',
+      'sample',
+      'sample-data',
+      'samples',
+    },
+  },
   Favorites = { icon = '󱃪', hl = 'FolderFavorites' },
+  font = {
+    hl = 'FolderFont',
+    folder_names = { 'font', 'fonts' },
+  },
   ftdetect = { icon = '󱁽', hl = 'FolderGreen' },
   functions = {
     icon = '󱁽',
@@ -203,6 +242,11 @@ return {
       'gens',
     },
   },
+  github = {
+    icon = '',
+    hl = 'FolderGithub',
+    folder_names = { '.github', 'gh' },
+  },
   git = {
     icon = '',
     hl = 'DevIconGitLogo',
@@ -214,6 +258,10 @@ return {
     folder_names = { '.gradle', 'buildSrc', 'gradle' },
   },
   groovy = { hl = 'DevIconGroovy' },
+  gtk = {
+    hl = 'DevIconGtk',
+    folder_names = { 'gtk-2.0', 'gtk-3.0', 'gtk-4.0' },
+  },
   home = {
     icon = '󱂵',
     hl = 'FolderHome',
@@ -279,6 +327,11 @@ return {
     hl = 'DevIconJs',
     folder_names = { 'ecma', 'javascript', 'javascripts', 'js' },
   },
+  layout = {
+    icon = '󱋣',
+    hl = 'FolderLayout',
+    folder_names = { 'layout', 'layouts' },
+  },
   lib = {
     icon = '󰲂',
     hl = 'FolderLib',
@@ -315,6 +368,26 @@ return {
   },
   media = { icon = '󱧺', hl = 'FolderVideo' },
   mnt = { icon = '󰉓', hl = 'MiniIconsYellow' },
+  mock = {
+    icon = '󰣞',
+    hl = 'FolderMock',
+    folder_names = {
+      'concept',
+      'concepts',
+      'draft',
+      'drafts',
+      'fixture',
+      'fixtures',
+      'mock',
+      'mocks',
+      'sketch',
+      'sketches',
+    },
+  },
+  netlify = {
+    hl = 'FolderNetlify',
+    folder_names = { '.netlify', 'netlify' },
+  },
   node = {
     icon = '',
     hl = 'FolderNode',
@@ -414,6 +487,10 @@ return {
   root = { icon = '󰷌', hl = 'MiniIconsYellow' },
   run = { icon = '󱧺', hl = 'FolderRun' },
   rust = { hl = 'DevIconRs' },
+  sass = {
+    hl = 'DevIconScss',
+    folder_names = { 'sass', 'sass-utils', 'scss' },
+  },
   sbin = { icon = '󱧺', hl = 'MiniIconsYellow' },
   scripts = {
     icon = '󰴉',
@@ -422,17 +499,22 @@ return {
   },
   server = {
     hl = 'FolderServer',
-    folder_names = { 'server', 'servers', 'backend', 'backends' },
+    folder_names = { 'backend', 'backends', 'server', 'servers', 'ssr' },
   },
   shared = {
     icon = '󰡰',
     hl = 'FolderShared',
     folder_names = { 'Network', 'common', 'shared' },
   },
+  shell = { icon = '󰴉', hl = 'DevIconSh' },
   snippet = {
     icon = '󱁽',
     hl = 'FolderSnippets',
     folder_names = { 'snippet', 'snippets' },
+  },
+  store = {
+    hl = 'FolderStore',
+    folder_names = { 'store', 'stores' },
   },
   swift = { hl = 'DevIconSwift' },
   syntax = {
@@ -480,7 +562,15 @@ return {
   theme = {
     icon = '󱁽',
     hl = 'FolderTheme',
-    folder_names = { 'color', 'colors', 'design', 'designs', 'theme', 'themes' },
+    folder_names = {
+      'color',
+      'colors',
+      'design',
+      'designs',
+      'theme',
+      'themes',
+      'theming',
+    },
   },
   trash = {
     icon = '󱧴',
@@ -526,8 +616,16 @@ return {
       'views',
     },
   },
-  vitejs = { hl = 'FolderVite' },
+  vite = {
+    hl = 'FolderVite',
+    folder_names = { '.vite', 'vite', 'vite-config', 'vitejs' },
+  },
+  vlc = { hl = 'DevIconVlc' },
   Volumes = { icon = '󰉓', hl = 'FolderDeepOrange' },
+  windows = {
+    hl = 'DevIconWindows',
+    folder_names = { 'win', 'win32', 'windows' },
+  },
   workflows = { hl = 'FolderGithub' },
   yaml = { hl = 'DevIconYaml' },
 }
