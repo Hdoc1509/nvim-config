@@ -148,6 +148,11 @@ return {
     hl = 'DevIconCss',
     folder_names = { 'css', 'style', 'styles', 'stylesheet', 'stylesheets' },
   },
+  database = {
+    icon = '󰉓',
+    hl = 'FolderDatabase',
+    folder_names = { 'data', 'database', 'databases', 'db', 'sql' },
+  },
   desktop = {
     icon = '󰚝',
     hl = 'FolderDesktop',

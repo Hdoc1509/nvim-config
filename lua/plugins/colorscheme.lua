@@ -41,6 +41,7 @@ local config = function()
         FolderConnection = { fg = COLORS['cyan-600'] },
         FolderContent = { fg = COLORS['cyan-500'] },
         FolderController = { fg = COLORS['amber-500'] },
+        FolderDatabase = { fg = COLORS['amber-400'] },
         FolderDeepOrange = { fg = COLORS['deep-orange-400'] },
         FolderDesktop = { fg = COLORS['light-blue-600'] },
         FolderDevelopment = { fg = COLORS['light-blue-700'] },
