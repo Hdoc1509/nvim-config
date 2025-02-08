@@ -50,7 +50,7 @@ return {
       'voices',
     },
   },
-  bin = { icon = '󱧺', hl = 'FolderDist', folder_names = { '.bin', 'bin' } },
+  bin = { icon = '󱧺', hl = 'FolderDist', folder_names = { '.bin', 'bin', 'sbin' } },
   boot = { icon = '󰴋', hl = 'FolderBoot' },
   c = { hl = 'DevIconC' },
   cinnamon = {
@@ -134,6 +134,7 @@ return {
       'providers',
       'service',
       'services',
+      'srv',
     },
   },
   compiler = { icon = '󱁽', hl = 'FolderCompiler' },
@@ -393,7 +394,6 @@ return {
   },
   neovim = { hl = 'DevIconVim', folder_names = { 'neovim', 'nvim' } },
   opt = { icon = '󰉗', hl = 'FolderOpt' },
-  -- TODO: continue from here
   other = {
     hl = 'FolderOther',
     folder_names = {
@@ -419,7 +419,7 @@ return {
       'serverpackages',
     },
   },
-  parser = { icon = '󱁽', hl = 'MiniIconsGreen' },
+  parser = { icon = '󱁽', hl = 'FolderParser' },
   plugin = {
     icon = '󱁽',
     hl = 'FolderPlugin',
@@ -441,8 +441,10 @@ return {
       'rplugin',
     },
   },
+  -- TODO: rename highlight group to `DevIconPnpm` once I setted it for
+  -- `nvim-web-devicons`
   pnpm = { hl = 'FolderPnpm' },
-  proc = { icon = '󰢬', hl = 'MiniIconsYellow' },
+  proc = { icon = '󰢬', hl = 'FolderProc' },
   ProgramData = { icon = '󰉌', hl = 'FolderOther' },
   public = {
     icon = '󱧰',
@@ -464,7 +466,7 @@ return {
     hl = 'DevIconPy',
     folder_names = { 'pycache', 'pytest_cache', 'python' },
   },
-  queries = { icon = '󱁽', hl = 'MiniIconsGreen' },
+  queries = { icon = '󱁽', hl = 'FolderQueries' },
   react = { hl = 'DevIconJsx' },
   resource = {
     icon = '󱧶',
@@ -480,11 +482,10 @@ return {
       'static',
     },
   },
-  root = { icon = '󰷌', hl = 'MiniIconsYellow' },
-  run = { icon = '󱧺', hl = 'FolderRun' },
+  root = { icon = '󰷌', hl = 'FolderRoot' },
+  run = { icon = '󱧺', hl = 'FolderHome' },
   rust = { hl = 'DevIconRs' },
   sass = { hl = 'DevIconScss', folder_names = { 'sass', 'sass-utils', 'scss' } },
-  sbin = { icon = '󱧺', hl = 'MiniIconsYellow' },
   scripts = {
     icon = '󰴉',
     hl = 'FolderScripts',
@@ -508,7 +509,7 @@ return {
   store = { hl = 'FolderStore', folder_names = { 'store', 'stores' } },
   swift = { hl = 'DevIconSwift' },
   syntax = {
-    icon = '󱁽',
+    icon = '󱥾',
     hl = 'FolderSyntax',
     folder_names = { 'spell', 'spellcheck', 'spellcheckers', 'syntax', 'syntaxes' },
   },
@@ -518,7 +519,6 @@ return {
     hl = 'FolderSrc',
     folder_names = { 'code', 'source', 'sources', 'src', 'srcs' },
   },
-  srv = { icon = '󱋣', hl = 'MiniIconsYellow' },
   temp = {
     icon = '󰪺',
     hl = 'FolderTemp',
@@ -565,7 +565,9 @@ return {
     },
   },
   trash = { icon = '󱧴', hl = 'FolderTrash', folder_names = { 'Trash', 'trash' } },
-  tutor = { icon = '󱁽', hl = 'MiniIconsGreen' },
+  -- TODO: folders that are only for vim/neovim and doesn't belong to any group
+  -- should use `DevIconVim` highlight group
+  tutor = { icon = '󱁽', hl = 'FolderTutor' },
   ui = {
     icon = '󱋣',
     hl = 'FolderUi',
@@ -577,7 +579,7 @@ return {
     hl = 'FolderUtils',
     folder_names = { 'utilities', 'utils', 'utitlity' },
   },
-  var = { icon = '󱋣', hl = 'MiniIconsYellow' },
+  var = { icon = '󱋣', hl = 'FolderOther' },
   video = {
     icon = '󱞊',
     hl = 'FolderVideo',

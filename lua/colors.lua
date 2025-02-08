@@ -8,13 +8,13 @@ return {
   ['orange-500'] = '#FF9800',
   ['deep-orange-400'] = '#FF7043',
   ['brown-400'] = '#8D6E63',
+  ['purple-400'] = '#AB47BC',
   ['deep-purple-A200'] = '#7C4DFF',
   ['indigo-400'] = '#5C6BC0',
   ['blue-400'] = '#42A5F5',
   ['blue-500'] = '#2196F3',
   ['blue-600'] = '#1E88E5',
-  -- color taken from header background:
-  -- https://microsoft.github.io/language-server-protocol/
+  -- color from header background: https://microsoft.github.io/language-server-protocol/
   ['blue-A800'] = '#2753e3',
   ['light-blue-600'] = '#039BE5',
   ['light-blue-700'] = '#0288D1',
@@ -24,8 +24,10 @@ return {
   ['light-blue-A700'] = '#0091EA',
   ['cyan-500'] = '#00BCD4',
   ['cyan-600'] = '#00ACC1',
+  ['cyan-700'] = '#0097A7',
   ['teal-400'] = '#26A69A',
   ['teal-500'] = '#009688',
+  ['teal-A700'] = '#00BFA5',
   ['green-500'] = '#4CAF50',
   ['green-600'] = '#43A047',
   ['green-A800'] = '#00A600',
@@ -35,7 +37,11 @@ return {
   ['lime-700'] = '#AFB42B',
   ['yellow-700'] = '#FBC02D',
   ['yellow-800'] = '#F9A825',
+  -- color from header background: https://pnpm.io
+  ['yellow-850'] = '#f69220',
   ['amber-500'] = '#FFC107',
+  -- color from: https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/icons/vite.svg
+  ['amber-A700'] = '#FFAB00',
   white = '#FFFFFF',
   ['gray-690'] = '#777777',
   ['gray-850'] = '#3A3A3A',

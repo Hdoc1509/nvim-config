@@ -25,7 +25,7 @@ return {
     ['fabric.mod.json'] = '󰯁',
     ['vite.config.js'] = '',
     ['vite.config.ts'] = '',
-    ['pnpm-lock.yaml'] = '',
+    ['pnpm-lock.yaml'] = '', -- color of DevIconPnpm highlight group
     ['pnpm-workspace.yaml'] = '',
     ['.git-for-windows-updater'] = '', -- color of DevIconGitAttributes highlight group
     ['LICENSE.txt'] = '', -- color of DevIconLicense highlight group
