@@ -202,7 +202,7 @@ return {
   },
   emmbedded_template = { icon = '󱋣', hl = 'DevIconEjs' },
   error = {
-    icon = '󱂷',
+    icon = '󰷌',
     hl = 'FolderError',
     folder_names = { 'crash', 'crashes', 'err', 'error', 'errors', 'errs' },
   },
