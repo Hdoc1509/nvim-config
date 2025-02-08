@@ -15,7 +15,7 @@ return {
   -- TODO:try to get similar icons and colors from:
   -- https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/images/fileIcons.png
   -- https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/images/folderIcons.png
-  ['.changeset'] = { hl = 'FolderChangeset' },
+  ['.changeset'] = { hl = 'FolderChangesets' },
   ['.idea'] = { hl = 'FolderIntellij' },
   ['.local'] = { icon = '󰉌', hl = 'FolderCyan' },
   ['.vim'] = { hl = 'DevIconVim' },
