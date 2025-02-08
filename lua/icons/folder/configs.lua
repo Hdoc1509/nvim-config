@@ -74,6 +74,17 @@ return {
       'schemas',
     },
   },
+  client = {
+    hl = 'FolderClient',
+    folder_names = {
+      'client',
+      'clients',
+      'frontend',
+      'frontends',
+      'pwa',
+      'spa',
+    },
+  },
   config = {
     icon = '󱁿',
     hl = 'FolderConfig',
@@ -98,6 +109,17 @@ return {
       'prefs',
       'setting',
       'settings',
+    },
+  },
+  connection = {
+    hl = 'FolderConnection',
+    folder_names = {
+      'connection',
+      'connections',
+      'integration',
+      'integrations',
+      'remote',
+      'remotes',
     },
   },
   content = {
@@ -292,7 +314,7 @@ return {
     icon = '󰉏',
     hl = 'FolderImages',
     folder_names = {
-      'Pictures',
+      '.icons',
       'fig',
       'figs',
       'figure',
@@ -312,6 +334,7 @@ return {
       'pic',
       'pics',
       'picture',
+      'Pictures',
       'pictures',
       'screengrab',
       'screengrabs',
@@ -320,7 +343,10 @@ return {
     },
   },
   indent = { icon = '󱁽', hl = 'MiniIconsGreen' },
-  java = { hl = 'DevIconJava' },
+  java = {
+    hl = 'DevIconJava',
+    folder_names = { '.java', 'java', 'jre' },
+  },
   javascript = {
     -- NOTE: for filetype-releated directories, use DevIcon's highlight groups
     -- these are defined by the `nvim-web-devicons` plugin
@@ -391,7 +417,7 @@ return {
   node = {
     icon = '',
     hl = 'FolderNode',
-    folder_names = { 'node', 'node_modules', 'nodejs', 'npm' },
+    folder_names = { '.npm', 'node', 'node_modules', 'nodejs', 'npm' },
   },
   neovim = {
     hl = 'DevIconVim',
@@ -538,11 +564,12 @@ return {
     icon = '󱋣',
     hl = 'FolderTemplate',
     folder_names = {
+      '_templates',
       'ISSUE_TEMPLATE',
       'PULL_REQUEST_TEMPLATE',
       'Template',
-      '_templates',
       'template',
+      'Templates',
       'templates',
     },
   },
@@ -563,6 +590,7 @@ return {
     icon = '󱁽',
     hl = 'FolderTheme',
     folder_names = {
+      '.themes',
       'color',
       'colors',
       'design',
