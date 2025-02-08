@@ -137,7 +137,7 @@ return {
       'srv',
     },
   },
-  compiler = { icon = '󱁽', hl = 'FolderCompiler' },
+  compiler = { icon = '󱁽', hl = 'DevIconVim' },
   components = {
     icon = '󱋣',
     hl = 'FolderComponents',
@@ -329,7 +329,7 @@ return {
       'screenshots',
     },
   },
-  indent = { icon = '󱁽', hl = 'FolderIndent' },
+  indent = { icon = '󱁽', hl = 'DevIconVim' },
   java = { hl = 'DevIconJava', folder_names = { '.java', 'java', 'jre' } },
   javascript = {
     hl = 'DevIconJs',
@@ -419,7 +419,7 @@ return {
       'serverpackages',
     },
   },
-  parser = { icon = '󱁽', hl = 'FolderParser' },
+  parser = { icon = '󱁽', hl = 'DevIconVim' },
   plugin = {
     icon = '󱁽',
     hl = 'FolderPlugin',
@@ -466,7 +466,7 @@ return {
     hl = 'DevIconPy',
     folder_names = { 'pycache', 'pytest_cache', 'python' },
   },
-  queries = { icon = '󱁽', hl = 'FolderQueries' },
+  queries = { icon = '󱁽', hl = 'DevIconVim' },
   react = { hl = 'DevIconJsx' },
   resource = {
     icon = '󱧶',
@@ -565,9 +565,7 @@ return {
     },
   },
   trash = { icon = '󱧴', hl = 'FolderTrash', folder_names = { 'Trash', 'trash' } },
-  -- TODO: folders that are only for vim/neovim and doesn't belong to any group
-  -- should use `DevIconVim` highlight group
-  tutor = { icon = '󱁽', hl = 'FolderTutor' },
+  tutor = { icon = '󱁽', hl = 'DevIconVim' },
   ui = {
     icon = '󱋣',
     hl = 'FolderUi',
