@@ -207,6 +207,7 @@ return {
     folder_names = { 'crash', 'crashes', 'err', 'error', 'errors', 'errs' },
   },
   etc = { icon = '󱁿', hl = 'FolderOther' },
+  event = { icon = '󱞊', hl = 'FolderEvent', folder_names = { 'event', 'events' } },
   examples = {
     hl = 'FolderExamples',
     folder_names = {
