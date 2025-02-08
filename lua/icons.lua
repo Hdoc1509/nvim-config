@@ -17,9 +17,10 @@ return {
   -- TODO: do the same config used for folder icons
   -- add these to `nvim-web-devicons` register
   file = {
-    ['.env.local'] = '',
+    ['.env.local'] = '', -- color of DevIconEnv highlight group
     ['.env.production'] = '',
-    ['.env.development'] = '', -- color of FolderDevelopment highlight group
+    ['.env.development'] = '',
+    ['.env.example'] = '',
     ['TODO.md'] = '',
     ['fabric.mod.json'] = '󰯁',
     ['vite.config.js'] = '',
@@ -27,5 +28,18 @@ return {
     ['pnpm-lock.yaml'] = '',
     ['pnpm-workspace.yaml'] = '',
     ['.git-for-windows-updater'] = '', -- color of DevIconGitAttributes highlight group
+    ['LICENSE.txt'] = '', -- color of DevIconLicense highlight group
+    ['tsconfig.node.json'] = '', -- color of DevIconTSConfig highlight group
+    ['.eslintrc.js'] = '', -- color of DevIconEslintrc highlight group
+    ['.eslintrc.cjs'] = '',
+    ['.eslintrc.mts'] = '',
+    ['.eslintrc.cts'] = '',
+    ['jsconfig.json'] = '', -- color of DevIconJs highlight group
+    ['astro.config.cjs'] = '', -- color of DevIconAstro highlight groupº
+    ['astro.config.cts'] = '',
+    ['astro.config.js'] = '',
+    ['astro.config.mjs'] = '',
+    ['astro.config.mts'] = '',
+    ['astro.config.ts'] = '',
   },
 }
