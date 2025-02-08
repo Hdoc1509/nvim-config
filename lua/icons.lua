@@ -17,11 +17,15 @@ return {
   -- TODO: do the same config used for folder icons
   -- add these to `nvim-web-devicons` register
   file = {
+    ['.env.local'] = '',
+    ['.env.production'] = '',
+    ['.env.development'] = '', -- color of FolderDevelopment highlight group
     ['TODO.md'] = '',
     ['fabric.mod.json'] = '󰯁',
     ['vite.config.js'] = '',
     ['vite.config.ts'] = '',
     ['pnpm-lock.yaml'] = '',
     ['pnpm-workspace.yaml'] = '',
+    ['.git-for-windows-updater'] = '', -- color of DevIconGitAttributes highlight group
   },
 }
