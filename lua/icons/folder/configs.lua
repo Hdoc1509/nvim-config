@@ -58,6 +58,7 @@ return {
     folder_names = { 'cinnamon', 'cinnamon-session' },
   },
   class = {
+    icon = '󱧶',
     hl = 'FolderClass',
     folder_names = {
       'class',
@@ -281,6 +282,11 @@ return {
     hl = 'FolderHome',
     folder_names = { 'home', 'landing', 'main', 'start' },
   },
+  hook = {
+    icon = '󱁿',
+    hl = 'FolderHook',
+    folder_names = { 'hook', 'hooks', 'trigger', 'triggers' },
+  },
   html = { icon = '󱋣', hl = 'DevIconHtml' },
   i18n = {
     icon = '󱁽',
@@ -488,9 +494,25 @@ return {
     },
   },
   root = { icon = '󰷌', hl = 'FolderRoot' },
+  rules = {
+    icon = '󱥾',
+    hl = 'FolderRules',
+    folder_names = {
+      'rules',
+      'validation',
+      'validations',
+      'validator',
+      'validators',
+      'rule',
+    },
+  },
   run = { icon = '󱧺', hl = 'FolderHome' },
   rust = { hl = 'DevIconRs' },
-  sass = { hl = 'DevIconScss', folder_names = { 'sass', 'sass-utils', 'scss' } },
+  sass = {
+    icon = '󰣞',
+    hl = 'DevIconScss',
+    folder_names = { 'sass', 'sass-utils', 'scss' },
+  },
   scripts = {
     icon = '󰴉',
     hl = 'FolderScripts',
@@ -511,7 +533,13 @@ return {
     hl = 'FolderSnippets',
     folder_names = { 'snippet', 'snippets' },
   },
-  store = { hl = 'FolderStore', folder_names = { 'store', 'stores' } },
+  src = {
+    icon = '󰴉',
+    hl = 'FolderSrc',
+    folder_names = { 'code', 'source', 'sources', 'src', 'srcs' },
+  },
+  state = { hl = 'FolderState' },
+  store = { icon = '󱂵', hl = 'FolderStore', folder_names = { 'store', 'stores' } },
   swift = { hl = 'DevIconSwift' },
   syntax = {
     icon = '󱥾',
@@ -519,11 +547,6 @@ return {
     folder_names = { 'spell', 'spellcheck', 'spellcheckers', 'syntax', 'syntaxes' },
   },
   System = { icon = '󱧼', hl = 'FolderOther' },
-  src = {
-    icon = '󰴉',
-    hl = 'FolderSrc',
-    folder_names = { 'code', 'source', 'sources', 'src', 'srcs' },
-  },
   temp = {
     icon = '󰪺',
     hl = 'FolderTemp',
