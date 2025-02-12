@@ -1,7 +1,6 @@
 local config = function()
   local utils = require('utils')
   local nmap = utils.nmap
-  local filters = require('plugins.mini-files.filters')
   local maps = require('plugins.mini-files.maps')
   local prefix = require('plugins.mini-files.prefix')
   local nmap_new_window = maps.nmap_new_window
@@ -9,7 +8,10 @@ local config = function()
 
   require('mini.files').setup({
     content = {
-      filter = filters.hide_excluded,
+      filter = function(entry)
+        -- NOTE: files/folders that will always be hidden
+        return entry.name ~= '.git'
+      end,
       prefix = prefix.custom_prefix,
     },
   })
@@ -29,8 +31,6 @@ local config = function()
     callback = function(args)
       local buf_id = args.data.buf_id
 
-      nmap('gd', filters.toggle_dotfiles, { buffer = buf_id })
-      nmap('ge', filters.toggle_exclude, { buffer = buf_id })
       nmap_new_window('gs', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
       nmap_new_window('gS', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
       nmap_new_window('gv', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
