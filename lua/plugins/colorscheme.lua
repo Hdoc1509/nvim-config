@@ -31,6 +31,7 @@ local config = function()
         -- icons are handled by nvim-web-devicons
         FolderApi = { fg = COLORS['yellow-700'] },
         FolderApp = { fg = COLORS['red-400'] },
+        FolderArchive = { fg = COLORS['brown-400'] },
         FolderAudio = { fg = COLORS['red-400'] },
         FolderBoot = { fg = COLORS['yellow-800'] },
         FolderChangesets = { fg = COLORS['blue-500'] },
