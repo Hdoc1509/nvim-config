@@ -228,7 +228,7 @@ return {
       'downloads',
     },
   },
-  emmbedded_template = { icon = '󱋣', hl = 'DevIconEjs' },
+  embedded_template = { icon = '󱋣', hl = 'DevIconEjs' },
   error = {
     icon = '󰷌',
     hl = 'FolderError',
