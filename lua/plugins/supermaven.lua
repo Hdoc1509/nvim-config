@@ -6,6 +6,7 @@ return {
         accept_suggestion = '<C-a>',
         clear_suggestion = '<C-q>',
       },
+      ignore_filetypes = { minifiles = true },
     })
   end,
 }

@@ -31,6 +31,17 @@ local config = function()
     callback = function(args)
       local buf_id = args.data.buf_id
 
+      -- allow to confirm changes on write. taken from:
+      -- https://github.com/mrjones2014/dotfiles/blob/31f7988420e5418925022c524de04934e02a427c/nvim/lua/my/configure/mini_files.lua#L14
+      vim.api.nvim_buf_set_option(buf_id, 'buftype', 'acwrite')
+      vim.api.nvim_buf_set_name(buf_id, string.format('mini.files-%s', vim.loop.hrtime()))
+      utils.autocmd('BufWriteCmd', {
+        buffer = buf_id,
+        callback = function()
+          MiniFiles.synchronize()
+        end,
+      })
+
       nmap_new_window('gs', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
       nmap_new_window('gS', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
       nmap_new_window('gv', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
