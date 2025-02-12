@@ -29,7 +29,6 @@ end
 ---@param opts { buf_id: number,  auto_enter?: boolean }
 M.nmap_new_window = function(lhs, window_type, opts)
   local auto_enter = opts.auto_enter or false
-  local buf_id = opts.buf_id
 
   local rhs = function()
     -- Make new window and set it as target
@@ -55,7 +54,10 @@ M.nmap_new_window = function(lhs, window_type, opts)
   end
 
   -- Adding `desc` will result into `show_help` entries
-  vim.keymap.set('n', lhs, rhs, { buffer = buf_id, desc = get_map_desc(window_type, auto_enter) })
+  vim.keymap.set('n', lhs, rhs, {
+    buffer = opts.buf_id,
+    desc = get_map_desc(window_type, auto_enter),
+  })
 end
 
 return M
