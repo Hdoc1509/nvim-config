@@ -10,10 +10,12 @@ local config = function()
   nmap('<leader>gl', '<cmd>Git pull<cr>', { desc = 'Git pull' })
   nmap('<leader>gs', '<cmd>Git status<cr>', { desc = 'Git status' })
   nmap('<leader>gc', '<cmd>Git commit<cr>', { desc = 'Git commit' })
+  nmap('<leader>gb', '<cmd>GBrowse<cr>', { desc = 'Open in browser at hosting provider' })
 end
 
 return {
   'tpope/vim-fugitive',
   cmd = { 'Git' },
   config = config,
+  dependencies = { 'tpope/vim-rhubarb' },
 }

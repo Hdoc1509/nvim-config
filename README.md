@@ -29,6 +29,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Linter plugin with [`nvim-lint`](https://github.com/mfussenegger/nvim-lint)
 - Git integration with [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim)
   and [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
+- Github integration with for `vim-fugitive` by [`vim-rhubarb`](https://github.com/tpope/vim-rhubarb)
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim)
 - Functions and commands for Neovim GUI's via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim)
 - Better colorcolumn with [`virt-column.nvim`](https://github.com/lukas-reineke/virt-column.nvim)
@@ -215,6 +216,7 @@ Used mapleader is `space key`.
 | `<leader>gl`  | Normal          | Execute `git pull`                            |
 | `<leader>gs`  | Normal          | Execute `git status`                          |
 | `<leader>gc`  | Normal          | Execute `git commit`                          |
+| `<leader>gb`  | Normal          | Open in browser at hosting provider           |
 | `<c-u>`       | Normal / Insert | Toggle Uppercase of word under cursor         |
 | `<c-t>`       | Normal / Insert | Toggle Title Case of word under cursor        |
 | `<c-d>`       | Normal / Insert | Remove current line                           |
