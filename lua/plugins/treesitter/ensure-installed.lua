@@ -21,6 +21,7 @@ return {
   'markdown',
   'markdown_inline',
   'properties',
+  'regex',
   'scss',
   'toml',
   'typescript',
