@@ -15,6 +15,7 @@ require('mason-tool-installer').setup({
     { 'html-lsp', version = '4.7.0' },
     { 'jdtls', version = 'v1.43.0' },
     { 'json-lsp', version = '4.8.0' },
+    { 'jq-lsp', version = 'v0.1.11' },
     { 'lua-language-server', version = '3.9.3' },
     { 'marksman', version = '2023-12-09' },
     -- 'mdx-analyzer',

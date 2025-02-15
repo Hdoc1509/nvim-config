@@ -63,6 +63,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`html`](https://github.com/hrsh7th/vscode-langservers-extracted)
   - [`jdtls`](https://projects.eclipse.org/projects/eclipse.jdt.ls)
   - [`jsonls`](https://github.com/hrsh7th/vscode-langservers-extracted)
+  - [`jqls`](https://github.com/wader/jq-lsp)
   - [`lua_ls`](https://github.com/luals/lua-language-server)
   - [`marksman`](https://github.com/artempyanykh/marksman)
   - [`ts_ls`](https://github.com/typescript-language-server/typescript-language-server)
@@ -116,6 +117,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - [fd](https://github.com/sharkdp/fd#installation)
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [shellcheck](https://github.com/koalaman/shellcheck#installing)
+- [go](https://go.dev/doc/install)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See
   [Troubleshooting](#troubleshooting) section
 - `C` compiler (needed by `nvim-treesitter`):
