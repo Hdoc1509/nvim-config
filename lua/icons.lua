@@ -42,4 +42,7 @@ return {
     ['astro.config.mts'] = '',
     ['astro.config.ts'] = '',
   },
+  file_extension = {
+    jq = '', -- color of DevIconSh
+  }
 }
