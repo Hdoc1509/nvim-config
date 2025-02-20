@@ -16,7 +16,8 @@ vim.g.lightline = {
   },
   component_function = {
     filename = 'LightlineFilename',
-    gitbranch = 'FugitiveHead',
+    -- TODO: highlight with green color
+    gitbranch = 'LightlineGitBranch',
     readonly = 'LightlineReadonly',
   },
   enable = { tabline = 0 },
@@ -38,6 +39,10 @@ return {
 
       function! LightlineReadonly()
         return &readonly && &filetype !=# 'help' ? '' : ''
+      endfunction
+
+      function! LightlineGitBranch()
+        return FugitiveHead() . ' 󰘬'
       endfunction
     ]], {})
     -- stylua: ignore end
