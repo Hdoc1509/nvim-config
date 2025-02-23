@@ -1,6 +1,6 @@
 ---@class (exact) FolderIconConfig
 ---@field icon? string
----@field hl string | { clone: string }
+---@field hl string
 ---@field folder_names? string[]
 
 ---@type table<string, FolderIconConfig>
