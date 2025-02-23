@@ -308,7 +308,7 @@ configuration, follow next indications:
   files of plugins will be loaded automatically by `lazy.nvim`
 - Mappings must be setted in [`lua/maps.lua`](./lua/maps.lua)
 - Settings about diagnostic are in [`lua/diagnostic.lua`](./lua/diagnostic.lua)
-- Custom icons must be declared in [`lua/icons.lua`](./lua/icons.lua)
+- Custom icons must be declared in [`lua/icons/init.lua`](./lua/icons/init.lua)
 - Options related to colorscheme and custom GUI highlighting goes in
   [`lua/plugins/colorscheme.lua`](./lua/plugins/colorscheme.lua)
 - Custom colors are declared in [`lua/colors.lua`](./lua/colors.lua)
