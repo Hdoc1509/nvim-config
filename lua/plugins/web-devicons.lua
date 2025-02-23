@@ -6,12 +6,12 @@ return {
   },
   config = function()
     local COLORS = require('colors')
-    local ICONS = require('icons').file
+    local ICONS = require('icons')
 
     require('nvim-web-devicons').setup({
       override_by_filename = {
         ['todo.md'] = {
-          icon = ICONS['TODO.md'],
+          icon = ICONS.file.name['TODO.md'],
           color = COLORS['light-green-600'],
           name = 'Todo',
         },
