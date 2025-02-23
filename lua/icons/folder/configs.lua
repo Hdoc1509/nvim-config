@@ -13,9 +13,6 @@ return {
   -- Folder-prefixed highlight groups colors should come from:
   -- https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/material-colors.yml
 
-  -- TODO:try to get similar icons and colors from:
-  -- https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/images/fileIcons.png
-  -- https://raw.githubusercontent.com/material-extensions/vscode-material-icon-theme/main/images/folderIcons.png
   ['.changeset'] = { hl = 'FolderChangesets' },
   ['.idea'] = { hl = 'FolderIntellij' },
   ['.local'] = { icon = '󰉌', hl = 'FolderLocal' },
@@ -539,6 +536,24 @@ return {
     hl = 'FolderScripts',
     folder_names = { 'script', 'scripting', 'scripts' },
   },
+  secure = {
+    icon = '󰉐',
+    hl = 'FolderSecure',
+    folder_names = {
+      'auth',
+      'authentication',
+      'cert',
+      'certificate',
+      'certificates',
+      'certs',
+      'cipher',
+      'cypher',
+      'secure',
+      'security',
+      'ssl',
+      'tls',
+    },
+  },
   server = {
     hl = 'FolderServer',
     folder_names = { 'backend', 'backends', 'server', 'servers', 'ssr' },
@@ -615,6 +630,10 @@ return {
   },
   trash = { icon = '󱧴', hl = 'FolderTrash', folder_names = { 'Trash', 'trash' } },
   tutor = { icon = '󱁽', hl = 'DevIconVim' },
+  typescript = {
+    hl = 'DevIconTypeScript',
+    folder_names = { '@types', 'ts', 'types', 'typescript', 'typings' },
+  },
   ui = {
     icon = '󱋣',
     hl = 'FolderUi',

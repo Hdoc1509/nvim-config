@@ -81,6 +81,7 @@ local config = function()
         FolderRoot = { fg = COLORS['yellow-700'] },
         FolderRules = { fg = COLORS['red-400'] },
         FolderScripts = { fg = COLORS['blue-gray-600'] },
+        FolderSecure = { fg = COLORS['yellow-800'] },
         FolderServer = { fg = COLORS['yellow-700'] },
         FolderShared = { fg = COLORS['purple-400'] },
         FolderSnippets = { fg = COLORS['orange-500'] },
