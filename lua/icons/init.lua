@@ -1,12 +1,6 @@
 local folder_icons = require('icons.folder')
 local COLORS = require('colors')
 
----@class (exact) FileIconConfig
----@field icon string
----@field color string
----@field name string
----@field file_names? string[]
-
 return {
   diagnostics = {
     Error = '',

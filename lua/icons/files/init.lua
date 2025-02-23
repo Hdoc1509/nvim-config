@@ -1,6 +1,12 @@
 local file_name_icons_config = require('icons.files.name')
 local file_extension_icons_config = require('icons.files.extension')
 
+---@class (exact) FileIconConfig
+---@field icon string
+---@field color string
+---@field name string
+---@field file_names? string[]
+
 local file_icons = {
   name = {},
   extension = {},
