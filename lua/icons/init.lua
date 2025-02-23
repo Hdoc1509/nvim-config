@@ -13,6 +13,7 @@ return {
     staged = '➜',
     untracked = '?',
   },
+  ---@type table<string, FolderIconConfig>
   directory = folder_icons,
   -- NOTE: only add icon and/or colors to files that do not have one yet
   -- TODO: do the same config used for folder icons
