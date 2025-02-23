@@ -16,13 +16,7 @@ return {
           name = 'Todo',
         },
       },
-      override_by_extension = {
-        ['astro'] = {
-          icon = '',
-          color = COLORS['deep-purple-A200'],
-          name = 'Astro',
-        },
-      },
+      override_by_extension = ICONS.file.extension,
     })
     require('hygen.web-devicons').setup()
   end,
