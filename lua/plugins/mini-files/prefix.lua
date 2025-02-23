@@ -1,8 +1,6 @@
 local icons = require('icons')
 
-local M = {}
-
-M.custom_prefix = function(fs_entry)
+return function(fs_entry)
   local name = fs_entry.name
   local icon = ''
   local hl = ''
@@ -16,5 +14,3 @@ M.custom_prefix = function(fs_entry)
 
   return MiniFiles.default_prefix(fs_entry)
 end
-
-return M

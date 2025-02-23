@@ -12,7 +12,7 @@ local config = function()
         -- NOTE: files/folders that will always be hidden
         return entry.name ~= '.git'
       end,
-      prefix = prefix.custom_prefix,
+      prefix = prefix,
     },
   })
 
