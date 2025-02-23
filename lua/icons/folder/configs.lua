@@ -1,8 +1,3 @@
----@class (exact) FolderIconConfig
----@field icon? string
----@field hl string
----@field folder_names? string[]
-
 ---@type table<string, FolderIconConfig>
 return {
   -- NOTE: use folder-shaped icons

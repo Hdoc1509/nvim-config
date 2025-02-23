@@ -1,5 +1,10 @@
 local folder_icons_config = require('icons.folder.configs')
 
+---@class (exact) FolderIconConfig
+---@field icon? string
+---@field hl string
+---@field folder_names? string[]
+
 local folder_icons = {}
 
 for config_name, config in pairs(folder_icons_config) do
