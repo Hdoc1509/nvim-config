@@ -20,19 +20,7 @@ return {
   -- add these to `nvim-web-devicons` register
   file = {
     name = {
-      -- local IconEnv, ColorEnv require('nvim-web-devicons').get_icon_color(".env", "env")
-      ['.env.local'] = '', -- color of DevIconEnv highlight group
-      ['.env.production'] = '',
-      ['.env.development'] = '',
-      ['.env.example'] = '',
-      ['TODO.md'] = '',
-      ['fabric.mod.json'] = '󰯁', -- #DBD0B4
-      ['vite.config.js'] = '', --- COLORS['amber-A700']
-      ['vite.config.ts'] = '',
-      ['pnpm-lock.yaml'] = '', -- color of DevIconPnpm highlight group
-      ['pnpm-workspace.yaml'] = '',
-      ['.git-for-windows-updater'] = '', -- color of DevIconGitAttributes highlight group
-      ['LICENSE.txt'] = '', -- color of DevIconLicense highlight group
+      -- TODO: continue from here
       ['tsconfig.node.json'] = '', -- color of DevIconTSConfig highlight group
       ['.eslintrc.js'] = '', -- color of DevIconEslintrc highlight group
       ['.eslintrc.cjs'] = '',
@@ -49,8 +37,8 @@ return {
     ---@type table<string, FileIconConfig>
     extension = {
       astro = { icon = '', color = COLORS['deep-purple-A200'], name = 'Astro' },
-      -- TODO: add color to COLORS files
-      jq = { icon = '', color = '#4d5a5e', name = 'JQ' },
+      -- TODO: add color to COLORS file: cyan-gray-900
+      jq = { icon = '', color = '#4D5A5E', name = 'JQ' },
     },
   },
 }
