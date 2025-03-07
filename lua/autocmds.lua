@@ -31,6 +31,11 @@ autocmd('FileType', {
       vim.api.nvim_command([[execute "normal! \<cr>"]])
       vim.api.nvim_command(bufnr .. 'bd')
     end, { buffer = bufnr, desc = 'Select item and close quickfix list' })
+    nmap('gt', '<c-w><cr><c-w>Tg<tab><cmd>copen<cr>', {
+      buffer = bufnr,
+      desc = 'Open item in new tab (silent)',
+    })
+    nmap('gT', '<c-w><cr><c-w>T', { buffer = bufnr, desc = 'Open item in new tab' })
   end,
 })
 
