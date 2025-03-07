@@ -30,7 +30,7 @@ autocmd('FileType', {
     nmap('e', function()
       vim.api.nvim_command([[execute "normal! \<cr>"]])
       vim.api.nvim_command(bufnr .. 'bd')
-    end, { buffer = bufnr })
+    end, { buffer = bufnr, desc = 'Select item and close quickfix list' })
   end,
 })
 
