@@ -40,6 +40,7 @@ local config = function()
         FolderComponents = { fg = COLORS['lime-600'] },
         FolderConfig = { fg = COLORS['cyan-600'] },
         FolderConnection = { fg = COLORS['cyan-600'] },
+        FolderConstant = { fg = COLORS['blue-gray-500'] },
         FolderContent = { fg = COLORS['cyan-500'] },
         FolderController = { fg = COLORS['amber-500'] },
         FolderDatabase = { fg = COLORS['amber-400'] },

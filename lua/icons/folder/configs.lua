@@ -130,6 +130,16 @@ return {
       'remotes',
     },
   },
+  constant = {
+    icon = '󱋣',
+    hl = 'FolderConstant',
+    folder_names = {
+      'const',
+      'consts',
+      'constant',
+      'constants',
+    },
+  },
   content = {
     icon = '󰲂',
     hl = 'FolderContent',
