@@ -5,7 +5,7 @@
 (call_expression
   (member_expression
     (property_identifier) @method
-    (#any-of? @method "matches" "querySelector" "querySelectorAll"))
+    (#any-of? @method "matches" "querySelector" "querySelectorAll" "closest"))
   (arguments
     [
       (string
