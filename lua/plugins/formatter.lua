@@ -7,6 +7,7 @@ local config = function()
     filetype = {
       astro = { prettier },
       css = { prettier },
+      ejs = { prettier },
       groovy = {
         function()
           return {

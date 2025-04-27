@@ -13,6 +13,7 @@ return {
     root_dir = function()
       return vim.loop.cwd()
     end,
+    filetypes = { 'ejs' },
   }),
   ['eslint'] = default_settings,
   ['gradle_ls'] = default_settings,
@@ -22,7 +23,9 @@ return {
   --     sessionToken = vim.env.GITHUB_ACTIONS_LS_TOKEN,
   --   },
   -- }),
-  ['html'] = default_settings,
+  ['html'] = merge(default_settings, {
+    filetypes = { 'ejs' },
+  }),
   ['jsonls'] = require('plugins.lsp.servers.jsonls'),
   ['jqls'] = default_settings,
   ['lua_ls'] = require('plugins.lsp.servers.lua_ls'),
