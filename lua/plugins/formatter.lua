@@ -6,7 +6,7 @@ local config = function()
   require('formatter').setup({
     filetype = {
       astro = { prettier },
-      css = { prettier('css') },
+      css = { prettier },
       groovy = {
         function()
           return {
@@ -15,21 +15,21 @@ local config = function()
           }
         end,
       },
-      html = { prettier('html') },
+      html = { prettier },
       java = { require('formatter.filetypes.java').google_java_format },
       javascript = { prettier },
       javascriptreact = { prettier },
-      json = { prettier('json') },
+      json = { prettier },
       jsonc = { prettier },
       lua = { require('formatter.filetypes.lua').stylua },
-      markdown = { prettier('markdown') },
-      ['markdown.mdx'] = { prettier('mdx') },
+      markdown = { prettier },
+      ['markdown.mdx'] = { prettier },
       query = { vim.lsp.buf.format },
       sh = { require('formatter.filetypes.sh').shfmt },
-      scss = { prettier('scss') },
-      typescript = { prettier('typescript') },
-      typescriptreact = { prettier('typescript') },
-      yaml = { prettier('yaml') },
+      scss = { prettier },
+      typescript = { prettier },
+      typescriptreact = { prettier },
+      yaml = { prettier },
     },
   })
 
