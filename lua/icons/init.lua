@@ -33,6 +33,7 @@ return {
       ['astro.config.mjs'] = '',
       ['astro.config.mts'] = '',
       ['astro.config.ts'] = '',
+      ['TODO.md'] = '',
     },
     ---@type table<string, FileIconConfig>
     extension = {
