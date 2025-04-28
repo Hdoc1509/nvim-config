@@ -119,10 +119,7 @@ return {
           Rule('<%=', '  %>', { 'ejs', 'hygen' }):set_end_pair_length(3),
           Rule('<%-', '  %>', { 'ejs', 'hygen' }):set_end_pair_length(3),
           Rule('<%#', '  %>', { 'ejs', 'hygen' }):set_end_pair_length(3),
-        })
-
-        npairs.add_rules({
-          Rule('{/*', ' */', { 'markdown.mdx' }),
+          Rule('{/*', '  */', { 'markdown.mdx' }):set_end_pair_length(3),
         })
       end,
     },
