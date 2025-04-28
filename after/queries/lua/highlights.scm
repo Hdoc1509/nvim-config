@@ -1,5 +1,6 @@
 ; extends
 
+; utils
 (function_call
   (identifier) @function
   (#eq? @function "autocmd")
@@ -8,5 +9,11 @@
       (field
         (identifier) @field
         (#eq? @field "pattern")
-        (string
-          (string_content) @string.special)))))
+        value: [
+          (string
+            (string_content) @string.special)
+          (table_constructor
+            (field
+              (string
+                (string_content) @string.special)))
+        ]))))
