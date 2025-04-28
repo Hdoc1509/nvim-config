@@ -10,6 +10,7 @@ require('mason-tool-installer').setup({
     { 'css-lsp', version = '4.7.0' },
     { 'emmet-ls', version = '0.4.2' },
     { 'eslint-lsp', version = '4.8.0' },
+    { 'gh-actions-language-server', version = '0.0.3' },
     { 'gradle-language-server', version = '3.15.0' },
     -- 'groovy-language-server',
     { 'html-lsp', version = '4.7.0' },

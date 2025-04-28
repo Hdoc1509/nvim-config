@@ -19,8 +19,6 @@
 
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#spyglassmc_language_server
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#taplo
-- https://github.com/actions/languageservices/tree/main/languageserver
-  - use `https://github.com/strozw/github-actions-languageserver` as binary
 
 ## Treesitter
 

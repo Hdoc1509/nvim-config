@@ -16,6 +16,7 @@ return {
     filetypes = { 'ejs' },
   }),
   ['eslint'] = default_settings,
+  gh_actions_ls = default_settings,
   ['gradle_ls'] = default_settings,
   -- ['groovyls'] = default_settings,
   -- ['github_actions_ls'] = merge(default_settings, {

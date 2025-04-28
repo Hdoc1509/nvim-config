@@ -59,6 +59,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - [`cssls`](https://github.com/hrsh7th/vscode-langservers-extracted)
   - [`emmet_ls`](https://github.com/aca/emmet-ls)
   - [`eslint`](https://github.com/hrsh7th/vscode-langservers-extracted)
+  - [`gh_actions_ls`](https://github.com/lttb/gh-actions-language-server)
   - [`gradle_ls`](https://github.com/microsoft/vscode-gradle)
   - [`html`](https://github.com/hrsh7th/vscode-langservers-extracted)
   - [`jdtls`](https://projects.eclipse.org/projects/eclipse.jdt.ls)
