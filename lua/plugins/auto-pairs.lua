@@ -3,7 +3,7 @@ local autocmd = require('utils').autocmd
 local function config()
   -- Add auto-pairs for HTML comment
   autocmd('FileType', {
-    pattern = { 'html', 'markdown' },
+    pattern = { 'html', 'markdown', 'ejs' },
     callback = function()
       vim.cmd("let b:AutoPairs = AutoPairsDefine({'<!--' : '-->'})")
     end,
@@ -33,10 +33,10 @@ local function config()
   -- add auto-pairs for mdx
   autocmd('FileType', {
     pattern = 'markdown.mdx',
-    callback = function ()
+    callback = function()
       -- pairs for comments
       vim.cmd("let b:AutoPairs = AutoPairsDefine({'{/*':'*/}'})")
-    end
+    end,
   })
 end
 
