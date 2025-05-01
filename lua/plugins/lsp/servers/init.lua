@@ -13,7 +13,15 @@ return {
     root_dir = function()
       return vim.loop.cwd()
     end,
-    filetypes = { 'ejs' },
+    filetypes = {
+      'astro',
+      'css',
+      'ejs',
+      'html',
+      'javascriptreact',
+      'scss',
+      'typescriptreact',
+    },
   }),
   ['eslint'] = default_settings,
   gh_actions_ls = default_settings,
@@ -25,7 +33,7 @@ return {
   --   },
   -- }),
   ['html'] = merge(default_settings, {
-    filetypes = { 'ejs' },
+    filetypes = { 'html', 'ejs' },
   }),
   ['jsonls'] = require('plugins.lsp.servers.jsonls'),
   ['jqls'] = default_settings,
