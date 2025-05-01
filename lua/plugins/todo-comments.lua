@@ -8,8 +8,12 @@ local config = function()
     },
   })
 
-  nmap(']t', todo_comments.jump_next, { desc = 'Jump to next TODO' })
-  nmap('[t', todo_comments.jump_prev, { desc = 'Jump to previous TODO' })
+  nmap(']T', function()
+    todo_comments.jump_next({ keywords = { 'TODO' } })
+  end, { desc = 'Jump to next TODO comment' })
+  nmap('[T', function()
+    todo_comments.jump_prev({ keywords = { 'TODO' } })
+  end, { desc = 'Jump to previous TODO comment' })
 end
 
 return {

@@ -227,8 +227,8 @@ Used mapleader is `space key`.
 | `<leader>ya`  | Normal          | Copy all text of current file to clipboard    |
 | `<leader>e`   | Normal          | Search files with `fzf`                       |
 | `<leader>E`   | Normal          | Search buffers with `fzf`                     |
-| `]t`          | Normal          | Jump to next TODO comment                     |
-| `[t`          | Normal          | Jump to previous TODO comment                 |
+| `]T`          | Normal          | Jump to next `TODO` comment                     |
+| `[T`          | Normal          | Jump to previous `TODO` comment                 |
 | `<leader>/`   | Normal          | Clear search highlighting                     |
 | `<leader>rr`  | Normal          | Run HTTP request under the cursor             |
 | `<leader>rl`  | Normal          | Re-run the last HTTP request                  |
