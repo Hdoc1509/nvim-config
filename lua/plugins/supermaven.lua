@@ -7,6 +7,7 @@ return {
         clear_suggestion = '<C-q>',
       },
       ignore_filetypes = { minifiles = true },
+      disable_inline_completion = true,
     })
   end,
 }

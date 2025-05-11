@@ -58,11 +58,13 @@ local config = function()
       { name = 'nvim_lsp_signature_help' },
       { name = 'path' },
       { name = 'buffer' },
+      { name = 'supermaven' },
     }),
     formatting = {
       format = lspkind.cmp_format({
         mode = 'symbol_text',
         maxwidth = 50,
+        symbol_map = { Supermaven = '' },
       }),
     },
     enabled = function()
