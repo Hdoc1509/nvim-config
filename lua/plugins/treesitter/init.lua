@@ -29,6 +29,8 @@ return {
     -- { dir = '~/dev/hygen.nvim' },
     { 'Hdoc1509/hygen.nvim', tag = 'v0.2.0' },
     {
+      -- TODO: Move to ../comments.lua
+      -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',
       config = function()
         ---@diagnostic disable-next-line: missing-fields
