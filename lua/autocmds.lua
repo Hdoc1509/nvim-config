@@ -22,20 +22,32 @@ autocmd('FileType', {
   end,
 })
 
--- Autoclose lsp quickfix list when select item with <e>
+-- quickfix list
 autocmd('FileType', {
   pattern = 'qf',
   callback = function()
     local bufnr = vim.fn.bufnr('%')
+
     nmap('e', function()
       vim.api.nvim_command([[execute "normal! \<cr>"]])
       vim.api.nvim_command(bufnr .. 'bd')
     end, { buffer = bufnr, desc = 'Select item and close quickfix list' })
+
     nmap('gt', '<c-w><cr><c-w>Tg<tab><cmd>copen<cr>', {
       buffer = bufnr,
       desc = 'Open item in new tab (silent)',
     })
-    nmap('gT', '<c-w><cr><c-w>T', { buffer = bufnr, desc = 'Open item in new tab' })
+    nmap('gT', '<c-w><cr>:cclose<cr><c-w>T', {
+      buffer = bufnr,
+      desc = 'Open item in new tab',
+    })
+
+    -- TODO: add to README.md
+    nmap('gs', '<c-w><cr>:copen<cr>', {
+      buffer = bufnr,
+      desc = 'Open item in new split (silent)',
+    })
+    nmap('gS', '<c-w><cr>:cclose<cr>', { buffer = bufnr, desc = 'Open item in new split' })
   end,
 })
 
