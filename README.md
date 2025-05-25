@@ -177,12 +177,10 @@ setx XDG_CONFIG_HOME %USERPROFILE%\.config
 
 Used mapleader is `space key`.
 
+See [Keymaps](./docs/keymaps.md) for more information.
+
 | Mapping       | Mode            | Description                                   |
 | ------------- | --------------- | --------------------------------------------- |
-| `<leader>w`   | Normal          | Save file                                     |
-| `<leader>W`   | Normal          | Save all files                                |
-| `<leader>q`   | Normal          | Save and close file                           |
-| `<leader>Q`   | Normal          | Save all files and close Neovim               |
 | `<leader>tq`  | Normal          | Close current tab                             |
 | `<leader>to`  | Normal          | Close all other tabs                          |
 | `<leader>th`  | Normal [N]      | Move tab to left                              |

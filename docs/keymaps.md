@@ -2,5 +2,11 @@
 
 Used mapleader is `<space>` key.
 
-<!-- TODO: move mappings here -->
-<!-- create subtitles/subsections for groups of mappings -->
+## File handling
+
+| Mapping     | Mode   | Description                     |
+| ----------- | ------ | ------------------------------- |
+| `<leader>w` | Normal | Save file                       |
+| `<leader>W` | Normal | Save all files                  |
+| `<leader>q` | Normal | Save and close file             |
+| `<leader>Q` | Normal | Save all files and close Neovim |
