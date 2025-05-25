@@ -187,13 +187,13 @@ Used mapleader is `space key`.
 | `<leader>Q`   | Normal          | Save all files and close Neovim               |
 | `<leader>tq`  | Normal          | Close current tab                             |
 | `<leader>to`  | Normal          | Close all other tabs                          |
-| `<leader>th`  | Normal          | Move tab to left                              |
+| `<leader>th`  | Normal [N]      | Move tab to left                              |
 | `<leader>tH`  | Normal          | Move tab to first position                    |
-| `<leader>tl`  | Normal          | Move tab to right                             |
+| `<leader>tl`  | Normal [N]      | Move tab to right                             |
 | `<leader>tL`  | Normal          | Move tab to last position                     |
-| `<leader>tj`  | Normal          | Go to previous tab                            |
+| `<leader>tj`  | Normal [N]      | Go to previous tab(s)                         |
 | `<leader>tJ`  | Normal          | Go to first tab                               |
-| `<leader>tk`  | Normal          | Go to next tab                                |
+| `<leader>tk`  | Normal [N]      | Go to next tab(s)                             |
 | `<leader>tK`  | Normal          | Go to last tab                                |
 | `<leader>[`   | Normal          | Jump to tag under cursor in a split           |
 | `<leader>]`   | Normal          | Jump to tag under cursor in a new tab         |
@@ -227,8 +227,8 @@ Used mapleader is `space key`.
 | `<leader>ya`  | Normal          | Copy all text of current file to clipboard    |
 | `<leader>e`   | Normal          | Search files with `fzf`                       |
 | `<leader>E`   | Normal          | Search buffers with `fzf`                     |
-| `]T`          | Normal          | Jump to next `TODO` comment                     |
-| `[T`          | Normal          | Jump to previous `TODO` comment                 |
+| `]T`          | Normal          | Jump to next `TODO` comment                   |
+| `[T`          | Normal          | Jump to previous `TODO` comment               |
 | `<leader>/`   | Normal          | Clear search highlighting                     |
 | `<leader>rr`  | Normal          | Run HTTP request under the cursor             |
 | `<leader>rl`  | Normal          | Re-run the last HTTP request                  |

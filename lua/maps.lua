@@ -13,7 +13,6 @@ nmap('<leader>Q', '<cmd>xall<cr>', { desc = 'Save all files and close Neovim' })
 -- Manipulate tabs
 nmap('<leader>tq', '<cmd>tabclose<cr>', { desc = 'Close tab' })
 nmap('<leader>to', '<cmd>tabonly<cr>', { desc = 'Close all other tabs' })
--- TODO: add to README.md that can receive a count
 nmap('<leader>th', function()
   tab_map_util.use_previous_tabs({
     onExceed = function()
@@ -23,9 +22,8 @@ nmap('<leader>th', function()
       vim.cmd('tabmove -' .. quantity)
     end,
   })
-end, { desc = 'Move tab (n times) to left' })
+end, { desc = 'Move tab to left' })
 nmap('<leader>tH', '<cmd>tabmove 0<cr>', { desc = 'Move tab to first position' })
--- TODO: add to README.md that can receive a count
 nmap('<leader>tl', function()
   tab_map_util.use_next_tabs({
     onExceed = function()
@@ -35,12 +33,11 @@ nmap('<leader>tl', function()
       vim.cmd('tabmove +' .. quantity)
     end,
   })
-end, { desc = 'Move tab (n times) to right' })
+end, { desc = 'Move tab to right' })
 nmap('<leader>tL', '<cmd>tabmove $<cr>', { desc = 'Move tab to last position' })
 nmap('<leader>tt', 'g<tab>', { desc = 'Go to last accessed tab' })
 
 -- Navigate trough tabs
--- TODO: add to README.md that can receive a count
 nmap('<leader>tj', function()
   tab_map_util.use_previous_tabs({
     onExceed = function()
@@ -50,9 +47,8 @@ nmap('<leader>tj', function()
       vim.cmd('tabprevious ' .. quantity)
     end,
   })
-end, { desc = 'Jump to previous tab(s)' })
-nmap('<leader>tJ', '<cmd>tabfirst<cr>', { desc = 'Jump to first tab' })
--- TODO: add to README.md that can receive a count
+end, { desc = 'Go to previous tab(s)' })
+nmap('<leader>tJ', '<cmd>tabfirst<cr>', { desc = 'Go to first tab' })
 nmap('<leader>tk', function()
   tab_map_util.use_next_tabs({
     onExceed = function()
@@ -62,8 +58,8 @@ nmap('<leader>tk', function()
       vim.cmd('tabnext +' .. quantity)
     end,
   })
-end, { desc = 'Jump to next tab(s)' })
-nmap('<leader>tK', '<cmd>tablast<cr>', { desc = 'Jump to last tab' })
+end, { desc = 'Go to next tab(s)' })
+nmap('<leader>tK', '<cmd>tablast<cr>', { desc = 'Go to last tab' })
 
 -- Jump to tags
 nmap('<leader>[', '<c-w>]', { desc = 'jump to tag under cursor in a split' })
