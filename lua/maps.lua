@@ -1,4 +1,5 @@
 local utils = require('utils')
+local tab_map_util = require('utils.tabs-map')
 
 local nmap = utils.nmap
 local keymap = utils.keymap
@@ -14,21 +15,14 @@ nmap('<leader>tq', '<cmd>tabclose<cr>', { desc = 'Close tab' })
 nmap('<leader>to', '<cmd>tabonly<cr>', { desc = 'Close all other tabs' })
 -- TODO: add to README.md that can receive a count
 nmap('<leader>th', function()
-  -- NOTE: looks similar to jump to previous tab
-  local current_tab = vim.fn.tabpagenr()
-
-  if current_tab == 1 then
-    return
-  end
-
-  local count = vim.v.count1
-  local available_prev_tabs = current_tab - 1
-
-  if count > available_prev_tabs then
-    vim.cmd('tabmove 0')
-  else
-    vim.cmd('tabmove -' .. count)
-  end
+  tab_map_util.use_previous_tabs({
+    onExceed = function()
+      vim.cmd('tabmove 0')
+    end,
+    onAvailable = function(quantity)
+      vim.cmd('tabmove -' .. quantity)
+    end,
+  })
 end, { desc = 'Move tab (n times) to left' })
 nmap('<leader>tH', '<cmd>tabmove 0<cr>', { desc = 'Move tab to first position' })
 -- TODO: add to README.md that can receive a count
@@ -56,21 +50,14 @@ nmap('<leader>tt', 'g<tab>', { desc = 'Go to last accessed tab' })
 -- Navigate trough tabs
 -- TODO: add to README.md that can receive a count
 nmap('<leader>tj', function()
-  -- TODO: move to utils
-  local current_tab = vim.fn.tabpagenr()
-
-  if current_tab == 1 then
-    return
-  end
-
-  local count = vim.v.count1
-  local available_prev_tabs = current_tab - 1
-
-  if count > available_prev_tabs then
-    vim.cmd('tabfirst')
-  else
-    vim.cmd('tabprevious ' .. count)
-  end
+  tab_map_util.use_previous_tabs({
+    onExceed = function()
+      vim.cmd('tabfirst')
+    end,
+    onAvailable = function(quantity)
+      vim.cmd('tabprevious ' .. quantity)
+    end,
+  })
 end, { desc = 'Jump to previous tab(s)' })
 nmap('<leader>tJ', '<cmd>tabfirst<cr>', { desc = 'Jump to first tab' })
 -- TODO: add to README.md that can receive a count
