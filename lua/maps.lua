@@ -27,22 +27,14 @@ end, { desc = 'Move tab (n times) to left' })
 nmap('<leader>tH', '<cmd>tabmove 0<cr>', { desc = 'Move tab to first position' })
 -- TODO: add to README.md that can receive a count
 nmap('<leader>tl', function()
-  -- NOTE: looks similar to jump to next tab
-  local current_tab = vim.fn.tabpagenr()
-  local total_tabs = vim.fn.tabpagenr('$')
-
-  if current_tab == total_tabs then
-    return
-  end
-
-  local count = vim.v.count1
-  local available_next_tabs = total_tabs - current_tab
-
-  if count > available_next_tabs then
-    vim.cmd('tabmove $')
-  else
-    vim.cmd('tabmove +' .. count)
-  end
+  tab_map_util.use_next_tabs({
+    onExceed = function()
+      vim.cmd('tabmove $')
+    end,
+    onAvailable = function(quantity)
+      vim.cmd('tabmove +' .. quantity)
+    end,
+  })
 end, { desc = 'Move tab (n times) to right' })
 nmap('<leader>tL', '<cmd>tabmove $<cr>', { desc = 'Move tab to last position' })
 nmap('<leader>tt', 'g<tab>', { desc = 'Go to last accessed tab' })
@@ -62,22 +54,14 @@ end, { desc = 'Jump to previous tab(s)' })
 nmap('<leader>tJ', '<cmd>tabfirst<cr>', { desc = 'Jump to first tab' })
 -- TODO: add to README.md that can receive a count
 nmap('<leader>tk', function()
-  -- TODO: move to utils
-  local current_tab = vim.fn.tabpagenr()
-  local total_tabs = vim.fn.tabpagenr('$')
-
-  if current_tab == total_tabs then
-    return
-  end
-
-  local count = vim.v.count1
-  local available_next_tabs = total_tabs - current_tab
-
-  if count > available_next_tabs then
-    vim.cmd('tablast')
-  else
-    vim.cmd('tabnext +' .. count)
-  end
+  tab_map_util.use_next_tabs({
+    onExceed = function()
+      vim.cmd('tablast')
+    end,
+    onAvailable = function(quantity)
+      vim.cmd('tabnext +' .. quantity)
+    end,
+  })
 end, { desc = 'Jump to next tab(s)' })
 nmap('<leader>tK', '<cmd>tablast<cr>', { desc = 'Jump to last tab' })
 

@@ -23,4 +23,24 @@ M.use_previous_tabs = function(handler)
   end
 end
 
+---Uses `v:count1` to determine which `handler` callback will be used
+---@param handler TabHandler
+M.use_next_tabs = function(handler)
+  local current = vim.fn.tabpagenr()
+  local total = vim.fn.tabpagenr('$')
+
+  if current == total then
+    return
+  end
+
+  local count = vim.v.count1
+  local available = total - current
+
+  if count > available then
+    handler.onExceed()
+  else
+    handler.onAvailable(count)
+  end
+end
+
 return M
