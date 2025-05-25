@@ -179,8 +179,6 @@ Used mapleader is `space key`.
 
 | Mapping       | Mode            | Description                                   |
 | ------------- | --------------- | --------------------------------------------- |
-| `<F1>`        | Normal          | Toggle `nvim-tree` with focus in current file |
-| `<F2>`        | Normal          | Toggle `nvim-tree`                            |
 | `<leader>w`   | Normal          | Save file                                     |
 | `<leader>W`   | Normal          | Save all files                                |
 | `<leader>q`   | Normal          | Save and close file                           |
