@@ -247,6 +247,7 @@ See [Keymaps](./docs/keymaps.md) for more information.
 | `<leader>hR`  | Normal          | Reset buffer                                  |
 | `<leader>hp`  | Normal          | Preview hunk under cursor                     |
 | `<leader>hP`  | Normal          | Preview hunk under cursor but inline          |
+| `<leader>hv`  | Normal          | Select hunk under cursor                      |
 | `<c-a>`       | Insert          | Insert `supermaven` suggestion                |
 | `<c-j>`       | Insert          | Accept `supermaven` word suggestion           |
 | `<c-q>`       | Insert          | Clear/Cancel `supermaven` suggestion          |

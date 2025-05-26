@@ -44,6 +44,7 @@ local config = function()
       buf_nmap('<leader>hR', gitsigns.reset_buffer, { desc = 'Reset buffer' })
       buf_nmap('<leader>hp', gitsigns.preview_hunk, { desc = 'Preview hunk under cursor' })
       buf_nmap('<leader>hP', gitsigns.preview_hunk_inline, { desc = 'Preview hunk under cursor but inline' })
+      buf_nmap('<leader>hv', gitsigns.select_hunk, { desc = 'Select hunk under cursor' })
     end,
   })
 end
