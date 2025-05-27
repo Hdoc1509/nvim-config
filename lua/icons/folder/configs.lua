@@ -167,6 +167,19 @@ return {
     hl = 'FolderComponents',
     folder_names = { 'components', 'fragmments', 'widget', 'widgets' },
   },
+  coverage = {
+    icon = '󱥾',
+    hl = 'FolderCoverage',
+    folder_names = {
+      'e2e',
+      'integration-test',
+      'integration-tests',
+      'it',
+      'nyc-output',
+      'nyc_output',
+      'coverage',
+    },
+  },
   css = {
     icon = '󰣞',
     hl = 'DevIconCss',

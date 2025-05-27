@@ -38,6 +38,7 @@ local config = function()
         FolderClass = { fg = COLORS['red-400'] },
         FolderClient = { fg = COLORS['light-blue-600'] },
         FolderComponents = { fg = COLORS['lime-600'] },
+        FolderCoverage = { fg = COLORS['teal-400'] },
         FolderConfig = { fg = COLORS['cyan-600'] },
         FolderConnection = { fg = COLORS['cyan-600'] },
         FolderConstant = { fg = COLORS['blue-gray-500'] },
