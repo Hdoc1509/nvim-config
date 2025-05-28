@@ -629,6 +629,8 @@ return {
       'test',
       'testing',
       'tests',
+      'tests-examples',
+      'tests-results',
     },
   },
   toml = { hl = 'DevIconToml' },
