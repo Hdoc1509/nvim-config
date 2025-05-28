@@ -171,13 +171,14 @@ return {
     icon = '󱥾',
     hl = 'FolderCoverage',
     folder_names = {
+      'coverage',
       'e2e',
       'integration-test',
       'integration-tests',
       'it',
       'nyc-output',
       'nyc_output',
-      'coverage',
+      'tests-e2e',
     },
   },
   css = {
