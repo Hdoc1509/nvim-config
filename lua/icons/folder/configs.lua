@@ -692,7 +692,7 @@ return {
   },
   vite = {
     hl = 'FolderVite',
-    folder_names = { '.vite', 'vite', 'vite-config', 'vitejs' },
+    folder_names = { '.vite', 'vite', 'vite-config', 'vite-plugin', 'vitejs' },
   },
   vlc = { hl = 'DevIconVlc' },
   Volumes = { icon = '󰉓', hl = 'FolderOther' },
