@@ -1,8 +1,11 @@
-local get_icon_color = require('nvim-web-devicons').get_icon_color
+local devicons = require('nvim-web-devicons')
 local COLORS = require('colors')
+local get_icon_color = devicons.get_icon_color
+local get_icon = devicons.get_icon
 
 local EnvIcon, EnvColor = get_icon_color('.env', 'env')
 local GitIcon, GitColor = get_icon_color('.gitignore', 'gitignore')
+local JSIcon = get_icon('file.js', 'js')
 local LicenseIcon, LicenseColor = get_icon_color('.license', 'license')
 
 ---@type table<string, FileIconConfig>
@@ -106,6 +109,12 @@ return {
       'license.txt',
       'unlicense.txt',
     },
+  },
+  playwright = {
+    icon = JSIcon,
+    color = COLORS['green-500'],
+    name = 'Playwright',
+    file_names = { 'playwright.config.js', 'playwright.config.ts' },
   },
   pnpm = {
     icon = '',
