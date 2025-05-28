@@ -76,6 +76,7 @@ local config = function()
         FolderNode = { fg = COLORS['light-green-500'] },
         FolderOther = { fg = COLORS['deep-orange-400'] },
         FolderPackages = { fg = COLORS['blue-600'] },
+        FolderPlaywright = { fg = COLORS['green-500'] },
         FolderPlugin = { fg = COLORS['light-blue-700'] },
         FolderPnpm = { fg = COLORS['yellow-850'] },
         FolderPublic = { fg = COLORS['light-blue-600'] },
