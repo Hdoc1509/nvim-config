@@ -43,7 +43,7 @@ return {
   ['amber-600'] = '#FFB300',
   -- color from: https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/icons/vite.svg
   ['amber-A700'] = '#FFAB00',
-  white = '#FFFFFF',
+  ['gray-300'] = '#E0E0E0',
   ['gray-690'] = '#777777',
   ['gray-850'] = '#3A3A3A',
   ['gray-890'] = '#202020',

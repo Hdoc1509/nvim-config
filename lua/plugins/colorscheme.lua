@@ -13,9 +13,9 @@ local config = function()
         bg0 = COLORS['gray-950'],
         bg1 = COLORS.black,
         bg3 = COLORS['gray-890'],
-        white = COLORS.white,
+        white = COLORS['gray-300'],
         green = COLORS['green-A800'],
-        fg1 = COLORS.white,
+        fg1 = COLORS['gray-300'],
       },
     },
     groups = {
