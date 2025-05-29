@@ -97,6 +97,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - luap
   - markdown (also used for `mdx` files)
   - markdown_inline
+  - powershell (only used for this file .-.)
   - properties
   - regex
   - scss

@@ -20,6 +20,7 @@ return {
   'luap',
   'markdown',
   'markdown_inline',
+  'powershell',
   'properties',
   'regex',
   'scss',
