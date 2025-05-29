@@ -468,7 +468,13 @@ return {
     },
   },
   parser = { icon = '󱁽', hl = 'DevIconVim' },
-  playwright = { hl = 'FolderPlaywright', folder_names = { 'playwright-report' } },
+  playwright = {
+    hl = 'FolderPlaywright',
+    folder_names = {
+      'playwright-report',
+      'test-results',
+    },
+  },
   plugin = {
     icon = '󱁽',
     hl = 'FolderPlugin',
@@ -629,7 +635,6 @@ return {
       'spec',
       'specs',
       'test',
-      'test-results',
       'testing',
       'tests',
       'tests-examples',
