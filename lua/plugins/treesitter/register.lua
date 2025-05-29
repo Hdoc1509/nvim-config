@@ -1,4 +1,4 @@
--- table[parser_name] = filetype
+-- table<parser_name, filetype>
 return {
   bash = 'zsh',
   embedded_template = 'ejs',
