@@ -37,10 +37,10 @@ return {
   ['lime-700'] = '#AFB42B',
   ['yellow-700'] = '#FBC02D',
   ['yellow-800'] = '#F9A825',
-  -- color from header background: https://pnpm.io
-  ['yellow-850'] = '#F69220',
   ['amber-400'] = '#FFCA28',
   ['amber-500'] = '#FFC107',
+  -- color from: https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/icons/pnpm.svg
+  ['amber-600'] = '#FFB300',
   -- color from: https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/icons/vite.svg
   ['amber-A700'] = '#FFAB00',
   white = '#FFFFFF',

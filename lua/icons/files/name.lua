@@ -118,7 +118,7 @@ return {
   },
   pnpm = {
     icon = '',
-    color = '#FFB300',
+    color = COLORS['amber-600'],
     name = 'Pnpm',
     file_names = { 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '.pnpmfile.cjs' },
   },
