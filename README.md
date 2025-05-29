@@ -232,7 +232,9 @@ See [Keymaps](./docs/keymaps.md) for more information.
 | `<leader>mc`  | Normal (\*)     | Stop Markdown preview                         |
 | `<leader>mt`  | Normal          | Toggle Markdown renderer                      |
 | `<leader>f`   | Normal          | Format current file                           |
+| `<leader>f`   | Visual          | Format selected lines                         |
 | `<leader>F`   | Normal          | Format and save current file                  |
+| `<leader>F`   | Visual          | Format selected lines and save file           |
 | `H`           | Normal          | Preview folded lines                          |
 | `<leader>o`   | Normal [N]      | Add blanklines below current line             |
 | `<leader>O`   | Normal [N]      | Add blanklines above current line             |

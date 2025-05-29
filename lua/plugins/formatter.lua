@@ -1,6 +1,8 @@
 local config = function()
   local prettier = require('formatter.defaults.prettier')
-  local nmap = require('utils').nmap
+  local utils = require('utils')
+  local nmap = utils.nmap
+  local keymap = utils.keymap
 
   ---@diagnostic disable-next-line: undefined-field
   require('formatter').setup({
@@ -36,6 +38,8 @@ local config = function()
 
   nmap('<leader>f', '<cmd>Format<cr>')
   nmap('<leader>F', '<cmd>FormatWrite<cr>')
+  keymap('x', '<leader>f', ":'<,'>Format<cr>")
+  keymap('x', '<leader>F', ":'<,'>FormatWrite<cr>")
 end
 
 return {
