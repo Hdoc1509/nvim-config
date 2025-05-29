@@ -21,8 +21,6 @@ local config = function()
     groups = {
       all = {
         Cursor = { bg = COLORS['light-blue-A390'] },
-        NvimTreeNormal = { bg = COLORS.black },
-        NvimTreeExecFile = { fg = COLORS.white, gui = 'nocombine' },
         VirtColumn = { fg = COLORS['light-blue-A390'] },
         MatchParen = { bg = COLORS['gray-850'] },
         Whitespace = { gui = 'bold', fg = COLORS['gray-690'] },
