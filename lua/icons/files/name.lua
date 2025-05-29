@@ -120,7 +120,7 @@ return {
     icon = '',
     color = '#FFB300',
     name = 'Pnpm',
-    file_names = { 'pnpm-lock.yaml', 'pnpm-workspace.yaml' },
+    file_names = { 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '.pnpmfile.cjs' },
   },
   todo = {
     icon = '',
