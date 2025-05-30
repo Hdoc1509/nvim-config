@@ -14,6 +14,7 @@ local config = function()
     highlight = { enable = true },
     indent = { enable = true },
     textobjects = textobjects,
+    sync_install = #vim.api.nvim_list_uis() == 0,
   })
 
   -- REGISTER LANGUAGES

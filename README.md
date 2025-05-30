@@ -169,11 +169,8 @@ setx XDG_CONFIG_HOME %USERPROFILE%\.config
 2. To install plugins, run:
 
    ```bash
-   nvim --headless +'Lazy! restore' +quit
+   nvim --headless +'Lazy! restore' +TSUpdateSync +quit
    ```
-
-3. Due to `headless` mode, some `tree-sitter` parsers can not be successfully
-   installed. All you need to do is open `Neovim`.
 
 ## Mappings
 
