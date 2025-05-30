@@ -83,6 +83,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - css
   - embedded_template (ejs)
   - gitattributes
+  - gitcommit
   - gitignore
   - groovy
   - html
@@ -102,8 +103,8 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - regex
   - scss
   - toml
-  - typescript
   - tsx
+  - typescript
   - vim
   - vimdoc
   - yaml
