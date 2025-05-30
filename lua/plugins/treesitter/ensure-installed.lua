@@ -23,6 +23,7 @@ return {
   'markdown_inline',
   'powershell',
   'properties',
+  'query',
   'regex',
   'scss',
   'toml',

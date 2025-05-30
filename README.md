@@ -100,6 +100,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
   - markdown_inline
   - powershell (only used for this file .-.)
   - properties
+  - query
   - regex
   - scss
   - toml
