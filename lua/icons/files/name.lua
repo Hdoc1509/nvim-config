@@ -102,13 +102,15 @@ return {
       'unlicense.txt',
     },
   },
-  -- TODO: split into 'playwright.config.js' and 'playwright.config.ts'
-  -- should use '' and '' as icon
-  playwright = {
+  ['playwright.config.js'] = {
     icon = '',
     color = COLORS['green-500'],
-    name = 'Playwright',
-    file_names = { 'playwright.config.js', 'playwright.config.ts' },
+    name = 'PlaywrightConfigJS',
+  },
+  ['playwright.config.ts'] = {
+    icon = '',
+    color = COLORS['green-500'],
+    name = 'PlaywrightConfigTS',
   },
   pnpm = {
     icon = '',
