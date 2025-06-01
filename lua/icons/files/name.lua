@@ -116,8 +116,7 @@ return {
   },
   todo = {
     icon = '',
-    -- TODO: add to COLORS file: orange-gray-500
-    color = '#DBD0B4',
+    color = COLORS['light-green-600'],
     name = 'Todo',
     file_names = { 'todo.md', 'todos.md' },
   },
