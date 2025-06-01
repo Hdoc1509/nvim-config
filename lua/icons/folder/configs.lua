@@ -497,7 +497,7 @@ return {
       'rplugin',
     },
   },
-  pnpm = { hl = 'DevIconPnpm' },
+  pnpm = { hl = 'DevIconPnpm', folder_names = { 'pnpm', '.pnpm' } },
   proc = { icon = '󰢬', hl = 'FolderConfig' },
   ProgramData = { icon = '󰉌', hl = 'FolderOther' },
   public = {
@@ -611,7 +611,7 @@ return {
   temp = {
     icon = '󰪺',
     hl = 'FolderTemp',
-    folder_names = { '.cache', 'cache', 'cached', 'temp', 'tmp' },
+    folder_names = { '.cache', 'cache', 'cached', 'temp', 'tmp', '.tmp' },
   },
   template = {
     icon = '󱋣',
