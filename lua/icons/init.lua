@@ -1,5 +1,5 @@
 local folder_icons = require('icons.folder')
-local COLORS = require('colors')
+local file_icons = require('icons.files')
 
 return {
   diagnostics = {
@@ -36,10 +36,6 @@ return {
       ['TODO.md'] = '',
     },
     ---@type table<string, FileIconConfig>
-    extension = {
-      astro = { icon = '', color = COLORS['deep-purple-A200'], name = 'Astro' },
-      -- TODO: add color to COLORS file: cyan-gray-900
-      jq = { icon = '', color = '#4D5A5E', name = 'JQ' },
-    },
+    extension = file_icons.extension,
   },
 }

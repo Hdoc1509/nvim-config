@@ -1,12 +1,4 @@
-local devicons = require('nvim-web-devicons')
 local COLORS = require('colors')
-local get_icon_color = devicons.get_icon_color
-local get_icon = devicons.get_icon
-
-local EnvIcon, EnvColor = get_icon_color('.env', 'env')
-local GitIcon, GitColor = get_icon_color('.gitignore', 'gitignore')
-local JSIcon = get_icon('file.js', 'js')
-local LicenseIcon, LicenseColor = get_icon_color('.license', 'license')
 
 ---@type table<string, FileIconConfig>
 return {
@@ -16,8 +8,8 @@ return {
   -- NOTE: it's not necessary to use uppercase for file names
 
   env = {
-    icon = EnvIcon,
-    color = EnvColor,
+    icon = '',
+    color = '#faf743',
     name = 'Env',
     file_names = {
       '.dev.vars',
@@ -59,8 +51,8 @@ return {
     name = 'FabricMod',
   },
   git = {
-    icon = GitIcon,
-    color = GitColor,
+    icon = '',
+    color = '#f54d27',
     name = 'Git',
     file_names = {
       '.git-blame-ignore',
@@ -78,8 +70,8 @@ return {
     },
   },
   license = {
-    icon = LicenseIcon,
-    color = LicenseColor,
+    icon = '',
+    color = '#cbcb41',
     name = 'License',
     file_names = {
       'copying.md',
@@ -111,7 +103,7 @@ return {
     },
   },
   playwright = {
-    icon = JSIcon,
+    icon = '',
     color = COLORS['green-500'],
     name = 'Playwright',
     file_names = { 'playwright.config.js', 'playwright.config.ts' },
