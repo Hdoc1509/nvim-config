@@ -392,6 +392,7 @@ return {
     icon = '󰲂',
     hl = 'FolderLib',
     folder_names = {
+      '@lib',
       'Library',
       'lib',
       'lib64',
