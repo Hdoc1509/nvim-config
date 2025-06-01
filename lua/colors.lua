@@ -33,6 +33,7 @@ return {
   ['light-green-400'] = '#9CCC65',
   ['light-green-500'] = '#8BC34A',
   ['light-green-600'] = '#7CB342',
+  ['light-green-700'] = '#689F38',
   ['lime-600'] = '#C0CA33',
   ['lime-700'] = '#AFB42B',
   ['yellow-700'] = '#FBC02D',

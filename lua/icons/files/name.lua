@@ -170,4 +170,10 @@ return {
     name = 'Vite',
     file_names = { 'vite.config.js', 'vite.config.ts' },
   },
+  vitest = {
+    icon = '',
+    color = COLORS['light-green-700'],
+    name = 'Vitest',
+    file_names = { 'vitest.config.js', 'vitest.config.ts' },
+  },
 }
