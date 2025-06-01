@@ -7,6 +7,19 @@ return {
 
   -- NOTE: it's not necessary to use uppercase for file names
 
+  astro_config = {
+    icon = '',
+    color = '#7c4dff',
+    name = 'AstroConfig',
+    file_names = {
+      'astro.config.cjs',
+      'astro.config.cts',
+      'astro.config.js',
+      'astro.config.mjs',
+      'astro.config.mts',
+      'astro.config.ts',
+    },
+  },
   env = {
     icon = '',
     color = '#faf743',
@@ -45,6 +58,17 @@ return {
       '.vars',
     },
   },
+  eslintrc = {
+    icon = '',
+    color = '#4b32c3',
+    name = 'Eslintrc',
+    file_names = {
+      '.eslintrc.cjs',
+      '.eslintrc.cts',
+      '.eslintrc.js',
+      '.eslintrc.mts',
+    },
+  },
   ['fabric.mod.json'] = {
     icon = '󰯁',
     color = COLORS['amber-A700'],
@@ -68,6 +92,11 @@ return {
       '.keep',
       'git-history',
     },
+  },
+  ['jsconfig.json'] = {
+    icon = '',
+    name = 'Jsconfig',
+    color = '#cbcb41',
   },
   license = {
     icon = '',
@@ -123,6 +152,11 @@ return {
     color = COLORS['light-green-600'],
     name = 'Todo',
     file_names = { 'todo.md', 'todos.md' },
+  },
+  ['tsconfig.node.json'] = {
+    icon = '',
+    color = '#519aba',
+    name = 'TSConfig',
   },
   vite = {
     icon = '',
