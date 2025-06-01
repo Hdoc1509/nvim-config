@@ -102,6 +102,8 @@ return {
       'unlicense.txt',
     },
   },
+  -- TODO: split into 'playwright.config.js' and 'playwright.config.ts'
+  -- should use '' and '' as icon
   playwright = {
     icon = '',
     color = COLORS['green-500'],
