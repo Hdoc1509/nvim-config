@@ -98,6 +98,12 @@ return {
     name = 'Jsconfig',
     color = '#cbcb41',
   },
+  ['lazy-lock.json'] = {
+    icon = '󰒲',
+    name = 'LazyLock',
+    -- from: https://github.com/folke/lazy.nvim/blob/docs/static/img/icon.svg
+    color = '#2e7de9',
+  },
   license = {
     icon = '',
     color = '#cbcb41',
