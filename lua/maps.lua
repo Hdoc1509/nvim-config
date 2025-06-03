@@ -35,10 +35,9 @@ nmap('<leader>tl', function()
   })
 end, { desc = 'Move tab to right' })
 nmap('<leader>tL', '<cmd>tabmove $<cr>', { desc = 'Move tab to last position' })
-nmap('<leader>tt', 'g<tab>', { desc = 'Go to last accessed tab' })
 nmap('<leader>tn', '<cmd>tabnew<cr>', { desc = 'Open a new empty tab' })
 
--- Navigate trough tabs
+-- Navigate between tabs
 nmap('<leader>tj', function()
   tab_map_util.use_previous_tabs({
     onExceed = function()
@@ -61,6 +60,7 @@ nmap('<leader>tk', function()
   })
 end, { desc = 'Go to next tab(s)' })
 nmap('<leader>tK', '<cmd>tablast<cr>', { desc = 'Go to last tab' })
+nmap('<leader>tt', 'g<tab>', { desc = 'Go to last accessed tab' })
 
 -- Jump to tags
 nmap('<leader>[', '<c-w>]', { desc = 'jump to tag under cursor in a split' })
