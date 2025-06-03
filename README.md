@@ -192,6 +192,7 @@ See [Keymaps](./docs/keymaps.md) for more information.
 | `<leader>tJ`  | Normal          | Go to first tab                               |
 | `<leader>tk`  | Normal [N]      | Go to next tab(s)                             |
 | `<leader>tK`  | Normal          | Go to last tab                                |
+| `<leader>tt`  | Normal          | Go to last accessed tab                       |
 | `<leader>[`   | Normal          | Jump to tag under cursor in a split           |
 | `<leader>]`   | Normal          | Jump to tag under cursor in a new tab         |
 | `<leader>j`   | Normal / Visual | Scroll down 10 lines                          |
