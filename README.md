@@ -187,6 +187,7 @@ See [Keymaps](./docs/keymaps.md) for more information.
 | `<leader>tH`  | Normal          | Move tab to first position                    |
 | `<leader>tl`  | Normal [N]      | Move tab to right                             |
 | `<leader>tL`  | Normal          | Move tab to last position                     |
+| `<leader>tn`  | Normal          | Open a new empty tab                          |
 | `<leader>tj`  | Normal [N]      | Go to previous tab(s)                         |
 | `<leader>tJ`  | Normal          | Go to first tab                               |
 | `<leader>tk`  | Normal [N]      | Go to next tab(s)                             |

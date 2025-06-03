@@ -36,6 +36,7 @@ nmap('<leader>tl', function()
 end, { desc = 'Move tab to right' })
 nmap('<leader>tL', '<cmd>tabmove $<cr>', { desc = 'Move tab to last position' })
 nmap('<leader>tt', 'g<tab>', { desc = 'Go to last accessed tab' })
+nmap('<leader>tn', '<cmd>tabnew<cr>', { desc = 'Open a new empty tab' })
 
 -- Navigate trough tabs
 nmap('<leader>tj', function()
