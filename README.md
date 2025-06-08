@@ -9,68 +9,9 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 
 See [Features](./docs/features.md).
 
-## Requirements
-
-- [Patched nerd-font](https://github.com/ryanoasis/nerd-fonts)
-- [Neovim 0.9.5](https://github.com/neovim/neovim/releases/tag/v0.9.5)
-- [Node.js](https://nodejs.org/en/download)
-- [Yarn](https://yarnpkg.com/getting-started/install)
-- [Git](https://git-scm.com/downloads)
-- [FZF](https://github.com/junegunn/fzf#installation)
-- [fd](https://github.com/sharkdp/fd#installation)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
-- [shellcheck](https://github.com/koalaman/shellcheck#installing)
-- [go](https://go.dev/doc/install)
-- [Zig](https://github.com/ziglang/zig#installation) (optional) - See
-  [Troubleshooting](#troubleshooting) section
-- `C` compiler (needed by `nvim-treesitter`):
-  - [Windows tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
-  - [Linux tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Linux-Support)
-
 ## Installation
 
-### Before cloning
-
-1. Backup your current configuration
-2. Remove your `~/.config/nvim` folder
-
-Once you installed this configuration you will be able to integrate your older
-configuration. You can see it in [Customization](#customization) section
-
-### Cloning
-
-Clone repository in neovim config path:
-
-```sh
-git clone --depth 1 https://github.com/Hdoc1509/nvim-config.git ~/.config/nvim
-```
-
-Or start a new repo with [`tiged`](https://github.com/tiged/tiged):
-
-```sh
-tiged Hdoc1509/nvim-config ~/.config/nvim
-```
-
-**IF YOU ARE A WINDOWS USER,** set the environment variable `XDG_CONFIG_HOME`
-with `cmd`:
-
-```cmd
-setx XDG_CONFIG_HOME %USERPROFILE%\.config
-```
-
-### Install plugins
-
-1. To suppress git messages about detached HEAD, run:
-
-   ```bash
-   git config --global advice.detachedHead false
-   ```
-
-2. To install plugins, run:
-
-   ```bash
-   nvim --headless +'Lazy! restore' +TSUpdateSync +quit
-   ```
+See [Installation](./docs/install.md).
 
 ## Mappings
 
