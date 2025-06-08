@@ -181,6 +181,12 @@ Used mapleader is `<space>` key.
 | `<leader>r` | Visual | Replace selected text in current file |
 | `<leader>R` | Visual | Replace selected text in all files    |
 
+## Markdown-only
+
+| Mapping       | Mode        | Description                                                         |
+| ------------- | ----------- | ------------------------------------------------------------------- |
+| `<leader>sat` | Visual Line | Create a table from shell aliases definitions and run `FormatWrite` |
+
 ## Misc
 
 | Mapping       | Mode            | Description                                |
@@ -192,6 +198,13 @@ Used mapleader is `<space>` key.
 | `<F3>`        | Insert / Normal | Toggle spell checking                      |
 | `<leader>x`   | Normal          | Source current file                        |
 | `H`           | Normal          | Preview folded lines                       |
+
+## Abbreviations
+
+| Abbreviation | Mode    | Expansion     |
+| ------------ | ------- | ------------- |
+| vh           | Command | vertical help |
+| th           | Command | tab help      |
 
 ## Nvim-qt
 

@@ -17,21 +17,6 @@ See [Installation](./docs/install.md).
 
 See [Keymaps](./docs/keymaps.md).
 
-## Abbreviations
-
-| Abbreviation | Mode    | Expansion     |
-| ------------ | ------- | ------------- |
-| vh           | Command | vertical help |
-| th           | Command | tab help      |
-
-### Markdown mappings
-
-The following mappings just run on `*.md` files:
-
-| Mapping       | Mode        | Description                                                         |
-| ------------- | ----------- | ------------------------------------------------------------------- |
-| `<leader>sat` | Visual Line | Create a table from shell aliases definitions and run `FormatWrite` |
-
 ## Git integration
 
 This configuration provides a minimal configuration file for integration with
