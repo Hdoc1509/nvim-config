@@ -74,3 +74,14 @@ Just open `Neovim` and wait that `Lazy.nvim` installs all plugins.
    ```bash
    git config --global advice.detachedHead false
    ```
+
+## Git integration
+
+This configuration provides a minimal configuration file for integration with
+git.
+
+To use it, run the following command:
+
+```sh
+git config --global core.editor "nvim -u ~/.config/nvim/minimal.lua"
+```

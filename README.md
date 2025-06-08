@@ -17,17 +17,6 @@ See [Installation](./docs/install.md).
 
 See [Keymaps](./docs/keymaps.md).
 
-## Git integration
-
-This configuration provides a minimal configuration file for integration with
-git.
-
-To use it, run the following command:
-
-```sh
-git config --global core.editor "nvim -u ~/.config/nvim/minimal.lua"
-```
-
 ## Customization
 
 See [Customization](./docs/customization.md).
