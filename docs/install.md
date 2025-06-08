@@ -25,7 +25,7 @@
 2. Remove your `~/.config/nvim` folder
 
 Once you installed this configuration you will be able to integrate your older
-configuration. You can see it in [Customization](../README.md#customization) section
+configuration. You can see it in [Customization](./customization.md) section
 
 ### Windows environment
 
