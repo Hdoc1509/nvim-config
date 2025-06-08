@@ -1,0 +1,43 @@
+# Troubleshooting
+
+## Fail to install treesitter parser
+
+If you are a Windows user and have problems to install `treesitter` parser,
+install `zig` and retry to install.
+
+## Fail to use `rest.nvim`
+
+If you are a Windows user and have problems to use `rest.nvim` because of
+`curl --compressed` option, you need to prepend the path of the `curl` binary
+that comes bundled with `git-for-windows` to your system `PATH`.
+
+Run the following commands with `powershell` as admin:
+
+- `Git 64-bit` version:
+
+  ```powershell
+  $GIT_PATH = "C:\Program Files\Git\mingw64\bin"
+  ```
+
+- `Git 32-bit` version:
+
+  ```powershell
+  $GIT_PATH = "C:\Program Files (x86)\Git\mingw64\bin"
+  ```
+
+- Finally, run:
+
+  ```powershell
+  [Environment]::SetEnvironmentVariable(
+    "Path",
+    "$GIT_PATH;" + [Environment]::GetEnvironmentVariable("PATH", "MACHINE"),
+    "MACHINE"
+  )
+  ```
+
+## Fail to use `eslint/prettier` with `astro` files
+
+If you have problems to use `astro` files, follow instructions in:
+
+- [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
+- [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
