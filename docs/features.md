@@ -108,7 +108,7 @@
 - luap
 - markdown (also used for `mdx` files)
 - markdown_inline
-- powershell (only used for [Troubleshooting](../README.md#troubleshooting) section)
+- powershell (only used for [Troubleshooting](./troubleshooting.md))
 - properties
 - query
 - regex
