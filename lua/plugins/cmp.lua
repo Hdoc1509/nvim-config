@@ -67,15 +67,6 @@ local config = function()
         symbol_map = { Supermaven = '' },
       }),
     },
-    enabled = function()
-      -- disable completion in comments
-      -- See https://github.com/hrsh7th/nvim-cmp/pull/676#issuecomment-1002532096
-      if cmp_context.in_treesitter_capture('comment') == true or cmp_context.in_syntax_group('Comment') then
-        return false
-      else
-        return true
-      end
-    end,
   })
 
   cmp.setup.cmdline({ '/', '?' }, {
