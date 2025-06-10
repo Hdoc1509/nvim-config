@@ -53,6 +53,7 @@
 - Support for [`Hygen`](https://github.com/jondot/hygen) templates with
   [`hygen.nvim`](https://github.com/Hdoc1509/hygen.nvim)
 - Css unit conversion via [`convert.nvim`](https://github.com/cjodo/convert.nvim)
+- Highlighting of delimiters with [`rainbow-delimiters.nvim`](https://gitlab.com/HiPhish/rainbow-delimiters.nvim)
 
 ## Tools
 

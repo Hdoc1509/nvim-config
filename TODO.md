@@ -55,3 +55,5 @@
   using config of svgmog: https://github.com/jakearchibald/svgomg/blob/main/src/config.json
   need to install https://github.com/svg/svgo
 - https://github.com/echasnovski/mini.icons as replacement for `nvim-web-devicons`
+- [Twilight](https://github.com/folke/twilight.nvim)
+- [vim match-up](https://github.com/andymass/vim-matchup)
