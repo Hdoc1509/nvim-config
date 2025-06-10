@@ -12,7 +12,6 @@ local config = function()
   require('nvim-treesitter.configs').setup({
     ensure_installed = parsers_to_install,
     highlight = { enable = true },
-    indent = { enable = true },
     textobjects = textobjects,
     sync_install = #vim.api.nvim_list_uis() == 0,
   })
