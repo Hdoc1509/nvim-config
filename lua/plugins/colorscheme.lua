@@ -100,7 +100,12 @@ local config = function()
         FolderVscode = { fg = COLORS['blue-400'] },
         FolderViews = { fg = COLORS['deep-orange-400'] },
         FolderVite = { fg = COLORS['amber-A700'] },
-        RainbowDelimiterRed = { fg = '#b6b8bb' },
+        RainbowDelimiterRed = { fg = '#be95ff' },
+        RainbowDelimiterBlue = { link = 'Type' },
+        RainbowDelimiterOrange = { fg = '#e46e3b' },
+        RainbowDelimiterGreen = { link = 'Constant' },
+        RainbowDelimiterViolet = { fg = '#ee5396' },
+        RainbowDelimiterCyan = { link = 'PreProc' },
       },
     },
   })
