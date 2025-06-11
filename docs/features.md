@@ -105,6 +105,7 @@
 - jsdoc
 - json
 - jsonc
+- jq
 - lua
 - luap
 - markdown (also used for `mdx` files)
