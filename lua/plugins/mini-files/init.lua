@@ -5,6 +5,7 @@ local config = function()
   local prefix = require('plugins.mini-files.prefix')
   local nmap_new_window = maps.nmap_new_window
   local WINDOW_TYPE = maps.WINDOW_TYPE
+  local excluded_filetypes = { 'fugitive', 'minifiles' }
 
   require('mini.files').setup({
     content = {
@@ -17,12 +18,30 @@ local config = function()
   })
 
   nmap('-', function()
+    local ft = vim.bo.filetype
+
+    if vim.tbl_contains(excluded_filetypes, ft) then
+      return
+    end
+
     MiniFiles.open(vim.api.nvim_buf_get_name(0))
   end, { desc = 'Open mini.files in current file' })
   nmap('<leader>-', function()
+    local ft = vim.bo.filetype
+
+    if vim.tbl_contains(excluded_filetypes, ft) then
+      return
+    end
+
     MiniFiles.open(MiniFiles.get_latest_path())
   end, { desc = 'Open mini.files in last used path' })
   nmap('<leader>_', function()
+    local ft = vim.bo.filetype
+
+    if vim.tbl_contains(excluded_filetypes, ft) then
+      return
+    end
+
     MiniFiles.open(nil, false)
   end, { desc = 'Open mini.files in root path of workspace' })
 
