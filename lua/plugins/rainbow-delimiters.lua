@@ -24,7 +24,6 @@ return {
         'RainbowDelimiterViolet',
         'RainbowDelimiterCyan',
       },
-      whitelist = { 'lua', 'javascript', 'typescript' },
     }
   end,
 }
