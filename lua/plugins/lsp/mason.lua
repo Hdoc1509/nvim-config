@@ -14,7 +14,7 @@ require('mason-tool-installer').setup({
     { 'gradle-language-server', version = '3.15.0' },
     -- 'groovy-language-server',
     { 'html-lsp', version = '4.7.0' },
-    { 'jdtls', version = 'v1.43.0' },
+    { 'jdtls', version = 'v1.46.1' },
     { 'json-lsp', version = '4.8.0' },
     { 'jq-lsp', version = 'v0.1.11' },
     { 'lua-language-server', version = '3.9.3' },

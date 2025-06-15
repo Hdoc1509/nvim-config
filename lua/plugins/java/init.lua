@@ -6,7 +6,6 @@ return {
     'tpope/vim-fugitive',
   },
   config = function()
-    local mason = require('mason-registry')
     local jdtls = require('jdtls')
     local jdtls_setup = require('jdtls.setup')
     local capabilities = require('plugins.lsp.capabilities')
@@ -25,7 +24,7 @@ return {
     local root_dir = nil
     local workspace_data_dir = nil
     local default_java_version = '21'
-    local jdtls_path = mason.get_package('jdtls'):get_install_path()
+    local jdtls_path = vim.fn.expand('$MASON/packages/jdtls')
     local equinox_launcher_jar = vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
     local cache_dir = vim.fn.expand('~/.cache/jdtls/workspace')
     local root_markers = { '.git', 'mvnw', 'gradlew' }
