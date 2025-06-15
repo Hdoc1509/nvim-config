@@ -159,13 +159,15 @@ Used mapleader is `<space>` key.
 
 **[N]: Mappings that can receive a count.**
 
-## File explorer
+## mini.files
 
 | Mapping     | Mode   | Description                               |
 | ----------- | ------ | ----------------------------------------- |
 | `-`         | Normal | Open mini.files at current file path      |
 | `<leader>-` | Normal | Open mini.files at last used path         |
 | `<leader>_` | Normal | Open mini.files at root path of workspace |
+
+<!-- TODO: add custom mappings and bookmarks for opened explorer -->
 
 ## Zen mode
 
