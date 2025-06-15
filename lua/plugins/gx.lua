@@ -11,4 +11,5 @@ return {
     vim.g.netrw_nogx = 1
   end,
   config = true,
+  submodules = false,
 }
