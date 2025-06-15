@@ -93,12 +93,11 @@ Used mapleader is `<space>` key.
 | `<leader>gb`  | Normal | Open in browser at hosting provider       |
 | `]c`          | Normal | Jump to next hunk                         |
 | `[c`          | Normal | Jump to previous hunk                     |
-| `<leader>hs`  | Normal | Stage hunk under cursor                   |
-| `<leader>hs`  | Visual | Stage selected hunk(s)                    |
+| `<leader>hs`  | Normal | Stage/unstage hunk under cursor           |
+| `<leader>hs`  | Visual | Stage/unstage selected hunk(s)            |
 | `<leader>hr`  | Normal | Reset hunk under cursor                   |
 | `<leader>hr`  | Visual | Reset selected hunk(s)                    |
 | `<leader>hS`  | Normal | Stage buffer                              |
-| `<leader>hu`  | Normal | Unstage hunk under cursor                 |
 | `<leader>hR`  | Normal | Reset buffer                              |
 | `<leader>hp`  | Normal | Preview hunk under cursor                 |
 | `<leader>hP`  | Normal | Preview hunk under cursor but inline      |

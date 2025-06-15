@@ -23,13 +23,13 @@ local config = function()
         gitsigns.nav_hunk('prev')
       end, { desc = 'Jump to previous hunk' })
 
-      buf_nmap('<leader>hs', gitsigns.stage_hunk, { desc = 'Stage hunk under cursor' })
+      buf_nmap('<leader>hs', gitsigns.stage_hunk, { desc = 'Stage/unstage hunk under cursor' })
       buf_keymap('v', '<leader>hs', function()
         gitsigns.stage_hunk({
           vim.fn.line('.'),
           vim.fn.line('v'),
         })
-      end, { desc = 'Stage selected hunk(s)' })
+      end, { desc = 'Stage/unstage selected hunk(s)' })
 
       buf_nmap('<Leadaer>hr', gitsigns.reset_hunk, { desc = 'Reset hunk under cursor' })
       buf_keymap('v', '<leader>hr', function()
@@ -40,12 +40,14 @@ local config = function()
       end, { desc = 'Reset selected hunk(s)' })
 
       buf_nmap('<leader>hS', gitsigns.stage_buffer, { desc = 'Stage buffer' })
-      buf_nmap('<leader>hu', gitsigns.undo_stage_hunk, { desc = 'Undo stage hunk' })
       buf_nmap('<leader>hR', gitsigns.reset_buffer, { desc = 'Reset buffer' })
       buf_nmap('<leader>hp', gitsigns.preview_hunk, { desc = 'Preview hunk under cursor' })
       buf_nmap('<leader>hP', gitsigns.preview_hunk_inline, { desc = 'Preview hunk under cursor but inline' })
       buf_nmap('<leader>hv', gitsigns.select_hunk, { desc = 'Select hunk under cursor' })
     end,
+    preview_config = {
+      border = 'rounded',
+    },
   })
 end
 
