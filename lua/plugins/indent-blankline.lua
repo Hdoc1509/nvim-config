@@ -29,4 +29,6 @@ return {
     -- NOTE: updates colors once colorscheme is loaded
     hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
   end,
+  -- NOTE: until update to nvim-0.10
+  commit = "3d08501caef2329aba5121b753e903904088f7e6",
 }
