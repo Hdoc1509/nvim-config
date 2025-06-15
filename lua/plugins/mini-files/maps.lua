@@ -32,25 +32,15 @@ M.nmap_new_window = function(lhs, window_type, opts)
 
   local rhs = function()
     -- Make new window and set it as target
-    local new_target_window
-    vim.api.nvim_win_call(MiniFiles.get_target_window(), function()
+    local cur_target = MiniFiles.get_explorer_state().target_window
+    local new_target = vim.api.nvim_win_call(cur_target, function()
       vim.cmd(window_type)
-      new_target_window = vim.api.nvim_get_current_win()
+      return vim.api.nvim_get_current_win()
     end)
 
-    MiniFiles.set_target_window(new_target_window)
-    ---@diagnostic disable-next-line: missing-parameter
-    MiniFiles.go_in()
-
-    if auto_enter or false then
-      MiniFiles.close()
-    end
-
-    if window_type == 'tabnew' and not auto_enter then
-      MiniFiles.close()
-      vim.cmd('tabprev')
-      MiniFiles.open(MiniFiles.get_latest_path())
-    end
+    MiniFiles.set_target_window(new_target)
+    -- FIX: last opened silent window will be focused after closing explorer
+    MiniFiles.go_in({ close_on_file = auto_enter })
   end
 
   -- Adding `desc` will result into `show_help` entries
