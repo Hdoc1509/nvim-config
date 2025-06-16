@@ -60,6 +60,8 @@ local config = function()
   utils.autocmd('User', {
     pattern = 'MiniFilesBufferCreate',
     callback = function(args)
+      -- TODO: add util set_mini_files_mappings(buf_id)
+
       local buf_id = args.data.buf_id
 
       -- allow to confirm changes on write. taken from:
@@ -80,6 +82,10 @@ local config = function()
 
       nmap_new_window('gj', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
       nmap_new_window('gJ', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
+      nmap_new_window('gk', WINDOW_TYPE.aboveleft_horizontal_split, { buf_id = buf_id })
+      nmap_new_window('gK', WINDOW_TYPE.aboveleft_horizontal_split, { auto_enter = true, buf_id = buf_id })
+      nmap_new_window('gh', WINDOW_TYPE.aboveleft_vertical_split, { buf_id = buf_id })
+      nmap_new_window('gH', WINDOW_TYPE.aboveleft_vertical_split, { auto_enter = true, buf_id = buf_id })
       nmap_new_window('gl', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
       nmap_new_window('gL', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
       nmap_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })

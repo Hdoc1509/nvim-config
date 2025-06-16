@@ -2,6 +2,8 @@ local M = {}
 
 ---@enum WindowType
 M.WINDOW_TYPE = {
+  aboveleft_horizontal_split = 'aboveleft horizontal split',
+  aboveleft_vertical_split = 'aboveleft vertical split',
   belowright_horizontal_split = 'belowright horizontal split',
   belowright_vertical_split = 'belowright vertical split',
   tabnew = 'tabnew',
@@ -9,6 +11,8 @@ M.WINDOW_TYPE = {
 
 ---@type table<WindowType, string>
 local descriptions = {
+  [M.WINDOW_TYPE.aboveleft_horizontal_split] = 'Split above horizontally',
+  [M.WINDOW_TYPE.aboveleft_vertical_split] = 'Split left vertically',
   [M.WINDOW_TYPE.belowright_horizontal_split] = 'Split below horizontally',
   [M.WINDOW_TYPE.belowright_vertical_split] = 'Split right vertically',
   [M.WINDOW_TYPE.tabnew] = 'Open in new tab',
