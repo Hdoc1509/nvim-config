@@ -56,7 +56,7 @@ local nmap_new_window = function(lhs, window_type, opts)
   end
 
   -- Adding `desc` will result into `show_help` entries
-  vim.keymap.set('n', lhs, rhs, {
+  utils.nmap(lhs, rhs, {
     buffer = opts.buf_id,
     desc = descriptions[window_type] .. (auto_enter and '' or ' (silent)'),
   })
