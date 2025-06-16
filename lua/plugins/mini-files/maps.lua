@@ -9,8 +9,8 @@ M.WINDOW_TYPE = {
 
 ---@type table<WindowType, string>
 local descriptions = {
-  [M.WINDOW_TYPE.belowright_horizontal_split] = 'Split horizontally',
-  [M.WINDOW_TYPE.belowright_vertical_split] = 'Split vertically',
+  [M.WINDOW_TYPE.belowright_horizontal_split] = 'Split below horizontally',
+  [M.WINDOW_TYPE.belowright_vertical_split] = 'Split right vertically',
   [M.WINDOW_TYPE.tabnew] = 'Open in new tab',
 }
 
