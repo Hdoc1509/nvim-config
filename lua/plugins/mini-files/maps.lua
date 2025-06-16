@@ -2,6 +2,11 @@ local utils = require('utils')
 
 local M = {}
 
+-- NOTE: enable once updated to nvim-0.10
+-- local ui_open = function()
+--   vim.ui.open(MiniFiles.get_fs_entry().path)
+-- end
+
 local yank_path = function()
   local path = (MiniFiles.get_fs_entry() or {}).path
   if path == nil then

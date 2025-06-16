@@ -9,11 +9,6 @@ local config = function()
     MiniFiles.set_bookmark(id, path, { desc = desc })
   end
 
-  -- NOTE: enable once updated to nvim-0.10
-  -- local ui_open = function()
-  --   vim.ui.open(MiniFiles.get_fs_entry().path)
-  -- end
-
   ---@param onAllowed function
   local open_explorer = function(onAllowed)
     if not vim.tbl_contains(excluded_filetypes, vim.bo.filetype) then
