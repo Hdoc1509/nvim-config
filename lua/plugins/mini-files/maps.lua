@@ -21,10 +21,10 @@ local WINDOW_TYPE = {
 
 ---@type table<WindowType, string>
 local descriptions = {
-  [WINDOW_TYPE.aboveleft_horizontal_split] = 'Split above horizontally',
-  [WINDOW_TYPE.aboveleft_vertical_split] = 'Split left vertically',
-  [WINDOW_TYPE.belowright_horizontal_split] = 'Split below horizontally',
-  [WINDOW_TYPE.belowright_vertical_split] = 'Split right vertically',
+  [WINDOW_TYPE.aboveleft_horizontal_split] = 'Split above',
+  [WINDOW_TYPE.aboveleft_vertical_split] = 'Split left',
+  [WINDOW_TYPE.belowright_horizontal_split] = 'Split below',
+  [WINDOW_TYPE.belowright_vertical_split] = 'Split right',
   [WINDOW_TYPE.tabnew] = 'Open in new tab',
 }
 
@@ -82,6 +82,7 @@ M.set_mini_files_mappings = function(buf_id)
   nmap_new_window('gH', WINDOW_TYPE.aboveleft_vertical_split, { auto_enter = true, buf_id = buf_id })
   nmap_new_window('gl', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
   nmap_new_window('gL', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
+
   nmap_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
   nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
 end
