@@ -27,11 +27,6 @@ return {
   gh_actions_ls = default_settings,
   ['gradle_ls'] = default_settings,
   -- ['groovyls'] = default_settings,
-  -- ['github_actions_ls'] = merge(default_settings, {
-  --   init_params = {
-  --     sessionToken = vim.env.GITHUB_ACTIONS_LS_TOKEN,
-  --   },
-  -- }),
   ['html'] = merge(default_settings, {
     filetypes = { 'html', 'ejs' },
   }),
