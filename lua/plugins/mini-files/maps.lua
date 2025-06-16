@@ -39,8 +39,11 @@ M.nmap_new_window = function(lhs, window_type, opts)
     end)
 
     MiniFiles.set_target_window(new_target)
-    -- FIX: last opened silent window will be focused after closing explorer
     MiniFiles.go_in({ close_on_file = auto_enter })
+
+    if not auto_enter then
+      MiniFiles.set_target_window(cur_target)
+    end
   end
 
   -- Adding `desc` will result into `show_help` entries
