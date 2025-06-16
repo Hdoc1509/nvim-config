@@ -14,16 +14,6 @@ local descriptions = {
   [M.WINDOW_TYPE.tabnew] = 'Open in new tab',
 }
 
-local get_map_desc = function(window_type, auto_enter)
-  local desc = descriptions[window_type]
-
-  if not auto_enter then
-    desc = desc .. ' (silent)'
-  end
-
-  return desc
-end
-
 ---@param lhs string
 ---@param window_type WindowType
 ---@param opts { buf_id: number,  auto_enter?: boolean }
@@ -49,7 +39,7 @@ M.nmap_new_window = function(lhs, window_type, opts)
   -- Adding `desc` will result into `show_help` entries
   vim.keymap.set('n', lhs, rhs, {
     buffer = opts.buf_id,
-    desc = get_map_desc(window_type, auto_enter),
+    desc = descriptions[window_type] .. (auto_enter and '' or ' (silent)'),
   })
 end
 
