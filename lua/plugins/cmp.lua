@@ -7,7 +7,6 @@ vim.g.vsnip_filetypes = {
 local config = function()
   local cmp = require('cmp')
   local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-  local cmp_context = require('cmp.config.context')
   local lspkind = require('lspkind')
   local cmp_window_bordered = cmp.config.window.bordered()
 
