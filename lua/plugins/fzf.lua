@@ -22,6 +22,7 @@ local config = function()
 
   nmap('<leader>e', '<cmd>FZF<cr>')
   nmap('<leader>E', '<cmd>Buffers<cr>')
+  nmap('<leader>?', '<cmd>Helptags<cr>')
 end
 
 return {

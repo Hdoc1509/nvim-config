@@ -112,10 +112,11 @@ Used mapleader is `<space>` key.
 
 ## FZF
 
-| Mapping     | Mode   | Description    |
-| ----------- | ------ | -------------- |
-| `<leader>e` | Normal | Search files   |
-| `<leader>E` | Normal | Search buffers |
+| Mapping     | Mode   | Description     |
+| ----------- | ------ | --------------- |
+| `<leader>e` | Normal | Search files    |
+| `<leader>E` | Normal | Search buffers  |
+| `<leader>?` | Normal | Search helptags |
 
 ## TODO comments
 
