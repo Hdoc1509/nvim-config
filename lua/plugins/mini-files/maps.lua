@@ -1,7 +1,17 @@
+local utils = require('utils')
+
 local M = {}
 
+local yank_path = function()
+  local path = (MiniFiles.get_fs_entry() or {}).path
+  if path == nil then
+    return vim.notify('Cursor is not on valid entry')
+  end
+  vim.fn.setreg(vim.v.register, path)
+end
+
 ---@enum WindowType
-M.WINDOW_TYPE = {
+local WINDOW_TYPE = {
   aboveleft_horizontal_split = 'aboveleft horizontal split',
   aboveleft_vertical_split = 'aboveleft vertical split',
   belowright_horizontal_split = 'belowright horizontal split',
@@ -11,17 +21,17 @@ M.WINDOW_TYPE = {
 
 ---@type table<WindowType, string>
 local descriptions = {
-  [M.WINDOW_TYPE.aboveleft_horizontal_split] = 'Split above horizontally',
-  [M.WINDOW_TYPE.aboveleft_vertical_split] = 'Split left vertically',
-  [M.WINDOW_TYPE.belowright_horizontal_split] = 'Split below horizontally',
-  [M.WINDOW_TYPE.belowright_vertical_split] = 'Split right vertically',
-  [M.WINDOW_TYPE.tabnew] = 'Open in new tab',
+  [WINDOW_TYPE.aboveleft_horizontal_split] = 'Split above horizontally',
+  [WINDOW_TYPE.aboveleft_vertical_split] = 'Split left vertically',
+  [WINDOW_TYPE.belowright_horizontal_split] = 'Split below horizontally',
+  [WINDOW_TYPE.belowright_vertical_split] = 'Split right vertically',
+  [WINDOW_TYPE.tabnew] = 'Open in new tab',
 }
 
 ---@param lhs string
 ---@param window_type WindowType
 ---@param opts { buf_id: number,  auto_enter?: boolean }
-M.nmap_new_window = function(lhs, window_type, opts)
+local nmap_new_window = function(lhs, window_type, opts)
   local auto_enter = opts.auto_enter or false
 
   local rhs = function()
@@ -45,6 +55,35 @@ M.nmap_new_window = function(lhs, window_type, opts)
     buffer = opts.buf_id,
     desc = descriptions[window_type] .. (auto_enter and '' or ' (silent)'),
   })
+end
+
+M.set_mini_files_mappings = function(buf_id)
+  -- allow to confirm changes on write. taken from:
+  -- https://github.com/mrjones2014/dotfiles/blob/31f7988420e5418925022c524de04934e02a427c/nvim/lua/my/configure/mini_files.lua#L14
+  vim.api.nvim_buf_set_option(buf_id, 'buftype', 'acwrite')
+  vim.api.nvim_buf_set_name(buf_id, string.format('mini.files-%s', vim.loop.hrtime()))
+  utils.autocmd('BufWriteCmd', {
+    buffer = buf_id,
+    callback = function()
+      MiniFiles.synchronize()
+    end,
+  })
+
+  -- TODO: enable once updated to nvim-0.10
+  -- nmap('gX', ui_open, { buffer = buf_id, desc = 'OS open' })
+
+  utils.nmap('gy', yank_path, { buffer = buf_id, desc = 'Yank path' })
+
+  nmap_new_window('gj', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
+  nmap_new_window('gJ', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
+  nmap_new_window('gk', WINDOW_TYPE.aboveleft_horizontal_split, { buf_id = buf_id })
+  nmap_new_window('gK', WINDOW_TYPE.aboveleft_horizontal_split, { auto_enter = true, buf_id = buf_id })
+  nmap_new_window('gh', WINDOW_TYPE.aboveleft_vertical_split, { buf_id = buf_id })
+  nmap_new_window('gH', WINDOW_TYPE.aboveleft_vertical_split, { auto_enter = true, buf_id = buf_id })
+  nmap_new_window('gl', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
+  nmap_new_window('gL', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
+  nmap_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
+  nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
 end
 
 return M

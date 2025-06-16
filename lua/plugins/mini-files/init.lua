@@ -3,20 +3,10 @@ local config = function()
   local nmap = utils.nmap
   local maps = require('plugins.mini-files.maps')
   local prefix = require('plugins.mini-files.prefix')
-  local nmap_new_window = maps.nmap_new_window
-  local WINDOW_TYPE = maps.WINDOW_TYPE
   local excluded_filetypes = { 'fugitive', 'minifiles' }
 
   local set_mark = function(id, path, desc)
     MiniFiles.set_bookmark(id, path, { desc = desc })
-  end
-
-  local yank_path = function()
-    local path = (MiniFiles.get_fs_entry() or {}).path
-    if path == nil then
-      return vim.notify('Cursor is not on valid entry')
-    end
-    vim.fn.setreg(vim.v.register, path)
   end
 
   -- NOTE: enable once updated to nvim-0.10
@@ -60,36 +50,7 @@ local config = function()
   utils.autocmd('User', {
     pattern = 'MiniFilesBufferCreate',
     callback = function(args)
-      -- TODO: add util set_mini_files_mappings(buf_id)
-
-      local buf_id = args.data.buf_id
-
-      -- allow to confirm changes on write. taken from:
-      -- https://github.com/mrjones2014/dotfiles/blob/31f7988420e5418925022c524de04934e02a427c/nvim/lua/my/configure/mini_files.lua#L14
-      vim.api.nvim_buf_set_option(buf_id, 'buftype', 'acwrite')
-      vim.api.nvim_buf_set_name(buf_id, string.format('mini.files-%s', vim.loop.hrtime()))
-      utils.autocmd('BufWriteCmd', {
-        buffer = buf_id,
-        callback = function()
-          MiniFiles.synchronize()
-        end,
-      })
-
-      -- TODO: enable once updated to nvim-0.10
-      -- nmap('gX', ui_open, { buffer = buf_id, desc = 'OS open' })
-
-      nmap('gy', yank_path, { buffer = buf_id, desc = 'Yank path' })
-
-      nmap_new_window('gj', WINDOW_TYPE.belowright_horizontal_split, { buf_id = buf_id })
-      nmap_new_window('gJ', WINDOW_TYPE.belowright_horizontal_split, { auto_enter = true, buf_id = buf_id })
-      nmap_new_window('gk', WINDOW_TYPE.aboveleft_horizontal_split, { buf_id = buf_id })
-      nmap_new_window('gK', WINDOW_TYPE.aboveleft_horizontal_split, { auto_enter = true, buf_id = buf_id })
-      nmap_new_window('gh', WINDOW_TYPE.aboveleft_vertical_split, { buf_id = buf_id })
-      nmap_new_window('gH', WINDOW_TYPE.aboveleft_vertical_split, { auto_enter = true, buf_id = buf_id })
-      nmap_new_window('gl', WINDOW_TYPE.belowright_vertical_split, { buf_id = buf_id })
-      nmap_new_window('gL', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
-      nmap_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
-      nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
+      maps.set_mini_files_mappings(args.data.buf_id)
     end,
   })
 
