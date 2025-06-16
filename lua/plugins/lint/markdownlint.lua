@@ -26,7 +26,8 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
   local is_changelog_file = string.match(buf_name, 'CHANGELOG%.md$') ~= nil
   local is_tmpl_file = string.match(buf_name, '%.tmpl%.md$') ~= nil
 
-  return (string.match(buf_name, 'TODO%.md$') ~= nil and string.match(message, 'MD0[23]4') ~= nil)
+  return (string.match(buf_name, 'lazy/readme/doc') ~= nil)
+    or (string.match(buf_name, 'TODO%.md$') ~= nil and string.match(message, 'MD0[23]4') ~= nil)
     or ((string.match(buf_line, '^|') ~= nil or is_changelog_file or is_tmpl_file) and string.match(message, 'MD013') ~= nil)
     or (is_changelog_file and string.match(message, 'MD024') ~= nil)
     or (is_tmpl_file and is_MD012)
