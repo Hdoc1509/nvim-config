@@ -4,6 +4,7 @@ return {
   -- 'cpp',
   'bash',
   'css',
+  'diff',
   'embedded_template',
   'gitattributes',
   'gitcommit',

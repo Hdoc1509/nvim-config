@@ -92,6 +92,7 @@
   <!-- - c (required) -->
   <!-- - cpp (required) -->
 - css
+- diff
 - embedded_template (ejs)
 - gitattributes
 - gitcommit
