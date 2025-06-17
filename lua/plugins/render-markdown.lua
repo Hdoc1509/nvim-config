@@ -1,6 +1,4 @@
 local config = function()
-  local nmap = require('utils').nmap
-
   require('render-markdown').setup({
     heading = {
       icons = { '◉ ', '○ ', '✸ ', '✿ ' },
@@ -16,9 +14,6 @@ local config = function()
       below = '',
     },
   })
-
-  -- TODO: remove keymap
-  nmap('<leader>mt', '<cmd>RenderMarkdown toggle<cr>', { desc = 'Toggle Markdown renderer' })
 end
 
 return {

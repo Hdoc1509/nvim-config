@@ -138,7 +138,6 @@ Used mapleader is `<space>` key.
 | ------------ | ----------- | ------------------------ |
 | `<leader>mo` | Normal (\*) | Start Markdwon preview   |
 | `<leader>mc` | Normal (\*) | Stop Markdown preview    |
-| `<leader>mt` | Normal      | Toggle Markdown renderer |
 
 **(\*): Mappings that show a notify window.**
 
