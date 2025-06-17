@@ -1,5 +1,8 @@
-local config = function()
-  require('render-markdown').setup({
+return {
+  'MeanderingProgrammer/markdown.nvim',
+  name = 'render-markdown',
+  dependencies = { 'nvim-treesitter/nvim-treesitter' },
+  opts = {
     heading = {
       icons = { '◉ ', '○ ', '✸ ', '✿ ' },
       sign = false,
@@ -13,12 +16,5 @@ local config = function()
       width = 'block',
       below = '',
     },
-  })
-end
-
-return {
-  'MeanderingProgrammer/markdown.nvim',
-  name = 'render-markdown',
-  dependencies = { 'nvim-treesitter/nvim-treesitter' },
-  config = config,
+  },
 }
