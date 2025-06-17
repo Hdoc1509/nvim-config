@@ -10,6 +10,7 @@ local config = function()
   nmap('<leader>gl', '<cmd>Git pull<cr>', { desc = 'Git pull' })
   nmap('<leader>gs', '<cmd>Git status<cr>', { desc = 'Git status' })
   nmap('<leader>gc', '<cmd>Git commit<cr>', { desc = 'Git commit' })
+  nmap('<leader>gC', '<cmd>Git commit --verbose<cr>', { desc = 'Git commit verbose' })
   nmap('<leader>gb', '<cmd>GBrowse<cr>', { desc = 'Open in browser at hosting provider' })
 end
 

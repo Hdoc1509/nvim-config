@@ -90,6 +90,7 @@ Used mapleader is `<space>` key.
 | `<leader>gl`  | Normal | Execute `git pull`                        |
 | `<leader>gs`  | Normal | Execute `git status`                      |
 | `<leader>gc`  | Normal | Execute `git commit`                      |
+| `<leader>gC`  | Normal | Execute `git commit verbose`              |
 | `<leader>gb`  | Normal | Open in browser at hosting provider       |
 | `]c`          | Normal | Jump to next hunk                         |
 | `[c`          | Normal | Jump to previous hunk                     |
