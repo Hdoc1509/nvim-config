@@ -1,25 +1,32 @@
 local config = function()
   local theme = {
-    fill = 'TabLineFill',
-    current_tab = 'TabLineSel',
-    tab = 'TabLine',
-    win = 'TabLine',
+    fill = { bg = '#101010', fg = '#8a8a8a' },
+    current_tab = { bg = '#222222' },
   }
+
+  local devicons = require('nvim-web-devicons')
 
   require('tabby').setup({
     line = function(line)
       return {
         line.tabs().foreach(function(tab)
-          local hl = tab.is_current() and theme.current_tab or theme.tab
+          local is_current = tab.is_current()
+          local hl = is_current and theme.current_tab or theme.fill
           local window = tab.current_win()
+          local buf_name = window.buf_name()
+          local extension = vim.fn.fnamemodify(buf_name, ':e')
+          local _, color = devicons.get_icon_color(buf_name, extension)
 
           return {
             ' ',
             tab.number(),
             ' ',
-            window.file_icon(), -- icon of current window
+            {
+              window.file_icon(), -- icon of current window
+              hl = { fg = color, bg = hl.bg },
+            },
             ' ',
-            window.buf_name(), -- no number of windows in tab
+            buf_name, -- no number of windows in tab
             -- tab.name(),
             hl = hl,
             ' ',
