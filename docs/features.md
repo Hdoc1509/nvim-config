@@ -54,6 +54,8 @@
   [`hygen.nvim`](https://github.com/Hdoc1509/hygen.nvim)
 - Css unit conversion via [`convert.nvim`](https://github.com/cjodo/convert.nvim)
 - Highlighting of delimiters with [`rainbow-delimiters.nvim`](https://gitlab.com/HiPhish/rainbow-delimiters.nvim)
+- Better window separator with [`colorful-winsep.nvim`](https://github.com/nvim-zh/colorful-winsep.nvim)
+- Secondary statusline with [`incline.nvim`](https://github.com/b0o/incline.nvim)
 
 ## Tools
 
