@@ -106,6 +106,7 @@ local config = function()
         RainbowDelimiterGreen = { link = 'Constant' },
         RainbowDelimiterViolet = { fg = '#ee5396' },
         RainbowDelimiterCyan = { link = 'PreProc' },
+        NormalNC = { bg = '#0a0a0a' },
       },
     },
   })
