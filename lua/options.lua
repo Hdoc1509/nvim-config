@@ -54,4 +54,6 @@ set.wrap = false
 set.spelllang = 'en_us'
 set.spellsuggest = 'best,9'
 
+set.laststatus = 3
+
 vim.cmd([[if has('win32') | set shell=cmd | endif]])
