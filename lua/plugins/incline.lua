@@ -18,16 +18,21 @@ local config = function()
         local label = {}
 
         for severity, icon in pairs(diagnostic_icons) do
-          local n = #vim.diagnostic.get(props.buf, { severity = vim.diagnostic.severity[string.upper(severity)] })
+          local severityOption = vim.diagnostic.severity[string.upper(severity)]
+          local quantity = #vim.diagnostic.get(props.buf, { severity = severityOption })
 
-          if n > 0 then
-            -- TODO: remove extra space between diagnostics
+          if quantity > 0 then
             table.insert(label, {
-              ' ' .. icon .. ' ' .. n .. ' ',
+              ' ' .. icon .. ' ' .. quantity,
               group = 'DiagnosticSign' .. severity,
             })
           end
         end
+
+        if #label > 0 then
+          table.insert(label, ' ')
+        end
+
         return label
       end
 
@@ -47,6 +52,7 @@ local config = function()
         file_bg = lightline_palette[mode].left[1][2]
       end
 
+      ---@diagnostic disable-next-line: undefined-field
       local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')
 
       if filename == '' then
