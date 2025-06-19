@@ -1,6 +1,8 @@
 local config = function()
   local helpers = require('incline.helpers')
   local devicons = require('nvim-web-devicons')
+  ---@diagnostic disable-next-line: undefined-field
+  local diagnostic_icons = require('icons').diagnostics
   local lightline_palette = vim.fn['lightline#palette']()
 
   require('incline').setup({
@@ -11,6 +13,23 @@ local config = function()
     render = function(props)
       local file_fg = ''
       local file_bg = ''
+
+      local function get_diagnostic_label()
+        local label = {}
+
+        for severity, icon in pairs(diagnostic_icons) do
+          local n = #vim.diagnostic.get(props.buf, { severity = vim.diagnostic.severity[string.upper(severity)] })
+
+          if n > 0 then
+            -- TODO: remove extra space between diagnostics
+            table.insert(label, {
+              ' ' .. icon .. ' ' .. n .. ' ',
+              group = 'DiagnosticSign' .. severity,
+            })
+          end
+        end
+        return label
+      end
 
       if not props.focused then
         file_fg = lightline_palette.inactive.left[1][1]
@@ -42,6 +61,7 @@ local config = function()
       end
 
       return {
+        { get_diagnostic_label() },
         ft_icon and {
           ' ',
           ft_icon,
@@ -49,11 +69,12 @@ local config = function()
           guibg = ft_color,
           guifg = helpers.contrast_color(ft_color),
         } or '',
-        ' ',
-        { filename, gui = modified and 'bold,italic' or 'bold' },
-        ' ',
-        guibg = file_bg,
-        guifg = file_fg,
+        {
+          ' ' .. filename .. ' ',
+          gui = modified and 'bold,italic' or 'bold',
+          guibg = file_bg,
+          guifg = file_fg,
+        },
       }
     end,
   })
