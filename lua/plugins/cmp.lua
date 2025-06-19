@@ -64,6 +64,13 @@ local config = function()
         mode = 'symbol_text',
         maxwidth = 50,
         symbol_map = { Supermaven = '' },
+        menu = {
+          nvim_lsp = '[LSP]',
+          vsnip = '[Snippet]',
+          path = '[Path]',
+          buffer = '[Buffer]',
+          supermaven = '[SuperMaven]',
+        },
       }),
     },
   })
