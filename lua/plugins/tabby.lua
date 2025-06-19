@@ -15,15 +15,15 @@ local config = function()
           local window = tab.current_win()
           local buf_name = window.buf_name()
           local extension = vim.fn.fnamemodify(buf_name, ':e')
-          local _, color = devicons.get_icon_color(buf_name, extension)
+          local icon, icon_color = devicons.get_icon_color(buf_name, extension)
 
           return {
             ' ',
             tab.number(),
             ' ',
             {
-              window.file_icon(), -- icon of current window
-              hl = { fg = color, bg = hl.bg },
+              icon,
+              hl = { fg = icon_color, bg = hl.bg },
             },
             ' ',
             buf_name, -- no number of windows in tab
