@@ -120,8 +120,14 @@ nmap('<leader>O', "printf('m`%sO<esc>``', v:count1)", { expr = true })
 -- Toggle spell check
 keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<cr>', { desc = 'Toggle spell check', silent = false })
 
-nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
-nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
+nmap(']d', function()
+  -- NOTE: avoids breaking lightline.vim
+  vim.diagnostic.goto_next({ float = false })
+end, { desc = 'Go to next diagnostic' })
+nmap('[d', function()
+  -- NOTE: avoids breaking lightline.vim
+  vim.diagnostic.goto_prev({ float = false })
+end, { desc = 'Go to previous diagnostic' })
 nmap('<leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
 
 -- Replace all matches of selected text
