@@ -10,10 +10,8 @@ local config = function()
     line = function(line)
       return {
         line.tabs().foreach(function(tab)
-          local is_current = tab.is_current()
-          local hl = is_current and theme.current_tab or theme.fill
-          local window = tab.current_win()
-          local buf_name = window.buf_name()
+          local hl = tab.is_current() and theme.current_tab or theme.fill
+          local buf_name = tab.current_win().buf_name()
           local extension = vim.fn.fnamemodify(buf_name, ':e')
           local icon, icon_color = devicons.get_icon_color(buf_name, extension)
 
