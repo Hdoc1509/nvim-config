@@ -34,7 +34,7 @@ local config = function()
         hl = theme.fill,
       }
     end,
-  })
+  } --[[@as TabbyConfig]])
 end
 
 return {
