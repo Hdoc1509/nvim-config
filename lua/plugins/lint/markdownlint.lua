@@ -2,6 +2,9 @@ local lint_parser = require('lint.parser')
 local default_markdownlint = require('lint.linters.markdownlint')
 local merge = require('utils').merge
 
+-- TODO: simplify before updating. based on:
+-- https://github.com/mfussenegger/nvim-lint?tab=readme-ov-file#customize-built-in-linters
+
 -- NOTE: update every time nvim-lint is updated
 local efm = '%f:%l:%c %m,%f:%l %m'
 
