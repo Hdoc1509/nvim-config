@@ -10,9 +10,6 @@ local config = function()
       padding = 0,
       margin = { horizontal = 0 },
     },
-    hide = {
-      only_win = true,
-    },
     ignore = {
       filetypes = { 'gitcommit', 'qf' },
     },
