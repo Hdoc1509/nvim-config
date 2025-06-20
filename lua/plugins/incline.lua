@@ -10,6 +10,9 @@ local config = function()
       padding = 0,
       margin = { horizontal = 0 },
     },
+    hide = {
+      only_win = true,
+    },
     render = function(props)
       local is_focused = props.focused
       local file_fg = ''
