@@ -11,6 +11,7 @@ local config = function()
       margin = { horizontal = 0 },
     },
     render = function(props)
+      local is_focused = props.focused
       local file_fg = ''
       local file_bg = ''
 
@@ -36,7 +37,7 @@ local config = function()
         return label
       end
 
-      if not props.focused then
+      if not is_focused then
         file_fg = lightline_palette.inactive.left[1][1]
         file_bg = lightline_palette.inactive.left[1][2]
       else
@@ -72,8 +73,8 @@ local config = function()
           ' ',
           ft_icon,
           ' ',
-          guibg = ft_color,
-          guifg = helpers.contrast_color(ft_color),
+          guibg = is_focused and ft_color or file_bg,
+          guifg = is_focused and helpers.contrast_color(ft_color) or file_fg,
         } or '',
         {
           ' ' .. filename .. ' ',
