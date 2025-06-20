@@ -1,18 +1,10 @@
-local lint_parser = require('lint.parser')
 local default_markdownlint = require('lint.linters.markdownlint')
 local merge = require('utils').merge
 
 -- TODO: simplify before updating. based on:
 -- https://github.com/mfussenegger/nvim-lint?tab=readme-ov-file#customize-built-in-linters
 
--- NOTE: update every time nvim-lint is updated
-local efm = '%f:%l:%c %m,%f:%l %m'
-
--- NOTE: update every time nvim-lint is updated
-local default_parser = lint_parser.from_errorformat(efm, {
-  source = 'markdownlint',
-  severity = vim.diagnostic.severity.WARN,
-})
+local base_parser = default_markdownlint.parser
 
 local lazy_nvim_path = vim.fn.stdpath('data') .. '/lazy'
 
@@ -42,7 +34,7 @@ end
 return merge(default_markdownlint, {
   ---@type lint.parse
   parser = function(output, bufnr, linter_cwd)
-    local all_diagnostics = default_parser(output, bufnr, linter_cwd)
+    local all_diagnostics = base_parser(output, bufnr, linter_cwd)
     -- print(vim.inspect(all_diagnostics))
 
     -- NOTE: can I use vim.fn.filter() instead of this loop?

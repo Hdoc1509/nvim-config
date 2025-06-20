@@ -12,7 +12,9 @@ local config = function()
     markdown = { 'markdownlint_custom' },
   }
 
+  ---@diagnostic disable-next-line: inject-field
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
+  ---@diagnostic disable-next-line: inject-field
   lint.linters.markdownlint_custom = require('plugins.lint.markdownlint')
 
   autocmd(aggressive_events, {
