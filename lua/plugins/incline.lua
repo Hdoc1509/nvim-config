@@ -11,7 +11,7 @@ local config = function()
       margin = { horizontal = 0 },
     },
     ignore = {
-      filetypes = { 'gitcommit', 'qf' },
+      filetypes = { 'gitcommit', 'qf', 'gitrebase' },
     },
     render = function(props)
       local is_focused = props.focused
