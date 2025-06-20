@@ -13,6 +13,9 @@ local config = function()
     hide = {
       only_win = true,
     },
+    ignore = {
+      filetypes = { 'gitcommit', 'qf' },
+    },
     render = function(props)
       local is_focused = props.focused
       local file_fg = ''
