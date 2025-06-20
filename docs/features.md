@@ -8,8 +8,6 @@
 
 ## Plugins
 
-- Settings for [`neovim-qt`](https://github.com/equalsraf/neovim-qt) and
-  [`neovide`](https://github.com/neovide/neovide)
 - Plugin management via [`lazy.nvim`](https://github.com/folke/lazy.nvim)
 - Code highlighting via [`nvim-treesitter`](https://github.com/nvim-treesitter/nvim-treesitter)
 - Better statusline via [`lightline.vim`](https://github.com/itchyny/lightline.vim)
@@ -32,7 +30,6 @@
   and [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
 - Github integration with for `vim-fugitive` by [`vim-rhubarb`](https://github.com/tpope/vim-rhubarb)
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim)
-- Functions and commands for Neovim GUI's via [`neovim-gui-shim`](https://github.com/equalsraf/neovim-gui-shim)
 - Better colorcolumn with [`virt-column.nvim`](https://github.com/lukas-reineke/virt-column.nvim)
 - Color highlighter with [`nvim-highlight-colors`](https://github.com/brenoprata10/nvim-highlight-colors)
 - Indentation guides via [`indent-blankline.nvim`](https://github.com/lukas-reineke/indent-blankline.nvim)

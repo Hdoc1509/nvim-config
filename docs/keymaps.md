@@ -208,19 +208,6 @@ Used mapleader is `<space>` key.
 | vh           | Command | vertical help |
 | th           | Command | tab help      |
 
-## Nvim-qt
-
-| Mapping      | Mode   | Description        |
-| ------------ | ------ | ------------------ |
-| `<leader>fs` | Normal | Enable Fullscreen  |
-| `<leader>Fs` | Normal | Disable Fullscreen |
-
-## Neovide
-
-| Mapping | Mode   | Description       |
-| ------- | ------ | ----------------- |
-| `<F11>` | Normal | Toggle Fullscreen |
-
 ## Temporary disabled
 
 ### Supermaven
