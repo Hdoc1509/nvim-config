@@ -41,13 +41,11 @@ return {
     },
     {
       'windwp/nvim-ts-autotag',
-      config = function()
-        require('nvim-ts-autotag').setup({
-          aliases = {
-            ejs = 'html',
-          },
-        })
-      end,
+      opts = {
+        aliases = {
+          ejs = 'html',
+        },
+      },
       event = { 'BufReadPre', 'BufNewFile' },
     },
     'nvim-treesitter/nvim-treesitter-textobjects',
