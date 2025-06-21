@@ -62,6 +62,7 @@ local nmap_new_window = function(lhs, window_type, opts)
   })
 end
 
+---@param buf_id number
 M.setup = function(buf_id)
   -- allow to confirm changes on write. taken from:
   -- https://github.com/mrjones2014/dotfiles/blob/31f7988420e5418925022c524de04934e02a427c/nvim/lua/my/configure/mini_files.lua#L14
