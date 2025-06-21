@@ -66,7 +66,9 @@ end
 M.setup = function(buf_id)
   -- allow to confirm changes on write. taken from:
   -- https://github.com/mrjones2014/dotfiles/blob/31f7988420e5418925022c524de04934e02a427c/nvim/lua/my/configure/mini_files.lua#L14
+  -- TODO: use nvim_set_option_value() once updated to nvim-0.10
   vim.api.nvim_buf_set_option(buf_id, 'buftype', 'acwrite')
+  -- TODO: use vim.uv.hrtime() once updated to nvim-0.10
   vim.api.nvim_buf_set_name(buf_id, string.format('mini.files-%s', vim.loop.hrtime()))
   utils.autocmd('BufWriteCmd', {
     buffer = buf_id,
