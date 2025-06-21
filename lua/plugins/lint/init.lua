@@ -9,7 +9,6 @@ local config = function()
 
   lint.linters_by_ft = {
     groovy = { 'groovy_lint' },
-    markdown = { 'markdownlint_custom' },
   }
 
   ---@diagnostic disable-next-line: inject-field
@@ -21,6 +20,13 @@ local config = function()
     pattern = { '*.github/workflows/*.yml', '*.github/workflows/*.yaml' },
     callback = function()
       lint.try_lint('actionlint')
+    end,
+  })
+
+  autocmd(aggressive_events, {
+    pattern = '*.md',
+    callback = function()
+      lint.try_lint('markdownlint_custom')
     end,
   })
 
