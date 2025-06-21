@@ -18,3 +18,5 @@
                 (string_content) @injection.content)))
         ]
         (#set! injection.language "regex")))))
+
+; TODO: do the same for utils.autocmd identifier
