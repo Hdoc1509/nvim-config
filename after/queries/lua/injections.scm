@@ -11,9 +11,10 @@
         (#eq? @field "pattern")
         value: [
           (string
-            (string_content) @string.special)
+            (string_content) @injection.content)
           (table_constructor
             (field
               (string
-                (string_content) @string.special)))
-        ]))))
+                (string_content) @injection.content)))
+        ]
+        (#set! injection.language "regex")))))
