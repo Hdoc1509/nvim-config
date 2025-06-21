@@ -1,10 +1,8 @@
 local default_markdownlint = require('lint.linters.markdownlint')
 local merge = require('utils').merge
 
--- TODO: simplify before updating. based on:
--- https://github.com/mfussenegger/nvim-lint?tab=readme-ov-file#customize-built-in-linters
-
 local base_parser = default_markdownlint.parser
+local base_args = default_markdownlint.args
 
 local lazy_nvim_path = vim.fn.stdpath('data') .. '/lazy'
 
@@ -31,9 +29,7 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
 end
 
 return merge(default_markdownlint, {
-  args = {
-    '--ignore ' .. lazy_nvim_path,
-  },
+  args = table.insert(base_args, '--ignore ' .. lazy_nvim_path),
   ---@type lint.parse
   parser = function(output, bufnr, linter_cwd)
     local all_diagnostics = base_parser(output, bufnr, linter_cwd)
