@@ -28,24 +28,26 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
     or (is_tmpl_file and string.match(message, 'MD041') ~= nil)
 end
 
+---@type lint.parse
+local custom_parser = function(output, bufnr, linter_cwd)
+  local all_diagnostics = base_parser(output, bufnr, linter_cwd)
+  -- print(vim.inspect(all_diagnostics))
+
+  -- NOTE: can I use vim.fn.filter() instead of this loop?
+  local idx = 1
+
+  while idx <= #all_diagnostics do
+    if is_diagnostic_ignored(bufnr, all_diagnostics[idx]) then
+      table.remove(all_diagnostics, idx)
+    else
+      idx = idx + 1
+    end
+  end
+
+  return all_diagnostics
+end
+
 return merge(default_markdownlint, {
   args = table.insert(base_args, '--ignore ' .. lazy_nvim_path),
-  ---@type lint.parse
-  parser = function(output, bufnr, linter_cwd)
-    local all_diagnostics = base_parser(output, bufnr, linter_cwd)
-    -- print(vim.inspect(all_diagnostics))
-
-    -- NOTE: can I use vim.fn.filter() instead of this loop?
-    local idx = 1
-
-    while idx <= #all_diagnostics do
-      if is_diagnostic_ignored(bufnr, all_diagnostics[idx]) then
-        table.remove(all_diagnostics, idx)
-      else
-        idx = idx + 1
-      end
-    end
-
-    return all_diagnostics
-  end,
+  parser = custom_parser,
 })
