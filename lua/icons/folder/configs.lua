@@ -671,7 +671,7 @@ return {
     hl = 'FolderUtils',
     folder_names = { 'utilities', 'utils', 'utitlity' },
   },
-  var = { icon = '󱋣', hl = 'FolderOther' },
+  var = { icon = '󱋣', hl = 'FolderOther', folder_names = { 'var', 'vars' } },
   video = {
     icon = '󱞊',
     hl = 'FolderVideo',
