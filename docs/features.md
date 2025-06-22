@@ -60,6 +60,7 @@
 - [`astro`](https://github.com/withastro/language-tools/tree/main/packages/language-server)
 - [`bashls`](https://github.com/bash-lsp/bash-language-server)
 - [`cssls`](https://github.com/hrsh7th/vscode-langservers-extracted)
+- [`css_variables`](https://github.com/vunguyentuan/vscode-css-variables/tree/master/packages/css-variables-language-server)
 - [`emmet_ls`](https://github.com/aca/emmet-ls)
 - [`eslint`](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [`gh_actions_ls`](https://github.com/lttb/gh-actions-language-server)

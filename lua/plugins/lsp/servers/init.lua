@@ -9,6 +9,7 @@ return {
     filetypes = { 'sh', 'zsh' },
   }),
   ['cssls'] = default_settings,
+  ['css_variables'] = default_settings,
   ['emmet_ls'] = merge(default_settings, {
     root_dir = function()
       return vim.loop.cwd()
