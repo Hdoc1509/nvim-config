@@ -17,5 +17,4 @@ return {
       below = '',
     },
   },
-  ft = 'markdown',
 }
