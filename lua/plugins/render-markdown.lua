@@ -8,8 +8,8 @@ local config = function()
       -- FIX: breaks custom icons. works from nvim-0.10
       -- position = 'inline',
     },
-    -- NOTE: I won't need this option once updated to nvim-0.10
     pipe_table = {
+      -- TODO: use 'trimmed' once updated to nvim-0.10
       cell = 'overlay',
     },
     code = {
