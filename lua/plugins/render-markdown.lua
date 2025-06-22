@@ -1,11 +1,24 @@
 local config = function()
-  local nmap = require('utils').nmap
-
   require('render-markdown').setup({
-    headings = { '◉ ', '○ ', '✸ ', '✿ ' },
+    heading = {
+      icons = { '◉ ', '○ ', '✸ ', '✿ ' },
+      sign = false,
+      width = 'block',
+      min_width = 79,
+      -- FIX: breaks custom icons. works from nvim-0.10
+      -- position = 'inline',
+    },
+    -- NOTE: I won't need this option once updated to nvim-0.10
+    pipe_table = {
+      cell = 'overlay',
+    },
+    code = {
+      sign = false,
+      width = 'block',
+      below = '',
+      language_border = '',
+    },
   })
-
-  nmap('<leader>mt', '<cmd>RenderMarkdownToggle<cr>', { desc = 'Toggle Markdown renderer' })
 end
 
 return {

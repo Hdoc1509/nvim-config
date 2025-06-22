@@ -47,7 +47,7 @@
   "promise-async": { "branch": "main", "commit": "119e8961014c9bfaf1487bf3c2a393d254f337e2" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "55ad4fb76ab68460f700599b7449385f0c4e858e" },
   "refjump.nvim": { "branch": "main", "commit": "3459d17ad750d49458fec5b315e3181c525c6b27" },
-  "render-markdown": { "branch": "main", "commit": "973a5ac8a0a7e8721576d144af8ba5f95c057689" },
+  "render-markdown": { "branch": "main", "commit": "0944ba04ea7fc9e9087c1dedc76562d6e0d110cf" },
   "rest.nvim": { "branch": "main", "commit": "91badd46c60df6bd9800c809056af2d80d33da4c" },
   "schemastore.nvim": { "branch": "main", "commit": "eeacd3cb53a1991a3ef18fb0456c9b9bda047c70" },
   "statuscol.nvim": { "branch": "main", "commit": "2cdad94d0bdd7e56b9333d4e215bf5b05ba5ec1a" },
