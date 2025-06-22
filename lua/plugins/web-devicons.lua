@@ -19,4 +19,5 @@ return {
       cmd = 'bat',
     })
   end,
+  lazy = true,
 }
