@@ -35,7 +35,6 @@
 - Indentation guides via [`indent-blankline.nvim`](https://github.com/lukas-reineke/indent-blankline.nvim)
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify)
 - Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons)
-- Unicode completion with [`unicode.vim`](https://github.com/chrisbra/unicode.vim)
 - Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim)
 - Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo)
   and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim)
