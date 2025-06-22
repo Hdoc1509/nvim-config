@@ -16,6 +16,7 @@ local config = function()
       sign = false,
       width = 'block',
       below = '',
+      above = '',
       language_border = '',
     },
   })
