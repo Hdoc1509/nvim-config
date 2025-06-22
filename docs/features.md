@@ -14,8 +14,7 @@
 - File explorer via [`mini.files`](https://github.com/echasnovski/mini.files)
 - File fuzzy finder via [`fzf`](https://github.com/junegunn/fzf) and
   [`fzf.vim`](https://github.com/junegunn/fzf.vim)
-- Autopairing via [`auto-pairs`](https://github.com/jiangmiao/auto-pairs) and
-  [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag)
+- Autopairing via [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag)
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip)
 - Move lines and selections easier with [`vim-move`](https://github.com/matze/vim-move)
 - Formatters support via [`formatter.nvim`](https://github.com/mhartington/formatter.nvim)
