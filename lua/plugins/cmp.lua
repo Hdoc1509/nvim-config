@@ -102,7 +102,11 @@ return {
     'onsails/lspkind.nvim',
     'hrsh7th/cmp-vsnip',
     'rafamadriz/friendly-snippets',
-    'hrsh7th/vim-vsnip',
+    {
+      'hrsh7th/vim-vsnip',
+      -- NOTE: looks like next update needs new features of nvim-treesitter
+      commit = 'b7445b3c43acb08c0b74350d046e0088ece88033',
+    },
     'supermaven-inc/supermaven-nvim',
     {
       -- TODO: move to its own file
