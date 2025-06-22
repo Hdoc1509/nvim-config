@@ -1,8 +1,5 @@
 local config = function()
   local prettier = require('formatter.defaults.prettier')
-  local utils = require('utils')
-  local nmap = utils.nmap
-  local keymap = utils.keymap
 
   ---@diagnostic disable-next-line: undefined-field
   require('formatter').setup({
@@ -35,15 +32,15 @@ local config = function()
       yaml = { prettier },
     },
   })
-
-  nmap('<leader>f', '<cmd>Format<cr>')
-  nmap('<leader>F', '<cmd>FormatWrite<cr>')
-  keymap('x', '<leader>f', ":'<,'>Format<cr>")
-  keymap('x', '<leader>F', ":'<,'>FormatWrite<cr>")
 end
 
 return {
   'mhartington/formatter.nvim',
-  event = 'VeryLazy',
   config = config,
+  keys = {
+    { '<leader>f', '<cmd>Format<cr>' },
+    { '<leader>f', ":'<,'>Format<cr>", mode = 'x' },
+    { '<leader>F', '<cmd>FormatWrite<cr>' },
+    { '<leader>F', ":'<,'>FormatWrite<cr>", mode = 'x' },
+  },
 }

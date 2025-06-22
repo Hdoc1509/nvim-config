@@ -1,6 +1,4 @@
 local config = function()
-  local nmap = require('utils').nmap
-
   -- Use these options if fzf options are not set by user shell
   if vim.fn.empty(vim.env.FZF_DEFAULT_COMMAND) == 1 then
     vim.cmd([[
@@ -19,10 +17,6 @@ local config = function()
     vim.env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --no-ignore --exclude={'" .. vim.g.fzf_exclude .. "'}"
     vim.env.FZF_DEFAULT_OPTS = '--layout=reverse'
   end
-
-  nmap('<leader>e', '<cmd>FZF<cr>')
-  nmap('<leader>E', '<cmd>Buffers<cr>')
-  nmap('<leader>?', '<cmd>Helptags<cr>')
 end
 
 return {
@@ -30,6 +24,16 @@ return {
     'junegunn/fzf',
     config = config,
     build = './install --bin', -- ensure latest version for neovim
+    keys = {
+      { '<leader>e', '<cmd>FZF<cr>' },
+    },
   },
-  { 'junegunn/fzf.vim', dependencies = 'junegunn/fzf' },
+  {
+    'junegunn/fzf.vim',
+    dependencies = 'junegunn/fzf',
+    keys = {
+      { '<leader>E', '<cmd>Buffers<cr>' },
+      { '<leader>?', '<cmd>Helptags<cr>' },
+    },
+  },
 }

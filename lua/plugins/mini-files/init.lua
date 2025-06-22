@@ -31,4 +31,10 @@ return {
   'echasnovski/mini.files',
   config = config,
   version = false,
+  keys = {
+    -- NOTE: see https://lazy.folke.io/spec/lazy_loading#%EF%B8%8F-lazy-key-mappings
+    { '-', nil, desc = 'Open mini.files in current file' },
+    { '<leader>-', nil, desc = 'Open mini.files in last used path' },
+    { '<leader>_', nil, desc = 'Open mini.files in root path of workspace' },
+  },
 }

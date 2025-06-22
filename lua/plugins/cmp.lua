@@ -103,6 +103,7 @@ return {
     'hrsh7th/cmp-vsnip',
     'rafamadriz/friendly-snippets',
     'hrsh7th/vim-vsnip',
+    'supermaven-inc/supermaven-nvim',
     {
       -- TODO: move to its own file
       'windwp/nvim-autopairs',
@@ -124,6 +125,6 @@ return {
       end,
     },
   },
-  event = 'VeryLazy',
+  event = 'InsertEnter',
   config = config,
 }
