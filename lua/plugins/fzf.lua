@@ -34,6 +34,7 @@ return {
     keys = {
       { '<leader>E', '<cmd>Buffers<cr>' },
       { '<leader>?', '<cmd>Helptags<cr>' },
+      { '<leader>R', '<cmd>Rg<cr>' },
     },
   },
 }
