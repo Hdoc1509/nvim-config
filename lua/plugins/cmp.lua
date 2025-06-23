@@ -75,7 +75,15 @@ local config = function()
     },
   })
 
-  cmp.setup.cmdline({ '/', '?' }, {
+  cmp.setup.cmdline('/', {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp_document_symbol' },
+      { name = 'buffer' },
+    }),
+  })
+
+  cmp.setup.cmdline('?', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
       { name = 'buffer' },
@@ -103,6 +111,11 @@ return {
     'hrsh7th/cmp-vsnip',
     'rafamadriz/friendly-snippets',
     {
+      'hrsh7th/cmp-nvim-lsp-document-symbol',
+      -- NOTE: until update to nvim-0.10
+      commit = '7ed09f8b89044976f7866e09a815dcbbab902ae9',
+    },
+    {
       'hrsh7th/vim-vsnip',
       -- NOTE: looks like next update needs new features of nvim-treesitter
       commit = 'b7445b3c43acb08c0b74350d046e0088ece88033',
@@ -129,6 +142,6 @@ return {
       end,
     },
   },
-  event = 'InsertEnter',
+  event = { 'InsertEnter', 'CmdlineEnter' },
   config = config,
 }
