@@ -44,6 +44,7 @@
 ### Shellcheck within `bashls`
 
 - Ignore SC2034 for `.env*` files
+  - or [ignore per .env* file](https://github.com/koalaman/shellcheck/wiki/Ignore#ignoring-all-instances-in-a-file-044)
 
 ## Try
 
