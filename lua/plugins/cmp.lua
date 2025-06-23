@@ -71,7 +71,16 @@ local config = function()
           path = '[Path]',
           buffer = '[Buffer]',
           supermaven = '[SuperMaven]',
+          calc = '[Math]',
+          nvim_lsp_document_symbol = '[Symbol]',
         },
+        before = function(entry, item)
+          if entry.source.name == 'calc' then
+            item.kind = ''
+          end
+
+          return item
+        end,
       }),
     },
   })
