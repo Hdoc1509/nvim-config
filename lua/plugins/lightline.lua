@@ -3,7 +3,8 @@ vim.g.lightline = {
   active = {
     left = {
       { 'mode', 'paste' },
-      { 'gitbranch', 'readonly', 'filename', 'spell' },
+      { 'gitbranch' },
+      { 'readonly', 'filename', 'spell' },
     },
     right = {
       { 'lineinfo' },
@@ -16,7 +17,6 @@ vim.g.lightline = {
   },
   component_function = {
     filename = 'LightlineFilename',
-    -- TODO: highlight with green color
     gitbranch = 'LightlineGitBranch',
     readonly = 'LightlineReadonly',
   },
@@ -31,6 +31,18 @@ return {
   config = function()
     -- stylua: ignore start
     vim.api.nvim_exec2([[
+      " palette table: print(vim.inspect(vim.fn['lightline#palette']()))
+      let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+
+      " #ff7043 inactive
+      " update color for 2nd section of left section
+      " TODO: update colors for rest of modes
+      let s:palette.normal.left[1] = ["#e8e8e8", "#f54d27", 231, 214, "bold"]
+      " let s:palette.normal.left[1] = ["#f54d27", "#e8e8e8", 231, 214, "bold"]
+
+      " create colors for 3rd sub-section of left section
+      call add(s:palette.normal.left, ["#ffffff", "#121212", 231, 233])
+
       function! LightlineFilename()
         let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
         let modified = &modified ? ' +' : ''
