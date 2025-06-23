@@ -26,7 +26,7 @@ vim.g.lightline = {
 return {
   'itchyny/lightline.vim',
   dependencies = {
-    'tpope/vim-fugitive',
+    'itchyny/vim-gitbranch',
   },
   config = function()
     -- stylua: ignore start
@@ -42,7 +42,7 @@ return {
       endfunction
 
       function! LightlineGitBranch()
-        return FugitiveHead() . ' 󰘬'
+        return gitbranch#name() . ' 󰘬'
       endfunction
     ]], {})
     -- stylua: ignore end
