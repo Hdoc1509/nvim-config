@@ -58,6 +58,7 @@ local config = function()
       { name = 'path' },
       { name = 'buffer' },
       { name = 'supermaven' },
+      { name = 'calc' },
     }),
     formatting = {
       format = lspkind.cmp_format({
@@ -115,6 +116,7 @@ return {
       -- NOTE: until update to nvim-0.10
       commit = '7ed09f8b89044976f7866e09a815dcbbab902ae9',
     },
+    'hrsh7th/cmp-calc',
     {
       'hrsh7th/vim-vsnip',
       -- NOTE: looks like next update needs new features of nvim-treesitter
