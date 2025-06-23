@@ -85,10 +85,8 @@ Used mapleader is `<space>` key.
 | `<leader>gV`  | Normal | Open git summary window in vertical split |
 | `<leader>gT`  | Normal | Open git summary window in new tab        |
 | `<leader>gaa` | Normal | Execute `git add --all`                   |
-| `<leader>gd`  | Normal | Execute `git diff`                        |
 | `<leader>gp`  | Normal | Execute `git push`                        |
 | `<leader>gl`  | Normal | Execute `git pull`                        |
-| `<leader>gs`  | Normal | Execute `git status`                      |
 | `<leader>gc`  | Normal | Execute `git commit`                      |
 | `<leader>gC`  | Normal | Execute `git commit verbose`              |
 | `<leader>gb`  | Normal | Open in browser at hosting provider       |
