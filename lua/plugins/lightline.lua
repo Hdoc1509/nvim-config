@@ -34,9 +34,11 @@ return {
       " palette table: print(vim.inspect(vim.fn['lightline#palette']()))
       let palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
       let gitbranch = {}
+      let bg = {}
+      let bg.normal = [palette.normal.right[1][1], palette.normal.right[1][3],]
       " TODO: update colors for rest of modes
       " [fg, bg, fg_cterm, bg_cterm, style]
-      let gitbranch.normal = ["#ff7043", "#262626", 209, 235, "bold"]
+      let gitbranch.normal = ["#ff7043", bg.normal[0], 209, bg.normal[1], "bold"]
 
       call insert(palette.normal.left, gitbranch.normal, 1)
 
