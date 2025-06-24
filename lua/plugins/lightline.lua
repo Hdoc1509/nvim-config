@@ -33,14 +33,20 @@ return {
     vim.api.nvim_exec2([[
       " palette table: print(vim.inspect(vim.fn['lightline#palette']()))
       let palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
-      let gitbranch = {}
-      let bg = {}
-      let bg.normal = [palette.normal.right[1][1], palette.normal.right[1][3],]
-      " TODO: update colors for rest of modes
+      " [fg, fg_cterm]
+      let fg_insert = [palette.insert.right[0][0], palette.insert.right[0][2],]
+      let fg_normal = ["#ff7043", 209]
+      " [bg, bg_cterm]
+      let bg_insert = [palette.insert.right[0][1], palette.insert.right[0][3],]
+      let bg_normal = [palette.normal.right[1][1], palette.normal.right[1][3],]
       " [fg, bg, fg_cterm, bg_cterm, style]
-      let gitbranch.normal = ["#ff7043", bg.normal[0], 209, bg.normal[1], "bold"]
+      let insert = [fg_insert[0], bg_insert[0], fg_insert[1], bg_insert[1], "bold"]
+      let normal = [fg_normal[0], bg_normal[0], fg_normal[1], bg_normal[1], "bold"]
 
-      call insert(palette.normal.left, gitbranch.normal, 1)
+      call insert(palette.insert.left, insert, 1)
+      call insert(palette.normal.left, normal, 1)
+      call insert(palette.visual.left, normal, 1)
+      call insert(palette.replace.left, normal, 1)
 
       function! LightlineFilename()
         let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
