@@ -34,13 +34,11 @@ return {
       " palette table: print(vim.inspect(vim.fn['lightline#palette']()))
       let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
 
-      " #ff7043 inactive
-      " update color for 2nd section of left section
       " TODO: update colors for rest of modes
-      let s:palette.normal.left[1] = ["#e8e8e8", "#f54d27", 231, 214, "bold"]
-      " let s:palette.normal.left[1] = ["#f54d27", "#e8e8e8", 231, 214, "bold"]
+      " [fg, bg, fg_cterm, bg_cterm, style]
+      " bg -> 2nd item in `right` section
+      let s:palette.normal.left[1] = ["#ff7043", "#262626", 209, 235, "bold"]
 
-      " create colors for 3rd sub-section of left section
       call add(s:palette.normal.left, ["#ffffff", "#121212", 231, 233])
 
       function! LightlineFilename()
