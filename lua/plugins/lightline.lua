@@ -54,7 +54,8 @@ return {
       endfunction
 
       function! LightlineGitBranch()
-        return gitbranch#name() . ' 󰘬'
+        let branch = gitbranch#name()
+        return branch !=# '' ? branch . ' 󰘬' : ''
       endfunction
     ]], {})
     -- stylua: ignore end
