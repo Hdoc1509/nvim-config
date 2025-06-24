@@ -32,14 +32,13 @@ return {
     -- stylua: ignore start
     vim.api.nvim_exec2([[
       " palette table: print(vim.inspect(vim.fn['lightline#palette']()))
-      let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
-
+      let palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+      let gitbranch = {}
       " TODO: update colors for rest of modes
       " [fg, bg, fg_cterm, bg_cterm, style]
-      " bg -> 2nd item in `right` section
-      let s:palette.normal.left[1] = ["#ff7043", "#262626", 209, 235, "bold"]
+      let gitbranch.normal = ["#ff7043", "#262626", 209, 235, "bold"]
 
-      call add(s:palette.normal.left, ["#ffffff", "#121212", 231, 233])
+      call insert(palette.normal.left, gitbranch.normal, 1)
 
       function! LightlineFilename()
         let filename = expand('%:t') !=# '' ? expand('%:t') : '[No Name]'
