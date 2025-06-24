@@ -121,11 +121,11 @@ nmap('<leader>O', "printf('m`%sO<esc>``', v:count1)", { expr = true })
 keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<cr>', { desc = 'Toggle spell check', silent = false })
 
 nmap(']d', function()
-  -- NOTE: avoids breaking lightline.vim
+  -- NOTE: not needed because of autocmd to show diagnostic on floating window
   vim.diagnostic.goto_next({ float = false })
 end, { desc = 'Go to next diagnostic' })
 nmap('[d', function()
-  -- NOTE: avoids breaking lightline.vim
+  -- NOTE: not needed because of autocmd to show diagnostic on floating window
   vim.diagnostic.goto_prev({ float = false })
 end, { desc = 'Go to previous diagnostic' })
 nmap('<leader>dl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })

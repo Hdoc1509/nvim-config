@@ -28,7 +28,7 @@ local attach = function(ev)
   buf_nmap('<space>ca', lsp_buf.code_action)
   buf_nmap('gr', lsp_buf.references)
 
-  -- Show inline diagnostic automatically in Hover Window
+  -- show diagnostic on floating window
   autocmd('CursorHold', {
     buffer = bufnr,
     callback = function()
