@@ -21,6 +21,7 @@ local config = function()
       javascriptreact = { prettier },
       json = { prettier },
       jsonc = { prettier },
+      -- TODO: add kulala-fmt for `http` files
       lua = { require('formatter.filetypes.lua').stylua },
       markdown = { prettier },
       ['markdown.mdx'] = { prettier },

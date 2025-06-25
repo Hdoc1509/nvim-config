@@ -69,6 +69,7 @@
 - [`jdtls`](https://projects.eclipse.org/projects/eclipse.jdt.ls)
 - [`jsonls`](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [`jqls`](https://github.com/wader/jq-lsp)
+- [`kulala_ls`](https://github.com/mistweaverco/kulala-ls)
 - [`lua_ls`](https://github.com/luals/lua-language-server)
 - [`marksman`](https://github.com/artempyanykh/marksman)
 - [`ts_ls`](https://github.com/typescript-language-server/typescript-language-server)

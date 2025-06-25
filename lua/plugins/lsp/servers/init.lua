@@ -32,6 +32,7 @@ return {
   }),
   ['jsonls'] = require('plugins.lsp.servers.jsonls'),
   ['jqls'] = default_settings,
+  ['kulala_ls'] = default_settings,
   ['lua_ls'] = require('plugins.lsp.servers.lua_ls'),
   ['marksman'] = default_settings,
   -- ['mdx_analyzer'] = default_settings,
