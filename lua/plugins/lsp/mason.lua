@@ -36,5 +36,6 @@ require('mason-tool-installer').setup({
     { 'actionlint', version = 'v1.7.1' },
     { 'npm-groovy-lint', version = '15.0.2' },
     { 'markdownlint', version = '0.43.0' },
+    { 'selene', version = '0.28.0' },
   },
 })

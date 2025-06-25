@@ -30,6 +30,13 @@ local config = function()
     end,
   })
 
+  autocmd(aggressive_events, {
+    pattern = '*.lua',
+    callback = function()
+      lint.try_lint('selene')
+    end,
+  })
+
   autocmd(normal_events, {
     callback = function()
       lint.try_lint()
