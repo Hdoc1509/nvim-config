@@ -3,7 +3,7 @@ require('mason-tool-installer').setup({
   ensure_installed = {
     -- See https://mason-registry.dev/registry/list for available tools
 
-    -- SERVERS
+    -- LSP
     { 'ast-grep', version = '0.32.2' },
     { 'astro-language-server', version = '2.10.0' },
     { 'bash-language-server', version = '5.4.0' },
@@ -13,7 +13,6 @@ require('mason-tool-installer').setup({
     { 'eslint-lsp', version = '4.8.0' },
     { 'gh-actions-language-server', version = '0.0.3' },
     { 'gradle-language-server', version = '3.15.0' },
-    -- 'groovy-language-server',
     { 'html-lsp', version = '4.7.0' },
     { 'jdtls', version = 'v1.46.1' },
     { 'json-lsp', version = '4.8.0' },
@@ -21,6 +20,7 @@ require('mason-tool-installer').setup({
     { 'lua-language-server', version = '3.9.3' },
     { 'marksman', version = '2023-12-09' },
     -- 'mdx-analyzer',
+    { 'some-sass-language-server', version = '2.2.1' },
     { 'typescript-language-server', version = '4.3.3' },
     { 'vim-language-server', version = '2.3.1' },
     { 'yaml-language-server', version = '1.15.0' },
