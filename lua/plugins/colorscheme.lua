@@ -9,7 +9,7 @@ local config = function()
       },
     },
     palettes = {
-      all = {
+      carbonfox = {
         bg0 = COLORS['gray-950'],
         bg1 = COLORS.black,
         bg3 = COLORS['gray-890'],
@@ -19,12 +19,22 @@ local config = function()
       },
     },
     groups = {
-      all = {
+      carbonfox = {
         Cursor = { bg = COLORS['light-blue-A390'] },
         VirtColumn = { fg = COLORS['light-blue-A390'] },
         MatchParen = { bg = COLORS['gray-850'] },
-        Whitespace = { gui = 'bold', fg = COLORS['gray-690'] },
+        Whitespace = { fg = COLORS['gray-690'] },
         HighlightYank = { bg = COLORS['gray-850'] },
+        RainbowDelimiterRed = { fg = '#be95ff' },
+        RainbowDelimiterBlue = { link = 'Type' },
+        RainbowDelimiterOrange = { fg = '#e46e3b' },
+        RainbowDelimiterGreen = { link = 'Constant' },
+        RainbowDelimiterViolet = { fg = '#ee5396' },
+        RainbowDelimiterCyan = { link = 'PreProc' },
+        NormalNC = { bg = '#0a0a0a' },
+      },
+      all = {
+        MatchParen = { fg = 'NONE' },
         -- NOTE: Only create a highlight group for folders
         -- icons are handled by nvim-web-devicons
         FolderApi = { fg = COLORS['yellow-700'] },
@@ -100,13 +110,6 @@ local config = function()
         FolderVscode = { fg = COLORS['blue-400'] },
         FolderViews = { fg = COLORS['deep-orange-400'] },
         FolderVite = { fg = COLORS['amber-A700'] },
-        RainbowDelimiterRed = { fg = '#be95ff' },
-        RainbowDelimiterBlue = { link = 'Type' },
-        RainbowDelimiterOrange = { fg = '#e46e3b' },
-        RainbowDelimiterGreen = { link = 'Constant' },
-        RainbowDelimiterViolet = { fg = '#ee5396' },
-        RainbowDelimiterCyan = { link = 'PreProc' },
-        NormalNC = { bg = '#0a0a0a' },
       },
     },
   })
