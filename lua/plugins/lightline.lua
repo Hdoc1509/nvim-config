@@ -29,8 +29,7 @@ return {
     'itchyny/vim-gitbranch',
   },
   config = function()
-    -- stylua: ignore start
-    vim.api.nvim_exec2([[
+    vim.cmd([[
       " palette table: print(vim.inspect(vim.fn['lightline#palette']()))
       let palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
       " [fg, fg_cterm]
@@ -62,7 +61,6 @@ return {
         let branch = gitbranch#name()
         return branch !=# '' ? branch . ' 󰘬' : ''
       endfunction
-    ]], {})
-    -- stylua: ignore end
+    ]])
   end,
 }
