@@ -38,12 +38,25 @@ local config = function()
     todo_search.setqflist({ keywords = 'NOTE' })
   end, { desc = 'List only NOTE comments' })
 
-  nmap(']T', function()
-    todo_comments.jump_next({ keywords = { 'TODO' } })
-  end, { desc = 'Jump to next TODO comment' })
-  nmap('[T', function()
-    todo_comments.jump_prev({ keywords = { 'TODO' } })
-  end, { desc = 'Jump to previous TODO comment' })
+  local keywords = { 'FIX', 'HACK', 'WARN', 'PERF', 'NOTE', 'TODO', 'TEST' }
+
+  nmap(']T]', function()
+    todo_comments.jump_next()
+  end, { desc = 'Jump to any next todo comment' })
+  nmap('[T[', function()
+    todo_comments.jump_prev()
+  end, { desc = 'Jump to any previous todo comment' })
+
+  for _, keyword in ipairs(keywords) do
+    local letter_idx = string.sub(keyword, 1, 1) == 'T' and 3 or 1
+
+    nmap(']T' .. string.sub(keyword, letter_idx, letter_idx), function()
+      todo_comments.jump_next({ keywords = { keyword } })
+    end, { desc = 'Jump to next ' .. keyword .. ' comment' })
+    nmap('[T' .. string.sub(keyword, letter_idx, letter_idx), function()
+      todo_comments.jump_prev({ keywords = { keyword } })
+    end, { desc = 'Jump to previous ' .. keyword .. ' comment' })
+  end
 end
 
 return {
