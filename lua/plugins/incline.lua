@@ -4,6 +4,7 @@ local config = function()
   ---@diagnostic disable-next-line: undefined-field
   local diagnostic_icons = require('icons').diagnostics
   local lightline_palette = vim.fn['lightline#palette']()
+  local last_diagnostic_label = {}
 
   require('incline').setup({
     window = {
@@ -14,11 +15,16 @@ local config = function()
       filetypes = { 'gitcommit', 'qf', 'gitrebase' },
     },
     render = function(props)
+      local mode = string.lower(vim.fn['lightline#mode']())
       local is_focused = props.focused
       local file_fg = ''
       local file_bg = ''
 
       local function get_diagnostic_label()
+        if mode == 'insert' then
+          return last_diagnostic_label
+        end
+
         local label = {}
 
         for severity, icon in pairs(diagnostic_icons) do
@@ -37,6 +43,7 @@ local config = function()
           table.insert(label, ' ')
         end
 
+        last_diagnostic_label = label
         return label
       end
 
@@ -44,8 +51,6 @@ local config = function()
         file_fg = lightline_palette.inactive.left[1][1]
         file_bg = lightline_palette.inactive.left[1][2]
       else
-        local mode = string.lower(vim.fn['lightline#mode']())
-
         if mode == 'command' or mode == 'terminal' then
           mode = 'normal'
         elseif mode == 'select' or string.match(mode, '^[sv]%-') ~= nil then
