@@ -1,4 +1,4 @@
-M = {}
+local M = {}
 
 ---@param workspace_path string
 M.get_from_gradle_properties = function(workspace_path)
