@@ -1,9 +1,11 @@
-local default_markdownlint = require('lint.linters.markdownlint')
+local base_markdownlint = require('lint.linters.markdownlint')
 
-local base_parser = default_markdownlint.parser
+local base_parser = base_markdownlint.parser
 local lazy_data_path = vim.fn.stdpath('data') .. '/lazy'
 local lazy_state_path = vim.fn.stdpath('state') .. '/lazy'
 
+---@param bufnr number
+---@param diagnostic Diagnostic
 local function is_diagnostic_ignored(bufnr, diagnostic)
   local buf_name = vim.api.nvim_buf_get_name(bufnr)
   local message = diagnostic.message
@@ -30,21 +32,16 @@ end
 
 ---@type lint.parse
 local custom_parser = function(output, bufnr, linter_cwd)
-  local all_diagnostics = base_parser(output, bufnr, linter_cwd)
-  -- print(vim.inspect(all_diagnostics))
+  local diagnostics = base_parser(output, bufnr, linter_cwd)
 
-  -- NOTE: can I use vim.fn.filter() instead of this loop?
-  local idx = 1
+  local filtered = vim.tbl_filter(function(diagnostic)
+    return not is_diagnostic_ignored(bufnr, diagnostic)
+  end, diagnostics)
 
-  while idx <= #all_diagnostics do
-    if is_diagnostic_ignored(bufnr, all_diagnostics[idx]) then
-      table.remove(all_diagnostics, idx)
-    else
-      idx = idx + 1
-    end
-  end
-
-  return all_diagnostics
+  -- if #filtered > 0 then
+  --   print(vim.inspect(filtered))
+  -- end
+  return filtered
 end
 
 return { parser = custom_parser }
