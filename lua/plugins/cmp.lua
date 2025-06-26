@@ -1,8 +1,8 @@
-vim.g.vsnip_filetypes = {
-  typescript = { 'javascript' },
-  typescriptreact = { 'javascript' },
-  text = { 'license' },
-}
+-- vim.g.vsnip_filetypes = {
+--   typescript = { 'javascript' },
+--   typescriptreact = { 'javascript' },
+--   text = { 'license' },
+-- }
 
 local config = function()
   local cmp = require('cmp')
@@ -63,7 +63,7 @@ local config = function()
         symbol_map = { Supermaven = '' },
         menu = {
           nvim_lsp = '[LSP]',
-          vsnip = '[Snippet]',
+          -- vsnip = '[Snippet]',
           path = '[Path]',
           buffer = '[Buffer]',
           supermaven = '[SuperMaven]',
@@ -115,7 +115,7 @@ return {
     'hrsh7th/cmp-path',
     'onsails/lspkind.nvim',
     'hrsh7th/cmp-vsnip',
-    'rafamadriz/friendly-snippets',
+    -- 'rafamadriz/friendly-snippets',
     {
       'hrsh7th/cmp-nvim-lsp-document-symbol',
       -- NOTE: until update to nvim-0.10
