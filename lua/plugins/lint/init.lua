@@ -12,7 +12,7 @@ local config = function()
   }
 
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
-  lint.linters.markdownlint_custom = require('plugins.lint.markdownlint')
+  lint.linters.markdownlint.parser = require('plugins.lint.markdownlint').parser
   lint.linters.selene.parser = require('plugins.lint.selene').parser
 
   autocmd(aggressive_events, {
@@ -25,7 +25,7 @@ local config = function()
   autocmd(aggressive_events, {
     pattern = '*.md',
     callback = function()
-      lint.try_lint('markdownlint_custom')
+      lint.try_lint('markdownlint')
     end,
   })
 

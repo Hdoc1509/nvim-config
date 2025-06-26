@@ -1,5 +1,4 @@
 local default_markdownlint = require('lint.linters.markdownlint')
-local merge = require('utils').merge
 
 local base_parser = default_markdownlint.parser
 local lazy_data_path = vim.fn.stdpath('data') .. '/lazy'
@@ -48,4 +47,4 @@ local custom_parser = function(output, bufnr, linter_cwd)
   return all_diagnostics
 end
 
-return merge(default_markdownlint, { parser = custom_parser })
+return { parser = custom_parser }
