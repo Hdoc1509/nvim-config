@@ -15,6 +15,11 @@
   `tree-sitter-embedded-template` in `grammar.js` of my project
   `tree-sitter-hygen-template`
 
+### ts_query_ls
+
+- Add global configuration (via server initialization) for global predicates.
+  Use the defined ones in [.tsqueryrc.json](./.tsqueryrc.json)
+
 ### Try
 
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#spyglassmc_language_server

@@ -30,6 +30,8 @@ local config = function()
     end,
   })
 
+  -- TODO: try to add `ts_query_ls lint` for query files in `query/` folder
+
   -- NOTE: until https://github.com/Kampfkarren/selene/issues/224 has been fixed
   -- autocmd(aggressive_events, {
   --   pattern = '*.lua',

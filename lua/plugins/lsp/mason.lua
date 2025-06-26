@@ -21,6 +21,7 @@ require('mason-tool-installer').setup({
     { 'marksman', version = '2023-12-09' },
     -- 'mdx-analyzer',
     { 'some-sass-language-server', version = '2.2.1' },
+    { 'ts_query_ls', version = 'v3.3.0' },
     { 'typescript-language-server', version = '4.3.3' },
     { 'vim-language-server', version = '2.3.1' },
     { 'yaml-language-server', version = '1.15.0' },
