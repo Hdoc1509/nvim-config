@@ -84,7 +84,7 @@
 - [`actionlint`](https://github.com/rhysd/actionlint)
 - [`markdownlint`](https://github.com/DavidAnson/markdownlint)
 - [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint)
-- [`selene`](https://github.com/Kampfkarren/selene) (_currently disabled_)
+- [`selene`](https://github.com/Kampfkarren/selene)
 
 ## Treesitter parsers
 

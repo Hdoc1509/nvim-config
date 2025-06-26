@@ -11,10 +11,9 @@ local config = function()
     groovy = { 'groovy_lint' },
   }
 
-  ---@diagnostic disable-next-line: inject-field
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
-  ---@diagnostic disable-next-line: inject-field
   lint.linters.markdownlint_custom = require('plugins.lint.markdownlint')
+  lint.linters.selene.parser = require('plugins.lint.selene').parser
 
   autocmd(aggressive_events, {
     pattern = { '*.github/workflows/*.yml', '*.github/workflows/*.yaml' },
@@ -33,12 +32,12 @@ local config = function()
   -- TODO: try to add `ts_query_ls lint` for query files in `query/` folder
 
   -- NOTE: until https://github.com/Kampfkarren/selene/issues/224 has been fixed
-  -- autocmd(aggressive_events, {
-  --   pattern = '*.lua',
-  --   callback = function()
-  --     lint.try_lint('selene')
-  --   end,
-  -- })
+  autocmd(aggressive_events, {
+    pattern = '*.lua',
+    callback = function()
+      lint.try_lint('selene')
+    end,
+  })
 
   autocmd(normal_events, {
     callback = function()
