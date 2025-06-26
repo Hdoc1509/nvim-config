@@ -30,12 +30,13 @@ local config = function()
     end,
   })
 
-  autocmd(aggressive_events, {
-    pattern = '*.lua',
-    callback = function()
-      lint.try_lint('selene')
-    end,
-  })
+  -- NOTE: until https://github.com/Kampfkarren/selene/issues/224 has been fixed
+  -- autocmd(aggressive_events, {
+  --   pattern = '*.lua',
+  --   callback = function()
+  --     lint.try_lint('selene')
+  --   end,
+  -- })
 
   autocmd(normal_events, {
     callback = function()
