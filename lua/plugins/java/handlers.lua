@@ -5,10 +5,12 @@ local handlers = merge(default_handlers, {
   -- remove status from statusline
   ['language/status'] = function() end,
   -- disable some diagnostics
+  ---@param result { diagnostics: Diagnostic[], uri: string }
   ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
     -- print(vim.inspect(result))
     local hotbar_keys = string.match(result.uri, 'hotbar%-keys')
 
+    -- TODO: use vim.tbl_filter() as in parser of custom linters
     if hotbar_keys ~= nil then
       local idx = 1
 
