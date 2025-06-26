@@ -10,10 +10,9 @@ local parser = function(output, bufnr)
     return {}
   end
 
-  local buf_name = vim.api.nvim_buf_get_name(bufnr)
   local diagnostics = {}
 
-  for _, item in ipairs(decoded.files[buf_name].errors) do
+  for _, item in ipairs(decoded.files['0'].errors) do
     local buf_line = vim.api.nvim_buf_get_lines(bufnr, item.line - 1, item.line, false)[1]
     local is_comment = string.match(buf_line, '%s*//') ~= nil
 
@@ -47,7 +46,8 @@ end
 ---@diagnostic disable-next-line: missing-fields
 return {
   cmd = 'npm-groovy-lint',
-  args = { '--output', 'json' },
+  stdin = true,
+  args = { '--output', 'json', '-' },
   ignore_exitcode = true,
   parser = parser,
 }

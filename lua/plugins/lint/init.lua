@@ -7,10 +7,6 @@ local config = function()
   ---@type string[]
   local aggressive_events = vim.fn.extendnew(normal_events, { 'InsertLeave', 'TextChanged' })
 
-  lint.linters_by_ft = {
-    groovy = { 'groovy_lint' },
-  }
-
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
   lint.linters.markdownlint.parser = require('plugins.lint.markdownlint').parser
   lint.linters.selene.parser = require('plugins.lint.selene').parser
@@ -31,7 +27,6 @@ local config = function()
 
   -- TODO: try to add `ts_query_ls lint` for query files in `query/` folder
 
-  -- NOTE: until https://github.com/Kampfkarren/selene/issues/224 has been fixed
   autocmd(aggressive_events, {
     pattern = '*.lua',
     callback = function()
@@ -39,9 +34,10 @@ local config = function()
     end,
   })
 
-  autocmd(normal_events, {
+  autocmd(aggressive_events, {
+    pattern = { '*.gradle', '*.groovy' },
     callback = function()
-      lint.try_lint()
+      lint.try_lint('groovy_lint')
     end,
   })
 end
