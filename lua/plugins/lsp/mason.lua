@@ -23,6 +23,7 @@ require('mason-tool-installer').setup({
     { 'some-sass-language-server', version = '2.2.1' },
     { 'ts_query_ls', version = 'v3.3.0' },
     { 'typescript-language-server', version = '4.3.3' },
+    { 'typos-lsp', version = 'v0.1.39' },
     { 'vim-language-server', version = '2.3.1' },
     { 'yaml-language-server', version = '1.15.0' },
 

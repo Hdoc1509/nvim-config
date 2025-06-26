@@ -75,6 +75,7 @@
 - [`somesass_ls`](https://github.com/wkillerud/some-sass/tree/main/packages/language-server)
 - [`ts_ls`](https://github.com/typescript-language-server/typescript-language-server)
 - [`ts_query_ls`](https://github.com/ribru17/ts_query_ls)
+- [`typos_lsp`](https://github.com/tekumara/typos-lsp)
 - [`vimls`](https://github.com/iamcco/vim-language-server)
 - [`yamlls`](https://github.com/redhat-developer/yaml-language-server)
 
