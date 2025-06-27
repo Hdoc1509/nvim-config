@@ -16,7 +16,6 @@ configuration, follow next indications:
 - Options related to colorscheme and custom GUI highlighting goes in
   [`lua/plugins/colorscheme.lua`](./lua/plugins/colorscheme.lua)
 - Custom colors are declared in [`lua/colors.lua`](./lua/colors.lua)
-- Options for Neovim GUI's are in [`ginit.vim`](./ginit.vim)
 - Util functions must be placed in [`lua/utils.lua`](./lua/utils.lua)
 
 If you want to integrate more LSP servers, see the list of all [available LSP
