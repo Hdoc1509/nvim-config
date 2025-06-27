@@ -39,6 +39,7 @@ return {
   ['somesass_ls'] = default_settings,
   ['ts_ls'] = default_settings,
   ['ts_query_ls'] = require('plugins.lsp.servers.ts_query_ls'),
+  -- TODO: ignore errors for `commit` hash in `CHANGELOG.md` files
   ['typos_lsp'] = default_settings,
   ['vimls'] = default_settings,
   ['yamlls'] = require('plugins.lsp.servers.yamlls'),
