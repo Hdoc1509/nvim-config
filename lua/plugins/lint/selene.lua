@@ -1,6 +1,7 @@
 local base_selene = require('lint.linters.selene')
 local base_parser = base_selene.parser
 
+local lazy_data_path = vim.fn.stdpath('data') .. '/lazy'
 local user_config = vim.fn.expand('~/.config/nvim')
 
 -- NOTE: max 4 levels of indentation
@@ -9,13 +10,16 @@ local user_config = vim.fn.expand('~/.config/nvim')
 ---@param diagnostic Diagnostic
 local function is_diagnostic_ignored(bufnr, diagnostic)
   local buf_name = vim.api.nvim_buf_get_name(bufnr)
+
+  if string.match(buf_name, lazy_data_path) ~= nil then
+    return true
+  end
+
   local message = diagnostic.message
   local line_number = diagnostic.lnum
-  local is_undefined_variable = diagnostic.code == 'undefined_variable'
-  local is_mixed_table = diagnostic.code == 'mixed_table'
-  local is_parse_error = diagnostic.code == 'parse_error'
+  local code = diagnostic.code
 
-  if is_parse_error then
+  if code == 'parse_error' then
     local buf_line = vim.api.nvim_buf_get_lines(bufnr, line_number, line_number + 1, false)
     local line_text = buf_line[1]
 
@@ -31,8 +35,9 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
     end
   end
 
-  return (is_undefined_variable and (string.match(message, 'vim') ~= nil or string.match(message, 'MiniFiles') ~= nil))
-    or (is_mixed_table and string.match(buf_name, user_config) ~= nil)
+  return (
+    code == 'undefined_variable' and (string.match(message, 'vim') ~= nil or string.match(message, 'MiniFiles') ~= nil)
+  ) or (code == 'mixed_table' and string.match(buf_name, user_config) ~= nil)
 end
 
 ---@type lint.parse
