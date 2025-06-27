@@ -13,7 +13,7 @@ end
 ---@param mode string | string[]
 ---@param lhs string left-hand side of mapping
 ---@param rhs string | function right-hand side of mapping
----@param opts? table aditional options
+---@param opts? table additional options
 M.keymap = function(mode, lhs, rhs, opts)
   opts = opts or {}
   vim.keymap.set(mode, lhs, rhs, M.merge(map_opts, opts))
@@ -36,8 +36,8 @@ end
 
 ---Create a nmap
 ---@param lhs string left-hand side of nmap
----@param rhs string | function righ-hand side of nmap
----@param opts? table aditional options
+---@param rhs string | function right-hand side of nmap
+---@param opts? table additional options
 M.nmap = function(lhs, rhs, opts)
   opts = opts or {}
   vim.keymap.set('n', lhs, rhs, M.merge(map_opts, opts))
