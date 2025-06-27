@@ -70,7 +70,7 @@ nmap('<leader>]', '<c-w>]<c-w>T', { desc = 'Jump to tag under cursor in a new ta
 keymap({ 'n', 'x' }, '<leader>j', '10<c-e>', { desc = 'Scroll down 10 lines' })
 keymap({ 'n', 'x' }, '<leader>J', '20<c-e>', { desc = 'Scroll down 20 lines' })
 keymap({ 'n', 'x' }, '<leader>k', '10<c-y>', { desc = 'Scroll up 10 lines' })
-keymap({ 'n', 'x' }, '<leader>K', '20<c-y>', { desc = 'Scrool up 20 lines' })
+keymap({ 'n', 'x' }, '<leader>K', '20<c-y>', { desc = 'Scroll up 20 lines' })
 nmap('<leader>sb', '<cmd>windo set scrollbind!<cr>', { desc = 'Toggle scrollbind in windows of current tab' })
 
 -- Split resize
@@ -100,8 +100,8 @@ keymap({ 'i', 'n' }, '<c-d>', '<cmd>normal dd<cr>', { desc = 'Delete current lin
 keymap('x', '<', '<gv')
 keymap('x', '>', '>gv')
 
--- Search highlighing
-nmap('<leader>/', '<cmd>nohlsearch<cr>', { desc = 'Clear search highlighing' })
+-- Search highlighting
+nmap('<leader>/', '<cmd>nohlsearch<cr>', { desc = 'Clear search highlighting' })
 
 -- Help in vertical split
 vim.cmd('cabbrev vh vertical help')
