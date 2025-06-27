@@ -1,8 +1,8 @@
-require('globals')
-require('options')
-require('lazy_bootstrap')
+require('user.globals')
+require('user.options')
+require('user.lazy_bootstrap')
 require('lazy').setup({
   { import = 'plugins.lightline' },
   { import = 'plugins.colorscheme' },
 })
-require('maps')
+require('user.maps')

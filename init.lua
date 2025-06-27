@@ -1,8 +1,8 @@
-require('globals')
-require('options')
-require('filetypes')
-require('autocmds')
-require('lazy_bootstrap')
+require('user.globals')
+require('user.options')
+require('user.filetypes')
+require('user.autocmds')
+require('user.lazy_bootstrap')
 require('lazy').setup('plugins', {
   install = {
     colorscheme = { 'carbonfox' },
@@ -14,7 +14,5 @@ require('lazy').setup('plugins', {
     },
   },
 })
-require('maps')
-require('diagnostic')
-
--- TODO: move files to ./lua/user/ folder
+require('user.maps')
+require('user.diagnostic')
