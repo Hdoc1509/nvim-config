@@ -3,7 +3,7 @@ return {
   ft = { 'java' },
   dependencies = {
     'williamboman/mason.nvim',
-    'tpope/vim-fugitive',
+    'itchyny/vim-gitbranch',
   },
   config = function()
     local jdtls = require('jdtls')
@@ -54,12 +54,10 @@ return {
           -- useful if branches have different configs
           -- NOTE: clean eclipse and gradle generated files every time you switch branch
           -- reference: https://github.com/Hdoc1509/hotbar-keys/tree/1.21.3/scripts/clean.sh
-          -- TODO: use gitbranch#name() from vim-gitbranch
-          local branchesResult = vim.fn.FugitiveExecute('branch')
+          local branch = vim.fn['gitbranch#name']()
 
-          if branchesResult.exit_status == 0 then
-            local current_branch = vim.fn.FugitiveHead()
-            workspace_name = workspace_name .. '_branch-' .. current_branch
+          if branch ~= '' then
+            workspace_name = workspace_name .. '_branch-' .. branch
           end
 
           workspace_data_dir = cache_dir .. '/' .. workspace_name
