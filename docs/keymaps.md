@@ -180,7 +180,31 @@ Used mapleader is `<space>` key.
 | `<leader>-` | Normal | Open mini.files at last used path         |
 | `<leader>_` | Normal | Open mini.files at root path of workspace |
 
-<!-- TODO: add custom mappings and bookmarks for opened explorer -->
+### mini.files window
+
+| Mapping | Mode   | Description            |
+| ------- | ------ | ---------------------- |
+| `gj`    | Normal | Split below (silent)   |
+| `gJ`    | Normal | Split below            |
+| `gk`    | Normal | Split above (silent)   |
+| `gK`    | Normal | Split above            |
+| `gh`    | Normal | Split left (silent)    |
+| `gH`    | Normal | Split left             |
+| `gl`    | Normal | Split right (silent)   |
+| `gL`    | Normal | Split right            |
+| `gt`    | Normal | New tab (silent)       |
+| `gT`    | Normal | New tab                |
+| `gy`    | Normal | Copy path to clipboard |
+
+**(silent): Mappings that don't jump to file nor close the explorer.**
+
+### mini.files marks
+
+| Mark | Description               |
+| ---- | ------------------------- |
+| `c`  | Neovim config             |
+| `w`  | Current working directory |
+| `~`  | Home directory            |
 
 ## Zen mode
 
