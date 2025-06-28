@@ -42,7 +42,7 @@
 - Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
 - A.I. powered code-completion with [`supermaven-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
-- Beautiful markdown highlighting with [`markdown.nvim`](https://github.com/MeanderingProgrammer/markdown.nvim)
+- Beautiful markdown highlighting with [`render-markdown.nvim`](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
 - Distaction-free coding with [`zen-mode.nvim`](https://github.com/folke/zen-mode.nvim)
 - Support for [`Hygen`](https://github.com/jondot/hygen) templates with
