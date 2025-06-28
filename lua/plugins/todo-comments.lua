@@ -9,10 +9,6 @@ local config = function()
     },
   })
 
-  -- Listing
-  -- TODO: add to README.md
-  nmap('<leader>TL', '<cmd>TodoQuickFix<cr>', { desc = 'List all TODO comments' })
-
   -- TODO: use this to select  HACK   NOTE   PERF   TEST   TODO   WARN
   -- nmap('Tl', function() ... end, { desc = 'List selected TODO comments'})
   --[[ vim.ui.select({ 'tabs', 'spaces' }, {
@@ -30,22 +26,11 @@ local config = function()
     end
   end) ]]
 
-  -- TODO: add to README.md
-  nmap('<leader>TT', function()
-    todo_search.setqflist({ keywords = 'TODO' })
-  end, { desc = 'List only TODO comments' })
-  nmap('<leader>TN', function()
-    todo_search.setqflist({ keywords = 'NOTE' })
-  end, { desc = 'List only NOTE comments' })
-
   local keywords = { 'FIX', 'HACK', 'WARN', 'PERF', 'NOTE', 'TODO', 'TEST' }
 
-  nmap(']T]', function()
-    todo_comments.jump_next()
-  end, { desc = 'Jump to any next todo comment' })
-  nmap('[T[', function()
-    todo_comments.jump_prev()
-  end, { desc = 'Jump to any previous todo comment' })
+  nmap(']T]', todo_comments.jump_next, { desc = 'Jump to any next todo comment' })
+  nmap('[T[', todo_comments.jump_prev, { desc = 'Jump to any previous todo comment' })
+  nmap('<leader>TL', '<cmd>TodoQuickFix<cr>', { desc = 'List all todo comments' })
 
   for _, keyword in ipairs(keywords) do
     local letter_idx = string.sub(keyword, 1, 1) == 'T' and 3 or 1
@@ -56,6 +41,9 @@ local config = function()
     nmap('[T' .. string.sub(keyword, letter_idx, letter_idx), function()
       todo_comments.jump_prev({ keywords = { keyword } })
     end, { desc = 'Jump to previous ' .. keyword .. ' comment' })
+    nmap('<leader>T' .. string.sub(keyword, letter_idx, letter_idx), function()
+      todo_search.setqflist({ keywords = keyword })
+    end, { desc = 'List ' .. keyword .. ' comments' })
   end
 end
 

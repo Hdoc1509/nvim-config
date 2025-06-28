@@ -119,24 +119,32 @@ Used mapleader is `<space>` key.
 
 ## TODO comments
 
-| Mapping | Mode   | Description                       |
-| ------- | ------ | --------------------------------- |
-| `]T]`   | Normal | Jump to any next todo comment     |
-| `[T[`   | Normal | Jump to any previous todo comment |
-| `]TF`   | Normal | Jump to next `FIX` comment        |
-| `[TF`   | Normal | Jump to previous `FIX` comment    |
-| `]TH`   | Normal | Jump to next `HACK` comment       |
-| `[TH`   | Normal | Jump to previous `HACK` comment   |
-| `]TW`   | Normal | Jump to next `WARN` comment       |
-| `[TW`   | Normal | Jump to previous `WARN` comment   |
-| `]TP`   | Normal | Jump to next `PERF` comment       |
-| `[TP`   | Normal | Jump to previous `PERF` comment   |
-| `]TN`   | Normal | Jump to next `NOTE` comment       |
-| `[TN`   | Normal | Jump to previous `NOTE` comment   |
-| `]TD`   | Normal | Jump to next `TODO` comment       |
-| `[TD`   | Normal | Jump to previous `TODO` comment   |
-| `]TS`   | Normal | Jump to next `TEST` comment       |
-| `[TS`   | Normal | Jump to previous `TEST` comment   |
+| Mapping      | Mode   | Description                       |
+| ------------ | ------ | --------------------------------- |
+| `]T]`        | Normal | Jump to any next todo comment     |
+| `[T[`        | Normal | Jump to any previous todo comment |
+| `]TF`        | Normal | Jump to next `FIX` comment        |
+| `[TF`        | Normal | Jump to previous `FIX` comment    |
+| `]TH`        | Normal | Jump to next `HACK` comment       |
+| `[TH`        | Normal | Jump to previous `HACK` comment   |
+| `]TW`        | Normal | Jump to next `WARN` comment       |
+| `[TW`        | Normal | Jump to previous `WARN` comment   |
+| `]TP`        | Normal | Jump to next `PERF` comment       |
+| `[TP`        | Normal | Jump to previous `PERF` comment   |
+| `]TN`        | Normal | Jump to next `NOTE` comment       |
+| `[TN`        | Normal | Jump to previous `NOTE` comment   |
+| `]TD`        | Normal | Jump to next `TODO` comment       |
+| `[TD`        | Normal | Jump to previous `TODO` comment   |
+| `]TS`        | Normal | Jump to next `TEST` comment       |
+| `[TS`        | Normal | Jump to previous `TEST` comment   |
+| `<leader>TL` | Normal | List all todo comments            |
+| `<leader>TF` | Normal | List `FIX` comments               |
+| `<leader>TH` | Normal | List `HACK` comments              |
+| `<leader>TW` | Normal | List `WARN` comments              |
+| `<leader>TP` | Normal | List `PERF` comments              |
+| `<leader>TN` | Normal | List `NOTE` comments              |
+| `<leader>TD` | Normal | List `TODO` comments              |
+| `<leader>TS` | Normal | List `TEST` comments              |
 
 ## HTTP request
 
