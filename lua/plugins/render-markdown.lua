@@ -23,4 +23,5 @@ return {
       language_border = '',
     },
   },
+  ft = { 'markdown', 'markdown.mdx' },
 }
