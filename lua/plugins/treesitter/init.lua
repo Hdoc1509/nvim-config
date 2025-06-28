@@ -29,14 +29,12 @@ return {
     -- { dir = '~/dev/hygen.nvim' },
     { 'Hdoc1509/hygen.nvim', tag = 'v0.2.0' },
     {
-      -- TODO: Move to ../comments.lua
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',
-      config = function()
-        require('ts_context_commentstring').setup({
-          enable_autocmd = false,
-        })
-      end,
+      ---@type ts_context_commentstring.Config
+      opts = {
+        enable_autocmd = false,
+      },
     },
     {
       'windwp/nvim-ts-autotag',
