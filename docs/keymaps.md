@@ -233,6 +233,18 @@ Used mapleader is `<space>` key.
 | ------------- | ----------- | ------------------------------------------------------------------- |
 | `<leader>sat` | Visual Line | Create a table from shell aliases definitions and run `FormatWrite` |
 
+## Quickfix window
+
+| Mapping | Mode   | Description                           |
+| ------- | ------ | ------------------------------------- |
+| `e`     | Normal | Select item and close quickfix window |
+| `gt`    | Normal | Open item in new tab (silent)         |
+| `gT`    | Normal | Open item in new tab                  |
+| `gs`    | Normal | Open item in new split (silent)       |
+| `gS`    | Normal | Open item in new split                |
+
+**(silent): Mappings that don't jump to file nor close the quickfix window.**
+
 ## Misc
 
 | Mapping       | Mode            | Description                                |

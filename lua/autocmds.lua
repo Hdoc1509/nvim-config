@@ -22,7 +22,7 @@ autocmd('FileType', {
   end,
 })
 
--- quickfix list
+-- quickfix window
 autocmd('FileType', {
   pattern = 'qf',
   callback = function()
@@ -31,7 +31,7 @@ autocmd('FileType', {
 
     nmap('e', '<cr>:cclose<cr>', {
       buffer = bufnr,
-      desc = 'Select item and close quickfix list',
+      desc = 'Select item and close quickfix window',
     })
 
     nmap('gt', '<c-w><cr><c-w>Tg<tab><cmd>copen<cr>', {
@@ -43,7 +43,6 @@ autocmd('FileType', {
       desc = 'Open item in new tab',
     })
 
-    -- TODO: add to README.md
     nmap('gs', '<c-w><cr>:copen<cr>', {
       buffer = bufnr,
       desc = 'Open item in new split (silent)',
