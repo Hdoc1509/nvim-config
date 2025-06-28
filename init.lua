@@ -16,5 +16,3 @@ require('lazy').setup('plugins', {
 })
 require('maps')
 require('diagnostic')
-
--- TODO: move files to ./lua/user/ folder
