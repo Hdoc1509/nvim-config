@@ -38,6 +38,7 @@ return {
     },
     {
       'windwp/nvim-ts-autotag',
+      ---@type nvim-ts-autotag.PluginSetup
       opts = {
         aliases = {
           ejs = 'html',
