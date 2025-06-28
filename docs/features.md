@@ -27,13 +27,14 @@
 - Linter plugin with [`nvim-lint`](https://github.com/mfussenegger/nvim-lint)
 - Git integration with [`gitsigns.nvim`](https://github.com/lewis6991/gitsigns.nvim)
   and [`vim-fugitive`](https://github.com/tpope/vim-fugitive)
-- Github integration with for `vim-fugitive` by [`vim-rhubarb`](https://github.com/tpope/vim-rhubarb)
+- Github integration with for `vim-fugitive` with [`vim-rhubarb`](https://github.com/tpope/vim-rhubarb)
 - Markdown previewing with [`markdown-preview.nvim`](https://github.com/iamcco/markdown-preview.nvim)
 - Better colorcolumn with [`virt-column.nvim`](https://github.com/lukas-reineke/virt-column.nvim)
 - Color highlighter with [`nvim-highlight-colors`](https://github.com/brenoprata10/nvim-highlight-colors)
 - Indentation guides via [`indent-blankline.nvim`](https://github.com/lukas-reineke/indent-blankline.nvim)
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify)
-- Nerd fonts support with [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons)
+- [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons) as icon
+  provider
 - Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim)
 - Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo)
   and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim)
