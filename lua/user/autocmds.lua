@@ -26,6 +26,7 @@ autocmd('FileType', {
 autocmd('FileType', {
   pattern = 'qf',
   callback = function()
+    ---@diagnostic disable-next-line: param-type-mismatch
     local bufnr = vim.fn.bufnr('%')
 
     nmap('e', '<cr>:cclose<cr>', {

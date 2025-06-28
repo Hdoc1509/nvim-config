@@ -1,7 +1,6 @@
 local config = function()
   local helpers = require('incline.helpers')
   local devicons = require('nvim-web-devicons')
-  ---@diagnostic disable-next-line: undefined-field
   local diagnostic_icons = require('icons').diagnostics
   local lightline_palette = vim.fn['lightline#palette']()
   local last_diagnostic_label = {}
@@ -61,7 +60,6 @@ local config = function()
         file_bg = lightline_palette[mode].left[1][2]
       end
 
-      ---@diagnostic disable-next-line: undefined-field
       local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')
 
       if filename == '' then

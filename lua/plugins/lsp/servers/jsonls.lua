@@ -11,6 +11,7 @@ local selected = {
   'fabric.mod.json',
 }
 
+-- TODO: check if this is needed after install of `folke/neodev.nvim`
 local extra = {
   {
     description = 'JSON schema for .luarc.json',

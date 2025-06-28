@@ -1,7 +1,6 @@
 local config = function()
   local prettier = require('formatter.defaults.prettier')
 
-  ---@diagnostic disable-next-line: undefined-field
   require('formatter').setup({
     filetype = {
       astro = { prettier },

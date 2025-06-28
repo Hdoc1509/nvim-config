@@ -54,6 +54,7 @@ return {
           -- useful if branches have different configs
           -- NOTE: clean eclipse and gradle generated files every time you switch branch
           -- reference: https://github.com/Hdoc1509/hotbar-keys/tree/1.21.3/scripts/clean.sh
+          -- TODO: use gitbranch#name() from vim-gitbranch
           local branchesResult = vim.fn.FugitiveExecute('branch')
 
           if branchesResult.exit_status == 0 then

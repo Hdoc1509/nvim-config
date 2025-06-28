@@ -41,6 +41,7 @@ local attach = function(ev)
       }
 
       if not vim.b.diagnostics_pos then
+        ---@diagnostic disable-next-line: inject-field
         vim.b.diagnostics_pos = { nil, nil }
       end
 
@@ -52,6 +53,7 @@ local attach = function(ev)
         diagnostic.open_float(nil, float_opts)
       end
 
+      ---@diagnostic disable-next-line: inject-field
       vim.b.diagnostics_pos = cursor_pos
     end,
   })

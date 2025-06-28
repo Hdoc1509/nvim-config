@@ -5,6 +5,7 @@ return {
   'lukas-reineke/indent-blankline.nvim',
   dependencies = { 'https://gitlab.com/HiPhish/rainbow-delimiters.nvim' },
   main = 'ibl',
+  ---@type ibl.config
   opts = {
     indent = { char = '│' },
     scope = {
@@ -21,6 +22,7 @@ return {
       },
     },
   },
+  ---@param opts ibl.config
   config = function(_, opts)
     local hooks = require('ibl.hooks')
 
@@ -30,5 +32,5 @@ return {
     hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
   end,
   -- NOTE: until update to nvim-0.10
-  commit = "3d08501caef2329aba5121b753e903904088f7e6",
+  commit = '3d08501caef2329aba5121b753e903904088f7e6',
 }

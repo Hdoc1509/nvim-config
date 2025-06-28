@@ -1,6 +1,7 @@
 local config = function()
   local nvim_notify = require('notify')
 
+  ---@diagnostic disable-next-line: missing-fields
   nvim_notify.setup({
     timeout = 2000,
   })

@@ -33,7 +33,6 @@ return {
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',
       config = function()
-        ---@diagnostic disable-next-line: missing-fields
         require('ts_context_commentstring').setup({
           enable_autocmd = false,
         })
@@ -53,5 +52,5 @@ return {
   config = config,
   event = { 'BufReadPre', 'BufNewFile' },
   -- NOTE: until update to nvim-0.10
-  commit = "377039daa260b71f304c881d1b21d643c501a261"
+  commit = '377039daa260b71f304c881d1b21d643c501a261',
 }

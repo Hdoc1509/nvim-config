@@ -26,6 +26,8 @@ return {
         require('plugins.lsp.mason')
       end,
     },
+    { 'folke/neodev.nvim', opts = {} },
+    { 'folke/neoconf.nvim', opts = {} },
   },
   event = 'BufReadPre',
   config = config,
