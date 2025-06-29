@@ -1,6 +1,6 @@
 local config = function()
   local helpers = require('incline.helpers')
-  local devicons = require('nvim-web-devicons')
+  local hygen_compatible_icon = require('icons.hygen-compatible')
   local diagnostic_icons = require('icons').diagnostics
   local lightline_palette = vim.fn['lightline#palette']()
   local last_diagnostic_label = {}
@@ -66,7 +66,7 @@ local config = function()
         filename = '[No Name]'
       end
 
-      local ft_icon, ft_color = devicons.get_icon_color(filename)
+      local icon, icon_color = hygen_compatible_icon.get_icon(filename)
       local modified = vim.bo[props.buf].modified
 
       if modified then
@@ -75,12 +75,12 @@ local config = function()
 
       return {
         { get_diagnostic_label() },
-        ft_icon and {
+        icon and {
           ' ',
-          ft_icon,
+          icon,
           ' ',
-          guibg = is_focused and ft_color or file_bg,
-          guifg = is_focused and helpers.contrast_color(ft_color) or file_fg,
+          guibg = is_focused and icon_color or file_bg,
+          guifg = is_focused and helpers.contrast_color(icon_color) or file_fg,
         } or '',
         {
           ' ' .. filename .. ' ',
