@@ -22,6 +22,9 @@ return {
       above = '',
       language_border = '',
     },
+    html = {
+      comment = { conceal = false },
+    },
   },
   ft = { 'markdown', 'markdown.mdx' },
 }
