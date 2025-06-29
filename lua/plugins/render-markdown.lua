@@ -22,9 +22,21 @@ return {
       above = '',
       language_border = '',
     },
+    ignore = function(bufnr)
+      local filename = vim.api.nvim_buf_get_name(bufnr)
+      local extension = vim.fn.fnamemodify(filename, ':e')
+
+      if extension == 'hygen' then
+        local _, _, subextension = string.find(filename, '.*%.(%a+)(%.%a+)')
+
+        return subextension ~= 'md'
+      else
+        return false
+      end
+    end,
     html = {
       comment = { conceal = false },
     },
   },
-  ft = { 'markdown', 'markdown.mdx' },
+  ft = { 'markdown', 'markdown.mdx', 'hygen' },
 }
