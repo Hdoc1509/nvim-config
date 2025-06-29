@@ -93,7 +93,9 @@ M.setup = function(buf_id)
   nmap_new_window('gL', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
 
   nmap_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
-  nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
+  -- FIX: when re-opening explorer in another tab it opens in last 'tabnew'
+  -- opened tab, instead of the tab of current buffer
+  -- nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
 end
 
 return M

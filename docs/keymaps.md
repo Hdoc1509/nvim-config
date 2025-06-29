@@ -190,21 +190,23 @@ Used mapleader is `<space>` key.
 
 ### mini.files window
 
-| Mapping | Mode   | Description            |
-| ------- | ------ | ---------------------- |
-| `gj`    | Normal | Split below (silent)   |
-| `gJ`    | Normal | Split below            |
-| `gk`    | Normal | Split above (silent)   |
-| `gK`    | Normal | Split above            |
-| `gh`    | Normal | Split left (silent)    |
-| `gH`    | Normal | Split left             |
-| `gl`    | Normal | Split right (silent)   |
-| `gL`    | Normal | Split right            |
-| `gt`    | Normal | New tab (silent)       |
-| `gT`    | Normal | New tab                |
-| `gy`    | Normal | Copy path to clipboard |
+| Mapping | Mode       | Description            |
+| ------- | ---------- | ---------------------- |
+| `gj`    | Normal     | Split below (silent)   |
+| `gJ`    | Normal     | Split below            |
+| `gk`    | Normal     | Split above (silent)   |
+| `gK`    | Normal     | Split above            |
+| `gh`    | Normal     | Split left (silent)    |
+| `gH`    | Normal     | Split left             |
+| `gl`    | Normal     | Split right (silent)   |
+| `gL`    | Normal     | Split right            |
+| `gt`    | Normal     | New tab (silent)       |
+| `gT`    | Normal [D] | New tab                |
+| `gy`    | Normal     | Copy path to clipboard |
 
 **(silent): Mappings that don't jump to file nor close the explorer.**
+
+**[D]: Mappings that are disabled right now.**
 
 ### mini.files marks
 
