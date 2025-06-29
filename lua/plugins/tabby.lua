@@ -4,16 +4,15 @@ local config = function()
     current_tab = { bg = '#222222' },
   }
 
-  local devicons = require('nvim-web-devicons')
+  local hygen_compatible = require('icons.hygen-compatible')
 
   require('tabby').setup({
     line = function(line)
       return {
         line.tabs().foreach(function(tab)
           local hl = tab.is_current() and theme.current_tab or theme.fill
-          local buf_name = tab.current_win().buf_name()
-          local extension = vim.fn.fnamemodify(buf_name, ':e')
-          local icon, icon_color = devicons.get_icon_color(buf_name, extension)
+          local filename = tab.current_win().buf_name()
+          local icon, icon_color = hygen_compatible.get_icon(filename)
 
           return {
             ' ',
@@ -24,8 +23,7 @@ local config = function()
               hl = { fg = icon_color, bg = hl.bg },
             },
             ' ',
-            buf_name, -- no number of windows in tab
-            -- tab.name(),
+            filename,
             hl = hl,
             ' ',
           }
@@ -34,7 +32,7 @@ local config = function()
         hl = theme.fill,
       }
     end,
-  } --[[@as TabbyConfig]])
+  })
 end
 
 return {
