@@ -1,4 +1,5 @@
 local config = function()
+  local directives = require('plugins.treesitter.directives')
   local langs_to_register = require('plugins.treesitter.register')
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
   local textobjects = require('plugins.treesitter.textobjects')
@@ -19,6 +20,11 @@ local config = function()
   -- REGISTER LANGUAGES
   for parser_name, filetype in pairs(langs_to_register) do
     vim.treesitter.language.register(parser_name, filetype)
+  end
+
+  -- DIRECTIVES
+  for _, directive in ipairs(directives) do
+    vim.treesitter.query.add_directive(directive.name, directive.callback, directive.opts)
   end
 end
 
