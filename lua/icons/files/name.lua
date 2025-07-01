@@ -20,6 +20,21 @@ return {
       'astro.config.ts',
     },
   },
+  changelog = {
+    icon = '',
+    color = COLORS['light-green-500'],
+    name = 'Changelog',
+    file_names = {
+      'changelog',
+      'changelog.md',
+      'changelog.rst',
+      'changelog.txt',
+      'changes',
+      'changes.md',
+      'changes.rst',
+      'changes.txt',
+    },
+  },
   env = {
     icon = '',
     color = '#faf743',
