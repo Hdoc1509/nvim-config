@@ -9,7 +9,7 @@ return {
 
   astro_config = {
     icon = '',
-    color = '#7c4dff',
+    color = COLORS['deep-purple-A200'],
     name = 'AstroConfig',
     file_names = {
       'astro.config.cjs',
