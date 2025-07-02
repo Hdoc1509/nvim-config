@@ -38,5 +38,5 @@ return {
       comment = { conceal = false },
     },
   },
-  ft = { 'markdown', 'markdown.mdx', 'hygen' },
+  ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit' },
 }
