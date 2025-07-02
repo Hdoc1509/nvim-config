@@ -6,4 +6,5 @@ return {
   -- TODO: add color to COLORS file: cyan-gray-900
   jq = { icon = '', color = '#4D5A5E', name = 'JQ' },
   cmd = { icon = '', color = '#c1f12e', name = 'CMD' },
+  gyp = { icon = '', color = '#ffbc03', name = 'PYG' },
 }
