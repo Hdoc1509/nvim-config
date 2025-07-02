@@ -3,7 +3,7 @@ local nmap = utils.nmap
 
 local M = {}
 
-local excluded_filetypes = { 'fugitive', 'minifiles', 'qf' }
+local excluded_filetypes = { 'fugitive', 'minifiles', 'qf', 'gitcommit' }
 
 ---@param onAllowed function
 local open_explorer = function(onAllowed)
