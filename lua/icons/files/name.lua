@@ -174,6 +174,11 @@ return {
     name = 'Todo',
     file_names = { 'todo.md', 'todos.md' },
   },
+  ['tree-sitter.json'] = {
+    icon = '',
+    color = '#90a850',
+    name = 'TreeSitterJson',
+  },
   ['tsconfig.node.json'] = {
     icon = '',
     color = '#519aba',
