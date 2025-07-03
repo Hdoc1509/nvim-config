@@ -1,13 +1,33 @@
 ; extends
 
+; TODO: inject `regex` pattern to <pattern>
+; uses: actions/upload-artifact*
+; with:
+;   path: <pattern>
+;
 (block_mapping_pair
-  key: (flow_node)
+  value: (flow_node
+    [
+      (plain_scalar
+        (string_scalar) @injection.content)
+      (double_quote_scalar) @injection.content
+    ]
+    (#lua-match? @injection.content "${{")
+    (#set! injection.language "githubactions")))
+
+(block_mapping_pair
+  value: (block_node
+    (block_scalar) @injection.content
+    (#lua-match? @injection.content "${{")
+    (#set! injection.language "githubactions")))
+
+(block_mapping_pair
+  key: (flow_node) @_key
+  (#eq? @_key "if")
   value: (flow_node
     (plain_scalar
       (string_scalar) @injection.content)
-    (#lua-match? @injection.content "^${{.*}}$")
-    (#offset! @injection.content 0 3 0 -2)
-    (#set! injection.language "javascript")))
+    (#set! injection.language "githubactions")))
 
 (block_mapping_pair
   key: (flow_node) @_key

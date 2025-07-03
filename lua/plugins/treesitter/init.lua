@@ -1,4 +1,5 @@
 local config = function()
+  local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
   local directives = require('plugins.treesitter.directives')
   local langs_to_register = require('plugins.treesitter.register')
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
@@ -8,6 +9,15 @@ local config = function()
   require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
 
   require('hygen.tree-sitter').setup()
+
+  ---@diagnostic disable-next-line: inject-field
+  parser_config.githubactions = {
+    install_info = {
+      url = 'https://github.com/disrupted/tree-sitter-github-actions',
+      files = { 'src/parser.c' },
+      branch = 'main',
+    },
+  }
 
   ---@diagnostic disable-next-line: missing-fields
   require('nvim-treesitter.configs').setup({

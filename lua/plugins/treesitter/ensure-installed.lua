@@ -8,6 +8,7 @@ return {
   'embedded_template',
   'gitattributes',
   'gitcommit',
+  'githubactions',
   'gitignore',
   'groovy',
   'html',
