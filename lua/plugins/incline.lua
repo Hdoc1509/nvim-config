@@ -1,4 +1,5 @@
 local config = function()
+  local tabby_win_name = require('tabby.feature.win_name')
   local helpers = require('incline.helpers')
   local hygen_compatible_icon = require('icons.hygen-compatible')
   local diagnostic_icons = require('icons').diagnostics
@@ -60,13 +61,8 @@ local config = function()
         file_bg = lightline_palette[mode].left[1][2]
       end
 
-      local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(props.buf), ':t')
-
-      if filename == '' then
-        filename = '[No Name]'
-      end
-
       local icon, icon_color = hygen_compatible_icon.get_icon(filename)
+      local filename = tabby_win_name.get(props.win, { mode = 'unique' })
       local modified = vim.bo[props.buf].modified
 
       if modified then
@@ -97,6 +93,7 @@ return {
   'b0o/incline.nvim',
   dependencies = {
     'itchyny/lightline.vim',
+    'nanozuki/tabby.nvim',
   },
   config = config,
   event = 'VeryLazy',
