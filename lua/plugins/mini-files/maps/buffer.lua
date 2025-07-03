@@ -48,6 +48,8 @@ local nmap_new_window = function(lhs, window_type, opts)
       return vim.api.nvim_get_current_win()
     end)
 
+    -- NOTE: looks like i dont need to `.set_target_window()` for `newtab`
+    -- silent mapping
     MiniFiles.set_target_window(new_target)
     MiniFiles.go_in({ close_on_file = auto_enter })
 

@@ -37,4 +37,11 @@ return {
     { '<leader>-', nil, desc = 'Open mini.files in last used path' },
     { '<leader>_', nil, desc = 'Open mini.files in root path of workspace' },
   },
+  dependencies = {
+    -- { dir = '~/dev/hygen.nvim' },
+    {
+      'Hdoc1509/hygen.nvim',
+      branch = 'more-injections', --[[ tag = 'v0.2.0' ]]
+    },
+  },
 }

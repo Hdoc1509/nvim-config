@@ -1,4 +1,4 @@
-local hygen_compatible = require('icons.hygen-compatible')
+local hygen_devicons = require('hygen.web-devicons')
 local icons = require('icons')
 
 return function(fs_entry)
@@ -14,7 +14,8 @@ return function(fs_entry)
   local extension = vim.fn.fnamemodify(name, ':e')
 
   if extension == 'hygen' then
-    return hygen_compatible.get_icon(name) .. ' ', 'DevIconHygen'
+    local icon = hygen_devicons.get_icon(name)
+    return icon .. ' ', 'DevIconHygen'
   else
     return MiniFiles.default_prefix(fs_entry)
   end

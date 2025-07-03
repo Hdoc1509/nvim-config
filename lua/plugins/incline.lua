@@ -1,7 +1,7 @@
 local config = function()
   local tabby_win_name = require('tabby.feature.win_name')
   local helpers = require('incline.helpers')
-  local hygen_compatible_icon = require('icons.hygen-compatible')
+  local hygen_devicons = require('hygen.web-devicons')
   local diagnostic_icons = require('icons').diagnostics
   local lightline_palette = vim.fn['lightline#palette']()
   local last_diagnostic_label = {}
@@ -61,8 +61,8 @@ local config = function()
         file_bg = lightline_palette[mode].left[1][2]
       end
 
-      local icon, icon_color = hygen_compatible_icon.get_icon(filename)
       local filename = tabby_win_name.get(props.win, { mode = 'unique' })
+      local icon, icon_color = hygen_devicons.get_icon(filename)
       local modified = vim.bo[props.buf].modified
 
       if modified then
@@ -93,7 +93,13 @@ return {
   'b0o/incline.nvim',
   dependencies = {
     'itchyny/lightline.vim',
+    'nvim-tree/nvim-web-devicons',
     'nanozuki/tabby.nvim',
+    -- { dir = '~/dev/hygen.nvim' },
+    {
+      'Hdoc1509/hygen.nvim',
+      branch = 'more-injections', --[[ tag = 'v0.2.0' ]]
+    },
   },
   config = config,
   event = 'VeryLazy',

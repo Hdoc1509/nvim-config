@@ -4,7 +4,7 @@ local config = function()
     current_tab = { bg = '#222222' },
   }
 
-  local hygen_compatible = require('icons.hygen-compatible')
+  local hygen_devicons = require('hygen.web-devicons')
 
   require('tabby').setup({
     line = function(line)
@@ -12,7 +12,7 @@ local config = function()
         line.tabs().foreach(function(tab)
           local hl = tab.is_current() and theme.current_tab or theme.fill
           local filename = tab.current_win().buf_name()
-          local icon, icon_color = hygen_compatible.get_icon(filename)
+          local icon, icon_color = hygen_devicons.get_icon(filename)
 
           return {
             ' ',
@@ -38,6 +38,13 @@ end
 return {
   'nanozuki/tabby.nvim',
   event = 'VimEnter',
-  dependencies = 'nvim-tree/nvim-web-devicons',
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+    -- { dir = '~/dev/hygen.nvim' },
+    {
+      'Hdoc1509/hygen.nvim',
+      branch = 'more-injections', --[[ tag = 'v0.2.0' ]]
+    },
+  },
   config = config,
 }
