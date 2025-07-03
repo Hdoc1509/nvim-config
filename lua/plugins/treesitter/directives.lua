@@ -21,4 +21,19 @@ return {
       metadata['injection.language'] = 'javascript'
     end,
   },
+  {
+    name = 'inject-from-comment!',
+    callback = function(match, _, bufnr, pred, metadata)
+      local capture_id = pred[2]
+      local node = match[capture_id]
+      if node == nil then
+        return
+      end
+
+      local node_text = vim.treesitter.get_node_text(node, bufnr)
+      local _, _, parser = string.find(node_text, 'inject:(%a+):')
+
+      metadata['injection.language'] = parser
+    end,
+  },
 }
