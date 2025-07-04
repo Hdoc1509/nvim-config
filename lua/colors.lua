@@ -5,6 +5,7 @@ return {
   ['red-400'] = '#EF5350',
   ['red-500'] = '#F44336',
   ['red-A200'] = '#FF5252',
+  ['pink-400'] = '#EC407A',
   ['orange-500'] = '#FF9800',
   ['deep-orange-400'] = '#FF7043',
   ['brown-400'] = '#8D6E63',
@@ -40,9 +41,7 @@ return {
   ['yellow-800'] = '#F9A825',
   ['amber-400'] = '#FFCA28',
   ['amber-500'] = '#FFC107',
-  -- color from: https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/icons/pnpm.svg
   ['amber-600'] = '#FFB300',
-  -- color from: https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/icons/vite.svg
   ['amber-A700'] = '#FFAB00',
   ['gray-100'] = '#F5F5F5',
   ['gray-690'] = '#777777',

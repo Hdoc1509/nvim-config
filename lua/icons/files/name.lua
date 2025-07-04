@@ -108,6 +108,11 @@ return {
       'git-history',
     },
   },
+  ['go.mod'] = {
+    icon = '',
+    color = COLORS['pink-400'],
+    name = 'GoMod',
+  },
   ['jsconfig.json'] = {
     icon = '',
     name = 'Jsconfig',
