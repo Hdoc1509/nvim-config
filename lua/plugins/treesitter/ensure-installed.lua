@@ -5,6 +5,7 @@ return {
   'bash',
   'css',
   'diff',
+  'editorconfig',
   'embedded_template',
   'gitattributes',
   'gitcommit',

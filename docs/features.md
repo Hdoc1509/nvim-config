@@ -96,6 +96,7 @@
   <!-- - cpp (required) -->
 - css
 - diff
+- editorconfig
 - embedded_template (ejs)
 - gitattributes
 - gitcommit
