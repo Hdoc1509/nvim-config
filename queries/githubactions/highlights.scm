@@ -1,17 +1,28 @@
-; NOTE: should I use
-; (#any-of? @function.builtin "github" "secrets")
 (expression
   (arg
     (context
-      (identifier) @function.builtin)))
+      (identifier) @function.builtin
+      (#any-of? @function.builtin
+        "github" "env" "vars" "job" "jobs" "steps" "runner" "secrets" "strategy" "matrix" "needs"
+        "inputs"))))
 
 (expression
   (arg
+    (context
+      (identifier) @function.builtin
+      (#any-of? @function.builtin
+        "github" "env" "vars" "job" "jobs" "steps" "runner" "secrets" "strategy" "matrix" "needs"
+        "inputs"))
     (property
       (property_deref) @punctuation.delimiter)))
 
 (expression
   (arg
+    (context
+      (identifier) @function.builtin
+      (#any-of? @function.builtin
+        "github" "env" "vars" "job" "jobs" "steps" "runner" "secrets" "strategy" "matrix" "needs"
+        "inputs"))
     (property
       (identifier) @variable.member)))
 
@@ -23,6 +34,3 @@
   ] @punctuation.bracket)
 
 (operator) @operator
-
-; TODO: add "." (dot) to tree-sitter-github-actions fork
-; "." @punctuation.delimiter
