@@ -1,9 +1,14 @@
 ; extends
 
 ; TODO: inject `regex` pattern to <pattern>
-; uses: actions/upload-artifact*
-; with:
-;   path: <pattern>
+; - uses: actions/upload-artifact*
+;   with:
+;     path: <pattern>
+; - uses: tj-actions/changed-files@v44
+;   with:
+;     files: |
+;       <pattern>
+;       <pattern>
 ;
 (block_mapping_pair
   value: (flow_node
