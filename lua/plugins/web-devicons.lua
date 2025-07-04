@@ -17,6 +17,13 @@ return {
     })
 
     require('hygen.web-devicons').setup()
+    devicons.set_icon({
+      test = {
+        icon = '',
+        color = '#90a850',
+        name = 'TSTest',
+      },
+    })
     devicons.set_icon_by_filetype({
       powershell = 'ps1',
       cmd = 'bat',
