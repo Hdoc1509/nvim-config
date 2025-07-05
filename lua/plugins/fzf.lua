@@ -15,7 +15,7 @@ local config = function()
     ]])
 
     vim.env.FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --no-ignore --exclude={'" .. vim.g.fzf_exclude .. "'}"
-    vim.env.FZF_DEFAULT_OPTS = '--layout=reverse'
+    vim.env.FZF_DEFAULT_OPTS = '--layout=reverse --exact'
   end
 end
 
