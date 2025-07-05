@@ -91,6 +91,7 @@
 ## Treesitter parsers
 
 - astro
+- awk
 - bash
   <!-- - c (required) -->
   <!-- - cpp (required) -->

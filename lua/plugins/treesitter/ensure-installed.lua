@@ -1,5 +1,6 @@
 return {
   'astro',
+  'awk',
   -- 'c',
   -- 'cpp',
   'bash',
