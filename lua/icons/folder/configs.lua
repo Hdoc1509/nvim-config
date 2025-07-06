@@ -93,12 +93,12 @@ return {
       'spa',
     },
   },
+  eclipse = { hl = 'EclipseMetadata', folder_names = { '.settings' } },
   config = {
     icon = '󱁿',
     hl = 'FolderConfig',
     folder_names = {
       '.config',
-      '.settings',
       'after',
       'cfg',
       'cfgs',
@@ -264,6 +264,7 @@ return {
       'samples',
     },
   },
+  fabric = { hl = 'DevIconFabricMod' },
   Favorites = { icon = '󱃪', hl = 'FolderFavorites' },
   font = { hl = 'FolderFont', folder_names = { 'font', 'fonts' } },
   ftdetect = { icon = '󱁽', hl = 'DevIconVim' },
@@ -325,6 +326,10 @@ return {
     folder_names = { 'hook', 'hooks', 'trigger', 'triggers' },
   },
   html = { icon = '󱋣', hl = 'DevIconHtml' },
+  hygen = {
+    hl = 'DevIconHygen',
+    folder_names = { 'hygen', 'tree-sitter-hygen-template', 'hygen.nvim' },
+  },
   i18n = {
     icon = '󱁽',
     hl = 'FolderI18n',
@@ -407,7 +412,7 @@ return {
   log = {
     icon = '󱂷',
     hl = 'FolderLog',
-    folder_names = { 'log', 'logging', 'logs' },
+    folder_names = { 'log', 'logger', 'logging', 'logs' },
   },
   lsp = { icon = '󱁽', hl = 'FolderLsp' },
   lua = { hl = 'DevIconLua' },
@@ -418,6 +423,16 @@ return {
   },
   markdown = { hl = 'DevIconMarkdown', folder_names = { 'markdown', 'md' } },
   media = { icon = '󱧺', hl = 'FolderVideo' },
+  minecraft = {
+    hl = 'DevIconMCMeta',
+    folder_names = {
+      'hotbar-keys',
+      'hotbar_keys',
+      'mc-config',
+      'minecraft',
+      'vanilla-tweaks',
+    },
+  },
   mnt = { icon = '󰉓', hl = 'FolderMnt' },
   mock = {
     icon = '󰣞',
@@ -497,7 +512,7 @@ return {
       'rplugin',
     },
   },
-  pnpm = { hl = 'DevIconPnpm', folder_names = { 'pnpm', '.pnpm' } },
+  pnpm = { hl = 'DevIconPnpm', folder_names = { 'pnpm', '.pnpm', '.pnpm-store' } },
   proc = { icon = '󰢬', hl = 'FolderConfig' },
   ProgramData = { icon = '󰉌', hl = 'FolderOther' },
   public = {
@@ -522,6 +537,7 @@ return {
   },
   queries = { icon = '󱁽', hl = 'DevIconVim' },
   react = { hl = 'DevIconJsx' },
+  ['react-components'] = { icon = '󱋣', hl = 'DevIconJsx' },
   resource = {
     icon = '󱧶',
     hl = 'FolderResource',
@@ -655,10 +671,18 @@ return {
     },
   },
   trash = { icon = '󱧴', hl = 'FolderTrash', folder_names = { 'Trash', 'trash' } },
+  ['tree-sitter'] = { hl = 'DevIconTreeSitterJson' },
   tutor = { icon = '󱁽', hl = 'DevIconVim' },
   typescript = {
     hl = 'DevIconTypeScript',
-    folder_names = { '@types', 'ts', 'types', 'typescript', 'typings' },
+    folder_names = {
+      '@types',
+      'ts',
+      'type-utils',
+      'types',
+      'typescript',
+      'typings',
+    },
   },
   ui = {
     icon = '󱋣',
@@ -669,7 +693,7 @@ return {
   utils = {
     icon = '󰉗',
     hl = 'FolderUtils',
-    folder_names = { 'utilities', 'utils', 'utitlity' },
+    folder_names = { 'utilities', 'util', 'utils', 'utility' },
   },
   var = { icon = '󱋣', hl = 'FolderOther', folder_names = { 'var', 'vars' } },
   video = {
