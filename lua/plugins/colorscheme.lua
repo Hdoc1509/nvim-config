@@ -80,8 +80,6 @@ local config = function()
         FolderMappings = { fg = COLORS['lime-700'] },
         FolderMnt = { fg = COLORS['yellow-700'] },
         FolderMock = { fg = COLORS['brown-400'] },
-        FolderNetlify = { fg = COLORS['teal-400'] },
-        FolderNode = { fg = COLORS['light-green-500'] },
         FolderOther = { fg = COLORS['deep-orange-400'] },
         FolderPackages = { fg = COLORS['blue-600'] },
         FolderPlaywright = { fg = COLORS['green-500'] },

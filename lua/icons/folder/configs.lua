@@ -435,10 +435,10 @@ return {
       'sketches',
     },
   },
-  netlify = { hl = 'FolderNetlify', folder_names = { '.netlify', 'netlify' } },
+  netlify = { hl = 'DevIconNetlifyToml', folder_names = { '.netlify', 'netlify' } },
   node = {
     icon = '',
-    hl = 'FolderNode',
+    hl = 'DevIconnode',
     folder_names = { '.npm', 'node', 'node_modules', 'nodejs', 'npm' },
   },
   neovim = { hl = 'DevIconVim', folder_names = { 'neovim', 'nvim' } },
