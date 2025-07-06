@@ -7,6 +7,12 @@ return {
 
   -- NOTE: it's not necessary to use uppercase for file names
 
+  ['.sdkmanrc'] = {
+    icon = '',
+    -- https://github.com/sdkman/sdkman.github.io/blob/main/static/assets/img/bubble-logo-sdkman-groovy-color.svg
+    color = '#FB2127',
+    name = 'SDKMANRC',
+  },
   astro_config = {
     icon = '',
     color = COLORS['deep-purple-A200'],
@@ -34,6 +40,12 @@ return {
       'changes.rst',
       'changes.txt',
     },
+  },
+  eclipse_metadata = {
+    icon = '',
+    color = '#f89521', -- from eclipseide.org
+    name = 'EclipseMetadata',
+    file_names = { '.project', '.classpath', '.settings', '.factorypath' },
   },
   env = {
     icon = '',
@@ -157,6 +169,21 @@ return {
       'unlicense.txt',
     },
   },
+  ['mods.toml'] = {
+    icon = '󰢛',
+    color = '#f16436',
+    name = 'ModsToml',
+  },
+  ['netlify.toml'] = {
+    icon = '',
+    color = COLORS['teal-400'],
+    name = 'NetlifyToml',
+  },
+  ['nx.json'] = {
+    icon = '',
+    color = COLORS['light-blue-600'],
+    name = 'NXJson',
+  },
   ['playwright.config.js'] = {
     icon = '',
     color = COLORS['green-500'],
@@ -184,10 +211,21 @@ return {
     color = '#90a850',
     name = 'TreeSitterJson',
   },
-  ['tsconfig.node.json'] = {
+  ['tsconfig.app.json'] = {
     icon = '',
     color = '#519aba',
-    name = 'TSConfig',
+    name = 'TSConfigApp',
+    file_names = { 'tsconfig.app.base.json', 'tsconfig.app.json' },
+  },
+  ['tsconfig.app.react.json'] = {
+    icon = '',
+    color = '#20c2e3',
+    name = 'TSConfigAppReact',
+  },
+  ['tsconfig.node.json'] = {
+    icon = '',
+    color = '#5fa04e',
+    name = 'TSConfigNode',
   },
   vite = {
     icon = '',
