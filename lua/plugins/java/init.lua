@@ -1,3 +1,61 @@
+local function config()
+  local jdtls = require('jdtls')
+  local jdtls_setup = require('jdtls.setup')
+  local java_bin_path = require('plugins.java.java-bin')
+  local data_dir = require('plugins.java.data-dir')
+  local options = require('plugins.java.static-options')
+
+  local cache = { java_bin = nil, root_dir = nil, workspace_data_dir = nil }
+
+  require('utils').autocmd('FileType', {
+    pattern = 'java',
+    callback = function()
+      if cache.root_dir == nil then
+        cache.root_dir = jdtls_setup.find_root(options.root_markers)
+      end
+
+      if cache.java_bin == nil then
+        cache.java_bin = java_bin_path.get_java_bin(cache.root_dir)
+      end
+
+      if cache.workspace_data_dir == nil then
+        cache.workspace_data_dir = data_dir.get_data_dir(cache.root_dir)
+      end
+
+      jdtls.start_or_attach({
+        cmd = {
+          cache.java_bin,
+
+          '-Declipse.application=org.eclipse.jdt.ls.core.id1',
+          '-Dosgi.bundles.defaultStartLevel=4',
+          '-Declipse.product=org.eclipse.jdt.ls.core.product',
+          '-Dlog.protocol=true',
+          '-Dlog.level=ALL',
+          '-Xmx1g',
+          '--add-modules=ALL-SYSTEM',
+          '--add-opens',
+          'java.base/java.util=ALL-UNNAMED',
+          '--add-opens',
+          'java.base/java.lang=ALL-UNNAMED',
+
+          '-jar',
+          options.equinox_launcher_jar,
+
+          '-configuration',
+          options.config_path,
+
+          '-data',
+          cache.workspace_data_dir,
+        },
+        root_dir = cache.root_dir,
+        handlers = options.lsp_start.handlers,
+        capabilities = options.lsp_start.capabilities,
+        settings = options.lsp_start.settings,
+      })
+    end,
+  })
+end
+
 return {
   'mfussenegger/nvim-jdtls',
   ft = { 'java' },
@@ -5,101 +63,5 @@ return {
     'williamboman/mason.nvim',
     'itchyny/vim-gitbranch',
   },
-  config = function()
-    local jdtls = require('jdtls')
-    local jdtls_setup = require('jdtls.setup')
-    local capabilities = require('plugins.lsp.capabilities')
-    local handlers = require('plugins.java.handlers')
-    local runtimes = require('plugins.java.runtimes')
-    local jdk_version = require('plugins.java.jdk-version')
-    local system = 'linux'
-
-    if vim.fn.has('mac') == 1 then
-      system = 'mac'
-    elseif vim.fn.has('win32') == 1 then
-      system = 'win'
-    end
-
-    local java_bin = nil
-    local root_dir = nil
-    local workspace_data_dir = nil
-    local default_java_version = '21'
-    local jdtls_path = vim.fn.expand('$MASON/packages/jdtls')
-    local equinox_launcher_jar = vim.fn.glob(jdtls_path .. '/plugins/org.eclipse.equinox.launcher_*.jar')
-    local cache_dir = vim.fn.expand('~/.cache/jdtls/workspace')
-    local root_markers = { '.git', 'mvnw', 'gradlew' }
-    local config_path = jdtls_path .. '/config_' .. system
-
-    require('utils').autocmd('FileType', {
-      pattern = 'java',
-      callback = function()
-        if root_dir == nil then
-          root_dir = jdtls_setup.find_root(root_markers)
-        end
-
-        if java_bin == nil then
-          local java_sdkman = jdk_version.get_from_sdkmanrc(root_dir)
-
-          if java_sdkman == nil then
-            local java_version = jdk_version.get_from_gradle_properties(root_dir) or default_java_version
-
-            java_bin = vim.fn.expand('~/.sdkman/candidates/java/' .. java_version .. '.*-tem/bin/java')
-          else
-            java_bin = vim.fn.expand('~/.sdkman/candidates/java/' .. java_sdkman .. '/bin/java')
-          end
-        end
-
-        if workspace_data_dir == nil then
-          local workspace_name = vim.fn.fnamemodify(root_dir, ':p:h:t')
-          -- useful if branches have different configs
-          -- NOTE: clean eclipse and gradle generated files every time you switch branch
-          -- reference: https://github.com/Hdoc1509/hotbar-keys/tree/1.21.3/scripts/clean.sh
-          local branch = vim.fn['gitbranch#name']()
-
-          if branch ~= '' then
-            workspace_name = workspace_name .. '_branch-' .. branch
-          end
-
-          workspace_data_dir = cache_dir .. '/' .. workspace_name
-        end
-
-        jdtls.start_or_attach({
-          cmd = {
-            java_bin,
-
-            '-Declipse.application=org.eclipse.jdt.ls.core.id1',
-            '-Dosgi.bundles.defaultStartLevel=4',
-            '-Declipse.product=org.eclipse.jdt.ls.core.product',
-            '-Dlog.protocol=true',
-            '-Dlog.level=ALL',
-            '-Xmx1g',
-            '--add-modules=ALL-SYSTEM',
-            '--add-opens',
-            'java.base/java.util=ALL-UNNAMED',
-            '--add-opens',
-            'java.base/java.lang=ALL-UNNAMED',
-
-            '-jar',
-            equinox_launcher_jar,
-
-            '-configuration',
-            config_path,
-
-            '-data',
-            workspace_data_dir,
-          },
-          root_dir = root_dir,
-          handlers = handlers,
-          capabilities = capabilities,
-          settings = {
-            java = {
-              configuration = {
-                runtimes = runtimes,
-              },
-            },
-          },
-        })
-      end,
-    })
-  end,
+  config = config,
 }
