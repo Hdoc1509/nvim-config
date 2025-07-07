@@ -1,3 +1,4 @@
+local hover_multi_lsp = require('plugins.lsp.hover-multi-lsp')
 local utils = require('utils')
 local autocmd = utils.autocmd
 local nmap = utils.nmap
@@ -22,7 +23,9 @@ local attach = function(ev)
   end)
   buf_nmap('<leader>ds', lsp_buf.document_symbol)
   buf_nmap('J', lsp_buf.signature_help)
-  buf_nmap('K', lsp_buf.hover)
+  buf_nmap('K', function()
+    hover_multi_lsp(bufnr)
+  end)
   buf_nmap('<space>D', lsp_buf.type_definition)
   buf_nmap('<space>rn', lsp_buf.rename)
   buf_nmap('<space>ca', lsp_buf.code_action)
