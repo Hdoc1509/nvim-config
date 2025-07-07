@@ -17,7 +17,7 @@ local function is_diagnostic_ignored(diagnostic, uri)
     or string.match(message, 'platform%.services cannot be resolved') ~= nil
 end
 
-local handlers = merge(default_handlers, {
+return merge(default_handlers, {
   -- remove status from statusline
   ['language/status'] = function() end,
   -- disable some diagnostics
@@ -34,5 +34,3 @@ local handlers = merge(default_handlers, {
     vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
   end,
 })
-
-return handlers
