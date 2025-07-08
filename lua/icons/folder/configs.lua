@@ -671,7 +671,7 @@ return {
     },
   },
   trash = { icon = '󱧴', hl = 'FolderTrash', folder_names = { 'Trash', 'trash' } },
-  ['tree-sitter'] = { hl = 'DevIconTreeSitterJson' },
+  ['tree-sitter'] = { hl = 'DevIconTreeSitterQuery' },
   tutor = { icon = '󱁽', hl = 'DevIconVim' },
   typescript = {
     hl = 'DevIconTypeScript',
