@@ -207,7 +207,7 @@ return {
     file_names = { 'todo.md', 'todos.md' },
   },
   ['tree-sitter.json'] = {
-    icon = '',
+    icon = '',
     color = '#90a850',
     name = 'TreeSitterJson',
   },
