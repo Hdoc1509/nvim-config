@@ -86,3 +86,16 @@ autocmd('TextYankPost', {
     vim.highlight.on_yank({ higroup = 'HighlightYank' })
   end,
 })
+
+-- https://github.com/neovim/neovim/issues/26346#issuecomment-1872418636
+autocmd('CmdwinEnter', {
+  pattern = '[:>]',
+  group = vim.api.nvim_create_augroup('cmdwin_syntax', {}),
+  callback = function()
+    local is_loadable = pcall(vim.treesitter.language.add, 'vim')
+
+    if is_loadable then
+      vim.cmd('set syntax=vim')
+    end
+  end,
+})
