@@ -45,7 +45,8 @@
 - A.I. powered code-completion with [`supermaven-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
 - Beautiful markdown highlighting with [`render-markdown.nvim`](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
-- Distaction-free coding with [`zen-mode.nvim`](https://github.com/folke/zen-mode.nvim)
+- Zen mode with [`no-neck-pain.nvim`](https://github.com/shortcuts/no-neck-pain.nvim)
+  and [`twilight.nvim`](https://github.com/folke/twilight.nvim)
 - Support for [`Hygen`](https://github.com/jondot/hygen) templates with
   [`hygen.nvim`](https://github.com/Hdoc1509/hygen.nvim)
 - Css unit conversion via [`convert.nvim`](https://github.com/cjodo/convert.nvim)
