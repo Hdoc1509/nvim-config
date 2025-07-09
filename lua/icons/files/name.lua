@@ -200,6 +200,18 @@ return {
     name = 'Pnpm',
     file_names = { 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '.pnpmfile.cjs' },
   },
+  query = {
+    icon = '',
+    color = '#90a850',
+    name = 'TreeSitterQuery',
+    file_names = {
+      'folds.scm',
+      'highlights.scm',
+      'indents.scm',
+      'injections.scm',
+      'locals.scm',
+    },
+  },
   todo = {
     icon = '',
     color = COLORS['light-green-600'],
