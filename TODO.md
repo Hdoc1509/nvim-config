@@ -58,6 +58,5 @@
 - https://github.com/bennypowers/svgo.nvim
   using config of svgmog: https://github.com/jakearchibald/svgomg/blob/main/src/config.json
   need to install https://github.com/svg/svgo
-- [Twilight](https://github.com/folke/twilight.nvim)
 - [vim match-up](https://github.com/andymass/vim-matchup)
 - https://github.com/Jezda1337/nvim-html-css
