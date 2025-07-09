@@ -1,12 +1,9 @@
 local hover_multi_lsp = require('plugins.lsp.hover-multi-lsp')
 local utils = require('utils')
+local lsp_buf = vim.lsp.buf
 local autocmd = utils.autocmd
 local nmap = utils.nmap
 local merge = utils.merge
-
-local api = vim.api
-local diagnostic = vim.diagnostic
-local lsp_buf = vim.lsp.buf
 
 -- LspAttach from :https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#suggested-configuration
 local attach = function(ev)
@@ -30,36 +27,6 @@ local attach = function(ev)
   buf_nmap('<space>rn', lsp_buf.rename)
   buf_nmap('<space>ca', lsp_buf.code_action)
   buf_nmap('gr', lsp_buf.references)
-
-  -- show diagnostic on floating window
-  autocmd('CursorHold', {
-    buffer = bufnr,
-    callback = function()
-      local float_opts = {
-        focusable = false,
-        close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
-        border = 'rounded',
-        source = 'always', -- show source in diagnostic popup window
-        prefix = ' ',
-      }
-
-      if not vim.b.diagnostics_pos then
-        ---@diagnostic disable-next-line: inject-field
-        vim.b.diagnostics_pos = { nil, nil }
-      end
-
-      local cursor_pos = api.nvim_win_get_cursor(0)
-      if
-        (cursor_pos[1] ~= vim.b.diagnostics_pos[1] or cursor_pos[2] ~= vim.b.diagnostics_pos[2])
-        and #diagnostic.get() > 0
-      then
-        diagnostic.open_float(nil, float_opts)
-      end
-
-      ---@diagnostic disable-next-line: inject-field
-      vim.b.diagnostics_pos = cursor_pos
-    end,
-  })
 
   -- From: https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#highlight-symbol-under-cursor
   if client.server_capabilities.documentHighlightProvider then

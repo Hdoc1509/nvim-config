@@ -8,6 +8,11 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
+vim.diagnostic.config({
+  virtual_text = false,
+  float = { source = 'always', border = 'rounded' },
+})
+
 -- prevent lightiline.vim from breaking when opening a floating window with:
 -- - vim.diagnostic.goto_next()
 -- - vim.diagnostic.goto_prev()
