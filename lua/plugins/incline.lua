@@ -1,4 +1,5 @@
 local config = function()
+  local incline = require('incline')
   local tabby_win_name = require('tabby.feature.win_name')
   local helpers = require('incline.helpers')
   local hygen_devicons = require('hygen.web-devicons')
@@ -6,7 +7,7 @@ local config = function()
   local lightline_palette = vim.fn['lightline#palette']()
   local last_diagnostic_label = {}
 
-  require('incline').setup({
+  incline.setup({
     window = {
       padding = 0,
       margin = { horizontal = 0 },
@@ -68,6 +69,12 @@ local config = function()
       if modified then
         filename = filename .. ' +'
       end
+
+      incline.setup({
+        window = {
+          margin = { vertical = vim.fn.line('.') == 1 and 2 or 1 },
+        },
+      })
 
       return {
         { get_diagnostic_label() },
