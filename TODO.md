@@ -60,3 +60,8 @@
   need to install https://github.com/svg/svgo
 - [vim match-up](https://github.com/andymass/vim-matchup)
 - https://github.com/Jezda1337/nvim-html-css
+
+### neovim 0.10+
+
+- https://github.com/OXY2DEV/helpview.nvim
+- https://github.com/stevearc/quicker.nvim
