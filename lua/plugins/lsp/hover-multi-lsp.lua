@@ -1,4 +1,5 @@
 local lsp_util = vim.lsp.util
+local floating_preview_id = nil
 
 ---@param responses table<integer, { error: lsp.ResponseError, result: any }>
 local function request_handler(responses)
@@ -38,7 +39,21 @@ local function request_handler(responses)
   end
 
   if not vim.tbl_isempty(value) then
-    lsp_util.open_floating_preview(value, 'markdown', { border = 'rounded' })
+    -- FIX: auto-focus to preview window start to work after third call
+    if floating_preview_id ~= nil then
+      local _, winnr = lsp_util.open_floating_preview(value, 'markdown', {
+        border = 'rounded',
+        focus_id = tostring(vim.fn.win_getid(floating_preview_id)),
+      })
+
+      floating_preview_id = winnr
+    else
+      local _, winnr = lsp_util.open_floating_preview(value, 'markdown', {
+        border = 'rounded',
+      })
+
+      floating_preview_id = winnr
+    end
   end
 end
 
