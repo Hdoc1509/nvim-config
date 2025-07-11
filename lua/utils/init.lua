@@ -19,6 +19,7 @@ M.keymap = function(mode, lhs, rhs, opts)
   vim.keymap.set(mode, lhs, rhs, M.merge(map_opts, opts))
 end
 
+---@param message string
 M.map_notify = function(message)
   vim.notify(message, 'info', {
     title = 'Mapping',

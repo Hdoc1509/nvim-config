@@ -4,6 +4,9 @@ local lsp_buf = vim.lsp.buf
 local autocmd = utils.autocmd
 local nmap = utils.nmap
 local merge = utils.merge
+local map_notify = utils.map_notify
+
+local lsp_log_enabled = false
 
 -- LspAttach from :https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#suggested-configuration
 local attach = function(ev)
@@ -63,5 +66,17 @@ return {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
       callback = attach,
     })
+
+    vim.lsp.set_log_level('off')
+
+    nmap('<leader>ll', function()
+      if lsp_log_enabled then
+        vim.lsp.set_log_level('off')
+        map_notify('LSP log disabled')
+      else
+        vim.lsp.set_log_level('debug')
+        map_notify('LSP log enabled')
+      end
+    end, { desc = 'Toggle LSP log' })
   end,
 }
