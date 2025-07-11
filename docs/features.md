@@ -59,7 +59,6 @@
 
 ### LSP Servers
 
-- [`ast_grep`](https://ast-grep.github.io/)
 - [`astro`](https://github.com/withastro/language-tools/tree/main/packages/language-server)
 - [`bashls`](https://github.com/bash-lsp/bash-language-server)
 - [`cssls`](https://github.com/hrsh7th/vscode-langservers-extracted)

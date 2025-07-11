@@ -3,7 +3,6 @@ local default_settings = require('plugins.lsp.servers._default_settings')
 
 -- NOTE: move config to its own file if it uses more than 5 lines
 return {
-  ['ast_grep'] = default_settings,
   ['astro'] = default_settings,
   ['bashls'] = merge(default_settings, {
     filetypes = { 'sh', 'zsh' },
