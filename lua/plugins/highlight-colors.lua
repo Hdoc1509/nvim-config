@@ -10,6 +10,7 @@ return {
       { label = '033%[1;32m', color = '#29cc00' },
       { label = '033%[1;33m', color = '#feff00' },
       { label = '033%[1;34m', color = '#0066ff' },
+      { label = '033%[1;35m', color = '#cc00ff' },
       { label = '033%[1;36m', color = '#00d5d5' },
     },
   },
