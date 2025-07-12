@@ -13,6 +13,16 @@ local function config()
         end
       end,
     },
+    colorhexa_hex_color = {
+      name = 'colorhexa_hex_color',
+      handle = function(mode, line, _)
+        local hex_color = helper.find(line, mode, '#([%da-zA-Z][%da-zA-Z][%da-zA-Z][%da-zA-Z][%da-zA-Z][%da-zA-Z])')
+
+        if hex_color ~= nil then
+          return 'https://www.colorhexa.com/' .. hex_color
+        end
+      end,
+    },
   }
 
   ---@diagnostic disable-next-line: missing-fields
