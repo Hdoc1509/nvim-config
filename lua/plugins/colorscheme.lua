@@ -108,13 +108,7 @@ local config = function()
         FolderVscode = { fg = COLORS['blue-400'] },
         FolderViews = { fg = COLORS['deep-orange-400'] },
         FolderVite = { fg = COLORS['amber-A700'] },
-        -- TODO: move colors to colors.lua
-        ['@command_snippet_name'] = { fg = '#0066ff' },
-        ['@command_snippet_args'] = { fg = '#cc00ff' },
-        ['@error_log_message'] = { fg = '#fe0100' },
-        ['@warn_log_message'] = { fg = '#feff00' },
-        ['@success_log_message'] = { fg = '#29cc00' },
-        ['@info_log_message'] = { fg = '#00d5d5' },
+        ['@diagnostic.warn'] = { link = 'DiagnosticWarn' },
       },
     },
   })
