@@ -28,17 +28,3 @@
   argument: (raw_string) @injection.content
   (#offset! @injection.content 0 1 0 -1)
   (#set! injection.language "awk"))
-
-; # inject:bash:
-; echo "> bash commands"
-((comment) @_parser
-  (#lua-match? @_parser "inject:(%a+):")
-  .
-  (command
-    name: (command_name) @_command
-    (#eq? @_command "echo")
-    argument: (string
-      (string_content) @injection.content
-      (#lua-match? @injection.content "^>%s")
-      (#offset! @injection.content 0 2 0 0)
-      (#inject-from-comment! @_parser))))
