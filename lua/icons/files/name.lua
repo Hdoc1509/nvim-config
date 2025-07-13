@@ -26,6 +26,16 @@ return {
       'astro.config.ts',
     },
   },
+  ['cargo.lock'] = {
+    icon = '',
+    color = COLORS['amber-300'],
+    name = 'CargoLock',
+  },
+  ['cargo.toml'] = {
+    icon = '',
+    color = '#dea584',
+    name = 'CargoToml',
+  },
   changelog = {
     icon = '',
     color = COLORS['light-green-500'],
@@ -39,6 +49,17 @@ return {
       'changes.md',
       'changes.rst',
       'changes.txt',
+    },
+  },
+  contributing = {
+    icon = '󰅍',
+    color = COLORS['amber-400'],
+    name = 'Contributing',
+    file_names = {
+      'contributing',
+      'contributing.md',
+      'contributing.rst',
+      'contributing.txt',
     },
   },
   eclipse_metadata = {
@@ -209,6 +230,11 @@ return {
     color = COLORS['amber-600'],
     name = 'Pnpm',
     file_names = { 'pnpm-lock.yaml', 'pnpm-workspace.yaml', '.pnpmfile.cjs' },
+  },
+  ['pyproject.toml'] = {
+    icon = '',
+    color = '#9c4221',
+    name = 'PyProjectToml',
   },
   query = {
     icon = '',

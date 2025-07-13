@@ -39,6 +39,7 @@ return {
   ['lime-700'] = '#AFB42B',
   ['yellow-700'] = '#FBC02D',
   ['yellow-800'] = '#F9A825',
+  ['amber-300'] = '#FFD54F',
   ['amber-400'] = '#FFCA28',
   ['amber-500'] = '#FFC107',
   ['amber-600'] = '#FFB300',
