@@ -184,6 +184,11 @@ return {
     color = COLORS['light-blue-600'],
     name = 'NXJson',
   },
+  ['package-lock.json'] = {
+    icon = '',
+    color = '#e8274b',
+    name = 'PackageLockJson',
+  },
   ['playwright.config.js'] = {
     icon = '',
     color = COLORS['green-500'],
