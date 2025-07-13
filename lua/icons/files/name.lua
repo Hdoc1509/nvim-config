@@ -184,6 +184,11 @@ return {
     color = COLORS['light-blue-600'],
     name = 'NXJson',
   },
+  ['package.json'] = {
+    icon = '󰎙',
+    color = '#5fa04e',
+    name = 'PackageJson',
+  },
   ['package-lock.json'] = {
     icon = '',
     color = '#e8274b',
