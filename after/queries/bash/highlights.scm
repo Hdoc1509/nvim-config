@@ -30,3 +30,26 @@
   .
   (string
     (string_content) @diagnostic.warn))
+
+(command
+  (command_name
+    (concatenation
+      (word) @variable.parameter
+      (#lua-match? @variable.parameter "^%-%-[%a%-]+=$")
+      (#is-conf-file? ""))))
+
+(command
+  (command_name
+    (word) @variable.parameter
+    (#lua-match? @variable.parameter "^%-%-[%a%-]+$")
+    (#is-conf-file? "")))
+
+(variable_assignment
+  (variable_name) @variable.parameter
+  (#lua-match? @variable.parameter "^%-%-[%a%-]+$")
+  (#is-conf-file? ""))
+
+((variable_assignment
+  "=" @variable.parameter
+  (#is-conf-file? "")) @_assignment
+  (#lua-match? @_assignment "^%-%-[%a%-]+=.+"))

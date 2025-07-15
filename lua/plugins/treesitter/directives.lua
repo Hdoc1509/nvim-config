@@ -9,6 +9,8 @@
 ---@type treesitter.Directive[]
 return {
   {
+    -- TODO: use a predicate instead of directive
+    -- name = 'is-mdx-file?'
     name = 'inject-mdx-js!',
     callback = function(_, _, bufnr, _, metadata)
       local filename = vim.fs.basename(vim.api.nvim_buf_get_name(bufnr))
