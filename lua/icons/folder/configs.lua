@@ -331,6 +331,7 @@ return {
   },
   groovy = { hl = 'DevIconGroovy' },
   gtk = { hl = 'DevIconGtk', folder_names = { 'gtk-2.0', 'gtk-3.0', 'gtk-4.0' } },
+  helper = { hl = 'FolderHelper', folder_names = { 'helper', 'helpers' } },
   home = {
     icon = '󱂵',
     hl = 'FolderHome',
