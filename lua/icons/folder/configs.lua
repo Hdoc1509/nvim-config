@@ -315,6 +315,7 @@ return {
       'generator',
       'generators',
       'gens',
+      'regenerator',
     },
   },
   github = { icon = '', hl = 'FolderGithub', folder_names = { '.github', 'gh' } },
