@@ -69,6 +69,7 @@ return {
     hl = 'FolderChangesets',
     folder_names = { '.changeset', '@changesets' },
   },
+  changelog = { hl = 'DevIconChangelog' },
   cinnamon = {
     hl = 'DevIconCinnamon',
     folder_names = { 'cinnamon', 'cinnamon-session' },
