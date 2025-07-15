@@ -165,6 +165,17 @@ return {
       'srv',
     },
   },
+  command = {
+    hl = 'FolderCommand',
+    folder_names = {
+      'cli',
+      'clis',
+      'cmd',
+      'command',
+      'commandline',
+      'commands',
+    },
+  },
   compiler = { icon = '󱁽', hl = 'DevIconVim' },
   components = {
     icon = '󱋣',
