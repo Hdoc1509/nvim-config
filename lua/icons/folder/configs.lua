@@ -408,7 +408,7 @@ return {
   java = { hl = 'DevIconJava', folder_names = { '.java', 'java', 'jre' } },
   javascript = {
     hl = 'DevIconJs',
-    folder_names = { 'ecma', 'javascript', 'javascripts', 'js' },
+    folder_names = { 'ecma', 'esm', 'javascript', 'javascripts', 'js' },
   },
   layout = {
     icon = '󱋣',
