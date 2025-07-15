@@ -8,7 +8,6 @@ return {
   -- Folder-prefixed highlight groups colors should come from:
   -- https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/material-colors.yml
 
-  ['.changeset'] = { hl = 'FolderChangesets' },
   ['.idea'] = { hl = 'FolderIntellij' },
   ['.local'] = { icon = '󰉌', hl = 'FolderLocal' },
   ['.vim'] = { hl = 'DevIconVim' },
@@ -66,6 +65,10 @@ return {
   bin = { icon = '󱧺', hl = 'FolderDist', folder_names = { '.bin', 'bin', 'sbin' } },
   boot = { icon = '󰴋', hl = 'FolderBoot' },
   c = { hl = 'DevIconC' },
+  changesets = {
+    hl = 'FolderChangesets',
+    folder_names = { '.changeset', '@changesets' },
+  },
   cinnamon = {
     hl = 'DevIconCinnamon',
     folder_names = { 'cinnamon', 'cinnamon-session' },
