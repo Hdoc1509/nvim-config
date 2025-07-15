@@ -1,6 +1,11 @@
 local folder_icons = require('icons.folder')
 local file_icons = require('icons.files')
 
+-- TODO: split into
+-- ./diagnostics.lua
+-- ./git.lua
+-- TODO: remove this file
+
 return {
   diagnostics = {
     Error = '',

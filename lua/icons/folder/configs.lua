@@ -535,6 +535,7 @@ return {
     },
   },
   pnpm = { hl = 'DevIconPnpm', folder_names = { 'pnpm', '.pnpm', '.pnpm-store' } },
+  prettier = { hl = 'DevIconPrettierConfig' },
   proc = { icon = '󰢬', hl = 'FolderConfig' },
   ProgramData = { icon = '󰉌', hl = 'FolderOther' },
   public = {

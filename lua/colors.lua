@@ -18,6 +18,7 @@ return {
   ['blue-600'] = '#1E88E5',
   -- color from header background: https://microsoft.github.io/language-server-protocol/
   ['blue-A800'] = '#2753e3',
+  ['light-blue-500'] = '#03A9F4',
   ['light-blue-600'] = '#039BE5',
   ['light-blue-700'] = '#0288D1',
   ['light-blue-800'] = '#0277BD',
