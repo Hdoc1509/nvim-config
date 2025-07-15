@@ -17,6 +17,11 @@ return {
     color = '#4d5a5e',
     name = 'Minttyrc',
   },
+  ['.neoconf.json'] = {
+    icon = '',
+    color = '#019833',
+    name = 'Neoconf',
+  },
   ['.profile'] = {
     icon = '',
     color = '#4d5a5e',
