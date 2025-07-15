@@ -93,7 +93,7 @@ return {
       'spa',
     },
   },
-  eclipse = { hl = 'EclipseMetadata', folder_names = { '.settings' } },
+  eclipse = { hl = 'DevIconEclipseMetadata', folder_names = { '.settings' } },
   config = {
     icon = '󱁿',
     hl = 'FolderConfig',
