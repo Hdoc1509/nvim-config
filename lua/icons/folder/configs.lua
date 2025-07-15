@@ -345,7 +345,12 @@ return {
   html = { icon = '󱋣', hl = 'DevIconHtml' },
   hygen = {
     hl = 'DevIconHygen',
-    folder_names = { 'hygen', 'tree-sitter-hygen-template', 'hygen.nvim' },
+    folder_names = {
+      'hygen',
+      'hygen.nvim',
+      'hygen_template',
+      'tree-sitter-hygen-template',
+    },
   },
   i18n = {
     icon = '󱁽',
