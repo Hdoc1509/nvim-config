@@ -9,4 +9,6 @@ return {
   gyp = { icon = '', color = '#ffbc03', name = 'GYP' },
   mcmeta = { icon = '󰍳', color = COLORS['green-500'], name = 'MCMeta' },
   jar = { icon = '', color = '#cc3e44', name = 'JAR' },
+  ignore = { icon = '', color = '#6d8086', name = 'Ignore' },
+  conf = { icon = '', color = COLORS['blue-400'], name = 'Conf' },
 }
