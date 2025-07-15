@@ -7,11 +7,31 @@ return {
 
   -- NOTE: it's not necessary to use uppercase for file names
 
+  ['.dircolors'] = {
+    icon = '',
+    color = '#4d5a5e',
+    name = 'Dircolors',
+  },
+  ['.minttyrc'] = {
+    icon = '',
+    color = '#4d5a5e',
+    name = 'Minttyrc',
+  },
+  ['.profile'] = {
+    icon = '',
+    color = '#4d5a5e',
+    name = 'Profile',
+  },
   ['.sdkmanrc'] = {
     icon = '',
     -- https://github.com/sdkman/sdkman.github.io/blob/main/static/assets/img/bubble-logo-sdkman-groovy-color.svg
     color = '#FB2127',
     name = 'SDKMANRC',
+  },
+  ['.shellcheckrc'] = {
+    icon = '',
+    color = '#4d5a5e',
+    name = 'Shellcheckrc',
   },
   astro_config = {
     icon = '',
