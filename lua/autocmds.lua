@@ -25,9 +25,8 @@ autocmd('FileType', {
 -- quickfix window
 autocmd('FileType', {
   pattern = 'qf',
-  callback = function()
-    ---@diagnostic disable-next-line: param-type-mismatch
-    local bufnr = vim.fn.bufnr('%')
+  callback = function(event)
+    local bufnr = event.buf
 
     nmap('e', '<cr>:cclose<cr>', {
       buffer = bufnr,
