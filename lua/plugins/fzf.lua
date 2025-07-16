@@ -3,17 +3,17 @@ return {
     'junegunn/fzf',
     build = './install --bin', -- ensure latest version for neovim
     keys = {
-      { '<leader>e', '<cmd>FZF<cr>' },
+      { '<leader>sf', '<cmd>FZF<cr>', desc = 'Search files' },
     },
   },
   {
     'junegunn/fzf.vim',
     dependencies = 'junegunn/fzf',
     keys = {
-      { '<leader>E', '<cmd>Buffers<cr>' },
-      { '<leader>?', '<cmd>Helptags<cr>' },
-      { '<leader>R', '<cmd>Rg<cr>' },
-      { '<leader>D', '<cmd>GFiles?<cr>' },
+      { '<leader>sb', '<cmd>Buffers<cr>', desc = 'Search buffers' },
+      { '<leader>s?', '<cmd>Helptags<cr>', desc = 'Search helptags' },
+      { '<leader>st', '<cmd>Rg<cr>', desc = 'Search files by text' },
+      { '<leader>ss', '<cmd>GFiles?<cr>', desc = 'Search files by git status' },
     },
   },
 }

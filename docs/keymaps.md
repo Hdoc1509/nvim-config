@@ -46,12 +46,12 @@ Used mapleader is `<space>` key.
 
 ## Scrolling
 
-| Mapping      | Mode            | Description                                 |
-| ------------ | --------------- | ------------------------------------------- |
-| `<leader>j`  | Normal / Visual | Scroll down 10 lines                        |
-| `<leader>J`  | Normal / Visual | Scroll down 20 lines                        |
-| `<leader>k`  | Normal / Visual | Scroll up 10 lines                          |
-| `<leader>K`  | Normal / Visual | Scroll up 20 lines                          |
+| Mapping     | Mode            | Description          |
+| ----------- | --------------- | -------------------- |
+| `<leader>j` | Normal / Visual | Scroll down 10 lines |
+| `<leader>J` | Normal / Visual | Scroll down 20 lines |
+| `<leader>k` | Normal / Visual | Scroll up 10 lines   |
+| `<leader>K` | Normal / Visual | Scroll up 20 lines   |
 
 ## Split resize
 
@@ -112,13 +112,13 @@ Used mapleader is `<space>` key.
 
 ## FZF
 
-| Mapping     | Mode   | Description                  |
-| ----------- | ------ | ---------------------------- |
-| `<leader>e` | Normal | Search files                 |
-| `<leader>E` | Normal | Search buffers               |
-| `<leader>?` | Normal | Search helptags              |
-| `<leader>R` | Normal | Search file by text          |
-| `<leader>D` | Normal | Search files by `git status` |
+| Mapping      | Mode   | Description                  |
+| ------------ | ------ | ---------------------------- |
+| `<leader>sf` | Normal | Search files                 |
+| `<leader>sb` | Normal | Search buffers               |
+| `<leader>s?` | Normal | Search helptags              |
+| `<leader>st` | Normal | Search files by text         |
+| `<leader>ss` | Normal | Search files by `git status` |
 
 ## TODO comments
 
