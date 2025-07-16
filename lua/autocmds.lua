@@ -63,13 +63,11 @@ autocmd('TermOpen', {
   end,
 })
 
--- FIX: this is causing nvim to auto-close the buffer for `:Git diff` when using
--- `delta` as the diff tool
--- autocmd('TermClose', {
---   callback = function()
---     vim.cmd("execute 'bdelete! ' . expand('<abuf>')")
---   end,
--- })
+autocmd('TermClose', {
+  callback = function()
+    vim.cmd("execute 'bdelete! ' . expand('<abuf>')")
+  end,
+})
 
 -- highlight copied (yanked) text
 autocmd('TextYankPost', {
