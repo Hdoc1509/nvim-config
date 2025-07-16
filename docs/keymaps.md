@@ -52,7 +52,6 @@ Used mapleader is `<space>` key.
 | `<leader>J`  | Normal / Visual | Scroll down 20 lines                        |
 | `<leader>k`  | Normal / Visual | Scroll up 10 lines                          |
 | `<leader>K`  | Normal / Visual | Scroll up 20 lines                          |
-| `<leader>sb` | Normal          | Toggle scrollbind in windows of current tab |
 
 ## Split resize
 

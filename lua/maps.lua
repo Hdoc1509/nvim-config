@@ -71,7 +71,6 @@ keymap({ 'n', 'x' }, '<leader>j', '10<c-e>', { desc = 'Scroll down 10 lines' })
 keymap({ 'n', 'x' }, '<leader>J', '20<c-e>', { desc = 'Scroll down 20 lines' })
 keymap({ 'n', 'x' }, '<leader>k', '10<c-y>', { desc = 'Scroll up 10 lines' })
 keymap({ 'n', 'x' }, '<leader>K', '20<c-y>', { desc = 'Scroll up 20 lines' })
-nmap('<leader>sb', '<cmd>windo set scrollbind!<cr>', { desc = 'Toggle scrollbind in windows of current tab' })
 
 -- Split resize
 nmap('<leader>>', '10<c-w>>', { desc = 'Resize split 10 pixels to left' })
