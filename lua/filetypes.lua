@@ -11,5 +11,6 @@ vim.filetype.add({
   filename = {
     ['.minttyrc'] = 'dosini',
     ['.shellcheckrc'] = 'dosini',
-  }
+    ['.styluaignore'] = 'gitignore',
+  },
 })
