@@ -88,3 +88,13 @@ autocmd('CmdwinEnter', {
     end
   end,
 })
+
+autocmd('FileType', {
+  pattern = 'json',
+  callback = function(event)
+    nmap('o', function()
+      local line = vim.api.nvim_get_current_line()
+      return line:find('[^,{[]$') and 'A,<cr>' or 'o'
+    end, { buffer = event.buf, expr = true })
+  end,
+})
