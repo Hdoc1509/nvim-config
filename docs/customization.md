@@ -9,6 +9,11 @@ configuration, follow next indications:
 - Plugins configurations must be added inside [`lua/plugins`](./lua/plugins)
   folder (can be a `*.lua` file or a folder with an `init.lua` file). Config
   files of plugins will be loaded automatically by `lazy.nvim`
+- To customize `fzf` declare `FZF_DEFAULT_COMMAND` and `FZF_DEFAULT_OPTS` in
+  your shell configuration or in [lua/plugins/fzf.lua](lua/plugins/fzf.luae).
+  You can check [my fzf
+  config](https://github.com/Hdoc1509/dotfiles/tree/master/fzf/fzf-options.sh)
+  for reference.
 - Mappings must be set in [`lua/maps.lua`](./lua/maps.lua)
 - Settings about diagnostic are in [`lua/diagnostic.lua`](./lua/diagnostic.lua)
 - Custom icons must be declared in [`lua/icons/init.lua`](./lua/icons/init.lua)
