@@ -90,6 +90,8 @@ Used mapleader is `<space>` key.
 | `<leader>gc`  | Normal | Execute `git commit`                      |
 | `<leader>gC`  | Normal | Execute `git commit verbose`              |
 | `<leader>gb`  | Normal | Open in browser at hosting provider       |
+| `<leader>gd`  | Normal | Open vertical `vimdiff` of current file   |
+| `<leader>gD`  | Normal | Open horizontal `vimdiff` of current file |
 | `]c`          | Normal | Jump to next hunk                         |
 | `[c`          | Normal | Jump to previous hunk                     |
 | `<leader>hs`  | Normal | Stage/unstage hunk under cursor           |

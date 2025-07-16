@@ -12,5 +12,7 @@ return {
     { '<leader>gc', '<cmd>Git commit<cr>', desc = 'Git commit' },
     { '<leader>gC', '<cmd>Git commit --verbose<cr>', desc = 'Git commit verbose' },
     { '<leader>gb', '<cmd>GBrowse<cr>', desc = 'Open in browser at hosting provider' },
+    { '<leader>gd', '<cmd>Gvdiffsplit!<cr>', desc = 'Open vertical vimdiff of current file' },
+    { '<leader>gD', '<cmd>Ghdiffsplit!<cr>', desc = 'Open horizontal vimdiff of current file' },
   },
 }
