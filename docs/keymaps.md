@@ -113,11 +113,13 @@ Used mapleader is `<space>` key.
 
 ## FZF
 
-| Mapping     | Mode   | Description     |
-| ----------- | ------ | --------------- |
-| `<leader>e` | Normal | Search files    |
-| `<leader>E` | Normal | Search buffers  |
-| `<leader>?` | Normal | Search helptags |
+| Mapping     | Mode   | Description                  |
+| ----------- | ------ | ---------------------------- |
+| `<leader>e` | Normal | Search files                 |
+| `<leader>E` | Normal | Search buffers               |
+| `<leader>?` | Normal | Search helptags              |
+| `<leader>R` | Normal | Search file by text          |
+| `<leader>D` | Normal | Search files by `git status` |
 
 ## TODO comments
 
