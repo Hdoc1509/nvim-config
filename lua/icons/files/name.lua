@@ -38,6 +38,11 @@ return {
     color = '#4d5a5e',
     name = 'Shellcheckrc',
   },
+  ['.tsqueryrc.json'] = {
+    icon = '',
+    color = '#90a850',
+    name = 'TSQueryRc',
+  },
   astro_config = {
     icon = '',
     color = COLORS['deep-purple-A200'],
@@ -273,6 +278,12 @@ return {
       'locals.scm',
     },
   },
+  stylua = {
+    icon = '󰗈',
+    color = '#51a0cf',
+    name = 'Stylua',
+    file_names = { '.stylua.toml', '.styluaignore', 'stylua.toml' },
+  },
   todo = {
     icon = '',
     color = COLORS['light-green-600'],
@@ -299,6 +310,12 @@ return {
     icon = '',
     color = '#5fa04e',
     name = 'TSConfigNode',
+  },
+  typosconfig_lsp = {
+    icon = '󰛓',
+    color = COLORS['red-400'],
+    name = 'TyposConfigLsp',
+    file_names = { '.typos.toml', '_typos.toml', 'typos.toml' },
   },
   vite = {
     icon = '',
