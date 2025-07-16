@@ -250,6 +250,13 @@ Used mapleader is `<space>` key.
 
 **(silent): Mappings that don't jump to file nor close the quickfix window.**
 
+## Help filetype
+
+| Mapping | Mode   | Description          |
+| ------- | ------ | -------------------- |
+| `<cr>`  | Normal | Jump to tag          |
+| `<bs>`  | Normal | Jump to previous tag |
+
 ## Misc
 
 | Mapping       | Mode            | Description                                |

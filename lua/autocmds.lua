@@ -10,12 +10,7 @@ autocmd('VimResized', {
 
 -- Close some filetypes with <q>
 autocmd('FileType', {
-  pattern = {
-    'qf',
-    'help',
-    'checkhealth',
-    'git',
-  },
+  pattern = { 'qf', 'help', 'checkhealth', 'git' },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
     nmap('q', '<cmd>close<cr>', { buffer = event.buf })
@@ -96,5 +91,13 @@ autocmd('FileType', {
       local line = vim.api.nvim_get_current_line()
       return line:find('[^,{[]$') and 'A,<cr>' or 'o'
     end, { buffer = event.buf, expr = true })
+  end,
+})
+
+autocmd('FileType', {
+  pattern = 'help',
+  callback = function(event)
+    nmap('<cr>', '<c-]>', { buffer = event.buf, desc = 'Jump to tag' })
+    nmap('<bs>', '<c-T>', { buffer = event.buf, desc = 'Jump to previous tag' })
   end,
 })
