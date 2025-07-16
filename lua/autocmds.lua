@@ -54,14 +54,6 @@ autocmd('FileType', {
   end,
 })
 
--- set foldmethod=marker for .conf files
-autocmd('FileType', {
-  pattern = 'conf',
-  callback = function()
-    vim.wo.foldmethod = 'marker'
-  end,
-})
-
 autocmd('TermOpen', {
   callback = function()
     vim.opt_local.number = false
