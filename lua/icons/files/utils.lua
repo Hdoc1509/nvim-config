@@ -13,10 +13,6 @@ local function icon_by_filetype(filetype)
   return icon, color, hl
 end
 
--- TODO: implement this to tabby and incline
--- if ext == '' then icon_file_utils.get_icon_without_extension()
--- else hygen_utils.get_icon()
-
 ---Returns the `icon`, `color` and `hl` group from file without extension
 ---@param file string | number Full path of file of buffer number
 ---@return string icon, string color, string hl
