@@ -1,12 +1,13 @@
 local diagnostic_icons = require('icons').diagnostics
 
--- FIX: set last diagnostic per buffer
+---@type table<number, table>
 local last_label = {}
 
 ---@param props { mode: string, bufnr: number}
+---@return table
 return function(props)
   if props.mode == 'insert' then
-    return last_label
+    return last_label[tostring(props.bufnr)] or {}
   end
 
   local label = {}
@@ -29,6 +30,6 @@ return function(props)
     table.insert(label, ' ')
   end
 
-  last_label = label
+  last_label[tostring(props.bufnr)] = label
   return label
 end
