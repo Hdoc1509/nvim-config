@@ -11,12 +11,6 @@ return function(fs_entry)
     return icon .. ' ', hl
   end
 
-  local extension = vim.fn.fnamemodify(name, ':e')
-
-  if extension == 'hygen' then
-    local icon = hygen_devicons.get_icon(name)
-    return icon .. ' ', 'DevIconHygen'
-  else
-    return MiniFiles.default_prefix(fs_entry)
-  end
+  local icon, _, hl = hygen_devicons.get_icon(name)
+  return icon .. ' ', hl
 end

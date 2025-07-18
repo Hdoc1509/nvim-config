@@ -97,10 +97,7 @@ return {
     'nvim-tree/nvim-web-devicons',
     'nanozuki/tabby.nvim',
     -- { dir = '~/dev/hygen.nvim' },
-    {
-      'Hdoc1509/hygen.nvim',
-      branch = 'more-injections', --[[ tag = 'v0.2.0' ]]
-    },
+    { 'Hdoc1509/hygen.nvim', version = '*' },
   },
   config = config,
   event = 'VeryLazy',
