@@ -53,3 +53,10 @@ plugin. Then, run:
 
 - [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
 - [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
+
+## `mini.files` opens when opening `fugitive`s summary window
+
+Go up to root path of current working directory and remove `fugitive:` directory
+
+> [NOTE!]
+> This is a extremely rare case. It only happened twice
