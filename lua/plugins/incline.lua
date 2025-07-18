@@ -3,6 +3,7 @@ local config = function()
   local helpers = require('incline.helpers')
   local hygen_devicons = require('hygen.web-devicons')
   local diagnostic_icons = require('icons').diagnostics
+  local icon_file_utils = require('icons.files.utils')
   local lightline_palette = vim.fn['lightline#palette']()
   local last_diagnostic_label = {}
 
@@ -63,7 +64,15 @@ local config = function()
       end
 
       local filename = tabby_win_name.get(props.win, { mode = 'unique' })
-      local icon, icon_color = hygen_devicons.get_icon(filename)
+      local ext = vim.fn.fnamemodify(filename, ':e')
+      local icon, icon_color = '', ''
+
+      if ext == '' then
+        icon, icon_color = icon_file_utils.get_icon_without_extension(props.buf)
+      else
+        icon, icon_color = hygen_devicons.get_icon(filename)
+      end
+
       local modified = vim.bo[props.buf].modified
 
       if modified then

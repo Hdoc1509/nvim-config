@@ -1,5 +1,6 @@
 local hygen_devicons = require('hygen.web-devicons')
 local icons = require('icons')
+local icon_file_utils = require('icons.files.utils')
 
 return function(fs_entry)
   local name = fs_entry.name
@@ -11,6 +12,13 @@ return function(fs_entry)
     return icon .. ' ', hl
   end
 
-  local icon, _, hl = hygen_devicons.get_icon(name)
-  return icon .. ' ', hl
+  local extension = vim.fn.fnamemodify(name, ':e')
+
+  if extension == '' then
+    local icon, _, hl = icon_file_utils.get_icon_without_extension(fs_entry.path)
+    return icon .. ' ', hl
+  else
+    local icon, _, hl = hygen_devicons.get_icon(name)
+    return icon .. ' ', hl
+  end
 end

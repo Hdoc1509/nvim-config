@@ -5,14 +5,23 @@ local config = function()
   }
 
   local hygen_devicons = require('hygen.web-devicons')
+  local icon_file_utils = require('icons.files.utils')
 
   require('tabby').setup({
     line = function(line)
       return {
         line.tabs().foreach(function(tab)
           local hl = tab.is_current() and theme.current_tab or theme.fill
-          local filename = tab.current_win().buf_name()
-          local icon, icon_color = hygen_devicons.get_icon(filename)
+          local win = tab.current_win()
+          local filename = win.buf_name()
+          local ext = vim.fn.fnamemodify(filename, ':e')
+          local icon, icon_color = '', ''
+
+          if ext == '' then
+            icon, icon_color = icon_file_utils.get_icon_without_extension(win.buf().id)
+          else
+            icon, icon_color = hygen_devicons.get_icon(filename)
+          end
 
           return {
             ' ',
