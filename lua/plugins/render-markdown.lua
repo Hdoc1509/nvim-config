@@ -5,32 +5,7 @@ return {
     -- { dir = '~/dev/hygen.nvim' },
     { 'Hdoc1509/hygen.nvim', version = '*' },
   },
-  ---@type render.md.UserConfig
-  opts = {
-    heading = {
-      icons = { '◉ ', '○ ', '✸ ', '✿ ' },
-      sign = false,
-      width = 'block',
-      min_width = 79,
-      -- FIX: breaks custom icons. works from nvim-0.10
-      -- position = 'inline',
-    },
-    pipe_table = {
-      -- TODO: use 'trimmed' once updated to nvim-0.10
-      cell = 'overlay',
-    },
-    code = {
-      sign = false,
-      width = 'block',
-      below = '',
-      language_border = '',
-    },
-    html = {
-      comment = { conceal = false },
-    },
-  },
-  ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit' },
-  config = function(_, opts)
+  config = function()
     local hygen_utils = require('hygen.utils')
     local allowed_subext = { 'md', 'mdx' }
 
@@ -45,6 +20,30 @@ return {
       end
     end
 
-    require('render-markdown').setup(vim.tbl_deep_extend('force', opts, { ignore = ignore }))
+    require('render-markdown').setup({
+      heading = {
+        icons = { '◉ ', '○ ', '✸ ', '✿ ' },
+        sign = false,
+        width = 'block',
+        min_width = 79,
+        -- FIX: breaks custom icons. works from nvim-0.10
+        -- position = 'inline',
+      },
+      pipe_table = {
+        -- TODO: use 'trimmed' once updated to nvim-0.10
+        cell = 'overlay',
+      },
+      code = {
+        sign = false,
+        width = 'block',
+        below = '',
+        language_border = '',
+      },
+      html = {
+        comment = { conceal = false },
+      },
+      ignore = ignore,
+    })
   end,
+  ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit' },
 }
