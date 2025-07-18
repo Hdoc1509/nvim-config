@@ -1,13 +1,14 @@
-local folder_icons_config = require('icons.folder.configs')
+local configs = require('icons.folder.configs')
 
 ---@class (exact) FolderIconConfig
 ---@field icon? string
 ---@field hl string
 ---@field folder_names? string[]
 
+---@type table<string, FolderIconConfig>
 local folder_icons = {}
 
-for config_name, config in pairs(folder_icons_config) do
+for config_name, config in pairs(configs) do
   local icon, hl = config.icon, config.hl
 
   if config.folder_names ~= nil then

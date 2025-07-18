@@ -1,4 +1,4 @@
-local diagnostic_icons = require('icons').diagnostics
+local ICONS = require('icons.diagnostics')
 
 ---@type table<number, table>
 local last_label = {}
@@ -12,7 +12,7 @@ return function(props)
 
   local label = {}
 
-  for severity, icon in pairs(diagnostic_icons) do
+  for severity, icon in pairs(ICONS) do
     local severityOption = vim.diagnostic.severity[string.upper(severity)]
     local quantity = #vim.diagnostic.get(props.bufnr, {
       severity = severityOption,

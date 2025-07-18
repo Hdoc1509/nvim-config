@@ -6,11 +6,11 @@ return {
   },
   config = function()
     local devicons = require('nvim-web-devicons')
-    local ICONS = require('icons')
+    local ICONS = require('icons.files')
 
     devicons.setup({
-      override_by_filename = ICONS.file.name,
-      override_by_extension = ICONS.file.extension,
+      override_by_filename = ICONS.name,
+      override_by_extension = ICONS.extension,
     })
 
     require('hygen.web-devicons').setup()

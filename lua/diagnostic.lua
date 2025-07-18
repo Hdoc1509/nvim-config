@@ -1,9 +1,9 @@
 local lsp_util = require('vim.lsp.util')
-local signs = require('icons').diagnostics
+local ICONS = require('icons.diagnostics')
 local base_popup_opts = lsp_util.make_floating_popup_options
 
 -- Change diagnostic signs
-for type, icon in pairs(signs) do
+for type, icon in pairs(ICONS) do
   local hl = 'DiagnosticSign' .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
@@ -13,6 +13,7 @@ vim.diagnostic.config({
   float = { source = 'always', border = 'rounded' },
 })
 
+-- TODO: move to patches.lua
 -- prevent lightiline.vim from breaking when opening a floating window with:
 -- - vim.diagnostic.goto_next()
 -- - vim.diagnostic.goto_prev()
