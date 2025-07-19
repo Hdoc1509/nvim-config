@@ -41,7 +41,7 @@ If you have problems to use `astro` files, follow instructions in:
 
 ## Fail to install `tree-sitter-test` parser
 
-> [NOTE!]
+> [!NOTE]
 > All of the following commands should be run in `command` mode
 
 You will need to run `:chdir` to the installation path of `tree-sitter-test`
@@ -58,5 +58,5 @@ plugin. Then, run:
 
 Go up to root path of current working directory and remove `fugitive:` directory
 
-> [NOTE!]
+> [!NOTE]
 > This is a extremely rare case. It only happened twice
