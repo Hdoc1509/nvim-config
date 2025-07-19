@@ -39,6 +39,9 @@ Run the following commands with `powershell` as admin:
 
 If you have problems to use `astro` files, follow instructions in:
 
+- [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
+- [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
+
 ## Fail to install `tree-sitter-test` parser
 
 > [!NOTE]
@@ -50,9 +53,6 @@ plugin. Then, run:
 ```bash
 !mkdir -p parser && tree-sitter build -o parser/test.so
 ```
-
-- [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
-- [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
 
 ## `mini.files` opens when opening `fugitive`s summary window
 
