@@ -1,4 +1,5 @@
 local lsp_util = require('vim.lsp.util')
+local utils = require('utils')
 local base_popup_opts = lsp_util.make_floating_popup_options
 
 -- NOTE: needed for tree-sitter-test. not needed from nvim-0.10
@@ -20,8 +21,6 @@ end
 -- https://github.com/itchyny/lightline.vim/pull/659#issuecomment-1704032081
 ---@diagnostic disable-next-line: duplicate-set-field
 lsp_util.make_floating_popup_options = function(width, height, opts)
-  -- NOTE: check if this is needed from nvim-0.10
-  local base_opts = base_popup_opts(width, height, opts)
-  base_opts.noautocmd = true
-  return base_opts
+  -- NOTE: check if this is needed from nvim-0.10. check issue comments
+  return utils.merge(base_popup_opts(width, height, opts), { noautocmd = true })
 end
