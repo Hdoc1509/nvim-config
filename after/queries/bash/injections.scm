@@ -15,7 +15,7 @@
 
 ((comment) @_parser
   .
-  (#lua-match? @_parser "inject:(%a+):")
+  (#lua-match? @_parser "inject:%a+:")
   (variable_assignment
     value: (raw_string) @injection.content
     (#offset! @injection.content 0 1 0 -1)
