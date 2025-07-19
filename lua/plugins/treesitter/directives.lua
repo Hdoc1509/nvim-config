@@ -33,9 +33,8 @@ return {
       end
 
       local node_text = vim.treesitter.get_node_text(node, bufnr)
-      local _, _, parser = string.find(node_text, 'inject:(%a+):')
 
-      metadata['injection.language'] = parser
+      metadata['injection.language'] = string.match(node_text, 'inject:(%a+):')
     end,
   },
   {
