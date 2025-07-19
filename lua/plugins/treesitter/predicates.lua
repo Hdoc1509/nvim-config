@@ -6,7 +6,7 @@ return {
   {
     name = 'is-conf-file?',
     callback = function(_, _, bufnr)
-      local filename = vim.fs.basename(vim.api.nvim_buf_get_name(bufnr))
+      local filename = vim.api.nvim_buf_get_name(bufnr)
       local extension = vim.fn.fnamemodify(filename, ':e')
 
       return extension == 'conf'
