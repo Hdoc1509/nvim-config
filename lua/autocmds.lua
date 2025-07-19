@@ -17,37 +17,6 @@ autocmd('FileType', {
   end,
 })
 
--- quickfix window
-autocmd('FileType', {
-  pattern = 'qf',
-  callback = function(event)
-    local bufnr = event.buf
-
-    nmap('e', '<cr>:cclose<cr>', {
-      buffer = bufnr,
-      desc = 'Select item and close quickfix window',
-    })
-
-    nmap('gt', '<c-w><cr><c-w>Tg<tab><cmd>copen<cr>', {
-      buffer = bufnr,
-      desc = 'Open item in new tab (silent)',
-    })
-    nmap('gT', '<c-w><cr>:cclose<cr><c-w>T', {
-      buffer = bufnr,
-      desc = 'Open item in new tab',
-    })
-
-    nmap('gs', '<c-w><cr>:copen<cr>', {
-      buffer = bufnr,
-      desc = 'Open item in new split (silent)',
-    })
-    nmap('gS', '<c-w><cr>:cclose<cr>', {
-      buffer = bufnr,
-      desc = 'Open item in new split',
-    })
-  end,
-})
-
 autocmd('TermOpen', {
   callback = function()
     vim.opt_local.number = false
@@ -81,23 +50,5 @@ autocmd('CmdwinEnter', {
     if is_loadable then
       vim.cmd('set syntax=vim')
     end
-  end,
-})
-
-autocmd('FileType', {
-  pattern = 'json',
-  callback = function(event)
-    nmap('o', function()
-      local line = vim.api.nvim_get_current_line()
-      return line:find('[^,{[]$') and 'A,<cr>' or 'o'
-    end, { buffer = event.buf, expr = true })
-  end,
-})
-
-autocmd('FileType', {
-  pattern = 'help',
-  callback = function(event)
-    nmap('<cr>', '<c-]>', { buffer = event.buf, desc = 'Jump to tag' })
-    nmap('<bs>', '<c-T>', { buffer = event.buf, desc = 'Jump to previous tag' })
   end,
 })
