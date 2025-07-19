@@ -144,3 +144,5 @@ nmap('<leader><leader>x', '<cmd>source %<cr>', { desc = 'Source current file' })
 -- execute line(s)
 -- nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
 -- keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
+
+keymap('c', '<c-a>', '<Home>', { desc = 'Go to start of line' })
