@@ -11,7 +11,8 @@ local user_config = vim.fn.expand('~/.config/nvim')
 local function is_diagnostic_ignored(bufnr, diagnostic)
   local buf_name = vim.api.nvim_buf_get_name(bufnr)
 
-  if string.match(buf_name, lazy_data_path) ~= nil then
+  -- NOTE: filetype check to prevent linting window of `:InspectTree` command
+  if string.match(buf_name, lazy_data_path) ~= nil or vim.bo[bufnr].filetype ~= 'lua' then
     return true
   end
 
