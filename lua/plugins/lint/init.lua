@@ -1,7 +1,6 @@
 local config = function()
   local lint = require('lint')
   local utils = require('utils')
-  local autocmd = utils.autocmd
 
   local normal_events = { 'BufRead', 'BufWritePost' }
   ---@type string[]
@@ -22,7 +21,7 @@ local config = function()
   lint.linters.selene.parser = require('plugins.lint.selene').parser
 
   for linter, pattern in pairs(linter_patterns.aggressive_events) do
-    autocmd(aggressive_events, {
+    utils.autocmd(aggressive_events, {
       pattern = pattern,
       callback = function()
         lint.try_lint(linter)
