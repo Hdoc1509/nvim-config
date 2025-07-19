@@ -1,5 +1,5 @@
 local nmap = require('utils').nmap
-local tab_map_util = require('utils.tabs-map')
+local tab_map_util = require('utils.tabs')
 
 -- manipulation
 nmap('<leader>tq', '<cmd>tabclose<cr>', { desc = 'Close tab' })

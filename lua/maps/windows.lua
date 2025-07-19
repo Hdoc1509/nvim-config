@@ -1,5 +1,5 @@
-local utils = require('utils')
-local nmap = utils.nmap
+local nmap = require('utils').nmap
+local window_utils = require('utils.windows')
 
 -- resizing
 nmap('<leader>>', '10<c-w>>', { desc = 'Resize split 10 pixels to left' })
@@ -12,9 +12,9 @@ nmap('<c-k>', '<c-w>k', { desc = 'Jump to top split' })
 nmap('<c-l>', '<c-w>l', { desc = 'Jump to right split' })
 
 -- moving to adjacent tab
-nmap('<leader>H', utils.move_window_to_prev_tab, {
+nmap('<leader>H', window_utils.move_window_to_prev_tab, {
   desc = 'Move current window to previous tab',
 })
-nmap('<leader>L', utils.move_window_to_next_tab, {
+nmap('<leader>L', window_utils.move_window_to_next_tab, {
   desc = 'Move current window to next tab',
 })
