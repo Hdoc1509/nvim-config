@@ -37,7 +37,7 @@ Run the following commands with `powershell` as admin:
 
 ## Fail to use `eslint/prettier` with `astro` files
 
-If you have problems to use `astro` files, follow instructions in:
+Be sure to install:
 
 - [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
 - [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
