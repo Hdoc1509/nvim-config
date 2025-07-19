@@ -19,4 +19,23 @@
         ]
         (#set! injection.language "regex")))))
 
-; TODO: do the same for utils.autocmd identifier
+; linter pattern events. lua/plugins/lint/init.lua:10
+(variable_declaration
+  (assignment_statement
+    (variable_list
+      name: (identifier) @_id
+      (#lua-match? @_id "^linter_patterns$"))
+    (expression_list
+      value: (table_constructor
+        (field
+          value: (table_constructor
+            (field
+              value: [
+                (string
+                  (string_content) @injection.content)
+                (table_constructor
+                  (field
+                    value: (string
+                      (string_content) @injection.content)))
+              ]
+              (#set! injection.language "regex"))))))))
