@@ -22,8 +22,8 @@ return {
     require('hygen.web-devicons').setup()
     devicons.set_icon({
       test = {
-        icon = '',
-        color = '#90a850',
+        icon = devicons_by_extension['test.js'].icon,
+        color = devicons_by_extension.query.color,
         name = 'TSTest',
       },
     })
