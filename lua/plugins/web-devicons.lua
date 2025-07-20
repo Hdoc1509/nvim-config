@@ -6,10 +6,16 @@ return {
   },
   config = function()
     local devicons = require('nvim-web-devicons')
+    local devicons_by_name = require('nvim-web-devicons.default.icons_by_filename')
+    local devicons_by_extension = require('nvim-web-devicons.default.icons_by_file_extension')
     local ICONS = require('icons.files')
 
     devicons.setup({
-      override_by_filename = ICONS.name,
+      override_by_filename = ICONS.name.setup({
+        filename = devicons_by_name,
+        extension = devicons_by_extension,
+      }),
+      -- TODO: do the same setup for custom icons by extension
       override_by_extension = ICONS.extension,
     })
 

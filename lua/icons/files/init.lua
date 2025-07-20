@@ -1,5 +1,8 @@
-local name_configs = require('icons.files.name')
 local extension_configs = require('icons.files.extension')
+
+---@class BaseIcons
+---@field filename table<string, Icon>
+---@field extension table<string, Icon>
 
 ---@class (exact) FileIconConfig
 ---@field icon string
@@ -28,12 +31,23 @@ local function set_config(config, config_name, category)
   end
 end
 
-for config_name, config in pairs(name_configs) do
-  set_config(config, config_name, 'name')
-end
-
 for config_name, config in pairs(extension_configs) do
   set_config(config, config_name, 'extension')
 end
 
-return file_icons
+return {
+  name = {
+    ---@param base_icons BaseIcons
+    setup = function(base_icons)
+      local name_configs = require('icons.files.name').setup(base_icons)
+
+      for config_name, config in pairs(name_configs) do
+        set_config(config, config_name, 'name')
+      end
+
+      -- TODO: return vim.tbl_map(name_configs)
+      return file_icons.name
+    end,
+  },
+  extension = file_icons.extension,
+}
