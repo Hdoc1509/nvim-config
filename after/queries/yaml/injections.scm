@@ -46,13 +46,17 @@
         value: (block_node
           (block_mapping
             (block_mapping_pair
-              key: (flow_node) @_tags_paths
-              (#any-of? @_tags_paths "tags" "paths")
+              key: (flow_node) @_tags_paths_branches
+              (#any-of? @_tags_paths_branches "tags" "paths" "branches")
               value: [
                 (flow_node
                   (flow_sequence
                     (flow_node
-                      (double_quote_scalar) @injection.content)))
+                      [
+                        (double_quote_scalar) @injection.content
+                        (plain_scalar
+                          (string_scalar) @injection.content)
+                      ])))
                 (block_node
                   (block_sequence
                     (block_sequence_item
