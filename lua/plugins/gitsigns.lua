@@ -11,10 +11,6 @@ local config = function()
         nmap(lhs, rhs, merge({ buffer = bufnr }, opts or {}))
       end
 
-      local buf_keymap = function(mode, lhs, rhs, opts)
-        keymap(mode, lhs, rhs, merge({ buffer = bufnr }, opts or {}))
-      end
-
       buf_nmap(']c', function()
         gitsigns.nav_hunk('next')
       end, { desc = 'Jump to next hunk' })
@@ -24,14 +20,14 @@ local config = function()
       end, { desc = 'Jump to previous hunk' })
 
       buf_nmap('<leader>hs', gitsigns.stage_hunk, { desc = 'Stage/unstage hunk under cursor' })
-      buf_keymap('v', '<leader>hs', function()
+      keymap('v', '<leader>hs', function()
         gitsigns.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') })
-      end, { desc = 'Stage/unstage selected hunk(s)' })
+      end, { desc = 'Stage/unstage selected hunk(s)', buffer = bufnr })
 
       buf_nmap('<Leadaer>hr', gitsigns.reset_hunk, { desc = 'Reset hunk under cursor' })
-      buf_keymap('v', '<leader>hr', function()
+      keymap('v', '<leader>hr', function()
         gitsigns.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') })
-      end, { desc = 'Reset selected hunk(s)' })
+      end, { desc = 'Reset selected hunk(s)', buffer = bufnr })
 
       buf_nmap('<leader>hS', gitsigns.stage_buffer, { desc = 'Stage buffer' })
       buf_nmap('<leader>hR', gitsigns.reset_buffer, { desc = 'Reset buffer' })
