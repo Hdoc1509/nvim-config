@@ -17,9 +17,3 @@
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*{/*")
   (#inject-mdx-js!))
-
-
-; TODO: Enable again if it's really necessary
-; syntax highlighting for tsx components
-; ((html_block) @injection.content
-;   (#set! injection.language "tsx"))

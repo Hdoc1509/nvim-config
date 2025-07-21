@@ -3,30 +3,13 @@ local config = function()
   local todo_comments = require('todo-comments')
   local todo_search = require('todo-comments.search')
 
+  local keywords = { 'FIX', 'HACK', 'WARN', 'PERF', 'NOTE', 'TODO', 'TEST' }
+
   todo_comments.setup({
     keywords = {
       TEST = { icon = '' },
     },
   })
-
-  -- TODO: use this to select  HACK   NOTE   PERF   TEST   TODO   WARN
-  -- nmap('Tl', function() ... end, { desc = 'List selected TODO comments'})
-  --[[ vim.ui.select({ 'tabs', 'spaces' }, {
-    prompt = 'Select tabs or spaces:',
-    format_item = function(item)
-      return "I'd like to choose " .. item
-    end,
-  }, function(choice)
-    if choice == 'spaces' then
-      -- vim.o.expandtab = true
-      print('you selected spaces')
-    else
-      -- vim.o.expandtab = false
-      print('you selected tabs')
-    end
-  end) ]]
-
-  local keywords = { 'FIX', 'HACK', 'WARN', 'PERF', 'NOTE', 'TODO', 'TEST' }
 
   nmap(']T]', todo_comments.jump_next, { desc = 'Jump to any next todo comment' })
   nmap('[T[', todo_comments.jump_prev, { desc = 'Jump to any previous todo comment' })
