@@ -22,14 +22,18 @@ function M.get_icon_without_extension(file)
   end
 
   if type(file) == 'string' then
+    local basename = vim.fs.basename(file)
+    local icon, color = devicons.get_icon_color(basename, '')
+    local _, hl = devicons.get_icon(basename, '')
+
+    if icon ~= nil and color ~= nil and hl ~= nil then
+      return icon, color, hl
+    end
+
     ---@type string[]
     local lines = vim.fn.readfile(file, '', 1)
 
     if #lines == 0 then
-      local basename = vim.fs.basename(file)
-      local icon, color = devicons.get_icon_color(basename, '')
-      local _, hl = devicons.get_icon(basename, '')
-
       if icon ~= nil and color ~= nil and hl ~= nil then
         return icon, color, hl
       end
@@ -59,14 +63,6 @@ function M.get_icon_without_extension(file)
 
     if filetype_modeline ~= nil then
       return icon_by_filetype(filetype_modeline)
-    end
-
-    local basename = vim.fs.basename(file)
-    local icon, color = devicons.get_icon_color(basename, '')
-    local _, hl = devicons.get_icon(basename, '')
-
-    if icon ~= nil and color ~= nil and hl ~= nil then
-      return icon, color, hl
     end
   end
 
