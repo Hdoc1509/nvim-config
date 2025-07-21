@@ -24,12 +24,16 @@ local config = function()
         end
       end, { desc = 'Jump to previous hunk' })
 
-      buf_nmap('<leader>hs', gitsigns.stage_hunk, { desc = 'Stage/unstage hunk under cursor' })
+      buf_nmap('<leader>hs', gitsigns.stage_hunk, {
+        desc = 'Stage/unstage hunk under cursor',
+      })
       utils.keymap('v', '<leader>hs', function()
         gitsigns.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') })
       end, { desc = 'Stage/unstage selected hunk(s)', buffer = bufnr })
 
-      buf_nmap('<Leadaer>hr', gitsigns.reset_hunk, { desc = 'Reset hunk under cursor' })
+      buf_nmap('<Leadaer>hr', gitsigns.reset_hunk, {
+        desc = 'Reset hunk under cursor',
+      })
       utils.keymap('v', '<leader>hr', function()
         gitsigns.reset_hunk({ vim.fn.line('.'), vim.fn.line('v') })
       end, { desc = 'Reset selected hunk(s)', buffer = bufnr })
@@ -42,7 +46,9 @@ local config = function()
         vim.fn['lightline#update']()
       end, { desc = 'Preview hunk under cursor' })
 
-      buf_nmap('<leader>hv', gitsigns.select_hunk, { desc = 'Select hunk under cursor' })
+      buf_nmap('<leader>hv', gitsigns.select_hunk, {
+        desc = 'Select hunk under cursor',
+      })
     end,
     preview_config = {
       border = 'rounded',
