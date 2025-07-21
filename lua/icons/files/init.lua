@@ -1,5 +1,3 @@
-local extension_configs = require('icons.files.extension')
-
 ---@class BaseIcons
 ---@field filename table<string, Icon>
 ---@field extension table<string, Icon>
@@ -11,10 +9,7 @@ local extension_configs = require('icons.files.extension')
 ---@field file_names? string[]
 
 ---@type table<string, table<string, FileIconConfig>>
-local file_icons = {
-  name = {},
-  extension = {},
-}
+local file_icons = { name = {}, extension = {} }
 
 ---@param config FileIconConfig
 ---@param config_name string
@@ -31,10 +26,6 @@ local function set_config(config, config_name, category)
   end
 end
 
-for config_name, config in pairs(extension_configs) do
-  set_config(config, config_name, 'extension')
-end
-
 return {
   ---@param base_icons BaseIcons
   name = function(base_icons)
@@ -46,5 +37,14 @@ return {
 
     return file_icons.name
   end,
-  extension = file_icons.extension,
+  ---@param base_icons BaseIcons
+  extension = function(base_icons)
+    local extension_configs = require('icons.files.extension').generate(base_icons)
+
+    for config_name, config in pairs(extension_configs) do
+      set_config(config, config_name, 'extension')
+    end
+
+    return file_icons.extension
+  end,
 }

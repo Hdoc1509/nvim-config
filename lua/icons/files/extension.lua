@@ -1,14 +1,36 @@
 local COLORS = require('colors')
 
----@type table<string, FileIconConfig>
-return {
-  astro = { icon = '', color = COLORS['deep-purple-A200'], name = 'Astro' },
-  -- TODO: add color to COLORS file: cyan-gray-900
-  jq = { icon = '', color = '#4D5A5E', name = 'JQ' },
-  cmd = { icon = '', color = '#c1f12e', name = 'CMD' },
-  gyp = { icon = '', color = '#ffbc03', name = 'GYP' },
-  mcmeta = { icon = '󰍳', color = COLORS['green-500'], name = 'MCMeta' },
-  jar = { icon = '', color = '#cc3e44', name = 'JAR' },
-  ignore = { icon = '', color = '#6d8086', name = 'Ignore' },
-  conf = { icon = '', color = COLORS['blue-400'], name = 'Conf' },
-}
+---@param base_icons BaseIcons
+local function generate(base_icons)
+  local ext = { conf = base_icons.extension.conf }
+
+  ---@type table<string, FileIconConfig>
+  return {
+    astro = { icon = '', color = COLORS['deep-purple-A200'], name = 'Astro' },
+    jq = {
+      icon = base_icons.extension.sh.icon,
+      color = base_icons.extension.sh.color,
+      name = 'JQ',
+    },
+    cmd = {
+      icon = ext.conf.icon,
+      color = base_icons.extension.bat.color,
+      name = 'CMD',
+    },
+    gyp = {
+      icon = base_icons.extension.py.icon,
+      color = base_icons.extension.py.color,
+      name = 'GYP',
+    },
+    mcmeta = { icon = '󰍳', color = COLORS['green-500'], name = 'MCMeta' },
+    jar = {
+      icon = base_icons.extension.java.icon,
+      color = base_icons.extension.java.color,
+      name = 'JAR',
+    },
+    ignore = { icon = ext.conf.icon, color = ext.conf.color, name = 'Ignore' },
+    conf = { icon = ext.conf.icon, color = COLORS['blue-400'], name = 'Conf' },
+  }
+end
+
+return { generate = generate }

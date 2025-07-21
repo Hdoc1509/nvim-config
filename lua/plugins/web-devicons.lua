@@ -15,8 +15,10 @@ return {
         filename = devicons_by_name,
         extension = devicons_by_extension,
       }),
-      -- TODO: do the same setup for custom icons by extension
-      override_by_extension = ICONS.extension,
+      override_by_extension = ICONS.extension({
+        filename = devicons_by_name,
+        extension = devicons_by_extension,
+      }),
     })
 
     require('hygen.web-devicons').setup()
