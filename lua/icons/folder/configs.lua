@@ -62,6 +62,7 @@ return {
       'voices',
     },
   },
+  bash = { hl = 'DevIconBash' },
   bin = { icon = '󱧺', hl = 'FolderDist', folder_names = { '.bin', 'bin', 'sbin' } },
   boot = { icon = '󰴋', hl = 'FolderBoot' },
   c = { hl = 'DevIconC' },
