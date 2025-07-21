@@ -444,7 +444,10 @@ return {
     hl = 'FolderMappings',
     folder_names = { 'keymap', 'mapping', 'mappings' },
   },
-  markdown = { hl = 'DevIconMarkdown', folder_names = { 'markdown', 'md' } },
+  markdown = {
+    hl = 'DevIconMarkdown',
+    folder_names = { 'markdown', 'markdown_inline', 'md' },
+  },
   media = { icon = '󱧺', hl = 'FolderVideo' },
   minecraft = {
     hl = 'DevIconMCMeta',
