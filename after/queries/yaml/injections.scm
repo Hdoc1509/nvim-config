@@ -6,21 +6,18 @@
 ;     path: <pattern>
 ;
 (block_mapping_pair
-  value: (flow_node
-    [
-      (plain_scalar
-        (string_scalar) @injection.content)
-      (double_quote_scalar) @injection.content
-    ]
-    (#lua-match? @injection.content "${{")
-    (#set! injection.language "githubactions")))
-
-(block_mapping_pair
-  value: (block_node
-    (block_scalar) @injection.content
-    (#lua-match? @injection.content "${{")
-    (#set! injection.language "githubactions")
-    (#offset! @injection.content 0 1 0 0)))
+  value: [
+    (block_node
+      (block_scalar) @injection.content)
+    (flow_node
+      [
+        (plain_scalar
+          (string_scalar) @injection.content)
+        (double_quote_scalar) @injection.content
+      ])
+  ]
+  (#lua-match? @injection.content "${{")
+  (#set! injection.language "githubactions"))
 
 (block_mapping_pair
   key: (flow_node) @_key
