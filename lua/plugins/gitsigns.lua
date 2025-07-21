@@ -9,11 +9,19 @@ local config = function()
       end
 
       buf_nmap(']c', function()
-        gitsigns.nav_hunk('next')
+        if vim.wo.diff then
+          vim.cmd.normal({ ']c', bang = true })
+        else
+          gitsigns.nav_hunk('next')
+        end
       end, { desc = 'Jump to next hunk' })
 
       buf_nmap('[c', function()
-        gitsigns.nav_hunk('prev')
+        if vim.wo.diff then
+          vim.cmd.normal({ '[c', bang = true })
+        else
+          gitsigns.nav_hunk('prev')
+        end
       end, { desc = 'Jump to previous hunk' })
 
       buf_nmap('<leader>hs', gitsigns.stage_hunk, { desc = 'Stage/unstage hunk under cursor' })
