@@ -36,11 +36,12 @@ local config = function()
 
       buf_nmap('<leader>hS', gitsigns.stage_buffer, { desc = 'Stage buffer' })
       buf_nmap('<leader>hR', gitsigns.reset_buffer, { desc = 'Reset buffer' })
-      buf_nmap('<leader>hp', gitsigns.preview_hunk, { desc = 'Preview hunk under cursor' })
-      buf_nmap('<leader>hP', function()
+
+      buf_nmap('<leader>hp', function()
         gitsigns.preview_hunk_inline()
         vim.fn['lightline#update']()
-      end, { desc = 'Preview hunk under cursor but inline' })
+      end, { desc = 'Preview hunk under cursor' })
+
       buf_nmap('<leader>hv', gitsigns.select_hunk, { desc = 'Select hunk under cursor' })
     end,
     preview_config = {

@@ -100,7 +100,6 @@ Used mapleader is `<space>` key.
 | `<leader>hS`  | Normal | Stage buffer                              |
 | `<leader>hR`  | Normal | Reset buffer                              |
 | `<leader>hp`  | Normal | Preview hunk under cursor                 |
-| `<leader>hP`  | Normal | Preview hunk under cursor but inline      |
 | `<leader>hv`  | Normal | Select hunk under cursor                  |
 
 ## Word case
