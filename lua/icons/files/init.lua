@@ -36,18 +36,15 @@ for config_name, config in pairs(extension_configs) do
 end
 
 return {
-  name = {
-    ---@param base_icons BaseIcons
-    setup = function(base_icons)
-      local name_configs = require('icons.files.name').setup(base_icons)
+  ---@param base_icons BaseIcons
+  name = function(base_icons)
+    local name_configs = require('icons.files.name').generate(base_icons)
 
-      for config_name, config in pairs(name_configs) do
-        set_config(config, config_name, 'name')
-      end
+    for config_name, config in pairs(name_configs) do
+      set_config(config, config_name, 'name')
+    end
 
-      -- TODO: return vim.tbl_map(name_configs)
-      return file_icons.name
-    end,
-  },
+    return file_icons.name
+  end,
   extension = file_icons.extension,
 }

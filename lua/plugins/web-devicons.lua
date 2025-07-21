@@ -11,7 +11,7 @@ return {
     local ICONS = require('icons.files')
 
     devicons.setup({
-      override_by_filename = ICONS.name.setup({
+      override_by_filename = ICONS.name({
         filename = devicons_by_name,
         extension = devicons_by_extension,
       }),

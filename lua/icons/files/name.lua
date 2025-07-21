@@ -5,7 +5,7 @@ local COLORS = require('colors')
 -- NOTE: it's not necessary to use uppercase for file names
 
 ---@param base_icons BaseIcons
-local function setup(base_icons)
+local function generate(base_icons)
   local tsconfig = base_icons.filename['tsconfig.json']
   local ext = {
     sh = base_icons.extension.sh,
@@ -332,4 +332,4 @@ local function setup(base_icons)
   }
 end
 
-return { setup = setup }
+return { generate = generate }
