@@ -4,11 +4,6 @@
 ; - uses: actions/upload-artifact*
 ;   with:
 ;     path: <pattern>
-; - uses: tj-actions/changed-files@v44
-;   with:
-;     files: |
-;       <pattern>
-;       <pattern>
 ;
 (block_mapping_pair
   value: (flow_node
@@ -69,3 +64,25 @@
               ]
               (#lua-match? @injection.content "%*")
               (#set! injection.language "regex"))))))))
+
+(block_sequence_item
+  (block_node
+    (block_mapping
+      (block_mapping_pair
+        key: (flow_node) @_uses
+        (#eq? @_uses "uses")
+        value: (flow_node) @_action
+        (#lua-match? @_action "^tj%-actions/changed%-files"))
+      (block_mapping_pair
+        key: (flow_node) @_with
+        (#eq? @_with "with")
+        value: (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (flow_node) @_files
+              (#eq? @_files "files")
+              value: (block_node
+                (block_scalar) @injection.content
+                (#lua-match? @injection.content "%*")
+                (#set! injection.language "regex")
+                (#offset! @injection.content 0 1 0 0)))))))))
