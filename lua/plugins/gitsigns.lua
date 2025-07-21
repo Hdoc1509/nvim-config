@@ -31,7 +31,7 @@ local config = function()
         gitsigns.stage_hunk({ vim.fn.line('.'), vim.fn.line('v') })
       end, { desc = 'Stage/unstage selected hunk(s)', buffer = bufnr })
 
-      buf_nmap('<Leadaer>hr', gitsigns.reset_hunk, {
+      buf_nmap('<leader>hr', gitsigns.reset_hunk, {
         desc = 'Reset hunk under cursor',
       })
       utils.keymap('v', '<leader>hr', function()
