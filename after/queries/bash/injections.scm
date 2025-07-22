@@ -1,6 +1,5 @@
 ; extends
 
-; TODO: unify `inject-hygen-ejs!` injections
 (command
   (string
     (string_content) @injection.content
@@ -28,3 +27,18 @@
   (#lua-match? @injection.content "^'{")
   (#offset! @injection.content 0 1 0 -1)
   (#set! injection.language "awk"))
+
+(command
+  name: (command_name) @_sed
+  (#eq? @_sed "sed")
+  argument: (string
+    (string_content) @injection.content
+    (#not-lua-match? @injection.content "{{")
+    (#set! injection.language "regex")))
+
+(command
+  name: (command_name) @_jq
+  (#eq? @_jq "jq")
+  argument: (raw_string) @injection.content
+  (#offset! @injection.content 0 1 0 -1)
+  (#set! injection.language "jq"))
