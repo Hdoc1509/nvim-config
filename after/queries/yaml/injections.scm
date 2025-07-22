@@ -49,6 +49,7 @@
                     (block_sequence_item
                       (flow_node
                         [
+                          (single_quote_scalar) @injection.content
                           (double_quote_scalar) @injection.content
                           (plain_scalar
                             (string_scalar) @injection.content)
