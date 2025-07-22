@@ -1,10 +1,5 @@
 ; extends
 
-; TODO: inject `regex` pattern to <pattern>
-; - uses: actions/upload-artifact*
-;   with:
-;     path: <pattern>
-;
 (block_mapping_pair
   value: [
     (block_node
@@ -59,8 +54,7 @@
                             (string_scalar) @injection.content)
                         ]))))
               ]
-              (#lua-match? @injection.content "%*")
-              (#set! injection.language "regex"))))))))
+              (#set! injection.language "gitignore"))))))))
 
 (block_sequence_item
   (block_node
@@ -80,6 +74,5 @@
               (#eq? @_files "files")
               value: (block_node
                 (block_scalar) @injection.content
-                (#lua-match? @injection.content "%*")
-                (#set! injection.language "regex")
+                (#set! injection.language "gitignore")
                 (#offset! @injection.content 0 1 0 0)))))))))
