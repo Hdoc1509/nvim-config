@@ -9,6 +9,18 @@
       (property_deref) @punctuation.delimiter
       (identifier) @variable.member)))
 
+(expression
+  (arg
+    (call
+      (identifier) @function)))
+(expression
+  (arg
+    (call
+      [
+        "("
+        ")"
+      ] @punctuation.bracket)))
+
 (variable
   [
     "}}"
@@ -16,4 +28,7 @@
     "$"
   ] @punctuation.bracket)
 
-(operator) @operator
+[
+  (operator)
+  (not)
+] @operator
