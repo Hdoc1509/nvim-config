@@ -21,20 +21,6 @@ return {
     end,
   },
   {
-    name = 'inject-from-comment!',
-    callback = function(match, _, bufnr, pred, metadata)
-      local capture_id = pred[2]
-      local node = match[capture_id]
-      if node == nil then
-        return
-      end
-
-      local node_text = vim.treesitter.get_node_text(node, bufnr)
-
-      metadata['injection.language'] = string.match(node_text, 'inject:(%a+):')
-    end,
-  },
-  {
     name = 'inject-yaml-githubactions!',
     callback = function(match, _, bufnr, pred)
       local capture_id = pred[2]

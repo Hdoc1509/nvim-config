@@ -1,5 +1,6 @@
 ; extends
 
+; TODO: unify `inject-hygen-ejs!` injections
 (command
   (string
     (string_content) @injection.content
@@ -13,13 +14,12 @@
       (#lua-match? @injection.content "<%%=")
       (#inject-hygen-ejs! ""))))
 
-((comment) @_parser
-  .
-  (#lua-match? @_parser "inject:%a+:")
-  (variable_assignment
-    value: (raw_string) @injection.content
-    (#offset! @injection.content 0 1 0 -1)
-    (#inject-from-comment! @_parser)))
+(variable_assignment
+  (variable_name) @name
+  (#lua-match? @name "_regex$")
+  value: (raw_string) @injection.content
+  (#set! injection.language "regex")
+  (#offset! @injection.content 0 1 0 -1))
 
 (command
   name: (command_name) @_command
