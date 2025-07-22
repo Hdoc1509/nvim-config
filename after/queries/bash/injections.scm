@@ -22,9 +22,9 @@
   (#offset! @injection.content 0 1 0 -1))
 
 (command
-  name: (command_name) @_command
-  (#eq? @_command "awk")
-  .
+  name: (command_name) @_awk
+  (#eq? @_awk "awk")
   argument: (raw_string) @injection.content
+  (#lua-match? @injection.content "^'{")
   (#offset! @injection.content 0 1 0 -1)
   (#set! injection.language "awk"))
