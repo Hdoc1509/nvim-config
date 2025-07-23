@@ -17,7 +17,7 @@
               (string
                 (string_content) @injection.content)))
         ]
-        (#set! injection.language "regex")))))
+        (#set! injection.language "gitignore")))))
 
 ; linter pattern events. lua/plugins/lint/init.lua:10
 (variable_declaration
@@ -38,4 +38,4 @@
                     value: (string
                       (string_content) @injection.content)))
               ]
-              (#set! injection.language "regex"))))))))
+              (#set! injection.language "gitignore"))))))))
