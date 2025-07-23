@@ -71,12 +71,12 @@
 - [`jdtls`](https://projects.eclipse.org/projects/eclipse.jdt.ls)
 - [`jsonls`](https://github.com/hrsh7th/vscode-langservers-extracted)
 - [`jqls`](https://github.com/wader/jq-lsp)
-- [`kulala_ls`](https://github.com/mistweaverco/kulala-ls)
+- [`kulala_ls`](https://github.com/mistweaverco/kulala-ls) (global install of
+  npm package)
 - [`lua_ls`](https://github.com/luals/lua-language-server)
 - [`marksman`](https://github.com/artempyanykh/marksman)
 - [`somesass_ls`](https://github.com/wkillerud/some-sass/tree/main/packages/language-server)
 - [`superhtml`](https://github.com/kristoff-it/superhtml)
-- [`tree-sitter-test`](https://github.com/tree-sitter-grammars/tree-sitter-test)
 - [`ts_ls`](https://github.com/typescript-language-server/typescript-language-server)
 - [`ts_query_ls`](https://github.com/ribru17/ts_query_ls)
 - [`typos_lsp`](https://github.com/tekumara/typos-lsp)
@@ -89,6 +89,16 @@
 - [`markdownlint`](https://github.com/DavidAnson/markdownlint)
 - [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint)
 - [`selene`](https://github.com/Kampfkarren/selene)
+- [`ts_query_ls`](https://github.com/ribru17/ts_query_ls#linter)
+
+### Formatters
+
+- [`prettier`](https://github.com/prettier/prettier)
+- [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint#usage)
+- [`google-java-format`](https://github.com/google/google-java-format)
+- [`jq`](https://github.com/stedolan/jq)
+- [`stylua`](https://github.com/JohnnyMorganz/StyLua)
+- [`shfmt`](https://github.com/mvdan/sh)
 
 ## Treesitter parsers
 
@@ -123,6 +133,7 @@
 - query
 - regex
 - scss
+- test
 - toml
 - tsx
 - typescript
