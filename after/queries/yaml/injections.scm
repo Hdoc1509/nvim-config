@@ -20,6 +20,7 @@
   value: (flow_node
     (plain_scalar
       (string_scalar) @injection.content)
+    (#not-lua-match? @injection.content "^${{")
     (#set! injection.language "githubactions")))
 
 (block_mapping_pair
