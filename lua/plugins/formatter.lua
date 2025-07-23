@@ -24,7 +24,11 @@ local config = function()
       lua = { require('formatter.filetypes.lua').stylua },
       markdown = { prettier },
       ['markdown.mdx'] = { prettier },
-      query = { vim.lsp.buf.format },
+      query = {
+        function()
+          vim.lsp.buf.format()
+        end,
+      },
       sh = { require('formatter.filetypes.sh').shfmt },
       scss = { prettier },
       typescript = { prettier },
