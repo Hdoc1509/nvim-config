@@ -49,11 +49,11 @@ local config = function()
   end
 
   -- TODO: add the following predicates to .tsqueryrc.json
-  -- lua-match
   -- is-conf-file
 end
 
 return {
   'mfussenegger/nvim-lint',
   config = config,
+  dependencies = { '~/dev/hygen.nvim' },
 }

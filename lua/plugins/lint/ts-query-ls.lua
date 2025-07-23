@@ -50,7 +50,11 @@ end
 ---@diagnostic disable-next-line: missing-fields
 return {
   cmd = 'ts_query_ls',
-  args = { 'lint' },
+  args = {
+    'lint',
+    '--config',
+    vim.json.encode(require('plugins.lsp.servers.ts_query_ls').settings),
+  },
   ignore_exitcode = true,
   append_fname = true,
   stream = 'stderr',
