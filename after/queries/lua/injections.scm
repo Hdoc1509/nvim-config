@@ -2,8 +2,11 @@
 
 ; utils
 (function_call
-  (identifier) @function
-  (#eq? @function "autocmd")
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @function
+  (#any-of? @function "autocmd" "utils.autocmd" "require('utils').autocmd")
   (arguments
     (table_constructor
       (field
