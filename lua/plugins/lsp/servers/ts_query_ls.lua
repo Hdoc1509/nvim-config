@@ -56,8 +56,7 @@ return merge(default_settings, {
       set = {
         parameters = {
           { type = 'any', arity = 'required' },
-          { type = 'string', arity = 'required' },
-          { type = 'string', arity = 'optional' },
+          { type = 'string', arity = 'variadic' },
         },
         description = 'Sets key/value metadata for a specific match or capture. Value is accessible as either `metadata[key]` (match specific) or `metadata[capture_id][key]` (capture specific).',
       },
