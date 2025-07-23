@@ -75,6 +75,7 @@
 - [`lua_ls`](https://github.com/luals/lua-language-server)
 - [`marksman`](https://github.com/artempyanykh/marksman)
 - [`somesass_ls`](https://github.com/wkillerud/some-sass/tree/main/packages/language-server)
+- [`superhtml`](https://github.com/kristoff-it/superhtml)
 - [`tree-sitter-test`](https://github.com/tree-sitter-grammars/tree-sitter-test)
 - [`ts_ls`](https://github.com/typescript-language-server/typescript-language-server)
 - [`ts_query_ls`](https://github.com/ribru17/ts_query_ls)

@@ -24,6 +24,7 @@ require('mason-tool-installer').setup({
     { 'marksman', version = '2023-12-09' },
     -- 'mdx-analyzer',
     { 'some-sass-language-server', version = '2.2.1' },
+    { 'superhtml', version = 'v0.5.3' },
     { 'ts_query_ls', version = 'v3.3.0' },
     { 'typescript-language-server', version = '4.3.3' },
     { 'typos-lsp', version = 'v0.1.39' },

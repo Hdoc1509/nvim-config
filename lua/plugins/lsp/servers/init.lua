@@ -36,6 +36,7 @@ return {
   ['marksman'] = default_settings,
   -- ['mdx_analyzer'] = default_settings,
   ['somesass_ls'] = default_settings,
+  superhtml = require('plugins.lsp.servers.superhtml'),
   ['ts_ls'] = default_settings,
   ['ts_query_ls'] = require('plugins.lsp.servers.ts_query_ls'),
   -- TODO: ignore errors for `commit` hash in `CHANGELOG.md` files
