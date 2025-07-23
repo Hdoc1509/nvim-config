@@ -96,7 +96,6 @@
 - [`prettier`](https://github.com/prettier/prettier)
 - [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint#usage)
 - [`google-java-format`](https://github.com/google/google-java-format)
-- [`jq`](https://github.com/stedolan/jq)
 - [`stylua`](https://github.com/JohnnyMorganz/StyLua)
 - [`shfmt`](https://github.com/mvdan/sh)
 

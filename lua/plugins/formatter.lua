@@ -18,7 +18,7 @@ local config = function()
       java = { require('formatter.filetypes.java').google_java_format },
       javascript = { prettier },
       javascriptreact = { prettier },
-      json = { require('formatter.filetypes.json').jq },
+      json = { prettier },
       jsonc = { prettier },
       -- TODO: add kulala-fmt for `http` files
       lua = { require('formatter.filetypes.lua').stylua },
