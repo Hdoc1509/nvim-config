@@ -3,6 +3,11 @@ local floating_preview_id = nil
 
 ---@param responses table<integer, { error: lsp.ResponseError, result: any }>
 local function request_handler(responses)
+  if #responses == 0 or (#responses == 1 and responses[1].result == nil) then
+    vim.notify('No information available')
+    return
+  end
+
   --- use `gF` to jump to file
   --- based on $VIMRUNTIME/lua/vim/lsp/handlers.lua:351
   local value = {}
