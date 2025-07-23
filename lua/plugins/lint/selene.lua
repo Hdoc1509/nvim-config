@@ -7,7 +7,7 @@ local user_config = vim.fn.expand('~/.config/nvim')
 -- NOTE: max 4 levels of indentation
 
 ---@param bufnr number
----@param diagnostic vim.Diagnostic
+---@param diagnostic Diagnostic
 local function is_diagnostic_ignored(bufnr, diagnostic)
   local buf_name = vim.api.nvim_buf_get_name(bufnr)
 

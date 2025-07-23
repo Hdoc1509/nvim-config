@@ -7,7 +7,7 @@ local lazy_state_path = vim.fn.stdpath('state') .. '/lazy'
 ---INFO: see https://github.com/DavidAnson/markdownlint/tree/main/doc for rules
 
 ---@param bufnr number
----@param diagnostic vim.Diagnostic
+---@param diagnostic Diagnostic
 local function is_diagnostic_ignored(bufnr, diagnostic)
   local buf_name = vim.api.nvim_buf_get_name(bufnr)
 
