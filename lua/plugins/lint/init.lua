@@ -4,7 +4,10 @@ local config = function()
 
   local normal_events = { 'BufRead', 'BufWritePost' }
   ---@type string[]
-  local aggressive_events = vim.fn.extendnew(normal_events, { 'InsertLeave', 'TextChanged' })
+  local aggressive_events = vim.fn.extendnew(normal_events, {
+    'InsertLeave',
+    'TextChanged',
+  })
 
   ---@type table<string, table<string, string | string[]>>
   local linter_patterns = {
@@ -14,11 +17,18 @@ local config = function()
       selene = '*.lua',
       groovy_lint = { '*.gradle', '*.groovy' },
     },
+    normal_events = {
+      ts_query_ls = '**queries/**/*.scm',
+    },
   }
+
+  -- disable built-in `query` linter
+  vim.g.query_lint_on = {}
 
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
   lint.linters.markdownlint.parser = require('plugins.lint.markdownlint').parser
   lint.linters.selene.parser = require('plugins.lint.selene').parser
+  lint.linters.ts_query_ls = require('plugins.lint.ts-query-ls')
 
   for linter, pattern in pairs(linter_patterns.aggressive_events) do
     utils.autocmd(aggressive_events, {
@@ -29,7 +39,18 @@ local config = function()
     })
   end
 
-  -- TODO: try to add `ts_query_ls lint` for query files in `query/` folder
+  for linter, pattern in pairs(linter_patterns.normal_events) do
+    utils.autocmd(normal_events, {
+      pattern = pattern,
+      callback = function()
+        lint.try_lint(linter)
+      end,
+    })
+  end
+
+  -- TODO: add the following predicates to .tsqueryrc.json
+  -- lua-match
+  -- is-conf-file
 end
 
 return {
