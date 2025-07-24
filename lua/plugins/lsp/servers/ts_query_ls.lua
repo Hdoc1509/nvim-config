@@ -51,6 +51,12 @@ return merge(default_settings, {
         },
         description = 'Checks for equality between multiple strings haha',
       },
+      ['is-conf-file'] = {
+        parameters = {
+          { type = 'string', arity = 'optional' },
+        },
+        description = 'Checks if file has `.conf` extension',
+      },
     },
     valid_directives = {
       set = {
@@ -69,6 +75,12 @@ return merge(default_settings, {
           { type = 'string', arity = 'required' },
         },
         description = 'Takes the range of the capture and applies an offset. This will generate a new range object for the captured node as `metadata[capture_id].range`.',
+      },
+      ['inject-mdx-js'] = {
+        parameters = {
+          { type = 'string', arity = 'optional' },
+        },
+        description = 'Injects `javascript`. Only have effect in `mdx` files.',
       },
     },
   },

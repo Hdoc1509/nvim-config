@@ -5,4 +5,4 @@
     (image
       (image_description) @injection.content
       (#lua-match? @injection.content "<%%=")
-      (#inject-hygen-ejs!))))
+      (#inject-hygen-ejs! ""))))
