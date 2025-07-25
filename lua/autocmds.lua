@@ -2,11 +2,7 @@ local utils = require('utils')
 local autocmd = utils.autocmd
 local nmap = utils.nmap
 
-autocmd('VimResized', {
-  callback = function()
-    vim.cmd('tabdo wincmd =')
-  end,
-})
+autocmd('VimResized', { command = 'tabdo wincmd =' })
 
 -- Close some filetypes with <q>
 autocmd('FileType', {
