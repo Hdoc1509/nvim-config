@@ -218,6 +218,14 @@ Used mapleader is `<space>` key.
 | `w`  | Current working directory |
 | `~`  | Home directory            |
 
+## nvim-surround
+
+### lua
+
+| Surround | Description                        |
+| -------- | ---------------------------------- |
+| `F`      | Surround with function declaration |
+
 ## Zen mode
 
 | Mapping     | Mode   | Description     |
