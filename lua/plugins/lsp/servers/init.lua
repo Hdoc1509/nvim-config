@@ -39,8 +39,7 @@ return {
   superhtml = require('plugins.lsp.servers.superhtml'),
   ['ts_ls'] = default_settings,
   ['ts_query_ls'] = require('plugins.lsp.servers.ts_query_ls'),
-  -- TODO: ignore errors for `commit` hash in `CHANGELOG.md` files
-  ['typos_lsp'] = default_settings,
+  ['typos_lsp'] = require('plugins.lsp.servers.typos-lsp'),
   ['vimls'] = default_settings,
   ['yamlls'] = require('plugins.lsp.servers.yamlls'),
 }
