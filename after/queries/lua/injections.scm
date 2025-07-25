@@ -22,6 +22,21 @@
         ]
         (#set! injection.language "gitignore")))))
 
+(function_call
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @function
+  (#any-of? @function "autocmd" "utils.autocmd" "require('utils').autocmd")
+  (arguments
+    (table_constructor
+      (field
+        (identifier) @field
+        (#eq? @field "command")
+        value: (string
+          (string_content) @injection.content)
+        (#set! injection.language "vim")))))
+
 ; linter pattern events. lua/plugins/lint/init.lua:10
 (variable_declaration
   (assignment_statement
