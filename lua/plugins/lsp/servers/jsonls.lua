@@ -7,27 +7,13 @@ local selected = {
   'package.json',
   'tsconfig.json',
   'jsconfig.json',
-  'luarc',
   'fabric.mod.json',
-}
-
--- TODO: check if this is needed after install of `folke/neodev.nvim`
-local extra = {
-  {
-    description = 'JSON schema for .luarc.json',
-    fileMatch = { '.luarc.json', '.luarc.jsonc' },
-    name = 'luarc',
-    url = 'https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json',
-  },
 }
 
 return merge(default_settings, {
   settings = {
     json = {
-      schemas = schema_store.json.schemas({
-        select = selected,
-        extra = extra,
-      }),
+      schemas = schema_store.json.schemas({ select = selected }),
       validate = { enable = true },
     },
   },
