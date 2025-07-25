@@ -8,9 +8,10 @@ local config = function()
   nmap('<leader>rl', rest_nvim.last, { desc = 'Run last http request' })
 end
 
+-- TODO: replace with `kulala.nvim` once updated to nvim-0.10
+
 return {
   'rest-nvim/rest.nvim',
-  -- NOTE: Follow https://github.com/rest-nvim/rest.nvim/issues/306
   commit = '91badd46c60df6bd9800c809056af2d80d33da4c',
   dependencies = {
     'nvim-lua/plenary.nvim',

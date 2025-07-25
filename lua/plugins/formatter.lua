@@ -15,12 +15,20 @@ local config = function()
         end,
       },
       html = { prettier },
+      -- TODO: enable once `rest.nvim` has been replaced by `kulala.nvim`
+      --[[ http = {
+        function()
+          return {
+            exe = 'kulala-fmt',
+            args = { 'format' },
+          }
+        end,
+      }, ]]
       java = { require('formatter.filetypes.java').google_java_format },
       javascript = { prettier },
       javascriptreact = { prettier },
       json = { prettier },
       jsonc = { prettier },
-      -- TODO: add kulala-fmt for `http` files
       lua = { require('formatter.filetypes.lua').stylua },
       markdown = { prettier },
       ['markdown.mdx'] = { prettier },
