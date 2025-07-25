@@ -1,3 +1,10 @@
+-- TODO: override `FZF_DEFAULT_OPTS` per keymap
+-- FZF -> no preview
+-- Buffers -> no preview
+-- Helptags -> no preview
+-- Rg -> preview-window right,50%,<50(down,50%)
+-- GFiles? -> preview-window right,50%,<50(down,50%)
+-- BCommits -> preview-window right,50%,<50(down,50%)
 return {
   {
     'junegunn/fzf',
