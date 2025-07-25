@@ -40,6 +40,7 @@ return {
   dependencies = {
     'nvim-tree/nvim-web-devicons',
     -- { dir = '~/dev/hygen.nvim' },
-    { 'Hdoc1509/hygen.nvim', version = '*' },
+    -- { 'Hdoc1509/hygen.nvim', version = '*' },
+    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
   },
 }

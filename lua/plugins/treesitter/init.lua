@@ -49,7 +49,8 @@ return {
   build = ':TSUpdate',
   dependencies = {
     -- { dir = '~/dev/hygen.nvim' },
-    { 'Hdoc1509/hygen.nvim', version = '*' },
+    -- { 'Hdoc1509/hygen.nvim', version = '*' },
+    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
     {
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',

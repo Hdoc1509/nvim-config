@@ -55,5 +55,9 @@ end
 return {
   'mfussenegger/nvim-lint',
   config = config,
-  dependencies = { '~/dev/hygen.nvim' },
+  dependencies = {
+    -- { dir = '~/dev/hygen.nvim' },
+    -- { 'Hdoc1509/hygen.nvim', version = '*' },
+    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+  },
 }
