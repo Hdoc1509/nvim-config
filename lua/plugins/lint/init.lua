@@ -47,9 +47,6 @@ local config = function()
       end,
     })
   end
-
-  -- TODO: add the following predicates to .tsqueryrc.json
-  -- is-conf-file
 end
 
 return {
