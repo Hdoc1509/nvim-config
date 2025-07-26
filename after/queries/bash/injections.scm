@@ -42,3 +42,13 @@
   argument: (raw_string) @injection.content
   (#offset! @injection.content 0 1 0 -1)
   (#set! injection.language "jq"))
+
+(command
+  name: (command_name) @_git_fzf_multi_preview
+  (#any-of? @_git_fzf_multi_preview "__git_fzf_multi_preview" "__git_fzf_preview")
+  .
+  argument: (string)
+  .
+  argument: (string
+    (string_content) @injection.content)
+  (#set! injection.language "bash"))
