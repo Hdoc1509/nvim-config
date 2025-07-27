@@ -61,23 +61,12 @@ return {
         apply_dynamic_preview_window()
         vim.cmd('GFiles?')
       end)
-
-      nmap('<leader>sc', function()
-        apply_dynamic_preview_window()
-
-        if vim.v.count > 0 then
-          vim.cmd('BCommits --max-count ' .. vim.v.count)
-        else
-          vim.cmd('BCommits')
-        end
-      end, { desc = 'Search buffer commits' })
     end,
     keys = {
       { '<leader>sb', nil, desc = 'Search buffers' },
       { '<leader>s?', nil, desc = 'Search helptags' },
       { '<leader>st', nil, desc = 'Search files by text' },
       { '<leader>ss', nil, desc = 'Search files by git status' },
-      { '<leader>sc', nil, desc = 'Search buffer commits' },
     },
   },
 }

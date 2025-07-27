@@ -78,29 +78,32 @@ Used mapleader is `<space>` key.
 
 ## Git
 
-| Mapping       | Mode   | Description                               |
-| ------------- | ------ | ----------------------------------------- |
-| `<leader>gG`  | Normal | Open git summary window                   |
-| `<leader>gV`  | Normal | Open git summary window in vertical split |
-| `<leader>gT`  | Normal | Open git summary window in new tab        |
-| `<leader>gaa` | Normal | Execute `git add --all`                   |
-| `<leader>gp`  | Normal | Execute `git push`                        |
-| `<leader>gP`  | Normal | Execute `git pull`                        |
-| `<leader>gc`  | Normal | Execute `git commit`                      |
-| `<leader>gC`  | Normal | Execute `git commit verbose`              |
-| `<leader>gb`  | Normal | Open in browser at hosting provider       |
-| `<leader>gd`  | Normal | Open vertical `vimdiff` of current file   |
-| `<leader>gD`  | Normal | Open horizontal `vimdiff` of current file |
-| `]c`          | Normal | Jump to next hunk                         |
-| `[c`          | Normal | Jump to previous hunk                     |
-| `<leader>hs`  | Normal | Stage/unstage hunk under cursor           |
-| `<leader>hs`  | Visual | Stage/unstage selected hunk(s)            |
-| `<leader>hr`  | Normal | Reset hunk under cursor                   |
-| `<leader>hr`  | Visual | Reset selected hunk(s)                    |
-| `<leader>hS`  | Normal | Stage buffer                              |
-| `<leader>hR`  | Normal | Reset buffer                              |
-| `<leader>hp`  | Normal | Preview hunk under cursor                 |
-| `<leader>hv`  | Normal | Select hunk under cursor                  |
+| Mapping       | Mode       | Description                               |
+| ------------- | ---------- | ----------------------------------------- |
+| `<leader>gG`  | Normal     | Open git summary window                   |
+| `<leader>gV`  | Normal     | Open git summary window in vertical split |
+| `<leader>gT`  | Normal     | Open git summary window in new tab        |
+| `<leader>gaa` | Normal     | Execute `git add --all`                   |
+| `<leader>gp`  | Normal     | Execute `git push`                        |
+| `<leader>gP`  | Normal     | Execute `git pull`                        |
+| `<leader>gc`  | Normal     | Execute `git commit`                      |
+| `<leader>gC`  | Normal     | Execute `git commit verbose`              |
+| `<leader>gb`  | Normal     | Open in browser at hosting provider       |
+| `<leader>gd`  | Normal     | Open vertical `vimdiff` of current file   |
+| `<leader>gD`  | Normal     | Open horizontal `vimdiff` of current file |
+| `<leader>gl`  | Normal [N] | Show git log(s) of current file           |
+| `]c`          | Normal     | Jump to next hunk                         |
+| `[c`          | Normal     | Jump to previous hunk                     |
+| `<leader>hs`  | Normal     | Stage/unstage hunk under cursor           |
+| `<leader>hs`  | Visual     | Stage/unstage selected hunk(s)            |
+| `<leader>hr`  | Normal     | Reset hunk under cursor                   |
+| `<leader>hr`  | Visual     | Reset selected hunk(s)                    |
+| `<leader>hS`  | Normal     | Stage buffer                              |
+| `<leader>hR`  | Normal     | Reset buffer                              |
+| `<leader>hp`  | Normal     | Preview hunk under cursor                 |
+| `<leader>hv`  | Normal     | Select hunk under cursor                  |
+
+**[N]: Mappings that can receive a count.**
 
 ## Word case
 
@@ -111,16 +114,13 @@ Used mapleader is `<space>` key.
 
 ## FZF
 
-| Mapping      | Mode       | Description                  |
-| ------------ | ---------- | ---------------------------- |
-| `<leader>sf` | Normal     | Search files                 |
-| `<leader>sb` | Normal     | Search buffers               |
-| `<leader>s?` | Normal     | Search helptags              |
-| `<leader>st` | Normal     | Search files by text         |
-| `<leader>ss` | Normal     | Search files by `git status` |
-| `<leader>sc` | Normal [N] | Search buffer commits        |
-
-**[N]: Mappings that can receive a count.**
+| Mapping      | Mode   | Description                  |
+| ------------ | ------ | ---------------------------- |
+| `<leader>sf` | Normal | Search files                 |
+| `<leader>sb` | Normal | Search buffers               |
+| `<leader>s?` | Normal | Search helptags              |
+| `<leader>st` | Normal | Search files by text         |
+| `<leader>ss` | Normal | Search files by `git status` |
 
 ## TODO comments
 
