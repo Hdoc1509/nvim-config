@@ -57,3 +57,13 @@
                       (string_content) @injection.content)))
               ]
               (#set! injection.language "gitignore"))))))))
+
+((function_call
+  name: (_) @_vimcmd_identifier
+  arguments: (arguments
+    (binary_expression
+      left: (string
+        content: _ @injection.content))))
+  (#set! injection.language "vim")
+  (#any-of? @_vimcmd_identifier
+    "vim.cmd" "vim.api.nvim_command" "vim.api.nvim_command" "vim.api.nvim_exec2"))

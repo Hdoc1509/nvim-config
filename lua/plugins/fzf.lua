@@ -1,6 +1,3 @@
--- TODO: override `FZF_DEFAULT_OPTS` per keymap
--- BCommits -> preview-window right,50%,<50(down,50%)
-
 local DEFAULT_LAYOUT = {
   window = { width = 0.9, height = 0.6 },
 }
@@ -64,12 +61,23 @@ return {
         apply_dynamic_preview_window()
         vim.cmd('GFiles?')
       end)
+
+      nmap('<leader>sc', function()
+        apply_dynamic_preview_window()
+
+        if vim.v.count > 0 then
+          vim.cmd('BCommits --max-count ' .. vim.v.count)
+        else
+          vim.cmd('BCommits')
+        end
+      end, { desc = 'Search buffer commits' })
     end,
     keys = {
       { '<leader>sb', nil, desc = 'Search buffers' },
       { '<leader>s?', nil, desc = 'Search helptags' },
       { '<leader>st', nil, desc = 'Search files by text' },
       { '<leader>ss', nil, desc = 'Search files by git status' },
+      { '<leader>sc', nil, desc = 'Search buffer commits' },
     },
   },
 }
