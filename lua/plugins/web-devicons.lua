@@ -29,11 +29,19 @@ return {
         color = devicons_by_extension.query.color,
         name = 'TSTest',
       },
+      minifiles = {
+        icon = '󰙅',
+        -- from: https://github.com/echasnovski/mini.nvim/blob/main/logo.png
+        color = '#B3DAF9',
+        name = 'MiniFiles',
+      },
+      -- NOTE: quickfix icon   (maybe)
     })
     devicons.set_icon_by_filetype({
       powershell = 'ps1',
       cmd = 'bat',
       fugitive = 'git',
+      minifiles = 'minifiles',
     })
   end,
   lazy = true,
