@@ -1,5 +1,4 @@
 -- TODO: override `FZF_DEFAULT_OPTS` per keymap
--- FZF -> no preview
 -- Buffers -> no preview
 -- Helptags -> no preview
 -- Rg -> preview-window right,50%,<50(down,50%)
@@ -10,8 +9,25 @@ return {
     'junegunn/fzf',
     build = './install --bin', -- ensure latest version for neovim
     keys = {
-      { '<leader>sf', '<cmd>FZF<cr>', desc = 'Search files' },
+      { '<leader>sf', nil, desc = 'Search files' },
     },
+    config = function()
+      local WINDOW_HEIGHT = 0.6
+
+      vim.keymap.set('n', '<leader>sf', function()
+        if vim.o.columns > 100 then
+          vim.g.fzf_layout = {
+            window = { width = 100, height = WINDOW_HEIGHT },
+          }
+        else
+          vim.g.fzf_layout = {
+            window = { width = 0.9, height = WINDOW_HEIGHT },
+          }
+        end
+
+        vim.cmd('FZF')
+      end, { desc = 'Search files' })
+    end,
   },
   {
     'junegunn/fzf.vim',
