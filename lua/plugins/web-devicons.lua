@@ -33,6 +33,7 @@ return {
     devicons.set_icon_by_filetype({
       powershell = 'ps1',
       cmd = 'bat',
+      fugitive = 'git',
     })
   end,
   lazy = true,
