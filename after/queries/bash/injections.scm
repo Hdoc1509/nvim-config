@@ -44,8 +44,8 @@
   (#set! injection.language "jq"))
 
 (command
-  name: (command_name) @_git_fzf_multi_preview
-  (#any-of? @_git_fzf_multi_preview "__git_fzf_multi_preview" "__git_fzf_preview")
+  name: (command_name) @_fzf_preview
+  (#any-of? @_fzf_preview "__fzf_preview")
   .
   argument: (string)
   .
