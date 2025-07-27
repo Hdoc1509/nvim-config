@@ -18,18 +18,18 @@ local attach = function(ev)
   end
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  buf_nmap('gd', function()
+  buf_nmap('grd', function()
     lsp_buf.definition({ reuse_win = true })
   end)
-  buf_nmap('<leader>ds', lsp_buf.document_symbol)
+  buf_nmap('gO', lsp_buf.document_symbol) -- NOTE: not needed from nvim-0.11
   buf_nmap('J', lsp_buf.signature_help)
   buf_nmap('K', function()
     hover_multi_lsp(bufnr)
   end)
-  buf_nmap('gD', lsp_buf.type_definition)
-  buf_nmap('<space>rn', lsp_buf.rename)
-  buf_nmap('<space>ca', lsp_buf.code_action)
-  buf_nmap('gr', lsp_buf.references)
+  buf_nmap('grt', lsp_buf.type_definition)
+  buf_nmap('grn', lsp_buf.rename) -- NOTE: not needed from nvim-0.11
+  buf_nmap('gra', lsp_buf.code_action) -- NOTE: not needed from nvim-0.11
+  buf_nmap('grr', lsp_buf.references) -- NOTE: not needed from nvim-0.11
 
   -- From: https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization#highlight-symbol-under-cursor
   if client.server_capabilities.documentHighlightProvider then
