@@ -48,13 +48,25 @@ local nmap_new_window = function(lhs, window_type, opts)
       return vim.api.nvim_get_current_win()
     end)
 
-    -- NOTE: looks like i dont need to `.set_target_window()` for `newtab`
-    -- silent mapping
     MiniFiles.set_target_window(new_target)
-    MiniFiles.go_in({ close_on_file = auto_enter })
 
-    if not auto_enter then
+    -- NOTE: without these checks, if explorer is re-opened in the tab of the
+    -- file that called `new tab` with `auto_enter`, the explorer will be
+    -- opened in the `new tab` of that file instead of the file of current tab.
+
+    if window_type == WINDOW_TYPE.tabnew then
+      MiniFiles.go_in()
+    else
+      MiniFiles.go_in({ close_on_file = auto_enter })
+    end
+
+    if not auto_enter or window_type == WINDOW_TYPE.tabnew then
       MiniFiles.set_target_window(cur_target)
+    end
+
+    if auto_enter and window_type == WINDOW_TYPE.tabnew then
+      vim.cmd('normal q')
+      vim.cmd('normal gt')
     end
   end
 
@@ -95,9 +107,7 @@ M.setup = function(buf_id)
   nmap_new_window('gL', WINDOW_TYPE.belowright_vertical_split, { auto_enter = true, buf_id = buf_id })
 
   nmap_new_window('gt', WINDOW_TYPE.tabnew, { buf_id = buf_id })
-  -- FIX: when re-opening explorer in another tab it opens in last 'tabnew'
-  -- opened tab, instead of the tab of current buffer
-  -- nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
+  nmap_new_window('gT', WINDOW_TYPE.tabnew, { auto_enter = true, buf_id = buf_id })
 end
 
 return M
