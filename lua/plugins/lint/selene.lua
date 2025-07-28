@@ -37,7 +37,12 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
   end
 
   return (
-    code == 'undefined_variable' and (string.match(message, 'vim') ~= nil or string.match(message, 'MiniFiles') ~= nil)
+    code == 'undefined_variable'
+    and (
+      string.match(message, 'vim') ~= nil
+      or string.match(message, 'MiniFiles') ~= nil
+      or string.match(message, 'Snacks') ~= nil
+    )
   )
     or (code == 'unscoped_variables' and string.match(message, 'vim') ~= nil)
     or (code == 'mixed_table' and string.match(buf_name, user_config) ~= nil)
