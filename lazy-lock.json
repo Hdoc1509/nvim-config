@@ -11,6 +11,7 @@
   "cmp-vsnip": { "branch": "main", "commit": "989a8a73c44e926199bfd05fa7a516d51f2d2752" },
   "colorful-winsep.nvim": { "branch": "alpha", "commit": "7bbe4e1353c0fe37c98bad2758aafc410280f6b3" },
   "convert.nvim": { "branch": "main", "commit": "a982c93c1af742c44c300a647f8af16d0c484046" },
+  "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "fidget.nvim": { "branch": "main", "commit": "d9ba6b7bfe29b3119a610892af67602641da778e" },
   "formatter.nvim": { "branch": "master", "commit": "b9d7f853da1197b83b8edb4cc4952f7ad3a42e41" },
   "fzf": { "branch": "master", "commit": "3a21116307d31a35d499776ed8604cc2818f4378" },

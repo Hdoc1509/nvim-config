@@ -14,18 +14,5 @@ return {
     { '<leader>gb', '<cmd>GBrowse<cr>', desc = 'Open in browser at hosting provider' },
     { '<leader>gd', '<cmd>Gvdiffsplit<cr>', desc = 'Open vertical vimdiff of current file' },
     { '<leader>gD', '<cmd>Ghdiffsplit<cr>', desc = 'Open horizontal vimdiff of current file' },
-    {
-      '<leader>gl',
-      function()
-        if vim.v.count > 0 then
-          -- vim.cmd('Git log --oneline --max-count ' .. vim.v.count .. ' %')
-          vim.cmd('0Gclog! --max-count ' .. vim.v.count)
-        else
-          -- vim.cmd('Git log --oneline %')
-          vim.cmd('0Gclog!')
-        end
-      end,
-      desc = 'Show git log(s) of current file',
-    },
   },
 }
