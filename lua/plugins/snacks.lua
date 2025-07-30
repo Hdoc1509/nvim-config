@@ -5,6 +5,9 @@ return {
   opts = {
     input = {},
     words = {},
+    dim = {
+      animate = { enabled = false },
+    },
   },
   keys = {
     {
@@ -21,5 +24,17 @@ return {
       end,
       desc = 'Got to previous LSP reference',
     },
+    -- TODO: use once updated to nvim-0.10
+    --[[ {
+      '<leader>Z',
+      function()
+        if Snacks.dim.enabled then
+          Snacks.dim()
+        else
+          Snacks.dim.disable()
+        end
+      end,
+      desc = 'Focus the active scope',
+    }, ]]
   },
 }
