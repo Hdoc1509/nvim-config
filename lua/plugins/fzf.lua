@@ -65,12 +65,18 @@ return {
         apply_dynamic_preview_window()
         vim.cmd('GFiles?')
       end)
+
+      nmap('<leader>s:', function()
+        apply_dynamic_layout()
+        vim.cmd('History:')
+      end, { desc = 'Search command history' })
     end,
     keys = {
       { '<leader>sb', nil, desc = 'Search buffers' },
       { '<leader>s?', nil, desc = 'Search helptags' },
       { '<leader>st', nil, desc = 'Search files by text' },
       { '<leader>ss', nil, desc = 'Search files by git status' },
+      { '<leader>s:', nil, desc = 'Search command history' },
     },
   },
 }
