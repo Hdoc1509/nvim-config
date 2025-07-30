@@ -30,6 +30,10 @@ return {
       { '<leader>sf', nil, desc = 'Search files' },
     },
     config = function()
+      if string.match(vim.env.FZF_DEFAULT_OPTS, '%-%-wrap') == nil then
+        vim.env.FZF_DEFAULT_OPTS = vim.env.FZF_DEFAULT_OPTS .. ' --wrap'
+      end
+
       vim.keymap.set('n', '<leader>sf', function()
         apply_dynamic_layout()
         vim.cmd('FZF')
