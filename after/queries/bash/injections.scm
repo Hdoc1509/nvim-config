@@ -37,6 +37,16 @@
     (#set! injection.language "regex")))
 
 (command
+  name: (command_name) @_sed
+  (#eq? @_sed "sed")
+  argument: (raw_string) @injection.content
+  (#not-lua-match? @injection.content "{{")
+  (#offset! @injection.content 0 1 0 -1)
+  (#set! injection.language "regex"))
+
+; TODO: add `regex` injection to `grep` command
+
+(command
   name: (command_name) @_jq
   (#eq? @_jq "jq")
   argument: (raw_string) @injection.content
