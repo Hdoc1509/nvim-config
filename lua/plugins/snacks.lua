@@ -3,7 +3,6 @@ return {
   priority = 1000,
   lazy = false,
   opts = {
-    input = {},
     words = {},
     dim = {
       animate = { enabled = false },
