@@ -128,6 +128,7 @@
 - markdown (also used for `mdx` files)
 - markdown_inline
 - powershell (only used for [Troubleshooting](./troubleshooting.md))
+- printf
 - properties
 - query
 - regex

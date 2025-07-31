@@ -27,6 +27,10 @@
 
 ### Queries
 
+#### printf
+
+https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/highlights.scm
+
 #### Yaml
 
 - Highlight Gith Workflow expressions (injections)
