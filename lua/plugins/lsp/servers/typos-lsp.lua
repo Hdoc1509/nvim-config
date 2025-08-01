@@ -1,39 +1,41 @@
 local default_settings = require('plugins.lsp.servers._default_settings')
 
--- TODO: ignore errors for `commit` hash in `CHANGELOG.md` files. example:
--- {
---   diagnostics = { {
---       data = {
---         corrections = { "by", "be" }
---       },
---       message = "`ba` should be `by`, `be`",
---       range = {
---         ["end"] = {
---           character = 49,
---           line = 76
---         },
---         start = {
---           character = 47,
---           line = 76
---         }
---       },
---       source = "typos"
---     } },
---   uri = "file://<path>/CHANGELOG.md",
---   version = 0
--- }
--- line example:
--- - <commit-message> ([`43e21ba`](<commit-url>))
+-- NOTE: ignore errors for `commit` hash in `CHANGELOG.md` files. example:
+-- line examples:
+-- - <commit-message> ([`<commit-hash>`](<commit-url>))
+-- - <commit-hash>: <commit-message>
+-- where <commit-hash> is 7 characters long
 
----@param diagnostic Diagnostic
+---@param diagnostic lsp.Diagnostic
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
+  local range_start = diagnostic.range.start
+  local range_end = diagnostic.range['end']
+  local line_start = range_start.line
+  local buf_name = vim.uri_to_fname(uri)
+
+  if string.match(buf_name, 'CHANGELOG%.md$') and line_start == range_end.line then
+    local bufnr = vim.uri_to_bufnr(uri)
+    local buf_line = vim.api.nvim_buf_get_lines(bufnr, line_start, line_start + 1, false)[1]
+    local commit_start, commit_end = string.find(buf_line, '%(%[`%w%w%w%w%w%w%w`]%(')
+
+    if commit_start ~= nil and range_start.character >= commit_start and range_end.character <= commit_end then
+      return true
+    end
+
+    commit_start, commit_end = string.find(buf_line, '%-%s%w%w%w%w%w%w%w:')
+
+    if commit_start ~= nil and range_start.character >= commit_start and range_end.character <= commit_end then
+      return true
+    end
+  end
+
   return false
 end
 
 return require('utils').merge(default_settings, {
   handlers = {
-    ---@param result { diagnostics: Diagnostic[], uri: string }
+    ---@param result { diagnostics: lsp.Diagnostic[], uri: string }
     ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
       -- print(vim.inspect(result))
 
