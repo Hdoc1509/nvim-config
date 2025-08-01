@@ -4,9 +4,7 @@ local default_settings = require('plugins.lsp.servers._default_settings')
 -- NOTE: move config to its own file if it uses more than 5 lines
 return {
   ['astro'] = default_settings,
-  ['bashls'] = merge(default_settings, {
-    filetypes = { 'sh', 'zsh' },
-  }),
+  ['bashls'] = require('plugins.lsp.servers.bashls'),
   ['cssls'] = default_settings,
   ['css_variables'] = default_settings,
   ['emmet_ls'] = merge(default_settings, {
