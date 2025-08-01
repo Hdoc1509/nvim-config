@@ -64,7 +64,7 @@ return {
       nmap('<leader>ss', function()
         apply_dynamic_preview_window()
         vim.cmd('GFiles?')
-      end)
+      end, { desc = 'Search files by git status' })
 
       nmap('<leader>s:', function()
         apply_dynamic_layout()
