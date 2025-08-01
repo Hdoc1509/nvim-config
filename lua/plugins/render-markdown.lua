@@ -25,8 +25,6 @@ return {
       heading = {
         icons = { '◉ ', '○ ', '✸ ', '✿ ' },
         sign = false,
-        width = 'block',
-        min_width = 79,
         -- FIX: breaks custom icons. works from nvim-0.10
         -- position = 'inline',
       },
@@ -36,7 +34,6 @@ return {
       },
       code = {
         sign = false,
-        width = 'block',
         below = '',
         language_border = '',
       },
