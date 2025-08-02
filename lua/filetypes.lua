@@ -9,6 +9,7 @@ vim.filetype.add({
     ignore = 'gitignore',
   },
   filename = {
+    ['.packwizignore'] = 'packwizignore',
     ['.minttyrc'] = 'minttyrc',
     ['.shellcheckrc'] = 'shellcheckrc',
     ['.styluaignore'] = 'styluaignore',

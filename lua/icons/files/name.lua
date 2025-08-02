@@ -30,6 +30,9 @@ local function generate(base_icons)
       color = base_icons.extension.vim.color,
       name = 'Neoconf',
     },
+    -- color: https://packwiz.infra.link/
+    -- `--md-primary-fg-color`
+    ['.packwizignore'] = { icon = '', color = '#ab47bd', name = 'PackwizIgnore' },
     ['.profile'] = {
       icon = ext.conf.icon,
       color = ext.sh.color,

@@ -43,6 +43,7 @@ return {
       fugitive = 'git',
       minifiles = 'minifiles',
       editorconfig = '.editorconfig',
+      packwizignore = '.packwizignore',
       minttyrc = '.minttyrc',
       shellcheckrc = '.shellcheckrc',
       styluaignore = '.styluaignore',
