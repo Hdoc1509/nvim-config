@@ -42,6 +42,10 @@ return {
       cmd = 'bat',
       fugitive = 'git',
       minifiles = 'minifiles',
+      editorconfig = '.editorconfig',
+      minttyrc = '.minttyrc',
+      shellcheckrc = '.shellcheckrc',
+      styluaignore = '.styluaignore',
     })
   end,
   lazy = true,
