@@ -34,7 +34,10 @@ local config = function()
       ['markdown.mdx'] = { prettier },
       query = {
         function()
-          vim.lsp.buf.format()
+          return {
+            exe = 'ts_query_ls',
+            args = { 'format' },
+          }
         end,
       },
       sh = { require('formatter.filetypes.sh').shfmt },
