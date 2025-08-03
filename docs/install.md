@@ -2,7 +2,7 @@
 
 ## Requirements
 
-- [Patched nerd-font](https://github.com/ryanoasis/nerd-fonts)
+- [Patched nerd-font v3.4.0+](https://github.com/ryanoasis/nerd-fonts/releases)
 - [Neovim 0.9.5](https://github.com/neovim/neovim/releases/tag/v0.9.5)
 - [Node.js](https://nodejs.org/en/download)
 - [Yarn](https://yarnpkg.com/getting-started/install)
