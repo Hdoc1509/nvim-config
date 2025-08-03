@@ -10,7 +10,6 @@ return {
     { '<leader>gp', '<cmd>Git push<cr>', desc = 'Git push' },
     { '<leader>gP', '<cmd>Git pull<cr>', desc = 'Git pull' },
     { '<leader>gc', '<cmd>Git commit<cr>', desc = 'Git commit' },
-    { '<leader>gC', '<cmd>Git commit --verbose<cr>', desc = 'Git commit verbose' },
     { '<leader>gb', ':GBrowse<cr>', mode = { 'n', 'x' }, desc = 'Open in browser at hosting provider' },
     { '<leader>gB', ':GBrowse!<cr>', mode = { 'n', 'x' }, desc = 'Copy target hosting provider URL to clipboard' },
     { '<leader>gd', '<cmd>Gvdiffsplit<cr>', desc = 'Open vertical vimdiff of current file' },
