@@ -37,7 +37,7 @@
           (string_content) @injection.content)
         (#set! injection.language "vim")))))
 
-; linter pattern events. lua/plugins/lint/init.lua:10
+; linter pattern events. lua/plugins/lint/init.lua:13
 (variable_declaration
   (assignment_statement
     (variable_list
