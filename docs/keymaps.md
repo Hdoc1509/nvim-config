@@ -233,6 +233,20 @@ Used mapleader is `<space>` key.
 | `<leader>z` | Normal | Toggle `NoNeckPain` |
 | `<leader>Z` | Normal | Toggle `Twilight`   |
 
+## nvim-cmp
+
+| Mapping     | Mode               | Description                            |
+| ----------- | ------------------ | -------------------------------------- |
+| `<A-h>`     | Insert / Selection | Jump to previous snippet's placeholder |
+| `<A-l>`     | Insert / Selection | Jump to next snippet's placeholder     |
+| `<C-j>`     | Normal             | Select next item                       |
+| `<C-k>`     | Normal             | Select previous item                   |
+| `<C-b>`     | Normal             | Scroll up docs                         |
+| `<C-f>`     | Normal             | Scroll down docs                       |
+| `<C-Space>` | Normal             | Trigger completion                     |
+| `<C-e>`     | Normal             | Abort completion                       |
+| `<CR>`      | Normal             | Confirm completion                     |
+
 ## Replace matching text
 
 | Mapping     | Mode   | Description                           |
