@@ -30,13 +30,6 @@ https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/hig
   https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions
   maybe develop tree-sitter-github-workflow-expression parser?
 
-## Linters
-
-### Shellcheck within `bashls`
-
-- Ignore SC2034 for `.env*` files
-  - or [ignore per .env\* file](https://github.com/koalaman/shellcheck/wiki/Ignore#ignoring-all-instances-in-a-file-044)
-
 ## Try
 
 - https://github.com/bennypowers/svgo.nvim
