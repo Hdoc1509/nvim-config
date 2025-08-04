@@ -13,9 +13,9 @@ local function is_diagnostic_ignored(diagnostic, uri)
   local range_end = diagnostic.range['end']
   local line_start = range_start.line
   local buf_name = vim.uri_to_fname(uri)
+  local bufnr = vim.uri_to_bufnr(uri)
 
   if string.match(buf_name, 'CHANGELOG%.md$') and line_start == range_end.line then
-    local bufnr = vim.uri_to_bufnr(uri)
     local buf_line = vim.api.nvim_buf_get_lines(bufnr, line_start, line_start + 1, false)[1]
     local commit_start, commit_end = string.find(buf_line, '%(%[`%w%w%w%w%w%w%w`]%(')
 
@@ -30,7 +30,7 @@ local function is_diagnostic_ignored(diagnostic, uri)
     end
   end
 
-  return false
+  return vim.bo[bufnr].filetype == 'help'
 end
 
 return require('utils').merge(default_settings, {
