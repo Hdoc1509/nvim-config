@@ -14,7 +14,7 @@ local parser = function(output, bufnr)
 
   for _, item in ipairs(decoded.files['0'].errors) do
     local buf_line = vim.api.nvim_buf_get_lines(bufnr, item.line - 1, item.line, false)[1]
-    local is_comment = string.match(buf_line, '%s*//') ~= nil
+    local is_comment = buf_line:match('%s*//') ~= nil
 
     if is_comment then
       goto continue

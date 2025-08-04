@@ -4,17 +4,17 @@ local default_handlers = require('plugins.lsp.handlers')
 ---@param diagnostic Diagnostic
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
-  if string.match(uri, 'hotbar%-keys') == nil then
+  if uri:match('hotbar%-keys') == nil then
     return false
   end
 
   local message = diagnostic.message
 
-  return string.match(message, 'Constants cannot be resolved') ~= nil
-    or string.match(message, 'CommonClass cannot be resolved') ~= nil
-    or string.match(message, 'FabricPlatformHelper') ~= nil
-    or string.match(message, 'IPlatformHelper') ~= nil
-    or string.match(message, 'platform%.services cannot be resolved') ~= nil
+  return message:match('Constants cannot be resolved') ~= nil
+    or message:match('CommonClass cannot be resolved') ~= nil
+    or message:match('FabricPlatformHelper') ~= nil
+    or message:match('IPlatformHelper') ~= nil
+    or message:match('platform%.services cannot be resolved') ~= nil
 end
 
 return merge(default_handlers, {

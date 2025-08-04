@@ -5,7 +5,7 @@ local default_settings = require('plugins.lsp.servers._default_settings')
 local function is_diagnostic_ignored(diagnostic, uri)
   local buf_name = vim.uri_to_fname(uri)
 
-  return string.match(buf_name, '%.env.*$') and diagnostic.source == 'shellcheck' and diagnostic.code == 'SC2034'
+  return buf_name:match('%.env.*$') and diagnostic.source == 'shellcheck' and diagnostic.code == 'SC2034'
 end
 
 return require('utils').merge(default_settings, {

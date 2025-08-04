@@ -15,15 +15,15 @@ local function is_diagnostic_ignored(diagnostic, uri)
   local buf_name = vim.uri_to_fname(uri)
   local bufnr = vim.uri_to_bufnr(uri)
 
-  if string.match(buf_name, 'CHANGELOG%.md$') and line_start == range_end.line then
+  if buf_name:match('CHANGELOG%.md$') and line_start == range_end.line then
     local buf_line = vim.api.nvim_buf_get_lines(bufnr, line_start, line_start + 1, false)[1]
-    local commit_start, commit_end = string.find(buf_line, '%(%[`%w%w%w%w%w%w%w`]%(')
+    local commit_start, commit_end = buf_line:find('%(%[`%w%w%w%w%w%w%w`]%(')
 
     if commit_start ~= nil and range_start.character >= commit_start and range_end.character <= commit_end then
       return true
     end
 
-    commit_start, commit_end = string.find(buf_line, '%-%s%w%w%w%w%w%w%w:')
+    commit_start, commit_end = buf_line:find('%-%s%w%w%w%w%w%w%w:')
 
     if commit_start ~= nil and range_start.character >= commit_start and range_end.character <= commit_end then
       return true

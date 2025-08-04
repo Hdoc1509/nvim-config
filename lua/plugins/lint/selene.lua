@@ -12,7 +12,7 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
   local buf_name = vim.api.nvim_buf_get_name(bufnr)
 
   -- NOTE: filetype check to prevent linting window of `:InspectTree` command
-  if string.match(buf_name, lazy_data_path) ~= nil or vim.bo[bufnr].filetype ~= 'lua' then
+  if buf_name:match(lazy_data_path) ~= nil or vim.bo[bufnr].filetype ~= 'lua' then
     return true
   end
 
@@ -24,13 +24,13 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
     local buf_line = vim.api.nvim_buf_get_lines(bufnr, line_number, line_number + 1, false)
     local line_text = buf_line[1]
 
-    if line_text ~= nil and (string.match(line_text, 'goto') or string.match(line_text, '::')) then
+    if line_text ~= nil and (line_text:match('goto') or line_text:match('::')) then
       return true
     else
       local previous_line = vim.api.nvim_buf_get_lines(bufnr, line_number - 1, line_number, false)
       local previous_line_text = previous_line[1]
 
-      if previous_line_text ~= nil and (string.match(previous_line_text, 'goto') ~= nil) then
+      if previous_line_text ~= nil and (previous_line_text:match('goto') ~= nil) then
         return true
       end
     end
@@ -38,14 +38,10 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
 
   return (
     code == 'undefined_variable'
-    and (
-      string.match(message, 'vim') ~= nil
-      or string.match(message, 'MiniFiles') ~= nil
-      or string.match(message, 'Snacks') ~= nil
-    )
+    and (message:match('vim') ~= nil or message:match('MiniFiles') ~= nil or message:match('Snacks') ~= nil)
   )
-    or (code == 'unscoped_variables' and string.match(message, 'vim') ~= nil)
-    or (code == 'mixed_table' and string.match(buf_name, user_config) ~= nil)
+    or (code == 'unscoped_variables' and message:match('vim') ~= nil)
+    or (code == 'mixed_table' and buf_name:match(user_config) ~= nil)
 end
 
 ---@type lint.parse

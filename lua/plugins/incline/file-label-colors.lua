@@ -12,7 +12,7 @@ return function(props)
   else
     if mode == 'command' or mode == 'terminal' then
       mode = 'normal'
-    elseif mode == 'select' or string.match(mode, '^[sv]%-') ~= nil then
+    elseif mode == 'select' or mode:match('^[sv]%-') ~= nil then
       mode = 'visual'
     end
 
