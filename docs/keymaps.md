@@ -281,7 +281,6 @@ Used mapleader is `<space>` key.
 | Mapping       | Mode            | Description                                |
 | ------------- | --------------- | ------------------------------------------ |
 | `<leader>chh` | Normal          | Run `:checkhealth`                         |
-| `<c-d>`       | Normal / Insert | Remove current line                        |
 | `<leader>ya`  | Normal          | Copy all text of current file to clipboard |
 | `<leader>/`   | Normal          | Clear search highlighting                  |
 | `<F3>`        | Insert / Normal | Toggle spell checking                      |

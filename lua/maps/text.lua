@@ -3,10 +3,6 @@ local utils = require('utils')
 local nmap = utils.nmap
 local keymap = utils.keymap
 
-keymap({ 'i', 'n' }, '<c-d>', '<cmd>normal dd<cr>', {
-  desc = 'Delete current line',
-})
-
 -- Indent and keep selection
 keymap('x', '<', '<gv')
 keymap('x', '>', '>gv')
