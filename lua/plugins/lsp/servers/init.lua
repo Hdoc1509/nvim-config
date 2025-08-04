@@ -35,7 +35,7 @@ return {
   -- ['mdx_analyzer'] = default_settings,
   ['somesass_ls'] = default_settings,
   superhtml = require('plugins.lsp.servers.superhtml'),
-  ['ts_ls'] = default_settings,
+  ['ts_ls'] = require('plugins.lsp.servers.ts_ls'),
   ['ts_query_ls'] = require('plugins.lsp.servers.ts_query_ls'),
   ['typos_lsp'] = require('plugins.lsp.servers.typos-lsp'),
   ['vimls'] = default_settings,
