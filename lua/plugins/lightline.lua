@@ -4,16 +4,13 @@ vim.g.lightline = {
     left = {
       { 'mode', 'paste' },
       { 'gitbranch' },
-      { 'readonly', 'filename', 'spell' },
+      { 'readonly', 'filename' },
     },
     right = {
       { 'lineinfo' },
       { 'percent' },
       { 'fileformat', 'fileencoding' },
     },
-  },
-  component = {
-    spell = '%{&spell ? "SPELL " .. &spelllang : ""}',
   },
   component_function = {
     filename = 'LightlineFilename',

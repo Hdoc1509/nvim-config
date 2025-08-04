@@ -18,11 +18,6 @@ nmap('<leader>O', "printf('m`%sO<esc>``', v:count1)", {
   expr = true,
 })
 
-keymap({ 'i', 'n' }, '<F3>', '<cmd>set spell!<cr>', {
-  desc = 'Toggle spell check',
-  silent = false,
-})
-
 keymap(
   'x',
   '<leader>r',

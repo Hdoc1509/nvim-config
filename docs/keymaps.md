@@ -283,7 +283,6 @@ Used mapleader is `<space>` key.
 | `<leader>chh` | Normal          | Run `:checkhealth`                         |
 | `<leader>ya`  | Normal          | Copy all text of current file to clipboard |
 | `<leader>/`   | Normal          | Clear search highlighting                  |
-| `<F3>`        | Insert / Normal | Toggle spell checking                      |
 | `<leader>x`   | Normal          | Source current file                        |
 | `H`           | Normal          | Preview folded lines                       |
 
