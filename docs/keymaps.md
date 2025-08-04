@@ -247,7 +247,7 @@ Used mapleader is `<space>` key.
 | `<leader>r` | Visual | Replace selected text in current file |
 | `<leader>R` | Visual | Replace selected text in all files    |
 
-# Markdown-only
+## Markdown-only
 
 | Mapping       | Mode        | Description                                                         |
 | ------------- | ----------- | ------------------------------------------------------------------- |
