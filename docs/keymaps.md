@@ -226,11 +226,12 @@ Used mapleader is `<space>` key.
 | -------- | ---------------------------------- |
 | `F`      | Surround with function declaration |
 
-## Zen mode
+## Focus on the current buffer
 
-| Mapping     | Mode   | Description     |
-| ----------- | ------ | --------------- |
-| `<leader>z` | Normal | Toggle Zen Mode |
+| Mapping     | Mode   | Description         |
+| ----------- | ------ | ------------------- |
+| `<leader>z` | Normal | Toggle `NoNeckPain` |
+| `<leader>Z` | Normal | Toggle `Twilight`   |
 
 ## Replace matching text
 
