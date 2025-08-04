@@ -319,7 +319,11 @@ return {
       'regenerator',
     },
   },
-  github = { icon = '', hl = 'FolderGithub', folder_names = { '.github', 'gh' } },
+  github = {
+    icon = '',
+    hl = 'FolderGithub',
+    folder_names = { '.github', 'gh', 'githubactions' },
+  },
   git = {
     icon = '',
     hl = 'DevIconGitLogo',
