@@ -3,13 +3,6 @@ local utils = require('utils')
 local nmap = utils.nmap
 local keymap = utils.keymap
 
-keymap({ 'i', 'n' }, '<c-u>', '<cmd>normal g~iwe<cr>', {
-  desc = 'Toggle word case',
-})
-keymap({ 'i', 'n' }, '<c-t>', '<cmd>normal viwb~e<cr>', {
-  desc = 'Toggle word title case',
-})
-
 keymap({ 'i', 'n' }, '<c-d>', '<cmd>normal dd<cr>', {
   desc = 'Delete current line',
 })

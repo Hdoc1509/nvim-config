@@ -104,13 +104,6 @@ Used mapleader is `<space>` key.
 
 **[N]: Mappings that can receive a count.**
 
-## Word case
-
-| Mapping | Mode            | Description                            |
-| ------- | --------------- | -------------------------------------- |
-| `<c-u>` | Normal / Insert | Toggle Uppercase of word under cursor  |
-| `<c-t>` | Normal / Insert | Toggle Title Case of word under cursor |
-
 ## FZF
 
 | Mapping      | Mode   | Description                  |
