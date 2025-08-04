@@ -61,7 +61,12 @@
   (#offset! @injection.content 0 1 0 -1)
   (#set! injection.language "regex"))
 
-; TODO: add `regex` injection to `grep` command
+(command
+  name: (command_name) @_grep
+  (#eq? @_grep "grep")
+  argument: (raw_string) @injection.content
+  (#offset! @injection.content 0 1 0 -1)
+  (#set! injection.language "regex"))
 
 (command
   name: (command_name) @_jq
