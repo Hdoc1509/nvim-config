@@ -18,8 +18,6 @@ keymap({ 'n', 'x' }, '<leader>J', '20<c-e>', { desc = 'Scroll down 20 lines' })
 keymap({ 'n', 'x' }, '<leader>k', '10<c-y>', { desc = 'Scroll up 10 lines' })
 keymap({ 'n', 'x' }, '<leader>K', '20<c-y>', { desc = 'Scroll up 20 lines' })
 
-nmap('<leader>chh', '<cmd>checkhealth<cr>', { desc = 'Run :checkhealth' })
-
 -- Search highlighting
 nmap('<leader>/', '<cmd>nohlsearch<cr>', { desc = 'Clear search highlighting' })
 

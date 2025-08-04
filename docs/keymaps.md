@@ -247,7 +247,7 @@ Used mapleader is `<space>` key.
 | `<leader>r` | Visual | Replace selected text in current file |
 | `<leader>R` | Visual | Replace selected text in all files    |
 
-## Markdown-only
+# Markdown-only
 
 | Mapping       | Mode        | Description                                                         |
 | ------------- | ----------- | ------------------------------------------------------------------- |
@@ -280,7 +280,6 @@ Used mapleader is `<space>` key.
 
 | Mapping       | Mode            | Description                                |
 | ------------- | --------------- | ------------------------------------------ |
-| `<leader>chh` | Normal          | Run `:checkhealth`                         |
 | `<leader>ya`  | Normal          | Copy all text of current file to clipboard |
 | `<leader>/`   | Normal          | Clear search highlighting                  |
 | `<leader>x`   | Normal          | Source current file                        |
