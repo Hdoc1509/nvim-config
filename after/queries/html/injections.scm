@@ -6,4 +6,17 @@
       (quoted_attribute_value
         (attribute_value) @injection.content
         (#lua-match? @injection.content "<%%=")
-        (#inject-hygen-ejs!)))))
+        (#inject-hygen-ejs! "")))))
+
+(element
+  [
+    (text) @injection.content
+    (start_tag
+      (attribute
+        (attribute_value) @injection.content))
+    (self_closing_tag
+      (attribute
+        (attribute_value) @injection.content))
+  ]
+  (#lua-match? @injection.content "^{.*}$")
+  (#inject-mdx-js! ""))
