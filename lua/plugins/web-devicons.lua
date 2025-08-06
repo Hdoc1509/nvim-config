@@ -35,6 +35,11 @@ return {
         color = '#B3DAF9',
         name = 'MiniFiles',
       },
+      diffview_files = {
+        icon = '',
+        color = devicons_by_extension.git.color,
+        name = 'DiffviewFiles',
+      },
       -- NOTE: quickfix icon   (maybe)
     })
     devicons.set_icon_by_filetype({
@@ -47,6 +52,8 @@ return {
       minttyrc = '.minttyrc',
       shellcheckrc = '.shellcheckrc',
       styluaignore = '.styluaignore',
+      DiffviewFiles = 'diffview_files',
+      DiffviewFileHistory = 'diffview_files',
     })
   end,
   lazy = true,
