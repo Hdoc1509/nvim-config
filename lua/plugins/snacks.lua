@@ -7,6 +7,7 @@ return {
     dim = {
       animate = { enabled = false },
     },
+    picker = {},
   },
   keys = {
     {

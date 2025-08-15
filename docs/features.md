@@ -55,6 +55,7 @@
 - Secondary statusline with [`incline.nvim`](https://github.com/b0o/incline.nvim)
 - Highlighting of cmdline window with [`cmdline-hl.nvim`](https://github.com/Sam-programs/cmdline-hl.nvim)
 - Better registers management with [`registers.nvim`](https://github.com/tversteeg/registers.nvim)
+- Search Nerd Font icons easily with [`nerdy.nvim`](https://github.com/2kabhishek/nerdy.nvim)
 
 ## Tools
 
