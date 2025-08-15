@@ -54,6 +54,7 @@
 - Better window separator with [`colorful-winsep.nvim`](https://github.com/nvim-zh/colorful-winsep.nvim)
 - Secondary statusline with [`incline.nvim`](https://github.com/b0o/incline.nvim)
 - Highlighting of cmdline window with [`cmdline-hl.nvim`](https://github.com/Sam-programs/cmdline-hl.nvim)
+- Better registers management with [`registers.nvim`](https://github.com/tversteeg/registers.nvim)
 
 ## Tools
 
