@@ -43,6 +43,7 @@
                       [
                         (double_quote_scalar) @injection.content
                         (plain_scalar
+                          ; FIX: this breaks with offset below
                           (string_scalar) @injection.content)
                       ])))
                 (block_node
@@ -56,6 +57,8 @@
                             (string_scalar) @injection.content)
                         ]))))
               ]
+              ; NOTE: check if this breaks something
+              (#offset! @injection.content 0 1 0 -1)
               (#set! injection.language "gitignore"))))))))
 
 (block_sequence_item
@@ -78,3 +81,129 @@
                 (block_scalar) @injection.content
                 (#set! injection.language "gitignore")
                 (#offset! @injection.content 0 1 0 0)))))))))
+
+(block_sequence_item
+  (block_node
+    (block_mapping
+      (block_mapping_pair
+        key: (flow_node) @_uses
+        (#eq? @_uses "uses")
+        value: (flow_node) @_action
+        (#lua-match? @_action "^actions/upload%-artifact"))
+      (block_mapping_pair
+        key: (flow_node) @_with
+        (#eq? @_with "with")
+        value: (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (flow_node) @_path
+              (#eq? @_path "path")
+              value: (block_node
+                (block_scalar) @injection.content
+                (#set! injection.language "gitignore")
+                (#offset! @injection.content 0 1 0 0)))))))))
+
+(block_sequence_item
+  (block_node
+    (block_mapping
+      (block_mapping_pair
+        key: (flow_node) @_uses
+        (#eq? @_uses "uses")
+        value: (flow_node) @_action
+        (#lua-match? @_action "^actions/upload%-artifact"))
+      (block_mapping_pair
+        key: (flow_node) @_with
+        (#eq? @_with "with")
+        value: (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (flow_node) @_path
+              (#eq? @_path "path")
+              value: (flow_node
+                (plain_scalar
+                  (string_scalar) @injection.content)
+                (#set! injection.language "gitignore")))))))))
+
+(block_sequence_item
+  (block_node
+    (block_mapping
+      (block_mapping_pair
+        key: (flow_node) @_uses
+        (#eq? @_uses "uses")
+        value: (flow_node) @_action
+        (#lua-match? @_action "^actions/upload%-pages%-artifact"))
+      (block_mapping_pair
+        key: (flow_node) @_with
+        (#eq? @_with "with")
+        value: (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (flow_node) @_path
+              (#eq? @_path "path")
+              value: (flow_node
+                (plain_scalar
+                  (string_scalar) @injection.content)
+                (#set! injection.language "gitignore")))))))))
+
+(block_sequence_item
+  (block_node
+    (block_mapping
+      (block_mapping_pair
+        key: (flow_node) @_uses
+        (#eq? @_uses "uses")
+        value: (flow_node) @_action
+        (#lua-match? @_action "^Kir%-Antipov/mc%-publish"))
+      (block_mapping_pair
+        key: (flow_node) @_with
+        (#eq? @_with "with")
+        value: (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (flow_node) @_files
+              (#eq? @_files "files")
+              value: (block_node
+                (block_scalar) @injection.content
+                (#set! injection.language "gitignore")
+                (#offset! @injection.content 0 1 0 0)))))))))
+
+(block_sequence_item
+  (block_node
+    (block_mapping
+      (block_mapping_pair
+        key: (flow_node) @_uses
+        (#eq? @_uses "uses")
+        value: (flow_node) @_action
+        (#lua-match? @_action "^Kir%-Antipov/mc%-publish"))
+      (block_mapping_pair
+        key: (flow_node) @_with
+        (#eq? @_with "with")
+        value: (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (flow_node) @_option
+              (#any-of? @_option "files" "changelog-file")
+              value: (flow_node
+                (plain_scalar
+                  (string_scalar) @injection.content)
+                (#set! injection.language "gitignore")))))))))
+
+(block_sequence_item
+  (block_node
+    (block_mapping
+      (block_mapping_pair
+        key: (flow_node) @_uses
+        (#eq? @_uses "uses")
+        value: (flow_node) @_action
+        (#lua-match? @_action "^peaceiris/actions%-gh%-pages"))
+      (block_mapping_pair
+        key: (flow_node) @_with
+        (#eq? @_with "with")
+        value: (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (flow_node) @_publish_dir
+              (#eq? @_publish_dir "publish_dir")
+              value: (flow_node
+                (plain_scalar
+                  (string_scalar) @injection.content)
+                (#set! injection.language "gitignore")))))))))
