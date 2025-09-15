@@ -18,3 +18,8 @@
         (string_fragment) @injection.content)
     ])
   (#set! injection.language "css"))
+
+; === Triple slash comment ===
+(((comment) @_triple_slash
+  (#lua-match? @_triple_slash "^///")) @injection.content
+  (#set! injection.language "html"))
