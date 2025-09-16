@@ -7,7 +7,7 @@
 ---@field opts? boolean
 
 ---@type treesitter.Directive[]
-return {
+local directives = {
   {
     name = 'inject-mdx-js!',
     callback = function(_, _, bufnr, _, metadata)
@@ -20,4 +20,12 @@ return {
       metadata['injection.language'] = 'javascript'
     end,
   },
+}
+
+return {
+  setup = function()
+    for _, directive in ipairs(directives) do
+      vim.treesitter.query.add_directive(directive.name, directive.callback, directive.opts)
+    end
+  end,
 }

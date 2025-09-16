@@ -1,8 +1,5 @@
 local config = function()
   local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
-  local directives = require('plugins.treesitter.directives')
-  local predicates = require('plugins.treesitter.predicates')
-  local langs_to_register = require('plugins.treesitter.register')
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
   local textobjects = require('plugins.treesitter.textobjects')
 
@@ -28,20 +25,9 @@ local config = function()
     sync_install = #vim.api.nvim_list_uis() == 0,
   })
 
-  -- REGISTER LANGUAGES
-  for parser_name, filetype in pairs(langs_to_register) do
-    vim.treesitter.language.register(parser_name, filetype)
-  end
-
-  -- DIRECTIVES
-  for _, directive in ipairs(directives) do
-    vim.treesitter.query.add_directive(directive.name, directive.callback, directive.opts)
-  end
-
-  -- PREDICATES
-  for _, predicate in ipairs(predicates) do
-    vim.treesitter.query.add_predicate(predicate.name, predicate.callback, predicate.opts)
-  end
+  require('plugins.treesitter.register').setup()
+  require('plugins.treesitter.directives').setup()
+  require('plugins.treesitter.predicates').setup()
 end
 
 return {
