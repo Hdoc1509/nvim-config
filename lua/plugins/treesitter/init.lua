@@ -13,7 +13,6 @@ local config = function()
     install_info = {
       url = 'https://github.com/Hdoc1509/tree-sitter-gh-actions-expressions',
       files = { 'src/parser.c' },
-      branch = 'master',
       -- requires Node.js and tree-sitter to be installed
       requires_generate_from_grammar = true,
     },
