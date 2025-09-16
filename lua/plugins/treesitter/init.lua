@@ -9,11 +9,13 @@ local config = function()
   require('hygen.tree-sitter').setup()
 
   ---@diagnostic disable-next-line: inject-field
-  parser_config.githubactions = {
+  parser_config.gh_actions_expressions = {
     install_info = {
-      url = 'https://github.com/disrupted/tree-sitter-github-actions',
+      url = 'https://github.com/Hdoc1509/tree-sitter-gh-actions-expressions',
       files = { 'src/parser.c' },
-      branch = 'main',
+      branch = 'master',
+      -- requires Node.js and tree-sitter to be installed
+      requires_generate_from_grammar = true,
     },
   }
 
