@@ -3,17 +3,13 @@ local floating_preview_id = nil
 
 ---@param responses table<integer, { error: lsp.ResponseError, result: any }>
 local function request_handler(responses)
-  if #responses == 0 or (#responses == 1 and responses[1].result == nil) then
-    vim.notify('No information available')
-    return
-  end
-
   --- use `gF` to jump to file
   --- based on $VIMRUNTIME/lua/vim/lsp/handlers.lua:351
   local value = {}
   -- local value = ''
 
   -- for client_id, response in pairs(responses) do
+  -- NOTE: it can be a list or an indexex table
   for _, response in pairs(responses) do
     -- local client = vim.lsp.get_client_by_id(client_id)
     local result = response.result
@@ -28,7 +24,7 @@ local function request_handler(responses)
     -- - { value: string }
     -- - (string | { value: string })[]
 
-    if result ~= nil and result.contents ~= nil then
+    if result ~= nil and result.contents ~= nil and result.contents.value ~= '' then
       local md_lines = lsp_util.convert_input_to_markdown_lines(result.contents)
 
       if not vim.tbl_isempty(value) then
@@ -59,6 +55,8 @@ local function request_handler(responses)
 
       floating_preview_id = winnr
     end
+  else
+    vim.notify('No information available')
   end
 end
 
