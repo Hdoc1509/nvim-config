@@ -3,9 +3,6 @@ require('mason-tool-installer').setup({
   ensure_installed = {
     -- See https://mason-registry.dev/registry/list for available tools
 
-    -- CLI
-    { 'tree-sitter-cli', version = 'v0.25.6' }, -- needed for tree-sitter-test
-
     -- LSP
     { 'ast-grep', version = '0.32.2' },
     { 'astro-language-server', version = '2.10.0' },
