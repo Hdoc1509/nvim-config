@@ -8,6 +8,7 @@ return {
   'diff',
   'editorconfig',
   'embedded_template',
+  'gh_actions_expressions',
   'gitattributes',
   'gitcommit',
   'githubactions',
