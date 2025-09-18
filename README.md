@@ -5,26 +5,14 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 - Linux Distro: [`Linux Mint 21.2 Cinnamon`](https://www.linuxmint.com/edition.php?id=305)
 - Windows Version: Windows 10 _(pending to check subversion)_
 
-## Features
+## Docs
 
-See [Features](./docs/features.md).
+- [Features](./docs/features.md)
+- [Installation](./docs/install.md)
+- [Keymaps](./docs/keymaps.md)
+- [Customization](./docs/customization.md)
+- [Troubleshooting](./docs/troubleshooting.md)
 
-## Installation
+## Other
 
-See [Installation](./docs/install.md).
-
-## Mappings
-
-See [Keymaps](./docs/keymaps.md).
-
-## Customization
-
-See [Customization](./docs/customization.md).
-
-## Troubleshooting
-
-See [Troubleshooting](./docs/troubleshooting.md).
-
-## My dotfiles
-
-[My dotfiles](https://github.com/Hdoc1509/dotfiles)
+- [My dotfiles](https://github.com/Hdoc1509/dotfiles)
