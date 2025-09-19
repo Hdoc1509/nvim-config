@@ -2,9 +2,21 @@
 
 (null) @constant.builtin
 
-(number) @number
+[
+  (number)
+  (format_index)
+] @number
 
-(string) @string
+[
+  (string)
+  (format_string)
+] @string
+
+(format_variable
+  [
+    "{"
+    "}"
+  ] @punctuation.bracket)
 
 (scape_sequence) @string.escape
 

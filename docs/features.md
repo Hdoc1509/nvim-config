@@ -112,6 +112,7 @@
 - diff
 - editorconfig
 - embedded_template (ejs)
+- gh_actions_expressions
 - gitattributes
 - gitcommit
 - gitignore

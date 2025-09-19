@@ -3,16 +3,14 @@
   (#eq? @function "fromJSON")
   arguments: (arguments
     .
-    (literal
-      (string
-        (string_content) @injection.content
-        (#set! injection.language "json")))))
+    (string
+      (string_content) @injection.content
+      (#set! injection.language "json"))))
 
 (function_call
   function: (identifier) @function
   (#eq? @function "hashFiles")
   arguments: (arguments
-    (literal
-      (string
-        (string_content) @injection.content
-        (#set! injection.language "gitignore")))))
+    (string
+      (string_content) @injection.content
+      (#set! injection.language "gitignore"))))
