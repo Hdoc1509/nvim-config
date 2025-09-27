@@ -17,16 +17,20 @@ local attach = function(ev)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_nmap('grd', function()
     lsp_buf.definition({ reuse_win = true })
-  end)
-  buf_nmap('gO', lsp_buf.document_symbol) -- NOTE: not needed from nvim-0.11
-  buf_nmap('J', lsp_buf.signature_help)
+  end, { desc = 'Go to definition' })
+  -- NOTE: not needed from nvim-0.11
+  buf_nmap('gO', lsp_buf.document_symbol, { desc = 'List symbols' })
+  buf_nmap('J', lsp_buf.signature_help, { desc = 'Show signature help' })
   buf_nmap('K', function()
     hover_multi_lsp(ev.buf)
-  end)
-  buf_nmap('grt', lsp_buf.type_definition)
-  buf_nmap('grn', lsp_buf.rename) -- NOTE: not needed from nvim-0.11
-  buf_nmap('gra', lsp_buf.code_action) -- NOTE: not needed from nvim-0.11
-  buf_nmap('grr', lsp_buf.references) -- NOTE: not needed from nvim-0.11
+  end, { desc = 'Hover' })
+  buf_nmap('grt', lsp_buf.type_definition, { desc = 'Go to type definition' })
+  -- NOTE: not needed from nvim-0.11
+  buf_nmap('grn', lsp_buf.rename, { desc = 'Rename' })
+  -- NOTE: not needed from nvim-0.11
+  buf_nmap('gra', lsp_buf.code_action, { desc = 'Code actions' })
+  -- NOTE: not needed from nvim-0.11
+  buf_nmap('grr', lsp_buf.references, { desc = 'List references' })
 
   -- NOTE: you can create user commands for specific LSP server
   -- see :help lspconfig-configurations
