@@ -1,5 +1,4 @@
 local config = function()
-  local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
   local textobjects = require('plugins.treesitter.textobjects')
 
@@ -7,17 +6,7 @@ local config = function()
   require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
 
   require('hygen.tree-sitter').setup()
-
-  ---@diagnostic disable-next-line: inject-field
-  parser_config.gh_actions_expressions = {
-    install_info = {
-      url = 'https://github.com/Hdoc1509/tree-sitter-gh-actions-expressions',
-      files = { 'src/parser.c' },
-      branch = 'release',
-      -- requires Node.js and tree-sitter to be installed
-      requires_generate_from_grammar = true,
-    },
-  }
+  require('gh-actions.tree-sitter').setup({ from_grammar = true })
 
   ---@diagnostic disable-next-line: missing-fields
   require('nvim-treesitter.configs').setup({
@@ -39,6 +28,10 @@ return {
     -- { dir = '~/dev/hygen.nvim' },
     -- { 'Hdoc1509/hygen.nvim', version = '*' },
     { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    {
+      'Hdoc1509/gh-actions.nvim', --[[ version = '*', branch = 'name' ]]
+      -- dir = '~/dev/nvim-plugins/gh-actions.nvim',
+    },
     {
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',

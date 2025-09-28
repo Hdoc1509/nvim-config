@@ -56,6 +56,8 @@
 - Highlighting of cmdline window with [`cmdline-hl.nvim`](https://github.com/Sam-programs/cmdline-hl.nvim)
 - Better registers management with [`registers.nvim`](https://github.com/tversteeg/registers.nvim)
 - Search Nerd Font icons easily with [`nerdy.nvim`](https://github.com/2kabhishek/nerdy.nvim)
+- Better support for [`Github Actions`](https://docs.github.com/en/actions/reference/workflows-and-actions)
+  files with [`gh-actions.nvim`](https://github.com/Hdoc1509/gh-actions.nvim)
 
 ## Tools
 

@@ -31,6 +31,10 @@ return {
     -- { dir = '~/dev/hygen.nvim' },
     -- { 'Hdoc1509/hygen.nvim', version = '*' },
     { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    {
+      'Hdoc1509/gh-actions.nvim', --[[ version = '*', branch = 'name' ]]
+      -- dir = '~/dev/nvim-plugins/gh-actions.nvim',
+    },
   },
   event = 'BufReadPre',
   config = config,
