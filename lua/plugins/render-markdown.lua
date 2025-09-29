@@ -34,8 +34,8 @@ return {
       },
       code = {
         sign = false,
-        below = '',
-        language_border = '',
+        border = 'thick',
+        highlight_inline = 'None',
       },
       html = {
         comment = { conceal = false },
