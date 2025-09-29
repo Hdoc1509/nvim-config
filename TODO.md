@@ -25,12 +25,6 @@
 
 https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/highlights.scm
 
-#### Yaml
-
-- Highlight Gith Workflow expressions (injections)
-  https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/evaluate-expressions-in-workflows-and-actions
-  maybe develop tree-sitter-github-workflow-expression parser?
-
 ## Try
 
 - https://github.com/bennypowers/svgo.nvim
