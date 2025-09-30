@@ -44,13 +44,6 @@
     (#lua-match? @variable.parameter "^%-%-[%a%-]+$")
     (#is-conf-file? "")))
 
-(command
-  (command_name
-    (word) @variable.parameter
-    (#lua-match? @variable.parameter "^%-%-[%a%-]+$")
-    (#is-conf-file? ""))
-  argument: (word) @string)
-
 (variable_assignment
   (variable_name) @variable.parameter
   (#lua-match? @variable.parameter "^%-%-[%a%-]+$")
