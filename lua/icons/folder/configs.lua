@@ -487,7 +487,16 @@ return {
     hl = 'DevIconnode',
     folder_names = { '.npm', 'node', 'node_modules', 'nodejs', 'npm' },
   },
-  neovim = { hl = 'DevIconVim', folder_names = { 'neovim', 'nvim' } },
+  neovim = {
+    hl = 'DevIconVim',
+    folder_names = {
+      'gh-actions.nvim',
+      'hygen.nvim',
+      'neovim',
+      'nvim',
+      'nvim-plugins',
+    },
+  },
   opt = { icon = '󰉗', hl = 'FolderConfig' },
   other = {
     hl = 'FolderOther',
