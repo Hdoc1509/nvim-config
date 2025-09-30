@@ -714,7 +714,13 @@ return {
   trash = { icon = '󱧴', hl = 'FolderTrash', folder_names = { 'Trash', 'trash' } },
   treesitter = {
     hl = 'DevIconTreeSitterQuery',
-    folder_names = { 'treesitter', 'tree-sitter', 'ts_query_ls' },
+    folder_names = {
+      'tree-sitter',
+      'tree-sitter-gh-actions-expressions',
+      'tree-sitter-hygen-template',
+      'treesitter',
+      'ts_query_ls',
+    },
   },
   tutor = { icon = '󱁽', hl = 'DevIconVim' },
   typescript = {
