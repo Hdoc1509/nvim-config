@@ -322,7 +322,16 @@ return {
   github = {
     icon = '',
     hl = 'FolderGithub',
-    folder_names = { '.github', 'gh', 'githubactions' },
+    folder_names = {
+      '.github',
+      'gh',
+      'gh_actions_expressions',
+      'gh_gist',
+      'gh_issue',
+      'gh_pr',
+      'gh_release',
+      'gh_repo',
+    },
   },
   git = {
     icon = '',
