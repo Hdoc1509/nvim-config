@@ -20,6 +20,13 @@
   (#set! injection.language "regex")
   (#offset! @injection.content 0 1 0 -1))
 
+(variable_assignment
+  (variable_name) @_name
+  (#eq? @_name "FZF_DEFAULT_COMMAND")
+  value: (raw_string) @injection.content
+  (#set! injection.language "bash")
+  (#offset! @injection.content 0 1 0 -1))
+
 (command
   name: (command_name) @_awk
   (#eq? @_awk "awk")
@@ -84,3 +91,33 @@
   argument: (string
     (string_content) @injection.content)
   (#set! injection.language "bash"))
+
+(command
+  name: (command_name) @_alias
+  (#eq? @_alias "alias")
+  .
+  argument: (concatenation
+    (raw_string) @injection.content)
+  (#offset! @injection.content 0 1 0 -1)
+  (#set! injection.language "bash"))
+
+(command
+  name: (command_name) @_alias
+  (#eq? @_alias "alias")
+  .
+  argument: (concatenation
+    (string
+      (string_content) @injection.content)
+    (#set! injection.language "bash")))
+
+(command
+  (command_name) @_nvim
+  (#eq? @_nvim "nvim")
+  argument: (concatenation
+    .
+    (word) @_plus
+    (#eq? @_plus "+")
+    .
+    (string
+      (string_content) @injection.content))
+  (#set! injection.language "vim"))
