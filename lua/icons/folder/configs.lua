@@ -357,15 +357,7 @@ return {
     folder_names = { 'hook', 'hooks', 'trigger', 'triggers' },
   },
   html = { icon = '󱋣', hl = 'DevIconHtml' },
-  hygen = {
-    hl = 'DevIconHygen',
-    folder_names = {
-      'hygen',
-      'hygen.nvim',
-      'hygen_template',
-      'tree-sitter-hygen-template',
-    },
-  },
+  ['hygen_template'] = { hl = 'DevIconHygen' },
   i18n = {
     icon = '󱁽',
     hl = 'FolderI18n',
