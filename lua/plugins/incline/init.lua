@@ -4,7 +4,7 @@ return {
     'itchyny/lightline.vim',
     'nvim-tree/nvim-web-devicons',
     'nanozuki/tabby.nvim',
-    -- { dir = '~/dev/hygen.nvim' },
+    -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
     -- { 'Hdoc1509/hygen.nvim', version = '*' },
     { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
   },
