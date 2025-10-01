@@ -2,6 +2,10 @@ local config = function()
   local nvim_lsp = require('lspconfig')
   local servers = require('plugins.lsp.servers')
 
+  -- TODO: once updated to nvim 0.10 try to use the following setup logic
+  -- instead of hooks:
+  -- https://github.com/folke/lazydev.nvim/blob/main/lua/lazydev/lsp.lua
+  require('plugins.lsp.servers.hooks').setup()
   require('plugins.lsp.attach').setup()
 
   for server, setting in pairs(servers) do

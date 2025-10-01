@@ -22,7 +22,7 @@ return {
     },
   }),
   ['eslint'] = default_settings,
-  gh_actions_ls = default_settings,
+  gh_actions_ls = merge(default_settings, require('plugins.lsp.servers.gh_actions_ls')),
   ['gradle_ls'] = default_settings,
   ['html'] = merge(default_settings, {
     filetypes = { 'html', 'ejs' },
