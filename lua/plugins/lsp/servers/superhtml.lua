@@ -19,7 +19,7 @@ local function is_diagnostic_ignored(diagnostic, uri)
   return false
 end
 
-return utils.merge(require('plugins.lsp.servers._default_settings'), {
+return {
   handlers = {
     ---@param result { diagnostics: Diagnostic[], uri: string }
     ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
@@ -37,4 +37,4 @@ return utils.merge(require('plugins.lsp.servers._default_settings'), {
       vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
     end,
   },
-})
+}

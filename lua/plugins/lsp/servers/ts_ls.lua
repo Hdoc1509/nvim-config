@@ -1,5 +1,3 @@
-local default_settings = require('plugins.lsp.servers._default_settings')
-
 ---@param diagnostic lsp.Diagnostic
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
@@ -7,7 +5,7 @@ local function is_diagnostic_ignored(diagnostic, uri)
     or (uri:match('tree%-sitter%-hygen%-template/grammar%.js') ~= nil and diagnostic.code == 7016)
 end
 
-return require('utils').merge(default_settings, {
+return {
   handlers = {
     ---@param result { diagnostics: lsp.Diagnostic[], uri: string }
     ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
@@ -20,4 +18,4 @@ return require('utils').merge(default_settings, {
       vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
     end,
   },
-})
+}

@@ -1,8 +1,6 @@
 local schema_store = require('schemastore')
-local merge = require('utils').merge
-local default_settings = require('plugins.lsp.servers._default_settings')
 
-return merge(default_settings, {
+return {
   settings = {
     yaml = {
       schemas = schema_store.yaml.schemas({
@@ -10,4 +8,4 @@ return merge(default_settings, {
       }),
     },
   },
-})
+}

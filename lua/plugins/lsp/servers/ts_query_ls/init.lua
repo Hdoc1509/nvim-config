@@ -1,6 +1,4 @@
-local default_settings = require('plugins.lsp.servers._default_settings')
-
-return require('utils').merge(default_settings, {
+return require('utils').merge({
   settings = {
     parser_install_directories = {
       vim.fn.stdpath('data') .. '/lazy/nvim-treesitter/parser/',
