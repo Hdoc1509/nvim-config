@@ -28,6 +28,6 @@ servers](https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md).
 Once you have all software requirements for desired LSP server, you need to:
 
 - Configure it in the list of servers in
-  [`lua/plugins/lsp/servers.lua`](/lua/plugins/lsp/servers).
+  [`lua/plugins/lsp/servers.lua`](/lua/plugins/lsp/servers/init.lua).
 - Add it to the list of mason tools in
   [`lua/plugins/lsp/mason.lua`](/lua/plugins/lsp/mason.lua).
