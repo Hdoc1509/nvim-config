@@ -1,5 +1,9 @@
 local merge = require('utils').merge
-local default_settings = require('plugins.lsp.servers._default_settings')
+
+local default_settings = {
+  capabilities = require('plugins.lsp.capabilities'),
+  handlers = require('plugins.lsp.handlers'),
+}
 
 -- NOTE: move config to its own file if it uses more than 5 lines
 return {
