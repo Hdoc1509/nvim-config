@@ -58,6 +58,7 @@
 - Search Nerd Font icons easily with [`nerdy.nvim`](https://github.com/2kabhishek/nerdy.nvim)
 - Better support for [`Github Actions`](https://docs.github.com/en/actions/reference/workflows-and-actions)
   files with [`gh-actions.nvim`](https://github.com/Hdoc1509/gh-actions.nvim)
+- Improve visibility of current line with [`line-number-change-mode.nvim`](https://github.com/sethen/line-number-change-mode.nvim)
 
 ## Tools
 
