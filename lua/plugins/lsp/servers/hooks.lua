@@ -1,4 +1,4 @@
-local lspconfig = require('lspconfig')
+local lsp_util = require('lspconfig').util
 
 local hooks = {
   before = {
@@ -8,7 +8,7 @@ local hooks = {
 
 local function setup()
   for _, hook in ipairs(hooks.before) do
-    lspconfig.util.on_setup = lspconfig.util.add_hook_before(lspconfig.util.on_setup, hook)
+    lsp_util.on_setup = lsp_util.add_hook_before(lsp_util.on_setup, hook)
   end
 end
 
