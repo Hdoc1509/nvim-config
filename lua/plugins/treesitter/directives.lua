@@ -30,8 +30,11 @@ local directives = {
     name = 'inject-vim-cmd-offset!',
     callback = function(match, _, bufnr, pred, metadata)
       -- reference (gF): $VIMRUNTIME/lua/vim/treesitter/query.lua:422
-      ---@cast pred integer[]
       local capture_id = pred[2]
+      if type(capture_id) ~= 'number' then
+        return
+      end
+
       local node = match[capture_id]
       if not node then
         return
