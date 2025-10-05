@@ -85,3 +85,12 @@
   (#inject-vim-cmd-offset! @injection.content))
 
 ; TODO: add `vim` injection to `cmd` string|strint[] option of lazy spec file
+(function_call
+  name: (method_index_expression
+    method: (identifier) @_match)
+  arguments: (arguments
+    (binary_expression
+      (string
+        (string_content) @injection.content)))
+  (#eq? @_match "match")
+  (#set! injection.language "luap"))
