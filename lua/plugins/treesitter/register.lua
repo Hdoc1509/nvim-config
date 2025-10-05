@@ -1,7 +1,8 @@
 -- table<parser_name, filetype>
 local langs_to_register = {
-  bash = 'zsh',
+  bash = { 'zsh', 'conf' },
   embedded_template = 'ejs',
+  html = 'svg',
   -- https://phelipetls.github.io/posts/mdx-syntax-highlight-treesitter-nvim/#supporting-mdx-files
   markdown = 'markdown.mdx',
   gitignore = { 'packwizignore', 'styluaignore' },

@@ -1,11 +1,13 @@
 local config = function()
   local prettier = require('formatter.defaults.prettier')
+  local shfmt = require('formatter.filetypes.sh').shfmt
 
   require('formatter').setup({
     filetype = {
-      astro = { prettier },
+      astro = { prettier }, -- NOTE: requires prettier-plugin-astro
+      conf = { shfmt },
       css = { prettier },
-      ejs = { prettier },
+      ejs = { prettier }, -- NOTE: requires prettier-plugins-ejs
       groovy = {
         function()
           return {
@@ -40,8 +42,13 @@ local config = function()
           }
         end,
       },
-      sh = { require('formatter.filetypes.sh').shfmt },
       scss = { prettier },
+      sh = { shfmt },
+      svg = {
+        function()
+          prettier('html')
+        end,
+      },
       typescript = { prettier },
       typescriptreact = { prettier },
       yaml = { prettier },
