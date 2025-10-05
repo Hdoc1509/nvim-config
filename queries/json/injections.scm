@@ -62,3 +62,6 @@
             (string
               (string_content) @injection.content
               (#set! injection.language "gitignore"))))))))
+
+; TODO: add bash injections to string values of fabric.mod.json if has "${"
+; include surrounding quotes

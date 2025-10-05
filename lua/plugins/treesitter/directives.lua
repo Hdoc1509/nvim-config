@@ -6,6 +6,12 @@
 ---@field callback TSDirective
 ---@field opts? boolean
 
+-- TODO: update structure
+-- ---@type table<string,TSDirective>
+-- local directives = {
+--   ['directive-name!'] = function() end
+-- }
+
 ---@type treesitter.Directive[]
 local directives = {
   {

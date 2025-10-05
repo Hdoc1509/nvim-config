@@ -47,6 +47,7 @@ return {
           ejs = 'html',
         },
       },
+      -- TODO: highlight as @constant
       event = { 'BufReadPre', 'BufNewFile' },
     },
     'nvim-treesitter/nvim-treesitter-textobjects',
