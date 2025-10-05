@@ -49,4 +49,16 @@ return {
     },
     description = 'Checks if file has `.conf` extension',
   },
+  ['is-nvim-config-file'] = {
+    parameters = {
+      { type = 'string', arity = 'required' },
+    },
+    description = "Checks if file is in neovim's config directory",
+  },
+  ['is-lazy-config-file'] = {
+    parameters = {
+      { type = 'string', arity = 'optional' },
+    },
+    description = "Checks if file is a lazy.nvim config file in neovim's config directory",
+  },
 }

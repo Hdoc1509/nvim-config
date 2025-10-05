@@ -22,4 +22,10 @@ return {
     },
     description = 'Injects `javascript`. Only have effect in `mdx` files.',
   },
+  ['inject-vim-cmd-offset'] = {
+    parameters = {
+      { type = 'capture', arity = 'required' },
+    },
+    description = 'Injects vim parser in mappings for commands. Expected to be used along `is-lazy-config-file?` predicate.',
+  },
 }
