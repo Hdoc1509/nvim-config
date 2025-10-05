@@ -11,9 +11,7 @@ local predicates = {
   {
     name = 'is-conf-file?',
     callback = function(_, _, bufnr)
-      local filename = vim.api.nvim_buf_get_name(bufnr)
-      local extension = vim.fn.fnamemodify(filename, ':e')
-      return extension == 'conf'
+      return vim.bo[bufnr].filetype == 'conf'
     end,
   },
 }
