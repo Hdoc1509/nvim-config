@@ -1,7 +1,12 @@
 -- NOTE: in neovim 0.9. `opts` is a boolean, from 0.10 it's a table
 -- be sure to update the type when migrating to neovim 0.10
 
----@type treesitter.Directive[]
+---@class treesitter.PredicateConfig
+---@field name string
+---@field callback TSPredicate
+---@field opts? boolean
+
+---@type treesitter.PredicateConfig[]
 local predicates = {
   {
     name = 'is-conf-file?',
