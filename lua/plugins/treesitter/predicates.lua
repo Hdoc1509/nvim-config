@@ -1,7 +1,8 @@
 -- NOTE: in neovim 0.9. `opts` is a boolean, from 0.10 it's a table
 -- be sure to update the type when migrating to neovim 0.10
 
-local plugins_path = vim.fn.stdpath('config') .. '/lua/plugins'
+local config_path = vim.fn.stdpath('config')
+local plugins_path = config_path .. '/lua/plugins'
 
 ---@class treesitter.PredicateConfig
 ---@field name string
@@ -26,6 +27,17 @@ local predicates = {
 
       return filename:match(plugins_path .. '/[%a-]+/init%.lua$') ~= nil
         or filename:match(plugins_path .. '/[%a-]+%.lua$') ~= nil
+    end,
+  },
+  {
+    name = 'is-nvim-config-file?',
+    callback = function(_, _, bufnr, pred)
+      local target_filename = pred[2]
+      if type(target_filename) ~= 'string' then
+        return false
+      end
+
+      return config_path .. '/' .. target_filename == vim.api.nvim_buf_get_name(bufnr)
     end,
   },
 }

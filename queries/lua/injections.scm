@@ -41,8 +41,7 @@
 (variable_declaration
   (assignment_statement
     (variable_list
-      name: (identifier) @_id
-      (#lua-match? @_id "^linter_patterns$"))
+      name: (identifier) @_id)
     (expression_list
       value: (table_constructor
         (field
@@ -55,8 +54,10 @@
                   (field
                     value: (string
                       (string_content) @injection.content)))
-              ]
-              (#set! injection.language "gitignore"))))))))
+              ]))))))
+  (#eq? @_id "linter_patterns")
+  (#is-nvim-config-file? "lua/plugins/lint/init.lua")
+  (#set! injection.language "gitignore"))
 
 ((function_call
   name: (_) @_vimcmd_identifier
