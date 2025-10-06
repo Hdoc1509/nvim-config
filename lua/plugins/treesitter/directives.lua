@@ -51,29 +51,36 @@ local directives = {
 
       local range = metadata[capture_id].range or { match[capture_id]:range() }
       local rhs = vim.treesitter.get_node_text(node, bufnr)
+
       local start_col_offset = nil
       local end_col = nil
 
-      local cr_start = rhs:find('<cr>')
-      local start_colon = rhs:match('^:')
+      local cmd_start = rhs:find('<cmd>')
 
-      if cr_start ~= nil then
-        end_col = range[2] + cr_start - 1
+      if cmd_start ~= nil then
+        local cr_start = rhs:find('<cr>', cmd_start)
 
-        if start_colon ~= nil then
-          start_col_offset = 1
-        elseif rhs:match('^<cmd>') ~= nil then
-          start_col_offset = 5
+        if cr_start ~= nil then
+          start_col_offset = cmd_start + 4
+          end_col = range[2] + cr_start - 1
         end
       else
-        if start_colon ~= nil then
-          local end_space = rhs:find('%s$')
-          if end_space == nil then
-            return
-          end
+        local colon_start = rhs:find(':')
 
-          start_col_offset = 1
-          end_col = range[2] + end_space - 1
+        if colon_start ~= nil then
+          start_col_offset = colon_start - 1
+
+          local cr_start = rhs:find('<cr>', colon_start)
+
+          if cr_start ~= nil then
+            end_col = range[2] + cr_start - 1
+          else
+            local end_space = rhs:find('%s$')
+
+            if end_space ~= nil then
+              end_col = range[2] + end_space - 1
+            end
+          end
         end
       end
 
