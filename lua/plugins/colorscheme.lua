@@ -113,6 +113,13 @@ local config = function()
         FolderViews = { fg = COLORS['deep-orange-400'] },
         FolderVite = { fg = COLORS['amber-A700'] },
         ['@diagnostic.warn'] = { link = 'DiagnosticWarn' },
+
+        -- LSP semantic tokens
+        -- Priorities (lower to higher):
+        -- @lsp.type.<type>[.<ft>]
+        -- @lsp.mod.<mod>[.<ft>]
+        -- @lsp.typemod.<type>.<mod>[.<ft>]
+        ['@lsp.typemod.variable.readonly'] = { link = '@constant' },
       },
     },
   })
