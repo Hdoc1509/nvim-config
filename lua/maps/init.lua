@@ -1,3 +1,4 @@
+local lsp_log = require('vim.lsp.log')
 local utils = require('utils')
 
 local nmap = utils.nmap
@@ -45,3 +46,14 @@ nmap('[q', '<cmd>cprevious<cr>', { desc = 'Jump to previous quickfix item' })
 nmap('[Q', '<cmd>cfirst<cr>', { desc = 'Jump to first quickfix item' })
 nmap(']q', '<cmd>cnext<cr>', { desc = 'Jump to next quickfix item' })
 nmap(']Q', '<cmd>clast<cr>', { desc = 'Jump to last quickfix item' })
+
+-- LSP log
+nmap('<leader>ll', function()
+  if lsp_log.get_level() == vim.lsp.log_levels.OFF then
+    vim.lsp.set_log_level('debug')
+    utils.map_notify('LSP log enabled')
+  else
+    vim.lsp.set_log_level('off')
+    utils.map_notify('LSP log disabled')
+  end
+end, { desc = 'Toggle LSP log' })
