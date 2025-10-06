@@ -59,6 +59,7 @@ end
 return {
   'mhartington/formatter.nvim',
   config = config,
+  cmd = { 'FormatWrite' },
   keys = {
     { '<leader>f', '<cmd>Format<cr>' },
     { '<leader>f', ":'<,'>Format<cr>", mode = 'x' },
