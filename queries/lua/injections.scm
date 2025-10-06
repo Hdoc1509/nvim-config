@@ -83,7 +83,7 @@
                     content: (string_content) @injection.content)))))))))
   (#is-lazy-config-file? "")
   (#eq? @_field "keys")
-  (#inject-vim-cmd-offset! @injection.content))
+  (#inject-vim-mapping-cmd! @injection.content))
 
 ; TODO: add `vim` injection to `cmd` string|strint[] option of lazy spec file
 (function_call

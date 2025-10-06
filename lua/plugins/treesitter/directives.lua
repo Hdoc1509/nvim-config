@@ -27,7 +27,7 @@ local directives = {
     end,
   },
   {
-    name = 'inject-vim-cmd-offset!',
+    name = 'inject-vim-mapping-cmd!',
     callback = function(match, _, bufnr, pred, metadata)
       -- reference (gF): $VIMRUNTIME/lua/vim/treesitter/query.lua:422
       local capture_id = pred[2]

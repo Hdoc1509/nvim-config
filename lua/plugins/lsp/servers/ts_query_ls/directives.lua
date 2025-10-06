@@ -22,7 +22,7 @@ return {
     },
     description = 'Injects `javascript`. Only have effect in `mdx` files.',
   },
-  ['inject-vim-cmd-offset'] = {
+  ['inject-vim-mapping-cmd'] = {
     parameters = {
       { type = 'capture', arity = 'required' },
     },
