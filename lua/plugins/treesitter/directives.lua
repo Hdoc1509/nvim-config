@@ -45,6 +45,10 @@ local directives = {
         metadata[capture_id] = {}
       end
 
+      if node:type() ~= 'string_content' then
+        return
+      end
+
       local range = metadata[capture_id].range or { match[capture_id]:range() }
       local rhs = vim.treesitter.get_node_text(node, bufnr)
       local start_col_offset = nil

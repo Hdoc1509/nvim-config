@@ -24,8 +24,12 @@ return {
   },
   ['inject-vim-mapping-cmd'] = {
     parameters = {
-      { type = 'capture', arity = 'required' },
+      {
+        type = 'capture',
+        arity = 'required',
+        description = '`(string_content)` node from `lua` parser',
+      },
     },
-    description = 'Injects vim parser in mappings for commands. Expected to be used along `is-lazy-config-file?` predicate.',
+    description = 'Injects vim parser in lua mappings for vim commands.',
   },
 }
