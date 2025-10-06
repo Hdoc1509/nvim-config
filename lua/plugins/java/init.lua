@@ -7,6 +7,7 @@ local function config()
 
   local cache = { java_bin = nil, root_dir = nil, workspace_data_dir = nil }
 
+  -- TODO: highlight event parameter as @constant
   require('utils').autocmd('FileType', {
     pattern = 'java',
     callback = function()

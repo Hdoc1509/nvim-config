@@ -2,7 +2,6 @@ return {
   'https://gitlab.com/HiPhish/rainbow-delimiters.nvim',
   submodules = false,
   init = function()
-    ---@type rainbow_delimiters.config
     vim.g.rainbow_delimiters = {
       strategy = {
         [''] = 'rainbow-delimiters.strategy.global',
@@ -15,6 +14,7 @@ return {
         lua = 210,
       },
       highlight = {
+        -- TODO: highlight as Type
         'RainbowDelimiterRed',
         'RainbowDelimiterYellow',
         'RainbowDelimiterBlue',

@@ -5,13 +5,13 @@ return {
   'lukas-reineke/indent-blankline.nvim',
   dependencies = { 'https://gitlab.com/HiPhish/rainbow-delimiters.nvim' },
   main = 'ibl',
-  ---@type ibl.config
   opts = {
     indent = { char = '│' },
     scope = {
       show_start = false,
       show_end = false,
       highlight = {
+        -- TODO: highlight as Type
         'RainbowDelimiterRed',
         'RainbowDelimiterYellow',
         'RainbowDelimiterBlue',
@@ -22,7 +22,6 @@ return {
       },
     },
   },
-  ---@param opts ibl.config
   config = function(_, opts)
     local hooks = require('ibl.hooks')
 

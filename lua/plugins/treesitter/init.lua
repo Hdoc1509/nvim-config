@@ -34,14 +34,12 @@ return {
     {
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',
-      ---@type ts_context_commentstring.Config
       opts = {
         enable_autocmd = false,
       },
     },
     {
       'windwp/nvim-ts-autotag',
-      ---@type nvim-ts-autotag.PluginSetup
       opts = {
         aliases = {
           ejs = 'html',
