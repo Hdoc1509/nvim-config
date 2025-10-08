@@ -95,3 +95,12 @@
         (string_content) @injection.content)))
   (#eq? @_match "match")
   (#set! injection.language "luap"))
+
+(function_call
+  name: (identifier) @_fn
+  arguments: (arguments
+    (string
+      (string_content) @injection.content))
+  (#any-of? @_fn "nmap" "buf_nmap")
+  (#is-nvim-config-file? "")
+  (#inject-vim-mapping-cmd! @injection.content))
