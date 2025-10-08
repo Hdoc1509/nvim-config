@@ -39,17 +39,6 @@ local directives = {
     local start_col_offset = nil
     local end_col = nil
 
-    -- TODO: handle these too:
-    -- from
-    -- :vimgrep /<c-r>0/ ** | copen | cdo %s/<c-r>0/replace/gc<left><left><left><left><c-w>
-    -- to
-    -- vimgrep /<c-r>0/ ** | copen | cdo %s/<c-r>0/replace/gc<left><left><left><left><c-w>
-    -- ---
-    -- from
-    -- :%s/<c-r>0/replace/gc<left><left><left><left><c-w>
-    -- to
-    -- s/<c-r>0/replace/gc<left><left><left><left><c-w>
-
     local cmd_start = rhs:find('<cmd>')
 
     if cmd_start ~= nil then

@@ -137,3 +137,25 @@
   (#any-of? @_fn "nmap" "buf_nmap")
   (#is-nvim-config-file? "")
   (#inject-vim-mapping-cmd! @injection.content))
+
+(function_call
+  name: (identifier) @_fn
+  arguments: (arguments
+    (string
+      (string_content) @injection.content))
+  (#eq? @_fn "keymap")
+  (#lua-match? @injection.content "^y:%%s/")
+  (#is-nvim-config-file? "lua/maps/text.lua")
+  (#offset! @injection.content 0 3 0 0)
+  (#set! injection.language "vim"))
+
+(function_call
+  name: (identifier) @_fn
+  arguments: (arguments
+    (string
+      (string_content) @injection.content))
+  (#eq? @_fn "keymap")
+  (#lua-match? @injection.content "^y:vimgrep")
+  (#is-nvim-config-file? "lua/maps/text.lua")
+  (#offset! @injection.content 0 1 0 0)
+  (#set! injection.language "vim"))
