@@ -43,6 +43,7 @@ return {
   {
     'junegunn/fzf.vim',
     dependencies = 'junegunn/fzf',
+    cmd = { 'Rg' },
     config = function()
       local nmap = require('utils').nmap
 
