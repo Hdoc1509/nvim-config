@@ -13,16 +13,7 @@ return {
         [''] = 110,
         lua = 210,
       },
-      highlight = {
-        -- TODO: highlight as Type
-        'RainbowDelimiterRed',
-        'RainbowDelimiterYellow',
-        'RainbowDelimiterBlue',
-        'RainbowDelimiterOrange',
-        'RainbowDelimiterGreen',
-        'RainbowDelimiterViolet',
-        'RainbowDelimiterCyan',
-      },
+      highlight = require('plugins.indent-blankline').opts.scope.highlight,
     }
   end,
 }
