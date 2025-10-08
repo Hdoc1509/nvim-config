@@ -11,7 +11,6 @@ return {
       show_start = false,
       show_end = false,
       highlight = {
-        -- TODO: highlight as Type
         'RainbowDelimiterRed',
         'RainbowDelimiterYellow',
         'RainbowDelimiterBlue',

@@ -120,3 +120,12 @@ local_declaration: (variable_declaration
                 (string_content) @variable.parameter)))))))
   (#eq? @_args "args")
   (#is-linter-config-file? ""))
+
+(field
+  name: (identifier) @_highlight
+  value: (table_constructor
+    (field
+      value: (string
+        (string_content) @type)))
+  (#eq? @_highlight "highlight")
+  (#is-nvim-config-file? "lua/plugins/indent-blankline.lua"))
