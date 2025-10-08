@@ -33,8 +33,10 @@ local predicates = {
     name = 'is-nvim-config-file?',
     callback = function(_, _, bufnr, pred)
       local target_filename = pred[2]
-      if type(target_filename) ~= 'string' then
-        return false
+      local filename = vim.api.nvim_buf_get_name(bufnr)
+
+      if type(target_filename) ~= 'string' or target_filename == '' then
+        return filename:match(config_path) ~= nil
       end
 
       return config_path .. '/' .. target_filename == vim.api.nvim_buf_get_name(bufnr)

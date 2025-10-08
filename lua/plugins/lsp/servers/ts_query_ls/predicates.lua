@@ -51,9 +51,19 @@ return {
   },
   ['is-nvim-config-file'] = {
     parameters = {
-      { type = 'string', arity = 'required' },
+      { type = 'string', arity = 'optional' },
     },
-    description = "Checks if file is in neovim's config directory",
+    -- description = "Checks if file is in neovim's config directory",
+    description = table.concat({
+      "Checks if file path is in neovim's config directory, relative to it.",
+      'If no path is provided, it will check if the file is in the config directory.\n',
+      'Example:',
+      '```query',
+      '(#is-nvim-config-file? "")',
+      '; or',
+      '(#is-nvim-config-file? "lua/maps/init.lua")',
+      '```',
+    }, '\n'),
   },
   ['is-lazy-config-file'] = {
     parameters = {
