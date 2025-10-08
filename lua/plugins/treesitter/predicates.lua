@@ -32,6 +32,10 @@ local new_predicates = {
     local filename = vim.api.nvim_buf_get_name(bufnr)
     return filename:match(plugins_path .. '/lint/[%a-]+%.lua$') ~= nil
   end,
+  ['is-fabric-mod-json?'] = function(_, _, bufnr)
+    local filename = vim.api.nvim_buf_get_name(bufnr)
+    return filename:match('fabric%.mod%.json$') ~= nil
+  end,
 }
 
 return {

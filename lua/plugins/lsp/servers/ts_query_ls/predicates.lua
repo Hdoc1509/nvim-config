@@ -77,4 +77,10 @@ return {
     },
     description = "Checks if file is a linter config file in neovim's config directory",
   },
+  ['is-fabric-mod-json'] = {
+    parameters = {
+      { type = 'string', arity = 'optional' },
+    },
+    description = 'Checks if file is a fabric.mod.json file',
+  },
 }
