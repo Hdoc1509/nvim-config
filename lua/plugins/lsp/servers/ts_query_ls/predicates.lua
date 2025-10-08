@@ -71,4 +71,10 @@ return {
     },
     description = "Checks if file is a lazy.nvim config file in neovim's config directory",
   },
+  ['is-linter-config-file'] = {
+    parameters = {
+      { type = 'string', arity = 'optional' },
+    },
+    description = "Checks if file is a linter config file in neovim's config directory",
+  },
 }

@@ -96,3 +96,27 @@ local_declaration: (variable_declaration
         ])))
   (#eq? @_field "cmd")
   (#is-lazy-config-file? ""))
+
+(chunk
+  (return_statement
+    (expression_list
+      (table_constructor
+        (field
+          name: (identifier) @_cmd
+          value: (string
+            (string_content) @function.call)))))
+  (#eq? @_cmd "cmd")
+  (#is-linter-config-file? ""))
+
+(chunk
+  (return_statement
+    (expression_list
+      (table_constructor
+        (field
+          name: (identifier) @_args
+          value: (table_constructor
+            (field
+              (string
+                (string_content) @variable.parameter)))))))
+  (#eq? @_args "args")
+  (#is-linter-config-file? ""))

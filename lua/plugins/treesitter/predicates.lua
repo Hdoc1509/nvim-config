@@ -28,6 +28,10 @@ local new_predicates = {
 
     return config_path .. '/' .. target_filename == vim.api.nvim_buf_get_name(bufnr)
   end,
+  ['is-linter-config-file?'] = function(_, _, bufnr)
+    local filename = vim.api.nvim_buf_get_name(bufnr)
+    return filename:match(plugins_path .. '/lint/[%a-]+%.lua$') ~= nil
+  end,
 }
 
 return {
