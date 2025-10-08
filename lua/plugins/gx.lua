@@ -37,7 +37,6 @@ return {
   keys = {
     { 'gx', '<cmd>Browse<cr>', mode = { 'n', 'x' } },
   },
-  -- TODO: highlight as @function.macro
   cmd = { 'Browse' },
   init = function()
     vim.g.netrw_nogx = 1

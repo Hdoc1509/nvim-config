@@ -26,3 +26,34 @@
       (string
         (string_content) @string.regexp)))
   (#eq? @_match "match"))
+
+(chunk
+  (return_statement
+    (expression_list
+      (table_constructor
+        [
+          (field
+            name: (identifier) @_field
+            value: [
+              (string
+                (string_content) @function.macro)
+              (table_constructor
+                (field
+                  value: (string
+                    (string_content) @function.macro)))
+            ])
+          (field
+            value: (table_constructor
+              (field
+                name: (identifier) @_field
+                value: [
+                  (string
+                    (string_content) @function.macro)
+                  (table_constructor
+                    (field
+                      value: (string
+                        (string_content) @function.macro)))
+                ])))
+        ])))
+  (#eq? @_field "cmd")
+  (#is-lazy-config-file? ""))

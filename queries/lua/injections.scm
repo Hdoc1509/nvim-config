@@ -85,7 +85,6 @@
   (#eq? @_field "keys")
   (#inject-vim-mapping-cmd! @injection.content))
 
-; TODO: add `vim` injection to `cmd` string|strint[] option of lazy spec file
 (function_call
   name: (method_index_expression
     method: (identifier) @_match)
