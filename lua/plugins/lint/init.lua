@@ -2,7 +2,6 @@ local config = function()
   local lint = require('lint')
   local utils = require('utils')
 
-  -- TODO: highlight as @constant
   local normal_events = { 'BufRead', 'BufWritePost' }
   ---@type string[]
   local aggressive_events = vim.fn.extendnew(normal_events, {

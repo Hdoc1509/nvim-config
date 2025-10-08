@@ -1,6 +1,5 @@
 ; extends
 
-; TODO: add the same highlight to events lists in lint/init.lua
 (chunk
   (return_statement
     (expression_list
@@ -17,6 +16,34 @@
           ]))))
   (#is-lazy-config-file? "")
   (#eq? @_field "event"))
+
+local_declaration: (variable_declaration
+  (assignment_statement
+    .
+    (variable_list) @_events_ident
+    (expression_list
+      (table_constructor
+        (field
+          value: (string
+            (string_content) @constant)))))
+  (#eq? @_events_ident "normal_events")
+  (#is-nvim-config-file? "lua/plugins/lint/init.lua"))
+
+local_declaration: (variable_declaration
+  (assignment_statement
+    .
+    (variable_list) @_events_ident
+    (expression_list
+      value: (function_call
+        name: (dot_index_expression) @_fn
+        arguments: (arguments
+          (table_constructor
+            (field
+              value: (string
+                (string_content) @constant)))))))
+  (#eq? @_events_ident "aggressive_events")
+  (#eq? @_fn "vim.fn.extendnew")
+  (#is-nvim-config-file? "lua/plugins/lint/init.lua"))
 
 (function_call
   name: (method_index_expression
