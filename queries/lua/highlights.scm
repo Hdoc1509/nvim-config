@@ -27,6 +27,18 @@
         (string_content) @string.regexp)))
   (#eq? @_match "match"))
 
+(function_call
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @_fn
+  arguments: (arguments
+    .
+    (string
+      (string_content) @constant))
+  (#any-of? @_fn "autocmd" "utils.autocmd" "require('utils').autocmd")
+  (#is-nvim-config-file? ""))
+
 (chunk
   (return_statement
     (expression_list
