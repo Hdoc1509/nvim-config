@@ -85,6 +85,40 @@
   (#eq? @_field "keys")
   (#inject-vim-mapping-cmd! @injection.content))
 
+(chunk
+  (return_statement
+    (expression_list
+      (table_constructor
+        [
+          (field
+            name: (identifier) @_build
+            value: (string
+              (string_content) @injection.content))
+          (field
+            value: (table_constructor
+              (field
+                name: (identifier) @_build
+                value: (string
+                  (string_content) @injection.content))))
+        ])))
+  (#eq? @_build "build")
+  (#lua-match? @injection.content "^[^:]")
+  (#is-lazy-config-file? "")
+  (#set! injection.language "bash"))
+
+(chunk
+  (return_statement
+    (expression_list
+      (table_constructor
+        (field
+          name: (identifier) @_build
+          value: (string
+            (string_content) @injection.content)))))
+  (#eq? @_build "build")
+  (#lua-match? @injection.content "^:")
+  (#is-lazy-config-file? "")
+  (#set! injection.language "vim"))
+
 (function_call
   name: (method_index_expression
     method: (identifier) @_match)

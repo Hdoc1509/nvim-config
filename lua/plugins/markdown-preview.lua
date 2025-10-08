@@ -18,8 +18,6 @@ end
 
 return {
   'iamcco/markdown-preview.nvim',
-  -- TODO: inject bash if not starts with ":"
-  -- injection vim if starts with ":"
   build = 'cd app && yarn install',
   config = config,
   ft = 'markdown',
