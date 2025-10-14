@@ -12,6 +12,8 @@ return {
   'sindrets/diffview.nvim',
   cmd = { 'DiffviewFileHistory', 'DiffviewOpen' },
   config = function()
+    local nmap = require('utils').nmap
+
     require('diffview').setup({
       view = {
         default = { layout = -1 },
@@ -19,7 +21,7 @@ return {
       },
     })
 
-    vim.keymap.set('n', '<leader>df', function()
+    nmap('<leader>df', function()
       apply_dynamic_layout()
 
       if vim.v.count > 0 then
@@ -29,7 +31,7 @@ return {
       end
     end, { desc = 'Show file history' })
 
-    vim.keymap.set('n', '<leader>db', function()
+    nmap('<leader>db', function()
       apply_dynamic_layout()
 
       if vim.v.count > 0 then
@@ -39,7 +41,7 @@ return {
       end
     end, { desc = 'Show branch history' })
 
-    vim.keymap.set('n', '<leader>D', function()
+    nmap('<leader>D', function()
       apply_dynamic_layout()
       vim.cmd('DiffviewOpen')
     end, { desc = 'Show diffs of current index' })
