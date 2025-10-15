@@ -27,12 +27,13 @@ local function is_diagnostic_ignored(bufnr, diagnostic)
 
   local is_changelog_file = buf_name:match('CHANGELOG%.md$') ~= nil
   local is_tmpl_file = buf_name:match('%.tmpl%.md$') ~= nil
+  local is_changesets_file = buf_name:match('%.changeset/.+%.md$') ~= nil
 
   return (buf_name:match('TODO%.md$') ~= nil and message:match('MD0[23]4') ~= nil)
     or ((buf_line:match('^|') ~= nil or is_changelog_file or is_tmpl_file) and message:match('MD013') ~= nil)
     or (is_changelog_file and message:match('MD024') ~= nil)
     or (is_tmpl_file and is_MD012)
-    or (is_tmpl_file and message:match('MD041') ~= nil)
+    or ((is_tmpl_file or is_changesets_file) and message:match('MD041') ~= nil)
 end
 
 ---@type lint.parse
