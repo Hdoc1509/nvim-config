@@ -16,14 +16,15 @@ local setup_repos = function(config)
 
   local repo_data = {}
   local workspace_uri = vim.uri_from_fname(vim.fn.getcwd() .. '/.github/workflows')
-  local cached = vim.fn.system({ 'jq', '.["' .. workspace_uri .. '"]', cache_file })
+  local cached = vim.fn.system({ 'jq', '.', cache_file })
+  local cached_data = nil
 
   if vim.v.shell_error == 0 then
-    local decoded = vim.json.decode(cached)
+    cached_data = vim.json.decode(cached)
+  end
 
-    if decoded ~= nil then
-      repo_data = decoded
-    end
+  if cached_data ~= nil and cached_data ~= vim.NIL and cached_data[workspace_uri] ~= nil then
+    repo_data = cached_data[workspace_uri]
   else
     -- NOTE: maybe github cli will be needed to fetch private repos
     -- https://stackoverflow.com/questions/13902593/how-does-one-find-out-ones-own-repo-id/74529107
@@ -46,21 +47,25 @@ local setup_repos = function(config)
       return
     end
 
-    local decoded = vim.json.decode(repo_json)
-    if decoded == nil then
+    local fetched_repo = vim.json.decode(repo_json)
+    if fetched_repo == nil then
       vim.notify('Error while parsing json repo data', 'error', { title = notify_title })
       return
     end
 
     repo_data = {
-      id = decoded.id,
-      owner = decoded.owner.login,
-      name = decoded.name,
+      id = fetched_repo.id,
+      owner = fetched_repo.owner.login,
+      name = fetched_repo.name,
       workspaceUri = workspace_uri,
-      organizationOwned = decoded.owner.type == 'Organization',
+      organizationOwned = fetched_repo.owner.type == 'Organization',
     }
 
-    local encoded = vim.json.encode({ [workspace_uri] = repo_data })
+    local data_to_cache = vim.tbl_deep_extend('force', cached_data or {}, {
+      [workspace_uri] = repo_data,
+    })
+
+    local encoded = vim.json.encode(data_to_cache)
     vim.fn.writefile({ encoded }, cache_file, 'S')
   end
 
