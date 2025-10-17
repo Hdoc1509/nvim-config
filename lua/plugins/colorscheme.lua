@@ -33,7 +33,7 @@ local config = function()
         RainbowDelimiterCyan = { link = 'PreProc' },
         NormalNC = { bg = '#0a0a0a' },
         ['@character.printf'] = { link = '@character.special' },
-        RenderMarkdownCode = { bg = '#0d0d0d' },
+        RenderMarkdownCode = { bg = '#0a0a0a' },
       },
       all = {
         MatchParen = { fg = 'NONE' },
