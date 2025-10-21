@@ -416,6 +416,7 @@ return {
     hl = 'DevIconJs',
     folder_names = { 'ecma', 'esm', 'javascript', 'javascripts', 'js' },
   },
+  json = { hl = 'DevIconJson' },
   layout = {
     icon = '󱋣',
     hl = 'FolderLayout',
@@ -772,6 +773,7 @@ return {
       'views',
     },
   },
+  vim = { hl = 'DevIconVim' },
   vite = {
     hl = 'FolderVite',
     folder_names = { '.vite', 'vite', 'vite-config', 'vite-plugin', 'vitejs' },
