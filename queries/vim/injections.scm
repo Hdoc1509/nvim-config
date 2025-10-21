@@ -27,5 +27,6 @@
   (arguments
     (command_argument) @injection.content)
   (#lua-match? @injection.content "^%%s")
+  (#is-nvim-config-file? "lua/maps/text.lua")
   (#offset! @injection.content 0 1 0 0)
   (#set! injection.language "vim"))
