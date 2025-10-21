@@ -26,7 +26,7 @@ local new_predicates = {
       return filename:match(config_path) ~= nil
     end
 
-    return config_path .. '/' .. target_filename == vim.api.nvim_buf_get_name(bufnr)
+    return config_path .. '/' .. target_filename == filename
   end,
   ['is-linter-config-file?'] = function(_, _, bufnr)
     local filename = vim.api.nvim_buf_get_name(bufnr)
