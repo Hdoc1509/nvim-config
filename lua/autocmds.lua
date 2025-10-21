@@ -1,6 +1,5 @@
 local utils = require('utils')
 local autocmd = utils.autocmd
-local nmap = utils.nmap
 
 autocmd('VimResized', { command = 'tabdo wincmd =' })
 
@@ -9,7 +8,7 @@ autocmd('FileType', {
   pattern = { 'qf', 'help', 'checkhealth', 'git' },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
-    nmap('q', '<cmd>close<cr>', { buffer = event.buf })
+    utils.nmap('q', '<cmd>close<cr>', { buffer = event.buf })
   end,
 })
 

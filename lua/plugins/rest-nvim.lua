@@ -1,11 +1,14 @@
 local config = function()
-  local nmap = require('utils').nmap
   local rest_nvim = require('rest-nvim')
 
   rest_nvim.setup()
 
-  nmap('<leader>rr', rest_nvim.run, { desc = 'Run http request under cursor' })
-  nmap('<leader>rl', rest_nvim.last, { desc = 'Run last http request' })
+  vim.keymap.set('n', '<leader>rr', rest_nvim.run, {
+    desc = 'Run http request under cursor',
+  })
+  vim.keymap.set('n', '<leader>rl', rest_nvim.last, {
+    desc = 'Run last http request',
+  })
 end
 
 -- TODO: replace with `kulala.nvim` once updated to nvim-0.10
