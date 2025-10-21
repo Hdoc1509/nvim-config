@@ -3,7 +3,10 @@
 (command_argument) @variable.parameter
 
 (range_statement
-  (mark) @punctuation.special)
+  [
+    (mark)
+    (current_line)
+  ] @punctuation.special)
 
 (range
   (mark) @punctuation.special)
