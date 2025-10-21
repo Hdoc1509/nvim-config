@@ -69,6 +69,41 @@
   (#any-of? @_vimcmd_identifier
     "vim.cmd" "vim.api.nvim_command" "vim.api.nvim_command" "vim.api.nvim_exec2"))
 
+; lazy spec: lhs
+(chunk
+  (return_statement
+    (expression_list
+      (table_constructor
+        [
+          ; single plugin
+          (field
+            name: (identifier) @_field
+            value: (table_constructor
+              (field
+                value: (table_constructor
+                  .
+                  (field
+                    value: (string
+                      content: (string_content) @injection.content))))))
+          ; plugins list
+          (field
+            value: (table_constructor
+              (field
+                name: (identifier) @_field
+                value: (table_constructor
+                  (field
+                    value: (table_constructor
+                      .
+                      (field
+                        value: (string
+                          (string_content) @injection.content))))))))
+        ])))
+  (#is-lazy-config-file? "")
+  (#eq? @_field "keys")
+  (#lua-match? @injection.content "<.+>")
+  (#set! injection.language "vim_map_side"))
+
+; lazy spec: rhs
 (chunk
   (return_statement
     (expression_list
@@ -78,12 +113,38 @@
           value: (table_constructor
             (field
               value: (table_constructor
+                .
+                (_) ; -- lhs --
+                .
                 (field
                   value: (string
                     content: (string_content) @injection.content)))))))))
   (#is-lazy-config-file? "")
   (#eq? @_field "keys")
-  (#inject-vim-mapping-cmd! @injection.content))
+  (#lua-match? @injection.content "<.+>")
+  (#set! injection.language "vim_map_side"))
+
+; lazy spec: colon rhs without keycode
+(chunk
+  (return_statement
+    (expression_list
+      (table_constructor
+        (field
+          name: (identifier) @_field
+          value: (table_constructor
+            (field
+              value: (table_constructor
+                .
+                (_) ; -- lhs --
+                .
+                (field
+                  value: (string
+                    content: (string_content) @injection.content)))))))))
+  (#is-lazy-config-file? "")
+  (#eq? @_field "keys")
+  (#not-lua-match? @injection.content "<.+>")
+  (#lua-match? @injection.content "^:")
+  (#set! injection.language "vim_map_side"))
 
 (chunk
   (return_statement
@@ -129,33 +190,115 @@
   (#eq? @_match "match")
   (#set! injection.language "luap"))
 
+; === nmap: lhs ===
 (function_call
-  name: (identifier) @_fn
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @_fn
   arguments: (arguments
-    (string
-      (string_content) @injection.content))
-  (#any-of? @_fn "nmap" "buf_nmap")
+    .
+    [
+      (string
+        (string_content) @injection.content)
+      (binary_expression
+        (string
+          (string_content) @injection.content))
+    ])
+  (#any-of? @_fn "nmap" "buf_nmap" "utils.nmap")
+  (#lua-match? @injection.content "<.+>")
   (#is-nvim-config-file? "")
-  (#inject-vim-mapping-cmd! @injection.content))
+  (#set! injection.language "vim_map_side"))
 
+; === nmap: rhs general ===
+(function_call
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @_fn
+  arguments: (arguments
+    .
+    (_) ; -- lhs --
+    (string
+      (string_content) @injection.content))
+  (#any-of? @_fn "nmap" "buf_nmap" "utils.nmap")
+  (#lua-match? @injection.content "<.+>")
+  (#is-nvim-config-file? "")
+  (#set! injection.language "vim_map_side"))
+
+; === nmap: rhs expr without keycode ===
 (function_call
   name: (identifier) @_fn
   arguments: (arguments
+    .
+    (_) ; -- lhs --
     (string
-      (string_content) @injection.content))
-  (#eq? @_fn "keymap")
-  (#lua-match? @injection.content "^y:%%s/")
-  (#is-nvim-config-file? "lua/maps/text.lua")
-  (#offset! @injection.content 0 3 0 0)
-  (#set! injection.language "vim"))
+      (string_content) @injection.content)
+    (table_constructor) @_options)
+  (#eq? @_fn "nmap")
+  (#not-lua-match? @injection.content "<.+>")
+  (#lua-match? @_options "expr%s*=%s*true")
+  (#is-nvim-config-file? "")
+  (#set! injection.language "vim_map_side"))
 
+; === keymap: lsh ===
 (function_call
-  name: (identifier) @_fn
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @_fn
   arguments: (arguments
+    .
+    (_) ; -- mode --
+    .
     (string
       (string_content) @injection.content))
-  (#eq? @_fn "keymap")
-  (#lua-match? @injection.content "^y:vimgrep")
-  (#is-nvim-config-file? "lua/maps/text.lua")
-  (#offset! @injection.content 0 1 0 0)
-  (#set! injection.language "vim"))
+  ; TODO: once vim-map-side.nvim is installed, remove "vim.keymap.set"
+  (#any-of? @_fn "vim.keymap.set" "keymap" "utils.keymap")
+  (#lua-match? @injection.content "<.+>")
+  (#is-nvim-config-file? "")
+  (#set! injection.language "vim_map_side"))
+
+; === keymap: rhs with keycode ===
+(function_call
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @_fn
+  arguments: (arguments
+    .
+    (_) ; -- mode --
+    .
+    (_) ; -- lhs --
+    .
+    (string
+      (string_content) @injection.content))
+  ; TODO: once vim-map-side.nvim is installed, remove "vim.keymap.set"
+  (#any-of? @_fn "vim.keymap.set" "keymap")
+  (#lua-match? @injection.content "<.+>")
+  (#is-nvim-config-file? "")
+  (#set! injection.language "vim_map_side"))
+
+; === keymap: rhs expr without keycode ===
+(function_call
+  name: [
+    (identifier)
+    (dot_index_expression)
+  ] @_fn
+  arguments: (arguments
+    .
+    (_) ; -- mode --
+    .
+    (_) ; -- lhs --
+    .
+    (string
+      (string_content) @injection.content)
+    .
+    (table_constructor) @_options)
+  ; TODO: once vim-map-side.nvim is installed, remove "vim.keymap.set"
+  (#any-of? @_fn "vim.keymap.set" "keymap")
+  ; NOTE: to avoid double injection
+  (#not-lua-match? @injection.content "<.+>")
+  (#lua-match? @_options "expr%s*=%s*true")
+  (#is-nvim-config-file? "")
+  (#set! injection.language "vim_map_side"))

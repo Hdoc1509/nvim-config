@@ -38,5 +38,6 @@ return {
   'typescript',
   'vim',
   'vimdoc',
+  'vim_map_side',
   'yaml',
 }

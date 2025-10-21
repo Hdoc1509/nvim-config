@@ -773,7 +773,7 @@ return {
       'views',
     },
   },
-  vim = { hl = 'DevIconVim' },
+  vim = { hl = 'DevIconVim', folder_names = { 'vim', 'vim_map_side' } },
   vite = {
     hl = 'FolderVite',
     folder_names = { '.vite', 'vite', 'vite-config', 'vite-plugin', 'vitejs' },

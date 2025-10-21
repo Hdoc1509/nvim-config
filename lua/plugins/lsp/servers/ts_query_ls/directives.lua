@@ -28,14 +28,4 @@ return {
     },
     description = 'Injects `javascript`. Only have effect in `mdx` files.',
   },
-  ['inject-vim-mapping-cmd'] = {
-    parameters = {
-      {
-        type = 'capture',
-        arity = 'required',
-        description = '`(string_content)` node from `lua` parser',
-      },
-    },
-    description = 'Injects vim parser in lua mappings for vim commands.',
-  },
 }

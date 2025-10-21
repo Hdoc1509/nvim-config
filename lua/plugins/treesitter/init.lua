@@ -1,9 +1,21 @@
 local config = function()
+  local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
   local textobjects = require('plugins.treesitter.textobjects')
 
   require('nvim-treesitter.install').prefer_git = false
   require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
+
+  ---@diagnostic disable-next-line: inject-field
+  parser_configs.vim_map_side = {
+    install_info = {
+      url = 'https://github.com/Hdoc1509/tree-sitter-vim-map-side',
+      files = { 'src/parser.c' },
+      requires_generate_from_grammar = true,
+      revision = '83b142872e0f66d6fe2335ec5e2b62af793eb71a',
+    },
+    filetype = 'vms',
+  }
 
   require('hygen.tree-sitter').setup()
   require('gh-actions.tree-sitter').setup({ from_grammar = true })
