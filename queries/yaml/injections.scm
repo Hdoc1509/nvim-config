@@ -163,24 +163,3 @@
                 (plain_scalar
                   (string_scalar) @injection.content)
                 (#set! injection.language "gitignore")))))))))
-
-(block_sequence_item
-  (block_node
-    (block_mapping
-      (block_mapping_pair
-        key: (flow_node) @_uses
-        (#eq? @_uses "uses")
-        value: (flow_node) @_action
-        (#lua-match? @_action "^peaceiris/actions%-gh%-pages"))
-      (block_mapping_pair
-        key: (flow_node) @_with
-        (#eq? @_with "with")
-        value: (block_node
-          (block_mapping
-            (block_mapping_pair
-              key: (flow_node) @_publish_dir
-              (#eq? @_publish_dir "publish_dir")
-              value: (flow_node
-                (plain_scalar
-                  (string_scalar) @injection.content)
-                (#set! injection.language "gitignore")))))))))
