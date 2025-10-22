@@ -19,6 +19,12 @@
 - https://github.com/IoeCmcomc/tree-sitter-mcfunction
   or https://github.com/theusaf/tree-sitter-mcfunction-lang
 
+#### sed
+
+https://github.com/mskelton/tree-sitter-sed
+
+inject `tree-sitter-regex`
+
 ### Queries
 
 #### printf
