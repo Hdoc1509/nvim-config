@@ -142,9 +142,9 @@
                     content: (string_content) @injection.content)))))))))
   (#is-lazy-config-file? "")
   (#eq? @_field "keys")
-  (#not-lua-match? @injection.content "<.+>")
   (#lua-match? @injection.content "^:")
-  (#set! injection.language "vim_map_side"))
+  (#not-lua-match? @injection.content "<cr>")
+  (#set! injection.language "vim"))
 
 (chunk
   (return_statement
