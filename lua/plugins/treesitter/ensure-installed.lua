@@ -11,7 +11,6 @@ return {
   'gh_actions_expressions',
   'gitattributes',
   'gitcommit',
-  'githubactions',
   'gitignore',
   'groovy',
   'html',
