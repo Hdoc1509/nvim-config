@@ -13,7 +13,7 @@ local severity_by_qftype = {
 }
 
 local diagnostic_skeleton = {
-  source = 'ts_query_ls',
+  source = 'ts_query_ls lint',
   severity = vd.severity.WARN,
 }
 

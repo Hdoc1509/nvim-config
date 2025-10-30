@@ -52,6 +52,7 @@ end
 return {
   'mfussenegger/nvim-lint',
   config = config,
+  -- NOTE: does these dependencies have effect?
   dependencies = {
     -- { dir = '~/dev/hygen.nvim' },
     -- { 'Hdoc1509/hygen.nvim', version = '*' },
