@@ -55,14 +55,19 @@ local_declaration: (variable_declaration
   (#eq? @_match "match"))
 
 (function_call
-  name: [
-    (identifier)
-    (dot_index_expression)
-  ] @_fn
-  arguments: (arguments
-    .
-    (string
-      (string_content) @constant))
+  name: (_) @_fn
+  arguments: [
+    (arguments
+      .
+      (string
+        (string_content) @constant))
+    (arguments
+      .
+      (table_constructor
+        (field
+          (string
+            (string_content) @constant))))
+  ]
   (#any-of? @_fn "autocmd" "utils.autocmd" "require('utils').autocmd")
   (#is-nvim-config-file? ""))
 
