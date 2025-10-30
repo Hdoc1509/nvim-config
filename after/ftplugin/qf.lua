@@ -7,14 +7,14 @@ local buf_nmap = function(lhs, rhs, opts)
   utils.nmap(lhs, rhs, utils.merge({ buffer = 0 }, opts or {}))
 end
 
-buf_nmap('e', '<cr>:cclose<cr>', {
+buf_nmap('e', '<cr><cmd>cclose<cr>', {
   desc = 'Select item and close quickfix window',
 })
 
 buf_nmap('gt', '<c-w><cr><c-w>Tg<tab><cmd>copen<cr>', {
   desc = 'Open item in new tab (silent)',
 })
-buf_nmap('gT', '<c-w><cr>:cclose<cr><c-w>T', { desc = 'Open item in new tab' })
+buf_nmap('gT', '<c-w><cr><cmd>cclose<cr><c-w>T', { desc = 'Open item in new tab' })
 
-buf_nmap('gs', '<c-w><cr>:copen<cr>', { desc = 'Open item in new split (silent)' })
-buf_nmap('gS', '<c-w><cr>:cclose<cr>', { desc = 'Open item in new split' })
+buf_nmap('gs', '<c-w><cr><cmd>copen<cr>', { desc = 'Open item in new split (silent)' })
+buf_nmap('gS', '<c-w><cr><cmd>cclose<cr>', { desc = 'Open item in new split' })
