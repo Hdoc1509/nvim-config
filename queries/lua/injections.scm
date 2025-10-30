@@ -181,6 +181,19 @@
   (#set! injection.language "vim"))
 
 (function_call
+  name: (_) @_fn
+  ; format-ignore
+  arguments: (arguments
+    . (_) ; -- line --
+    . (_) ; -- mode --
+    .
+    (string
+      (string_content) @injection.content))
+  (#eq? @_fn "helper.find")
+  (#is-nvim-config-file? "lua/plugins/gx.lua")
+  (#set! injection.language "luap"))
+
+(function_call
   name: (method_index_expression
     method: (identifier) @_match)
   arguments: (arguments

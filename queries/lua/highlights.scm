@@ -129,3 +129,8 @@ local_declaration: (variable_declaration
         (string_content) @type)))
   (#eq? @_highlight "highlight")
   (#is-nvim-config-file? "lua/plugins/indent-blankline.lua"))
+
+((string
+  (string_content) @string.special.url)
+  (#lua-match? @string.special.url "^https?://%S+$")
+  (#is-nvim-config-file? "lua/plugins/gx.lua"))
