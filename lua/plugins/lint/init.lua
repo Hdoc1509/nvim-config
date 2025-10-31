@@ -63,4 +63,5 @@ return {
     { 'Hdoc1509/vim-map-side.nvim', version = '0.1.0' },
     -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
   },
+  ft = { 'markdown', 'yaml', 'lua', 'groovy', 'query' },
 }
