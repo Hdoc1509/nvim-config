@@ -2,9 +2,8 @@
 
 ; utils
 (function_call
-  ; TODO: rename to @_fn
-  name: (_) @function
-  (#any-of? @function "autocmd" "utils.autocmd" "require('utils').autocmd")
+  name: (_) @_fn
+  (#any-of? @_fn "autocmd" "utils.autocmd" "require('utils').autocmd")
   (arguments
     (table_constructor
       (field
@@ -21,9 +20,8 @@
         (#set! injection.language "gitignore")))))
 
 (function_call
-  ; TODO: rename to @_fn
-  name: (_) @function
-  (#any-of? @function "autocmd" "utils.autocmd" "require('utils').autocmd")
+  name: (_) @_fn
+  (#any-of? @_fn "autocmd" "utils.autocmd" "require('utils').autocmd")
   (arguments
     (table_constructor
       (field
@@ -56,15 +54,13 @@
   (#set! injection.language "gitignore"))
 
 ((function_call
-  ; TODO: rename to @_fn
-  name: (_) @_vimcmd_identifier
+  name: (_) @_fn
   arguments: (arguments
     (binary_expression
       left: (string
         content: _ @injection.content))))
   (#set! injection.language "vim")
-  (#any-of? @_vimcmd_identifier
-    "vim.cmd" "vim.api.nvim_command" "vim.api.nvim_command" "vim.api.nvim_exec2"))
+  (#any-of? @_fn "vim.cmd" "vim.api.nvim_command" "vim.api.nvim_command" "vim.api.nvim_exec2"))
 
 ; lazy spec: lhs
 (chunk
@@ -182,13 +178,12 @@
 
 (function_call
   name: (method_index_expression
-    ; TODO: rename to @_fn
-    method: (identifier) @_match)
+    method: (identifier) @_fn)
   arguments: (arguments
     (binary_expression
       (string
         (string_content) @injection.content)))
-  (#eq? @_match "match")
+  (#eq? @_fn "match")
   (#set! injection.language "luap"))
 
 ; === nmap: lhs (concatenated strings) ===

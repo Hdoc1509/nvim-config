@@ -21,7 +21,7 @@
     (string
       (string_content) @injection.content))
   (#eq? @_pred_type "?")
-  (#any-of? @_capture "@function" "@_fn" "@_vimcmd_identifier")
+  (#eq? @_capture "@_fn")
   (#lua-match? @injection.content "%.")
   (#set! injection.language "lua")
   (#is-nvim-config-file? "queries/lua/injections.scm"))

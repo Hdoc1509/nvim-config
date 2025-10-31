@@ -47,13 +47,12 @@ local_declaration: (variable_declaration
 
 (function_call
   name: (method_index_expression
-    ; TODO: rename to @_fn
-    method: (identifier) @_match)
+    method: (identifier) @_fn)
   arguments: (arguments
     (binary_expression
       (string
         (string_content) @string.regexp)))
-  (#eq? @_match "match"))
+  (#eq? @_fn "match"))
 
 (function_call
   name: (_) @_fn
