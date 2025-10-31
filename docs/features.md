@@ -59,6 +59,9 @@
 - Better support for [`Github Actions`](https://docs.github.com/en/actions/reference/workflows-and-actions)
   files with [`gh-actions.nvim`](https://github.com/Hdoc1509/gh-actions.nvim)
 - Improve visibility of current line with [`line-number-change-mode.nvim`](https://github.com/sethen/line-number-change-mode.nvim)
+- Improved support for [Vim's map](https://vimhelp.org/map.txt.html#map.txt)
+  side (`lhs` and `rhs`) with
+  [`vim-map-side.nvim`](https://github.com/Hdoc1509/vim-map-side.nvim)
 
 ## Tools
 
@@ -144,5 +147,6 @@
 - tsx
 - typescript
 - vim
+- vim_map_side
 - vimdoc
 - yaml

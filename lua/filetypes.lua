@@ -5,7 +5,6 @@ vim.filetype.add({
     mdx = 'markdown.mdx',
     mcmeta = 'json',
     ignore = 'gitignore',
-    vms = 'vms',
   },
   filename = {
     ['.packwizignore'] = 'packwizignore',

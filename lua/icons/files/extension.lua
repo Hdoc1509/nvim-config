@@ -30,6 +30,7 @@ local function generate(base_icons)
     },
     ignore = { icon = ext.conf.icon, color = ext.conf.color, name = 'Ignore' },
     conf = { icon = ext.conf.icon, color = COLORS['blue-400'], name = 'Conf' },
+    vms = { icon = '󰾹', color = '#8cb6ff', name = 'VimMapSide' },
   }
 end
 

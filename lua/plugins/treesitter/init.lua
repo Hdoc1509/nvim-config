@@ -1,24 +1,21 @@
 local config = function()
-  local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
   local textobjects = require('plugins.treesitter.textobjects')
 
   require('nvim-treesitter.install').prefer_git = false
   require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
 
-  ---@diagnostic disable-next-line: inject-field
-  parser_configs.vim_map_side = {
-    install_info = {
-      url = 'https://github.com/Hdoc1509/tree-sitter-vim-map-side',
-      files = { 'src/parser.c' },
-      requires_generate_from_grammar = true,
-      revision = '83b142872e0f66d6fe2335ec5e2b62af793eb71a',
-    },
-    filetype = 'vms',
-  }
-
   require('hygen.tree-sitter').setup()
   require('gh-actions.tree-sitter').setup({ from_grammar = true })
+  require('vim-map-side.tree-sitter').setup({
+    from_grammar = true,
+    revision = 'v0.1.0',
+    custom_fns = {
+      -- TODO: inject `lua` if contains `.`, if not highlight as `@function`
+      keymap = { 'keymap', 'utils.keymap' },
+      modemap = { 'nmap', 'buf_nmap', 'utils.nmap' },
+    },
+  })
 
   ---@diagnostic disable-next-line: missing-fields
   require('nvim-treesitter.configs').setup({
@@ -42,7 +39,10 @@ return {
     { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
     -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
     { 'Hdoc1509/gh-actions.nvim', version = '*' },
-    -- { 'Hdoc1509/hygen.nvim', branch = 'name' },
+    -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
+    -- { dir = '~/dev/nvim-plugins/vim-map-side.nvim' },
+    { 'Hdoc1509/vim-map-side.nvim', version = '0.1.0' },
+    -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
     {
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',

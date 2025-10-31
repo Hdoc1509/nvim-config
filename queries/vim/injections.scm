@@ -21,18 +21,12 @@
   (#is-nvim-config-file? "ftplugin/markdown.vim")
   (#set! injection.language "vim"))
 
-(map_statement
-  rhs: (map_side) @injection.content
-  (#lua-match? @injection.content "^:")
-  (#set! injection.include-children)
-  (#set! injection.language "vim_map_side"))
-
 (unknown_builtin_statement
   (unknown_command_name) @_command
   (#eq? @_command "s")
   (arguments
     (command_argument) @injection.content)
-  (#lua-match? @injection.content "<.+>")
+  (#lua-match? @injection.content "<%S+>")
   (#is-nvim-config-file? "lua/maps/text.lua")
   (#set! injection.language "vim_map_side"))
 
@@ -42,7 +36,7 @@
   (#eq? @_command "vimgrep")
   (arguments
     (command_argument) @injection.content)
-  (#lua-match? @injection.content "<.+>")
+  (#lua-match? @injection.content "<%S+>")
   (#is-nvim-config-file? "lua/maps/text.lua")
   (#set! injection.language "vim_map_side"))
 
