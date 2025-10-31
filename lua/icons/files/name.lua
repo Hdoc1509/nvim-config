@@ -41,7 +41,7 @@ local function generate(base_icons)
     -- color: https://github.com/sdkman/sdkman.github.io/blob/main/static/assets/img/bubble-logo-sdkman-groovy-color.svg
     ['.sdkmanrc'] = { icon = ext.conf.icon, color = '#FB2127', name = 'SDKMANRC' },
     ['.shellcheckrc'] = {
-      icon = '',
+      icon = '󱎸',
       color = ext.sh.color,
       name = 'Shellcheckrc',
     },
