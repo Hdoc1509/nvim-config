@@ -197,3 +197,66 @@
   (#is-modemap-fn? @_fn)
   (#lua-match? @injection.content "<%S+>")
   (#set! injection.language "vim_map_side"))
+
+; === table-nvim lhs ====
+(field
+  name: (identifier) @_mappings
+  value: (table_constructor
+    (field
+      value: (string
+        (string_content) @injection.content)))
+  (#eq? @_mappings "mappings")
+  (#lua-match? @injection.content "<%S+>")
+  (#is-nvim-config-file? "lua/plugins/markdown-table.lua")
+  (#set! injection.language "vim_map_side"))
+
+; === cmp mappings lhs ===
+(function_call
+  name: (_) @_fn
+  arguments: (arguments
+    (table_constructor
+      (field
+        name: (string
+          (string_content) @injection.content))))
+  (#eq? @_fn "cmp.mapping.preset.insert")
+  (#lua-match? @injection.content "<%S+>")
+  (#is-nvim-config-file? "lua/plugins/cmp/mapping.lua")
+  (#set! injection.language "vim_map_side"))
+
+; === cmp mapping feedkey lhs ===
+(function_call
+  name: (_) @_fn
+  arguments: (arguments
+    .
+    (string
+      (string_content) @injection.content))
+  (#eq? @_fn "feedkey")
+  (#lua-match? @injection.content "<%S+>")
+  (#is-nvim-config-file? "lua/plugins/cmp/mapping.lua")
+  (#set! injection.language "vim_map_side"))
+
+; === Comment.nvim ===
+(field
+  name: (_) @_field
+  value: (table_constructor
+    (field
+      value: (string
+        (string_content) @injection.content)))
+  (#any-of? @_field "toggler" "opleader" "extra")
+  (#lua-match? @injection.content "<%S+>")
+  (#is-nvim-config-file? "lua/plugins/comments.lua")
+  (#set! injection.language "vim_map_side"))
+
+; === vim-map-side.tree-sitter setup ===
+(field
+  name: (_) @_custom_fns
+  value: (table_constructor
+    (field
+      value: (table_constructor
+        (field
+          value: (string
+            (string_content) @injection.content)))))
+  (#eq? @_custom_fns "custom_fns")
+  (#lua-match? @injection.content "%.")
+  (#is-nvim-config-file? "lua/plugins/treesitter/init.lua")
+  (#set! injection.language "lua"))

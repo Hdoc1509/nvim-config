@@ -5,11 +5,9 @@ local feedkey = function(key, mode)
 end
 
 return cmp.mapping.preset.insert({
-  -- TODO: highlight keys with vim_map_side parser
   ['<A-h>'] = cmp.mapping(function()
-    -- TODO: highlight indexing text of `vim.fn` as @function.call
     if vim.fn['vsnip#jumpable'](-1) == 1 then
-      -- TODO: inject vim_map_side parser
+      -- FIX: vim_map_side parser has AST errors with `<Plug>(text)`
       feedkey('<Plug>(vsnip-jump-prev)', '')
     end
   end, { 'i', 's' }),

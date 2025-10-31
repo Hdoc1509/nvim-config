@@ -27,7 +27,7 @@ return {
   },
   config = function()
     vim.cmd([[
-      " palette table: print(vim.inspect(vim.fn['lightline#palette']()))
+      " palette table: lua =vim.fn['lightline#palette']()
       let palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
       " [fg, fg_cterm]
       let fg_insert = [palette.insert.right[0][0], palette.insert.right[0][2],]

@@ -11,7 +11,6 @@ local config = function()
     from_grammar = true,
     revision = 'v0.1.0',
     custom_fns = {
-      -- TODO: inject `lua` if contains `.`, if not highlight as `@function`
       keymap = { 'keymap', 'utils.keymap' },
       modemap = { 'nmap', 'buf_nmap', 'utils.nmap' },
     },

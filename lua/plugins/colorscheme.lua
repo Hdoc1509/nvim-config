@@ -119,7 +119,9 @@ local config = function()
         -- @lsp.type.<type>[.<ft>]
         -- @lsp.mod.<mod>[.<ft>]
         -- @lsp.typemod.<type>.<mod>[.<ft>]
-        ['@lsp.typemod.variable.readonly'] = { link = '@constant' },
+        -- NOTE: disabled because some lsp doesn't apply semantic tokens to
+        -- imports
+        -- ['@lsp.typemod.variable.readonly'] = { link = '@constant' },
       },
     },
   })

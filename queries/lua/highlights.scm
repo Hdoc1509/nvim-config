@@ -139,3 +139,67 @@ local_declaration: (variable_declaration
   (string_content) @string.special.url)
   (#lua-match? @string.special.url "^https?://%S+$")
   (#is-nvim-config-file? "lua/plugins/gx.lua"))
+
+; === vim.fn['function'] ===
+(function_call
+  name: (bracket_index_expression
+    table: (_) @_fn
+    field: (string
+      (string_content) @function))
+  (#eq? @_fn "vim.fn"))
+
+; === lightline.component_function ===
+(field
+  name: (_) @_component_function
+  value: (table_constructor
+    (field
+      value: (string
+        (string_content) @function)))
+  (#eq? @_component_function "component_function")
+  (#is-nvim-config-file? "lua/plugins/lightline.lua"))
+
+; === formatter.nvim ===
+((function_definition
+  .
+  (parameters)
+  .
+  body: (block
+    (return_statement
+      (expression_list
+        (table_constructor
+          (field
+            name: (_) @_exe
+            value: (string
+              (string_content) @function.call)))))))
+  (#eq? @_exe "exe")
+  (#is-nvim-config-file? "lua/plugins/formatter.lua"))
+
+((function_definition
+  .
+  (parameters)
+  .
+  body: (block
+    (return_statement
+      (expression_list
+        (table_constructor
+          (field
+            name: (_) @_args
+            value: (table_constructor
+              (field
+                value: (string
+                  (string_content) @variable.parameter)))))))))
+  (#eq? @_args "args")
+  (#is-nvim-config-file? "lua/plugins/formatter.lua"))
+
+; === vim-map-side.tree-sitter setup ===
+(field
+  name: (_) @_custom_fns
+  value: (table_constructor
+    (field
+      value: (table_constructor
+        (field
+          value: (string
+            (string_content) @function)))))
+  (#eq? @_custom_fns "custom_fns")
+  (#not-lua-match? @function "%.")
+  (#is-nvim-config-file? "lua/plugins/treesitter/init.lua"))
