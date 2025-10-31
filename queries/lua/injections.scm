@@ -67,7 +67,6 @@
         content: _ @injection.content))))
   (#set! injection.language "vim")
   (#any-of? @_vimcmd_identifier
-    ; TODO: remove all except "vim.cmd", it's the only one I use
     "vim.cmd" "vim.api.nvim_command" "vim.api.nvim_command" "vim.api.nvim_exec2"))
 
 ; lazy spec: lhs
@@ -81,11 +80,22 @@
             name: (identifier) @_field
             value: (table_constructor
               (field
-                value: (table_constructor
-                  .
-                  (field
-                    value: (string
-                      content: (string_content) @injection.content))))))
+                value: [
+                  ; lhs
+                  (table_constructor
+                    .
+                    (field
+                      value: (string
+                        content: (string_content) @injection.content)))
+                  ; rhs
+                  (table_constructor
+                    .
+                    (_) ; -- lhs --
+                    .
+                    (field
+                      value: (string
+                        (string_content) @injection.content)))
+                ])))
           ; plugins list
           (field
             value: (table_constructor
@@ -99,31 +109,9 @@
                         value: (string
                           (string_content) @injection.content))))))))
         ])))
-  (#is-lazy-config-file? "")
   (#eq? @_field "keys")
-  (#lua-match? @injection.content "<.+>")
-  (#set! injection.language "vim_map_side"))
-
-; lazy spec: rhs
-; TODO: merge query with the one above
-(chunk
-  (return_statement
-    (expression_list
-      (table_constructor
-        (field
-          name: (identifier) @_field
-          value: (table_constructor
-            (field
-              value: (table_constructor
-                .
-                (_) ; -- lhs --
-                .
-                (field
-                  value: (string
-                    content: (string_content) @injection.content)))))))))
+  (#lua-match? @injection.content "<%S+>")
   (#is-lazy-config-file? "")
-  (#eq? @_field "keys")
-  (#lua-match? @injection.content "<.+>")
   (#set! injection.language "vim_map_side"))
 
 ; lazy spec: colon rhs without keycode
