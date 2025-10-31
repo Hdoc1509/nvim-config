@@ -35,7 +35,7 @@ local_declaration: (variable_declaration
     (variable_list) @_events_ident
     (expression_list
       value: (function_call
-        name: (dot_index_expression) @_fn
+        name: (_) @_fn
         arguments: (arguments
           (table_constructor
             (field
@@ -47,6 +47,7 @@ local_declaration: (variable_declaration
 
 (function_call
   name: (method_index_expression
+    ; TODO: rename to @_fn
     method: (identifier) @_match)
   arguments: (arguments
     (binary_expression

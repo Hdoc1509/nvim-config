@@ -2,10 +2,8 @@
 
 ; utils
 (function_call
-  name: [
-    (identifier)
-    (dot_index_expression)
-  ] @function
+  ; TODO: rename to @_fn
+  name: (_) @function
   (#any-of? @function "autocmd" "utils.autocmd" "require('utils').autocmd")
   (arguments
     (table_constructor
@@ -23,10 +21,8 @@
         (#set! injection.language "gitignore")))))
 
 (function_call
-  name: [
-    (identifier)
-    (dot_index_expression)
-  ] @function
+  ; TODO: rename to @_fn
+  name: (_) @function
   (#any-of? @function "autocmd" "utils.autocmd" "require('utils').autocmd")
   (arguments
     (table_constructor
@@ -60,6 +56,7 @@
   (#set! injection.language "gitignore"))
 
 ((function_call
+  ; TODO: rename to @_fn
   name: (_) @_vimcmd_identifier
   arguments: (arguments
     (binary_expression
@@ -185,6 +182,7 @@
 
 (function_call
   name: (method_index_expression
+    ; TODO: rename to @_fn
     method: (identifier) @_match)
   arguments: (arguments
     (binary_expression
