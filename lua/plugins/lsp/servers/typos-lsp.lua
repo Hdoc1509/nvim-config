@@ -7,10 +7,15 @@
 ---@param diagnostic lsp.Diagnostic
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
+  local buf_name = vim.uri_to_fname(uri)
+
+  if buf_name:match('%.env$') then
+    return true
+  end
+
   local range_start = diagnostic.range.start
   local range_end = diagnostic.range['end']
   local line_start = range_start.line
-  local buf_name = vim.uri_to_fname(uri)
   local bufnr = vim.uri_to_bufnr(uri)
 
   if buf_name:match('CHANGELOG%.md$') and line_start == range_end.line then
