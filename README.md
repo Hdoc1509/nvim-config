@@ -8,6 +8,7 @@ This repository hosts my Neovim configuration that I'm using for Linux and Windo
 ## Docs
 
 - [Features](./docs/features.md)
+- [UI Demo](./docs/demo.md)
 - [Installation](./docs/install.md)
 - [Keymaps](./docs/keymaps.md)
 - [Customization](./docs/customization.md)
