@@ -18,9 +18,9 @@
                   (flow_sequence
                     (flow_node
                       [
+                        (single_quote_scalar) @injection.content
                         (double_quote_scalar) @injection.content
                         (plain_scalar
-                          ; FIX: this breaks with offset below
                           (string_scalar) @injection.content)
                       ])))
                 (block_node
@@ -33,10 +33,10 @@
                           (plain_scalar
                             (string_scalar) @injection.content)
                         ]))))
-              ]
-              ; NOTE: check if this breaks something
-              (#offset! @injection.content 0 1 0 -1)
-              (#set! injection.language "gitignore"))))))))
+              ]))))))
+  (#is-gh-actions-file? "")
+  (#offset-gh-actions-on-push-pr! @injection.content)
+  (#set! injection.language "gitignore"))
 
 (block_sequence_item
   (block_node

@@ -28,4 +28,17 @@ return {
     },
     description = 'Injects `javascript`. Only have effect in `mdx` files.',
   },
+  ['offset-gh-actions-on-push-pr'] = {
+    parameters = {
+      {
+        type = 'capture',
+        arity = 'required',
+        description = 'node captured as `@injection.content`',
+      },
+    },
+    description = table.concat({
+      'Applies an offset to `single_quote_scalar` and `double_quote_scalar` nodes.',
+      'Meant to be used for injections to `paths`, `branches` and `tags` of `push` and `pull_request` events.',
+    }, '\n'),
+  },
 }
