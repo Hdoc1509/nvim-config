@@ -38,8 +38,8 @@ https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/hig
   need to install https://github.com/svg/svgo
 - [vim match-up](https://github.com/andymass/vim-matchup)
 - https://github.com/Jezda1337/nvim-html-css
-- https://github.com/gregorias/coerce.nvim
 
 ### neovim 0.10+
 
 - https://github.com/stevearc/quicker.nvim
+- https://github.com/MagicDuck/grug-far.nvim?tab=readme-ov-file#%EF%B8%8F-requirements
