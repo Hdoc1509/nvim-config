@@ -2,8 +2,13 @@
 
 ## Requirements
 
+> [!NOTE]
+> This branch will be merged to
+> [master](https://github.com/Hdoc1509/nvim-config/tree/master) once updated to
+> [Neovim 0.10.4](https://github.com/neovim/neovim/releases/tag/v0.10.4)
+
 - [Patched nerd-font v3.4.0+](https://github.com/ryanoasis/nerd-fonts/releases)
-- [Neovim 0.9.5](https://github.com/neovim/neovim/releases/tag/v0.9.5)
+- [Neovim 0.10.0](https://github.com/neovim/neovim/releases/tag/v0.10.0)
 - [Node.js](https://nodejs.org/en/download)
 - [Yarn](https://yarnpkg.com/getting-started/install)
 - [Git](https://git-scm.com/downloads)
