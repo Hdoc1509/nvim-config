@@ -1,6 +1,6 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
-  "cmdline-hl.nvim": { "branch": "main", "commit": "4a1425f1812f0a45e486031edb1fecc785ef4178" },
+  "cmdline-hl.nvim": { "branch": "main", "commit": "191efa495da0a44b5f54b6d9c676fd97a1cb3c9c" },
   "cmp-buffer": { "branch": "main", "commit": "b74fab3656eea9de20a9b8116afa3cfc4ec09657" },
   "cmp-calc": { "branch": "main", "commit": "5947b412da67306c5b68698a02a846760059be2e" },
   "cmp-cmdline": { "branch": "main", "commit": "d126061b624e0af6c3a556428712dd4d4194ec6d" },
