@@ -44,6 +44,6 @@ return {
   },
   event = 'BufReadPre',
   config = config,
-  -- NOTE: until update to nvim-0.10
-  commit = 'cb33dea610b7eff240985be9f6fe219920e630ef',
+  -- NOTE: until update to nvim-0.11
+  commit = 'fb02680e755fe789e0999df2d208d9adb8fed676',
 }
