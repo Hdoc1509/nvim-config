@@ -10,4 +10,5 @@ return {
 
     vim.notify = nvim_notify
   end,
+  version = '^3.15.0',
 }
