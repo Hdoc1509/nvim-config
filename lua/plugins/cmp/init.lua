@@ -50,11 +50,7 @@ return {
     'onsails/lspkind.nvim',
     'hrsh7th/cmp-vsnip',
     -- 'rafamadriz/friendly-snippets',
-    {
-      'hrsh7th/cmp-nvim-lsp-document-symbol',
-      -- NOTE: until update to nvim-0.10
-      commit = '7ed09f8b89044976f7866e09a815dcbbab902ae9',
-    },
+    'hrsh7th/cmp-nvim-lsp-document-symbol',
     'hrsh7th/cmp-calc',
     {
       'hrsh7th/vim-vsnip',
