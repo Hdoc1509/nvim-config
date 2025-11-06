@@ -18,17 +18,11 @@ return {
   dependencies = {
     'b0o/schemastore.nvim',
     {
-      'WhoIsSethDaniel/mason-tool-installer.nvim',
-      dependencies = {
-        {
-          'williamboman/mason.nvim',
-          -- NOTE: until update to nvim-0.10
-          commit = '0f6fea935578039a271cdb52a5fdfcc58474bc5d',
-        },
-      },
-      init = function()
+      'williamboman/mason.nvim',
+      config = function()
         require('plugins.lsp.mason')
       end,
+      version = '^2.1.0',
     },
     { 'folke/neodev.nvim', opts = {} },
     { 'folke/neoconf.nvim', opts = {} },
