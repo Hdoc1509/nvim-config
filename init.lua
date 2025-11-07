@@ -1,6 +1,5 @@
 require('globals')
 require('options')
-require('patches')
 require('filetypes')
 require('autocmds')
 require('lazy_bootstrap')
