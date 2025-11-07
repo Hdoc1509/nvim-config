@@ -14,6 +14,9 @@ local attach = function(ev)
   end
 
   local client = vim.lsp.get_client_by_id(ev.data.client_id)
+  if client == nil then
+    return
+  end
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_nmap('grd', function()
