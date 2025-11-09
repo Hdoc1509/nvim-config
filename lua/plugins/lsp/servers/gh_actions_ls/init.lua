@@ -24,4 +24,5 @@ return {
     sessionToken = vim.env.GITHUB_ACTIONS_LS_TOKEN,
     repos = {},
   },
+  before_init = require('plugins.lsp.servers.gh_actions_ls.before_init'),
 }
