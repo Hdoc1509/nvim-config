@@ -1,7 +1,7 @@
 return {
   'tpope/vim-fugitive',
   dependencies = { 'tpope/vim-rhubarb' },
-  cmd = { 'Git' },
+  cmd = { 'Git', 'GDelete' },
   keys = {
     { '<leader>gG', '<cmd>Git<cr>', desc = 'Git summary window' },
     { '<leader>gV', '<cmd>vert Git<cr>', desc = 'Git summary window in vertical split' },
