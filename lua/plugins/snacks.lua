@@ -9,8 +9,7 @@ return {
     dim = {
       animate = { enabled = false },
     },
-    -- FIX: breaks vim.lsp.buf.code_action()
-    -- picker = {},
+    picker = {},
   },
   keys = {
     {
