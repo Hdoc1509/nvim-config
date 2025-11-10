@@ -30,7 +30,7 @@ local ensure_installed = {
   -- FORMATTERS
   { 'google-java-format', version = 'v1.25.2' },
   { 'jq', version = 'jq-1.7' },
-  -- { 'kulala-fmt', version = '2.10.0' },
+  { 'kulala-fmt', version = '2.10.0' },
   { 'prettier', version = '3.0.3' },
   { 'shfmt', version = 'v3.7.0' },
   { 'stylua', version = 'v0.18.1' },
