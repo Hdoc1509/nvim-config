@@ -21,7 +21,7 @@ end
 
 return {
   handlers = {
-    ---@param result { diagnostics: Diagnostic[], uri: string }
+    ---@param result { diagnostics: vim.Diagnostic[], uri: string }
     ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
       -- print(vim.inspect(result))
       local filtered = {}
