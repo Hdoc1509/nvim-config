@@ -224,7 +224,7 @@ Used mapleader is `<space>` key.
 | Mapping     | Mode   | Description         |
 | ----------- | ------ | ------------------- |
 | `<leader>z` | Normal | Toggle `NoNeckPain` |
-| `<leader>Z` | Normal | Toggle `Twilight`   |
+| `<leader>Z` | Normal | Toggle snacks dim   |
 
 ## nvim-cmp
 
@@ -278,12 +278,12 @@ Used mapleader is `<space>` key.
 
 ## Misc
 
-| Mapping       | Mode            | Description                                |
-| ------------- | --------------- | ------------------------------------------ |
-| `<leader>ya`  | Normal          | Copy all text of current file to clipboard |
-| `<leader>/`   | Normal          | Clear search highlighting                  |
-| `<leader>x`   | Normal          | Source current file                        |
-| `H`           | Normal          | Preview folded lines                       |
+| Mapping      | Mode   | Description                                |
+| ------------ | ------ | ------------------------------------------ |
+| `<leader>ya` | Normal | Copy all text of current file to clipboard |
+| `<leader>/`  | Normal | Clear search highlighting                  |
+| `<leader>x`  | Normal | Source current file                        |
+| `H`          | Normal | Preview folded lines                       |
 
 ## Abbreviations
 
