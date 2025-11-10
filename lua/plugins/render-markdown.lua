@@ -27,8 +27,7 @@ return {
         sign = false,
       },
       pipe_table = {
-        -- TODO: use 'trimmed' once updated to nvim-0.10
-        cell = 'overlay',
+        cell = 'trimmed',
       },
       code = {
         sign = false,
