@@ -25,8 +25,6 @@ return {
       heading = {
         icons = { '◉ ', '○ ', '✸ ', '✿ ' },
         sign = false,
-        -- FIX: breaks custom icons. works from nvim-0.10
-        -- position = 'inline',
       },
       pipe_table = {
         -- TODO: use 'trimmed' once updated to nvim-0.10
