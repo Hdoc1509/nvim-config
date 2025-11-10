@@ -40,7 +40,7 @@ return {
         color = devicons_by_extension.git.color,
         name = 'DiffviewFiles',
       },
-      -- NOTE: quickfix icon   (maybe)
+      -- quickfix icon   (maybe)
     })
     devicons.set_icon_by_filetype({
       powershell = 'ps1',

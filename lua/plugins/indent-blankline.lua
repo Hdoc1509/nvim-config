@@ -26,7 +26,7 @@ return {
 
     require('ibl').setup(opts)
 
-    -- NOTE: updates colors once colorscheme is loaded
+    -- updates colors once colorscheme is loaded
     hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
   end,
   version = '^3.8.8',

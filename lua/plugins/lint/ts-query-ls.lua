@@ -27,7 +27,7 @@ local parser = function(output)
 
   for _, item in ipairs(qflist.items) do
     if item.valid == 1 then
-      -- NOTE: do not decrease `lnum` nor `col` by `1`
+      -- avoid decrease of `lnum` nor `col` by `1`
       local lnum = math.max(0, item.lnum)
       local col = math.max(0, item.col)
       local diagnostic = {

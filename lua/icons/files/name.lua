@@ -1,6 +1,6 @@
 local COLORS = require('colors')
 
--- NOTE: extend based on:
+-- Extend based on:
 -- https://github.com/material-extensions/vscode-material-icon-theme/blob/main/src/core/icons/fileIcons.ts
 -- it's not necessary to use uppercase for file names
 

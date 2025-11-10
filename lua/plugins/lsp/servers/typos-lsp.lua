@@ -1,4 +1,4 @@
--- NOTE: ignore errors for `commit` hash in `CHANGELOG.md` files. example:
+-- Ignore errors for `commit` hash in `CHANGELOG.md` files. example:
 -- line examples:
 -- - <commit-message> ([`<commit-hash>`](<commit-url>))
 -- - <commit-hash>: <commit-message>
