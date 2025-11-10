@@ -185,7 +185,7 @@ Used mapleader is `<space>` key.
 | `<leader>-` | Normal | Open mini.files at last used path         |
 | `<leader>_` | Normal | Open mini.files at root path of workspace |
 
-### mini.files window
+### mini.files explorer
 
 | Mapping | Mode   | Description            |
 | ------- | ------ | ---------------------- |
@@ -200,6 +200,7 @@ Used mapleader is `<space>` key.
 | `gt`    | Normal | New tab (silent)       |
 | `gT`    | Normal | New tab                |
 | `gy`    | Normal | Copy path to clipboard |
+| `gX`    | Normal | OS open                |
 
 **(silent): Mappings that don't jump to file nor close the explorer.**
 

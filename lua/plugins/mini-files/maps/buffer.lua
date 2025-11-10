@@ -2,11 +2,6 @@ local utils = require('utils')
 
 local M = {}
 
--- NOTE: enable once updated to nvim-0.10
--- local ui_open = function()
---   vim.ui.open(MiniFiles.get_fs_entry().path)
--- end
-
 local yank_path = function()
   local path = (MiniFiles.get_fs_entry() or {}).path
   if path == nil then
@@ -90,8 +85,9 @@ M.setup = function(buf_id)
     end,
   })
 
-  -- TODO: enable once updated to nvim-0.10
-  -- nmap('gX', ui_open, { buffer = buf_id, desc = 'OS open' })
+  utils.nmap('gX', function()
+    vim.ui.open(MiniFiles.get_fs_entry().path)
+  end, { buffer = buf_id, desc = 'OS open' })
 
   utils.nmap('gy', yank_path, { buffer = buf_id, desc = 'Yank path' })
 
