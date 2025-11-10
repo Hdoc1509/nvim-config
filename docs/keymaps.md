@@ -148,7 +148,9 @@ Used mapleader is `<space>` key.
 | Mapping      | Mode   | Description                       |
 | ------------ | ------ | --------------------------------- |
 | `<leader>rr` | Normal | Run HTTP request under the cursor |
+| `<leader>ra` | Normal | Run all requests                  |
 | `<leader>rl` | Normal | Re-run the last HTTP request      |
+| `<leader>rb` | Normal | Open scratchpad                   |
 
 ## Markdown
 
