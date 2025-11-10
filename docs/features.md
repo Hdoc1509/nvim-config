@@ -62,6 +62,7 @@
 - Improved support for [Vim's map](https://vimhelp.org/map.txt.html#map.txt)
   side (`lhs` and `rhs`) with
   [`vim-map-side.nvim`](https://github.com/Hdoc1509/vim-map-side.nvim)
+- Preview LSP rename with [`inc-rename.nvim`](https://github.com/smjonas/inc-rename.nvim)
 
 ## Tools
 

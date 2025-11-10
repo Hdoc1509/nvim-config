@@ -26,8 +26,7 @@ local attach = function(ev)
     hover_multi_lsp(bufnr)
   end, { desc = 'Hover' })
   buf_nmap('grt', lsp_buf.type_definition, { desc = 'Go to type definition' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('grn', lsp_buf.rename, { desc = 'Rename' })
+  buf_nmap('grn', ':IncRename ', { desc = 'Rename' })
   -- NOTE: not needed from nvim-0.11
   buf_nmap('gra', lsp_buf.code_action, { desc = 'Code actions' })
   -- NOTE: not needed from nvim-0.11
