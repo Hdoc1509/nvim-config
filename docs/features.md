@@ -35,7 +35,7 @@
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify)
 - [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons) as icon
   provider
-- Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim)
+- Rest client via [`kulala.nvim`](https://github.com/mistweaverco/kulala.nvim)
 - Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo)
   and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim)
 - Install tools with [`mason.nvim`](https://github.com/williamboman/mason.nvim)
@@ -112,8 +112,6 @@
 - astro
 - awk
 - bash
-  <!-- - c (required) -->
-  <!-- - cpp (required) -->
 - css
 - diff
 - editorconfig
@@ -124,7 +122,6 @@
 - gitignore
 - groovy
 - html
-- http
 - hygen_template
 - java
 - javascript
@@ -132,6 +129,7 @@
 - json
 - jsonc
 - jq
+- kulala_http (installed by `kulala.nvim`)
 - lua
 - luap
 - markdown (also used for `mdx` files)

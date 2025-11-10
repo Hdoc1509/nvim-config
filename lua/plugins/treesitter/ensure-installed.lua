@@ -14,7 +14,6 @@ return {
   'gitignore',
   'groovy',
   'html',
-  'http',
   'hygen_template',
   'java',
   'javascript',
