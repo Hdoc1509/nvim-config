@@ -248,7 +248,7 @@ Used mapleader is `<space>` key.
 | Mapping     | Mode   | Description                           |
 | ----------- | ------ | ------------------------------------- |
 | `<leader>r` | Visual | Replace selected text in current file |
-| `<leader>R` | Visual | Replace selected text in all files    |
+| `<leader>R` | Visual | Runs `:GrugFar`                       |
 
 ## Markdown-only
 
