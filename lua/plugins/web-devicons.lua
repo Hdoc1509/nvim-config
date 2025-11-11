@@ -9,16 +9,19 @@ return {
     local devicons = require('nvim-web-devicons')
     local by_name = require('nvim-web-devicons.default.icons_by_filename')
     local by_extension = require('nvim-web-devicons.default.icons_by_file_extension')
+    local by_os = require('nvim-web-devicons.default.icons_by_operating_system')
     local ICONS = require('icons.files')
 
     devicons.setup({
       override_by_filename = ICONS.name({
         filename = by_name,
         extension = by_extension,
+        os = by_os,
       }),
       override_by_extension = ICONS.extension({
         filename = by_name,
         extension = by_extension,
+        os = by_os,
       }),
     })
 
@@ -44,7 +47,7 @@ return {
     })
     devicons.set_icon_by_filetype({
       powershell = 'ps1',
-      cmd = 'bat',
+      cmd = 'cmd',
       fugitive = 'git',
       minifiles = 'minifiles',
       editorconfig = '.editorconfig',
