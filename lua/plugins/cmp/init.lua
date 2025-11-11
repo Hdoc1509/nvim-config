@@ -1,9 +1,3 @@
--- vim.g.vsnip_filetypes = {
---   typescript = { 'javascript' },
---   typescriptreact = { 'javascript' },
---   text = { 'license' },
--- }
-
 local config = function()
   local cmp = require('cmp')
   local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -49,7 +43,6 @@ return {
     'hrsh7th/cmp-path',
     'onsails/lspkind.nvim',
     'hrsh7th/cmp-vsnip',
-    -- 'rafamadriz/friendly-snippets',
     'hrsh7th/cmp-nvim-lsp-document-symbol',
     'hrsh7th/cmp-calc',
     {
