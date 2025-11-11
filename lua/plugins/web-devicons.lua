@@ -7,26 +7,26 @@ return {
   },
   config = function()
     local devicons = require('nvim-web-devicons')
-    local devicons_by_name = require('nvim-web-devicons.default.icons_by_filename')
-    local devicons_by_extension = require('nvim-web-devicons.default.icons_by_file_extension')
+    local by_name = require('nvim-web-devicons.default.icons_by_filename')
+    local by_extension = require('nvim-web-devicons.default.icons_by_file_extension')
     local ICONS = require('icons.files')
 
     devicons.setup({
       override_by_filename = ICONS.name({
-        filename = devicons_by_name,
-        extension = devicons_by_extension,
+        filename = by_name,
+        extension = by_extension,
       }),
       override_by_extension = ICONS.extension({
-        filename = devicons_by_name,
-        extension = devicons_by_extension,
+        filename = by_name,
+        extension = by_extension,
       }),
     })
 
     require('hygen.web-devicons').setup()
     devicons.set_icon({
       test = {
-        icon = devicons_by_extension['test.js'].icon,
-        color = devicons_by_extension.query.color,
+        icon = by_extension['test.js'].icon,
+        color = by_extension.query.color,
         name = 'TSTest',
       },
       minifiles = {
@@ -37,7 +37,7 @@ return {
       },
       diffview_files = {
         icon = '',
-        color = devicons_by_extension.git.color,
+        color = by_extension.git.color,
         name = 'DiffviewFiles',
       },
       -- quickfix icon   (maybe)
