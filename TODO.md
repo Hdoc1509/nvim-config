@@ -10,8 +10,6 @@
 
 ## Treesitter
 
-- Add links to parser repositories once updated to Neovim `~0.10.0`
-
 ### Grammars
 
 #### Mcfunction
