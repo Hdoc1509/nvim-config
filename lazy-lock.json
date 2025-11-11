@@ -73,6 +73,6 @@
   "vim-map-side.nvim": { "branch": "master", "commit": "4e7e87f1a40eeacce7d1dc0819af285c15e342d8" },
   "vim-move": { "branch": "master", "commit": "3c4195de0748da9bba25c54d78d959d349e93c55" },
   "vim-rhubarb": { "branch": "master", "commit": "386daa2e9d98e23e27ad089afcbe5c5a903e488d" },
-  "vim-vsnip": { "branch": "master", "commit": "b7445b3c43acb08c0b74350d046e0088ece88033" },
+  "vim-vsnip": { "branch": "master", "commit": "9bcfabea653abdcdac584283b5097c3f8760abaa" },
   "virt-column.nvim": { "branch": "master", "commit": "b87e3e0864211a32724a2ebf3be37e24e9e2fa99" }
 }
