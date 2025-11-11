@@ -36,10 +36,9 @@ nmap('gdl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix
 -- source file
 nmap('<leader><leader>x', '<cmd>source %<cr>', { desc = 'Source current file' })
 
--- NOTE: available since Neovim 0.10.0
 -- execute line(s)
--- nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
--- keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
+nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
+keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
 
 -- jump to quickfix item
 nmap('[q', '<cmd>cprevious<cr>', { desc = 'Jump to previous quickfix item' })
