@@ -62,6 +62,7 @@
   [`vim-map-side.nvim`](https://github.com/Hdoc1509/vim-map-side.nvim)
 - Preview LSP rename with [`inc-rename.nvim`](https://github.com/smjonas/inc-rename.nvim)
 - Many QoL plugins with [`snacks.nvim`](https://github.com/folke/snacks.nvim)
+- Better Find And Replace with [`grug-far.nvim`](https://github.com/MagicDuck/grug-far.nvim)
 
 ## Tools
 

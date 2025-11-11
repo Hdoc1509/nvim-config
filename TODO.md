@@ -42,4 +42,3 @@ https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/hig
 ### neovim 0.10+
 
 - https://github.com/stevearc/quicker.nvim
-- https://github.com/MagicDuck/grug-far.nvim?tab=readme-ov-file#%EF%B8%8F-requirements

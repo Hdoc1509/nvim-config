@@ -14,7 +14,7 @@
 - [Yarn](https://yarnpkg.com/getting-started/install)
 - [Git](https://git-scm.com/downloads)
 - [fd](https://github.com/sharkdp/fd#installation)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [ripgrep 14+](https://github.com/BurntSushi/ripgrep)
 - [go](https://go.dev/doc/install)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See
   [Troubleshooting](../README.md#troubleshooting) section

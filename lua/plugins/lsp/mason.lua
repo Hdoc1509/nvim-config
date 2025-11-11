@@ -3,7 +3,7 @@ local registry = require('mason-registry')
 
 local ensure_installed = {
   -- LSP
-  { 'ast-grep', version = '0.32.2' },
+  { 'ast-grep', version = '0.39.9' },
   { 'astro-language-server', version = '2.10.0' },
   { 'bash-language-server', version = '5.4.0' },
   { 'css-variables-language-server', version = '2.7.0' },

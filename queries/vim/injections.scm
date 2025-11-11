@@ -30,16 +30,6 @@
   (#is-nvim-config-file? "lua/maps/text.lua")
   (#set! injection.language "vim_map_side"))
 
-; NOTE: can be removed if ast-grep is used instead
-(unknown_builtin_statement
-  (unknown_command_name) @_command
-  (#eq? @_command "vimgrep")
-  (arguments
-    (command_argument) @injection.content)
-  (#lua-match? @injection.content "<%S+>")
-  (#is-nvim-config-file? "lua/maps/text.lua")
-  (#set! injection.language "vim_map_side"))
-
 (unknown_builtin_statement
   (unknown_command_name) @_command
   (#eq? @_command "cdo")

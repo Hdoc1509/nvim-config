@@ -19,6 +19,7 @@
   "fzf.vim": { "branch": "master", "commit": "3725f364ccd25b85a91970720ba9bc2931861910" },
   "gh-actions.nvim": { "branch": "master", "commit": "6d4ba8c9d49f4220b6d9e86ddafe743fe1eca9b0" },
   "gitsigns.nvim": { "branch": "main", "commit": "1b0350ab707713b2bc6c236151f1a324175347b1" },
+  "grug-far.nvim": { "branch": "main", "commit": "29f460c5c24765cba54952ce2de781e5d82ee6f6" },
   "gx.nvim": { "branch": "main", "commit": "c7e6a0ace694a098a5248d92a866c290bd2da1cc" },
   "hygen.nvim": { "branch": "0.3.1-next", "commit": "f8b8b0a53f9bf25f92424c209befa73262fe8dd9" },
   "inc-rename.nvim": { "branch": "main", "commit": "2597bccb57d1b570fbdbd4adf88b955f7ade715b" },
