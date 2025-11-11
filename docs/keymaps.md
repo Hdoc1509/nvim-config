@@ -281,12 +281,12 @@ Used mapleader is `<space>` key.
 
 ## Misc
 
-| Mapping      | Mode   | Description                                |
-| ------------ | ------ | ------------------------------------------ |
-| `<leader>ya` | Normal | Copy all text of current file to clipboard |
-| `<leader>/`  | Normal | Clear search highlighting                  |
-| `<leader>x`  | Normal | Source current file                        |
-| `H`          | Normal | Preview folded lines                       |
+| Mapping             | Mode   | Description                                |
+| ------------------- | ------ | ------------------------------------------ |
+| `<leader>ya`        | Normal | Copy all text of current file to clipboard |
+| `<leader>/`         | Normal | Clear search highlighting                  |
+| `<leader><leader>x` | Normal | Source current file                        |
+| `H`                 | Normal | Preview folded lines                       |
 
 ## Abbreviations
 
