@@ -1,6 +1,6 @@
 local utils = require('utils')
 
-local ignored_self_closing_tags = { 'meta', 'link', 'input' }
+local ignored_self_closing_tags = { 'meta', 'link', 'input', 'img' }
 
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
