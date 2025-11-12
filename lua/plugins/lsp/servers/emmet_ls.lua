@@ -1,6 +1,6 @@
 return {
   root_dir = function()
-    return vim.loop.cwd()
+    return vim.uv.cwd()
   end,
   filetypes = {
     'astro',
