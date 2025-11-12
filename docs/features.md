@@ -64,6 +64,7 @@
 - Many QoL plugins with [`snacks.nvim`](https://github.com/folke/snacks.nvim)
 - Better Find And Replace with [`grug-far.nvim`](https://github.com/MagicDuck/grug-far.nvim)
 - Fancier vimdoc with [`helpview.nvim`](https://github.com/OXY2DEV/helpview.nvim)
+- Improved quickfix thanks to [`quicker.nvim`](https://github.com/stevearc/quicker.nvim)
 
 ## Tools
 
