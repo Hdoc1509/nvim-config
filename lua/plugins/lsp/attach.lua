@@ -40,8 +40,6 @@ local attach = function(ev)
 
     local hl_group = vim.api.nvim_create_augroup('lsp_document_highlight', { clear = false })
 
-    -- PERF: try to use single autocmd(). reference:
-    -- https://github.com/folke/snacks.nvim/blob/ba529d4f5d409639e082aff916c9b8e71b480531/lua/snacks/words.lua#L40-L52
     vim.api.nvim_clear_autocmds({ buffer = bufnr, group = hl_group })
     autocmd({ 'CursorHold', 'CursorHoldI' }, {
       group = hl_group,
@@ -54,7 +52,7 @@ local attach = function(ev)
         end
       end,
     })
-    autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+    autocmd({ 'CursorMoved', 'CursorMovedI', 'WinLeave' }, {
       group = hl_group,
       buffer = bufnr,
       callback = lsp_buf.clear_references,
