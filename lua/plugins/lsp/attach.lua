@@ -5,7 +5,7 @@ local autocmd = utils.autocmd
 local nmap = utils.nmap
 local merge = utils.merge
 
--- LspAttach from :https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#suggested-configuration
+-- see :h LspAttach
 local attach = function(ev)
   local bufnr = ev.buf
 
@@ -18,7 +18,7 @@ local attach = function(ev)
     return
   end
 
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  -- see `:help vim.lsp.*` for documentation on any of the below functions
   buf_nmap('grd', function()
     lsp_buf.definition({ reuse_win = true })
   end, { desc = 'Go to definition' })
