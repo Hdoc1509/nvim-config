@@ -8,4 +8,5 @@ return {
     max_recents = 30, -- Configure recent icons limit
     copy_to_clipboard = false, -- Copy glyph to clipboard instead of inserting
   },
+  version = '^1.6',
 }
