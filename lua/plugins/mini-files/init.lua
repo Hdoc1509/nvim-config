@@ -35,7 +35,7 @@ local config = function()
 end
 
 return {
-  'echasnovski/mini.files',
+  'nvim-mini/mini.files',
   config = config,
   version = false,
   keys = {
