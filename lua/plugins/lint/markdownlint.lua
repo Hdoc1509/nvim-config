@@ -4,7 +4,7 @@ local base_parser = base_markdownlint.parser
 local lazy_data_path = vim.fn.stdpath('data') .. '/lazy'
 local lazy_state_path = vim.fn.stdpath('state') .. '/lazy'
 
----INFO: see https://github.com/DavidAnson/markdownlint/tree/main/doc for rules
+-- see rules: https://github.com/DavidAnson/markdownlint/tree/main/doc
 
 ---@param bufnr number
 ---@param diagnostic vim.Diagnostic

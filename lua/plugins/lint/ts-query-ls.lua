@@ -1,4 +1,4 @@
--- NOTE: add more errorformats if more are found
+-- add more errorformats if more are found
 local errorformat = table.concat({
   '%WWarning in %f on line %l%s col %c:,%Z%m',
   '%EError in %f on line %l%s col %c:,%Z%m',
