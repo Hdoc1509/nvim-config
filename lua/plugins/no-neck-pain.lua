@@ -8,5 +8,5 @@ return {
   keys = {
     { '<leader>z', ':NoNeckPain<cr>' },
   },
-  version = '*',
+  version = '^2.5.1',
 }
