@@ -38,7 +38,9 @@ return {
   dependencies = {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-cmdline',
-    'hrsh7th/cmp-nvim-lsp',
+    -- NOTE: until fix for https://github.com/hrsh7th/cmp-nvim-lsp/pull/81
+    -- see: https://github.com/hrsh7th/cmp-nvim-lsp/pull/87
+    { 'hrsh7th/cmp-nvim-lsp', commit = 'a8912b88ce488f411177fc8aed358b04dc246d7b' },
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-path',
     'onsails/lspkind.nvim',
