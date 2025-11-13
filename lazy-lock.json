@@ -13,7 +13,7 @@
   "convert.nvim": { "branch": "main", "commit": "a982c93c1af742c44c300a647f8af16d0c484046" },
   "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
   "edit-markdown-table.nvim": { "branch": "main", "commit": "0663bc883efa38b09a6c1e8622ae4fd48efe1d8a" },
-  "fidget.nvim": { "branch": "main", "commit": "d9ba6b7bfe29b3119a610892af67602641da778e" },
+  "fidget.nvim": { "branch": "main", "commit": "d643ce588f1d1a7b3b226bc99f61976303d199c2" },
   "formatter.nvim": { "branch": "master", "commit": "b9d7f853da1197b83b8edb4cc4952f7ad3a42e41" },
   "fzf": { "branch": "master", "commit": "3a21116307d31a35d499776ed8604cc2818f4378" },
   "fzf.vim": { "branch": "master", "commit": "3725f364ccd25b85a91970720ba9bc2931861910" },
