@@ -57,7 +57,8 @@ return {
         },
       },
     },
-    'nvim-treesitter/nvim-treesitter-textobjects',
+    -- NOTE: use `main` branch once it defines a range of supported versions of neovim
+    { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
   },
   config = config,
   lazy = false,
