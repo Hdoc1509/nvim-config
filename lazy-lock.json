@@ -15,7 +15,7 @@
   "edit-markdown-table.nvim": { "branch": "main", "commit": "0663bc883efa38b09a6c1e8622ae4fd48efe1d8a" },
   "fidget.nvim": { "branch": "main", "commit": "d643ce588f1d1a7b3b226bc99f61976303d199c2" },
   "formatter.nvim": { "branch": "master", "commit": "b9d7f853da1197b83b8edb4cc4952f7ad3a42e41" },
-  "fzf": { "branch": "master", "commit": "3a21116307d31a35d499776ed8604cc2818f4378" },
+  "fzf": { "branch": "master", "commit": "535b610a6b0858364cfb12cee8b5ae7132883ea0" },
   "fzf.vim": { "branch": "master", "commit": "3725f364ccd25b85a91970720ba9bc2931861910" },
   "gh-actions.nvim": { "branch": "master", "commit": "6d4ba8c9d49f4220b6d9e86ddafe743fe1eca9b0" },
   "gitsigns.nvim": { "branch": "main", "commit": "1b0350ab707713b2bc6c236151f1a324175347b1" },
