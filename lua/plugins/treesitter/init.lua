@@ -49,14 +49,6 @@ return {
         enable_autocmd = false,
       },
     },
-    {
-      'windwp/nvim-ts-autotag',
-      opts = {
-        aliases = {
-          ejs = 'html',
-        },
-      },
-    },
     -- NOTE: use `main` branch once it defines a range of supported versions of neovim
     { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
   },
