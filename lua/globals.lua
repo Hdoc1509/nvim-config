@@ -13,4 +13,4 @@ g.loaded_python3_provider = 0
 -- Mapleader <Leader>
 g.mapleader = ' '
 -- MapLocalLeader <LocalLeader>
-g.maplocalleader = ' '
+g.maplocalleader = ','
