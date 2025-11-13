@@ -18,4 +18,5 @@ return {
     { '<leader>rb', nil, desc = 'Open scratchpad' },
   },
   ft = { 'http', 'rest' },
+  version = '5.3.3',
 }
