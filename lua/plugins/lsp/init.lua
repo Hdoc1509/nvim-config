@@ -21,6 +21,8 @@ return {
       version = '^2.1.0',
     },
     { 'folke/neodev.nvim', opts = {} },
+    -- NOTE: check when updating to nvim-0.11
+    -- https://github.com/hrsh7th/cmp-nvim-lsp/pull/87
     { 'folke/neoconf.nvim', opts = {} },
     -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
     -- { 'Hdoc1509/hygen.nvim', version = '*' },

@@ -34,7 +34,7 @@
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "mason.nvim": { "branch": "main", "commit": "ad7146aa61dcaeb54fa900144d768f040090bff0" },
   "mini.files": { "branch": "main", "commit": "26baa6215c2e5c40ba7fe82685d827fe8e5c68c8" },
-  "neoconf.nvim": { "branch": "main", "commit": "e6285272cbda137ff7ebfacb35f2717a9fb32221" },
+  "neoconf.nvim": { "branch": "main", "commit": "757a4cc7e12cdd4e2fe5f4abe97769742f50bf98" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "nerdy.nvim": { "branch": "main", "commit": "a8e3f70dc0232e956adfb12c647b7e9e2b2e6c89" },
   "nightfox.nvim": { "branch": "main", "commit": "ba47d4b4c5ec308718641ba7402c143836f35aa9" },
