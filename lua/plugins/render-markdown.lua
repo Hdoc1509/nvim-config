@@ -41,4 +41,5 @@ return {
     })
   end,
   ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit' },
+  version = '^8.10.0',
 }
