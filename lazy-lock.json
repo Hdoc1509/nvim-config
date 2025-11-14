@@ -34,6 +34,7 @@
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "mason.nvim": { "branch": "main", "commit": "ad7146aa61dcaeb54fa900144d768f040090bff0" },
   "mini.files": { "branch": "main", "commit": "26baa6215c2e5c40ba7fe82685d827fe8e5c68c8" },
+  "mini.move": { "branch": "main", "commit": "4d214202d71e0a4066b6288176bbe88f268f9777" },
   "neoconf.nvim": { "branch": "main", "commit": "757a4cc7e12cdd4e2fe5f4abe97769742f50bf98" },
   "neodev.nvim": { "branch": "main", "commit": "46aa467dca16cf3dfe27098042402066d2ae242d" },
   "nerdy.nvim": { "branch": "main", "commit": "f6ba335405d3070f90aea5e35eca4a08dec3851f" },
@@ -73,7 +74,6 @@
   "vim-fugitive": { "branch": "master", "commit": "61b51c09b7c9ce04e821f6cf76ea4f6f903e3cf4" },
   "vim-gitbranch": { "branch": "master", "commit": "1a8ba866f3eaf0194783b9f8573339d6ede8f1ed" },
   "vim-map-side.nvim": { "branch": "master", "commit": "4e7e87f1a40eeacce7d1dc0819af285c15e342d8" },
-  "vim-move": { "branch": "master", "commit": "3c4195de0748da9bba25c54d78d959d349e93c55" },
   "vim-rhubarb": { "branch": "master", "commit": "5496d7c94581c4c9ad7430357449bb57fc59f501" },
   "vim-vsnip": { "branch": "master", "commit": "9bcfabea653abdcdac584283b5097c3f8760abaa" },
   "virt-column.nvim": { "branch": "master", "commit": "b87e3e0864211a32724a2ebf3be37e24e9e2fa99" }

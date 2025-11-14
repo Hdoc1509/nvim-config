@@ -16,7 +16,7 @@
   [`fzf.vim`](https://github.com/junegunn/fzf.vim)
 - Autopairing via [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag)
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip)
-- Move lines and selections easier with [`vim-move`](https://github.com/matze/vim-move)
+- Move lines and selections easier with [`mini.move`](https://github.com/nvim-mini/mini.move)
 - Formatters support via [`formatter.nvim`](https://github.com/mhartington/formatter.nvim)
 - Easier pair surrounding with [`nvim-surround`](https://github.com/kylechui/nvim-surround)
 - Easier comments with [`Comment.nvim`](https://github.com/numToStr/Comment.nvim)
