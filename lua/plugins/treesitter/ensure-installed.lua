@@ -38,4 +38,5 @@ return {
   'vimdoc',
   'vim_map_side',
   'yaml',
+  'zsh',
 }

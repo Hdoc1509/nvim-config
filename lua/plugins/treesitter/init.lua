@@ -15,6 +15,7 @@ local config = function()
       modemap = { 'nmap', 'buf_nmap', 'utils.nmap' },
     },
   })
+  require('plugins.treesitter.parsers').setup()
 
   ---@diagnostic disable-next-line: missing-fields
   require('nvim-treesitter.configs').setup({
