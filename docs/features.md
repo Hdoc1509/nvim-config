@@ -140,8 +140,6 @@
 - [markdown](https://github.com/MDeiml/tree-sitter-markdown) (also used for
   `mdx` files)
 - [markdown_inline](https://github.com/MDeiml/tree-sitter-markdown)
-- [powershell](https://github.com/airbus-cert/tree-sitter-powershell) (only used
-  for [Troubleshooting](./troubleshooting.md) .-.)
 - [printf](https://github.com/ObserverOfTime/tree-sitter-printf)
 - [properties](https://github.com/tree-sitter-grammars/tree-sitter-properties)
 - [query](https://github.com/nvim-treesitter/tree-sitter-query)

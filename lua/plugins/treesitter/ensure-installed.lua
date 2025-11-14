@@ -25,7 +25,6 @@ return {
   'luap',
   'markdown',
   'markdown_inline',
-  'powershell',
   'printf',
   'properties',
   'query',

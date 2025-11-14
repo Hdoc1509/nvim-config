@@ -46,7 +46,6 @@ return {
       -- quickfix icon   (maybe)
     })
     devicons.set_icon_by_filetype({
-      powershell = 'ps1',
       cmd = 'cmd',
       fugitive = 'git',
       minifiles = 'minifiles',
