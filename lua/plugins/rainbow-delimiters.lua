@@ -16,4 +16,5 @@ return {
       highlight = require('plugins.indent-blankline').opts.scope.highlight,
     }
   end,
+  version = '^0.10.0',
 }
