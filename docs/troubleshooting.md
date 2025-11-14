@@ -26,7 +26,7 @@ You will need to run `:chdir` to the installation path of `tree-sitter-test`
 plugin. Then, run:
 
 ```bash
-!mkdir -p parser && tree-sitter build -o parser/test.so
+mkdir -p parser && tree-sitter build -o parser/test.so
 ```
 
 ## `mini.files` opens when opening `fugitive`s summary window
