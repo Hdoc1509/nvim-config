@@ -3,6 +3,9 @@ local plugins_path = config_path .. '/lua/plugins'
 
 ---@type table<string, TSPredicate>
 local new_predicates = {
+  ['is-mdx-file?'] = function(_, _, bufnr)
+    return type(bufnr) == 'number' and vim.bo[bufnr].filetype == 'markdown.mdx' or false
+  end,
   ['is-conf-file?'] = function(_, _, bufnr)
     return type(bufnr) == 'number' and vim.bo[bufnr].filetype == 'conf' or false
   end,

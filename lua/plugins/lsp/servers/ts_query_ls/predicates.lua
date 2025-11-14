@@ -43,6 +43,12 @@ return {
     },
     description = 'Checks for equality between multiple strings haha',
   },
+  ['is-mdx-file'] = {
+    parameters = {
+      { type = 'string', arity = 'optional' },
+    },
+    description = 'Checks if file is a `mdx` file',
+  },
   ['is-conf-file'] = {
     parameters = {
       { type = 'string', arity = 'optional' },
