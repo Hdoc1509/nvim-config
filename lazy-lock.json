@@ -68,7 +68,7 @@
   "table-nvim": { "branch": "main", "commit": "3040d7578d9bf97505251adee57e77506426a553" },
   "tabout.nvim": { "branch": "master", "commit": "9a3499480a8e53dcaa665e2836f287e3b7764009" },
   "todo-comments.nvim": { "branch": "main", "commit": "31e3c38ce9b29781e4422fc0322eb0a21f4e8668" },
-  "tree-sitter-test": { "branch": "master", "commit": "93746e2e387ae757d21088ab0ab5657efffb973e" },
+  "tree-sitter-test": { "branch": "master", "commit": "66e286145ee4058f2df7d21a789c84342ebfa1b7" },
   "undotree": { "branch": "master", "commit": "b951b87b46c34356d44aa71886aecf9dd7f5788a" },
   "vim-fugitive": { "branch": "master", "commit": "593f831d6f6d779cbabb70a4d1e6b1b1936a88af" },
   "vim-gitbranch": { "branch": "master", "commit": "1a8ba866f3eaf0194783b9f8573339d6ede8f1ed" },
