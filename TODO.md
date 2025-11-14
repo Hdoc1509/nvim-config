@@ -23,6 +23,10 @@ https://github.com/mskelton/tree-sitter-sed
 
 inject `tree-sitter-regex`
 
+#### zsh
+
+https://github.com/georgeharker/tree-sitter-zsh
+
 ### Queries
 
 #### printf
