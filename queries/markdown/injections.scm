@@ -6,7 +6,8 @@
   (#inject-mdx-js! ""))
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*export")
-  (#inject-mdx-js! ""))
+  (#inject-mdx-js! "")
+  (#set! injection.include-children))
 
 ; syntax highlighting for tsx comments
 ((inline) @injection.content
