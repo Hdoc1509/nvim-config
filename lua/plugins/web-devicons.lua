@@ -56,6 +56,7 @@ return {
       styluaignore = '.styluaignore',
       DiffviewFiles = 'diffview_files',
       DiffviewFileHistory = 'diffview_files',
+      ts = 'ts' -- for `ts` codeblock in markdown
     })
   end,
   lazy = true,
