@@ -9,6 +9,8 @@ return {
     dim = {
       animate = { enabled = false },
     },
+    -- TODO: try gh module
+    -- https://github.com/folke/snacks.nvim/blob/main/docs/gh.md
     picker = {},
   },
   keys = {
@@ -38,4 +40,5 @@ return {
       desc = 'Focus the active scope',
     },
   },
+  version = '^2.30.0',
 }
