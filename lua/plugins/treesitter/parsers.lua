@@ -1,7 +1,7 @@
 local function setup()
   local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
 
-  -- TODO: follow updates of
+  -- NOTE: follow updates of
   -- https://github.com/nvim-treesitter/nvim-treesitter/tree/main/runtime/queries/zsh
 
   ---@type ParserInfo
