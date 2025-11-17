@@ -38,6 +38,12 @@ return {
         comment = { conceal = false },
       },
       ignore = ignore,
+      link = {
+        custom = {
+          firefox_addons = { pattern = 'addons%.mozilla%.org', icon = '󰈹 ' },
+          markdown = { pattern = '%.md$', icon = ' ' },
+        },
+      },
     })
   end,
   ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit' },
