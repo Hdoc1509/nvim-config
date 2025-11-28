@@ -21,7 +21,13 @@ return {
   ['jsonls'] = merge(default_settings, require('plugins.lsp.servers.jsonls')),
   ['jqls'] = default_settings,
   ['kulala_ls'] = default_settings,
-  ['lua_ls'] = default_settings,
+  ['lua_ls'] = merge(default_settings, {
+    settings = {
+      Lua = {
+        ["semantic.annotation"] = false,
+      }
+    }
+  }),
   ['marksman'] = default_settings,
   -- ['mdx_analyzer'] = default_settings,
   ['somesass_ls'] = default_settings,

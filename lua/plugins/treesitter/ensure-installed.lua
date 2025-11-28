@@ -22,6 +22,7 @@ return {
   'jsonc',
   'jq',
   'lua',
+  'luadoc',
   'luap',
   'markdown',
   'markdown_inline',

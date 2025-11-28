@@ -136,9 +136,10 @@
 - [kulala_http](https://github.com/mistweaverco/kulala.nvim/tree/main/lua/tree-sitter)
   (installed by `kulala.nvim`)
 - [lua](https://github.com/MunifTanjim/tree-sitter-lua)
+- [luadoc](https://github.com/tree-sitter-grammars/tree-sitter-luadoc)
 - [luap](https://github.com/amaanq/tree-sitter-luap)
-- [markdown](https://github.com/MDeiml/tree-sitter-markdown) (also used for
-  `mdx` files)
+- [markdown](https://github.com/MDeiml/tree-sitter-markdown)
+  (also used for `mdx` files)
 - [markdown_inline](https://github.com/MDeiml/tree-sitter-markdown)
 - [printf](https://github.com/ObserverOfTime/tree-sitter-printf)
 - [properties](https://github.com/tree-sitter-grammars/tree-sitter-properties)
