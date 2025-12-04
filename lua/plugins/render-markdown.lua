@@ -27,6 +27,7 @@ return {
       },
       pipe_table = {
         cell = 'trimmed',
+        border_enabled = false,
       },
       code = {
         sign = false,
