@@ -43,7 +43,10 @@ return {
       link = {
         custom = {
           firefox_addons = { pattern = 'addons%.mozilla%.org', icon = '󰈹 ' },
+          png = { pattern = '%.png$', icon = '󰥶 ' },
+          gif = { pattern = '%.gif$', icon = '󰕧 ' },
           markdown = { pattern = '%.md$', icon = ' ' },
+          vimhelp = { pattern = 'vimhelp%.org', icon = '' },
         },
       },
     })

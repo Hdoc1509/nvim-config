@@ -260,3 +260,22 @@
   (#lua-match? @injection.content "%.")
   (#is-nvim-config-file? "lua/plugins/treesitter/init.lua")
   (#set! injection.language "lua"))
+
+; === render-markdown setup ===
+(field
+  name: (_) @_link
+  (#eq? @_link "link")
+  value: (table_constructor
+    (field
+      name: (_) @_custom
+      (#eq? @_custom "custom")
+      value: (table_constructor
+        (field
+          value: (table_constructor
+            (field
+              name: (_) @_pattern
+              (#eq? @_pattern "pattern")
+              value: (string
+                (string_content) @injection.content
+                (#is-nvim-config-file? "lua/plugins/render-markdown.lua")
+                (#set! injection.language "luap")))))))))
