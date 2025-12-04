@@ -100,7 +100,7 @@
 - [`markdownlint`](https://github.com/DavidAnson/markdownlint)
 - [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint)
 - [`selene`](https://github.com/Kampfkarren/selene)
-- [`ts_query_ls`](https://github.com/ribru17/ts_query_ls#linter)
+<!-- - [`ts_query_ls`](https://github.com/ribru17/ts_query_ls#linter) -->
 
 ### Formatters
 
