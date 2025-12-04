@@ -48,6 +48,6 @@ return {
       },
     })
   end,
-  ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit' },
+  ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit', 'yaml' },
   version = '^8.10.0',
 }
