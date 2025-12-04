@@ -24,6 +24,7 @@ local config = function()
       -- { name = 'buffer' },
       { name = 'supermaven' },
       { name = 'calc' },
+      { name = 'lazydev', group_index = 0 },
     }),
     formatting = {
       format = require('plugins.cmp.format'),

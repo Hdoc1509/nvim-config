@@ -203,3 +203,12 @@ local_declaration: (variable_declaration
   (#eq? @_custom_fns "custom_fns")
   (#not-lua-match? @function "%.")
   (#is-nvim-config-file? "lua/plugins/treesitter/init.lua"))
+
+; === global `vim` table ===
+(dot_index_expression
+  table: (_) @variable.builtin
+  (#eq? @variable.builtin "vim")
+  ; TODO: add `is-nvim-lua-file?` predicate. matches lua files in
+  ; stdpath('config') and inside `nvim-plugins` folder
+  ; (#is-nvim-lua-file? "") ???
+  )
