@@ -122,6 +122,7 @@ local config = function()
         -- NOTE: disabled because some lsp doesn't apply semantic tokens to
         -- imports
         -- ['@lsp.typemod.variable.readonly'] = { link = '@constant' },
+        ['@lsp.type.comment.lua'] = { link = '@none' },
       },
     },
   })
