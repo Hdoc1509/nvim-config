@@ -33,6 +33,8 @@ return {
         sign = false,
         border = 'thick',
         highlight_inline = 'None',
+        width = 'block',
+        right_pad = 1,
       },
       html = {
         comment = { conceal = false },
