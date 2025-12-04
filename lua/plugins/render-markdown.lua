@@ -23,7 +23,6 @@ return {
 
     require('render-markdown').setup({
       heading = {
-        icons = { '◉ ', '○ ', '✸ ', '✿ ' },
         sign = false,
       },
       pipe_table = {
