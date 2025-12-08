@@ -5,7 +5,7 @@ local default_settings = {
   handlers = require('plugins.lsp.handlers'),
 }
 
--- NOTE: move config to its own file if it uses more than 5 lines
+-- NOTE: move config to its own file if it uses more than 7 lines
 return {
   ['astro'] = default_settings,
   ['bashls'] = merge(default_settings, require('plugins.lsp.servers.bashls')),
