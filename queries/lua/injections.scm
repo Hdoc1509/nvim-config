@@ -279,3 +279,11 @@
                 (string_content) @injection.content
                 (#is-nvim-config-file? "lua/plugins/render-markdown.lua")
                 (#set! injection.language "luap")))))))))
+
+; === luadoc @as annotation (missing on nvim-treesitter) ===
+((comment) @injection.content
+  ; TODO: check syntax for array type
+  (#lua-match? @injection.content "^%-%-%[%[%s*@as")
+  (#offset! @injection.content 0 2 0 0)
+  (#set! injection.include-children)
+  (#set! injection.language "luadoc"))
