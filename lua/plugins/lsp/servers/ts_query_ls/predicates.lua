@@ -89,4 +89,10 @@ return {
     },
     description = 'Checks if file is a fabric.mod.json file',
   },
+  ['is-gh-issue-template-form'] = {
+    parameters = {
+      { type = 'string', arity = 'optional' },
+    },
+    description = 'Checks if a file is a Github Issue Template form',
+  },
 }

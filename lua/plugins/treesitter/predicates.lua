@@ -52,6 +52,14 @@ local new_predicates = {
     local filename = vim.api.nvim_buf_get_name(bufnr)
     return filename:match('fabric%.mod%.json$') ~= nil
   end,
+  ['is-gh-issue-template-form?'] = function(_, _, src)
+    if type(src) ~= 'number' then
+      return false
+    end
+
+    local filename = vim.api.nvim_buf_get_name(src)
+    return filename:match('%.github/ISSUE_TEMPLATE/.-%.ya?ml') ~= nil
+  end,
 }
 
 return {
