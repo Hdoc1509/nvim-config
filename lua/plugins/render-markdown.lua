@@ -11,11 +11,8 @@ return {
     local allowed_subext = { 'md', 'mdx' }
 
     local ignore = function(bufnr)
-      local filename = vim.api.nvim_buf_get_name(bufnr)
-      local extension = vim.fn.fnamemodify(filename, ':e')
-
-      if extension == 'hygen' then
-        return not vim.tbl_contains(allowed_subext, hygen_utils.get_hygen_subext(filename))
+      if vim.bo[bufnr].filetype == 'hygen' then
+        return not vim.tbl_contains(allowed_subext, hygen_utils.get_hygen_subext(bufnr))
       else
         return false
       end
