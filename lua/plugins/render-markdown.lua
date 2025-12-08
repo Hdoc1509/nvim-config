@@ -3,8 +3,8 @@ return {
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
     -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
-    -- { 'Hdoc1509/hygen.nvim', version = '*' },
-    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
+    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
   },
   config = function()
     local hygen_utils = require('hygen.utils')

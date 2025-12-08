@@ -24,8 +24,8 @@ return {
     -- https://github.com/hrsh7th/cmp-nvim-lsp/pull/87
     { 'folke/neoconf.nvim', opts = {} },
     -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
-    -- { 'Hdoc1509/hygen.nvim', version = '*' },
-    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
+    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
     -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
     { 'Hdoc1509/gh-actions.nvim', version = '0.1.0' },
     -- { 'Hdoc1509/hygen.nvim', branch = 'master' },
