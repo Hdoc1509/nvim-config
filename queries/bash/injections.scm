@@ -1,18 +1,5 @@
 ; extends
 
-(command
-  (string
-    (string_content) @injection.content
-    (#lua-match? @injection.content "<%%=")
-    (#inject-hygen-ejs! "")))
-
-(command
-  (concatenation
-    (string
-      (string_content) @injection.content
-      (#lua-match? @injection.content "<%%=")
-      (#inject-hygen-ejs! ""))))
-
 (variable_assignment
   (variable_name) @name
   (#lua-match? @name "_regex$")
