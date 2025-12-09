@@ -1,18 +1,5 @@
 ---@type table<string,TSDirective>
 local directives = {
-  ['inject-mdx-js!'] = function(_, _, bufnr, _, metadata)
-    if type(bufnr) ~= 'number' then
-      return
-    end
-
-    local filename = vim.api.nvim_buf_get_name(bufnr)
-    local ext = vim.fn.fnamemodify(filename, ':e')
-    if ext ~= 'mdx' then
-      return
-    end
-
-    metadata['injection.language'] = 'javascript'
-  end,
   ['offset-gh-actions-on-push-pr!'] = function(match, _, _, pred, metadata)
     -- based on: $VIMRUNTIME/lua/vim/treesitter/query.lua:529
     local capture_id = pred[2] --[[@as integer]]

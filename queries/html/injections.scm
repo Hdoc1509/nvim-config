@@ -11,8 +11,8 @@
         (attribute_value) @injection.content))
   ]
   (#lua-match? @injection.content "^{.*}$")
-  ; TODO: use `is-mdx-file? instead
-  (#inject-mdx-js! ""))
+  (#is-mdx-file? "")
+  (#set! injection.language "javascript"))
 
 (element
   (self_closing_tag) @injection.content

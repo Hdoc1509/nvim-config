@@ -3,13 +3,17 @@
 ; taken from https://phelipetls.github.io/posts/mdx-syntax-highlight-treesitter-nvim/#extending-treesitter-injection-queries
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*import")
-  (#inject-mdx-js! ""))
+  (#is-mdx-file? "")
+  (#set! injection.language "javascript"))
+
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*export")
-  (#inject-mdx-js! "")
+  (#is-mdx-file? "")
+  (#set! injection.language "javascript")
   (#set! injection.include-children))
 
 ; syntax highlighting for tsx comments
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*{/*")
-  (#inject-mdx-js! ""))
+  (#is-mdx-file? "")
+  (#set! injection.language "javascript"))
