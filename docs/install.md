@@ -2,13 +2,19 @@
 
 ## Requirements
 
+> [!NOTE]
+> This branch will be merged to
+> [master](https://github.com/Hdoc1509/nvim-config/tree/master) once all setup
+> has been updated to
+> [Neovim 0.10.4](https://github.com/neovim/neovim/releases/tag/v0.10.4)
+
 - [Patched nerd-font v3.4.0+](https://github.com/ryanoasis/nerd-fonts/releases)
-- [Neovim 0.9.5](https://github.com/neovim/neovim/releases/tag/v0.9.5)
+- [Neovim 0.10.4](https://github.com/neovim/neovim/releases/tag/v0.10.4)
 - [Node.js](https://nodejs.org/en/download)
 - [Yarn](https://yarnpkg.com/getting-started/install)
 - [Git](https://git-scm.com/downloads)
 - [fd](https://github.com/sharkdp/fd#installation)
-- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [ripgrep 14+](https://github.com/BurntSushi/ripgrep)
 - [go](https://go.dev/doc/install)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See
   [Troubleshooting](../README.md#troubleshooting) section

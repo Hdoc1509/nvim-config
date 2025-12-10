@@ -1,9 +1,3 @@
--- vim.g.vsnip_filetypes = {
---   typescript = { 'javascript' },
---   typescriptreact = { 'javascript' },
---   text = { 'license' },
--- }
-
 local config = function()
   local cmp = require('cmp')
   local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -30,6 +24,7 @@ local config = function()
       -- { name = 'buffer' },
       { name = 'supermaven' },
       { name = 'calc' },
+      { name = 'lazydev', group_index = 0 },
     }),
     formatting = {
       format = require('plugins.cmp.format'),
@@ -44,23 +39,17 @@ return {
   dependencies = {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-cmdline',
-    'hrsh7th/cmp-nvim-lsp',
+    -- NOTE: until fix for https://github.com/hrsh7th/cmp-nvim-lsp/pull/81
+    -- see: https://github.com/hrsh7th/cmp-nvim-lsp/pull/87
+    -- check if pin needed once using nvim-0.11
+    { 'hrsh7th/cmp-nvim-lsp', commit = 'a8912b88ce488f411177fc8aed358b04dc246d7b' },
     'hrsh7th/cmp-nvim-lsp-signature-help',
     'hrsh7th/cmp-path',
     'onsails/lspkind.nvim',
     'hrsh7th/cmp-vsnip',
-    -- 'rafamadriz/friendly-snippets',
-    {
-      'hrsh7th/cmp-nvim-lsp-document-symbol',
-      -- NOTE: until update to nvim-0.10
-      commit = '7ed09f8b89044976f7866e09a815dcbbab902ae9',
-    },
+    'hrsh7th/cmp-nvim-lsp-document-symbol',
     'hrsh7th/cmp-calc',
-    {
-      'hrsh7th/vim-vsnip',
-      -- NOTE: looks like next update needs new features of nvim-treesitter
-      commit = 'b7445b3c43acb08c0b74350d046e0088ece88033',
-    },
+    'hrsh7th/vim-vsnip',
     'supermaven-inc/supermaven-nvim',
     'windwp/nvim-autopairs',
   },

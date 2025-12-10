@@ -1,9 +1,9 @@
 ---@type table<string, FolderIconConfig>
 return {
-  -- NOTE: use folder-shaped icons
+  -- Use folder-shaped icons
   -- icons based on mini.icons and vscode-material-icon-theme
 
-  -- NOTE: extend based on:
+  -- Extend based on:
   -- https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/src/core/icons/folderIcons.ts
   -- Folder-prefixed highlight groups colors should come from:
   -- https://github.com/material-extensions/vscode-material-icon-theme/blob/5a653d98f2a1bb7ee7aae28a78c60ef21c911fd0/material-colors.yml

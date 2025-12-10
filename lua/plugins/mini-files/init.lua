@@ -35,11 +35,10 @@ local config = function()
 end
 
 return {
-  'echasnovski/mini.files',
+  'nvim-mini/mini.files',
   config = config,
   version = false,
   keys = {
-    -- NOTE: see https://lazy.folke.io/spec/lazy_loading#%EF%B8%8F-lazy-key-mappings
     { '-', nil, desc = 'Open mini.files in current file' },
     { '<leader>-', nil, desc = 'Open mini.files in last used path' },
     { '<leader>_', nil, desc = 'Open mini.files in root path of workspace' },
@@ -47,7 +46,7 @@ return {
   dependencies = {
     'nvim-tree/nvim-web-devicons',
     -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
-    -- { 'Hdoc1509/hygen.nvim', version = '*' },
-    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
+    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
   },
 }

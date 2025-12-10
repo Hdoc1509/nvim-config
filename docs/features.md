@@ -16,7 +16,7 @@
   [`fzf.vim`](https://github.com/junegunn/fzf.vim)
 - Autopairing via [`nvim-ts-autotag`](https://github.com/windwp/nvim-ts-autotag)
 - Snippets support with [`vim-vsnip`](https://github.com/hrsh7th/vim-vsnip)
-- Move lines and selections easier with [`vim-move`](https://github.com/matze/vim-move)
+- Move lines and selections easier with [`mini.move`](https://github.com/nvim-mini/mini.move)
 - Formatters support via [`formatter.nvim`](https://github.com/mhartington/formatter.nvim)
 - Easier pair surrounding with [`nvim-surround`](https://github.com/kylechui/nvim-surround)
 - Easier comments with [`Comment.nvim`](https://github.com/numToStr/Comment.nvim)
@@ -35,18 +35,16 @@
 - Beautiful GUI notifications with [`nvim-notify`](https://github.com/rcarriga/nvim-notify)
 - [`nvim-web-devicons`](https://github.com/nvim-tree/nvim-web-devicons) as icon
   provider
-- Rest client via [`rest.nvim`](https://github.com/rest-nvim/rest.nvim)
+- Rest client via [`kulala.nvim`](https://github.com/mistweaverco/kulala.nvim)
 - Better code folding with [`nvim-ufo`](https://github.com/kevinhwang91/nvim-ufo)
   and [`statuscol.nvim`](https://github.com/luukvbaal/statuscol.nvim)
-- Easily install packages with [`mason.nvim`](https://github.com/williamboman/mason.nvim)
-  and [`mason-tool-installer`](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
+- Install tools with [`mason.nvim`](https://github.com/williamboman/mason.nvim)
 - Better tabline with [`tabby.nvim`](https://github.com/nanozuki/tabby.nvim)
 - Jump out of brackets, quotes and other symbols with [`tabout.nvim`](https://github.com/abecodes/tabout.nvim)
 - A.I. powered code-completion with [`supermaven-nvim`](https://github.com/supermaven-inc/supermaven-nvim)
 - Beautiful markdown highlighting with [`render-markdown.nvim`](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 - Better `gx` with [`gx.nvim`](https://github.com/chrishrb/gx.nvim)
-- Zen mode with [`no-neck-pain.nvim`](https://github.com/shortcuts/no-neck-pain.nvim)
-  and [`twilight.nvim`](https://github.com/folke/twilight.nvim)
+- Center your buffer with [`no-neck-pain.nvim`](https://github.com/shortcuts/no-neck-pain.nvim)
 - Support for [`Hygen`](https://github.com/jondot/hygen) templates with
   [`hygen.nvim`](https://github.com/Hdoc1509/hygen.nvim)
 - Css unit conversion via [`convert.nvim`](https://github.com/cjodo/convert.nvim)
@@ -62,6 +60,11 @@
 - Improved support for [Vim's map](https://vimhelp.org/map.txt.html#map.txt)
   side (`lhs` and `rhs`) with
   [`vim-map-side.nvim`](https://github.com/Hdoc1509/vim-map-side.nvim)
+- Preview LSP rename with [`inc-rename.nvim`](https://github.com/smjonas/inc-rename.nvim)
+- Many QoL plugins with [`snacks.nvim`](https://github.com/folke/snacks.nvim)
+- Better Find And Replace with [`grug-far.nvim`](https://github.com/MagicDuck/grug-far.nvim)
+- Fancier vimdoc with [`helpview.nvim`](https://github.com/OXY2DEV/helpview.nvim)
+- Improved quickfix thanks to [`quicker.nvim`](https://github.com/stevearc/quicker.nvim)
 
 ## Tools
 
@@ -97,56 +100,58 @@
 - [`markdownlint`](https://github.com/DavidAnson/markdownlint)
 - [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint)
 - [`selene`](https://github.com/Kampfkarren/selene)
-- [`ts_query_ls`](https://github.com/ribru17/ts_query_ls#linter)
+<!-- - [`ts_query_ls`](https://github.com/ribru17/ts_query_ls#linter) -->
 
 ### Formatters
 
-- [`prettier`](https://github.com/prettier/prettier)
-- [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint#usage)
+- [`cbfmt`](https://github.com/lukas-reineke/cbfmt)
 - [`google-java-format`](https://github.com/google/google-java-format)
-- [`stylua`](https://github.com/JohnnyMorganz/StyLua)
+- [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint#usage)
+- [`prettier`](https://github.com/prettier/prettier)
 - [`shfmt`](https://github.com/mvdan/sh)
+- [`stylua`](https://github.com/JohnnyMorganz/StyLua)
 
 ## Treesitter parsers
 
-- astro
-- awk
-- bash
-  <!-- - c (required) -->
-  <!-- - cpp (required) -->
-- css
-- diff
-- editorconfig
-- embedded_template (ejs)
-- gh_actions_expressions
-- gitattributes
-- gitcommit
-- gitignore
-- groovy
-- html
-- http
-- hygen_template
-- java
-- javascript
-- jsdoc
-- json
-- jsonc
-- jq
-- lua
-- luap
-- markdown (also used for `mdx` files)
-- markdown_inline
-- powershell (only used for [Troubleshooting](./troubleshooting.md))
-- printf
-- properties
-- query
-- regex
-- scss
-- test
-- toml
-- tsx
-- typescript
-- vim
-- vim_map_side
-- vimdoc
-- yaml
+- [astro](https://github.com/virchau13/tree-sitter-astro)
+- [awk](https://github.com/Beaglefoot/tree-sitter-awk)
+- [bash](https://github.com/tree-sitter/tree-sitter-bash)
+- [css](https://github.com/tree-sitter/tree-sitter-css)
+- [diff](https://github.com/the-mikedavis/tree-sitter-diff)
+- [editorconfig](https://github.com/ValdezFOmar/tree-sitter-editorconfig)
+- [embedded_template](https://github.com/tree-sitter/tree-sitter-embedded-template)
+  (ejs)
+- [gh_actions_expressions](https://github.com/Hdoc1509/tree-sitter-gh-actions-expressions)
+- [gitattributes](https://github.com/ObserverOfTime/tree-sitter-gitattributes)
+- [gitcommit](https://github.com/gbprod/tree-sitter-gitcommit)
+- [gitignore](https://github.com/shunsambongi/tree-sitter-gitignore)
+- [groovy](https://github.com/murtaza64/tree-sitter-groovy)
+- [html](https://github.com/tree-sitter/tree-sitter-html)
+- [hygen_template](https://github.com/Hdoc1509/tree-sitter-hygen-template)
+- [java](https://github.com/tree-sitter/tree-sitter-java)
+- [javascript](https://github.com/tree-sitter/tree-sitter-javascript)
+- [jsdoc](https://github.com/tree-sitter/tree-sitter-jsdoc)
+- [json](https://github.com/tree-sitter/tree-sitter-json)
+- [jsonc](https://gitlab.com/WhyNotHugo/tree-sitter-jsonc.git)
+- [jq](https://github.com/flurie/tree-sitter-jq)
+- [kulala_http](https://github.com/mistweaverco/kulala.nvim/tree/main/lua/tree-sitter)
+  (installed by `kulala.nvim`)
+- [lua](https://github.com/MunifTanjim/tree-sitter-lua)
+- [luadoc](https://github.com/tree-sitter-grammars/tree-sitter-luadoc)
+- [luap](https://github.com/amaanq/tree-sitter-luap)
+- [markdown](https://github.com/MDeiml/tree-sitter-markdown)
+  (also used for `mdx` files)
+- [markdown_inline](https://github.com/MDeiml/tree-sitter-markdown)
+- [printf](https://github.com/ObserverOfTime/tree-sitter-printf)
+- [properties](https://github.com/tree-sitter-grammars/tree-sitter-properties)
+- [query](https://github.com/nvim-treesitter/tree-sitter-query)
+- [regex](https://github.com/tree-sitter/tree-sitter-regex)
+- [scss](https://github.com/serenadeai/tree-sitter-scss)
+- [test](https://github.com/tree-sitter-grammars/tree-sitter-test/)
+- [toml](https://github.com/tree-sitter-grammars/tree-sitter-toml)
+- [tsx](https://github.com/tree-sitter/tree-sitter-typescript)
+- [typescript](https://github.com/tree-sitter/tree-sitter-typescript)
+- [vim](https://github.com/neovim/tree-sitter-vim)
+- [vim_map_side](https://github.com/Hdoc1509/tree-sitter-vim-map-side)
+- [vimdoc](https://github.com/neovim/tree-sitter-vimdoc)
+- [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml)

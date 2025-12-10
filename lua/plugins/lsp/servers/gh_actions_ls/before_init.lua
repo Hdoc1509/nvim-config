@@ -1,5 +1,3 @@
-local M = {}
-
 local github_api_url = 'https://api.github.com/repos/'
 local notify_title = 'gh_actions_ls'
 local cache_file = vim.fn.expand('~/.cache/gh_actions_ls.json')
@@ -9,11 +7,6 @@ local function parse_repo_origin(origin)
 end
 
 local setup_repos = function(config)
-  if config.name ~= 'gh_actions_ls' then
-    return
-  end
-  -- PERF: vim.fn.system() is blocking
-
   local repo_data = {}
   local workspace_uri = vim.uri_from_fname(vim.fn.getcwd() .. '/.github/workflows')
   local cached = vim.fn.system({ 'jq', '.', cache_file })
@@ -72,6 +65,9 @@ local setup_repos = function(config)
   table.insert(config.init_options.repos, repo_data)
 end
 
-M.before = { setup_repos }
+---@type vim.lsp.client.before_init_cb
+local function before_init(_, config)
+  setup_repos(config)
+end
 
-return M
+return before_init

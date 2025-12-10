@@ -4,14 +4,12 @@ local base_parser = base_selene.parser
 local lazy_data_path = vim.fn.stdpath('data') .. '/lazy'
 local user_config = vim.fn.expand('~/.config/nvim')
 
--- NOTE: max 4 levels of indentation
-
 ---@param bufnr number
----@param diagnostic Diagnostic
+---@param diagnostic vim.Diagnostic
 local function is_diagnostic_ignored(bufnr, diagnostic)
   local buf_name = vim.api.nvim_buf_get_name(bufnr)
 
-  -- NOTE: filetype check to prevent linting window of `:InspectTree` command
+  -- filetype check to prevent linting window of `:InspectTree` command
   if buf_name:match(lazy_data_path) ~= nil or vim.bo[bufnr].filetype ~= 'lua' then
     return true
   end

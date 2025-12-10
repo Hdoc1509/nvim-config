@@ -1,6 +1,7 @@
 ---@class BaseIcons
 ---@field filename table<string, Icon>
 ---@field extension table<string, Icon>
+---@field os table<string, Icon>
 
 ---@class (exact) FileIconConfig
 ---@field icon string

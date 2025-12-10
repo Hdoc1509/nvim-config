@@ -15,6 +15,7 @@ local config = function()
       modemap = { 'nmap', 'buf_nmap', 'utils.nmap' },
     },
   })
+  require('plugins.treesitter.parsers').setup()
 
   ---@diagnostic disable-next-line: missing-fields
   require('nvim-treesitter.configs').setup({
@@ -34,13 +35,13 @@ return {
   build = ':TSUpdate',
   dependencies = {
     -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
-    -- { 'Hdoc1509/hygen.nvim', version = '*' },
-    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
+    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
     -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
-    { 'Hdoc1509/gh-actions.nvim', version = '0.1.0' },
+    { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0' },
     -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
     -- { dir = '~/dev/nvim-plugins/vim-map-side.nvim' },
-    { 'Hdoc1509/vim-map-side.nvim', version = '0.1.0' },
+    { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.0' },
     -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
     {
       -- FIX: try to set comment correctly for ejs files
@@ -49,18 +50,11 @@ return {
         enable_autocmd = false,
       },
     },
-    {
-      'windwp/nvim-ts-autotag',
-      opts = {
-        aliases = {
-          ejs = 'html',
-        },
-      },
-    },
-    'nvim-treesitter/nvim-treesitter-textobjects',
+    -- NOTE: use `main` branch once it defines a range of supported versions of neovim
+    { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
   },
   config = config,
-  event = { 'BufReadPre', 'BufNewFile' },
-  -- NOTE: until update to nvim-0.10
-  commit = '377039daa260b71f304c881d1b21d643c501a261',
+  lazy = false,
+  -- NOTE: until update to nvim-0.11 in `main` branch
+  branch = 'master',
 }

@@ -27,19 +27,18 @@ vim.cmd('cabbrev vh vertical help')
 -- Help in new tab
 vim.cmd('cabbrev th tab help')
 
--- NOTE: not needed from nvim-0.11
+-- override default mapping to open float window
 nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
--- NOTE: not needed from nvim-0.11
+-- override default mapping to open float window
 nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
 nmap('gdl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
 
 -- source file
 nmap('<leader><leader>x', '<cmd>source %<cr>', { desc = 'Source current file' })
 
--- NOTE: available since Neovim 0.10.0
 -- execute line(s)
--- nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
--- keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
+nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
+keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
 
 -- jump to quickfix item
 nmap('[q', '<cmd>cprevious<cr>', { desc = 'Jump to previous quickfix item' })

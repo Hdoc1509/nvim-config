@@ -1,6 +1,6 @@
 local utils = require('utils')
 
-local ignored_self_closing_tags = { 'meta', 'link', 'input' }
+local ignored_self_closing_tags = { 'meta', 'link', 'input', 'img' }
 
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
@@ -21,7 +21,7 @@ end
 
 return {
   handlers = {
-    ---@param result { diagnostics: Diagnostic[], uri: string }
+    ---@param result { diagnostics: vim.Diagnostic[], uri: string }
     ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
       -- print(vim.inspect(result))
       local filtered = {}

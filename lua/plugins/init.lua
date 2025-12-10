@@ -1,3 +1,3 @@
 return {
-  'matze/vim-move',
+  { 'nvim-mini/mini.move', opts = {}, version = false },
 }

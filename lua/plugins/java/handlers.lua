@@ -1,7 +1,7 @@
 local merge = require('utils').merge
 local default_handlers = require('plugins.lsp.handlers')
 
----@param diagnostic Diagnostic
+---@param diagnostic vim.Diagnostic
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
   if uri:match('hotbar%-keys') == nil then
@@ -23,7 +23,7 @@ return merge(default_handlers, {
   -- disable some diagnostics
   -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#publishDiagnosticsParams
   -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#diagnostic
-  ---@param result { diagnostics: Diagnostic[], uri: string }
+  ---@param result { diagnostics: vim.Diagnostic[], uri: string }
   ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
     -- print(vim.inspect(result))
 

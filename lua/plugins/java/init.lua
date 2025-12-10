@@ -1,6 +1,5 @@
 local function config()
   local jdtls = require('jdtls')
-  local jdtls_setup = require('jdtls.setup')
   local java_bin_path = require('plugins.java.java-bin')
   local data_dir = require('plugins.java.data-dir')
   local options = require('plugins.java.static-options')
@@ -11,7 +10,10 @@ local function config()
     pattern = 'java',
     callback = function()
       if cache.root_dir == nil then
-        cache.root_dir = jdtls_setup.find_root(options.root_markers)
+        cache.root_dir = vim.fs.root(0, options.root_markers)
+      end
+      if cache.root_dir == nil then
+        return
       end
 
       if cache.java_bin == nil then

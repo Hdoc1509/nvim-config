@@ -163,3 +163,95 @@
                 (plain_scalar
                   (string_scalar) @injection.content)
                 (#set! injection.language "gitignore")))))))))
+
+; === Github Issue Template forms ===
+(block_mapping_pair
+  key: (_) @_body
+  (#eq? @_body "body")
+  value: (block_node
+    (block_sequence
+      (block_sequence_item
+        (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (_) @_type
+              (#eq? @_type "type")
+              value: (_) @_markdown
+              (#eq? @_markdown "markdown"))
+            (block_mapping_pair
+              key: (_) @_attrs
+              (#eq? @_attrs "attributes")
+              value: (block_node
+                (block_mapping
+                  (block_mapping_pair
+                    key: (_) @_value
+                    (#eq? @_value "value")
+                    value: (block_node
+                      (block_scalar) @injection.content
+                      (#is-gh-issue-template-form? "")
+                      (#set! injection.language "markdown"))))))))))))
+
+(block_mapping_pair
+  key: (_) @_body
+  (#eq? @_body "body")
+  value: (block_node
+    (block_sequence
+      (block_sequence_item
+        (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (_) @_type
+              (#eq? @_type "type")
+              value: (_) @_textarea
+              (#eq? @_textarea "textarea"))
+            (block_mapping_pair
+              key: (_) @_attrs
+              (#eq? @_attrs "attributes")
+              value: (block_node
+                (block_mapping
+                  (block_mapping_pair
+                    key: (_) @_label
+                    (#eq? @_label "label")
+                    value: (_) @_text
+                    ; NOTE: update allowed labels as needed
+                    (#any-of? @_text "Healthcheck output" "Repro"))
+                  (block_mapping_pair
+                    key: (_) @_desc
+                    (#eq? @_desc "description")
+                    value: (flow_node
+                      (plain_scalar
+                        (string_scalar) @injection.content)
+                      (#is-gh-issue-template-form? "")
+                      (#set! injection.language "markdown"))))))))))))
+
+(block_mapping_pair
+  key: (_) @_body
+  (#eq? @_body "body")
+  value: (block_node
+    (block_sequence
+      (block_sequence_item
+        (block_node
+          (block_mapping
+            (block_mapping_pair
+              key: (_) @_type
+              (#eq? @_type "type")
+              value: (_) @_textarea
+              (#eq? @_textarea "textarea"))
+            (block_mapping_pair
+              key: (_) @_attrs
+              (#eq? @_attrs "attributes")
+              value: (block_node
+                (block_mapping
+                  (block_mapping_pair
+                    key: (_) @_value
+                    (#eq? @_value "value")
+                    value: (block_node
+                      (block_scalar) @injection.content)
+                    (#offset! @injection.content 0 1 0 0))
+                  (block_mapping_pair
+                    key: (_) @_render
+                    (#eq? @_render "render")
+                    ; NOTE: should I use `#set-lang-from-info-string!` of
+                    ; `nvim-treesitter`
+                    (#is-gh-issue-template-form? "")
+                    value: (_) @injection.language))))))))))

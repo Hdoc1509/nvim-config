@@ -18,7 +18,8 @@ local config = function()
       groovy_lint = { '*.gradle', '*.groovy' },
     },
     normal_events = {
-      ts_query_ls = '**queries/**/*.scm',
+      -- NOTE: temporary disable. it seem that it does the same as the lsp
+      -- ts_query_ls = '**queries/**/*.scm',
     },
   }
 
@@ -28,7 +29,7 @@ local config = function()
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
   lint.linters.markdownlint.parser = require('plugins.lint.markdownlint').parser
   lint.linters.selene.parser = require('plugins.lint.selene').parser
-  lint.linters.ts_query_ls = require('plugins.lint.ts-query-ls')
+  -- lint.linters.ts_query_ls = require('plugins.lint.ts-query-ls')
 
   for linter, pattern in pairs(linter_patterns.aggressive_events) do
     utils.autocmd(aggressive_events, {
@@ -54,8 +55,8 @@ return {
   config = config,
   dependencies = {
     -- { dir = '~/dev/hygen.nvim' },
-    -- { 'Hdoc1509/hygen.nvim', version = '*' },
-    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
+    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
     -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
     { 'Hdoc1509/gh-actions.nvim', version = '0.1.0' },
     -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },

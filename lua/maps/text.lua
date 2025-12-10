@@ -24,10 +24,3 @@ keymap(
   'y:%s/<c-r>0/replace/gc<left><left><left><c-w>',
   { desc = 'Replace selected text in current file' }
 )
--- NOTE: this can be done using ast-grep as command
-keymap(
-  'x',
-  '<leader>R',
-  'y:vimgrep /<c-r>0/ ** | copen |cdo %s/<c-r>0/replace/gc<left><left><left><c-w>',
-  { desc = 'Replace selected text in all files' }
-)

@@ -5,35 +5,10 @@
 If you are a Windows user and have problems to install `treesitter` parser,
 install `zig` and retry to install.
 
-## Fail to use `rest.nvim`
+## Fail to use load `kulala_http` parser
 
-If you are a Windows user and have problems to use `rest.nvim` because of
-`curl --compressed` option, you need to prepend the path of the `curl` binary
-that comes bundled with `git-for-windows` to your system `PATH`.
-
-Run the following commands with `powershell` as admin:
-
-- `Git 64-bit` version:
-
-  ```powershell
-  $GIT_PATH = "C:\Program Files\Git\mingw64\bin"
-  ```
-
-- `Git 32-bit` version:
-
-  ```powershell
-  $GIT_PATH = "C:\Program Files (x86)\Git\mingw64\bin"
-  ```
-
-- Finally, run:
-
-  ```powershell
-  [Environment]::SetEnvironmentVariable(
-    "Path",
-    "$GIT_PATH;" + [Environment]::GetEnvironmentVariable("PATH", "MACHINE"),
-    "MACHINE"
-  )
-  ```
+1. Run `:TSInstallFromGrammar` and select `kulala_http` parser
+2. Reopen file.
 
 ## Fail to use `eslint/prettier` with `astro` files
 
@@ -51,7 +26,7 @@ You will need to run `:chdir` to the installation path of `tree-sitter-test`
 plugin. Then, run:
 
 ```bash
-!mkdir -p parser && tree-sitter build -o parser/test.so
+mkdir -p parser && tree-sitter build -o parser/test.so
 ```
 
 ## `mini.files` opens when opening `fugitive`s summary window

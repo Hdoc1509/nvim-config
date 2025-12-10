@@ -36,4 +36,5 @@ return {
     'nvim-lua/plenary.nvim',
   },
   config = config,
+  version = '^1.5.0',
 }

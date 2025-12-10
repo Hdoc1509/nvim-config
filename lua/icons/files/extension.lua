@@ -13,8 +13,8 @@ local function generate(base_icons)
       name = 'JQ',
     },
     cmd = {
-      icon = ext.conf.icon,
-      color = base_icons.extension.bat.color,
+      icon = base_icons.os.windows.icon,
+      color = base_icons.os.windows.color,
       name = 'CMD',
     },
     gyp = {

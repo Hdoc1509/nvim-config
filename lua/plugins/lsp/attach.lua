@@ -5,7 +5,7 @@ local autocmd = utils.autocmd
 local nmap = utils.nmap
 local merge = utils.merge
 
--- LspAttach from :https://github.com/neovim/nvim-lspconfig?tab=readme-ov-file#suggested-configuration
+-- see :h LspAttach
 local attach = function(ev)
   local bufnr = ev.buf
 
@@ -14,8 +14,11 @@ local attach = function(ev)
   end
 
   local client = vim.lsp.get_client_by_id(ev.data.client_id)
+  if client == nil then
+    return
+  end
 
-  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  -- see `:help vim.lsp.*` for documentation on any of the below functions
   buf_nmap('grd', function()
     lsp_buf.definition({ reuse_win = true })
   end, { desc = 'Go to definition' })
@@ -26,8 +29,7 @@ local attach = function(ev)
     hover_multi_lsp(bufnr)
   end, { desc = 'Hover' })
   buf_nmap('grt', lsp_buf.type_definition, { desc = 'Go to type definition' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('grn', lsp_buf.rename, { desc = 'Rename' })
+  buf_nmap('grn', ':IncRename ', { desc = 'Rename' })
   -- NOTE: not needed from nvim-0.11
   buf_nmap('gra', lsp_buf.code_action, { desc = 'Code actions' })
   -- NOTE: not needed from nvim-0.11
@@ -38,8 +40,6 @@ local attach = function(ev)
 
     local hl_group = vim.api.nvim_create_augroup('lsp_document_highlight', { clear = false })
 
-    -- PERF: try to use single autocmd(). reference:
-    -- https://github.com/folke/snacks.nvim/blob/ba529d4f5d409639e082aff916c9b8e71b480531/lua/snacks/words.lua#L40-L52
     vim.api.nvim_clear_autocmds({ buffer = bufnr, group = hl_group })
     autocmd({ 'CursorHold', 'CursorHoldI' }, {
       group = hl_group,
@@ -52,7 +52,7 @@ local attach = function(ev)
         end
       end,
     })
-    autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+    autocmd({ 'CursorMoved', 'CursorMovedI', 'WinLeave' }, {
       group = hl_group,
       buffer = bufnr,
       callback = lsp_buf.clear_references,

@@ -9,8 +9,9 @@ return {
     dim = {
       animate = { enabled = false },
     },
-    -- FIX: breaks vim.lsp.buf.code_action()
-    -- picker = {},
+    -- TODO: try gh module
+    -- https://github.com/folke/snacks.nvim/blob/main/docs/gh.md
+    picker = {},
   },
   keys = {
     {
@@ -27,17 +28,17 @@ return {
       end,
       desc = 'Got to previous LSP reference',
     },
-    -- TODO: use once updated to nvim-0.10
-    --[[ {
+    {
       '<leader>Z',
       function()
-        if Snacks.dim.enabled then
+        if not Snacks.dim.enabled then
           Snacks.dim()
         else
           Snacks.dim.disable()
         end
       end,
       desc = 'Focus the active scope',
-    }, ]]
+    },
   },
+  version = '^2.30.0',
 }

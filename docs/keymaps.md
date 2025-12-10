@@ -148,7 +148,9 @@ Used mapleader is `<space>` key.
 | Mapping      | Mode   | Description                       |
 | ------------ | ------ | --------------------------------- |
 | `<leader>rr` | Normal | Run HTTP request under the cursor |
+| `<leader>ra` | Normal | Run all requests                  |
 | `<leader>rl` | Normal | Re-run the last HTTP request      |
+| `<leader>rb` | Normal | Open scratchpad                   |
 
 ## Markdown
 
@@ -185,7 +187,7 @@ Used mapleader is `<space>` key.
 | `<leader>-` | Normal | Open mini.files at last used path         |
 | `<leader>_` | Normal | Open mini.files at root path of workspace |
 
-### mini.files window
+### mini.files explorer
 
 | Mapping | Mode   | Description            |
 | ------- | ------ | ---------------------- |
@@ -200,6 +202,7 @@ Used mapleader is `<space>` key.
 | `gt`    | Normal | New tab (silent)       |
 | `gT`    | Normal | New tab                |
 | `gy`    | Normal | Copy path to clipboard |
+| `gX`    | Normal | OS open                |
 
 **(silent): Mappings that don't jump to file nor close the explorer.**
 
@@ -224,7 +227,7 @@ Used mapleader is `<space>` key.
 | Mapping     | Mode   | Description         |
 | ----------- | ------ | ------------------- |
 | `<leader>z` | Normal | Toggle `NoNeckPain` |
-| `<leader>Z` | Normal | Toggle `Twilight`   |
+| `<leader>Z` | Normal | Toggle snacks dim   |
 
 ## nvim-cmp
 
@@ -245,7 +248,7 @@ Used mapleader is `<space>` key.
 | Mapping     | Mode   | Description                           |
 | ----------- | ------ | ------------------------------------- |
 | `<leader>r` | Visual | Replace selected text in current file |
-| `<leader>R` | Visual | Replace selected text in all files    |
+| `<leader>R` | Visual | Runs `:GrugFar`                       |
 
 ## Markdown-only
 
@@ -278,12 +281,13 @@ Used mapleader is `<space>` key.
 
 ## Misc
 
-| Mapping       | Mode            | Description                                |
-| ------------- | --------------- | ------------------------------------------ |
-| `<leader>ya`  | Normal          | Copy all text of current file to clipboard |
-| `<leader>/`   | Normal          | Clear search highlighting                  |
-| `<leader>x`   | Normal          | Source current file                        |
-| `H`           | Normal          | Preview folded lines                       |
+| Mapping             | Mode            | Description                                |
+| ------------------- | --------------- | ------------------------------------------ |
+| `<leader>ya`        | Normal          | Copy all text of current file to clipboard |
+| `<leader>/`         | Normal          | Clear search highlighting                  |
+| `<leader><leader>x` | Normal          | Source current file                        |
+| `<leader>x`         | Normal / Visual | Execute current or selected lines with lua |
+| `H`                 | Normal          | Preview folded lines                       |
 
 ## Abbreviations
 

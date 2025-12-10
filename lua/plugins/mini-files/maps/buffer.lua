@@ -2,11 +2,6 @@ local utils = require('utils')
 
 local M = {}
 
--- NOTE: enable once updated to nvim-0.10
--- local ui_open = function()
---   vim.ui.open(MiniFiles.get_fs_entry().path)
--- end
-
 local yank_path = function()
   local path = (MiniFiles.get_fs_entry() or {}).path
   if path == nil then
@@ -81,10 +76,8 @@ end
 M.setup = function(buf_id)
   -- allow to confirm changes on write. taken from:
   -- https://github.com/mrjones2014/dotfiles/blob/31f7988420e5418925022c524de04934e02a427c/nvim/lua/my/configure/mini_files.lua#L14
-  -- TODO: use nvim_set_option_value() once updated to nvim-0.10
-  vim.api.nvim_buf_set_option(buf_id, 'buftype', 'acwrite')
-  -- TODO: use vim.uv.hrtime() once updated to nvim-0.10
-  vim.api.nvim_buf_set_name(buf_id, string.format('mini.files-%s', vim.loop.hrtime()))
+  vim.api.nvim_set_option_value('buftype', 'acwrite', { buf = buf_id })
+  vim.api.nvim_buf_set_name(buf_id, string.format('mini.files-%s', vim.uv.hrtime()))
   utils.autocmd('BufWriteCmd', {
     buffer = buf_id,
     callback = function()
@@ -92,8 +85,9 @@ M.setup = function(buf_id)
     end,
   })
 
-  -- TODO: enable once updated to nvim-0.10
-  -- nmap('gX', ui_open, { buffer = buf_id, desc = 'OS open' })
+  utils.nmap('gX', function()
+    vim.ui.open(MiniFiles.get_fs_entry().path)
+  end, { buffer = buf_id, desc = 'OS open' })
 
   utils.nmap('gy', yank_path, { buffer = buf_id, desc = 'Yank path' })
 

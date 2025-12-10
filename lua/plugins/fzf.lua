@@ -39,6 +39,7 @@ return {
         vim.cmd('FZF')
       end, { desc = 'Search files' })
     end,
+    version = '^0.66.1',
   },
   {
     'junegunn/fzf.vim',

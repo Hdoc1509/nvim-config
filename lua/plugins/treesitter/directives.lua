@@ -1,33 +1,21 @@
--- NOTE: in neovim 0.9. `opts` is a boolean, from 0.10 it's a table
--- be sure to update the type when migrating to neovim 0.10
-
 ---@type table<string,TSDirective>
 local directives = {
-  ['inject-mdx-js!'] = function(_, _, bufnr, _, metadata)
-    local filename = vim.api.nvim_buf_get_name(bufnr)
-    local ext = vim.fn.fnamemodify(filename, ':e')
-    if ext ~= 'mdx' then
-      return
-    end
-
-    metadata['injection.language'] = 'javascript'
-  end,
   ['offset-gh-actions-on-push-pr!'] = function(match, _, _, pred, metadata)
-    -- based on: $VIMRUNTIME/lua/vim/treesitter/query.lua:422
-    ---@cast pred integer[]
-    local capture_id = pred[2]
-    local node = match[capture_id]
-
-    if not node then
+    -- based on: $VIMRUNTIME/lua/vim/treesitter/query.lua:529
+    local capture_id = pred[2] --[[@as integer]]
+    local nodes = match[capture_id]
+    if not nodes or #nodes == 0 then
       return
     end
+    assert(#nodes == 1, '#offset-gh-actions-on-push-pr! does not support captures on multiple nodes')
+
+    local node = nodes[1]
 
     if not metadata[capture_id] then
-      ---@diagnostic disable-next-line: missing-fields
       metadata[capture_id] = {}
     end
 
-    local range = metadata[capture_id].range or { match[capture_id]:range() }
+    local range = metadata[capture_id].range or { node:range() }
 
     if node:type():match('_quote_scalar$') then
       range[2] = range[2] + 1
@@ -44,7 +32,7 @@ local directives = {
 return {
   setup = function()
     for name, handler in pairs(directives) do
-      vim.treesitter.query.add_directive(name, handler)
+      vim.treesitter.query.add_directive(name, handler, { all = true })
     end
   end,
 }
