@@ -25,6 +25,8 @@ inject `tree-sitter-regex`
 
 #### mdx
 
+Use https://github.com/srazzak/tree-sitter-mdx or:
+
 Emulate MDX syntax with existing parsers and custom tweaks.
 
 - [x] Parse `markdown.mdx` filetype with `markdown` parser
