@@ -41,6 +41,13 @@ return {
       end,
       desc = 'Focus the active scope',
     },
+    {
+      '<leader>lg',
+      function()
+        Snacks.lazygit.open()
+      end,
+      desc = 'Open lazygit',
+    },
   },
   version = '^2.30.0',
 }
