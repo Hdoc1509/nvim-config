@@ -1,12 +1,10 @@
 # Installation
 
-## Requirements
+## Previous Neovim versions
 
-> [!NOTE]
-> This branch will be merged to
-> [master](https://github.com/Hdoc1509/nvim-config/tree/master) once all setup
-> has been updated to
-> [Neovim 0.10.4](https://github.com/neovim/neovim/releases/tag/v0.10.4)
+- [Neovim 0.9.5](https://github.com/Hdoc1509/nvim-config/tree/nvim-0.9.5)
+
+## Requirements
 
 - [Patched nerd-font v3.4.0+](https://github.com/ryanoasis/nerd-fonts/releases)
 - [Neovim 0.10.4](https://github.com/neovim/neovim/releases/tag/v0.10.4)
