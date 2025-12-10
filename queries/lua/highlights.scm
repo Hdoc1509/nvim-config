@@ -207,8 +207,4 @@ local_declaration: (variable_declaration
 ; === global `vim` table ===
 (dot_index_expression
   table: (_) @variable.builtin
-  (#eq? @variable.builtin "vim")
-  ; TODO: add `is-nvim-lua-file?` predicate. matches lua files in
-  ; stdpath('config') and inside `nvim-plugins` folder
-  ; (#is-nvim-lua-file? "") ???
-  )
+  (#eq? @variable.builtin "vim"))
