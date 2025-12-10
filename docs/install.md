@@ -1,5 +1,9 @@
 # Installation
 
+## Other Neovim versions
+
+- [Neovim 0.10](https://github.com/Hdoc1509/nvim-config/tree/nvim-0.10)
+
 ## Requirements
 
 - [Patched nerd-font v3.4.0+](https://github.com/ryanoasis/nerd-fonts/releases)
