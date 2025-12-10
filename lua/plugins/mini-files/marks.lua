@@ -1,3 +1,5 @@
+---@module 'mini.files'
+
 local M = {}
 
 local set_mark = function(id, path, desc)

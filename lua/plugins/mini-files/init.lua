@@ -1,3 +1,5 @@
+---@module 'snacks.rename'
+
 local config = function()
   local utils = require('utils')
   local buffer_maps = require('plugins.mini-files.maps.buffer')
