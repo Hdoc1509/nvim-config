@@ -70,9 +70,3 @@ the `myComponents` object: <myComponents.thisOne />
 #### printf
 
 https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/highlights.scm
-
-## Try
-
-- https://github.com/bennypowers/svgo.nvim
-  using config of svgmog: https://github.com/jakearchibald/svgomg/blob/main/src/config.json
-  need to install https://github.com/svg/svgo
