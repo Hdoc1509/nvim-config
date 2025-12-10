@@ -1,4 +1,5 @@
 local config = function()
+  local util = require('formatter.util')
   local prettier = require('formatter.defaults.prettier')
   local shfmt = require('formatter.filetypes.sh').shfmt
 
@@ -31,7 +32,24 @@ local config = function()
       json = { prettier },
       jsonc = { prettier },
       lua = { require('formatter.filetypes.lua').stylua },
-      markdown = { prettier },
+      markdown = {
+        prettier,
+        -- cbfmt
+        function()
+          return {
+            exe = 'cbfmt',
+            args = {
+              '--write',
+              '--best-effort',
+              '--stdin-filepath',
+              util.escape_path(util.get_current_buffer_file_path()),
+              '--config',
+              vim.fn.stdpath('config') .. '/cbfmt.toml',
+            },
+            stdin = true,
+          }
+        end,
+      },
       ['markdown.mdx'] = { prettier },
       query = {
         function()

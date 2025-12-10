@@ -6,6 +6,7 @@ local ensure_installed = {
   { 'ast-grep', version = '0.39.9' },
   { 'astro-language-server', version = '2.10.0' },
   { 'bash-language-server', version = '5.4.0' },
+  { 'cbfmt', version = 'v0.2.0' },
   { 'css-variables-language-server', version = '2.7.0' },
   { 'css-lsp', version = '4.7.0' },
   { 'emmet-ls', version = '0.4.2' },

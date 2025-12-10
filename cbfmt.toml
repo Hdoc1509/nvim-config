@@ -1,0 +1,4 @@
+[languages]
+bash = ["shfmt -i 2"]
+lua = ["stylua --search-parent-directories -"]
+sh = ["shfmt -i 2"]

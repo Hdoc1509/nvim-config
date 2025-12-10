@@ -104,11 +104,12 @@
 
 ### Formatters
 
-- [`prettier`](https://github.com/prettier/prettier)
-- [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint#usage)
+- [`cbfmt`](https://github.com/lukas-reineke/cbfmt)
 - [`google-java-format`](https://github.com/google/google-java-format)
-- [`stylua`](https://github.com/JohnnyMorganz/StyLua)
+- [`npm-groovy-lint`](https://github.com/nvuillam/npm-groovy-lint#usage)
+- [`prettier`](https://github.com/prettier/prettier)
 - [`shfmt`](https://github.com/mvdan/sh)
+- [`stylua`](https://github.com/JohnnyMorganz/StyLua)
 
 ## Treesitter parsers
 
