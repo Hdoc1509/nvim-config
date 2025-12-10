@@ -97,6 +97,7 @@
       (string_content) @injection.content)
     (#set! injection.language "bash")))
 
+; === nvim ===
 (command
   (command_name) @_nvim
   (#eq? @_nvim "nvim")
@@ -108,3 +109,23 @@
     (string
       (string_content) @injection.content))
   (#set! injection.language "vim"))
+
+(command
+  (command_name) @_nvim
+  (#eq? @_nvim "nvim")
+  argument: (concatenation
+    .
+    (word) @_plus
+    (#eq? @_plus "+")
+    .
+    (raw_string) @injection.content)
+  (#set! injection.language "vim")
+  (#offset! @injection.content 0 1 0 -1))
+
+(command
+  (command_name) @_nvim
+  (#eq? @_nvim "nvim")
+  argument: (word) @injection.content
+  (#lua-match? @injection.content "^+")
+  (#set! injection.language "vim")
+  (#offset! @injection.content 0 1 0 0))
