@@ -22,18 +22,12 @@ local attach = function(ev)
   buf_nmap('grd', function()
     lsp_buf.definition({ reuse_win = true })
   end, { desc = 'Go to definition' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('gO', lsp_buf.document_symbol, { desc = 'List symbols' })
   buf_nmap('J', lsp_buf.signature_help, { desc = 'Show signature help' })
   buf_nmap('K', function()
     hover_multi_lsp(bufnr)
   end, { desc = 'Hover' })
   buf_nmap('grt', lsp_buf.type_definition, { desc = 'Go to type definition' })
   buf_nmap('grn', ':IncRename ', { desc = 'Rename' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('gra', lsp_buf.code_action, { desc = 'Code actions' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('grr', lsp_buf.references, { desc = 'List references' })
 
   if client.server_capabilities.documentHighlightProvider then
     vim.cmd('hi clear LspReferenceText')
