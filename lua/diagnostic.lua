@@ -7,6 +7,5 @@ for type, icon in pairs(ICONS) do
 end
 
 vim.diagnostic.config({
-  virtual_text = false,
   float = { source = true, border = 'rounded' },
 })
