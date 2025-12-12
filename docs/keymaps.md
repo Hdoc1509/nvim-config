@@ -170,15 +170,6 @@ Used mapleader is `<space>` key.
 | `<leader>F` | Normal | Format and save current file        |
 | `<leader>F` | Visual | Format selected lines and save file |
 
-## Blankline
-
-| Mapping     | Mode       | Description                       |
-| ----------- | ---------- | --------------------------------- |
-| `<leader>o` | Normal [N] | Add blanklines below current line |
-| `<leader>O` | Normal [N] | Add blanklines above current line |
-
-**[N]: Mappings that can receive a count.**
-
 ## mini.files
 
 | Mapping     | Mode   | Description                               |
@@ -284,6 +275,9 @@ Used mapleader is `<space>` key.
 | `<leader><leader>x` | Normal          | Source current file                        |
 | `<leader>x`         | Normal / Visual | Execute current or selected lines with lua |
 | `H`                 | Normal          | Preview folded lines                       |
+
+> [!NOTE]
+> See `:help default-mappings` for built-in mappings.
 
 ## Abbreviations
 

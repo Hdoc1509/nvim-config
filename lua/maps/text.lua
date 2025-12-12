@@ -9,15 +9,6 @@ keymap('x', '>', '>gv')
 
 nmap('<leader>ya', '<cmd>%yank<cr>', { desc = 'Copy all text to clipboard' })
 
-nmap('<leader>o', "printf('m`%so<esc>``', v:count1)", {
-  desc = 'Add blankline(s) below current line',
-  expr = true,
-})
-nmap('<leader>O', "printf('m`%sO<esc>``', v:count1)", {
-  desc = 'Add blankline(s) above current line',
-  expr = true,
-})
-
 keymap(
   'x',
   '<leader>r',
