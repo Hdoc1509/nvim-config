@@ -2,6 +2,10 @@
 
 ## Backports
 
+### Patch
+
+- [ ] Correct option for `vim.diagnostic.config`. Reference: https://github.com/Hdoc1509/nvim-config/commit/4d5fdeaa198e323f948c18284320ec626443727b
+
 ### Simplify
 
 - [ ]  Use `before_init` option for `gh_actions_ls`. Reference: https://github.com/Hdoc1509/nvim-config/commit/6a3081239d229e6663bb64cb7f01ab34f082d2c9
