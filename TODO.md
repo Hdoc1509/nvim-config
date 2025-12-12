@@ -1,5 +1,12 @@
 # TODO
 
+## Backports
+
+### Simplify
+
+- [ ]  Use `before_init` option for `gh_actions_ls`. Reference: https://github.com/Hdoc1509/nvim-config/commit/6a3081239d229e6663bb64cb7f01ab34f082d2c9
+- [ ] Remove `inject-mdx-js` directive. Reference: https://github.com/Hdoc1509/nvim-config/commit/453d3fe584cca0e952bbb04a88dd6491b32972f1
+
 ## LSP
 
 ### Try
