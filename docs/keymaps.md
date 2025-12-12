@@ -265,10 +265,6 @@ Used mapleader is `<space>` key.
 | `gT`    | Normal | Open item in new tab                  |
 | `gs`    | Normal | Open item in new split (silent)       |
 | `gS`    | Normal | Open item in new split                |
-| `[q`    | Normal | Jump to previous quickfix item        |
-| `[Q`    | Normal | Jump to first quickfix item           |
-| `]q`    | Normal | Jump to next quickfix item            |
-| `]Q`    | Normal | Jump to last quickfix item            |
 
 **(silent): Mappings that don't jump to file nor close the quickfix window.**
 

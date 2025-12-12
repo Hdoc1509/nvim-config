@@ -40,12 +40,6 @@ nmap('<leader><leader>x', '<cmd>source %<cr>', { desc = 'Source current file' })
 nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
 keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
 
--- jump to quickfix item
-nmap('[q', '<cmd>cprevious<cr>', { desc = 'Jump to previous quickfix item' })
-nmap('[Q', '<cmd>cfirst<cr>', { desc = 'Jump to first quickfix item' })
-nmap(']q', '<cmd>cnext<cr>', { desc = 'Jump to next quickfix item' })
-nmap(']Q', '<cmd>clast<cr>', { desc = 'Jump to last quickfix item' })
-
 -- LSP log
 nmap('<leader>ll', function()
   if lsp_log.get_level() == vim.lsp.log_levels.OFF then
