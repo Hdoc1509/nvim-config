@@ -1,5 +1,11 @@
 # TODO
 
+## Backports
+
+### Patches
+
+- [ ] Update [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) to https://github.com/hrsh7th/cmp-nvim-lsp/commit/cbc7b02
+
 ## LSP
 
 ### Try
