@@ -28,9 +28,13 @@ vim.cmd('cabbrev vh vertical help')
 vim.cmd('cabbrev th tab help')
 
 -- override default mapping to open float window
-nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
+nmap(']d', function()
+  vim.diagnostic.jump({ count = vim.v.count1, float = true })
+end, { desc = 'Go to next diagnostic' })
 -- override default mapping to open float window
-nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
+nmap('[d', function()
+  vim.diagnostic.jump({ count = vim.v.count1 * -1, float = true })
+end, { desc = 'Go to previous diagnostic' })
 nmap('gdl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
 
 -- source file
