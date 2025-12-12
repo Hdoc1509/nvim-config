@@ -5,6 +5,7 @@
 ### Patches
 
 - [ ] Update [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) to https://github.com/hrsh7th/cmp-nvim-lsp/commit/cbc7b02
+- [ ] Correct option for `vim.diagnostic.config`. Reference: https://github.com/Hdoc1509/nvim-config/commit/4d5fdeaa198e323f948c18284320ec626443727b
 
 ## LSP
 
