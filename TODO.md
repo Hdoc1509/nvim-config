@@ -4,6 +4,7 @@
 
 ### Patch
 
+- [ ] Remove `numhl` option from `vim.fn.sign_define()`. Reference: https://github.com/Hdoc1509/nvim-config/commit/36424a58a452e21b34eaa8a55944dd1648254c95
 - [ ] Correct option for `vim.diagnostic.config`. Reference: https://github.com/Hdoc1509/nvim-config/commit/4d5fdeaa198e323f948c18284320ec626443727b
 
 ### Simplify
