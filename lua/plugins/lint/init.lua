@@ -49,5 +49,5 @@ end
 return {
   'mfussenegger/nvim-lint',
   config = config,
-  ft = { 'markdown', 'yaml', 'lua', 'groovy', 'query' },
+  ft = { 'markdown', 'yaml', 'lua', 'groovy' },
 }
