@@ -40,7 +40,7 @@ return {
     -- '~/dev/nvim-plugins/gh-actions.nvim',
     { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0' },
     -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
-    -- { dir = '~/dev/nvim-plugins/vim-map-side.nvim' },
+    -- '~/dev/nvim-plugins/vim-map-side.nvim',
     { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.0' },
     -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
     {
