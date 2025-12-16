@@ -37,7 +37,7 @@ return {
     -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
     { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
     -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
-    -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
+    -- '~/dev/nvim-plugins/gh-actions.nvim',
     { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0' },
     -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
     -- { dir = '~/dev/nvim-plugins/vim-map-side.nvim' },
