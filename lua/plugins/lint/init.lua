@@ -20,9 +20,6 @@ local config = function()
     normal_events = {},
   }
 
-  -- disable built-in `query` linter
-  vim.g.query_lint_on = {}
-
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
   lint.linters.markdownlint.parser = require('plugins.lint.markdownlint').parser
   lint.linters.selene.parser = require('plugins.lint.selene').parser
