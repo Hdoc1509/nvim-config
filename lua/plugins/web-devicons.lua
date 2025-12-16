@@ -1,7 +1,6 @@
 return {
   'nvim-tree/nvim-web-devicons',
   dependencies = {
-    -- '~/dev/nvim-plugins/hygen.nvim',
     'Hdoc1509/hygen.nvim',
   },
   config = function()

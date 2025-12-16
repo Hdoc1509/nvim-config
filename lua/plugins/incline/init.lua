@@ -4,7 +4,6 @@ return {
     'itchyny/lightline.vim',
     'nvim-tree/nvim-web-devicons',
     'nanozuki/tabby.nvim',
-    -- '~/dev/nvim-plugins/hygen.nvim',
     'Hdoc1509/hygen.nvim',
   },
   config = function()

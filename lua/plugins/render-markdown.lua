@@ -2,7 +2,6 @@ return {
   'MeanderingProgrammer/render-markdown.nvim',
   dependencies = {
     'nvim-treesitter/nvim-treesitter',
-    -- '~/dev/nvim-plugins/hygen.nvim',
     'Hdoc1509/hygen.nvim',
   },
   config = function()

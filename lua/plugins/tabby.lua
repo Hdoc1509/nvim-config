@@ -49,7 +49,6 @@ return {
   event = 'VimEnter',
   dependencies = {
     'nvim-tree/nvim-web-devicons',
-    -- '~/dev/nvim-plugins/hygen.nvim',
     'Hdoc1509/hygen.nvim',
   },
   config = config,
