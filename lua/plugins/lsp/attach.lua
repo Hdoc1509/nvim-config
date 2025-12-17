@@ -1,15 +1,13 @@
 local utils = require('utils')
 local lsp_buf = vim.lsp.buf
 local autocmd = utils.autocmd
-local nmap = utils.nmap
-local merge = utils.merge
 
 -- see :h LspAttach
 local attach = function(ev)
   local bufnr = ev.buf
 
   local buf_nmap = function(lhs, rhs, opts)
-    nmap(lhs, rhs, merge({ buffer = bufnr }, opts or {}))
+    utils.nmap(lhs, rhs, utils.merge({ buffer = bufnr }, opts or {}))
   end
 
   local client = vim.lsp.get_client_by_id(ev.data.client_id)
