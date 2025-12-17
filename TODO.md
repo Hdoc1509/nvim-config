@@ -14,6 +14,9 @@
 
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#spyglassmc_language_server
 - https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#taplo
+- Update `nvim-lspconfig` to correct version before end of support for neovim 0.10: https://github.com/neovim/nvim-lspconfig/commit/62e1955d7e9a3dca543635effad54d29947cb91e.
+
+  Related to: https://github.com/Hdoc1509/nvim-config/commit/c580fbe9817e238bcc9b38f9ae761539b4f42a3e
 
 ## Treesitter
 
