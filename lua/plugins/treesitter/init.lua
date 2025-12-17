@@ -7,11 +7,9 @@ local config = function()
 
   require('hygen.tree-sitter').setup()
   require('gh-actions.tree-sitter').setup({
-    from_grammar = true,
     revision = 'v0.5.0',
   })
   require('vim-map-side.tree-sitter').setup({
-    from_grammar = true,
     revision = 'v0.1.0',
     custom_fns = {
       keymap = { 'keymap', 'utils.keymap' },
