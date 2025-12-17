@@ -22,7 +22,7 @@ end
 return {
   handlers = {
     ---@param result { diagnostics: vim.Diagnostic[], uri: string }
-    ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
+    ['textDocument/publishDiagnostics'] = function(_, result, ctx)
       -- print(vim.inspect(result))
       local filtered = {}
 
@@ -34,8 +34,7 @@ return {
 
       result.diagnostics = filtered
 
-      -- FIX: params has changed
-      vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+      vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx)
     end,
   },
   root_dir = function(bufnr, on_dir)

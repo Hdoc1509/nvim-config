@@ -10,15 +10,14 @@ return {
   filetypes = { 'sh', 'zsh' },
   handlers = {
     ---@param result { diagnostics: lsp.Diagnostic[], uri: string }
-    ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
+    ['textDocument/publishDiagnostics'] = function(_, result, ctx)
       -- print(vim.inspect(result))
 
       result.diagnostics = vim.tbl_filter(function(diagnostic)
         return not is_diagnostic_ignored(diagnostic, result.uri)
       end, result.diagnostics)
 
-      -- FIX: params has changed
-      vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+      vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx)
     end,
   },
 }
