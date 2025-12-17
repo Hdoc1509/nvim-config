@@ -38,4 +38,9 @@ return {
       vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
     end,
   },
+  root_dir = function(bufnr, on_dir)
+    if not vim.bo[bufnr].filetype == 'ejs' then
+      on_dir(vim.fn.getcwd())
+    end
+  end,
 }
