@@ -6,7 +6,10 @@ local config = function()
   require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
 
   require('hygen.tree-sitter').setup()
-  require('gh-actions.tree-sitter').setup({ from_grammar = true })
+  require('gh-actions.tree-sitter').setup({
+    from_grammar = true,
+    revision = 'v0.5.0',
+  })
   require('vim-map-side.tree-sitter').setup({
     from_grammar = true,
     revision = 'v0.1.0',
