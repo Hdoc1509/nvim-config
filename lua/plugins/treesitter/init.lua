@@ -38,7 +38,7 @@ return {
     -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
     { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0', dev = false },
     -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
-    { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.0', dev = false },
+    { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.1', dev = false },
     -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
     {
       -- FIX: try to set comment correctly for ejs files
