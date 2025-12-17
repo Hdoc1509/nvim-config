@@ -34,6 +34,7 @@ return {
 
       result.diagnostics = filtered
 
+      -- FIX: params has changed
       vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
     end,
   },

@@ -8,6 +8,7 @@ local selected = {
 return {
   settings = {
     yaml = {
+      -- TODO: inline require
       schemas = schema_store.yaml.schemas({ select = selected }),
     },
   },

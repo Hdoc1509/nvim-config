@@ -1,12 +1,19 @@
 local config = function()
-  local nvim_lsp = require('lspconfig')
   local servers = require('plugins.lsp.servers')
 
   require('plugins.lsp.attach').setup()
 
+  vim.lsp.config('*', {
+    capabilities = require('plugins.lsp.capabilities'),
+  })
+
   for server, setting in pairs(servers) do
-    nvim_lsp[server].setup(setting)
+    if #vim.tbl_keys(setting) > 0 then
+      vim.lsp.config(server, setting)
+    end
   end
+
+  vim.lsp.enable(vim.tbl_keys(servers))
 end
 
 return {
@@ -26,8 +33,5 @@ return {
     'Hdoc1509/vim-map-side.nvim',
     { 'smjonas/inc-rename.nvim', opts = {} },
   },
-  event = 'BufReadPre',
   config = config,
-  -- NOTE: until update to nvim-0.11
-  commit = 'fb02680e755fe789e0999df2d208d9adb8fed676',
 }

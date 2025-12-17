@@ -1,4 +1,3 @@
-local hover_multi_lsp = require('plugins.lsp.hover-multi-lsp')
 local utils = require('utils')
 local lsp_buf = vim.lsp.buf
 local autocmd = utils.autocmd
@@ -23,10 +22,6 @@ local attach = function(ev)
     lsp_buf.definition({ reuse_win = true })
   end, { desc = 'Go to definition' })
   buf_nmap('J', lsp_buf.signature_help, { desc = 'Show signature help' })
-  buf_nmap('K', function()
-    hover_multi_lsp(bufnr)
-  end, { desc = 'Hover' })
-  buf_nmap('grt', lsp_buf.type_definition, { desc = 'Go to type definition' })
   buf_nmap('grn', ':IncRename ', { desc = 'Rename' })
 
   if client.server_capabilities.documentHighlightProvider then

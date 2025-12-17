@@ -11,6 +11,7 @@ local selected = {
 return {
   settings = {
     json = {
+      -- TODO: inline require
       schemas = schema_store.json.schemas({ select = selected }),
       validate = { enable = true },
     },
