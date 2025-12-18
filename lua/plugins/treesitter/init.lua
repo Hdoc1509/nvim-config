@@ -40,14 +40,6 @@ return {
       -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
       { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.1', dev = false },
       -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
-      -- move out of `dependencies`. as sibling of `nvim-treesitter/nvim-treesitter`
-      {
-        -- FIX: try to set comment correctly for ejs files
-        'JoosepAlviste/nvim-ts-context-commentstring',
-        opts = {
-          enable_autocmd = false,
-        },
-      },
     },
     config = config,
     lazy = false,
@@ -62,5 +54,12 @@ return {
       vim.g.no_plugins_maps = true
     end,
     config = require('plugins.treesitter.textobjects').setup,
+  },
+  {
+    -- FIX: try to set comment correctly for ejs files
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    opts = {
+      enable_autocmd = false,
+    },
   },
 }
