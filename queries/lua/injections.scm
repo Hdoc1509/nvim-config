@@ -146,7 +146,7 @@
                   (string_content) @injection.content))))
         ])))
   (#eq? @_build "build")
-  (#lua-match? @injection.content "^[^:]")
+  (#not-lua-match? @injection.content "^:")
   (#is-lazy-config-file? "")
   (#set! injection.language "bash"))
 
