@@ -1,5 +1,3 @@
-local schema_store = require('schemastore')
-
 local selected = {
   '.eslintrc',
   'package.json',
@@ -11,8 +9,7 @@ local selected = {
 return {
   settings = {
     json = {
-      -- TODO: inline require
-      schemas = schema_store.json.schemas({ select = selected }),
+      schemas = require('schemastore').json.schemas({ select = selected }),
       validate = { enable = true },
     },
   },

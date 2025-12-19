@@ -1,5 +1,3 @@
-local schema_store = require('schemastore')
-
 local selected = {
   'GitHub Workflow',
   'GitHub Issue Template forms',
@@ -8,8 +6,7 @@ local selected = {
 return {
   settings = {
     yaml = {
-      -- TODO: inline require
-      schemas = schema_store.yaml.schemas({ select = selected }),
+      schemas = require('schemastore').yaml.schemas({ select = selected }),
     },
   },
 }
