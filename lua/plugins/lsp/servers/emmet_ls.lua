@@ -2,14 +2,7 @@ return {
   root_dir = function()
     return vim.uv.cwd()
   end,
-  -- TODO: extend instead of overwrite
-  filetypes = {
-    'astro',
-    'css',
+  filetypes = vim.fn.extendnew(vim.lsp.config.emmet_ls.filetypes, {
     'ejs',
-    'html',
-    'javascriptreact',
-    'scss',
-    'typescriptreact',
-  },
+  }),
 }
