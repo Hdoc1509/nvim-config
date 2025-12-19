@@ -44,6 +44,9 @@ return {
           vimhelp = { pattern = 'vimhelp%.org', icon = '' },
         },
       },
+      completions = {
+        lsp = { enabled = true },
+      },
     })
   end,
   ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit', 'yaml' },
