@@ -4,9 +4,9 @@ local function setup()
 
   local mappings = {
     select = {
-      -- TODO: disable temporaryly
-      ['ac'] = '@class.outer',
-      ['ic'] = '@class.inner',
+      -- NOTE: disable temporaryly
+      -- ['ac'] = '@class.outer',
+      -- ['ic'] = '@class.inner',
 
       ['af'] = '@function.outer',
       ['if'] = '@function.inner',
