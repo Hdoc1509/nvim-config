@@ -2,6 +2,7 @@
 
 ## Previous Neovim versions
 
+- [Neovim 0.10](https://github.com/Hdoc1509/nvim-config/tree/nvim-0.10)
 - [Neovim 0.9.5](https://github.com/Hdoc1509/nvim-config/tree/nvim-0.9.5)
 
 ## Requirements
