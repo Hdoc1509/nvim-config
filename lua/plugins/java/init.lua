@@ -64,6 +64,7 @@ return {
   dependencies = {
     'williamboman/mason.nvim',
     'itchyny/vim-gitbranch',
+    'hrsh7th/cmp-nvim-lsp',
   },
   config = config,
 }

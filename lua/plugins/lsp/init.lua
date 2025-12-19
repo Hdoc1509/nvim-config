@@ -32,6 +32,7 @@ return {
     'Hdoc1509/gh-actions.nvim',
     'Hdoc1509/vim-map-side.nvim',
     { 'smjonas/inc-rename.nvim', opts = {} },
+    'hrsh7th/cmp-nvim-lsp',
   },
   config = config,
 }
