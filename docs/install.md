@@ -16,11 +16,7 @@
 - [go](https://go.dev/doc/install)
 - [Zig](https://github.com/ziglang/zig#installation) (optional) - See
   [Troubleshooting](../README.md#troubleshooting) section
-- [tree-sitter cli](https://github.com/tree-sitter/tree-sitter/tree/master/crates/cli)
-  (needed by `tree-sitter-test`) (globally, if not installed by `mason.nvim`)
-- `C` compiler (needed by `nvim-treesitter`):
-  - [Windows tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support)
-  - [Linux tutorial](https://github.com/nvim-treesitter/nvim-treesitter/wiki/Linux-Support)
+- [Requirements of `nvim-treesiter`](https://github.com/nvim-treesitter/nvim-treesitter#requirements)
 
 ## Before cloning
 

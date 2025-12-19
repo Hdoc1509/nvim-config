@@ -1,9 +1,6 @@
 local config = function()
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
 
-  require('nvim-treesitter.install').prefer_git = false
-  require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
-
   require('hygen.tree-sitter').setup()
   require('gh-actions.tree-sitter').setup({
     revision = 'v0.5.0',
@@ -15,18 +12,22 @@ local config = function()
       modemap = { 'nmap', 'buf_nmap', 'utils.nmap' },
     },
   })
-  require('plugins.treesitter.parsers').setup()
 
-  ---@diagnostic disable-next-line: missing-fields
-  require('nvim-treesitter.configs').setup({
-    ensure_installed = parsers_to_install,
-    highlight = { enable = true },
-    sync_install = #vim.api.nvim_list_uis() == 0,
-  })
+  if #vim.api.nvim_list_uis() == 0 then
+    require('nvim-treesitter').install(parsers_to_install):wait(300000)
+  else
+    require('nvim-treesitter').install(parsers_to_install)
+  end
 
   require('plugins.treesitter.register').setup()
   require('plugins.treesitter.directives').setup()
   require('plugins.treesitter.predicates').setup()
+
+  require('utils').autocmd('FileType', {
+    callback = function()
+      pcall(vim.treesitter.start)
+    end,
+  })
 end
 
 return {
@@ -43,9 +44,7 @@ return {
     },
     config = config,
     lazy = false,
-    -- NOTE: until update to nvim-0.11 in `main` branch
-    -- TODO: migrate to `main` branch
-    branch = 'master',
+    branch = 'main',
   },
   {
     'nvim-treesitter/nvim-treesitter-textobjects',

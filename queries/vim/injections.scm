@@ -21,15 +21,14 @@
   (#is-nvim-config-file? "ftplugin/markdown.vim")
   (#set! injection.language "vim"))
 
-(unknown_builtin_statement
-  (unknown_command_name) @_command
-  (#eq? @_command "s")
-  (arguments
-    (command_argument) @injection.content)
+(substitute_statement
+  (pattern) @injection.content
   (#lua-match? @injection.content "<%S+>")
   (#is-nvim-config-file? "lua/maps/text.lua")
   (#set! injection.language "vim_map_side"))
 
+; TODO: remove this. unused since grug-far.nvim was installed.
+; backport to nvim-0.10
 (unknown_builtin_statement
   (unknown_command_name) @_command
   (#eq? @_command "cdo")
