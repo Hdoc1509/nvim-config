@@ -33,15 +33,9 @@ return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   dependencies = {
-    -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
-    -- { 'Hdoc1509/hygen.nvim', version = '*' },
-    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
-    -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
-    { 'Hdoc1509/gh-actions.nvim', version = '0.1.0' },
-    -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
-    -- { dir = '~/dev/nvim-plugins/vim-map-side.nvim' },
-    { 'Hdoc1509/vim-map-side.nvim', version = '0.1.0' },
-    -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
+    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next', dev = false },
+    { 'Hdoc1509/gh-actions.nvim', version = '0.1.0', dev = false },
+    { 'Hdoc1509/vim-map-side.nvim', version = '0.1.0', dev = false },
     {
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',
