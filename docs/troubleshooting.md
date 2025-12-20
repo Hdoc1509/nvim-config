@@ -17,18 +17,6 @@ Be sure to install:
 - [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
 - [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
 
-## Fail to install `tree-sitter-test` parser
-
-> [!NOTE]
-> All of the following commands should be run in `command` mode
-
-You will need to run `:chdir` to the installation path of `tree-sitter-test`
-plugin. Then, run:
-
-```bash
-mkdir -p parser && tree-sitter build -o parser/test.so
-```
-
 ## `mini.files` opens when opening `fugitive`s summary window
 
 Go up to root path of current working directory and remove `fugitive:` directory
