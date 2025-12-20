@@ -22,12 +22,6 @@ return {
       'This will generate a new range object for the captured node as `metadata[capture_id].range`.',
     }, '\n'),
   },
-  ['inject-mdx-js'] = {
-    parameters = {
-      { type = 'string', arity = 'optional' },
-    },
-    description = 'Injects `javascript`. Only have effect in `mdx` files.',
-  },
   ['offset-gh-actions-on-push-pr'] = {
     parameters = {
       {

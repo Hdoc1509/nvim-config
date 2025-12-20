@@ -2,9 +2,7 @@
 
 ## Backports
 
-### Simplify
-
-- [ ] Remove `inject-mdx-js` directive. Reference: https://github.com/Hdoc1509/nvim-config/commit/453d3fe584cca0e952bbb04a88dd6491b32972f1
+**ALL CLEAN**
 
 ## LSP
 

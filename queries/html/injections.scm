@@ -19,4 +19,5 @@
         (attribute_value) @injection.content))
   ]
   (#lua-match? @injection.content "^{.*}$")
-  (#inject-mdx-js! ""))
+  (#is-mdx-file? "")
+  (#set! injection.language "javascript"))
