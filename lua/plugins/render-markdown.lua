@@ -9,11 +9,8 @@ return {
     local allowed_subext = { 'md', 'mdx' }
 
     local ignore = function(bufnr)
-      local filename = vim.api.nvim_buf_get_name(bufnr)
-      local extension = vim.fn.fnamemodify(filename, ':e')
-
-      if extension == 'hygen' then
-        return not vim.tbl_contains(allowed_subext, hygen_utils.get_hygen_subext(filename))
+      if vim.bo[bufnr].filetype == 'hygen' then
+        return not vim.tbl_contains(allowed_subext, hygen_utils.get_hygen_subext(bufnr))
       else
         return false
       end
@@ -21,25 +18,35 @@ return {
 
     require('render-markdown').setup({
       heading = {
-        icons = { '◉ ', '○ ', '✸ ', '✿ ' },
         sign = false,
-        -- FIX: breaks custom icons. works from nvim-0.10
-        -- position = 'inline',
       },
       pipe_table = {
-        -- TODO: use 'trimmed' once updated to nvim-0.10
         cell = 'overlay',
       },
       code = {
         sign = false,
         border = 'thick',
         highlight_inline = 'None',
+        width = 'block',
+        right_pad = 1,
       },
       html = {
         comment = { conceal = false },
       },
       ignore = ignore,
+      link = {
+        custom = {
+          firefox_addons = { pattern = 'addons%.mozilla%.org', icon = '󰈹 ' },
+          png = { pattern = '%.png$', icon = '󰥶 ' },
+          gif = { pattern = '%.gif$', icon = '󰕧 ' },
+          markdown = { pattern = '%.md$', icon = ' ' },
+          vimhelp = { pattern = 'vimhelp%.org', icon = '' },
+        },
+      },
+      completions = {
+        lsp = { enabled = true },
+      },
     })
   end,
-  ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit' },
+  ft = { 'markdown', 'markdown.mdx', 'hygen', 'gitcommit', 'yaml' },
 }
