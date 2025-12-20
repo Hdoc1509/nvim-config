@@ -17,19 +17,12 @@ local config = function()
       selene = '*.lua',
       groovy_lint = { '*.gradle', '*.groovy' },
     },
-    normal_events = {
-      -- NOTE: temporary disable. it seem that it does the same as the lsp
-      -- ts_query_ls = '**queries/**/*.scm',
-    },
+    normal_events = {},
   }
-
-  -- disable built-in `query` linter
-  vim.g.query_lint_on = {}
 
   lint.linters.groovy_lint = require('plugins.lint.npm-groovy-lint')
   lint.linters.markdownlint.parser = require('plugins.lint.markdownlint').parser
   lint.linters.selene.parser = require('plugins.lint.selene').parser
-  -- lint.linters.ts_query_ls = require('plugins.lint.ts-query-ls')
 
   for linter, pattern in pairs(linter_patterns.aggressive_events) do
     utils.autocmd(aggressive_events, {
@@ -53,16 +46,5 @@ end
 return {
   'mfussenegger/nvim-lint',
   config = config,
-  dependencies = {
-    -- { dir = '~/dev/hygen.nvim' },
-    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
-    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
-    -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
-    { 'Hdoc1509/gh-actions.nvim', version = '0.1.0' },
-    -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
-    -- { dir = '~/dev/nvim-plugins/vim-map-side.nvim' },
-    { 'Hdoc1509/vim-map-side.nvim', version = '0.1.0' },
-    -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
-  },
-  ft = { 'markdown', 'yaml', 'lua', 'groovy', 'query' },
+  ft = { 'markdown', 'yaml', 'lua', 'groovy' },
 }

@@ -1,60 +1,64 @@
 local config = function()
   local parsers_to_install = require('plugins.treesitter.ensure-installed')
-  local textobjects = require('plugins.treesitter.textobjects')
-
-  require('nvim-treesitter.install').prefer_git = false
-  require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
 
   require('hygen.tree-sitter').setup()
-  require('gh-actions.tree-sitter').setup({ from_grammar = true })
+  require('gh-actions.tree-sitter').setup({
+    revision = 'v0.5.0',
+  })
   require('vim-map-side.tree-sitter').setup({
-    from_grammar = true,
     revision = 'v0.1.0',
     custom_fns = {
       keymap = { 'keymap', 'utils.keymap' },
       modemap = { 'nmap', 'buf_nmap', 'utils.nmap' },
     },
   })
-  require('plugins.treesitter.parsers').setup()
 
-  ---@diagnostic disable-next-line: missing-fields
-  require('nvim-treesitter.configs').setup({
-    ensure_installed = parsers_to_install,
-    highlight = { enable = true },
-    textobjects = textobjects,
-    sync_install = #vim.api.nvim_list_uis() == 0,
-  })
+  if #vim.api.nvim_list_uis() == 0 then
+    require('nvim-treesitter').install(parsers_to_install):wait(300000)
+  else
+    require('nvim-treesitter').install(parsers_to_install)
+  end
 
   require('plugins.treesitter.register').setup()
   require('plugins.treesitter.directives').setup()
   require('plugins.treesitter.predicates').setup()
+
+  require('utils').autocmd('FileType', {
+    callback = function()
+      pcall(vim.treesitter.start)
+    end,
+  })
 end
 
 return {
-  'nvim-treesitter/nvim-treesitter',
-  build = ':TSUpdate',
-  dependencies = {
-    -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
-    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
-    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
-    -- { dir = '~/dev/nvim-plugins/gh-actions.nvim' },
-    { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0' },
-    -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
-    -- { dir = '~/dev/nvim-plugins/vim-map-side.nvim' },
-    { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.0' },
-    -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
-    {
-      -- FIX: try to set comment correctly for ejs files
-      'JoosepAlviste/nvim-ts-context-commentstring',
-      opts = {
-        enable_autocmd = false,
-      },
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    dependencies = {
+      { 'Hdoc1509/hygen.nvim', version = '^0.4.2', dev = false },
+      -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+      { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0', dev = false },
+      -- { 'Hdoc1509/gh-actions.nvim', branch = 'master' },
+      { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.1', dev = false },
+      -- { 'Hdoc1509/vim-map-side.nvim', branch = 'master' },
     },
-    -- NOTE: use `main` branch once it defines a range of supported versions of neovim
-    { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
+    config = config,
+    lazy = false,
+    branch = 'main',
   },
-  config = config,
-  lazy = false,
-  -- NOTE: until update to nvim-0.11 in `main` branch
-  branch = 'master',
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    branch = 'main',
+    init = function()
+      vim.g.no_plugins_maps = true
+    end,
+    config = require('plugins.treesitter.textobjects').setup,
+  },
+  {
+    -- FIX: try to set comment correctly for ejs files
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    opts = {
+      enable_autocmd = false,
+    },
+  },
 }

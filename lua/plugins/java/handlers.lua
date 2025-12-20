@@ -1,6 +1,3 @@
-local merge = require('utils').merge
-local default_handlers = require('plugins.lsp.handlers')
-
 ---@param diagnostic vim.Diagnostic
 ---@param uri string
 local function is_diagnostic_ignored(diagnostic, uri)
@@ -17,20 +14,21 @@ local function is_diagnostic_ignored(diagnostic, uri)
     or message:match('platform%.services cannot be resolved') ~= nil
 end
 
-return merge(default_handlers, {
+return {
   -- remove status from statusline
   ['language/status'] = function() end,
   -- disable some diagnostics
   -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#publishDiagnosticsParams
   -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#diagnostic
-  ---@param result { diagnostics: vim.Diagnostic[], uri: string }
-  ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
-    -- print(vim.inspect(result))
+  ---@param params lsp.PublishDiagnosticsParams
+  ---@param ctx lsp.HandlerContext
+  ['textDocument/publishDiagnostics'] = function(_, params, ctx)
+    -- print(vim.inspect(params))
 
-    result.diagnostics = vim.tbl_filter(function(diagnostic)
-      return not is_diagnostic_ignored(diagnostic, result.uri)
-    end, result.diagnostics)
+    params.diagnostics = vim.tbl_filter(function(diagnostic)
+      return not is_diagnostic_ignored(diagnostic, params.uri)
+    end, params.diagnostics)
 
-    vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+    vim.lsp.diagnostic.on_publish_diagnostics(_, params, ctx)
   end,
-})
+}

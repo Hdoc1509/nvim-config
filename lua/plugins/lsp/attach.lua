@@ -1,16 +1,13 @@
-local hover_multi_lsp = require('plugins.lsp.hover-multi-lsp')
 local utils = require('utils')
 local lsp_buf = vim.lsp.buf
 local autocmd = utils.autocmd
-local nmap = utils.nmap
-local merge = utils.merge
 
 -- see :h LspAttach
 local attach = function(ev)
   local bufnr = ev.buf
 
   local buf_nmap = function(lhs, rhs, opts)
-    nmap(lhs, rhs, merge({ buffer = bufnr }, opts or {}))
+    utils.nmap(lhs, rhs, utils.merge({ buffer = bufnr }, opts or {}))
   end
 
   local client = vim.lsp.get_client_by_id(ev.data.client_id)
@@ -22,18 +19,8 @@ local attach = function(ev)
   buf_nmap('grd', function()
     lsp_buf.definition({ reuse_win = true })
   end, { desc = 'Go to definition' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('gO', lsp_buf.document_symbol, { desc = 'List symbols' })
   buf_nmap('J', lsp_buf.signature_help, { desc = 'Show signature help' })
-  buf_nmap('K', function()
-    hover_multi_lsp(bufnr)
-  end, { desc = 'Hover' })
-  buf_nmap('grt', lsp_buf.type_definition, { desc = 'Go to type definition' })
   buf_nmap('grn', ':IncRename ', { desc = 'Rename' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('gra', lsp_buf.code_action, { desc = 'Code actions' })
-  -- NOTE: not needed from nvim-0.11
-  buf_nmap('grr', lsp_buf.references, { desc = 'List references' })
 
   if client.server_capabilities.documentHighlightProvider then
     vim.cmd('hi clear LspReferenceText')

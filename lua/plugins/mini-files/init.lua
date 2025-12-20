@@ -1,3 +1,5 @@
+---@module 'snacks.rename'
+
 local config = function()
   local utils = require('utils')
   local buffer_maps = require('plugins.mini-files.maps.buffer')
@@ -37,7 +39,7 @@ end
 return {
   'nvim-mini/mini.files',
   config = config,
-  version = false,
+  version = '0.17.0',
   keys = {
     { '-', nil, desc = 'Open mini.files in current file' },
     { '<leader>-', nil, desc = 'Open mini.files in last used path' },
@@ -45,8 +47,6 @@ return {
   },
   dependencies = {
     'nvim-tree/nvim-web-devicons',
-    -- { dir = '~/dev/nvim-plugins/hygen.nvim' },
-    { 'Hdoc1509/hygen.nvim', version = '^0.4.2' },
-    -- { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next' },
+    'Hdoc1509/hygen.nvim',
   },
 }

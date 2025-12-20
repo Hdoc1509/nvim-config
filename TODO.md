@@ -70,3 +70,8 @@ the `myComponents` object: <myComponents.thisOne />
 #### printf
 
 https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/highlights.scm
+
+### lint
+
+- https://github.com/gitleaks/gitleaks
+- https://github.com/loeffel-io/ls-lint

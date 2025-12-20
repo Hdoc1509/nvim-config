@@ -13,6 +13,9 @@ require('lazy').setup('plugins', {
       height = 0.9,
     },
   },
+  dev = {
+    path = '~/dev/nvim-plugins',
+  },
 })
 require('maps')
 require('diagnostic')

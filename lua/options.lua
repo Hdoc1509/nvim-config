@@ -53,4 +53,6 @@ set.wrap = false
 
 set.laststatus = 3
 
+set.winborder = 'rounded'
+
 vim.cmd([[if has('win32') | set shell=cmd | endif]])

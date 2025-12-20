@@ -9,14 +9,9 @@ keymap('x', '>', '>gv')
 
 nmap('<leader>ya', '<cmd>%yank<cr>', { desc = 'Copy all text to clipboard' })
 
-nmap('<leader>o', "printf('m`%so<esc>``', v:count1)", {
-  desc = 'Add blankline(s) below current line',
-  expr = true,
-})
-nmap('<leader>O', "printf('m`%sO<esc>``', v:count1)", {
-  desc = 'Add blankline(s) above current line',
-  expr = true,
-})
+-- NOTE: these doesn't map correctly when using `vim.keymap.set()`
+vim.cmd('nmap <leader>o ]<space>') -- Add empty line(s) below current line
+vim.cmd('nmap <leader>O [<space>') -- Add empty line(s) above current line
 
 keymap(
   'x',

@@ -21,20 +21,26 @@ end
 
 return {
   handlers = {
-    ---@param result { diagnostics: vim.Diagnostic[], uri: string }
-    ['textDocument/publishDiagnostics'] = function(_, result, ctx, config)
-      -- print(vim.inspect(result))
+    ---@param params lsp.PublishDiagnosticsParams
+    ---@param ctx lsp.HandlerContext
+    ['textDocument/publishDiagnostics'] = function(_, params, ctx)
+      -- print(vim.inspect(params))
       local filtered = {}
 
-      for _, diagnostic in ipairs(result.diagnostics) do
-        if not is_diagnostic_ignored(diagnostic, result.uri) then
+      for _, diagnostic in ipairs(params.diagnostics) do
+        if not is_diagnostic_ignored(diagnostic, params.uri) then
           table.insert(filtered, utils.merge(diagnostic, { source = 'superhtml' }))
         end
       end
 
-      result.diagnostics = filtered
+      params.diagnostics = filtered
 
-      vim.lsp.diagnostic.on_publish_diagnostics(_, result, ctx, config)
+      vim.lsp.diagnostic.on_publish_diagnostics(_, params, ctx)
     end,
   },
+  root_dir = function(bufnr, on_dir)
+    if not vim.bo[bufnr].filetype == 'ejs' then
+      on_dir(vim.fn.getcwd())
+    end
+  end,
 }

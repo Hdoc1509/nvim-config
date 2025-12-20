@@ -28,9 +28,13 @@ vim.cmd('cabbrev vh vertical help')
 vim.cmd('cabbrev th tab help')
 
 -- override default mapping to open float window
-nmap(']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic' })
+nmap(']d', function()
+  vim.diagnostic.jump({ count = vim.v.count1, float = true })
+end, { desc = 'Go to next diagnostic' })
 -- override default mapping to open float window
-nmap('[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic' })
+nmap('[d', function()
+  vim.diagnostic.jump({ count = vim.v.count1 * -1, float = true })
+end, { desc = 'Go to previous diagnostic' })
 nmap('gdl', vim.diagnostic.setqflist, { desc = 'Show all diagnostics on quickfix list' })
 
 -- source file
@@ -39,12 +43,6 @@ nmap('<leader><leader>x', '<cmd>source %<cr>', { desc = 'Source current file' })
 -- execute line(s)
 nmap('<leader>x', ':.lua<cr>', { desc = 'Execute current line' })
 keymap('v', '<leader>x', ':lua<cr>', { desc = 'Execute selected lines' })
-
--- jump to quickfix item
-nmap('[q', '<cmd>cprevious<cr>', { desc = 'Jump to previous quickfix item' })
-nmap('[Q', '<cmd>cfirst<cr>', { desc = 'Jump to first quickfix item' })
-nmap(']q', '<cmd>cnext<cr>', { desc = 'Jump to next quickfix item' })
-nmap(']Q', '<cmd>clast<cr>', { desc = 'Jump to last quickfix item' })
 
 -- LSP log
 nmap('<leader>ll', function()

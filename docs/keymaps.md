@@ -265,10 +265,6 @@ Used mapleader is `<space>` key.
 | `gT`    | Normal | Open item in new tab                  |
 | `gs`    | Normal | Open item in new split (silent)       |
 | `gS`    | Normal | Open item in new split                |
-| `[q`    | Normal | Jump to previous quickfix item        |
-| `[Q`    | Normal | Jump to first quickfix item           |
-| `]q`    | Normal | Jump to next quickfix item            |
-| `]Q`    | Normal | Jump to last quickfix item            |
 
 **(silent): Mappings that don't jump to file nor close the quickfix window.**
 
@@ -288,6 +284,9 @@ Used mapleader is `<space>` key.
 | `<leader><leader>x` | Normal          | Source current file                        |
 | `<leader>x`         | Normal / Visual | Execute current or selected lines with lua |
 | `H`                 | Normal          | Preview folded lines                       |
+
+> [!NOTE]
+> See `:help default-mappings` for built-in mappings.
 
 ## Abbreviations
 

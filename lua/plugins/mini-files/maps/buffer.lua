@@ -1,3 +1,5 @@
+---@module 'mini.files'
+
 local utils = require('utils')
 
 local M = {}
