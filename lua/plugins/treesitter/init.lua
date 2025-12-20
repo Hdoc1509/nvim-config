@@ -33,32 +33,34 @@ local config = function()
 end
 
 return {
-  'nvim-treesitter/nvim-treesitter',
-  build = ':TSUpdate',
-  dependencies = {
-    { 'Hdoc1509/hygen.nvim', version = '^0.4.2', dev = false },
-    { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0', dev = false },
-    { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.1', dev = false },
-    {
-      -- FIX: try to set comment correctly for ejs files
-      'JoosepAlviste/nvim-ts-context-commentstring',
-      opts = {
-        enable_autocmd = false,
-      },
-    },
-    {
-      'windwp/nvim-ts-autotag',
-      opts = {
-        aliases = {
-          ejs = 'html',
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+    dependencies = {
+      { 'Hdoc1509/hygen.nvim', version = '^0.4.2', dev = false },
+      { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0', dev = false },
+      { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.1', dev = false },
+      {
+        'windwp/nvim-ts-autotag',
+        opts = {
+          aliases = {
+            ejs = 'html',
+          },
         },
       },
+      { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
     },
-    { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
+    config = config,
+    branch = 'master',
+    event = { 'BufReadPre', 'BufNewFile' },
+    -- NOTE: until update to nvim-0.10
+    commit = '377039daa260b71f304c881d1b21d643c501a261',
   },
-  config = config,
-  branch = 'master',
-  event = { 'BufReadPre', 'BufNewFile' },
-  -- NOTE: until update to nvim-0.10
-  commit = '377039daa260b71f304c881d1b21d643c501a261',
+  {
+    -- FIX: try to set comment correctly for ejs files
+    'JoosepAlviste/nvim-ts-context-commentstring',
+    opts = {
+      enable_autocmd = false,
+    },
+  },
 }
