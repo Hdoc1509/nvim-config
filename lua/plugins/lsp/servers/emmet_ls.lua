@@ -2,13 +2,7 @@ return {
   root_dir = function()
     return vim.loop.cwd()
   end,
-  filetypes = {
-    'astro',
-    'css',
+  filetypes = vim.fn.extendnew(require('lspconfig').emmet_ls.config_def.filetypes, {
     'ejs',
-    'html',
-    'javascriptreact',
-    'scss',
-    'typescriptreact',
-  },
+  }),
 }
