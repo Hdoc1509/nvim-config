@@ -12,3 +12,6 @@ g.loaded_python3_provider = 0
 
 -- Mapleader <Leader>
 g.mapleader = ' '
+
+-- disable built-in `query` linter
+vim.g.query_lint_on = {}
