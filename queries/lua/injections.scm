@@ -146,7 +146,7 @@
                   (string_content) @injection.content))))
         ])))
   (#eq? @_build "build")
-  (#lua-match? @injection.content "^[^:]")
+  (#not-lua-match? @injection.content "^:")
   (#is-lazy-config-file? "")
   (#set! injection.language "bash"))
 
@@ -154,10 +154,18 @@
   (return_statement
     (expression_list
       (table_constructor
-        (field
-          name: (identifier) @_build
-          value: (string
-            (string_content) @injection.content)))))
+        [
+          (field
+            name: (identifier) @_build
+            value: (string
+              (string_content) @injection.content))
+          (field
+            value: (table_constructor
+              (field
+                name: (identifier) @_build
+                value: (string
+                  (string_content) @injection.content))))
+        ])))
   (#eq? @_build "build")
   (#lua-match? @injection.content "^:")
   (#is-lazy-config-file? "")
