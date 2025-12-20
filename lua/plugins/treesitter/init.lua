@@ -40,14 +40,6 @@ return {
       { 'Hdoc1509/hygen.nvim', version = '^0.4.2', dev = false },
       { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0', dev = false },
       { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.1', dev = false },
-      {
-        'windwp/nvim-ts-autotag',
-        opts = {
-          aliases = {
-            ejs = 'html',
-          },
-        },
-      },
       { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
     },
     config = config,
