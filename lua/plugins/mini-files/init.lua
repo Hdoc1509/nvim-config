@@ -39,7 +39,7 @@ end
 return {
   'nvim-mini/mini.files',
   config = config,
-  version = false,
+  version = '0.17.0',
   keys = {
     { '-', nil, desc = 'Open mini.files in current file' },
     { '<leader>-', nil, desc = 'Open mini.files in last used path' },
