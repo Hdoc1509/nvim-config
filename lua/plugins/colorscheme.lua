@@ -123,6 +123,7 @@ local config = function()
         -- imports
         -- ['@lsp.typemod.variable.readonly'] = { link = '@constant' },
         ['@lsp.type.comment.lua'] = { link = '@none' },
+        ['@lsp.type.modifier.java'] = { link = '@none' },
       },
     },
   })
