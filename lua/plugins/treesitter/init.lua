@@ -6,7 +6,10 @@ local config = function()
   require('nvim-treesitter.install').compilers = { 'zig', 'gcc' }
 
   require('hygen.tree-sitter').setup()
-  require('gh-actions.tree-sitter').setup({ from_grammar = true })
+  require('gh-actions.tree-sitter').setup({
+    from_grammar = true,
+    revision = 'v0.5.0',
+  })
   require('vim-map-side.tree-sitter').setup({
     from_grammar = true,
     revision = 'v0.1.0',
@@ -33,9 +36,9 @@ return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   dependencies = {
-    { 'Hdoc1509/hygen.nvim', branch = '0.3.1-next', dev = false },
-    { 'Hdoc1509/gh-actions.nvim', version = '0.1.0', dev = false },
-    { 'Hdoc1509/vim-map-side.nvim', version = '0.1.0', dev = false },
+    { 'Hdoc1509/hygen.nvim', version = '^0.4.2', dev = false },
+    { 'Hdoc1509/gh-actions.nvim', version = '^0.2.0', dev = false },
+    { 'Hdoc1509/vim-map-side.nvim', version = '^0.2.1', dev = false },
     {
       -- FIX: try to set comment correctly for ejs files
       'JoosepAlviste/nvim-ts-context-commentstring',
