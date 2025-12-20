@@ -54,9 +54,10 @@ return {
         },
       },
     },
-    'nvim-treesitter/nvim-treesitter-textobjects',
+    { 'nvim-treesitter/nvim-treesitter-textobjects', branch = 'master' },
   },
   config = config,
+  branch = 'master',
   event = { 'BufReadPre', 'BufNewFile' },
   -- NOTE: until update to nvim-0.10
   commit = '377039daa260b71f304c881d1b21d643c501a261',
