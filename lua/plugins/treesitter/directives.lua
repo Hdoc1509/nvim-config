@@ -1,7 +1,7 @@
 ---@type table<string,TSDirective>
 local directives = {
   ['offset-gh-actions-on-push-pr!'] = function(match, _, _, pred, metadata)
-    -- based on: $VIMRUNTIME/lua/vim/treesitter/query.lua:529
+    -- based on: $VIMRUNTIME/lua/vim/treesitter/query.lua:642
     local capture_id = pred[2] --[[@as integer]]
     local nodes = match[capture_id]
     if not nodes or #nodes == 0 then
