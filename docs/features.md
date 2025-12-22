@@ -109,44 +109,43 @@
 
 ## Treesitter parsers
 
-- astro
-- awk
-- bash
-  <!-- - c (required) -->
-  <!-- - cpp (required) -->
-- css
-- diff
-- editorconfig
-- embedded_template (ejs)
-- gh_actions_expressions
-- gitattributes
-- gitcommit
-- gitignore
-- groovy
-- html
-- http
-- hygen_template
-- java
-- javascript
-- jsdoc
-- json
-- jsonc
-- jq
-- lua
-- luap
-- markdown (also used for `mdx` files)
-- markdown_inline
-- powershell (only used for [Troubleshooting](./troubleshooting.md))
-- printf
-- properties
-- query
-- regex
-- scss
-- test
-- toml
-- tsx
-- typescript
-- vim
-- vim_map_side
-- vimdoc
-- yaml
+- [astro](https://github.com/virchau13/tree-sitter-astro)
+- [awk](https://github.com/Beaglefoot/tree-sitter-awk)
+- [bash](https://github.com/tree-sitter/tree-sitter-bash)
+- [css](https://github.com/tree-sitter/tree-sitter-css)
+- [diff](https://github.com/the-mikedavis/tree-sitter-diff)
+- [editorconfig](https://github.com/ValdezFOmar/tree-sitter-editorconfig)
+- [embedded_template](https://github.com/tree-sitter/tree-sitter-embedded-template)
+  (ejs)
+- [gh_actions_expressions](https://github.com/Hdoc1509/tree-sitter-gh-actions-expressions)
+- [gitattributes](https://github.com/ObserverOfTime/tree-sitter-gitattributes)
+- [gitcommit](https://github.com/gbprod/tree-sitter-gitcommit)
+- [gitignore](https://github.com/shunsambongi/tree-sitter-gitignore)
+- [groovy](https://github.com/murtaza64/tree-sitter-groovy)
+- [html](https://github.com/tree-sitter/tree-sitter-html)
+- [http](https://github.com/rest-nvim/tree-sitter-http)
+- [hygen_template](https://github.com/Hdoc1509/tree-sitter-hygen-template)
+- [java](https://github.com/tree-sitter/tree-sitter-java)
+- [javascript](https://github.com/tree-sitter/tree-sitter-javascript)
+- [jsdoc](https://github.com/tree-sitter/tree-sitter-jsdoc)
+- [json](https://github.com/tree-sitter/tree-sitter-json)
+- [jsonc](https://gitlab.com/WhyNotHugo/tree-sitter-jsonc.git)
+- [jq](https://github.com/flurie/tree-sitter-jq)
+- [lua](https://github.com/MunifTanjim/tree-sitter-lua)
+- [luap](https://github.com/amaanq/tree-sitter-luap)
+- [markdown](https://github.com/MDeiml/tree-sitter-markdown) (also used for `mdx` files)
+- [markdown_inline](https://github.com/MDeiml/tree-sitter-markdown)
+- [powershell](https://github.com/airbus-cert/tree-sitter-powershell) (only used for [Troubleshooting](./troubleshooting.md))
+- [printf](https://github.com/ObserverOfTime/tree-sitter-printf)
+- [properties](https://github.com/tree-sitter-grammars/tree-sitter-properties)
+- [query](https://github.com/nvim-treesitter/tree-sitter-query)
+- [regex](https://github.com/tree-sitter/tree-sitter-regex)
+- [scss](https://github.com/serenadeai/tree-sitter-scss)
+- [test](https://github.com/tree-sitter-grammars/tree-sitter-test)
+- [toml](https://github.com/tree-sitter-grammars/tree-sitter-toml)
+- [tsx](https://github.com/tree-sitter/tree-sitter-typescript)
+- [typescript](https://github.com/tree-sitter/tree-sitter-typescript)
+- [vim](https://github.com/neovim/tree-sitter-vim)
+- [vim_map_side](https://github.com/Hdoc1509/tree-sitter-vim-map-side)
+- [vimdoc](https://github.com/neovim/tree-sitter-vimdoc)
+- [yaml](https://github.com/tree-sitter-grammars/tree-sitter-yaml)
