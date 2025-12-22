@@ -75,3 +75,8 @@ https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/hig
 
 - https://github.com/gitleaks/gitleaks
 - https://github.com/loeffel-io/ls-lint
+
+## Try
+
+- use [`svgo`](https://github.com/svg/svgo) as formatter for `svg` files
+  - create presets based on: https://github.com/jakearchibald/svgomg/blob/main/src/config.json
