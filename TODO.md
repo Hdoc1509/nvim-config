@@ -32,16 +32,3 @@ inject `tree-sitter-regex`
 #### printf
 
 https://github.com/tree-sitter-grammars/tree-sitter-printf/blob/main/queries/highlights.scm
-
-## Try
-
-- https://github.com/bennypowers/svgo.nvim
-  using config of svgmog: https://github.com/jakearchibald/svgomg/blob/main/src/config.json
-  need to install https://github.com/svg/svgo
-- [vim match-up](https://github.com/andymass/vim-matchup)
-- https://github.com/Jezda1337/nvim-html-css
-- https://github.com/gregorias/coerce.nvim
-
-### neovim 0.10+
-
-- https://github.com/stevearc/quicker.nvim
