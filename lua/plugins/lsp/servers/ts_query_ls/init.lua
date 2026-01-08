@@ -1,7 +1,8 @@
 return require('utils').merge({
   settings = {
     parser_install_directories = {
-      vim.fn.stdpath('data') .. '/lazy/nvim-treesitter/parser/',
+      -- NOTE: needed because of update of `nvim-treesitter` to `main` branch
+      vim.fn.stdpath('data') .. '/site/parser/',
     },
     valid_predicates = require('plugins.lsp.servers.ts_query_ls.predicates'),
     valid_directives = require('plugins.lsp.servers.ts_query_ls.directives'),
