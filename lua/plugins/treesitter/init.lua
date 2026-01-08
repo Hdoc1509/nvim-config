@@ -19,6 +19,13 @@ local config = function()
     require('nvim-treesitter').install(parsers_to_install)
   end
 
+  -- injection to `style` attribute. pattern index from:
+  -- stdpath('data') .. '/lazy/nvim-treesitter/runtime/queries/html_tags/injections.scm:71'
+  -- NOTE: update line number when updating `nvim-treesitter`
+  -- NOTE: can this be backported to nvim-0.9.5 and nvim-0.10.0 branches?
+  -- NOTE: pattern index is `8` because `html` inherits from `html_tags`
+  vim.treesitter.query.get('html','injections').query:disable_pattern(8)
+
   require('plugins.treesitter.register').setup()
   require('plugins.treesitter.directives').setup()
   require('plugins.treesitter.predicates').setup()
