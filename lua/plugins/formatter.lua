@@ -63,7 +63,7 @@ local config = function()
       sh = { shfmt },
       svg = {
         function()
-          prettier('html')
+          return prettier('html')
         end,
       },
       toml = { require('formatter.filetypes.toml').taplo },
