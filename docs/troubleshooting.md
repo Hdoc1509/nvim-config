@@ -17,6 +17,10 @@ Be sure to install:
 - [`eslint-plugin-astro`](https://github.com/ota-meshi/eslint-plugin-astro)
 - [`prettier-plugin-astro`](https://github.com/withastro/prettier-plugin-astro)
 
+## Fail to initialize `astro` lsp
+
+Install `typescript`.
+
 ## `mini.files` opens when opening `fugitive`s summary window
 
 Go up to root path of current working directory and remove `fugitive:` directory
