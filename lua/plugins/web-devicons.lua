@@ -23,6 +23,10 @@ return {
       }),
     })
 
+    -- TODO: add icon for `.properties` files
+    -- - same icon as `.conf` files
+    -- - color blue-400
+
     require('hygen.web-devicons').setup()
     devicons.set_icon({
       test = {

@@ -6,6 +6,7 @@ local langs_to_register = {
   -- https://phelipetls.github.io/posts/mdx-syntax-highlight-treesitter-nvim/#supporting-mdx-files
   markdown = 'markdown.mdx',
   gitignore = { 'packwizignore', 'styluaignore' },
+  ini = { 'minttyrc', 'shellcheckrc', 'desktop' },
 }
 
 return {
