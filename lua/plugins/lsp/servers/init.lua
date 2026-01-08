@@ -25,6 +25,7 @@ return {
   -- ['mdx_analyzer'] = default_settings,
   ['somesass_ls'] = {},
   superhtml = require('plugins.lsp.servers.superhtml'),
+  taplo = {},
   ['ts_ls'] = require('plugins.lsp.servers.ts_ls'),
   ['ts_query_ls'] = require('plugins.lsp.servers.ts_query_ls'),
   ['typos_lsp'] = require('plugins.lsp.servers.typos-lsp'),

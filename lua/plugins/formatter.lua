@@ -66,6 +66,7 @@ local config = function()
           prettier('html')
         end,
       },
+      toml = { require('formatter.filetypes.toml').taplo },
       typescript = { prettier },
       typescriptreact = { prettier },
       yaml = { prettier },
