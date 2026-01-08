@@ -127,6 +127,7 @@
 - [gitcommit](https://github.com/gbprod/tree-sitter-gitcommit)
 - [gitignore](https://github.com/shunsambongi/tree-sitter-gitignore)
 - [groovy](https://github.com/murtaza64/tree-sitter-groovy)
+- [ini](https://github.com/justinmk/tree-sitter-ini)
 - [html](https://github.com/tree-sitter/tree-sitter-html)
 - [hygen_template](https://github.com/Hdoc1509/tree-sitter-hygen-template)
 - [java](https://github.com/tree-sitter/tree-sitter-java)

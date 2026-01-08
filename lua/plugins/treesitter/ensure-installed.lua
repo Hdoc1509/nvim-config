@@ -15,6 +15,7 @@ return {
   'groovy',
   'html',
   'hygen_template',
+  'ini',
   'java',
   'javascript',
   'jsdoc',
