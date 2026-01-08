@@ -19,7 +19,7 @@ local attach = function(ev)
   buf_nmap('grd', function()
     lsp_buf.definition({ reuse_win = true })
   end, { desc = 'Go to definition' })
-  buf_nmap('J', lsp_buf.signature_help, { desc = 'Show signature help' })
+  buf_nmap('<c-s>', lsp_buf.signature_help, { desc = 'Show signature help' })
   buf_nmap('grn', ':IncRename ', { desc = 'Rename' })
 
   if client.server_capabilities.documentHighlightProvider then
