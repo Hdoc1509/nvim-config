@@ -8,6 +8,10 @@ keymap('x', '<', '<gv')
 keymap('x', '>', '>gv')
 
 nmap('<leader>ya', '<cmd>%yank<cr>', { desc = 'Copy all text to clipboard' })
+nmap('<leader>v', "printf('`[%s`]', getregtype()[0])", {
+  expr = true,
+  desc = 'Reselect last pasted text',
+})
 
 -- NOTE: these doesn't map correctly when using `vim.keymap.set()`
 vim.cmd('nmap <leader>o ]<space>') -- Add empty line(s) below current line

@@ -284,6 +284,7 @@ Used mapleader is `<space>` key.
 | `<leader><leader>x` | Normal          | Source current file                        |
 | `<leader>x`         | Normal / Visual | Execute current or selected lines with lua |
 | `H`                 | Normal          | Preview folded lines                       |
+| `<leader>v`         | Normal          | Reselect last pasted text                  |
 
 > [!NOTE]
 > See `:help default-mappings` for built-in mappings.
