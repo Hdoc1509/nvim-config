@@ -13,6 +13,15 @@ nmap('<leader>v', "printf('`[%s`]', getregtype()[0])", {
   desc = 'Reselect last pasted text',
 })
 
+-- Change text without putting it in the vim register
+nmap('c', '"_c')
+nmap('C', '"_C')
+nmap('cc', '"_cc')
+keymap('x', 'c', '"_c')
+
+-- Delete character without putting it in the vim register
+nmap('x', '"_x')
+
 -- NOTE: these doesn't map correctly when using `vim.keymap.set()`
 vim.cmd('nmap <leader>o ]<space>') -- Add empty line(s) below current line
 vim.cmd('nmap <leader>O [<space>') -- Add empty line(s) above current line
