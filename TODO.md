@@ -7,6 +7,16 @@
 - [ ] Remove `numhl` option from `vim.fn.sign_define()`. Reference: https://github.com/Hdoc1509/nvim-config/commit/36424a58a452e21b34eaa8a55944dd1648254c95
 - [ ] Update [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) to https://github.com/hrsh7th/cmp-nvim-lsp/commit/cbc7b02
 - [ ] Correct option for `vim.diagnostic.config`. Reference: https://github.com/Hdoc1509/nvim-config/commit/4d5fdeaa198e323f948c18284320ec626443727b
+- fix `formatter.nvim` config for `svg` filetype. Reference: https://github.com/Hdoc1509/nvim-config/commit/2f8061deaf716d8ff8bdcd3bd201d836f749d82f
+
+### New
+
+- mapping to reselect last pasted text. Reference: https://github.com/Hdoc1509/nvim-config/commit/b72922e3a5ed0352036e8bb6c93513ecc81f88b0
+- prevent changing vim register when changing text or deleting a character. Refernce: https://github.com/Hdoc1509/nvim-config/commit/7af2db2982fb3c5203a7db26906042ee1b4cca65
+- yaml/injections - `ignore` variants in github workflow file. Reference: https://github.com/Hdoc1509/nvim-config/commit/698ba78828b860f4664203ba1afc83c6252d8718
+- html/injections - use `styled` parser instead of `css` for `style` attributes
+- use `ini` parser for some filetypes. Reference: https://github.com/Hdoc1509/nvim-config/commit/55524f44a0e988fdb97c3113abb81e98eaaa7b8c
+- use `<c-s>` to show signature help
 
 ## LSP
 
