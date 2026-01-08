@@ -12,7 +12,8 @@
           (block_mapping
             (block_mapping_pair
               key: (flow_node) @_tags_paths_branches
-              (#any-of? @_tags_paths_branches "tags" "paths" "branches")
+              (#any-of? @_tags_paths_branches
+                "tags" "tags-ignore" "paths" "paths-ignore" "branches" "branches-ignore")
               value: [
                 (flow_node
                   (flow_sequence
