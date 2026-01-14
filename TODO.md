@@ -65,6 +65,13 @@ You can also use objects with components, such as the `thisOne` component on
 the `myComponents` object: <myComponents.thisOne />
 ```
 
+#### Markdown codeblocks
+
+- Try to add syntax highlighting with `diff`-like syntax for codeblocks.
+  References:
+  - [expressive-code](https://expressive-code.com/key-features/text-markers/#combining-syntax-highlighting-with-diff-like-syntax)
+  - https://github.com/lewis6991/gitsigns.nvim/blob/42d6aed4e94e0f0bbced16bbdcc42f57673bd75e/lua/gitsigns/actions/preview.lua#L236
+
 ### Queries
 
 #### printf

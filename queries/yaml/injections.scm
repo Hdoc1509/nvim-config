@@ -252,6 +252,7 @@
                   (block_mapping_pair
                     key: (_) @_render
                     (#eq? @_render "render")
+                    ; NOTE: it is not available anymore
                     ; NOTE: should I use `#set-lang-from-info-string!` of
                     ; `nvim-treesitter`
                     (#is-gh-issue-template-form? "")
