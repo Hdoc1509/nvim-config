@@ -12,6 +12,13 @@
   (#set! injection.language "javascript")
   (#set! injection.include-children))
 
+; add injection for components in multiple lines
+((inline) @injection.content
+  (#lua-match? @injection.content "^%s*<[A-Z]")
+  (#is-mdx-file? "")
+  (#set! injection.language "javascript")
+  (#set! injection.include-children))
+
 ; syntax highlighting for tsx comments
 ((inline) @injection.content
   (#lua-match? @injection.content "^%s*{/*")
