@@ -42,7 +42,6 @@ return {
           gif = { pattern = '%.gif$', icon = '󰕧 ' },
           markdown = { pattern = '%.md$', icon = ' ' },
           vimhelp = { pattern = 'vimhelp%.org', icon = '' },
-          hdoc_hrc = { pattern = 'hdoc1509%.github%.io/hrc', icon = '󰧾 ' },
         },
       },
       completions = {
