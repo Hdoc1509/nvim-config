@@ -52,6 +52,8 @@ end
 
 return {
   setup = function()
+    vim.keymap.del('n', 'grn')
+
     autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('UserLspConfig', {}),
       callback = attach,
