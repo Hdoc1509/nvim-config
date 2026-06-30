@@ -1,5 +1,5 @@
 return {
-  'tversteeg/registers.nvim',
+  'https://codeberg.org/fosk/registers.nvim',
   opts = {},
   cmd = 'Registers',
   keys = {
