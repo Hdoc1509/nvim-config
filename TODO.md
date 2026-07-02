@@ -4,6 +4,7 @@
 
 ### Patches
 
+- update repo url of `registers.nvim` to https://codeberg.org/fosk/registers.nvim
 - fix `formatter.nvim` config for `svg` filetype. Reference: https://github.com/Hdoc1509/nvim-config/commit/2f8061deaf716d8ff8bdcd3bd201d836f749d82f
 
 ### New
