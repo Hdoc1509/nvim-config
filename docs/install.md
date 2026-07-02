@@ -77,7 +77,7 @@ Just open `Neovim` and wait that `Lazy.nvim` installs all plugins.
 3. Enable git message about detached HEAD:
 
    ```bash
-   git config --global advice.detachedHead false
+   git config --global advice.detachedHead true
    ```
 
 ## Git integration
