@@ -1,3 +1,6 @@
+-- TODO: try https://github.com/lima1909/resty.nvim. if kulala has critical
+-- errors
+
 return {
   'mistweaverco/kulala.nvim',
   config = function()
@@ -18,5 +21,5 @@ return {
     { '<leader>rb', nil, desc = 'Open scratchpad' },
   },
   ft = { 'http', 'rest' },
-  version = '^5.3.3',
+  version = '^6.20.4',
 }
